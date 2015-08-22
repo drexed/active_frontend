@@ -1,0 +1,63 @@
+/* Table of Contents
+==================================================
+# Missive
+# Colors
+# Media Queries */
+
+/* # Missive
+================================================== */
+.missive {
+  background: $color-white;
+  border: 1px solid $color-haze;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.missive-icon,
+.missive-content {
+  box-sizing: border-box;
+  float: left;
+}
+.missive-icon {
+  color: $color-haze-dark;
+  font-size: 84px;
+  line-height: 120px;
+  text-align: center;
+  width: 100px;
+}
+.missive-content {
+  color: $color-gray-light;
+  padding: 20px 15px 20px 0;
+  width: calc(100% - 100px);
+}
+.missive-content,
+.missive-content > p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.missive-content > p:last-child { margin-bottom: 0; }
+
+/* # Colors
+================================================== */
+.missive-dark {
+  background: $color-black;
+  border-color: $color-black-dark;
+}
+.missive-light {
+  background: $color-haze-light;
+  border-color: $color-haze-dark;
+}
+.missive-dark .missive-icon { color: $color-black-light; }
+.missive-dark .missive-content { color: $color-gray-dark; }
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .missive { border-width: 0.5px; }
+}

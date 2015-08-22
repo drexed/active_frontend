@@ -1,0 +1,14 @@
+/* Table of Contents
+==================================================
+# Affix */
+
+/* # Affix
+================================================== */
+.affix {
+  position: fixed;
+  z-index: 1030;
+}
+.affix-bottom {
+  position: absolute;
+  top: auto;
+}

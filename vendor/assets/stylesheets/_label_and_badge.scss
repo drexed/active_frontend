@@ -1,0 +1,196 @@
+/* Table of Contents
+==================================================
+# Label and Badge */
+
+/* # Label and Badge
+================================================== */
+.badge,
+.label {
+  background: $color-haze;
+  border: 1px solid $color-haze;
+  border-radius: 2px;
+  color: $color-black;
+  display: inline-block;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 12px;
+  min-width: 12px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.badge { border-radius: 500px; }
+.badge:empty,
+.label:empty { display: none; }
+.badge-black-light,
+.label-black-light,
+.badge-black,
+.label-black-dark,
+.badge-black-dark,
+.label-black,
+.badge-blue,
+.label-blue,
+.badge-gray-light,
+.label-gray-light,
+.badge-gray,
+.label-gray,
+.badge-gray-dark,
+.label-gray-dark,
+.badge-green,
+.label-green,
+.badge-indigo,
+.label-indigo,
+.badge-lime,
+.label-lime,
+.badge-orange,
+.label-orange,
+.badge-pink,
+.label-pink,
+.badge-purple,
+.label-purple,
+.badge-red,
+.label-red,
+.badge-teal,
+.label-teal,
+.badge-yellow,
+.label-yellow { color: $color-white; }
+.badge-black-light,
+.label-black-light {
+  background: $color-black-light;
+  border-color: $color-black-light;
+}
+.badge-black,
+.label-black {
+  background: $color-black;
+  border-color: $color-black;
+}
+.badge-black-dark,
+.label-black-dark {
+  background: $color-black-dark;
+  border-color: $color-black-dark;
+}
+.badge-blue,
+.label-blue {
+  background: $color-blue;
+  border-color: $color-blue;
+}
+.badge-gray-light,
+.label-gray-light {
+  background: $color-gray-light;
+  border-color: $color-gray-light;
+}
+.badge-gray,
+.label-gray {
+  background: $color-gray;
+  border-color: $color-gray;
+}
+.badge-gray-dark,
+.label-gray-dark {
+  background: $color-gray-dark;
+  border-color: $color-gray-dark;
+}
+.badge-haze-light,
+.label-haze-light {
+  background: $color-haze-light;
+  border-color: $color-haze-light;
+}
+.badge-haze-dark,
+.label-haze-dark {
+  background: $color-haze-dark;
+  border-color: $color-haze-dark;
+}
+.badge-indigo,
+.label-indigo {
+  background: $color-indigo;
+  border-color: $color-indigo;
+}
+.badge-lime,
+.label-lime {
+  background: $color-lime;
+  border-color: $color-lime;
+}
+.badge-green,
+.label-green {
+  background: $color-green;
+  border-color: $color-green;
+}
+.badge-orange,
+.label-orange {
+  background: $color-orange;
+  border-color: $color-orange;
+}
+.badge-pink,
+.label-pink {
+  background: $color-pink;
+  border-color: $color-pink;
+}
+.badge-purple,
+.label-purple {
+  background: $color-purple;
+  border-color: $color-purple;
+}
+.badge-red,
+.label-red {
+  background: $color-red;
+  border-color: $color-red;
+}
+.badge-teal,
+.label-teal {
+  background: $color-teal;
+  border-color: $color-teal;
+}
+.badge-white,
+.label-white {
+  background: $color-white;
+  border-color: $color-white;
+}
+.badge-yellow,
+.label-yellow {
+  background: $color-yellow;
+  border-color: $color-yellow;
+}
+.badge.badge-outline,
+.label.label-outline {
+  background: $color-transparent;
+  color: $color-haze;
+}
+.badge-black-light.badge-outline,
+.label-black-light.label-outline { color: $color-black-light; }
+.badge-black.badge-outline,
+.label-black.label-outline { color: $color-black; }
+.badge-black-dark.badge-outline,
+.label-black-dark.label-outline { color: $color-black-dark; }
+.badge-blue.badge-outline,
+.label-blue.label-outline { color: $color-blue; }
+.badge-gray-light.badge-outline,
+.label-gray-light.label-outline { color: $color-gray-light; }
+.badge-gray.badge-outline,
+.label-gray.label-outline { color: $color-gray; }
+.badge-gray-dark.badge-outline,
+.label-gray-dark.label-outline { color: $color-gray-dark; }
+.badge-green.badge-outline,
+.label-green.label-outline { color: $color-green; }
+.badge-haze-light.badge-outline,
+.label-haze-light.label-outline { color: $color-haze-light; }
+.badge-haze-dark.badge-outline,
+.label-haze-dark.label-outline { color: $color-haze-dark; }
+.badge-indigo.badge-outline,
+.label-indigo.label-outline { color: $color-indigo; }
+.badge-lime.badge-outline,
+.label-lime.label-outline { color: $color-lime; }
+.badge-orange.badge-outline,
+.label-orange.label-outline { color: $color-orange; }
+.badge-pink.badge-outline,
+.label-pink.label-outline { color: $color-pink; }
+.badge-purple.badge-outline,
+.label-purple.label-outline { color: $color-purple; }
+.badge-red.badge-outline,
+.label-red.label-outline { color: $color-red; }
+.badge-teal.badge-outline,
+.label-teal.label-outline { color: $color-teal; }
+.badge-white.badge-outline,
+.label-white.label-outline { color: $color-white; }
+.badge-yellow.badge-outline,
+.label-yellow.label-outline { color: $color-yellow; }

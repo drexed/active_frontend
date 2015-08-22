@@ -1,0 +1,136 @@
+/* Table of Contents
+==================================================
+# Trunk
+# Colors
+# Media Queries */
+
+/* # Trunk
+================================================== */
+.trunk {
+  background: $color-white;
+  border-bottom: 1px solid $color-haze;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 50px;
+  z-index: 1040;
+}
+.trunk-buffer { padding: 30px 0; }
+.trunk-nav,
+.trunk-user {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.trunk-user {
+  margin: 10px auto 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+.trunk-nav > li,
+.trunk-user > li {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
+  margin: 5px;
+}
+.trunk-nav > li {
+  float: left;
+  width: calc(33.333333% - 10px);
+}
+.trunk-user > li {
+  display: inline-block;
+  margin-bottom: 0;
+  width: calc(45% - 30px);
+}
+.trunk-nav > li > a,
+.trunk-user > li > a {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  color: $color-gray-dark;
+  cursor: pointer;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 11px;
+  padding: 11px 0 9px 0;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricPrecision;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.trunk-nav > li > a {
+  border: 1px solid $color-haze;
+  padding: 11px 0 9px 0;
+}
+.trunk-user > li > a { padding: 9px 0 7px 0; }
+.trunk-nav > li > a:hover,
+.trunk-nav > li > a:active,
+.trunk-nav > li > a.active,
+.trunk-nav > li > a:focus,
+.trunk-user > li > a:hover,
+.trunk-user > li > a:active,
+.trunk-user > li > a.active,
+.trunk-user > li > a:focus {
+  border-color: $color-primary;
+  color: $color-primary;
+}
+.trunk-user > li.trunk-user-placeholder,
+.trunk-user > li.trunk-user-placeholder > img, {
+  background: $color-gray;
+  border-radius: 500px;
+  color: $color-white;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  text-align: center;
+  width: 40px;
+  vertical-align: middle;
+}
+.trunk-user > li.trunk-user-placeholder > i {
+  font-size: 26px;
+  line-height: 44px;
+}
+
+/* # Colors
+================================================== */
+.trunk-dark {
+  background: $color-black;
+  border-color: $color-black-dark;
+}
+.trunk-light {
+  background: $color-haze-light;
+  border-color: $color-haze-dark;
+}
+.trunk-dark .trunk-nav > li > a,
+.trunk-dark .trunk-user > li > a { color: $color-white; }
+.trunk-dark .trunk-nav > li > a:hover,
+.trunk-dark .trunk-nav > li > a:active,
+.trunk-dark .trunk-nav > li > a.active,
+.trunk-dark .trunk-nav > li > a:focus,
+.trunk-dark .trunk-user > li > a:hover,
+.trunk-dark .trunk-user > li > a:active,
+.trunk-dark .trunk-user > li > a.active,
+.trunk-dark .trunk-user > li > a:focus {
+  border-color: $color-primary;
+  color: $color-primary;
+}
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .trunk { border-width: 0.5px; }
+}

@@ -1,0 +1,205 @@
+/* Table of Contents
+==================================================
+# Font-Face
+# Typography
+# Alignments
+# Colors
+# Decorations
+# Modifiers
+# Scripts
+# Styles
+# Transforms
+# Weights */
+
+/* # Font-Face
+================================================== */
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: normal;
+  src: url(font_path('gotham/gotham-book.eot'));
+  src: url(font_path('gotham/gotham-book.eot')) format('embedded-opentype'),
+       url(font_path('gotham/gotham-book.woff')) format('woff'),
+       url(font_path('gotham/gotham-book.ttf')) format('truetype'),
+       url(font_path('gotham/gotham-book.svg#GothamBookRegular')) format('svg');
+}
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: bold;
+  src: url(font_path('gotham/gotham-bold.eot'));
+  src: url(font_path('gotham/gotham-bold.eot')) format('embedded-opentype'),
+       url(font_path('gotham/gotham-bold.woff')) format('woff'),
+       url(font_path('gotham/gotham-bold.ttf')) format('truetype'),
+       url(font_path('gotham/gotham-bold.svg#GothamBoldRegular')) format('svg');
+}
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 500;
+  src: url(font_path('gotham/gotham-medium.eot'));
+  src: url(font_path('gotham/gotham-medium.eot')) format('embedded-opentype'),
+       url(font_path('gotham/gotham-medium.woff')) format('woff'),
+       url(font_path('gotham/gotham-medium.ttf')) format('truetype'),
+       url(font_path('gotham/gotham-medium.svg#GothamMediumRegular')) format('svg');
+}
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 200;
+  src: url(font_path('gotham/gotham-light.eot'));
+  src: url(font_path('gotham/gotham-light.eot')) format('embedded-opentype'),
+       url(font_path('gotham/gotham-light.woff')) format('woff'),
+       url(font_path('gotham/gotham-light.ttf')) format('truetype'),
+       url(font_path('gotham/gotham-light.svg#GothamLightRegular')) format('svg');
+}
+
+/* # Typography
+================================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: $color-black;
+  font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 {
+  font-size: 46px;
+  line-height: 50px;
+  margin-bottom: 15px;
+}
+h2 {
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+h4 {
+  font-size: 21px;
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+h5 {
+  font-size: 17px;
+  line-height: 24px;
+}
+h6 {
+  font-size: 14px;
+  line-height: 21px;
+}
+p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+p.large,
+p.lead {
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 30px;
+}
+p.lead { font-weight: 200; }
+p.medium {
+  font-size: 21px;
+  line-height: 27px;
+}
+p.small {
+  font-size: 14px;
+  line-height: 22px;
+}
+p.mini {
+  font-size: 12px;
+  line-height: 20px;
+}
+small {
+  font-size: 11px;
+  line-height: 17px;
+}
+address {
+  font-size: 16px;
+  line-height: 25px;
+}
+address.small {
+  font-size: 14px;
+  line-height: 22px;
+}
+blockquote {
+  border-left: 5px solid $color-black;
+  padding-left: 10px;
+}
+blockquote p { margin-bottom: 10px; }
+blockquote small { color: $color-gray; }
+strong { font-weight: 500; }
+
+/* # Alignments
+================================================== */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+.text-right { text-align: right; }
+
+/* # Colors
+================================================== */
+.text-black { color: $color-black; }
+.text-black-dark { color: $color-black-dark; }
+.text-black-light { color: $color-black-light; }
+.text-blue { color: $color-blue; }
+.text-haze { color: $color-haze; }
+.text-haze-dark { color: $color-haze-dark; }
+.text-haze-light { color: $color-haze-light; }
+.text-gray { color: $color-gray; }
+.text-gray-dark { color: $color-gray-dark; }
+.text-gray-light { color: $color-gray-light; }
+.text-green { color: $color-green; }
+.text-indigo { color: $color-indigo; }
+.text-lime { color: $color-lime; }
+.text-orange { color: $color-orange; }
+.text-purple { color: $color-purple; }
+.text-pink { color: $color-pink; }
+.text-red { color: $color-red; }
+.text-teal { color: $color-teal; }
+.text-white { color: $color-white; }
+.text-yellow { color: $color-yellow; }
+
+/* # Decorations
+================================================== */
+.text-overline { text-decoration: overline; }
+.text-line-through { text-decoration: line-through; }
+.text-underline { text-decoration: underline; }
+
+/* # Modifiers
+================================================== */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.text-whitespaced { white-space: pre-wrap; }
+
+/* # Scripts
+================================================== */
+.text-monospace { font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
+.text-sans-serif { font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif; }
+.text-serif { font-family: 'Times New Roman', Times, serif; }
+
+/* # Style
+================================================== */
+.text-italic { font-style: italic; }
+.text-normal { font-style: normal; }
+
+/* # Transform
+================================================== */
+.text-capitalize { text-transform: capitalize; }
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase; }
+
+/* # Weights
+================================================== */
+.text-light { font-weight: 200; }
+.text-normal { font-weight: normal; }
+.text-semibold { font-weight: 500; }
+.text-bold { font-weight: bold; }

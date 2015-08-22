@@ -1,0 +1,29 @@
+/* Table of Contents
+==================================================
+# Image
+# Styles
+# Media Queries */
+
+/* # Image
+================================================== */
+img {
+  border: 0;
+  border-radius: 3px;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  width: auto\9;
+}
+
+/* # Styles
+================================================== */
+.img-circle { border-radius: 500px; }
+.img-center { margin: 0 auto; }
+.img-square { border-radius: 0; }
+
+/* # Media Queries
+================================================== */
+@media only screen and (max-width: 767px) {
+  .img-icon { max-width: 60%; }
+}

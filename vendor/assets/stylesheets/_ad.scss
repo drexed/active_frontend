@@ -1,0 +1,87 @@
+/* Table of Contents
+==================================================
+# Ad
+# Media Queries */
+
+/* # Ad
+================================================== */
+.ad {
+  background: $color-haze-light;
+  border: 1px solid $color-haze-dark;
+  box-sizing: border-box;
+  height: 220px;
+  width: 220px;
+}
+.ad-center { margin: 0 auto; }
+.ad-large-rectangle {
+  height: 280px;
+  width: 336px;
+}
+.ad-medium-rectangle {
+  height: 250px;
+  width: 300px;
+}
+.ad-small-rectangle {
+  height: 150px;
+  width: 180px;
+}
+.ad-square {
+  height: 250px;
+  width: 250px;
+}
+.ad-small-square {
+  height: 200px;
+  width: 200px;
+}
+.ad-button {
+  height: 125px;
+  width: 125px;
+}
+.ad-large-leaderboard {
+  height: 90px;
+  width: 970px;
+}
+.ad-leaderboard {
+  height: 90px;
+  width: 728px;
+}
+.ad-banner {
+  height: 60px;
+  width: 468px;
+}
+.ad-half-banner {
+  height: 60px;
+  width: 234px;
+}
+.ad-mobile-banner {
+  height: 50px;
+  width: 320px;
+}
+.ad-vertical-banner {
+  height: 240px;
+  width: 120px;
+}
+.ad-large-skyscrapper {
+  height: 600px;
+  width: 300px;
+}
+.ad-wide-skyscrapper {
+  height: 600px;
+  width: 160px;
+}
+.ad-skyscrapper {
+  height: 600px;
+  width: 120px;
+}
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .ad { border-width: 0.5px; }
+}

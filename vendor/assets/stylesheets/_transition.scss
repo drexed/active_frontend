@@ -1,0 +1,12 @@
+/* Table of Contents
+==================================================
+# Transition */
+
+/* # Transition
+================================================== */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.fade.in { opacity: 1; }

@@ -1,0 +1,92 @@
+/* Table of Contents
+==================================================
+# Breadcrumb
+# Breadcrumb Alternate */
+
+/* # Breadcrumb
+================================================== */
+.breadcrumb {
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+.breadcrumb > li {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+}
+.breadcrumb > li > a { color: $color-black; }
+.breadcrumb > li > a:hover,
+.breadcrumb > li > a:active,
+.breadcrumb > li > a:focus,
+.breadcrumb > .active { color: $color-primary; }
+.breadcrumb > li > .divider {
+  color: $color-black;
+  padding: 0 5px;
+}
+
+/* # Breadcrumb Alternate
+================================================== */
+.breadcrumb-flow {
+  counter-reset: wizard;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.breadcrumb-flow > li {
+  float: left;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 25%;
+}
+.breadcrumb-flow > li,
+.breadcrumb-flow > li > a { color: $color-black; }
+.breadcrumb-flow > li.active ~ li,
+.breadcrumb-flow > li.active ~ li > a { color: $color-haze-dark; }
+.breadcrumb-flow > li.active,
+.breadcrumb-flow > li > a:hover,
+.breadcrumb-flow > li > a:active,
+.breadcrumb-flow > li > a:focus,
+.breadcrumb-flow > li.active > a,
+.breadcrumb-flow > li.active ~ li > a:hover,
+.breadcrumb-flow > li.active ~ li > a:active,
+.breadcrumb-flow > li.active ~ li > a:focus { color: $color-primary; }
+.breadcrumb-flow > li:before {
+  background: $color-primary;
+  border: 5px solid $color-primary;
+  border-radius: 500px;
+  content: "";
+  counter-increment: wizard;
+  display: block;
+  height: 22px;
+  left: 50%;
+  margin: 0 0 10px -14px;
+  position: relative;
+  text-align: center;
+  width: 22px;
+  z-index: 1;
+}
+.breadcrumb-flow > li.active:before { background: $color-white; }
+.breadcrumb-flow > li.active ~ li:before {
+  background: $color-white;
+  border-color: $color-haze-light;
+}
+.breadcrumb-flow > li + li:after {
+  background: $color-primary;
+  content: "";
+  display: block;
+  height: 5px;
+  left: -50%;
+  position: absolute;
+  top: 14px;
+  width: 100%;
+  z-index: 0;
+}
+.breadcrumb-flow > li.active ~ li:after { background: $color-haze-light; }

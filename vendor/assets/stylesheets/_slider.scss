@@ -1,0 +1,151 @@
+/* Table of Contents
+==================================================
+# Slider
+# Position
+# Track
+# Handle & Tick */
+
+/* # Slider
+================================================== */
+.slider {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.slider input,
+.slider .hide { display: none; }
+.slider .tooltip.in {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.slider .tooltip.top { margin-top: -36px; }
+.slider .tooltip-inner { white-space: nowrap; }
+
+/* # Position
+================================================== */
+.slider.slider-horizontal {
+  height: 16px;
+  width: 100%;
+}
+.slider.slider-horizontal .slider-track {
+  height: 8px;
+  left: 0;
+  margin-top: -4px;
+  top: 50%;
+  width: 100%;
+}
+.slider.slider-horizontal .slider-selection,
+.slider.slider-horizontal .slider-track-low,
+.slider.slider-horizontal .slider-track-high {
+  bottom: 0;
+  height: 100%;
+  top: 0;
+}
+.slider.slider-horizontal .slider-tick,
+.slider.slider-horizontal .slider-handle {
+  margin-left: -8px;
+  margin-top: -4px;
+}
+.slider.slider-horizontal .slider-tick.triangle,
+.slider.slider-horizontal .slider-handle.triangle {
+  border-bottom-color: $color-primary;
+  border-width: 0 8px 8px 8px;
+  height: 0;
+  margin-top: 0;
+  width: 0;
+}
+.slider.slider-horizontal .slider-tick-label-container {
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 20px;
+  white-space: nowrap;
+}
+.slider.slider-horizontal .slider-tick-label-container .slider-tick-label {
+  display: inline-block;
+  padding-top: 4px;
+  text-align: center;
+}
+.slider.slider-vertical {
+  height: 200px;
+  width: 16px;
+}
+.slider.slider-vertical .slider-track {
+  height: 100%;
+  left: 50%;
+  margin-left: -4px;
+  top: 0;
+  width: 8px;
+}
+.slider.slider-vertical .slider-selection {
+  bottom: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.slider.slider-vertical .slider-track-low,
+.slider.slider-vertical .slider-track-high {
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.slider.slider-vertical .slider-tick,
+.slider.slider-vertical .slider-handle {
+  margin-left: -4px;
+  margin-top: -8px;
+}
+.slider.slider-vertical .slider-tick.triangle,
+.slider.slider-vertical .slider-handle.triangle {
+  border-left-color: $color-primary;
+  border-width: 8px 0 8px 8px;
+  height: 1px;
+  margin-left: 0;
+  width: 1px;
+}
+
+/* # Track
+================================================== */
+.slider-track,
+.slider-selection,
+.slider-track-low,
+.slider-track-high  {
+  border-radius: 500px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+}
+.slider-track,
+.slider.slider-disabled .slider-track { background: $color-haze-light; }
+.slider-selection,
+.slider-selection.tick-slider-selection,
+.slider.slider-disabled .slider-handle { background: $color-haze-dark; }
+.slider-track-low,
+.slider-track-high { background: $color-transparent; }
+.slider.slider-disabled .slider-track,
+.slider.slider-disabled .slider-handle { cursor: not-allowed; }
+
+/* # Handle & Tick
+================================================== */
+.slider-handle,
+.slider-tick {
+  background: $color-primary;
+  border: 0;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+}
+.slider-handle { background: $color-primary; }
+.slider-tick { background: $color-haze-light; }
+.slider-tick.in-selection { background: $color-haze-dark; }
+.slider-handle.round,
+.slider-tick.round { border-radius: 500px; }
+.slider-handle.custom,
+.slider-handle.triangle,
+.slider-tick.custom,
+.slider-tick.triangle { background: $color-transparent none; }
+.slider-handle.custom::before,
+.slider-tick.custom::before {
+  line-height: 16px;
+  font-size: 16px;
+  content: '\2605';
+  color: $color-haze-dark;
+}

@@ -1,0 +1,79 @@
+/* Table of Contents
+==================================================
+# Alert
+# Application
+# Colors
+# Media Queries */
+
+/* # Alert
+================================================== */
+.alert-fixed {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1040;
+}
+.alert {
+  background: $color-gray;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  color: $color-white;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  padding: 10px 20px 9px 20px;
+  width: 100%;
+}
+.alert > a {
+  color: $color-white;
+  border-bottom: 1px dotted $color-white;
+  font-style: italic;
+}
+.alert-lined { border: 2px solid rgba(0,0,0,0.1); }
+.alert-close {
+  border: 0 !important;
+  color: $color-white !important;
+  float: right;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* # Application
+================================================== */
+.alert.alert-app { width: calc(100% - 280px); }
+
+/* # Colors
+================================================== */
+.alert-black { background: $color-black; }
+.alert-black-dark { background: $color-black-dark; }
+.alert-black-light { background: $color-black-light; }
+.alert-blue { background: $color-blue; }
+.alert-gray-dark { background: $color-gray-dark; }
+.alert-gray-light { background: $color-gray-light; }
+.alert-green,
+.alert-success { background: $color-green; }
+.alert-indigo { background: $color-indigo; }
+.alert-lime { background: $color-lime; }
+.alert-orange,
+.alert-warning { background: $color-orange; }
+.alert-purple { background: $color-purple; }
+.alert-pink { background: $color-pink; }
+.alert-red,
+.alert-error,
+.alert-alert { background: $color-red; }
+.alert-teal { background: $color-teal; }
+.alert-yellow { background: $color-yellow; }
+
+/* # Media Queries
+================================================== */
+@media only screen and (max-width: 1365px) {
+  .alert.alert-app { width: calc(100% - 250px); }
+}
+@media only screen and (max-width: 1199px) {
+  .alert.alert-app { width: calc(100% - 220px); }
+}
+@media only screen and (max-width: 959px) {
+  .alert.alert-app { width: 100%; }
+}

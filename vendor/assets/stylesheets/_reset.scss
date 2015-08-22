@@ -1,0 +1,108 @@
+/* Table of Contents
+==================================================
+# Reset
+# Color */
+
+/* # Reset
+================================================== */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted $color-black;
+  font-variant: normal;
+}
+caption,
+th { text-align: left; }
+fieldset,
+img { border: 0; }
+sup,
+sub { line-height: 1; }
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+q:before,
+q:after { content: ''; }
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  *font-size: 100%;
+  font-weight: inherit;
+}
+html,
+body {
+  color: $color-black;
+  font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  -webkit-tap-highlight-color: $color-transparent;
+  tap-highlight-color: $color-transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html { background: $color-white; }
+::-moz-selection {
+  background: $color-primary;
+  color: $color-white;
+}
+::selection {
+  background: $color-primary;
+  color: $color-white;
+}
+
+/* # Color
+================================================== */
+.html-dark { background: $color-black; }
+.html-light { background: $color-haze-lighter; }
+.html-white { background: $color-white; }

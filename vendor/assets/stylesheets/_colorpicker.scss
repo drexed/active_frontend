@@ -1,0 +1,50 @@
+/* Table of Contents
+==================================================
+# Colorpicker */
+
+/* # Colorpicker
+================================================== */
+.dropdown-swatch {
+  background: $color-gray-dark;
+  border-radius: 2px;
+  display: inline-block;
+  height: 25px;
+  vertical-align: middle;
+  width: 25px;
+}
+.dropdown-colorpicker > .dropdown-menu {
+  margin-left: -5px;
+  min-width: 162px;
+  padding: 4px;
+}
+.dropdown-colorpicker > .dropdown-menu > li {
+  display: block;
+  float: left;
+  width: 26px;
+  height: 26px;
+  margin: 2px;
+}
+.dropdown-colorpicker > .dropdown-menu > li > .colorpicker-swatch {
+  border-radius: 2px;
+  display: block;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: all ease 0.1s;
+  transition: all ease 0.1s;
+  width: 26px;
+}
+.dropdown-colorpicker > .dropdown-menu > li > .colorpicker-swatch.selected:after {
+  color: $color-white;
+  content: "\f3fe";
+  display: inline-block;
+  font-family: "Ionicons";
+  font-size: 16px;
+  left: 0;
+  line-height: 26px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}

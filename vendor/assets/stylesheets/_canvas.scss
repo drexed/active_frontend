@@ -1,0 +1,121 @@
+/* Table of Contents
+==================================================
+# Canvas
+# Alternate
+# Media Queries */
+
+/* # Canvas
+================================================== */
+.canvas {
+  min-height: 100%;
+  height: 100%;
+}
+.canvas-content,
+.canvas-sidebar,
+.canvas-toolbar {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  height: 100%;
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+.canvas-content {
+  padding: 30px 0 0 0;
+  max-width: 100%;
+  width: 100%;
+}
+.canvas-content.canvas-content-with-sidebar {
+  max-width: calc(100% - 280px);
+  width: calc(100% - 280px);
+}
+.canvas-content.canvas-content-with-toolbar {
+  max-width: calc(100% - 55px);
+  width: calc(100% - 55px);
+}
+.canvas-content.canvas-content-with-sidebar-and-toolbar {
+  max-width: calc(100% - 335px);
+  width: calc(100% - 335px);
+}
+.canvas-with-header > .canvas-content,
+.canvas-with-header > .canvas-sidebar,
+.canvas-with-header > .canvas-toolbar { margin-top: 65px; }
+.canvas-with-footer > .canvas-content { padding-bottom: 90px; }
+.canvas-sidebar {
+  max-width: 280px;
+  width: 280px;
+}
+.canvas-toolbar {
+  max-width: 55px;
+  width: 55px;
+}
+.canvas-with-header .sidebar,
+.canvas-with-header .toolbar {
+  max-height: calc(100% - 65px);
+  height: calc(100% - 65px);
+}
+
+/* # Alternate
+================================================== */
+.canvas-app.canvas-with-header > .canvas-sidebar { margin-top: 0; }
+.canvas-app.canvas-with-header .sidebar {
+  max-height: 100%;
+  height: 100%;
+}
+
+/* # Media Queries
+================================================== */
+@media only screen and (max-width: 1365px) {
+  .canvas-content.canvas-content-with-sidebar {
+    max-width: calc(100% - 250px);
+    width: calc(100% - 250px);
+  }
+  .canvas-content.canvas-content-with-sidebar-and-toolbar {
+    max-width: calc(100% - 305px);
+    width: calc(100% - 305px);
+  }
+  .canvas-sidebar {
+    max-width: 250px;
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .canvas-content.canvas-content-with-sidebar {
+    max-width: calc(100% - 220px);
+    width: calc(100% - 220px);
+  }
+  .canvas-content.canvas-content-with-sidebar-and-toolbar {
+    max-width: calc(100% - 275px);
+    width: calc(100% - 275px);
+  }
+  .canvas-sidebar {
+    max-width: 220px;
+    width: 220px;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .canvas-content.canvas-content-with-sidebar {
+    max-width: 100%;
+    width: 100%;
+  }
+  .canvas-content.canvas-content-with-toolbar,
+  .canvas-content.canvas-content-with-sidebar-and-toolbar {
+    max-width: calc(100% - 55px);
+    width: calc(100% - 55px);
+  }
+  .canvas-sidebar { display: none; }
+}
+@media only screen and (max-width: 767px) {
+  .canvas-content.canvas-content-with-toolbar,
+  .canvas-content.canvas-content-with-sidebar-and-toolbar {
+    max-width: 100%;
+    width: 100%;
+  }
+  .canvas-with-header > .canvas-content {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  .canvas-with-footer > .canvas-content { padding-bottom: 80px; }
+  .canvas-toolbar { display: none; }
+}

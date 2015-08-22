@@ -1,0 +1,72 @@
+/* Table of Contents
+==================================================
+# Toolbar
+# Colors
+# Media Queries */
+
+/* # Toolbar
+================================================== */
+.toolbar {
+  background: $color-white;
+  border-right: 1px solid $color-haze;
+  box-sizing: border-box;
+  height: 100%;
+  min-width: 55px;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  width: 55px;
+}
+.toolbar-alt {
+  border-left: 1px solid $color-haze;
+  border-right: 0;
+}
+.toolbar > a {
+  background: $color-transparent;
+  box-sizing: border-box;
+  color: $color-black-light;
+  display: block;
+  font-size: 21px;
+  height: 55px;
+  line-height: 60px;
+  text-align: center;
+  width: 55px;
+}
+.toolbar > a:hover,
+.toolbar > a.active,
+.toolbar > a:active
+.toolbar > a:focus {
+  background: $color-primary;
+  color: $color-white;
+}
+
+/* # Colors
+================================================== */
+.toolbar-dark,
+.toolbar-dark.toolbar-alt {
+  background: $color-black;
+  border-color: $color-black-dark;
+}
+.toolbar-dark > a { color: $color-gray; }
+.toolbar-light,
+.toolbar-light.toolbar-alt {
+  background: $color-haze-light;
+  border-color: $color-haze-dark;
+}
+
+/* # Media Queries
+================================================== */
+@media only screen and (max-width: 767px) {
+  .toolbar { display: none; }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .toolbar { border-width: 0.5px; }
+}

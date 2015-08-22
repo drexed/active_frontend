@@ -1,0 +1,16 @@
+/* Table of Contents
+==================================================
+# Link */
+
+/* # Link
+================================================== */
+a {
+  text-decoration: none;
+  touch-action: manipulation;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+a[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}

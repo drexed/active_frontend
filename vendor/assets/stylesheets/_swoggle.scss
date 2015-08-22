@@ -1,0 +1,166 @@
+/* Table of Contents
+==================================================
+# Swoggle */
+
+/* # Swoggle
+================================================== */
+.swoggle input[type='radio'],
+.swoggle input[type='checkbox'] {
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute !important;
+  top: 0;
+  z-index: -1;
+}
+.swoggle {
+  background: $color-haze-light;
+  border-radius: 500px;
+  border: 1px solid $color-haze-light;
+  color: $color-black;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  margin-top: -2px;
+  min-width: 64px;
+  overflow: hidden;
+  padding: 4px 0;
+  position: relative;
+  text-align: center;
+  text-rendering: geometricPrecision;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+}
+.swoggle span,
+.swoggle label {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+.swoggle label {
+  background: $color-white;
+  border-radius: 500px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 4px;
+  padding-top: 3px;
+  width: 20%;
+  z-index: 100;
+}
+.swoggle span {
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 40%;
+  z-index: 1;
+}
+.swoggle div {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  top: 0;
+  width: 150%;
+}
+.swoggle.swoggle-on div { margin-left: 0; }
+.swoggle.swoggle-off div { margin-left: -50%; }
+.swoggle.swoggle-on.swoggle-black-light,
+.swoggle.swoggle-on.swoggle-black,
+.swoggle.swoggle-on.swoggle-black-dark,
+.swoggle.swoggle-on.swoggle-blue,
+.swoggle.swoggle-on.swoggle-gray-light,
+.swoggle.swoggle-on.swoggle-gray,
+.swoggle.swoggle-on.swoggle-gray-dark,
+.swoggle.swoggle-on.swoggle-green,
+.swoggle.swoggle-on.swoggle-indigo,
+.swoggle.swoggle-on.swoggle-lime,
+.swoggle.swoggle-on.swoggle-orange,
+.swoggle.swoggle-on.swoggle-pink,
+.swoggle.swoggle-on.swoggle-purple,
+.swoggle.swoggle-on.swoggle-red,
+.swoggle.swoggle-on.swoggle-teal,
+.swoggle.swoggle-on.swoggle-yellow { color: $color-white; }
+.swoggle.swoggle-on.swoggle-black-light {
+  background: $color-black-light;
+  border-color: $color-black-light;
+}
+.swoggle.swoggle-on.swoggle-black {
+  background: $color-black;
+  border-color: $color-black;
+}
+.swoggle.swoggle-on.swoggle-black-dark {
+  background: $color-black-dark;
+  border-color: $color-black-dark;
+}
+.swoggle.swoggle-on.swoggle-blue {
+  background: $color-blue;
+  border-color: $color-blue;
+}
+.swoggle.swoggle-on.swoggle-gray-light {
+  background: $color-gray-light;
+  border-color: $color-gray-light;
+}
+.swoggle.swoggle-on.swoggle-gray {
+  background: $color-gray;
+  border-color: $color-gray;
+}
+.swoggle.swoggle-on.swoggle-gray-dark {
+  background: $color-gray-dark;
+  border-color: $color-gray-dark;
+}
+.swoggle.swoggle-on.swoggle-green {
+  background: $color-green;
+  border-color: $color-green;
+}
+.swoggle.swoggle-on.swoggle-indigo {
+  background: $color-indigo;
+  border-color: $color-indigo;
+}
+.swoggle.swoggle-on.swoggle-lime {
+  background: $color-lime;
+  border-color: $color-lime;
+}
+.swoggle.swoggle-on.swoggle-orange {
+  background: $color-orange;
+  border-color: $color-orange;
+}
+.swoggle.swoggle-on.swoggle-pink {
+  background: $color-pink;
+  border-color: $color-pink;
+}
+.swoggle.swoggle-on.swoggle-purple {
+  background: $color-purple;
+  border-color: $color-purple;
+}
+.swoggle.swoggle-on.swoggle-red {
+  background: $color-red;
+  border-color: $color-red;
+}
+.swoggle.swoggle-on.swoggle-teal {
+  background: $color-teal;
+  border-color: $color-teal;
+}
+.swoggle.swoggle-on.swoggle-yellow {
+  background: $color-yellow;
+  border-color: $color-yellow;
+}
+.swoggle.swoggle-animate div {
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
+}
+.swoggle.swoggle-disabled,
+.swoggle.swoggle-readonly {
+  cursor: default !important;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}

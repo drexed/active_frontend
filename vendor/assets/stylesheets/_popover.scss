@@ -1,0 +1,116 @@
+/* Table of Contents
+==================================================
+# Popover */
+
+/* # Popover
+================================================== */
+.popover {
+  background-clip: padding-box;
+  background: $color-white;
+  border: 1px solid $color-haze-dark;
+  box-shadow: 0 0 3px $color-haze-dark;
+  display: none;
+  float: none;
+  font-style: normal;
+  letter-spacing: 0;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  top: 0;
+  width: 276px;
+  white-space: normal;
+  z-index: 1060;
+}
+.popover.top { margin-top: -10px; }
+.popover.right { margin-left: 10px; }
+.popover.bottom { margin-top: 10px; }
+.popover.left { margin-left: -10px; }
+.popover-title,
+.popover-content {
+  color: $color-black;
+  font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 10px 15px;
+}
+.popover-title {
+  background: $color-haze-light;
+  border-bottom: 1px solid $color-haze-dark;
+  font-weight: bold;
+  line-height: 18px;
+}
+.popover-title:empty { display: none; }
+.popover-content {
+  background: $color-white;
+  font-weight: normal;
+  line-height: 20px;
+}
+.popover .arrow,
+.popover .arrow:after {
+  border-color: $color-transparent;
+  border-style: solid;
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.popover > .arrow { border-width: 11px; }
+.popover > .arrow:after {
+  border-width: 10px;
+  content: "";
+}
+.popover.top > .arrow {
+  border-bottom-width: 0;
+  border-top-color: $color-haze;
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+}
+.popover.top > .arrow:after {
+  border-bottom-width: 0;
+  border-top-color: $color-white;
+  bottom: 1px;
+  margin-left: -10px;
+}
+.popover.right > .arrow {
+  border-right-color: $color-haze;
+  border-left-width: 0;
+  left: -11px;
+  margin-top: -11px;
+  top: 50%;
+}
+.popover.right > .arrow:after {
+  border-right-color: $color-white;
+  border-left-width: 0;
+  bottom: -10px;
+  left: 1px;
+}
+.popover.bottom > .arrow {
+  border-bottom-color: $color-haze;
+  border-top-width: 0;
+  left: 50%;
+  margin-left: -11px;
+  top: -11px;
+}
+.popover.bottom > .arrow:after {
+  border-bottom-color: $color-white;
+  border-top-width: 0;
+  margin-left: -10px;
+  top: 1px;
+}
+.popover.left > .arrow {
+  border-right-width: 0;
+  border-left-color: $color-haze;
+  margin-top: -11px;
+  right: -11px;
+  top: 50%;
+}
+.popover.left > .arrow:after {
+  border-right-width: 0;
+  border-left-color: $color-white;
+  bottom: -10px;
+  right: 1px;
+}

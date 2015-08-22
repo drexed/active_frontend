@@ -1,0 +1,15 @@
+/* Table of Contents
+==================================================
+# Collapse */
+
+/* # Collapse
+================================================== */
+.collapse { display: none; }
+.collapse.in { display: block; }
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}

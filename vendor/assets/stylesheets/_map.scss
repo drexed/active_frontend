@@ -1,0 +1,28 @@
+/* Table of Contents
+==================================================
+# Map
+# Media Queries */
+
+/* # Map
+================================================== */
+.map {
+  background: $color-haze-light;
+  border: 1px solid $color-haze;
+  box-sizing: border-box;
+  display: block;
+  min-height: 220px;
+  min-width:220px;
+}
+.map-center { margin: 0 auto; }
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .map { border-width: 0.5px; }
+}

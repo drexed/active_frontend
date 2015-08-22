@@ -1,0 +1,65 @@
+/* Table of Contents
+==================================================
+# Navbar
+# Colors
+# Media Queries */
+
+/* # Navbar
+================================================== */
+.navbar-fixed {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1030;
+}
+.navbar {
+  background: $color-white;
+  border-collapse: separate;
+  border-top: 1px solid $color-haze;
+  box-sizing: border-box;
+  display: table;
+  height: 48px;
+  table-layout: fixed;
+  width: 100%;
+}
+.navbar > a {
+  color: $color-gray-dark;
+  display: table-cell;
+  float: none;
+  font-size: 27px;
+  padding: 10px 0;
+  text-align: center;
+  width: 1%;
+}
+.navbar > a:hover,
+.navbar > a.active,
+.navbar > a:active,
+.navbar > a:focus { color: $color-primary; }
+
+/* # Colors
+================================================== */
+.navbar-dark {
+  background: $color-black;
+  border-color: $color-black-dark;
+}
+.navbar-light {
+  background: $color-haze-light;
+  border-color: $color-haze-dark;
+}
+.navbar-dark > a { color: $color-white; }
+
+/* # Media Queries
+================================================== */
+@media only screen and (min-width: 768px) {
+  .navbar { display: none; }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .navbar { border-width: 0.5px; }
+}

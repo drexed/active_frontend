@@ -1,0 +1,90 @@
+/* Table of Contents
+==================================================
+# Tooltip */
+
+/* # Tooltip
+================================================== */
+.tooltip {
+  color: $color-white;
+  display: block;
+  font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 17px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  float: none;
+  position: absolute;
+  text-decoration: none;
+  text-transform: none;
+  visibility: visible;
+  z-index: 1070;
+}
+.tooltip.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  background: $color-black;
+  border-radius: 3px;
+  color: $color-white;
+  letter-spacing: 0;
+  max-width: 200px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+}
+.tooltip-arrow {
+  border-color: $color-transparent;
+  border-style: solid;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.tooltip.top > .tooltip-arrow {
+  border-top-color: $color-black;
+  border-width: 5px 5px 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+}
+.tooltip.right > .tooltip-arrow {
+  border-right-color: $color-black;
+  border-width: 5px 5px 5px 0;
+  left: 0;
+  margin-top: -5px;
+  top: 50%;
+}
+.tooltip.left > .tooltip-arrow {
+  border-left-color: $color-black;
+  border-width: 5px 0 5px 5px;
+  margin-top: -5px;
+  right: 0;
+  top: 50%;
+}
+.tooltip.bottom > .tooltip-arrow {
+  border-bottom-color: $color-black;
+  border-width: 0 5px 5px;
+  left: 50%;
+  margin-left: -5px;
+  top: 0;
+}

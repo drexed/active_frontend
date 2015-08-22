@@ -1,0 +1,110 @@
+/* Table of Contents
+==================================================
+# Sidebar
+# Colors
+# Media Queries */
+
+/* # Sidebar
+================================================== */
+.sidebar {
+  background: $color-white;
+  border-left: 1px solid $color-haze;
+  box-sizing: border-box;
+  height: 100%;
+  min-width: 280px;
+  position: fixed;
+  width: 280px;
+}
+.sidebar-alt {
+  border-right: 1px solid $color-haze;
+  border-left: 0;
+}
+.sidebar-stripe {
+  background: $color-primary;
+  height: 5px;
+  width: 100%;
+}
+.sidebar-header {
+  border-bottom: 1px solid $color-haze;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 12px 20px 10px 10px;
+}
+.sidebar-alt > .sidebar-header {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.sidebar-header > h6 {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+.sidebar-content {
+  height: calc(100% - 54px);
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px 20px 10px 10px;
+}
+.sidebar-alt > .sidebar-content {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+.sidebar-scrollable {
+  border-bottom: 1px solid $color-haze-light;
+  height: auto;
+  max-height: calc(50% - 54px);
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+/* # Colors
+================================================== */
+.sidebar-dark {
+  background: $color-black;
+  border-color: $color-black-dark;
+}
+.sidebar-light {
+  background: $color-haze-light;
+  border-color: $color-haze-dark;
+}
+.sidebar-dark.sidebar-alt,
+.sidebar-dark > .sidebar-header,
+.sidebar-dark > .sidebar-scrollable { border-color: $color-black-dark; }
+.sidebar-dark > .sidebar-header > h6 { color: $color-white; }
+.sidebar-light.sidebar-alt,
+.sidebar-light > .sidebar-header,
+.sidebar-light > .sidebar-scrollable { border-color: $color-haze-dark; }
+
+/* # Media Queries
+================================================== */
+@media only screen and (max-width: 1365px) {
+  .sidebar {
+    min-width: 250px;
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .sidebar {
+    min-width: 220px;
+    width: 220px;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .sidebar { display: none; }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .sidebar,
+  .sidebar-header,
+  .sidebar-scrollable { border-width: 0.5px; }
+}

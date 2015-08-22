@@ -1,0 +1,80 @@
+/* Table of Contents
+==================================================
+# Panel
+# Colors
+# Media Queries */
+
+/* # Panel
+================================================== */
+.panel {
+  background: $color-white;
+  border: 1px solid $color-haze;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.panel-header {
+  background: $color-white;
+  border-bottom: 1px solid $color-haze;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 14px 15px 12px 15px;
+}
+.panel-header .btn {
+  margin-bottom: -5px;
+  margin-top: -6px;
+}
+.panel-title {
+  color: $color-black;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.panel-body { padding: 15px; }
+.panel-body-chart {
+  margin-bottom: -10px;
+  width: 100%;
+}
+.panel-body > .table-responsive {
+  border: 0;
+  margin-bottom: 0;
+}
+.panel-footer {
+  background: $color-white;
+  border-top: 1px solid $color-haze;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding: 14px 15px 13px 15px;
+}
+
+/* # Colors
+================================================== */
+.panel-dark { border-color: $color-black-dark; }
+.panel-light { border-color: $color-haze-dark; }
+.panel-dark .panel-header,
+.panel-dark .panel-footer {
+  background: $color-black;
+  border-color: $color-black-dark;
+}
+.panel-light .panel-header,
+.panel-light .panel-footer {
+  background: $color-haze-light;
+  border-color: $color-haze-dark;
+}
+.panel-dark .panel-title,
+.panel-dark .panel-footer { color: $color-white; }
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .panel,
+  .panel-header,
+  .panel-footer { border-width: 0.5px; }
+}

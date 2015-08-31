@@ -12,10 +12,6 @@
   box-sizing: border-box;
   height: 100%;
   min-width: 55px;
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
-  overflow-x: hidden;
-  overflow-y: auto;
   position: fixed;
   width: 55px;
 }
@@ -25,21 +21,33 @@
 }
 .toolbar > a {
   background: $color-transparent;
+  border: 0;
+  border-radius: 0;
   box-sizing: border-box;
   color: $color-black-light;
   display: block;
   font-size: 21px;
   height: 55px;
   line-height: 60px;
+  padding: 0;
   text-align: center;
   width: 55px;
 }
+.toolbar > a.btn { line-height: 55px; }
 .toolbar > a:hover,
 .toolbar > a.active,
 .toolbar > a:active
 .toolbar > a:focus {
   background: $color-primary;
   color: $color-white;
+}
+.toolbar > a[disabled],
+.toolbar > a[disabled]:hover,
+.toolbar > a[disabled]:active,
+.toolbar > a[disabled]:focus {
+  background: $color-transparent;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* # Colors

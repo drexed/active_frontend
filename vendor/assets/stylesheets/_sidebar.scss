@@ -19,11 +19,7 @@
   border-right: 1px solid $color-haze;
   border-left: 0;
 }
-.sidebar-stripe {
-  background: $color-primary;
-  height: 5px;
-  width: 100%;
-}
+.sidebar-striped { border-top: 5px solid $color-primary !important; }
 .sidebar-header {
   border-bottom: 1px solid $color-haze;
   font-size: 12px;

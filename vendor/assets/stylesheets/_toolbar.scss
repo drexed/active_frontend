@@ -46,6 +46,7 @@
 .toolbar > a[disabled]:active,
 .toolbar > a[disabled]:focus {
   background: $color-transparent;
+  color: $color-black-light;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -57,7 +58,11 @@
   background: $color-black;
   border-color: $color-black-dark;
 }
-.toolbar-dark > a { color: $color-gray; }
+.toolbar-dark > a,
+.toolbar-dark > a[disabled],
+.toolbar-dark > a[disabled]:hover,
+.toolbar-dark > a[disabled]:active,
+.toolbar-dark > a[disabled]:focus { color: $color-gray; }
 .toolbar-light,
 .toolbar-light.toolbar-alt {
   background: $color-haze-light;

@@ -88,6 +88,9 @@
   margin-right: 20px;
   padding-bottom: 10px;
 }
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:active,
+.nav-tabs > li > a:focus { border-bottom-color: $color-haze; }
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:active,

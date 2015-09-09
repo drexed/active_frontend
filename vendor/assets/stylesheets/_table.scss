@@ -16,7 +16,7 @@ table {
 .table th,
 .table td {
   background: $color-white;
-  border-top: 1px solid $color-haze-dark;
+  border-top: 1px solid $color-haze;
   font-size: 16px;
   line-height: 25px;
   padding: 9px 10px 6px 10px;
@@ -58,7 +58,7 @@ table {
 .table th.tablespy-sort-empty:before { content: ""; }
 .table th.tablespy-sort-empty { pointer-events: none; }
 .table caption {
-  border-bottom: 1px solid $color-haze-dark;
+  border-bottom: 1px solid $color-haze;
   border-top: 0;
   color: $color-black;
   font-size: 15px;
@@ -73,7 +73,7 @@ table {
 .table colgroup + thead tr:first-child td,
 .table thead:first-child tr:first-child th,
 .table thead:first-child tr:first-child td { border-top: 0; }
-.table tbody + tbody { border-top: 1px solid $color-haze-dark; }
+.table tbody + tbody { border-top: 1px solid $color-haze; }
 .table-align-bottom th,
 .table-align-bottom td { vertical-align: bottom; }
 .table-align-top th,
@@ -89,16 +89,16 @@ table {
   padding: 5px 5px 3px 5px;
 }
 .table-bordered {
-  border: 1px solid $color-haze-dark;
+  border: 1px solid $color-haze;
   border-collapse: separate;
   border-left: 0;
 }
 .table-bordered caption {
-  border: 1px solid $color-haze-dark;
+  border: 1px solid $color-haze;
   border-bottom-width: 0;
 }
 .table-bordered th,
-.table-bordered td { border-left: 1px solid $color-haze-dark; }
+.table-bordered td { border-left: 1px solid $color-haze; }
 .table-bordered caption + thead tr:first-child th,
 .table-bordered caption + tbody tr:first-child th,
 .table-bordered caption + tbody tr:first-child td,
@@ -126,7 +126,7 @@ table {
 ================================================== */
 @media only screen and (max-width: 960px) {
   .table-responsive {
-    border: 1px solid $color-haze-dark;
+    border: 1px solid $color-haze;
     max-height: 300px;
     -webkit-overflow-scrolling: touch;
     overflow: scroll;

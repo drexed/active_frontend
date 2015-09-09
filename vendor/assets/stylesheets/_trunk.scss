@@ -110,7 +110,8 @@
   border-color: $color-haze-dark;
 }
 .trunk-dark .trunk-nav > li > a,
-.trunk-dark .trunk-user > li > a { color: $color-white; }
+.trunk-dark .trunk-user > li > a { color: $color-gray; }
+.trunk-dark .trunk-nav > li > a { border-color: $color-gray; }
 .trunk-dark .trunk-nav > li > a:hover,
 .trunk-dark .trunk-nav > li > a:active,
 .trunk-dark .trunk-nav > li > a.active,

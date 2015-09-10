@@ -38,6 +38,7 @@
   max-width: calc(100% - 335px);
   width: calc(100% - 335px);
 }
+.canvas-content-buffer { min-height: 365px; }
 .canvas-with-header > .canvas-content,
 .canvas-with-header > .canvas-sidebar,
 .canvas-with-header > .canvas-toolbar { margin-top: 65px; }
@@ -112,6 +113,7 @@
     max-width: 100%;
     width: 100%;
   }
+  .canvas-content-buffer { min-height: 0; }
   .canvas-with-header > .canvas-content {
     margin-top: 50px;
     padding-bottom: 50px;

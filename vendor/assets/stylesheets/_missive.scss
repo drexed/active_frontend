@@ -52,6 +52,22 @@
 
 /* # Media Queries
 ================================================== */
+@media only screen and (min-width: 960px) and (max-width: 1365px) {
+  .missive-icon {
+    font-size: 64px;
+    line-height: 110px;
+    width: 80px;
+  }
+  .missive-content { width: calc(100% - 80px); }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .missive-icon {
+    font-size: 44px;
+    line-height: 90px;
+    width: 60px;
+  }
+  .missive-content { width: calc(100% - 60px); }
+}
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),

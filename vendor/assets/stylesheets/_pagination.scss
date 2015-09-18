@@ -20,24 +20,23 @@
   background: $color-haze-light;
   border-radius: 500px;
   color: $color-black;
+  display: inline-block;
   min-width: 8px;
-  padding: 9px 10px 7px 10px;
   text-align: center;
   text-decoration: none;
 }
+.pagination > ul > li > a { padding: 10px 12px 8px 12px; }
+.pagination > ul > li.active { padding: 10px 12px 8px 12px; }
 .pagination > ul > li > a:active,
 .pagination > ul > li.active {
   background: $color-primary;
   color: $color-white;
 }
-.pagination > ul > li.active {
-  padding-bottom: 6px;
-  padding-top: 8px;
-}
 .pagination > ul > li > a:hover,
 .pagination > ul > li > a:focus { background: $color-haze; }
-.pagination > ul > li.pagination-icon:first-child > a { padding-right: 11px; }
-.pagination > ul > li.pagination-icon:last-child > a { padding-left: 11px; }
+.pagination > ul > li.pagination-icon > a { padding: 9px 10px 7px 10px; }
+.pagination > ul > li.pagination-icon:first-child > a { padding-right: 13px; }
+.pagination > ul > li.pagination-icon:last-child > a { padding-left: 13px; }
 .pagination-centered { text-align: center; }
 .pagination-right { text-align: right; }
 .pagination-left { text-align: left; }

@@ -22,7 +22,10 @@
   width: 100%;
   z-index: 9999;
 }
-.loader-backdrop { background: $color-transparent; }
+.loader-backdrop {
+  height: 5px;
+  background: $color-haze-light;
+}
 .loader-bar { background: $color-primary; }
 .loader-peg {
   box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary;

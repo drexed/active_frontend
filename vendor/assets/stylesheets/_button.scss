@@ -728,9 +728,9 @@ input.btn-block {
 .btn-group > .btn,
 .btn-group-vertical > .btn {
   border-radius: 0;
-  margin-left: -1px;
   position: relative;
 }
+.btn-group > .btn { margin-left: -1px; }
 .btn-group > .btn:first-child {
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
@@ -851,4 +851,13 @@ input.btn-block {
     border-bottom-left-radius: 0;
     border-top-right-radius: 2px;
   }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .btn-group > .dropdown-toggle:not(:first-child) { border-left-width: 0.5px; }
 }

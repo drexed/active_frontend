@@ -22,6 +22,7 @@
 .toolbar > a {
   background: $color-transparent;
   border: 0;
+  border-bottom: 1px solid $color-haze;
   border-radius: 0;
   box-sizing: border-box;
   color: $color-black-light;
@@ -49,6 +50,10 @@
   color: $color-black-light;
   cursor: not-allowed;
   pointer-events: none;
+}
+.toolbar > .tooltip {
+  width: auto !important;
+  min-width: 70px;
 }
 
 /* # Colors
@@ -81,5 +86,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-  .toolbar { border-width: 0.5px; }
+  .toolbar,
+  .toolbar > a { border-width: 0.5px; }
 }

@@ -19,7 +19,7 @@
   border-right: 1px solid $color-haze;
   border-left: 0;
 }
-.sidebar-striped { border-top: 5px solid $color-primary !important; }
+.sidebar-striped { border-top: 3px solid $color-primary !important; }
 .sidebar-header {
   border-bottom: 1px solid $color-haze;
   font-size: 12px;
@@ -103,4 +103,5 @@ only screen and (                min-resolution: 2dppx) {
   .sidebar,
   .sidebar-header,
   .sidebar-scrollable { border-width: 0.5px; }
+  .sidebar-header > h6 { letter-spacing: 0.5px; }
 }

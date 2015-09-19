@@ -74,7 +74,8 @@
   top: 0;
   z-index: 1051;
 }
-.aside-body > p:last-child { margin-bottom: 0; }
+.aside-body .container { width: 100%; }
+.aside-body p:last-child { margin-bottom: 0; }
 .aside-footer {
   background: $color-white;
   border-top: 1px solid $color-haze;
@@ -133,4 +134,13 @@ input.aside-footer-btn[disabled] {
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .aside { width: 460px; }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .aside-header > h3 { letter-spacing: 0.5px; }
 }

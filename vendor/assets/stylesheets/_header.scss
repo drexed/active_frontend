@@ -24,8 +24,8 @@
   width: 100%;
 }
 .header-striped {
-  border-top: 5px solid $color-primary !important;
-  padding-top: 12px;
+  border-top: 3px solid $color-primary !important;
+  padding-top: 14px;
 }
 .header-brand {
   float: left;
@@ -50,7 +50,7 @@
 .header-nav,
 .header-nav-alt,
 .header-toolchain {
-  color: $color-black-light;
+  color: $color-black;
   list-style-type: none;
   padding: 0;
 }
@@ -64,7 +64,7 @@
 .header-nav-alt > li,
 .header-toolchain > li {
   float: left;
-  color: $color-black-light;
+  color: $color-black;
 }
 .header-nav > li,
 .header-nav-alt > li {
@@ -91,7 +91,7 @@
 .header-nav > li > a,
 .header-nav-alt > li > a,
 .header-toolchain > li > a {
-  color: $color-black-light;
+  color: $color-black;
   text-decoration: none;
 }
 .header-nav > li.lined > a {
@@ -277,4 +277,6 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .header { border-width: 0.5px; }
+  .header-nav > li,
+  .header-nav-alt > li { letter-spacing: 0.5px; }
 }

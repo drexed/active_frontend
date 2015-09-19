@@ -67,7 +67,8 @@
   padding: 15px 18px;
   position: relative;
 }
-.modal-body > p:last-child { margin-bottom: 0; }
+.modal-body .container { width: 100%; }
+.modal-body p:last-child { margin-bottom: 0; }
 .modal-footer {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -135,4 +136,13 @@ input.modal-footer-btn[disabled] {
     margin-left: -210px;
     width: 420px;
   }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .modal-header > h3 { letter-spacing: 0.5px; }
 }

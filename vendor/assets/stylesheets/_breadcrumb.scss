@@ -1,7 +1,8 @@
 /* Table of Contents
 ==================================================
 # Breadcrumb
-# Breadcrumb Alternate */
+# Breadcrumb Alternate
+# Media Queries */
 
 /* # Breadcrumb
 ================================================== */
@@ -90,3 +91,15 @@
   z-index: 0;
 }
 .breadcrumb-flow > li.active ~ li:after { background: $color-haze-light; }
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .breadcrumb-flow > li { letter-spacing: 0.5px; }
+}

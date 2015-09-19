@@ -115,7 +115,7 @@
 .dropdown-menu-title {
   background: $color-haze;
   letter-spacing: 1px;
-  padding: 8px 15px;
+  padding: 8px 15px 7px 15px;
   text-transform: uppercase;
 }
 
@@ -183,3 +183,15 @@
 }
 .dropup .dropdown-submenu > .dropdown-menu { margin-left: 6px; }
 .dropup .dropdown-submenu.pull-left > .dropdown-menu { margin-left: -8px; }
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .dropdown-menu-title { letter-spacing: 0.5px; }
+}

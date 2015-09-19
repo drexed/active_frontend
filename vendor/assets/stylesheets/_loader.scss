@@ -1,6 +1,7 @@
 /* Table of Contents
 ==================================================
-# Loader */
+# Loader
+# Media Queries */
 
 /* # Loader
 ================================================== */
@@ -23,7 +24,7 @@
   z-index: 9999;
 }
 .loader-backdrop {
-  height: 5px;
+  height: 3px;
   background: $color-haze-light;
 }
 .loader-bar { background: $color-primary; }
@@ -58,4 +59,13 @@
   height: 18px;
   pointer-events: none;
   width: 18px;
+}
+
+/* # Media Queries
+================================================== */
+@media only screen and (max-width: 767px) {
+  .loader-backdrop {
+    height: 2px;
+    background: $color-transparent;
+  }
 }

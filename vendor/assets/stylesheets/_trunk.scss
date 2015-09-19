@@ -134,4 +134,6 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .trunk { border-width: 0.5px; }
+  .trunk-nav > li > a,
+  .trunk-user > li > a { letter-spacing: 0.5px; }
 }

@@ -53,7 +53,7 @@
 }
 .toolbar > .tooltip {
   width: auto !important;
-  min-width: 70px;
+  min-width: 80px;
 }
 
 /* # Colors
@@ -67,12 +67,20 @@
 .toolbar-dark > a[disabled],
 .toolbar-dark > a[disabled]:hover,
 .toolbar-dark > a[disabled]:active,
-.toolbar-dark > a[disabled]:focus { color: $color-gray; }
+.toolbar-dark > a[disabled]:focus {
+  color: $color-gray;
+  border-color: $color-black-dark;
+}
 .toolbar-light,
 .toolbar-light.toolbar-alt {
   background: $color-haze-light;
   border-color: $color-haze-dark;
 }
+.toolbar-dark > a,
+.toolbar-dark > a[disabled],
+.toolbar-dark > a[disabled]:hover,
+.toolbar-dark > a[disabled]:active,
+.toolbar-dark > a[disabled]:focus { border-color: $color-haze-dark; }
 
 /* # Media Queries
 ================================================== */

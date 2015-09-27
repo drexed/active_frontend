@@ -288,9 +288,10 @@ select.form-input-initial-width {
   padding-top: 14px;
 }
 .form-help-block {
-  color: $color-gray;
+  color: $color-gray-light;
   display: block;
   font-size: 12px;
+  font-style: italic;
   margin-bottom: 15px;
 }
 .form-select {

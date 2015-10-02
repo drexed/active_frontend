@@ -276,14 +276,12 @@ select.form-input-initial-width {
 .form-file-group-addon:last-child > .form-file-group-button { border-left: 0; }
 .form-input-group-addon > input[type="radio"],
 .form-input-group-addon > input[type="checkbox"] { margin: 0; }
-.form-input-inline {
-  display: inline-block;
-  margin: 0;
-}
+.form-input-inline,
+.form-select-inline,
+.form-button-inline { margin: 0; }
 .form-text-inline { margin-top: 13px; }
-.form-select-inline { margin: 0; }
 .form-button-inline {
-  margin: 0;
+  margin-bottom: 5px;
   padding-bottom: 14px;
   padding-top: 14px;
 }
@@ -321,7 +319,7 @@ select.form-input-initial-width {
 }
 .form-select::before {
   background: $color-transparent;
-  border: 1px solid $color-haze;
+  border: 1px solid $color-transparent;
   border-left: 0;
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
@@ -399,7 +397,9 @@ select.form-input-initial-width {
 /* # Media Queries
 ================================================== */
 @media only screen and (max-width: 767px) {
-  .form-button-inline { margin-top: 15px; }
+  .form-input-inline,
+  .form-select-inline { margin-bottom: 5px; }
+  .form-button-inline { margin: 15px 0 0 0; }
   .form-text-inline { margin-top: 0; }
 }
 @media

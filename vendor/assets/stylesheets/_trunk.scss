@@ -38,6 +38,26 @@
   float: left;
   width: calc(33.333333% - 10px);
 }
+.trunk-nav > li.title,
+.trunk-nav > li.divider {
+  border-top: 1px solid $color-haze;
+  box-sizing: border-box;
+  display: block;
+  float: none;
+  margin: 0 0 0 5px;
+  overflow: hidden;
+  width: calc(100% - 10px);
+}
+.trunk-nav > li.title {
+  border-bottom: 1px solid $color-haze;
+  color: $color-gray-dark;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 12px;
+  padding: 8px 10px 5px 10px;
+  text-transform: uppercase;
+}
+.trunk-nav > li.divider { height: 0; }
 .trunk-user > li {
   display: inline-block;
   margin-bottom: 0;
@@ -109,8 +129,11 @@
   background: $color-haze-light;
   border-color: $color-haze-dark;
 }
+.trunk-dark .trunk-nav > li.title,
 .trunk-dark .trunk-nav > li > a,
 .trunk-dark .trunk-user > li > a { color: $color-gray; }
+.trunk-dark .trunk-nav > li.title,
+.trunk-dark .trunk-nav > li.divider,
 .trunk-dark .trunk-nav > li > a { border-color: $color-gray; }
 .trunk-dark .trunk-nav > li > a:hover,
 .trunk-dark .trunk-nav > li > a:active,
@@ -123,6 +146,17 @@
   border-color: $color-primary;
   color: $color-primary;
 }
+.trunk-light .trunk-nav > li.title,
+.trunk-light .trunk-nav > li.divider,
+.trunk-light .trunk-nav > li > a { border-color: $color-haze-dark; }
+.trunk-light .trunk-nav > li > a:hover,
+.trunk-light .trunk-nav > li > a:active,
+.trunk-light .trunk-nav > li > a.active,
+.trunk-light .trunk-nav > li > a:focus,
+.trunk-light .trunk-user > li > a:hover,
+.trunk-light .trunk-user > li > a:active,
+.trunk-light .trunk-user > li > a.active,
+.trunk-light .trunk-user > li > a:focus { border-color: $color-primary; }
 
 /* # Media Queries
 ================================================== */
@@ -133,7 +167,10 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
-  .trunk { border-width: 0.5px; }
+  .trunk,
+  .trunk-nav > li.title,
+  .trunk-nav > li.divider { border-width: 0.5px; }
+  .trunk-nav > li.title,
   .trunk-nav > li > a,
   .trunk-user > li > a { letter-spacing: 0.5px; }
 }

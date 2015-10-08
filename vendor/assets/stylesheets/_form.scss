@@ -113,7 +113,6 @@ select {
   display: inline-block;
   padding-left: 10px;
   text-indent: 0;
-  text-transform: capitalize;
 }
 select[multiple],
 select[size] { height: auto; }
@@ -278,7 +277,10 @@ select.form-input-initial-width {
 .form-input-group-addon > input[type="checkbox"] { margin: 0; }
 .form-input-inline,
 .form-select-inline,
-.form-button-inline { margin: 0; }
+.form-button-inline {
+  display: inline-block;
+  margin: 0;
+}
 .form-text-inline { margin-top: 13px; }
 .form-button-inline {
   margin-bottom: 5px;

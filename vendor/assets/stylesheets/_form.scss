@@ -102,6 +102,7 @@ input[type="checkbox"] {
   margin-top: 1px \9;
   line-height: normal;
 }
+button,
 input[type="file"],
 input[type="image"],
 input[type="submit"],
@@ -356,6 +357,7 @@ select.form-input-initial-width {
 /* # Styles
 ================================================== */
 .form-inline { clear: both; }
+.form-inline > button,
 .form-inline > input[type="submit"],
 .form-inline > input[type="reset"],
 .form-inline > input[type="button"] {
@@ -380,6 +382,7 @@ select.form-input-initial-width {
   padding-bottom: 6px;
   padding-top: 8px;
 }
+.form-inline.form-inline-alt > button,
 .form-inline.form-inline-alt > input[type="submit"],
 .form-inline.form-inline-alt > input[type="reset"],
 .form-inline.form-inline-alt > input[type="button"] {

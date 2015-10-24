@@ -1,6 +1,8 @@
 /* Table of Contents
-==================================================
+==================================================s
 # List
+# Sizes
+# Styles
 # Media Queries */
 
 /* # List
@@ -19,10 +21,20 @@ dl > dt {
 dl > dd { margin: 0 0 5px 10px; }
 ul { padding-left: 17px; }
 ol { padding-left: 23px; }
+
+/* # Sizes
+================================================== */
 .list-small {
   font-size: 14px;
   line-height: 22px;
 }
+.list-mini {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* # Styles
+================================================== */
 .list-scrollable {
   max-height: 300px;
   overflow: auto;
@@ -39,13 +51,13 @@ ol { padding-left: 23px; }
 .list-lined > li,
 .list-striped > li { padding: 9px 10px 6px 10px; }
 .list-bordered > li {
-  border: 1px solid $color-haze-dark;
+  border: 1px solid $color-dark-haze;
   border-bottom: none;
 }
-.list-bordered > li:last-child { border-bottom: 1px solid $color-haze-dark; }
+.list-bordered > li:last-child { border-bottom: 1px solid $color-dark-haze; }
 .list-bordered.list-scrollable {
-  border-bottom: 1px solid $color-haze-dark;
-  border-top: 1px solid $color-haze-dark;
+  border-bottom: 1px solid $color-dark-haze;
+  border-top: 1px solid $color-dark-haze;
 }
 .list-bordered.list-scrollable > li:first-child { border-top: 0; }
 .list-bordered.list-scrollable > li:last-child { border-bottom: 0; }
@@ -56,12 +68,12 @@ ol { padding-left: 23px; }
 }
 .list-inline > li:last-child { margin-right: 0; }
 .list-lined > li {
-  border-top: 1px solid $color-haze-dark;
+  border-top: 1px solid $color-dark-haze;
   padding-left: 0;
   padding-right: 0;
 }
 .list-lined > li:first-child { border: 0; }
-.list-striped > li:nth-child(odd) { background: $color-haze-light; }
+.list-striped > li:nth-child(odd) { background: $color-light-haze; }
 .list-bordered.list-small > li,
 .list-lined.list-small > li,
 .list-striped.list-small > li { padding: 5px 5px 3px 5px; }

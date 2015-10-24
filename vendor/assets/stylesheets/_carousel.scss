@@ -16,7 +16,8 @@
   display: none;
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
+      -ms-transition: 0.6s ease-in-out left;
+          transition: 0.6s ease-in-out left;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -35,11 +36,11 @@
   top: 0;
   width: 100%;
 }
-.carousel-inner > .next { left: 100%; }
-.carousel-inner > .prev { left: -100%; }
 .carousel-inner > .next.left,
 .carousel-inner > .prev.right { left: 0; }
+.carousel-inner > .prev,
 .carousel-inner > .active.left { left: -100%; }
+.carousel-inner > .next,
 .carousel-inner > .active.right { left: 100%; }
 .carousel-control {
   bottom: 0;
@@ -104,11 +105,11 @@
   z-index: 15;
 }
 .carousel-indicators > li {
-  display: inline-block;
   background: $color-white;
   border-radius: 10px;
   border: 1px solid $color-white;
   cursor: pointer;
+  display: inline-block;
   height: 4px;
   margin: 2px 6px;
   text-indent: -999px;
@@ -142,8 +143,8 @@
 ================================================== */
 .carousel-dark .carousel-indicators > li,
 .carousel-primary .carousel-indicators > li {
-  background: $color-black-light;
-  border-color: $color-black-light;
+  background: $color-light-black;
+  border-color: $color-light-black;
 }
 .carousel-dark .carousel-indicators > .active,
 .carousel-primary .carousel-indicators > .active { background: $color-transparent; }

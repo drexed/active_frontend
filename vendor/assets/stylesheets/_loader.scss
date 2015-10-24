@@ -1,18 +1,36 @@
 /* Table of Contents
 ==================================================
+# Keyframes
 # Loader
 # Media Queries */
 
-/* # Loader
+/* # Keyframes
 ================================================== */
 @-webkit-keyframes loader-spinner {
-  0%   { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 @keyframes loader-spinner {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
+
+/* # Loader
+================================================== */
 .loader-backdrop,
 .loader-bar {
   height: 2px;
@@ -25,7 +43,7 @@
 }
 .loader-backdrop {
   height: 3px;
-  background: $color-haze-light;
+  background: $color-light-haze;
 }
 .loader-bar { background: $color-primary; }
 .loader-peg {
@@ -36,8 +54,9 @@
   pointer-events: none;
   position: absolute;
   right: 0;
-  -webkit-transform: rotate(3deg) translate(0, -4px);
-  transform: rotate(3deg) translate(0, -4px);
+  -webkit-transform: rotate(3deg) translate(0,-4px);
+      -ms-transform: rotate(3deg) translate(0,-4px);
+          transform: rotate(3deg) translate(0,-4px);
   width: 100px;
 }
 .loader-spinner {
@@ -50,7 +69,8 @@
 }
 .loader-spinner-icon {
   -webkit-animation: loader-spinner 400ms linear infinite;
-  animation: loader-spinner 400ms linear infinite;
+      -ms-animation: loader-spinner 400ms linear infinite;
+          animation: loader-spinner 400ms linear infinite;
   border: solid 2px $color-transparent;
   border-left-color: $color-primary;
   border-top-color: $color-primary;

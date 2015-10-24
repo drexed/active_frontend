@@ -25,8 +25,8 @@
   opacity: 1;
 }
 .modal {
-  background-clip: padding-box;
   background: $color-white;
+  background-clip: padding-box;
   border-radius: 3px;
   box-shadow: 0 0 3px rgba(0,0,0,0.3);
   display: none;
@@ -40,7 +40,8 @@
 }
 .modal.fade {
   -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
-  transition: opacity 0.3s linear, top 0.3s ease-out;
+      -ms-transition: opacity 0.3s linear, top 0.3s ease-out;
+          transition: opacity 0.3s linear, top 0.3s ease-out;
   top: -100%;
 }
 .modal.fade.in { top: 15%; }
@@ -80,7 +81,8 @@
 button.modal-footer-btn,
 input.modal-footer-btn {
   -webkit-appearance: none;
-  appearance: none;
+      -ms-appearance: none;
+          appearance: none;
   background: $color-white;
   border: 0;
   box-sizing: border-box;
@@ -97,6 +99,7 @@ input.modal-footer-btn {
   text-indent: 0;
   text-rendering: geometricPrecision;
   text-transform: uppercase;
+  touch-action: manipulation;
   vertical-align: middle;
   width: 100%;
 }

@@ -19,14 +19,14 @@
   float: left;
 }
 .missive-icon {
-  color: $color-haze-dark;
+  color: $color-dark-haze;
   font-size: 84px;
   line-height: 120px;
   text-align: center;
   width: 100px;
 }
 .missive-content {
-  color: $color-gray-light;
+  color: $color-light-gray;
   padding: 20px 15px 20px 0;
   width: calc(100% - 100px);
 }
@@ -40,14 +40,14 @@
 ================================================== */
 .missive-dark {
   background: $color-black;
-  border-color: $color-black-dark;
+  border-color: $color-dark-black;
 }
+.missive-dark .missive-icon { color: $color-light-black; }
+.missive-dark .missive-content { color: $color-dark-gray; }
 .missive-light {
-  background: $color-haze-light;
-  border-color: $color-haze-dark;
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
 }
-.missive-dark .missive-icon { color: $color-black-light; }
-.missive-dark .missive-content { color: $color-gray-dark; }
 
 /* # Media Queries
 ================================================== */

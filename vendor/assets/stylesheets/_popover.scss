@@ -5,22 +5,22 @@
 /* # Popover
 ================================================== */
 .popover {
-  background-clip: padding-box;
   background: $color-white;
-  border: 1px solid $color-haze-dark;
-  box-shadow: 0 0 3px $color-haze-dark;
+  background-clip: padding-box;
+  border: 1px solid $color-dark-haze;
+  box-shadow: 0 0 3px $color-dark-haze;
   display: none;
   float: none;
   font-style: normal;
-  letter-spacing: 0;
   left: 0;
+  letter-spacing: 0;
   position: absolute;
   text-align: left;
   text-decoration: none;
   text-transform: none;
   top: 0;
-  width: 276px;
   white-space: normal;
+  width: 276px;
   z-index: 1060;
 }
 .popover.top { margin-top: -10px; }
@@ -37,8 +37,8 @@
   padding: 10px 15px;
 }
 .popover-title {
-  background: $color-haze-light;
-  border-bottom: 1px solid $color-haze-dark;
+  background: $color-light-haze;
+  border-bottom: 1px solid $color-dark-haze;
   font-weight: bold;
   line-height: 18px;
 }

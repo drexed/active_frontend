@@ -50,7 +50,7 @@
 .breadcrumb-flow > li,
 .breadcrumb-flow > li > a { color: $color-black; }
 .breadcrumb-flow > li.active ~ li,
-.breadcrumb-flow > li.active ~ li > a { color: $color-haze-dark; }
+.breadcrumb-flow > li.active ~ li > a { color: $color-dark-haze; }
 .breadcrumb-flow > li.active,
 .breadcrumb-flow > li > a:hover,
 .breadcrumb-flow > li > a:active,
@@ -77,7 +77,7 @@
 .breadcrumb-flow > li.active:before { background: $color-white; }
 .breadcrumb-flow > li.active ~ li:before {
   background: $color-white;
-  border-color: $color-haze-light;
+  border-color: $color-light-haze;
 }
 .breadcrumb-flow > li + li:after {
   background: $color-primary;
@@ -90,7 +90,7 @@
   width: 100%;
   z-index: 0;
 }
-.breadcrumb-flow > li.active ~ li:after { background: $color-haze-light; }
+.breadcrumb-flow > li.active ~ li:after { background: $color-light-haze; }
 
 /* # Media Queries
 ================================================== */

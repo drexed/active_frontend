@@ -29,8 +29,8 @@
 }
 .trunk-nav > li,
 .trunk-user > li {
-  font-weight: 500;
   font-size: 11px;
+  font-weight: 500;
   line-height: 11px;
   margin: 5px;
 }
@@ -50,7 +50,7 @@
 }
 .trunk-nav > li.title {
   border-bottom: 1px solid $color-haze;
-  color: $color-gray-dark;
+  color: $color-primary;
   font-size: 12px;
   letter-spacing: 1px;
   line-height: 12px;
@@ -66,14 +66,15 @@
 .trunk-nav > li > a,
 .trunk-user > li > a {
   -webkit-appearance: none;
-  appearance: none;
+      -ms-appearance: none;
+          appearance: none;
   border-radius: 2px;
-  color: $color-gray-dark;
+  color: $color-dark-gray;
   cursor: pointer;
   display: block;
   -webkit-font-smoothing: antialiased;
-  font-weight: 500;
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: 11px;
   padding: 11px 0 9px 0;
@@ -82,7 +83,8 @@
   text-rendering: geometricPrecision;
   text-transform: uppercase;
   -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+          transition: all 0.3s linear;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -123,11 +125,7 @@
 ================================================== */
 .trunk-dark {
   background: $color-black;
-  border-color: $color-black-dark;
-}
-.trunk-light {
-  background: $color-haze-light;
-  border-color: $color-haze-dark;
+  border-color: $color-dark-black;
 }
 .trunk-dark .trunk-nav > li.title,
 .trunk-dark .trunk-nav > li > a,
@@ -146,9 +144,13 @@
   border-color: $color-primary;
   color: $color-primary;
 }
+.trunk-light {
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
+}
 .trunk-light .trunk-nav > li.title,
 .trunk-light .trunk-nav > li.divider,
-.trunk-light .trunk-nav > li > a { border-color: $color-haze-dark; }
+.trunk-light .trunk-nav > li > a { border-color: $color-dark-haze; }
 .trunk-light .trunk-nav > li > a:hover,
 .trunk-light .trunk-nav > li > a:active,
 .trunk-light .trunk-nav > li > a.active,

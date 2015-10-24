@@ -15,11 +15,12 @@
   opacity: 1;
   padding: 0;
   -webkit-transition: none;
-  transition: none;
+      -ms-transition: none;
+          transition: none;
   visibility: visible;
 }
 .datepicker:before {
-  border-bottom: 7px solid $color-haze-dark;
+  border-bottom: 7px solid $color-dark-haze;
   border-right: 7px solid $color-transparent;
   border-left: 7px solid $color-transparent;
   content: '';
@@ -27,7 +28,7 @@
   position: absolute;
 }
 .datepicker:after {
-  border-bottom: 6px solid $color-haze-dark;
+  border-bottom: 6px solid $color-dark-haze;
   border-right: 6px solid $color-transparent;
   border-left: 6px solid $color-transparent;
   content: '';
@@ -43,12 +44,12 @@
 .datepicker.datepicker-orient-bottom:before {
   bottom: -7px;
   border-bottom: 0;
-  border-top: 7px solid $color-haze-dark;
+  border-top: 7px solid $color-dark-haze;
 }
 .datepicker.datepicker-orient-bottom:after {
   bottom: -6px;
   border-bottom: 0;
-  border-top: 6px $color-haze-dark;
+  border-top: 6px $color-dark-haze;
 }
 .dow {
   color: $color-black;
@@ -57,9 +58,9 @@
 .datepicker > div { display: none; }
 .datepicker table {
   margin: 0;
-  -webkit-touch-callout: none;
   -webkit-user-select: none;
-  user-select: none;
+        -ms-ms-select: none;
+          user-select: none;
   width: 100%;
 }
 .datepicker table th,
@@ -74,7 +75,7 @@
   line-height: 16px;
 }
 .datepicker table td.new,
-.datepicker table td.old { color: $color-gray-light; }
+.datepicker table td.old { color: $color-light-gray; }
 .datepicker table td > span {
   border-radius: 2px;
   display: block;
@@ -110,7 +111,7 @@
   font-weight: bold;
   width: 145px;
 }
-.datepicker table td.day.disabled { color: $color-haze-dark; }
+.datepicker table td.day.disabled { color: $color-dark-haze; }
 .datepicker table td.day.disabled:hover,
 .datepicker table td.day.disabled.active,
 .datepicker table td.day.disabled:active,

@@ -1,77 +1,56 @@
 /* Table of Contents
 ==================================================
+# Mixins
 # Ad
+# Sizes
 # Media Queries */
+
+/* # Mixins
+================================================== */
+@mixin dimensions($height, $width) {
+  height: $height;
+  width: $width;
+}
 
 /* # Ad
 ================================================== */
 .ad {
-  background: $color-haze-light;
-  border: 1px solid $color-haze-dark;
+  background: $color-white;
+  border: 1px solid $color-haze;
   box-sizing: border-box;
-  height: 220px;
-  width: 220px;
+  display: block !important;
+  visibility: visible !important;
+  @include dimensions(220px, 220px);
 }
 .ad-center { margin: 0 auto; }
-.ad-large-rectangle {
-  height: 280px;
-  width: 336px;
+
+/* # Sizes
+================================================== */
+.ad-banner { @include dimensions(60px, 468px); }
+.ad-half-banner { @include dimensions(60px, 234px); }
+.ad-mobile-banner { @include dimensions(50px, 320px); }
+.ad-vertical-banner { @include dimensions(240px, 120px); }
+.ad-button { @include dimensions(125px, 125px); }
+.ad-leaderboard { @include dimensions(90px, 728px); }
+.ad-large-leaderboard { @include dimensions(90px, 970px); }
+.ad-large-rectangle { @include dimensions(280px, 336px); }
+.ad-medium-rectangle { @include dimensions(250px, 300px); }
+.ad-small-rectangle { @include dimensions(150px, 180px); }
+.ad-skyscrapper { @include dimensions(600px, 120px); }
+.ad-large-skyscrapper { @include dimensions(600px, 300px); }
+.ad-wide-skyscrapper { @include dimensions(600px, 160px); }
+.ad-square { @include dimensions(250px, 250px); }
+.ad-small-square { @include dimensions(200px, 200px); }
+
+/* # Colors
+================================================== */
+.ad-dark {
+  background: $color-black;
+  border-color: $color-dark-black;
 }
-.ad-medium-rectangle {
-  height: 250px;
-  width: 300px;
-}
-.ad-small-rectangle {
-  height: 150px;
-  width: 180px;
-}
-.ad-square {
-  height: 250px;
-  width: 250px;
-}
-.ad-small-square {
-  height: 200px;
-  width: 200px;
-}
-.ad-button {
-  height: 125px;
-  width: 125px;
-}
-.ad-large-leaderboard {
-  height: 90px;
-  width: 970px;
-}
-.ad-leaderboard {
-  height: 90px;
-  width: 728px;
-}
-.ad-banner {
-  height: 60px;
-  width: 468px;
-}
-.ad-half-banner {
-  height: 60px;
-  width: 234px;
-}
-.ad-mobile-banner {
-  height: 50px;
-  width: 320px;
-}
-.ad-vertical-banner {
-  height: 240px;
-  width: 120px;
-}
-.ad-large-skyscrapper {
-  height: 600px;
-  width: 300px;
-}
-.ad-wide-skyscrapper {
-  height: 600px;
-  width: 160px;
-}
-.ad-skyscrapper {
-  height: 600px;
-  width: 120px;
+.ad-light {
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
 }
 
 /* # Media Queries

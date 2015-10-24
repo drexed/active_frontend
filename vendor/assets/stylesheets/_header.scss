@@ -194,15 +194,15 @@
 ================================================== */
 .header-dark {
   background: $color-black;
-  border-color: $color-black-dark;
+  border-color: $color-dark-black;
 }
 .header-invisible {
   background: $color-transparent;
   border-color: $color-transparent;
 }
 .header-light {
-  background: $color-haze-light;
-  border-color: $color-haze-dark;
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
 }
 .header-dark .header-nav > li,
 .header-dark .header-nav-alt > li,
@@ -236,7 +236,7 @@
 .header-dark .header-user > a:active,
 .header-dark .header-user > a:focus { color: $color-primary; }
 .header-dark .header-nav-alt > li.inverse > a { color: $color-white; }
-.header-dark .header-search > input { border-color: $color-black-dark; }
+.header-dark .header-search > input { border-color: $color-dark-black; }
 .header-invisible .header-nav-alt > li.inverse > a {
   background: $color-white;
   border-color: $color-white;

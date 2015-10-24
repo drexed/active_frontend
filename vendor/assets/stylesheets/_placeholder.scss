@@ -18,7 +18,7 @@
   width: 120px;
 }
 .placeholder > h6 {
-  color: $color-gray-dark;
+  color: $color-dark-gray;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -32,7 +32,7 @@
 ================================================== */
 .placeholder-large > i {
   background: $color-transparent;
-  color: $color-gray-dark;
+  color: $color-dark-gray;
   display: inline-block;
   font-size: 256px;
   height: initial;
@@ -40,7 +40,7 @@
   width: initial;
 }
 .placeholder-divider {
-  background: $color-haze-light;
+  background: $color-light-haze;
   border-radius: 500px;
   height: 8px;
   margin: 20px auto;
@@ -53,6 +53,6 @@
   .placeholder-divider { width: 75%; }
   .placeholder-large > i {
     font-size: 196px;
-    line-height: 196px;
+    line-height: 1;
   }
 }

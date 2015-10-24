@@ -1,10 +1,11 @@
 /* Table of Contents
 ==================================================
+# Keyframes
 # Spinner */
 
-/* # Spinner
+/* # Keyframes
 ================================================== */
-@-webkit-keyframes spinnerBeat {
+@-webkit-keyframes spinner-beat {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -26,33 +27,34 @@
             transform: scale(1);
   }
 }
-@keyframes spinnerBeat {
+@keyframes spinner-beat {
   0% {
     -webkit-transform: scale(1);
+        -ms-transform: scale(1);
             transform: scale(1);
   }
   14% {
     -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
             transform: scale(1.5);
   }
   28% {
     -webkit-transform: scale(1);
+        -ms-transform: scale(1);
             transform: scale(1);
   }
   42% {
     -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
             transform: scale(1.5);
   }
   70% {
     -webkit-transform: scale(1);
+        -ms-transform: scale(1);
             transform: scale(1);
   }
 }
-@-webkit-keyframes spinnerCircle {
-  0%, 80%, 100% { -webkit-transform: scale(0); }
-  40%           { -webkit-transform: scale(1.0); }
-}
-@keyframes spinnerCircle {
+@-webkit-keyframes spinner-circle {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -62,20 +64,32 @@
             transform: scale(1.0);
   }
 }
-@-webkit-keyframes spinnerChaseRotate {
-  100% { -webkit-transform: rotate(360deg); }
+@keyframes spinner-circle {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+            transform: scale(1.0);
+  }
 }
-@keyframes spinnerChaseRotate {
+@-webkit-keyframes spinner-chase-rotate {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
-@-webkit-keyframes spinnerChaseBounce {
-  0%, 100% { -webkit-transform: scale(0); }
-  50%      { -webkit-transform: scale(1.0); }
+@keyframes spinner-chase-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
-@keyframes spinnerChaseBounce {
+@-webkit-keyframes spinner-chase-bounce {
   0%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -85,7 +99,19 @@
             transform: scale(1.0);
   }
 }
-@-webkit-keyframes spinnerCrescent {
+@keyframes spinner-chase-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+            transform: scale(1.0);
+  }
+}
+@-webkit-keyframes spinner-crescent {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -95,37 +121,42 @@
             transform: rotate(360deg);
   }
 }
-@keyframes spinnerCrescent {
+@keyframes spinner-crescent {
   0% {
     -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
             transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
-@-webkit-keyframes spinnerCube {
-  0%, 70%, 100% { -webkit-transform:scale3D(1.0, 1.0, 1.0); }
-  35%           { -webkit-transform:scale3D(0.0, 0.0, 1.0); }
-}
-@keyframes spinnerCube {
+@-webkit-keyframes spinner-cube {
   0%, 70%, 100% {
-    -webkit-transform:scale3D(1.0, 1.0, 1.0);
-            transform:scale3D(1.0, 1.0, 1.0);
+    -webkit-transform:scale3D(1.0,1.0,1.0);
+            transform:scale3D(1.0,1.0,1.0);
+  }
+  35% {
+    -webkit-transform:scale3D(0.0,0.0,1.0);
+            transform:scale3D(0.0,0.0,1.0);
+  }
+}
+@keyframes spinner-cube {
+  0%, 70%, 100% {
+    -webkit-transform:scale3D(1.0,1.0,1.0);
+        -ms-transform:scale3D(1.0,1.0,1.0);
+            transform:scale3D(1.0,1.0,1.0);
   }
   35%           {
-    -webkit-transform:scale3D(0.0, 0.0, 1.0);
-            transform:scale3D(0.0, 0.0, 1.0);
+    -webkit-transform:scale3D(0.0,0.0,1.0);
+        -ms-transform:scale3D(0.0,0.0,1.0);
+            transform:scale3D(0.0,0.0,1.0);
   }
 }
-@-webkit-keyframes spinnerDoubleBounce {
-  0%, 100% { -webkit-transform: scale(0); }
-  50%      { -webkit-transform: scale(1.0); }
-}
-@keyframes spinnerDoubleBounce {
+@-webkit-keyframes spinner-double-bounce {
   0%, 100% {
-
     -webkit-transform: scale(0);
             transform: scale(0);
   }
@@ -134,7 +165,19 @@
             transform: scale(1.0);
   }
 }
-@-webkit-keyframes spinnerFlower {
+@keyframes spinner-double-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+            transform: scale(1.0);
+  }
+}
+@-webkit-keyframes spinner-flower {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -146,23 +189,21 @@
     box-shadow: $color-primary 0 0 23px 0, $color-primary 20px 20px 0 0, $color-primary -20px 20px 0 0, $color-primary -20px -20px 0 0, $color-primary 20px -20px 0 0;
   }
 }
-@keyframes spinnerFlower {
+@keyframes spinner-flower {
   0% {
     -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
             transform: rotate(0deg);
     box-shadow: $color-primary 0 0 23px 0, $color-primary -20px -20px 0 0, $color-primary 20px -20px 0 0, $color-primary 20px 20px 0 0, $color-primary -20px 20px 0 0;
   }
   50% {
     -webkit-transform: rotate(1080deg);
+        -ms-transform: rotate(1080deg);
             transform: rotate(1080deg);
     box-shadow: $color-primary 0 0 23px 0, $color-primary 20px 20px 0 0, $color-primary -20px 20px 0 0, $color-primary -20px -20px 0 0, $color-primary 20px -20px 0 0;
   }
 }
-@-webkit-keyframes spinnerOrbit {
-  0%   { -webkit-transform: rotate(0); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-@keyframes spinnerOrbit {
+@-webkit-keyframes spinner-orbit {
   0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
@@ -172,17 +213,21 @@
             transform: rotate(360deg);
   }
 }
-@-webkit-keyframes spinnerPulse {
+@keyframes spinner-orbit {
   0% {
-    -webkit-transform: scale(0);
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
-    opacity: 0;
-    -webkit-transform: scale(1.0);
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
-@keyframes spinnerPulse {
+@-webkit-keyframes spinner-pulse {
   0% {
+    opacity: 1;
     -webkit-transform: scale(0);
             transform: scale(0);
   }
@@ -192,30 +237,52 @@
             transform: scale(1.0);
   }
 }
-@-webkit-keyframes spinnerRotatingPlane {
-  0%   { -webkit-transform: perspective(120px); }
-  50%  { -webkit-transform: perspective(120px) rotateY(180deg); }
-  100% { -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg); }
+@keyframes spinner-pulse {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+            transform: scale(1.0);
+  }
 }
-@keyframes spinnerRotatingPlane {
+@-webkit-keyframes spinner-rotating-plane {
+  0%   {
+    -webkit-transform: perspective(120px);
+            transform: perspective(120px);
+  }
+  50%  {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+            transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+            transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+@keyframes spinner-rotating-plane {
   0% {
     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -ms-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
             transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   }
   50% {
     -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -ms-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
             transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
   }
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -ms-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
-@-webkit-keyframes spinnerTripleBounce {
-  0%, 80%, 100% { -webkit-transform: scale(0); }
-  40%           { -webkit-transform: scale(1.0); }
-}
-@keyframes spinnerTripleBounce {
+@-webkit-keyframes spinner-triple-bounce {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
             transform: scale(0);
@@ -225,13 +292,19 @@
             transform: scale(1.0);
   }
 }
-@-webkit-keyframes spinnerWander {
-  25%  { -webkit-transform: translateX(50px) rotate(-90deg) scale(0.5); }
-  50%  { -webkit-transform: translateX(50px) translateY(50px) rotate(-180deg); }
-  75%  { -webkit-transform: translateX(0px) translateY(50px) rotate(-270deg) scale(0.5); }
-  100% { -webkit-transform: rotate(-360deg); }
+@keyframes spinner-triple-bounce {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+            transform: scale(1.0);
+  }
 }
-@keyframes spinnerWander {
+@-webkit-keyframes spinner-wander {
   25% {
     -webkit-transform: translateX(50px) rotate(-90deg) scale(0.5);
             transform: translateX(50px) rotate(-90deg) scale(0.5);
@@ -253,11 +326,34 @@
             transform: rotate(-360deg);
   }
 }
-@-webkit-keyframes spinnerWave {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4); }
-  20%           { -webkit-transform: scaleY(1.0); }
+@keyframes spinner-wander {
+  25% {
+    -webkit-transform: translateX(50px) rotate(-90deg) scale(0.5);
+        -ms-transform: translateX(50px) rotate(-90deg) scale(0.5);
+            transform: translateX(50px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(50px) translateY(50px) rotate(-179deg);
+        -ms-transform: translateX(50px) translateY(50px) rotate(-179deg);
+            transform: translateX(50px) translateY(50px) rotate(-179deg);
+  }
+  50.1% {
+    -webkit-transform: translateX(50px) translateY(50px) rotate(-180deg);
+        -ms-transform: translateX(50px) translateY(50px) rotate(-180deg);
+            transform: translateX(50px) translateY(50px) rotate(-180deg);
+  }
+  75% {
+    -webkit-transform: translateX(0px) translateY(50px) rotate(-270deg) scale(0.5);
+        -ms-transform: translateX(0px) translateY(50px) rotate(-270deg) scale(0.5);
+            transform: translateX(0px) translateY(50px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }
-@keyframes spinnerWave {
+@-webkit-keyframes spinner-wave {
   0%, 40%, 100% {
     -webkit-transform: scaleY(0.4);
             transform: scaleY(0.4);
@@ -267,7 +363,19 @@
             transform: scaleY(1.0);
   }
 }
-@-webkit-keyframes spinnerWobbler {
+@keyframes spinner-wave {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4);
+        -ms-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1.0);
+        -ms-transform: scaleY(1.0);
+            transform: scaleY(1.0);
+  }
+}
+@-webkit-keyframes spinner-wobbler {
   0%  { left: 4px; }
   3%  { left: 104px; }
   6%  { left: 4px; }
@@ -295,7 +403,7 @@
   94% { left: 72px; }
   97% { left: 104px; }
 }
-@keyframes spinnerWobbler {
+@keyframes spinner-wobbler {
   0%  { left: 4px; }
   3%  { left: 104px; }
   6%  { left: 4px; }
@@ -323,6 +431,9 @@
   94% { left: 72px; }
   97% { left: 104px; }
 }
+
+/* # Spinner
+================================================== */
 .spinner-backdrop {
   background: rgba(255,255,255,0.9);
   bottom: 0;
@@ -334,10 +445,9 @@
 }
 .spinner {
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+          animation-fill-mode: both;
   margin: 15% auto 0 auto;
-  -webkit-perspective: 1000;
-  perspective: 1000;
   position: relative;
   text-align: center;
 }
@@ -353,9 +463,9 @@
   width: 60px;
 }
 .spinner-beat,
-.spinner-circle-container-1 div,
-.spinner-circle-container-2 div,
-.spinner-circle-container-3 div,
+.spinner-circle-container-1 > div,
+.spinner-circle-container-2 > div,
+.spinner-circle-container-3 > div,
 .spinner-chase-1,
 .spinner-chase-2,
 .spinner-crescent,
@@ -375,10 +485,10 @@
 .spinner-rotating-plane,
 .spinner-orbit,
 .spinner-orbit-1,
-.spinner-triple-bounce div,
+.spinner-triple-bounce > div,
 .spinner-wander-1,
 .spinner-wander-2,
-.spinner-wave div,
+.spinner-wave > div,
 .spinner-wobbler,
 .spinner-wobbler::after  {
   border: 1px solid $color-primary;
@@ -386,16 +496,18 @@
   box-sizing: border-box;
 }
 .spinner-beat {
-  -webkit-animation: spinnerBeat 1.3s infinite ease-in-out;
-  animation: spinnerBeat 1.3s infinite ease-in-out;
+  -webkit-animation: spinner-beat 1.3s infinite ease-in-out;
+      -ms-animation: spinner-beat 1.3s infinite ease-in-out;
+          animation: spinner-beat 1.3s infinite ease-in-out;
   background: $color-white;
   border-width: 2px;
 }
-.spinner-circle-container-1 div,
-.spinner-circle-container-2 div,
-.spinner-circle-container-3 div {
-  -webkit-animation: spinnerCircle 1.2s infinite ease-in-out;
-  animation: spinnerCircle 1.2s infinite ease-in-out;
+.spinner-circle-container-1 > div,
+.spinner-circle-container-2 > div,
+.spinner-circle-container-3 > div {
+  -webkit-animation: spinner-circle 1.2s infinite ease-in-out;
+      -ms-animation: spinner-circle 1.2s infinite ease-in-out;
+          animation: spinner-circle 1.2s infinite ease-in-out;
   background: $color-primary;
   height: 15px;
   position: absolute;
@@ -408,11 +520,13 @@
 }
 .spinner-circle-container-2 {
   -webkit-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
+      -ms-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
 .spinner-circle-container-3 {
   -webkit-transform: rotateZ(90deg);
-  transform: rotateZ(90deg);
+      -ms-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
 }
 .spinner-circle-1 {
   left: 0;
@@ -431,13 +545,15 @@
   left: 0;
 }
 .spinner-chase {
-  -webkit-animation: spinnerChaseRotate 2.0s infinite linear;
-  animation: spinnerChaseRotate 2.0s infinite linear;
+  -webkit-animation: spinner-chase-rotate 2.0s infinite linear;
+      -ms-animation: spinner-chase-rotate 2.0s infinite linear;
+          animation: spinner-chase-rotate 2.0s infinite linear;
 }
 .spinner-chase-1,
 .spinner-chase-2 {
-  -webkit-animation: spinnerChaseBounce 2.0s infinite ease-in-out;
-  animation: spinnerChaseBounce 2.0s infinite ease-in-out;
+  -webkit-animation: spinner-chase-bounce 2.0s infinite ease-in-out;
+      -ms-animation: spinner-chase-bounce 2.0s infinite ease-in-out;
+          animation: spinner-chase-bounce 2.0s infinite ease-in-out;
   background: $color-primary;
   display: inline-block;
   height: 60%;
@@ -450,8 +566,9 @@
   top: auto;
 }
 .spinner-crescent {
-  -webkit-animation: spinnerCrescent 1.2s infinite linear;
-  animation: spinnerCrescent 1.2s infinite linear;
+  -webkit-animation: spinner-crescent 1.2s infinite linear;
+      -ms-animation: spinner-crescent 1.2s infinite linear;
+          animation: spinner-crescent 1.2s infinite linear;
   border-width: 9px;
   border-right-color: $color-transparent;
 }
@@ -464,8 +581,9 @@
 .spinner-cube-7,
 .spinner-cube-8,
 .spinner-cube-9 {
-  -webkit-animation: spinnerCube 1.3s infinite ease-in-out;
-  animation: spinnerCube 1.3s infinite ease-in-out;
+  -webkit-animation: spinner-cube 1.3s infinite ease-in-out;
+      -ms-animation: spinner-cube 1.3s infinite ease-in-out;
+          animation: spinner-cube 1.3s infinite ease-in-out;
   background: $color-primary;
   border-color: $color-white;
   float: left;
@@ -477,8 +595,9 @@
 .spinner-cube-9 { margin-top: -1px; }
 .spinner-double-bounce-1,
 .spinner-double-bounce-2 {
-  -webkit-animation: spinnerDoubleBounce 2.0s infinite ease-in-out;
-  animation: spinnerDoubleBounce 2.0s infinite ease-in-out;
+  -webkit-animation: spinner-double-bounce 2.0s infinite ease-in-out;
+      -ms-animation: spinner-double-bounce 2.0s infinite ease-in-out;
+          animation: spinner-double-bounce 2.0s infinite ease-in-out;
   background: $color-primary;
   border-radius: 50%;
   height: 100%;
@@ -489,17 +608,20 @@
   width: 100%;
 }
 .spinner-flower {
-  -webkit-animation: spinnerFlower 5s infinite ease-in-out;
-  animation: spinnerFlower 5s infinite ease-in-out;
+  -webkit-animation: spinner-flower 5s infinite ease-in-out;
+      -ms-animation: spinner-flower 5s infinite ease-in-out;
+          animation: spinner-flower 5s infinite ease-in-out;
   background: $color-primary;
   height: 23px;
   -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   width: 23px;
 }
 .spinner-orbit {
-  -webkit-animation: spinnerOrbit 1s linear infinite;
-  animation: spinnerOrbit 1s linear infinite;
+  -webkit-animation: spinner-orbit 1s linear infinite;
+      -ms-animation: spinner-orbit 1s linear infinite;
+          animation: spinner-orbit 1s linear infinite;
 }
 .spinner-orbit-1 {
   background: $color-primary;
@@ -507,22 +629,25 @@
   width: 20px;
 }
 .spinner-pulse {
-  -webkit-animation: spinnerPulse 1.0s infinite ease-in-out;
-  animation: spinnerPulse 1.0s infinite ease-in-out;
+  -webkit-animation: spinner-pulse 1.0s infinite ease-in-out;
+      -ms-animation: spinner-pulse 1.0s infinite ease-in-out;
+          animation: spinner-pulse 1.0s infinite ease-in-out;
   background: $color-primary;
 }
 .spinner-rotating-plane {
-  -webkit-animation: spinnerRotatingPlane 1.2s infinite ease-in-out;
-  animation: spinnerRotatingPlane 1.2s infinite ease-in-out;
+  -webkit-animation: spinner-rotating-plane 1.2s infinite ease-in-out;
+      -ms-animation: spinner-rotating-plane 1.2s infinite ease-in-out;
+          animation: spinner-rotating-plane 1.2s infinite ease-in-out;
   background: $color-primary;
   border-radius: 0;
   height: 100px;
   width: 100px;
 }
 .spinner-triple-bounce { width: 100px; }
-.spinner-triple-bounce div {
-  -webkit-animation: spinnerTripleBounce 1.4s infinite ease-in-out;
-  animation: spinnerTripleBounce 1.4s infinite ease-in-out;
+.spinner-triple-bounce > div {
+  -webkit-animation: spinner-triple-bounce 1.4s infinite ease-in-out;
+      -ms-animation: spinner-triple-bounce 1.4s infinite ease-in-out;
+          animation: spinner-triple-bounce 1.4s infinite ease-in-out;
   background: $color-primary;
   display: inline-block;
   height: 25px;
@@ -534,8 +659,9 @@
 }
 .spinner-wander-1,
 .spinner-wander-2 {
-  -webkit-animation: spinnerWander 1.8s infinite ease-in-out;
-  animation: spinnerWander 1.8s infinite ease-in-out;
+  -webkit-animation: spinner-wander 1.8s infinite ease-in-out;
+      -ms-animation: spinner-wander 1.8s infinite ease-in-out;
+          animation: spinner-wander 1.8s infinite ease-in-out;
   background: $color-primary;
   border-radius: 0;
   height: 20px;
@@ -545,9 +671,10 @@
   width: 20px;
 }
 .spinner-wave { height: 100px; }
-.spinner-wave div {
-  -webkit-animation: spinnerWave 1.2s infinite ease-in-out;
-  animation: spinnerWave 1.2s infinite ease-in-out;
+.spinner-wave > div {
+  -webkit-animation: spinner-wave 1.2s infinite ease-in-out;
+      -ms-animation: spinner-wave 1.2s infinite ease-in-out;
+          animation: spinner-wave 1.2s infinite ease-in-out;
   background: $color-primary;
   border-radius: 0;
   display: inline-block;
@@ -559,8 +686,9 @@
   width: 150px;
 }
 .spinner-wobbler::after {
-  -webkit-animation: spinnerWobbler 15s infinite ease-in-out;
-  animation: spinnerWobbler 15s infinite ease-in-out;
+  -webkit-animation: spinner-wobbler 15s infinite ease-in-out;
+      -ms-animation: spinner-wobbler 15s infinite ease-in-out;
+          animation: spinner-wobbler 15s infinite ease-in-out;
   background: $color-primary;
   content: '';
   height: 20px;
@@ -569,83 +697,100 @@
   top: 2px;
   width: 20px;
 }
-.spinner-circle-container-2 .spinner-circle-1,
-.spinner-wave .spinner-wave-2 {
+.spinner-circle > .spinner-circle-container-2 .spinner-circle-1,
+.spinner-wave > .spinner-wave-2 {
   -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
+      -ms-animation-delay: -1.1s;
+          animation-delay: -1.1s;
 }
-.spinner-circle-container-3 .spinner-circle-1,
-.spinner-circle-container-3 .spinner-circle-4,
+.spinner-circle > .spinner-circle-container-3 .spinner-circle-1,
+.spinner-circle > .spinner-circle-container-3 .spinner-circle-4,
 .spinner-chase-2,
 .spinner-double-bounce-2,
-.spinner-wave .spinner-wave-3 {
+.spinner-wave > .spinner-wave-3 {
   -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+      -ms-animation-delay: -1.0s;
+          animation-delay: -1.0s;
 }
-.spinner-circle-container-1 .spinner-circle-2,
-.spinner-wander-2,
-.spinner-wave .spinner-wave-4 {
+.spinner-circle > .spinner-circle-container-1 .spinner-circle-2,
+.spinner-wander > .spinner-wander-2,
+.spinner-wave > .spinner-wave-4 {
   -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
+      -ms-animation-delay: -0.9s;
+          animation-delay: -0.9s;
 }
-.spinner-circle-container-2 .spinner-circle-2,
-.spinner-wave .spinner-wave-5 {
+.spinner-circle > .spinner-circle-container-2 .spinner-circle-2,
+.spinner-wave > .spinner-wave-5 {
   -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
+      -ms-animation-delay: -0.8s;
+          animation-delay: -0.8s;
 }
-.spinner-circle-container-3 .spinner-circle-2 {
+.spinner-circle > .spinner-circle-container-3 > .spinner-circle-2 {
   -webkit-animation-delay: -0.7s;
-  animation-delay: -0.7s;
+      -ms-animation-delay: -0.7s;
+          animation-delay: -0.7s;
 }
-.spinner-circle-container-1 .spinner-circle-3 {
+.spinner-circle > .spinner-circle-container-1 > .spinner-circle-3 {
   -webkit-animation-delay: -0.6s;
-  animation-delay: -0.6s;
+      -ms-animation-delay: -0.6s;
+          animation-delay: -0.6s;
 }
-.spinner-circle-container-2 .spinner-circle-3 {
+.spinner-circle > .spinner-circle-container-2 > .spinner-circle-3 {
   -webkit-animation-delay: -0.5s;
-  animation-delay: -0.5s;
+      -ms-animation-delay: -0.5s;
+          animation-delay: -0.5s;
 }
-.spinner-circle-container-3 .spinner-circle-3 {
+.spinner-circle > .spinner-circle-container-3 > .spinner-circle-3 {
   -webkit-animation-delay: -0.4s;
-  animation-delay: -0.4s;
+      -ms-animation-delay: -0.4s;
+          animation-delay: -0.4s;
 }
-.spinner-circle-container-1 .spinner-circle-4 {
+.spinner-circle > .spinner-circle-container-1 > .spinner-circle-4 {
   -webkit-animation-delay: -0.3s;
-  animation-delay: -0.3s;
+      -ms-animation-delay: -0.3s;
+          animation-delay: -0.3s;
 }
-.spinner-circle-container-2 .spinner-circle-4 {
+.spinner-circle > .spinner-circle-container-2 > .spinner-circle-4 {
   -webkit-animation-delay: -0.2s;
-  animation-delay: -0.2s;
+      -ms-animation-delay: -0.2s;
+          animation-delay: -0.2s;
 }
-.spinner-triple-bounce .spinner-triple-bounce-1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-.spinner-triple-bounce .spinner-triple-bounce-2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-.spinner-cube .spinner-cube-7 {
+.spinner-cube > .spinner-cube-7 {
   -webkit-animation-delay: 0.0s;
-  animation-delay: 0.0s;
+      -ms-animation-delay: 0.0s;
+          animation-delay: 0.0s;
 }
-.spinner-cube .spinner-cube-4,
-.spinner-cube .spinner-cube-8 {
+.spinner-cube > .spinner-cube-4,
+.spinner-cube > .spinner-cube-8 {
   -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
+      -ms-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
-.spinner-cube .spinner-cube-1,
-.spinner-cube .spinner-cube-5,
-.spinner-cube .spinner-cube-9 {
+.spinner-cube > .spinner-cube-1,
+.spinner-cube > .spinner-cube-5,
+.spinner-cube > .spinner-cube-9 {
   -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+      -ms-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
-.spinner-cube .spinner-cube-2,
-.spinner-cube .spinner-cube-6 {
+.spinner-cube > .spinner-cube-2,
+.spinner-cube > .spinner-cube-6 {
   -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+      -ms-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
-.spinner-cube .spinner-cube-3 {
+.spinner-cube > .spinner-cube-3 {
   -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
+      -ms-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.spinner-triple-bounce > .spinner-triple-bounce-1 {
+  -webkit-animation-delay: -0.32s;
+      -ms-animation-delay: -0.32s;
+          animation-delay: -0.32s;
+}
+.spinner-triple-bounce > .spinner-triple-bounce-2 {
+  -webkit-animation-delay: -0.16s;
+      -ms-animation-delay: -0.16s;
+          animation-delay: -0.16s;
 }

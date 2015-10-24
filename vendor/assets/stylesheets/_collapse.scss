@@ -11,5 +11,6 @@
   overflow: hidden;
   position: relative;
   -webkit-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+      -ms-transition: height 0.35s ease;
+          transition: height 0.35s ease;
 }

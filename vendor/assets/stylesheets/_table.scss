@@ -28,30 +28,20 @@ table {
   border-top-width: 1px;
   font-size: 14px;
   font-weight: bold;
-  padding: 7px 10px 7px 10px;
+  padding: 7px 10px;
 }
 .table th a { color: $color-black; }
-.table th.tablespy-sort-asc:before {
-  content: "\f3d8";
-  float: right;
-  font-family: "Ionicons";
-  font-style: normal;
-  font-weight: normal;
-}
-.table th.tablespy-sort-desc:before {
-  content: "\f3d0";
-  float: right;
-  font-family: "Ionicons";
-  font-style: normal;
-  font-weight: normal;
-}
+.table th.tablespy-sort-asc:before,
+.table th.tablespy-sort-desc:before,
 .table th.tablespy-sort-none:before {
-  content: "\f462";
   float: right;
   font-family: "Ionicons";
   font-style: normal;
   font-weight: normal;
 }
+.table th.tablespy-sort-asc:before { content: "\f3d8"; }
+.table th.tablespy-sort-desc:before { content: "\f3d0"; }
+.table th.tablespy-sort-none:before { content: "\f462"; }
 .table th.tablespy-sort-asc,
 .table th.tablespy-sort-desc,
 .table th.tablespy-sort-none { cursor: pointer; }
@@ -64,7 +54,7 @@ table {
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 1px;
-  padding: 7px 10px 7px 10px;
+  padding: 7px 10px;
   text-transform: uppercase;
 }
 .table caption + thead tr:first-child th,
@@ -109,7 +99,7 @@ table {
 .table-bordered tbody:first-child tr:first-child th,
 .table-bordered tbody:first-child tr:first-child td { border-top: 0; }
 .table-striped tbody > tr:nth-child(odd) > td,
-.table-striped tbody > tr:nth-child(odd) > th { background: $color-haze-light; }
+.table-striped tbody > tr:nth-child(odd) > th { background: $color-light-haze; }
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th { background: $color-haze; }
 .table-unbordered,
@@ -129,6 +119,8 @@ table {
     border: 1px solid $color-haze;
     max-height: 300px;
     -webkit-overflow-scrolling: touch;
+        -ms-overflow-scrolling: touch;
+            overflow-scrolling: touch;
     overflow: scroll;
   }
   .table-responsive > .table > thead > tr > th,

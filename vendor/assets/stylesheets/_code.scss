@@ -8,8 +8,8 @@
 /* # Code/Pre
 ================================================== */
 code {
-  background: $color-haze-light;
-  border: 1px solid $color-haze-dark;
+  background: $color-light-haze;
+  border: 1px solid $color-dark-haze;
   border-radius: 2px;
   color: $color-black;
   counter-reset: code-line 0;
@@ -22,14 +22,12 @@ code {
   padding: 4px 5px;
   text-decoration: none;
   text-transform: none;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 pre {
-  background: $color-haze-light;
-  border: 1px solid $color-haze-dark;
+  background: $color-light-haze;
+  border: 1px solid $color-dark-haze;
   border-radius: 2px;
   color: $color-black;
   counter-reset: code-line 0;
@@ -66,7 +64,7 @@ pre {
 /* # Pygments
 ================================================== */
 .c {
-  color: $color-gray-light;
+  color: $color-light-gray;
   font-style: italic;
 } /* Comment */
 .err {
@@ -75,12 +73,12 @@ pre {
 } /* Error */
 .k { color: $color-blue; } /* Keyword */
 .cm {
-  color: $color-gray-light;
+  color: $color-light-gray;
   font-style: italic;
 } /* Comment.Multiline */
 .cp { color: $color-green; } /* Comment.Preproc */
 .c1 {
-  color: $color-gray-light;
+  color: $color-light-gray;
   font-style: italic;
 } /* Comment.Single */
 .cs {
@@ -155,16 +153,16 @@ pre {
 ================================================== */
 .code-dark {
   background: $color-black;
-  border-color: $color-black-dark;
+  border-color: $color-dark-black;
   color: $color-gray;
-}
-.code-light {
-  background: $color-white;
-  border-color: $color-haze;
 }
 .code-dark .err { background: $color-gray; }
 .code-dark .gp,
 .code-dark .gu { color: $color-gray; }
+.code-light {
+  background: $color-white;
+  border-color: $color-haze;
+}
 
 /* # Media Queries
 ================================================== */

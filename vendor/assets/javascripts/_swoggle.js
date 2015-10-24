@@ -11,7 +11,7 @@
         animate: true,
         disabled: false,
         readonly: false,
-        onColor: null,
+        onColor: "green",
         offColor: null,
         onText: "",
         offText: "",

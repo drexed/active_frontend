@@ -1,6 +1,57 @@
 /* Table of Contents
 ==================================================
-# Swoggle */
+# Variables
+# Swoggle
+# Colors */
+
+/* # Variables
+================================================== */
+$onblack-colors: (
+  dark-yellow:  $color-dark-yellow,
+  yellow:       $color-yellow,
+  light-yellow: $color-light-yellow
+);
+$ongray-colors: (
+  dark-haze:  $color-dark-haze,
+  haze:       $color-haze,
+  light-haze: $color-light-haze,
+  white:      $color-white
+);
+$onwhite-colors: (
+  dark-black:   $color-dark-black,
+  black:        $color-black,
+  light-black:  $color-light-black,
+  dark-gray:    $color-dark-gray,
+  gray:         $color-gray,
+  light-gray:   $color-light-gray,
+  dark-lime:    $color-dark-lime,
+  lime:         $color-lime,
+  light-lime:   $color-light-lime,
+  dark-green:   $color-dark-green,
+  green:        $color-green,
+  light-green:  $color-light-green,
+  dark-teal:    $color-dark-teal,
+  teal:         $color-teal,
+  light-teal:   $color-light-teal,
+  dark-blue:    $color-dark-blue,
+  blue:         $color-blue,
+  light-blue:   $color-light-blue,
+  dark-indigo:  $color-dark-indigo,
+  indigo:       $color-indigo,
+  light-indigo: $color-light-indigo,
+  dark-purple:  $color-dark-purple,
+  purple:       $color-purple,
+  light-purple: $color-light-purple,
+  dark-pink:    $color-dark-pink,
+  pink:         $color-pink,
+  light-pink:   $color-light-pink,
+  dark-red:     $color-dark-red,
+  red:          $color-red,
+  light-red:    $color-light-red,
+  dark-orange:  $color-dark-orange,
+  orange:       $color-orange,
+  light-orange: $color-light-orange
+);
 
 /* # Swoggle
 ================================================== */
@@ -14,10 +65,10 @@
   z-index: -1;
 }
 .swoggle {
-  background: $color-haze-light;
+  background: $color-light-haze;
+  border: 1px solid $color-light-haze;
   border-radius: 500px;
-  border: 1px solid $color-haze-light;
-  color: $color-black;
+  color: $color-gray;
   cursor: pointer;
   display: inline-block;
   -webkit-font-smoothing: antialiased;
@@ -33,9 +84,11 @@
   text-rendering: geometricPrecision;
   text-transform: uppercase;
   -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
   -webkit-user-select: none;
-  user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   vertical-align: middle;
 }
 .swoggle span,
@@ -68,99 +121,41 @@
   display: inline-block;
   position: relative;
   -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
   top: 0;
   width: 150%;
 }
 .swoggle.swoggle-on div { margin-left: 0; }
 .swoggle.swoggle-off div { margin-left: -50%; }
-.swoggle.swoggle-on.swoggle-black-light,
-.swoggle.swoggle-on.swoggle-black,
-.swoggle.swoggle-on.swoggle-black-dark,
-.swoggle.swoggle-on.swoggle-blue,
-.swoggle.swoggle-on.swoggle-gray-light,
-.swoggle.swoggle-on.swoggle-gray,
-.swoggle.swoggle-on.swoggle-gray-dark,
-.swoggle.swoggle-on.swoggle-green,
-.swoggle.swoggle-on.swoggle-indigo,
-.swoggle.swoggle-on.swoggle-lime,
-.swoggle.swoggle-on.swoggle-orange,
-.swoggle.swoggle-on.swoggle-pink,
-.swoggle.swoggle-on.swoggle-purple,
-.swoggle.swoggle-on.swoggle-red,
-.swoggle.swoggle-on.swoggle-teal,
-.swoggle.swoggle-on.swoggle-yellow { color: $color-white; }
-.swoggle.swoggle-on.swoggle-black-light {
-  background: $color-black-light;
-  border-color: $color-black-light;
-}
-.swoggle.swoggle-on.swoggle-black {
-  background: $color-black;
-  border-color: $color-black;
-}
-.swoggle.swoggle-on.swoggle-black-dark {
-  background: $color-black-dark;
-  border-color: $color-black-dark;
-}
-.swoggle.swoggle-on.swoggle-blue {
-  background: $color-blue;
-  border-color: $color-blue;
-}
-.swoggle.swoggle-on.swoggle-gray-light {
-  background: $color-gray-light;
-  border-color: $color-gray-light;
-}
-.swoggle.swoggle-on.swoggle-gray {
-  background: $color-gray;
-  border-color: $color-gray;
-}
-.swoggle.swoggle-on.swoggle-gray-dark {
-  background: $color-gray-dark;
-  border-color: $color-gray-dark;
-}
-.swoggle.swoggle-on.swoggle-green {
-  background: $color-green;
-  border-color: $color-green;
-}
-.swoggle.swoggle-on.swoggle-indigo {
-  background: $color-indigo;
-  border-color: $color-indigo;
-}
-.swoggle.swoggle-on.swoggle-lime {
-  background: $color-lime;
-  border-color: $color-lime;
-}
-.swoggle.swoggle-on.swoggle-orange {
-  background: $color-orange;
-  border-color: $color-orange;
-}
-.swoggle.swoggle-on.swoggle-pink {
-  background: $color-pink;
-  border-color: $color-pink;
-}
-.swoggle.swoggle-on.swoggle-purple {
-  background: $color-purple;
-  border-color: $color-purple;
-}
-.swoggle.swoggle-on.swoggle-red {
-  background: $color-red;
-  border-color: $color-red;
-}
-.swoggle.swoggle-on.swoggle-teal {
-  background: $color-teal;
-  border-color: $color-teal;
-}
-.swoggle.swoggle-on.swoggle-yellow {
-  background: $color-yellow;
-  border-color: $color-yellow;
-}
 .swoggle.swoggle-animate div {
   -webkit-transition: margin-left 0.5s;
-  transition: margin-left 0.5s;
+      -ms-transition: margin-left 0.5s;
+          transition: margin-left 0.5s;
 }
-.swoggle.swoggle-disabled,
-.swoggle.swoggle-readonly {
-  cursor: default !important;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+.swoggle.swoggle-disabled { cursor: not-allowed !important; }
+.swoggle.swoggle-readonly { cursor: default !important; }
+
+/* # Colors
+================================================== */
+@each $name, $color in $onblack-colors {
+  .swoggle.swoggle-on.swoggle-#{$name} {
+    background: $color;
+    border-color: $color;
+    color: $color-black;
+  }
+}
+@each $name, $color in $ongray-colors {
+  .swoggle.swoggle-on.swoggle-#{$name} {
+    background: $color;
+    border-color: $color;
+    color: $color-gray;
+  }
+}
+@each $name, $color in $onwhite-colors {
+  .swoggle.swoggle-on.swoggle-#{$name} {
+    background: $color;
+    border-color: $color;
+    color: $color-white;
+  }
 }

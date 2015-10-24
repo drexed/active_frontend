@@ -10,8 +10,9 @@
 
 /* # Required Variables
 ================================================== */
-$color-primary: $color-blue;
+$color-primary:   $color-blue;
 $color-secondary: $color-green;
+$color-tertiary:  $color-red;
 
 /* # Optional Imports
 ================================================== */
@@ -54,6 +55,7 @@ $color-secondary: $color-green;
 @import 'sidebar';
 @import 'slider';
 @import 'spinner';
+@import 'stripe';
 @import 'swoggle';
 @import 'table';
 @import 'timepicker';

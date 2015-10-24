@@ -24,7 +24,7 @@
   width: 100%;
 }
 .navbar > a {
-  color: $color-gray-dark;
+  color: $color-dark-gray;
   display: table-cell;
   float: none;
   font-size: 27px;
@@ -41,13 +41,13 @@
 ================================================== */
 .navbar-dark {
   background: $color-black;
-  border-color: $color-black-dark;
-}
-.navbar-light {
-  background: $color-haze-light;
-  border-color: $color-haze-dark;
+  border-color: $color-dark-black;
 }
 .navbar-dark > a { color: $color-white; }
+.navbar-light {
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
+}
 
 /* # Media Queries
 ================================================== */

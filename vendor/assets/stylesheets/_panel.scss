@@ -50,20 +50,23 @@
 
 /* # Colors
 ================================================== */
-.panel-dark { border-color: $color-black-dark; }
-.panel-light { border-color: $color-haze-dark; }
+.panel-dark,
 .panel-dark .panel-header,
+.panel-dark .panel-title,
+.panel-dark .panel-body,
 .panel-dark .panel-footer {
   background: $color-black;
-  border-color: $color-black-dark;
+  border-color: $color-dark-black;
+  color: $color-white;
 }
+.panel-light,
 .panel-light .panel-header,
+.panel-light .panel-title,
+.panel-light .panel-body,
 .panel-light .panel-footer {
-  background: $color-haze-light;
-  border-color: $color-haze-dark;
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
 }
-.panel-dark .panel-title,
-.panel-dark .panel-footer { color: $color-white; }
 
 /* # Media Queries
 ================================================== */

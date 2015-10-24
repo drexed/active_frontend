@@ -7,6 +7,7 @@
 .tooltip {
   color: $color-white;
   display: block;
+  float: none;
   font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif;
   font-size: 11px;
   font-style: normal;
@@ -15,7 +16,6 @@
   line-height: 17px;
   opacity: 0;
   filter: alpha(opacity=0);
-  float: none;
   position: absolute;
   text-decoration: none;
   text-transform: none;

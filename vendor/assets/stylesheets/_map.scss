@@ -1,12 +1,13 @@
 /* Table of Contents
 ==================================================
 # Map
+# Colors
 # Media Queries */
 
 /* # Map
 ================================================== */
 .map {
-  background: $color-haze-light;
+  background: $color-white;
   border: 1px solid $color-haze;
   box-sizing: border-box;
   display: block;
@@ -14,6 +15,17 @@
   min-width:220px;
 }
 .map-center { margin: 0 auto; }
+
+/* # Colors
+================================================== */
+.map-dark {
+  background: $color-black;
+  border-color: $color-dark-black;
+}
+.map-light {
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
+}
 
 /* # Media Queries
 ================================================== */

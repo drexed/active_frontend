@@ -1,5 +1,7 @@
 /* Table of Contents
 ==================================================
+# Variables
+# Mixins
 # Button
 # Sizes
 # Colors
@@ -12,13 +14,20 @@
 # Data Toggles
 # Media Queries */
 
+/* # Variables
+================================================== */
+
+/* # Mixins
+================================================== */
+
 /* # Button
 ================================================== */
 .btn {
   -webkit-appearance: none;
-  appearance: none;
-  background: $color-haze-light;
-  border: 1px solid $color-haze-light;
+      -ms-appearance: none;
+          appearance: none;
+  background: $color-light-haze;
+  border: 1px solid $color-light-haze;
   border-radius: 2px;
   box-sizing: border-box;
   color: $color-black;
@@ -37,7 +46,8 @@
   text-transform: uppercase;
   touch-action: manipulation;
   -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+          transition: all 0.3s linear;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -64,7 +74,8 @@
 .btn:active,
 .btn[disabled]:active {
   -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+      -ms-transition: all 0.1s linear;
+          transition: all 0.1s linear;
 }
 
 /* # Sizes
@@ -106,8 +117,8 @@ input.btn-block {
 .btn-teal,
 .btn-yellow { color: $color-white; }
 .btn-black-light {
-  background: $color-black-light;
-  border-color: $color-black-light;
+  background: $color-light-black;
+  border-color: $color-light-black;
 }
 .btn-black-light:hover,
 .btn-black-light:active,
@@ -118,8 +129,8 @@ input.btn-block {
 .btn-black-light[disabled]:active,
 .btn-black-light[disabled]:focus,
 .open > .dropdown-toggle.btn.btn-black-light {
-  background: darken($color-black-light, 4%);
-  border-color: darken($color-black-light, 4%);
+  background: darken($color-light-black, 4%);
+  border-color: darken($color-light-black, 4%);
 }
 .btn-black {
   background: $color-black;
@@ -138,8 +149,8 @@ input.btn-block {
   border-color: darken($color-black, 4%);
 }
 .btn-black-dark {
-  background: $color-black-dark;
-  border-color: $color-black-dark;
+  background: $color-dark-black;
+  border-color: $color-dark-black;
 }
 .btn-black-dark:hover,
 .btn-black-dark:active,
@@ -150,8 +161,8 @@ input.btn-block {
 .btn-black-dark[disabled]:active,
 .btn-black-dark[disabled]:focus,
 .open > .dropdown-toggle.btn.btn-black-dark {
-  background: darken($color-black-dark, 4%);
-  border-color: darken($color-black-dark, 4%);
+  background: darken($color-dark-black, 4%);
+  border-color: darken($color-dark-black, 4%);
 }
 .btn-blue {
   background: $color-blue;
@@ -170,8 +181,8 @@ input.btn-block {
   border-color: darken($color-blue, 4%);
 }
 .btn-gray-light {
-  background: $color-gray-light;
-  border-color: $color-gray-light;
+  background: $color-light-gray;
+  border-color: $color-light-gray;
 }
 .btn-gray-light:hover,
 .btn-gray-light:active,
@@ -182,8 +193,8 @@ input.btn-block {
 .btn-gray-light[disabled]:active,
 .btn-gray-light[disabled]:focus,
 .open > .dropdown-toggle.btn.btn-gray-light {
-  background: darken($color-gray-light, 4%);
-  border-color: darken($color-gray-light, 4%);
+  background: darken($color-light-gray, 4%);
+  border-color: darken($color-light-gray, 4%);
 }
 .btn-gray {
   background: $color-gray;
@@ -202,8 +213,8 @@ input.btn-block {
   border-color: darken($color-gray, 4%);
 }
 .btn-gray-dark {
-  background: $color-gray-dark;
-  border-color: $color-gray-dark;
+  background: $color-dark-gray;
+  border-color: $color-dark-gray;
 }
 .btn-gray-dark:hover,
 .btn-gray-dark:active,
@@ -214,8 +225,8 @@ input.btn-block {
 .btn-gray-dark[disabled]:active,
 .btn-gray-dark[disabled]:focus,
 .open > .dropdown-toggle.btn.btn-gray-dark {
-  background: darken($color-gray-dark, 4%);
-  border-color: darken($color-gray-dark, 4%);
+  background: darken($color-dark-gray, 4%);
+  border-color: darken($color-dark-gray, 4%);
 }
 .btn-green {
   background: $color-green;
@@ -441,7 +452,7 @@ input.btn-block {
 .btn-outline[disabled]:active,
 .btn-outline[disabled]:focus {
   background: $color-transparent;
-  color: $color-gray-dark;
+  color: $color-dark-gray;
 }
 .btn-outline:hover,
 .btn-outline:active,
@@ -455,7 +466,7 @@ input.btn-block {
 .btn-outline.btn-black-light[disabled],
 .btn-outline.btn-black-light[disabled]:hover,
 .btn-outline.btn-black-light[disabled]:active,
-.btn-outline.btn-black-light[disabled]:focus { color: $color-black-light; }
+.btn-outline.btn-black-light[disabled]:focus { color: $color-light-black; }
 .btn-outline.btn-black,
 .btn-outline.btn-black[disabled],
 .btn-outline.btn-black[disabled]:hover,
@@ -465,7 +476,7 @@ input.btn-block {
 .btn-outline.btn-black-dark[disabled],
 .btn-outline.btn-black-dark[disabled]:hover,
 .btn-outline.btn-black-dark[disabled]:active,
-.btn-outline.btn-black-dark[disabled]:focus { color: $color-black-dark; }
+.btn-outline.btn-black-dark[disabled]:focus { color: $color-dark-black; }
 .btn-outline.btn-blue,
 .btn-outline.btn-blue[disabled],
 .btn-outline.btn-blue[disabled]:hover,
@@ -475,7 +486,7 @@ input.btn-block {
 .btn-outline.btn-gray-light[disabled],
 .btn-outline.btn-gray-light[disabled]:hover,
 .btn-outline.btn-gray-light[disabled]:active,
-.btn-outline.btn-gray-light[disabled]:focus { color: $color-gray-light; }
+.btn-outline.btn-gray-light[disabled]:focus { color: $color-light-gray; }
 .btn-outline.btn-gray,
 .btn-outline.btn-gray[disabled],
 .btn-outline.btn-gray[disabled]:hover,
@@ -485,7 +496,7 @@ input.btn-block {
 .btn-outline.btn-gray-dark[disabled],
 .btn-outline.btn-gray-dark[disabled]:hover,
 .btn-outline.btn-gray-dark[disabled]:active,
-.btn-outline.btn-gray-dark[disabled]:focus { color: $color-gray-dark; }
+.btn-outline.btn-gray-dark[disabled]:focus { color: $color-dark-gray; }
 .btn-outline.btn-green,
 .btn-outline.btn-green[disabled],
 .btn-outline.btn-green[disabled]:hover,
@@ -620,7 +631,7 @@ input.btn-block {
 .btn-outline.btn-black-light:active,
 .btn-outline.btn-black-light.active,
 .btn-outline.btn-black-light:focus,
-.open > .dropdown-toggle.btn.btn-outline.btn-black-light { background: darken($color-black-light, 4%); }
+.open > .dropdown-toggle.btn.btn-outline.btn-black-light { background: darken($color-light-black, 4%); }
 .btn-outline.btn-black:hover,
 .btn-outline.btn-black:active,
 .btn-outline.btn-black.active,
@@ -630,7 +641,7 @@ input.btn-block {
 .btn-outline.btn-black-dark:active,
 .btn-outline.btn-black-dark.active,
 .btn-outline.btn-black-dark:focus,
-.open > .dropdown-toggle.btn.btn-outline.btn-black-dark { background: darken($color-black-dark, 4%); }
+.open > .dropdown-toggle.btn.btn-outline.btn-black-dark { background: darken($color-dark-black, 4%); }
 .btn-outline.btn-blue:hover,
 .btn-outline.btn-blue:active,
 .btn-outline.btn-blue.active,
@@ -640,7 +651,7 @@ input.btn-block {
 .btn-outline.btn-gray-light:active,
 .btn-outline.btn-gray-light.active,
 .btn-outline.btn-gray-light:focus,
-.open > .dropdown-toggle.btn.btn-outline.btn-gray-light { background: darken($color-gray-light, 4%); }
+.open > .dropdown-toggle.btn.btn-outline.btn-gray-light { background: darken($color-light-gray, 4%); }
 .btn-outline.btn-gray:hover,
 .btn-outline.btn-gray:active,
 .btn-outline.btn-gray.active,
@@ -650,7 +661,7 @@ input.btn-block {
 .btn-outline.btn-gray-dark:active,
 .btn-outline.btn-gray-dark.active,
 .btn-outline.btn-gray-dark:focus,
-.open > .dropdown-toggle.btn.btn-outline.btn-gray-dark { background: darken($color-gray-dark, 4%); }
+.open > .dropdown-toggle.btn.btn-outline.btn-gray-dark { background: darken($color-dark-gray, 4%); }
 .btn-outline.btn-green:hover,
 .btn-outline.btn-green:active,
 .btn-outline.btn-green.active,

@@ -5,7 +5,7 @@
 /* # Colorpicker
 ================================================== */
 .dropdown-swatch {
-  background: $color-gray-dark;
+  background: $color-dark-gray;
   border-radius: 2px;
   display: inline-block;
   height: 25px;
@@ -20,9 +20,9 @@
 .dropdown-colorpicker > .dropdown-menu > li {
   display: block;
   float: left;
-  width: 26px;
   height: 26px;
   margin: 2px;
+  width: 26px;
 }
 .dropdown-colorpicker > .dropdown-menu > li > .colorpicker-swatch {
   border-radius: 2px;
@@ -33,7 +33,8 @@
   position: relative;
   text-decoration: none;
   -webkit-transition: all ease 0.1s;
-  transition: all ease 0.1s;
+      -ms-transition: all ease 0.1s;
+          transition: all ease 0.1s;
   width: 26px;
 }
 .dropdown-colorpicker > .dropdown-menu > li > .colorpicker-swatch.selected:after {

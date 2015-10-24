@@ -15,7 +15,7 @@
 .nav > .pull-left { float: left; }
 .nav > .pull-right { float: right; }
 .nav > li > a {
-  color: $color-gray-dark;
+  color: $color-dark-gray;
   display: block;
   font-size: 14px;
   font-weight: bold;
@@ -24,7 +24,7 @@
 .nav > li > a:hover,
 .nav > li > a:active,
 .nav > li > a:focus {
-  color: $color-gray-dark;
+  color: $color-dark-gray;
   text-decoration: none;
 }
 .nav-header {
@@ -50,7 +50,7 @@
   margin-right: -15px;
 }
 .nav-list > li > a {
-  color: $color-gray-dark;
+  color: $color-dark-gray;
   font-weight: bold;
   padding: 11px 15px;
 }
@@ -61,13 +61,13 @@
 .nav-list > .active > a:hover,
 .nav-list > .active > a:active,
 .nav-list > .active > a:focus {
-  background: $color-haze-light;
+  background: $color-light-haze;
   color: $color-primary;
 }
 .nav-list > .divider {
-  background: $color-haze-light;
+  background: $color-light-haze;
   height: 1px;
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
   overflow: hidden;
 }
 .nav-tabs:before,
@@ -100,9 +100,9 @@
 }
 .nav-tabs .open a.dropdown-toggle { background: $color-transparent; }
 .nav-pills > li > a {
-  background: $color-haze-light;
+  background: $color-light-haze;
   border-radius: 2px;
-  color: $color-gray-dark;
+  color: $color-dark-gray;
   margin-right: 3px;
   padding: 9px 10px;
 }
@@ -120,8 +120,8 @@
 .nav-stacked > li > a { margin-right: 0; }
 .nav-tabs.nav-stacked { border-bottom: 0; }
 .nav-tabs.nav-stacked > li > a {
-  background: $color-haze-light;
-  color: $color-gray-dark;
+  background: $color-light-haze;
+  color: $color-dark-gray;
   padding: 10px 10px 8px 10px;
 }
 .nav-tabs.nav-stacked > li:first-child > a {
@@ -140,8 +140,8 @@
 }
 .nav-tabs.nav-stacked > .active > a {
   background: $color-primary;
-  color: $color-white;
   border-bottom: 0;
+  color: $color-white;
   padding: 10px;
 }
 .nav-pills.nav-stacked > li > a {

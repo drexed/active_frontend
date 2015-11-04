@@ -9,7 +9,7 @@
 /* # Table
 ================================================== */
 table {
-  background: $color-transparent;
+  background: $color-white;
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
@@ -19,6 +19,7 @@ table {
 .table th,
 .table td {
   border-top: 1px solid $color-haze;
+  color: $color-black;
   font-size: 16px;
   line-height: 25px;
   padding: 9px 10px 6px 10px;
@@ -156,9 +157,6 @@ table {
 .table-light.table-striped tbody > tr:nth-child(odd) > th { background: $color-haze; }
 .table-light.table-hover tbody tr:hover > td,
 .table-light.table-hover tbody tr:hover > th { background: $color-dark-haze; }
-.table-white caption,
-.table-white th,
-.table-white td { background: $color-white; }
 
 /* # Media Queries
 ================================================== */

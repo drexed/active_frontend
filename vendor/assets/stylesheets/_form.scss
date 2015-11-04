@@ -3,6 +3,7 @@
 # Form
 # Components
 # Styles
+# Colors
 # Media Queries */
 
 /* # Form
@@ -11,7 +12,6 @@ fieldset { border: 0; }
 legend {
   border: 0;
   border-bottom: 1px solid $color-haze;
-  color: $color-black;
   display: block;
   font-size: 16px;
   font-weight: bold;
@@ -23,7 +23,6 @@ legend {
   width: 100%;
 }
 label {
-  color: $color-black;
   display: block;
   font-size: 13px;
   font-weight: bold;
@@ -51,7 +50,7 @@ input[type="color"] {
   border: 1px solid $color-haze;
   border-radius: 2px;
   box-sizing: border-box;
-  color: $color-black;
+  color: inherit;
   display: block;
   font-size: 16px;
   font-style: normal;
@@ -180,7 +179,7 @@ select[disabled] {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   margin: 0;
-  padding: 5px 10px;
+  padding: 7px 10px 5px 10px;
 }
 .form-error-messages > ul {
   border: 1px solid $color-haze;
@@ -249,6 +248,7 @@ select[disabled] {
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
+  line-height: 1;
   padding: 0 13px;
 }
 .form-file-group-button {
@@ -257,7 +257,7 @@ select[disabled] {
   border-top-right-radius: 0;
   margin-right: -1px;
   padding-bottom: 14px;
-  padding-top: 15px;
+  padding-top: 14px;
 }
 .form-file-group-addon { padding: 0; }
 .form-input-group-addon:first-child,
@@ -346,10 +346,6 @@ select[disabled] {
   width: 41px;
 }
 .form-select > select { text-overflow: ""; }
-.form-select > select[disabled] {
-  background: $color-light-haze;
-  color: $color-gray;
-}
 .form-option {
   display: inline-block;
   margin-right: 5px;
@@ -526,6 +522,86 @@ select[disabled] {
   right: 12px;
 }
 .form-edge-small .form-select::before { width: 31px; }
+
+/* # Colors
+================================================== */
+.form-dark legend,
+.form-dark .form-header,
+.form-dark .form-error-messages > ul,
+.form-dark .form-file-group-button,
+.form-dark .form-footer, { border-color: $color-dark-black; }
+.form-dark textarea,
+.form-dark select,
+.form-dark input[type="text"],
+.form-dark input[type="password"],
+.form-dark input[type="datetime"],
+.form-dark input[type="datetime-local"],
+.form-dark input[type="date"],
+.form-dark input[type="month"],
+.form-dark input[type="time"],
+.form-dark input[type="week"],
+.form-dark input[type="number"],
+.form-dark input[type="email"],
+.form-dark input[type="url"],
+.form-dark input[type="search"],
+.form-dark input[type="tel"],
+.form-dark input[type="color"],
+.form-dark .form-error-messages > h4,
+.form-dark .form-input-group-addon,
+.form-dark .swoggle-off {
+  background: $color-light-black;
+  border-color: $color-dark-black;
+}
+.form-dark .form-error-messages,
+.form-dark input[disabled],
+.form-dark textarea[disabled],
+.form-dark select[disabled] { background: $color-black; }
+.form-dark .form-floating-label > label,
+.form-dark .form-select::after { color: $color-white; }
+.form-dark .form-checkbox,
+.form-dark .form-radio,
+.form-dark .slider-selection,
+.form-dark .slider-selection.tick-slider-selection,
+.form-dark .slider.slider-disabled .slider-handle { background: $color-dark-black; }
+.form-dark .form-checkbox > label,
+.form-dark .form-radio > label,
+.form-dark .slider-track,
+.form-dark .slider.slider-disabled .slider-track { background: $color-light-black; }
+.form-dark .swoggle-off { border-color: $color-light-black; }
+.form-light legend,
+.form-light .form-header,
+.form-light .form-error-messages > ul,
+.form-light .form-file-group-button,
+.form-light .form-footer,
+.form-light textarea,
+.form-light select,
+.form-light input[type="text"],
+.form-light input[type="password"],
+.form-light input[type="datetime"],
+.form-light input[type="datetime-local"],
+.form-light input[type="date"],
+.form-light input[type="month"],
+.form-light input[type="time"],
+.form-light input[type="week"],
+.form-light input[type="number"],
+.form-light input[type="email"],
+.form-light input[type="url"],
+.form-light input[type="search"],
+.form-light input[type="tel"],
+.form-light input[type="color"],
+.form-light .form-error-messages > h4,
+.form-light .form-input-group-addon { border-color: $color-dark-haze; }
+.form-light input[disabled],
+.form-light textarea[disabled],
+.form-light select[disabled],
+.form-light .swoggle-off { background: $color-haze; }
+.form-light .form-checkbox,
+.form-light .form-radio,
+.form-light .slider-selection,
+.form-light .slider-selection.tick-slider-selection,
+.form-light .slider.slider-disabled .slider-handle { background: $color-dark-haze; }
+.form-light .slider-track,
+.form-light .slider.slider-disabled .slider-track { background: $color-white; }
 
 /* # Media Queries
 ================================================== */

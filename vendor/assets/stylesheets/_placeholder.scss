@@ -1,7 +1,8 @@
 /* Table of Contents
 ==================================================
 # Placeholder
-# Size
+# Sizes
+# Colors
 # Media Queries */
 
 /* # Placeholder
@@ -28,7 +29,7 @@
   line-height: 22px;
 }
 
-/* # Size
+/* # Sizes
 ================================================== */
 .placeholder-large > i {
   background: $color-transparent;
@@ -40,12 +41,17 @@
   width: initial;
 }
 .placeholder-divider {
-  background: $color-light-haze;
+  background: $color-white;
   border-radius: 500px;
   height: 8px;
   margin: 20px auto;
   width: 50%;
 }
+
+/* # Sizes
+================================================== */
+.placeholder-dark > .placeholder-divider { background: $color-light-black; }
+.placeholder-light > .placeholder-divider { background: $color-light-haze; }
 
 /* # Media Queries
 ================================================== */

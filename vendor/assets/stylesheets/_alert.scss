@@ -2,57 +2,35 @@
 ==================================================
 # Variables
 # Alert
-# Application
-# Colors
-# Media Queries */
+# Colors */
 
 /* # Variables
 ================================================== */
 $onblack-colors: (
-  dark-yellow:  $color-dark-yellow,
-  yellow:       $color-yellow,
-  light-yellow: $color-light-yellow
+  dark-haze: $color-dark-haze,
+  haze: $color-haze,
+  light-haze: $color-light-haze
 );
 $ongray-colors: (
-  dark-haze:  $color-dark-haze,
-  haze:       $color-haze,
-  light-haze: $color-light-haze,
-  white:      $color-white
+  white: $color-white
 );
 $onwhite-colors: (
-  dark-black:   $color-dark-black,
-  black:        $color-black,
-  light-black:  $color-light-black,
-  dark-gray:    $color-dark-gray,
-  gray:         $color-gray,
-  light-gray:   $color-light-gray,
-  dark-lime:    $color-dark-lime,
-  lime:         $color-lime,
-  light-lime:   $color-light-lime,
-  dark-green:   $color-dark-green,
-  green:        $color-green,
-  light-green:  $color-light-green,
-  dark-teal:    $color-dark-teal,
-  teal:         $color-teal,
-  light-teal:   $color-light-teal,
-  dark-blue:    $color-dark-blue,
-  blue:         $color-blue,
-  light-blue:   $color-light-blue,
-  dark-indigo:  $color-dark-indigo,
-  indigo:       $color-indigo,
-  light-indigo: $color-light-indigo,
-  dark-purple:  $color-dark-purple,
-  purple:       $color-purple,
-  light-purple: $color-light-purple,
-  dark-pink:    $color-dark-pink,
-  pink:         $color-pink,
-  light-pink:   $color-light-pink,
-  dark-red:     $color-dark-red,
-  red:          $color-red,
-  light-red:    $color-light-red,
-  dark-orange:  $color-dark-orange,
-  orange:       $color-orange,
-  light-orange: $color-light-orange
+  dark-black: $color-dark-black,
+  black: $color-black,
+  light-black: $color-light-black,
+  dark-gray: $color-dark-gray,
+  gray: $color-gray,
+  light-gray: $color-light-gray,
+  lime: $color-lime,
+  green: $color-green,
+  teal: $color-teal,
+  blue: $color-blue,
+  indigo: $color-indigo,
+  purple: $color-purple,
+  pink: $color-pink,
+  red: $color-red,
+  orange: $color-orange,
+  yellow: $color-yellow
 );
 
 /* # Alert
@@ -66,14 +44,14 @@ $onwhite-colors: (
 }
 .alert {
   background: $color-gray;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid darken($color-gray, 5%);
   box-sizing: border-box;
   color: $color-white;
   display: block;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-  padding: 10px 20px 9px 20px;
+  padding: 10px 20px;
   width: 100%;
 }
 .alert > a {
@@ -81,56 +59,44 @@ $onwhite-colors: (
   color: $color-white;
   font-style: italic;
 }
-.alert-lined { border: 1px solid rgba(0,0,0,0.1); }
-.alert-close {
-  border: 0 !important;
-  color: $color-white !important;
+.alert-bordered { border: 1px solid darken($color-gray, 5%); }
+.alert > .alert-close {
+  border: 0;
+  color: $color-white;
   float: right;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 23px;
 }
-
-/* # Application
-================================================== */
-.alert.alert-app { width: calc(100% - 280px); }
 
 /* # Colors
 ================================================== */
 @each $name, $color in $onblack-colors {
   .alert-#{$name} {
     background: $color;
+    border-color: darken($color, 5%);
     color: $color-black;
   }
   .alert-#{$name} > a {
     border-bottom-color: $color-black;
     color: $color-black;
   }
-  .alert-#{$name} .alert-close { color: $color-black !important; }
+  .alert-#{$name} .alert-close { color: $color-black; }
 }
 @each $name, $color in $ongray-colors {
   .alert-#{$name} {
     background: $color;
-    border-color: rgba(0,0,0,0.1);
+    border-color: darken($color, 5%);
     color: $color-gray;
   }
   .alert-#{$name} > a {
-    border-bottom-color: $color-black;
+    border-bottom-color: $color-gray;
     color: $color-gray;
   }
-  .alert-#{$name} .alert-close { color: $color-gray !important; }
+  .alert-#{$name} .alert-close { color: $color-gray; }
 }
 @each $name, $color in $onwhite-colors {
-  .alert-#{$name} { background: $color; }
-}
-
-/* # Media Queries
-================================================== */
-@media only screen and (max-width: 1365px) {
-  .alert.alert-app { width: calc(100% - 250px); }
-}
-@media only screen and (max-width: 1199px) {
-  .alert.alert-app { width: calc(100% - 220px); }
-}
-@media only screen and (max-width: 959px) {
-  .alert.alert-app { width: 100%; }
+  .alert-#{$name} {
+    background: $color;
+    border-color: darken($color, 5%);
+  }
 }

@@ -1,0 +1,90 @@
+/* Table of Contents
+==================================================
+# Mixin */
+
+/* # Mixin
+================================================== */
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+      -ms-animation: $animation;
+          animation: $animation;
+}
+@mixin animation-delay($delay) {
+  -webkit-animation-delay: $delay;
+      -ms-animation-delay: $delay;
+          animation-delay: $delay;
+}
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+      -ms-animation-duration: $duration;
+          animation-duration: $duration;
+}
+@mixin animation-fill-mode($mode) {
+  -webkit-animation-fill-mode: $mode;
+      -ms-animation-fill-mode: $mode;
+          animation-fill-mode: $mode;
+}
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+      -ms-animation-name: $name;
+          animation-name: $name;
+}
+@mixin animation-timing-function($function) {
+  -webkit-animation-timing-function: $function;
+      -ms-animation-timing-function: $function;
+          animation-timing-function: $function;
+}
+@mixin appearance($appearance) {
+  -webkit-appearance: $appearance;
+      -ms-appearance: $appearance;
+          appearance: $appearance;
+}
+@mixin backface-visibility ($visibility) {
+  -webkit-backface-visibility: $visibility;
+      -ms-backface-visibility: $visibility;
+          backface-visibility: $visibility;
+}
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+      -ms-background-size: $size;
+          background-size: $size;
+}
+@mixin dimensions($height, $width) {
+  height: $height;
+  width: $width;
+}
+@mixin overflow-scrolling($scroll) {
+  -webkit-overflow-scrolling: $scroll;
+      -ms-overflow-scrolling: $scroll;
+          overflow-scrolling: $scroll;
+}
+@mixin tap-highlight-color($color) {
+  -webkit-tap-highlight-color: $color;
+      -ms-tap-highlight-color: $color;
+          tap-highlight-color: $color;
+}
+@mixin text-size-adjust($size) {
+  -webkit-text-size-adjust: $size;
+      -ms-text-size-adjust: $size;
+          text-size-adjust: $size;
+}
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+      -ms-transform: $transform;
+          transform: $transform;
+}
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+          transform-origin: $origin;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+      -ms-transition: $transition;
+          transition: $transition;
+}
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+      -ms-user-select: $select;
+          user-select: $select;
+}

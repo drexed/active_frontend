@@ -7,9 +7,7 @@
 a {
   text-decoration: none;
   touch-action: manipulation;
-  -webkit-transition: all 0.3s ease-in-out;
-      -ms-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
+  @include transition(all 0.3s ease-in-out);
 }
 a[disabled] {
   cursor: not-allowed;

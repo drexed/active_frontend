@@ -6,51 +6,29 @@
 
 /* # Variables
 ================================================== */
-$onblack-colors: (
-  dark-yellow:  $color-dark-yellow,
-  yellow:       $color-yellow,
-  light-yellow: $color-light-yellow
-);
 $ongray-colors: (
-  dark-haze:  $color-dark-haze,
-  haze:       $color-haze,
+  dark-haze: $color-dark-haze,
+  haze: $color-haze,
   light-haze: $color-light-haze,
-  white:      $color-white
+  white: $color-white
 );
 $onwhite-colors: (
-  dark-black:   $color-dark-black,
-  black:        $color-black,
-  light-black:  $color-light-black,
-  dark-gray:    $color-dark-gray,
-  gray:         $color-gray,
-  light-gray:   $color-light-gray,
-  dark-lime:    $color-dark-lime,
-  lime:         $color-lime,
-  light-lime:   $color-light-lime,
-  dark-green:   $color-dark-green,
-  green:        $color-green,
-  light-green:  $color-light-green,
-  dark-teal:    $color-dark-teal,
-  teal:         $color-teal,
-  light-teal:   $color-light-teal,
-  dark-blue:    $color-dark-blue,
-  blue:         $color-blue,
-  light-blue:   $color-light-blue,
-  dark-indigo:  $color-dark-indigo,
-  indigo:       $color-indigo,
-  light-indigo: $color-light-indigo,
-  dark-purple:  $color-dark-purple,
-  purple:       $color-purple,
-  light-purple: $color-light-purple,
-  dark-pink:    $color-dark-pink,
-  pink:         $color-pink,
-  light-pink:   $color-light-pink,
-  dark-red:     $color-dark-red,
-  red:          $color-red,
-  light-red:    $color-light-red,
-  dark-orange:  $color-dark-orange,
-  orange:       $color-orange,
-  light-orange: $color-light-orange
+  dark-black: $color-dark-black,
+  black: $color-black,
+  light-black: $color-light-black,
+  dark-gray: $color-dark-gray,
+  gray: $color-gray,
+  light-gray: $color-light-gray,
+  lime: $color-lime,
+  green: $color-green,
+  teal: $color-teal,
+  blue: $color-blue,
+  indigo: $color-indigo,
+  purple: $color-purple,
+  pink: $color-pink,
+  red: $color-red,
+  orange: $color-orange,
+  yellow: $color-yellow
 );
 
 /* # Swoggle
@@ -72,9 +50,10 @@ $onwhite-colors: (
   cursor: pointer;
   display: inline-block;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 12px;
   font-weight: bold;
-  line-height: 12px;
+  line-height: 1;
   margin-top: -2px;
   min-width: 64px;
   overflow: hidden;
@@ -83,12 +62,8 @@ $onwhite-colors: (
   text-align: center;
   text-rendering: geometricPrecision;
   text-transform: uppercase;
-  -webkit-transition: all 0.5s ease-in-out;
-      -ms-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
-  -webkit-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  @include transition(all 0.5s ease-in-out);
+  @include user-select(none);
   vertical-align: middle;
 }
 .swoggle span,
@@ -104,47 +79,31 @@ $onwhite-colors: (
 .swoggle label {
   background: $color-white;
   border-radius: 500px;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 4px;
-  padding-top: 3px;
+  margin: 0;
+  padding: 3px 0 4px 0;
   width: 20%;
   z-index: 100;
 }
 .swoggle span {
-  padding-bottom: 0;
-  padding-top: 0;
+  padding: 0;
   width: 40%;
   z-index: 1;
 }
 .swoggle div {
   display: inline-block;
   position: relative;
-  -webkit-transform: translate3d(0,0,0);
-      -ms-transform: translate3d(0,0,0);
-          transform: translate3d(0,0,0);
+  @include transform(translate3d(0,0,0));
   top: 0;
   width: 150%;
 }
 .swoggle.swoggle-on div { margin-left: 0; }
 .swoggle.swoggle-off div { margin-left: -50%; }
-.swoggle.swoggle-animate div {
-  -webkit-transition: margin-left 0.5s;
-      -ms-transition: margin-left 0.5s;
-          transition: margin-left 0.5s;
-}
+.swoggle.swoggle-animate div { @include transition(margin-left 0.5s); }
 .swoggle.swoggle-disabled { cursor: not-allowed !important; }
 .swoggle.swoggle-readonly { cursor: default !important; }
 
 /* # Colors
 ================================================== */
-@each $name, $color in $onblack-colors {
-  .swoggle.swoggle-on.swoggle-#{$name} {
-    background: $color;
-    border-color: $color;
-    color: $color-black;
-  }
-}
 @each $name, $color in $ongray-colors {
   .swoggle.swoggle-on.swoggle-#{$name} {
     background: $color;

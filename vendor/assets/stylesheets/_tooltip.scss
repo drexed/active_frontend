@@ -8,7 +8,7 @@
   color: $color-white;
   display: block;
   float: none;
-  font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif;
+  font-family: $typography-sans-serif;
   font-size: 11px;
   font-style: normal;
   font-weight: bold;
@@ -20,7 +20,7 @@
   text-decoration: none;
   text-transform: none;
   visibility: visible;
-  z-index: 1070;
+  z-index: 1020;
 }
 .tooltip.in {
   opacity: 0.8;

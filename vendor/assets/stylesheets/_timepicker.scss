@@ -8,9 +8,7 @@
   display: none;
   opacity: 1;
   padding: 5px 0;
-  -webkit-transition: none;
-      -ms-transition: none;
-          transition: none;
+  @include transition(none);
   visibility: visible;
 }
 .timepicker-widget.dropdown-menu.open {
@@ -72,7 +70,4 @@
 .timepicker-widget > table td > a:hover,
 .timepicker-widget > table td > a.active,
 .timepicker-widget > table td > a:active,
-.timepicker-widget > table td > a:focus {
-  color: $color-primary;
-  text-decoration: none;
-}
+.timepicker-widget > table td > a:focus { color: $color-primary; }

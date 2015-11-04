@@ -21,7 +21,7 @@
   top: 0;
   white-space: normal;
   width: 276px;
-  z-index: 1060;
+  z-index: 1010;
 }
 .popover.top { margin-top: -10px; }
 .popover.right { margin-left: 10px; }
@@ -30,7 +30,7 @@
 .popover-title,
 .popover-content {
   color: $color-black;
-  font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif;
+  font-family: $typography-sans-serif;
   font-size: 14px;
   letter-spacing: 0;
   margin: 0;

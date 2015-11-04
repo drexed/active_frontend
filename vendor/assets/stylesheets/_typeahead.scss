@@ -11,9 +11,7 @@
 .typeahead.dropdown-menu {
   display: none;
   opacity: 1;
-  -webkit-transition: none;
-      -ms-transition: none;
-          transition: none;
+  @include transition(none);
   visibility: visible;
 }
 .typeahead.dropdown-menu > li > a > b { color: $color-primary; }

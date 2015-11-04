@@ -1852,7 +1852,7 @@ GMaps.staticMapURL = function(options){
         opacity = parseFloat(opacity);
         opacity = Math.min(1, Math.max(opacity, 0));
         if (opacity === 0) {
-          return '0x00000000';
+          return '0x11151800';
         }
         opacity = (opacity * 255).toString(16);
         if (opacity.length === 1) {

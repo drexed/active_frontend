@@ -31,7 +31,7 @@
 .trunk-user > li {
   font-size: 11px;
   font-weight: 500;
-  line-height: 11px;
+  line-height: 1;
   margin: 5px;
 }
 .trunk-nav > li {
@@ -53,8 +53,7 @@
   color: $color-primary;
   font-size: 12px;
   letter-spacing: 1px;
-  line-height: 12px;
-  padding: 8px 10px 5px 10px;
+  padding: 8px 10px;
   text-transform: uppercase;
 }
 .trunk-nav > li.divider { height: 0; }
@@ -65,34 +64,27 @@
 }
 .trunk-nav > li > a,
 .trunk-user > li > a {
-  -webkit-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
+  @include appearance(none);
   border-radius: 2px;
   color: $color-dark-gray;
   cursor: pointer;
   display: block;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 1px;
-  line-height: 11px;
-  padding: 11px 0 9px 0;
+  padding: 11px 0 10px 0;
   text-align: center;
   text-decoration: none;
   text-rendering: geometricPrecision;
   text-transform: uppercase;
-  -webkit-transition: all 0.3s linear;
-      -ms-transition: all 0.3s linear;
-          transition: all 0.3s linear;
+  @include transition(all 0.3s linear);
   vertical-align: middle;
   white-space: nowrap;
 }
-.trunk-nav > li > a {
-  border: 1px solid $color-haze;
-  padding: 11px 0 9px 0;
-}
-.trunk-user > li > a { padding: 9px 0 7px 0; }
+.trunk-nav > li > a { border: 1px solid $color-haze; }
+.trunk-user > li > a { padding: 9px 0 8px 0; }
 .trunk-nav > li > a:hover,
 .trunk-nav > li > a:active,
 .trunk-nav > li > a.active,
@@ -118,7 +110,7 @@
 }
 .trunk-user > li.trunk-user-placeholder > i {
   font-size: 26px;
-  line-height: 44px;
+  line-height: 42px;
 }
 
 /* # Colors
@@ -171,7 +163,8 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .trunk,
   .trunk-nav > li.title,
-  .trunk-nav > li.divider { border-width: 0.5px; }
+  .trunk-nav > li.divider,
+  .trunk-nav > li > a { border-width: 0.5px; }
   .trunk-nav > li.title,
   .trunk-nav > li > a,
   .trunk-user > li > a { letter-spacing: 0.5px; }

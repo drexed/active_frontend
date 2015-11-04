@@ -1,55 +1,38 @@
 /* Table of Contents
 ==================================================
-# Label and Badge */
+# Variables
+# Label and badge */
 
 /* # Variables
 ================================================== */
 $onblack-colors: (
-  dark-haze:    $color-dark-haze,
-  haze:         $color-haze,
-  light-haze:   $color-light-haze,
-  white:        $color-white,
-  dark-yellow:  $color-dark-yellow,
-  yellow:       $color-yellow,
-  light-yellow: $color-light-yellow
+  dark-haze: $color-dark-haze,
+  haze: $color-haze,
+  light-haze: $color-light-haze
+);
+$ongray-colors: (
+  white: $color-white
 );
 $onwhite-colors: (
-  dark-black:   $color-dark-black,
-  black:        $color-black,
-  light-black:  $color-light-black,
-  dark-gray:    $color-dark-gray,
-  gray:         $color-gray,
-  light-gray:   $color-light-gray,
-  dark-lime:    $color-dark-lime,
-  lime:         $color-lime,
-  light-lime:   $color-light-lime,
-  dark-green:   $color-dark-green,
-  green:        $color-green,
-  light-green:  $color-light-green,
-  dark-teal:    $color-dark-teal,
-  teal:         $color-teal,
-  light-teal:   $color-light-teal,
-  dark-blue:    $color-dark-blue,
-  blue:         $color-blue,
-  light-blue:   $color-light-blue,
-  dark-indigo:  $color-dark-indigo,
-  indigo:       $color-indigo,
-  light-indigo: $color-light-indigo,
-  dark-purple:  $color-dark-purple,
-  purple:       $color-purple,
-  light-purple: $color-light-purple,
-  dark-pink:    $color-dark-pink,
-  pink:         $color-pink,
-  light-pink:   $color-light-pink,
-  dark-red:     $color-dark-red,
-  red:          $color-red,
-  light-red:    $color-light-red,
-  dark-orange:  $color-dark-orange,
-  orange:       $color-orange,
-  light-orange: $color-light-orange
+  dark-black: $color-dark-black,
+  black: $color-black,
+  light-black: $color-light-black,
+  dark-gray: $color-dark-gray,
+  gray: $color-gray,
+  light-gray: $color-light-gray,
+  lime: $color-lime,
+  green: $color-green,
+  teal: $color-teal,
+  blue: $color-blue,
+  indigo: $color-indigo,
+  purple: $color-purple,
+  pink: $color-pink,
+  red: $color-red,
+  orange: $color-orange,
+  yellow: $color-yellow
 );
 
-/* # Label and Badge
+/* # Label and badge
 ================================================== */
 .badge,
 .label {
@@ -63,7 +46,7 @@ $onwhite-colors: (
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0;
-  line-height: 12px;
+  line-height: 1;
   min-width: 12px;
   text-align: center;
   white-space: nowrap;
@@ -90,6 +73,16 @@ $onwhite-colors: (
   .label-#{$name} {
     background: $color;
     border-color: $color;
+  }
+  .badge-#{$name}.badge-outline,
+  .label-#{$name}.label-outline { color: $color; }
+}
+@each $name, $color in $ongray-colors {
+  .badge-#{$name},
+  .label-#{$name}  {
+    background: $color;
+    border-color: $color;
+    color: $color-gray;
   }
   .badge-#{$name}.badge-outline,
   .label-#{$name}.label-outline { color: $color; }

@@ -6,13 +6,18 @@
 
 /* # Required Imports
 ================================================== */
+@import 'mixin';
 @import 'color';
 
 /* # Required Variables
 ================================================== */
-$color-primary:   $color-blue;
+$color-primary: $color-blue;
 $color-secondary: $color-green;
-$color-tertiary:  $color-red;
+$color-tertiary: $color-red;
+$typography-font: 'Gotham Round';
+$typography-monospace: Monaco, Menlo, Consolas, 'Courier New', monospace;
+$typography-sans-serif: $typography-font, 'Helvetica', Helvetica, Arial, sans-serif;
+$typography-serif: 'Times New Roman', Times, serif;
 
 /* # Optional Imports
 ================================================== */
@@ -55,7 +60,6 @@ $color-tertiary:  $color-red;
 @import 'sidebar';
 @import 'slider';
 @import 'spinner';
-@import 'stripe';
 @import 'swoggle';
 @import 'table';
 @import 'timepicker';

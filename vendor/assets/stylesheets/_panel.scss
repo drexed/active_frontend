@@ -20,7 +20,7 @@
   padding: 14px 15px 12px 15px;
 }
 .panel-header .btn {
-  margin-bottom: -5px;
+  margin-bottom: -4px;
   margin-top: -6px;
 }
 .panel-title {
@@ -28,8 +28,7 @@
   display: inline-block;
   font-size: 16px;
   line-height: 1;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
 }
 .panel-body { padding: 15px; }
 .panel-body-chart {
@@ -38,7 +37,7 @@
 }
 .panel-body > .table-responsive {
   border: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 .panel-footer {
   background: $color-white;

@@ -6,6 +6,16 @@
 
 /* # Navbar
 ================================================== */
+.navbar {
+  background: $color-white;
+  border-collapse: separate;
+  border-top: 1px solid $color-haze;
+  box-sizing: border-box;
+  display: table;
+  height: 50px;
+  table-layout: fixed;
+  width: 100%;
+}
 .navbar-fixed {
   bottom: 0;
   left: 0;
@@ -13,22 +23,12 @@
   right: 0;
   z-index: 1030;
 }
-.navbar {
-  background: $color-white;
-  border-collapse: separate;
-  border-top: 1px solid $color-haze;
-  box-sizing: border-box;
-  display: table;
-  height: 48px;
-  table-layout: fixed;
-  width: 100%;
-}
 .navbar > a {
-  color: $color-dark-gray;
+  color: $color-gray;
   display: table-cell;
   float: none;
   font-size: 27px;
-  padding: 10px 0;
+  padding-top: 10px;
   text-align: center;
   width: 1%;
 }
@@ -36,6 +36,14 @@
 .navbar > a.active,
 .navbar > a:active,
 .navbar > a:focus { color: $color-primary; }
+.navbar > a.filled {
+  background: $color-primary;
+  color: $color-white;
+}
+.navbar > a.filled:hover,
+.navbar > a.filled.active,
+.navbar > a.filled:active,
+.navbar > a.filled:focus { background: darken($color-primary, 5%); }
 
 /* # Colors
 ================================================== */
@@ -43,7 +51,6 @@
   background: $color-black;
   border-color: $color-dark-black;
 }
-.navbar-dark > a { color: $color-white; }
 .navbar-light {
   background: $color-light-haze;
   border-color: $color-dark-haze;

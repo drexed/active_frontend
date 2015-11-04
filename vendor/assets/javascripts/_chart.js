@@ -67,7 +67,7 @@
       scaleBeginAtZero: false,
 
       // String - Scale label font declaration for the scale label
-      scaleFontFamily: "'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+      scaleFontFamily: "'Gotham', 'Gotham Round', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
       // Number - Scale label font size in pixels
       scaleFontSize: 11,
@@ -76,7 +76,7 @@
       scaleFontStyle: "bold",
 
       // String - Scale label font colour
-      scaleFontColor: "rgba(35,41,55,1)",
+      scaleFontColor: "rgba(40,49,59,1)",
 
       // Boolean - whether or not the chart should be responsive and resize when the browser does.
       responsive: true,
@@ -91,10 +91,10 @@
       tooltipEvents: ["mousemove", "touchstart", "touchmove", "mouseout"],
 
       // String - Tooltip background colour
-      tooltipFillColor: "rgba(35,41,55,1)",
+      tooltipFillColor: "rgba(40,49,59,1)",
 
       // String - Tooltip label font declaration for the scale label
-      tooltipFontFamily: "'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+      tooltipFontFamily: "'Gotham', 'Gotham Round', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
       // Number - Tooltip label font size in pixels
       tooltipFontSize: 11,
@@ -106,7 +106,7 @@
       tooltipFontColor: "rgba(255,255,255,1)",
 
       // String - Tooltip title font declaration for the scale label
-      tooltipTitleFontFamily: "'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+      tooltipTitleFontFamily: "'Gotham', 'Gotham Round', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
       // Number - Tooltip title font size in pixels
       tooltipTitleFontSize: 11,
@@ -2998,7 +2998,7 @@
       angleLineWidth : 1,
 
       //String - Point label font declaration
-      pointLabelFontFamily : "'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+      pointLabelFontFamily : "'Gotham', 'Gotham Round', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
       //String - Point label font weight
       pointLabelFontStyle : "bold",
@@ -3007,7 +3007,7 @@
       pointLabelFontSize : 11,
 
       //String - Point label font colour
-      pointLabelFontColor : "rgba(35,41,55,1)",
+      pointLabelFontColor : "rgba(40,49,59,1)",
 
       //Boolean - Whether to show a dot for each point
       pointDot : true,

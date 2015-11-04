@@ -1,60 +1,31 @@
 /* Table of Contents
 ==================================================
 # Grayscale Colors
-# Dark Colors
-# Base Colors
-# Light Colors */
+# Base Colors */
 
 /* # Grayscale Colors
 ================================================== */
 $color-transparent: rgba(0,0,0,0);
-$color-dark-black:  rgba(0,0,0,1);
-$color-black:       rgba(35,41,55,1);
-$color-light-black: rgba(55,61,75,1);
-$color-dark-gray:   rgba(71,82,93,1);
-$color-gray:        rgba(123,137,148,1);
-$color-light-gray:  rgba(175,184,195,1);
-$color-dark-haze:   rgba(225,226,230,1);
-$color-haze:        rgba(239,240,243,1);
-$color-light-haze:  rgba(247,248,250,1);
-$color-dark-white:  rgba(249,250,252,1);
-$color-white:       rgba(255,255,255,1);
-
-/* # Dark Colors
-================================================== */
-$color-dark-lime:   rgba(105,164,18,1);
-$color-dark-green:  rgba(0,140,0,1);
-$color-dark-teal:   rgba(1,163,153,1);
-$color-dark-blue:   rgba(0,52,235,1);
-$color-dark-indigo: rgba(56,1,207,1);
-$color-dark-purple: rgba(93,0,220,1);
-$color-dark-pink:   rgba(230,16,67,1);
-$color-dark-red:    rgba(203,8,0,1);
-$color-dark-orange: rgba(225,62,0,1);
-$color-dark-yellow: rgba(255,214,0,1);
+$color-dark-black: rgba(17,21,24,1);
+$color-black: rgba(40,49,59,1);
+$color-light-black: rgba(50,63,73,1);
+$color-dark-gray: rgba(71,82,93,1);
+$color-gray: rgba(106,122,138,1);
+$color-light-gray: rgba(151,163,175,1);
+$color-dark-haze: rgba(225,226,230,1);
+$color-haze: rgba(239,240,243,1);
+$color-light-haze: rgba(246,247,249,1);
+$color-white: rgba(255,255,255,1);
 
 /* # Base Colors
 ================================================== */
-$color-lime:   rgba(151,212,19,1);
-$color-green:  rgba(0,180,0,1);
-$color-teal:   rgba(36,198,198,1);
-$color-blue:   rgba(0,87,255,1);
-$color-indigo: rgba(86,21,237,1);
-$color-purple: rgba(128,0,255,1);
-$color-pink:   rgba(255,51,102,1);
-$color-red:    rgba(240,35,17,1);
-$color-orange: rgba(255,82,0,1);
-$color-yellow: rgba(255,235,59,1);
-
-/* # Light Colors
-================================================== */
-$color-light-lime:   rgba(189,235,108,1);
-$color-light-green:  rgba(144,225,83,1);
-$color-light-teal:   rgba(136,228,208,1);
-$color-light-blue:   rgba(82,154,243,1);
-$color-light-indigo: rgba(115,105,228,1);
-$color-light-purple: rgba(158,95,252,1);
-$color-light-pink:   rgba(255,121,172,1);
-$color-light-red:    rgba(255,95,77,1);
-$color-light-orange: rgba(255,142,80,1);
-$color-light-yellow: rgba(255,255,141,1);
+$color-lime: rgba(161,200,32,1);
+$color-green: rgba(99,188,16,1);
+$color-teal: rgba(10,181,159,1);
+$color-blue: rgba(27,98,224,1);
+$color-indigo: rgba(85,71,235,1);
+$color-purple: rgba(78,60,140,1);
+$color-pink: rgba(254,87,121,1);
+$color-red: rgba(255,61,31,1);
+$color-orange: rgba(255,136,0,1);
+$color-yellow: rgba(255,229,0,1);

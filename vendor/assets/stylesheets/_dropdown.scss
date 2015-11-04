@@ -14,7 +14,7 @@
   background: $color-light-haze;
   background-clip: padding-box;
   border: 2px solid $color-dark-haze;
-  box-shadow: 0 0 3px rgba(220,220,220,1);
+  box-shadow: 0 0 3px $color-dark-haze;
   box-sizing: border-box;
   color: $color-black;
   display: block;
@@ -22,7 +22,7 @@
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0;
-  line-height: 12px;
+  line-height: 1;
   list-style: none;
   margin: 2px 0 0 0;
   min-width: 180px;
@@ -31,9 +31,7 @@
   position: absolute;
   text-align: left;
   text-transform: none;
-  -webkit-transition: all 0.09s ease-in-out;
-      -ms-transition: all 0.09s ease-in-out;
-          transition: all 0.09s ease-in-out;
+  @include transition(all 0.09s ease-in-out);
   top: 100%;
   visibility: hidden;
   z-index: 1000;
@@ -47,7 +45,7 @@
   border-bottom: 1px solid $color-dark-haze;
   border-top: 1px solid $color-dark-haze;
   letter-spacing: 1px;
-  padding: 7px 15px 6px 15px;
+  padding: 7px 15px;
   text-transform: uppercase;
 }
 .dropdown-menu > .divider {

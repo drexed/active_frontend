@@ -5,7 +5,7 @@
     return this.each(function () {
 
       var $this       = $(this),
-        animated      = "animated",
+        animated      = "animated animated-",
         hidden        = "hidden",
         transitionEnd = "webkitAnimationEnd oanimationend msAnimationEnd animationend",
         visibility    = "visibility",

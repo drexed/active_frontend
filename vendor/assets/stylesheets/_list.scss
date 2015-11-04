@@ -12,6 +12,7 @@ dl > dd,
 ul,
 ol {
   font-size: 16px;
+  font-weight: normal;
   line-height: 25px;
 }
 dl > dt {
@@ -21,17 +22,6 @@ dl > dt {
 dl > dd { margin: 0 0 5px 10px; }
 ul { padding-left: 17px; }
 ol { padding-left: 23px; }
-
-/* # Sizes
-================================================== */
-.list-small {
-  font-size: 14px;
-  line-height: 22px;
-}
-.list-mini {
-  font-size: 12px;
-  line-height: 20px;
-}
 
 /* # Styles
 ================================================== */
@@ -49,15 +39,15 @@ ol { padding-left: 23px; }
 }
 .list-bordered > li,
 .list-lined > li,
-.list-striped > li { padding: 9px 10px 6px 10px; }
+.list-striped > li { padding: 9px 10px 7px 10px; }
 .list-bordered > li {
-  border: 1px solid $color-dark-haze;
+  border: 1px solid $color-haze;
   border-bottom: none;
 }
-.list-bordered > li:last-child { border-bottom: 1px solid $color-dark-haze; }
+.list-bordered > li:last-child { border-bottom: 1px solid $color-haze; }
 .list-bordered.list-scrollable {
-  border-bottom: 1px solid $color-dark-haze;
-  border-top: 1px solid $color-dark-haze;
+  border-bottom: 1px solid $color-haze;
+  border-top: 1px solid $color-haze;
 }
 .list-bordered.list-scrollable > li:first-child { border-top: 0; }
 .list-bordered.list-scrollable > li:last-child { border-bottom: 0; }
@@ -68,16 +58,60 @@ ol { padding-left: 23px; }
 }
 .list-inline > li:last-child { margin-right: 0; }
 .list-lined > li {
-  border-top: 1px solid $color-dark-haze;
+  border-top: 1px solid $color-haze;
   padding-left: 0;
   padding-right: 0;
 }
 .list-lined > li:first-child { border: 0; }
 .list-striped > li:nth-child(odd) { background: $color-light-haze; }
-.list-bordered.list-small > li,
-.list-lined.list-small > li,
-.list-striped.list-small > li { padding: 5px 5px 3px 5px; }
 .list-hover > li:hover { background: $color-haze; }
+
+/* # Sizes
+================================================== */
+.list-large {
+  font-size: 28px;
+  line-height: 34px;
+}
+.list-large.list-bordered > li,
+.list-large.list-lined > li,
+.list-large.list-striped > li { padding-top: 10px; }
+.list-medium {
+  font-size: 21px;
+  line-height: 27px;
+}
+.list-small {
+  font-size: 14px;
+  line-height: 22px;
+}
+.list-small.list-bordered > li,
+.list-small.list-lined > li,
+.list-small.list-striped > li { padding: 5px 5px 3px 5px; }
+.list-mini {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* # Colors
+================================================== */
+.list-dark {
+  background: $color-black;
+  border-color: $color-dark-black;
+  color: $color-white;
+}
+.list-light { background: $color-light-haze; }
+.list-white { background: $color-white; }
+.list-dark.list-bordered > li,
+.list-dark.list-bordered > li:last-child,
+.list-dark.list-bordered.list-scrollable,
+.list-dark.list-lined > li { border-color: $color-dark-black; }
+.list-dark.list-striped > li:nth-child(odd) { background: $color-light-black; }
+.list-dark.list-hover > li:hover { background: $color-dark-black; }
+.list-light.list-bordered > li,
+.list-light.list-bordered > li:last-child,
+.list-light.list-bordered.list-scrollable,
+.list-light.list-lined > li { border-color: $color-dark-haze; }
+.list-light.list-striped > li:nth-child(odd) { background: $color-haze; }
+.list-light.list-hover > li:hover { background: $color-dark-haze; }
 
 /* # Media Queries
 ================================================== */

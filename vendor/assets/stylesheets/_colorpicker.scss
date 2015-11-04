@@ -8,12 +8,12 @@
   background: $color-dark-gray;
   border-radius: 2px;
   display: inline-block;
-  height: 25px;
+  height: 26px;
   vertical-align: middle;
-  width: 25px;
+  width: 26px;
 }
 .dropdown-colorpicker > .dropdown-menu {
-  margin-left: -5px;
+  margin: 1px 0 0 -5px;
   min-width: 162px;
   padding: 4px;
 }
@@ -32,9 +32,7 @@
   padding: 0;
   position: relative;
   text-decoration: none;
-  -webkit-transition: all ease 0.1s;
-      -ms-transition: all ease 0.1s;
-          transition: all ease 0.1s;
+  @include transition(all ease 0.1s);
   width: 26px;
 }
 .dropdown-colorpicker > .dropdown-menu > li > .colorpicker-swatch.selected:after {

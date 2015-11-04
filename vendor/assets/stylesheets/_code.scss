@@ -1,65 +1,52 @@
 /* Table of Contents
 ==================================================
-# Code/Pre
-# Pygments
+# Code and pre
 # Colors
+# Pygments
 # Media Queries */
 
-/* # Code/Pre
+/* # Code and pre
 ================================================== */
-code {
-  background: $color-light-haze;
-  border: 1px solid $color-dark-haze;
+code,
+pre {
+  background: $color-white;
+  border: 1px solid $color-haze;
   border-radius: 2px;
   color: $color-black;
-  counter-reset: code-line 0;
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: $typography-monospace;
   font-size: 12px;
   font-weight: normal;
   letter-spacing: 0;
   line-height: 20px;
   margin: 0;
-  padding: 4px 5px;
   text-decoration: none;
   text-transform: none;
-  vertical-align: middle;
   white-space: pre;
 }
+code { padding: 4px 5px; }
 pre {
-  background: $color-light-haze;
-  border: 1px solid $color-dark-haze;
-  border-radius: 2px;
-  color: $color-black;
-  counter-reset: code-line 0;
   display: block;
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 12px;
-  font-weight: normal;
-  letter-spacing: 0;
-  line-height: 20px;
-  margin: 0;
   padding: 20px;
-  text-decoration: none;
-  text-transform: none;
   word-break: break-all;
   word-wrap: break-word;
-  white-space: pre;
 }
-.code-numbered,
-.pre-numbered { padding-left: 30px; }
-.pre-scrollable {
-  max-height: 300px;
-  overflow: scroll;
+
+/* # Colors
+================================================== */
+.code-dark,
+.pre-dark {
+  background: $color-black;
+  border-color: $color-dark-black;
+  color: $color-gray;
 }
-.code-line { counter-increment: code-line; }
-.code-line:before {
-  content: counter(code-line);
-  color: $color-black;
-  left: 0;
-  position: fixed;
-  text-align: center;
-  width: 30px;
+.code-light,
+.pre-light {
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
 }
+.pre-dark .err { background: $color-gray; }
+.pre-dark .gp,
+.pre-dark .gu { color: $color-gray; }
 
 /* # Pygments
 ================================================== */
@@ -148,21 +135,6 @@ pre {
 .vg { color: $color-red; } /* Name.Variable.Global */
 .vi { color: $color-red; } /* Name.Variable.Instance */
 .il { color: $color-green; } /* Literal.Number.Integer.Long */
-
-/* # Colors
-================================================== */
-.code-dark {
-  background: $color-black;
-  border-color: $color-dark-black;
-  color: $color-gray;
-}
-.code-dark .err { background: $color-gray; }
-.code-dark .gp,
-.code-dark .gu { color: $color-gray; }
-.code-light {
-  background: $color-white;
-  border-color: $color-haze;
-}
 
 /* # Media Queries
 ================================================== */

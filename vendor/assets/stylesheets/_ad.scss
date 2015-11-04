@@ -1,16 +1,8 @@
 /* Table of Contents
 ==================================================
-# Mixins
 # Ad
 # Sizes
 # Media Queries */
-
-/* # Mixins
-================================================== */
-@mixin dimensions($height, $width) {
-  height: $height;
-  width: $width;
-}
 
 /* # Ad
 ================================================== */
@@ -18,8 +10,8 @@
   background: $color-white;
   border: 1px solid $color-haze;
   box-sizing: border-box;
-  display: block !important;
-  visibility: visible !important;
+  display: block;
+  visibility: visible;
   @include dimensions(220px, 220px);
 }
 .ad-center { margin: 0 auto; }

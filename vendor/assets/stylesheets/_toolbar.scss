@@ -25,7 +25,7 @@
   border-bottom: 1px solid $color-haze;
   border-radius: 0;
   box-sizing: border-box;
-  color: $color-light-black;
+  color: $color-black;
   display: block;
   font-size: 21px;
   height: 55px;
@@ -47,19 +47,18 @@
 .toolbar > a[disabled]:active,
 .toolbar > a[disabled]:focus {
   background: $color-transparent;
-  color: $color-light-black;
+  color: $color-black;
   cursor: not-allowed;
   pointer-events: none;
 }
 .toolbar > .tooltip {
-  width: auto !important;
   min-width: 80px;
+  width: 80px;
 }
 
 /* # Colors
 ================================================== */
-.toolbar-dark,
-.toolbar-dark.toolbar-alt {
+.toolbar-dark {
   background: $color-black;
   border-color: $color-dark-black;
 }
@@ -71,8 +70,7 @@
   color: $color-gray;
   border-color: $color-dark-black;
 }
-.toolbar-light,
-.toolbar-light.toolbar-alt {
+.toolbar-light {
   background: $color-light-haze;
   border-color: $color-dark-haze;
 }

@@ -21,6 +21,7 @@ h5,
 h6,
 form,
 fieldset,
+label,
 p,
 blockquote,
 th,
@@ -49,11 +50,12 @@ h4,
 h5,
 h6 {
   font-size: 100%;
+  font-style: normal;
   font-weight: normal;
 }
 abbr,
 acronym {
-  border-bottom: 1px dotted $color-black;
+  border-bottom: 1px dotted inherit;
   font-variant: normal;
 }
 caption,
@@ -75,26 +77,22 @@ select {
   *font-size: 100%;
   font-weight: inherit;
 }
+html { background: $color-white; }
 html,
 body {
   color: $color-black;
-  font-family: 'Gotham', 'Helvetica', Helvetica, Arial, sans-serif;
+  font-family: $typography-sans-serif;
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
+  font-weight: normal;
   height: 100%;
-  -webkit-overflow-scrolling: touch;
-      -ms-overflow-scrolling: touch;
-          overflow-scrolling: touch;
-  -webkit-tap-highlight-color: $color-transparent;
-      -ms-tap-highlight-color: $color-transparent;
-          tap-highlight-color: $color-transparent;
+  @include overflow-scrolling(touch);
+  @include tap-highlight-color($color-transparent);
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  @include text-size-adjust(100%);
 }
-html { background: $color-white; }
 ::-moz-selection {
   background: $color-primary;
   color: $color-white;
@@ -107,5 +105,6 @@ html { background: $color-white; }
 /* # Color
 ================================================== */
 .html-dark { background: $color-black; }
-.html-light { background: $color-dark-white; }
-.html-white { background: $color-white; }
+.html-dark,
+.html-dark body { color: $color-white; }
+.html-light { background: $color-light-haze; }

@@ -1,6 +1,9 @@
 /* Table of Contents
 ==================================================
 # Table
+# Sizes
+# Styles
+# Colors
 # Media Queries */
 
 /* # Table
@@ -15,7 +18,6 @@ table {
 .table caption,
 .table th,
 .table td {
-  background: $color-white;
   border-top: 1px solid $color-haze;
   font-size: 16px;
   line-height: 25px;
@@ -28,7 +30,6 @@ table {
   border-top-width: 1px;
   font-size: 14px;
   font-weight: bold;
-  padding: 7px 10px;
 }
 .table th a { color: $color-black; }
 .table th.tablespy-sort-asc:before,
@@ -53,8 +54,8 @@ table {
   color: $color-black;
   font-size: 15px;
   font-weight: bold;
-  letter-spacing: 1px;
-  padding: 7px 10px;
+  letter-spacing: 1;
+  padding: 9px 10px 8px 10px;
   text-transform: uppercase;
 }
 .table caption + thead tr:first-child th,
@@ -66,18 +67,31 @@ table {
 .table tbody + tbody { border-top: 1px solid $color-haze; }
 .table-align-bottom th,
 .table-align-bottom td { vertical-align: bottom; }
+.table-align-middle th,
+.table-align-middle td { vertical-align: middle; }
 .table-align-top th,
 .table-align-top td { vertical-align: top; }
+
+/* # Sizes
+================================================== */
 .table-condensed caption,
 .table-condensed th,
 .table-condensed tfoot td {
   font-size: 13px;
   padding: 5px;
 }
+.table-condensed caption { padding-top: 7px; }
 .table-condensed td {
   font-size: 14px;
-  padding: 5px 5px 3px 5px;
+  padding: 6px 5px 3px 5px;
 }
+.table-scrollable {
+  height: 300px;
+  overflow: auto;
+}
+
+/* # Styles
+================================================== */
 .table-bordered {
   border: 1px solid $color-haze;
   border-collapse: separate;
@@ -107,10 +121,44 @@ table {
 .table-unbordered tbody,
 .table-unbordered th,
 .table-unbordered td { border: 0; }
-.table-scrollable {
-  height: 300px;
-  overflow: auto;
+
+/* # Colors
+================================================== */
+.table-dark caption,
+.table-dark th,
+.table-dark td {
+  background: $color-black;
+  border-color: $color-dark-black;
+  color: $color-white;
 }
+.table-dark th a { color: $color-white; }
+.table-dark tbody + tbody,
+.table-dark.table-bordered,
+.table-dark.table-bordered caption,
+.table-dark.table-bordered th,
+.table-dark.table-bordered td { border-color: $color-dark-black; }
+.table-dark.table-striped tbody > tr:nth-child(odd) > td,
+.table-dark.table-striped tbody > tr:nth-child(odd) > th { background: $color-light-black; }
+.table-dark.table-hover tbody tr:hover > td,
+.table-dark.table-hover tbody tr:hover > th { background: $color-dark-black; }
+.table-light caption,
+.table-light th,
+.table-light td {
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
+}
+.table-light tbody + tbody,
+.table-light.table-bordered,
+.table-light.table-bordered caption,
+.table-light.table-bordered th,
+.table-light.table-bordered td { border-color: $color-dark-haze; }
+.table-light.table-striped tbody > tr:nth-child(odd) > td,
+.table-light.table-striped tbody > tr:nth-child(odd) > th { background: $color-haze; }
+.table-light.table-hover tbody tr:hover > td,
+.table-light.table-hover tbody tr:hover > th { background: $color-dark-haze; }
+.table-white caption,
+.table-white th,
+.table-white td { background: $color-white; }
 
 /* # Media Queries
 ================================================== */
@@ -118,11 +166,11 @@ table {
   .table-responsive {
     border: 1px solid $color-haze;
     max-height: 300px;
-    -webkit-overflow-scrolling: touch;
-        -ms-overflow-scrolling: touch;
-            overflow-scrolling: touch;
+    @include overflow-scrolling(touch);
     overflow: scroll;
   }
+  .table-responsive.table-dark { border-color: $color-dark-black; }
+  .table-responsive.table-light { border-color: $color-dark-haze; }
   .table-responsive > .table > thead > tr > th,
   .table-responsive > .table > tbody > tr > th,
   .table-responsive > .table > tfoot > tr > th,

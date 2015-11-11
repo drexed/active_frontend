@@ -1,17 +1,13 @@
 /* Table of Contents
 ==================================================
 # Required Imports
-# Required Variables
 # Optional Imports */
 
 /* # Required Imports
 ================================================== */
+@import 'mixin';
 @import 'color';
-
-/* # Required Variables
-================================================== */
-$color-primary: $color-blue;
-$color-secondary: $color-green;
+@import 'variable';
 
 /* # Optional Imports
 ================================================== */
@@ -43,7 +39,6 @@ $color-secondary: $color-green;
 @import 'map';
 @import 'missive';
 @import 'modal';
-@import 'aside';
 @import 'nav_and_tab';
 @import 'navbar';
 @import 'pagination';

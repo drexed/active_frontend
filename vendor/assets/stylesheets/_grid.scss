@@ -39,8 +39,8 @@ $sizes: (
   position: relative;
   width: calc(100% - 20px);
 }
-.container .column,
-.container .columns {
+.column,
+.columns {
   display: inline;
   float: left;
   margin-left: 10px;
@@ -65,30 +65,38 @@ $sizes: (
 /* # Desktop
 ================================================== */
 @each $name, $size in $sizes {
-  .container .#{$name}.column,
-  .container .#{$name}.columns { width: calc(#{$size} - 20px); }
-  .container .#{$name}.column.alpha,
-  .container .#{$name}.column.omega,
-  .container .#{$name}.columns.alpha,
-  .container .#{$name}.columns.omega { width: calc(#{$size} - 10px); }
-  .container .#{$name}.column.alpha.omega,
-  .container .#{$name}.columns.alpha.omega { width: $size; }
-  .container .offset-by-#{$name} { padding-left: $size; }
+  .#{$name}.column,
+  .#{$name}.columns { width: calc(#{$size} - 20px); }
+  .#{$name}.column.alpha,
+  .#{$name}.column.omega,
+  .#{$name}.columns.alpha,
+  .#{$name}.columns.omega { width: calc(#{$size} - 10px); }
+  .#{$name}.column.alpha.omega,
+  .#{$name}.columns.alpha.omega { width: $size; }
+  .offset-by-#{$name} { padding-left: $size; }
 }
 .hidden { display: none !important; }
 .hidden-desktop { display: none !important; }
+.hidden-laptop { display: inherit !important; }
+.hidden-tablet { display: inherit !important; }
+.hidden-phone { display: inherit !important; }
 .visible { display: inherit !important; }
-.visible-phone { display: none !important; }
-.visible-tablet { display: none !important; }
+.visible-laptop { display: inherit !important; }
 .visible-laptop { display: none !important; }
+.visible-tablet { display: none !important; }
+.visible-phone { display: none !important; }
 
 /* # Laptop
 ================================================== */
 @media only screen and (min-width: 960px) and (max-width: 1365px) {
   .hidden-desktop { display: inherit !important; }
   .hidden-laptop { display: none !important; }
+  .hidden-tablet { display: inherit !important; }
+  .hidden-phone { display: inherit !important; }
   .visible-desktop { display: none !important ; }
   .visible-laptop { display: inherit !important; }
+  .visible-tablet { display: none !important; }
+  .visible-phone { display: none !important ; }
 }
 
 /* # Tablet
@@ -97,33 +105,37 @@ $sizes: (
   .hidden-desktop { display: inherit !important; }
   .hidden-laptop { display: inherit !important; }
   .hidden-tablet { display: none !important; }
+  .hidden-phone { display: inherit !important; }
   .visible-desktop { display: none !important ; }
   .visible-laptop { display: none !important ; }
   .visible-tablet { display: inherit !important; }
+  .visible-phone { display: none !important ; }
 }
 
 /* # Mobile
 ================================================== */
 @media only screen and (max-width: 767px) {
   @each $name, $size in $sizes {
-    .container .#{$name}.column,
-    .container .#{$name}.columns,
-    .container .#{$name}.column.alpha,
-    .container .#{$name}.column.omega,
-    .container .#{$name}.columns.alpha,
-    .container .#{$name}.columns.omega,
-    .container .#{$name}.column.alpha.omega,
-    .container .#{$name}.columns.alpha.omega, {
+    .#{$name}.column,
+    .#{$name}.columns,
+    .#{$name}.column.alpha,
+    .#{$name}.column.omega,
+    .#{$name}.columns.alpha,
+    .#{$name}.columns.omega,
+    .#{$name}.column.alpha.omega,
+    .#{$name}.columns.alpha.omega, {
       margin: 0;
       width: 100%;
     }
-    .container .offset-by-#{$name} { padding-left: 0; }
+    .offset-by-#{$name} { padding-left: 0; }
   }
   .hidden-desktop { display: inherit !important; }
   .hidden-laptop { display: inherit !important; }
+  .hidden-tablet { display: inherit !important; }
   .hidden-phone { display: none !important; }
   .visible-desktop { display: none !important; }
   .visible-laptop { display: none !important; }
+  .visible-tablet { display: none !important; }
   .visible-phone { display: inherit !important; }
 }
 
@@ -132,6 +144,7 @@ $sizes: (
 .display-block { display: block !important; }
 .display-inline { display: inline !important; }
 .display-inline-block { display: inline-block !important; }
+.display-table { display: table !important; }
 
 /* # Pull
 ================================================== */
@@ -141,8 +154,8 @@ $sizes: (
 
 /* # Row
 ================================================== */
-.row-small { margin-bottom: 10px; }
 .row { margin-bottom: 20px; }
+.row-small { margin-bottom: 10px; }
 .row-medium { margin-bottom: 40px; }
 .row-large { margin-bottom: 60px; }
 

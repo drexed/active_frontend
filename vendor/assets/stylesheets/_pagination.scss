@@ -6,6 +6,7 @@
 
 /* # Pagination
 ================================================== */
+.pagination { color: $color-black; }
 .pagination > ul {
   display: inline-block;
   margin: 0;
@@ -22,7 +23,6 @@
 .pagination > ul > li.active {
   background: $color-white;
   border-radius: 500px;
-  color: $color-black;
   display: inline-block;
   min-width: 8px;
   text-align: center;
@@ -49,13 +49,15 @@
 
 /* # Colors
 ================================================== */
+.pagination-dark { color: $color-white; }
 .pagination-dark > ul > li > a,
-.pagination-dark > ul > li.active {
-  background: $color-black;
-  color: $color-white;
-}
+.pagination-dark > ul > li.active { background: $color-light-black; }
+.pagination-dark > ul > li > a:hover,
+.pagination-dark > ul > li > a:focus { background: $color-dark-black; }
 .pagination-light > ul > li > a,
 .pagination-light > ul > li.active { background: $color-light-haze; }
+.pagination-light > ul > li > a:hover,
+.pagination-light > ul > li > a:focus { background: $color-haze; }
 .pagination-dark > ul > li > a:active,
 .pagination-dark > ul > li.active,
 .pagination-light > ul > li > a:active,
@@ -63,7 +65,3 @@
   background: $color-primary;
   color: $color-white;
 }
-.pagination-dark > ul > li > a:hover,
-.pagination-dark > ul > li > a:focus { background: $color-light-black; }
-.pagination-light > ul > li > a:hover,
-.pagination-light > ul > li > a:focus { background: $color-haze; }

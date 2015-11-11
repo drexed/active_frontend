@@ -10,6 +10,7 @@
   background: $color-white;
   border-collapse: separate;
   border-top: 1px solid $color-haze;
+  color: $color-black;
   box-sizing: border-box;
   display: table;
   height: 50px;
@@ -24,7 +25,6 @@
   z-index: 1030;
 }
 .navbar > a {
-  color: $color-gray;
   display: table-cell;
   float: none;
   font-size: 27px;
@@ -50,6 +50,7 @@
 .navbar-dark {
   background: $color-black;
   border-color: $color-dark-black;
+  color: $color-white;
 }
 .navbar-light {
   background: $color-light-haze;

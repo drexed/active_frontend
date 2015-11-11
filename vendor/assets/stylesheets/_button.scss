@@ -75,21 +75,15 @@ $onwhite-colors: (
 .btn:active,
 .btn.active,
 .btn:focus,
-.btn[disabled],
-.btn[disabled]:hover,
-.btn[disabled]:active,
-.btn[disabled]:focus,
 .open > .dropdown-toggle.btn {
-  background: $color-haze;
-  border-color: $color-haze;
+  background: darken($color-light-haze, 2%);
+  border-color: darken($color-light-haze, 2%);
   text-decoration: none;
 }
-.btn[disabled],
-.btn[disabled]:hover,
-.btn[disabled]:active,
-.btn[disabled]:focus, {
+.btn[disabled] {
+  background: lighten($color-light-haze, 2%);
+  border-color: lighten($color-light-haze, 2%);
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 /* # Sizes
@@ -115,14 +109,13 @@ $onwhite-colors: (
 /* # Icons
 ================================================== */
 .btn-icon {
-  font-size: 17px;
+  font-size: 18px;
   min-width: 42px;
-  padding: 12px 15px 11px 15px;
+  padding: 11px 15px 10px 15px;
 }
 .btn-icon.btn-large {
   font-size: 23px;
-  line-height: 22px;
-  min-width: 50px;
+  min-width: 52px;
   padding-bottom: 12px;
   padding-top: 13px;
 }
@@ -154,15 +147,12 @@ $onwhite-colors: (
   .btn-#{$name}.active,
   .btn-#{$name}:focus,
   .open > .dropdown-toggle.btn.btn-#{$name} {
-    background: darken($color, 5%);
-    border-color: darken($color, 5%);
+    background: darken($color, 2%);
+    border-color: darken($color, 2%);
   }
-  .btn-#{$name}[disabled],
-  .btn-#{$name}[disabled]:hover,
-  .btn-#{$name}[disabled]:active,
-  .btn-#{$name}[disabled]:focus {
-    background: lighten($color, 5%);
-    border-color: lighten($color, 5%);
+  .btn-#{$name}[disabled] {
+    background: lighten($color, 2%);
+    border-color: lighten($color, 2%);
   }
 }
 @each $name, $color in $onwhite-colors {
@@ -176,25 +166,19 @@ $onwhite-colors: (
   .btn-#{$name}.active,
   .btn-#{$name}:focus,
   .open > .dropdown-toggle.btn.btn-#{$name} {
-    background: darken($color, 5%);
-    border-color: darken($color, 5%);
+    background: darken($color, 2%);
+    border-color: darken($color, 2%);
   }
-  .btn-#{$name}[disabled],
-  .btn-#{$name}[disabled]:hover,
-  .btn-#{$name}[disabled]:active,
-  .btn-#{$name}[disabled]:focus {
-    background: lighten($color, 5%);
-    border-color: lighten($color, 5%);
+  .btn-#{$name}[disabled] {
+    background: lighten($color, 2%);
+    border-color: lighten($color, 2%);
   }
 }
 
 /* # Outlines
 ================================================== */
 .btn-outline,
-.btn-outline[disabled],
-.btn-outline[disabled]:hover,
-.btn-outline[disabled]:active,
-.btn-outline[disabled]:focus {
+.btn-outline[disabled] {
   background: $color-transparent;
   color: $color-dark-gray;
 }
@@ -203,38 +187,32 @@ $onwhite-colors: (
 .btn-outline.active,
 .btn-outline:focus,
 .open > .dropdown-toggle.btn.btn-outline {
-  background: $color-haze;
+  background: darken($color-light-haze, 2%);
   color: $color-black;
 }
 @each $name, $color in $onblack-colors {
-  .btn-outline.btn-#{$name} { color: $color; }
+  .btn-outline.btn-#{$name},
+  .btn-outline.btn-#{$name}[disabled] { color: $color; }
   .btn-outline.btn-#{$name}:hover,
   .btn-outline.btn-#{$name}:active,
   .btn-outline.btn-#{$name}.active,
   .btn-outline.btn-#{$name}:focus,
   .open > .dropdown-toggle.btn.btn-outline.btn-#{$name} {
-    background: darken($color, 5%);
+    background: darken($color, 2%);
     color: $color-black;
   }
-  .btn-outline.btn-#{$name}[disabled],
-  .btn-outline.btn-#{$name}[disabled]:hover,
-  .btn-outline.btn-#{$name}[disabled]:active,
-  .btn-outline.btn-#{$name}[disabled]:focus { color: lighten($color, 5%); }
 }
 @each $name, $color in $onwhite-colors {
-  .btn-outline.btn-#{$name} { color: $color; }
+  .btn-outline.btn-#{$name},
+  .btn-outline.btn-#{$name}[disabled] { color: $color; }
   .btn-outline.btn-#{$name}:hover,
   .btn-outline.btn-#{$name}:active,
   .btn-outline.btn-#{$name}.active,
   .btn-outline.btn-#{$name}:focus,
   .open > .dropdown-toggle.btn.btn-outline.btn-#{$name} {
-    background: darken($color, 5%);
+    background: darken($color, 2%);
     color: $color-white;
   }
-  .btn-outline.btn-#{$name}[disabled],
-  .btn-outline.btn-#{$name}[disabled]:hover,
-  .btn-outline.btn-#{$name}[disabled]:active,
-  .btn-outline.btn-#{$name}[disabled]:focus { color: lighten($color, 5%); }
 }
 
 /* # Links
@@ -250,10 +228,7 @@ $onwhite-colors: (
 .btn-link:active,
 .btn-link.active,
 .btn-link:focus,
-.btn-link[disabled],
-.btn-link[disabled]:hover,
-.btn-link[disabled]:active,
-.btn-link[disabled]:focus, {
+.btn-link[disabled] {
   background: $color-transparent;
   border-color: $color-transparent;
   color: $color-black;
@@ -326,21 +301,21 @@ $onwhite-colors: (
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-.btn-group-justified {
+.btn-group-block {
   border-collapse: separate;
   display: table;
   table-layout: fixed;
   width: 100%;
 }
-.btn-group-justified > .btn,
-.btn-group-justified > .btn-group {
+.btn-group-block > .btn,
+.btn-group-block > .btn-group {
   display: table-cell;
   float: none;
   width: 1%;
 }
-.btn-group-justified > .btn-group .btn { width: 100%; }
-.btn-group-justified > .btn { border-right-width: 0; }
-.btn-group-justified > .btn:last-child { border-right-width: 1px; }
+.btn-group-block > .btn-group .btn { width: 100%; }
+.btn-group-block > .btn { border-right-width: 0; }
+.btn-group-block > .btn:last-child { border-right-width: 1px; }
 
 /* # Toolbars
 ================================================== */

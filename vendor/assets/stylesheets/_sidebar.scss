@@ -8,19 +8,23 @@
 ================================================== */
 .sidebar {
   background: $color-white;
-  border-left: 1px solid $color-haze;
+  border-left: 1px solid;
+  border-color: $color-haze;
   box-sizing: border-box;
+  color: $color-black;
   height: 100%;
   min-width: 280px;
   position: fixed;
   width: 280px;
 }
 .sidebar-alt {
-  border-right: 1px solid $color-haze;
+  border-right: 1px solid;
+  border-color: inherit;
   border-left: 0;
 }
 .sidebar-header {
-  border-bottom: 1px solid $color-haze;
+  border-bottom: 1px solid;
+  border-color: inherit;
   font-size: 12px;
   line-height: 1;
   padding: 10px 20px 8px 10px;
@@ -29,11 +33,18 @@
   padding-left: 20px;
   padding-right: 10px;
 }
+.sidebar-header > h1,
+.sidebar-header > h2,
+.sidebar-header > h3,
+.sidebar-header > h4,
+.sidebar-header > h5,
 .sidebar-header > h6 {
   font-size: 11px;
   font-weight: normal;
   letter-spacing: 1px;
   line-height: 1;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
 }
 .sidebar-content {
@@ -48,7 +59,8 @@
   padding-left: 20px;
 }
 .sidebar-scrollable {
-  border-bottom: 1px solid $color-light-haze;
+  border-bottom: 1px solid;
+  border-color: inherit;
   height: auto;
   max-height: calc(50% - 50px);
   @include overflow-scrolling(touch);
@@ -57,15 +69,15 @@
 
 /* # Colors
 ================================================== */
-.sidebar-dark { background: $color-black; }
-.sidebar-dark,
-.sidebar-dark > .sidebar-header,
-.sidebar-dark > .sidebar-scrollable { border-color: $color-dark-black; }
-.sidebar-dark > .sidebar-header > h6 { color: $color-white; }
-.sidebar-light { background: $color-light-haze; }
-.sidebar-light,
-.sidebar-light > .sidebar-header,
-.sidebar-light > .sidebar-scrollable { border-color: $color-dark-haze; }
+.sidebar-dark {
+  background: $color-black;
+  border-color: $color-dark-black;
+  color: $color-white;
+}
+.sidebar-light {
+  background: $color-light-haze;
+  border-color: $color-dark-haze;
+}
 
 /* # Media Queries
 ================================================== */
@@ -94,5 +106,10 @@ only screen and (                min-resolution: 2dppx) {
   .sidebar,
   .sidebar-header,
   .sidebar-scrollable { border-width: 0.5px; }
+  .sidebar-header > h1,
+  .sidebar-header > h2,
+  .sidebar-header > h3,
+  .sidebar-header > h4,
+  .sidebar-header > h5,
   .sidebar-header > h6 { letter-spacing: 0.5px; }
 }

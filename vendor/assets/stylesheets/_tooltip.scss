@@ -1,10 +1,12 @@
 /* Table of Contents
 ==================================================
-# Tooltip */
+# Tooltip
+# Colors */
 
 /* # Tooltip
 ================================================== */
 .tooltip {
+  border-color: $color-black;
   color: $color-white;
   display: block;
   float: none;
@@ -45,7 +47,6 @@
 .tooltip-inner {
   background: $color-black;
   border-radius: 3px;
-  color: $color-white;
   letter-spacing: 0;
   max-width: 200px;
   padding: 5px 10px;
@@ -61,30 +62,43 @@
   width: 0;
 }
 .tooltip.top > .tooltip-arrow {
-  border-top-color: $color-black;
+  border-top-color: inherit;
   border-width: 5px 5px 0;
   bottom: 0;
   left: 50%;
   margin-left: -5px;
 }
 .tooltip.right > .tooltip-arrow {
-  border-right-color: $color-black;
+  border-right-color: inherit;
   border-width: 5px 5px 5px 0;
   left: 0;
   margin-top: -5px;
   top: 50%;
 }
 .tooltip.left > .tooltip-arrow {
-  border-left-color: $color-black;
+  border-left-color: inherit;
   border-width: 5px 0 5px 5px;
   margin-top: -5px;
   right: 0;
   top: 50%;
 }
 .tooltip.bottom > .tooltip-arrow {
-  border-bottom-color: $color-black;
+  border-bottom-color: inherit;
   border-width: 0 5px 5px;
   left: 50%;
   margin-left: -5px;
   top: 0;
 }
+
+/* # Colors
+================================================== */
+.tooltip-light {
+  border-color: $color-light-haze;
+  color: $color-black;
+}
+.tooltip-white {
+  border-color: $color-white;
+  color: $color-black;
+}
+.tooltip-light > .tooltip-inner { background: $color-light-haze; }
+.tooltip-white > .tooltip-inner { background: $color-white; }

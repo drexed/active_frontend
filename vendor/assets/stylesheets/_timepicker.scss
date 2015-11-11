@@ -16,7 +16,8 @@
   z-index: 1060;
 }
 .timepicker-widget.dropdown-menu:before {
-  border-bottom: 7px solid $color-dark-haze;
+  border-bottom: 7px solid;
+  border-color: inherit;
   border-right: 7px solid $color-transparent;
   border-left: 7px solid $color-transparent;
   content: "";
@@ -24,7 +25,8 @@
   position: absolute;
 }
 .timepicker-widget.dropdown-menu:after {
-  border-bottom: 6px solid $color-dark-haze;
+  border-bottom: 6px solid;
+  border-color: inherit;
   border-right: 6px solid $color-transparent;
   border-left: 6px solid $color-transparent;
   content: "";
@@ -39,12 +41,14 @@
 .timepicker-widget.timepicker-orient-top:after { top: -6px; }
 .timepicker-widget.timepicker-orient-bottom:before {
   border-bottom: 0;
-  border-top: 7px solid $color-dark-haze;
+  border-top: 7px solid;
+  border-color: inherit;
   bottom: -7px;
 }
 .timepicker-widget.timepicker-orient-bottom:after {
   border-bottom: 0;
-  border-top: 6px solid $color-dark-haze;
+  border-top: 6px solid;
+  border-color: inherit;
   bottom: -6px;
 }
 .timepicker-widget > table {
@@ -60,7 +64,6 @@
 .timepicker-widget > table td:not(.separator) { min-width: 30px; }
 .timepicker-widget > table td span { width: 100%; }
 .timepicker-widget > table td > a {
-  color: $color-black;
   display: inline-block;
   margin: 0;
   padding: 8px 0;

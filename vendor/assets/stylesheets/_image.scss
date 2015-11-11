@@ -1,6 +1,7 @@
 /* Table of Contents
 ==================================================
 # Image
+# Alignments
 # Styles
 # Media Queries */
 
@@ -13,13 +14,16 @@ img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
-  width: auto\9;
+  width: auto;
 }
+
+/* # Alignments
+================================================== */
+.img-center { margin: 0 auto; }
 
 /* # Styles
 ================================================== */
 .img-circle { border-radius: 500px; }
-.img-center { margin: 0 auto; }
 .img-square { border-radius: 0; }
 
 /* # Media Queries

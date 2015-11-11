@@ -8,7 +8,8 @@
 ================================================== */
 .toolbar {
   background: $color-white;
-  border-right: 1px solid $color-haze;
+  border-right: 1px solid;
+  border-color: $color-haze;
   box-sizing: border-box;
   height: 100%;
   min-width: 55px;
@@ -16,16 +17,17 @@
   width: 55px;
 }
 .toolbar-alt {
-  border-left: 1px solid $color-haze;
+  border-left: 1px solid;
+  border-color: inherit;
   border-right: 0;
 }
 .toolbar > a {
   background: $color-transparent;
   border: 0;
-  border-bottom: 1px solid $color-haze;
+  border-bottom: 1px solid;
+  border-color: inherit;
   border-radius: 0;
   box-sizing: border-box;
-  color: $color-black;
   display: block;
   font-size: 21px;
   height: 55px;
@@ -42,12 +44,9 @@
   background: $color-primary;
   color: $color-white;
 }
-.toolbar > a[disabled],
-.toolbar > a[disabled]:hover,
-.toolbar > a[disabled]:active,
-.toolbar > a[disabled]:focus {
+.toolbar > a[disabled] {
   background: $color-transparent;
-  color: $color-black;
+  color: $color-gray;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -61,24 +60,12 @@
 .toolbar-dark {
   background: $color-black;
   border-color: $color-dark-black;
-}
-.toolbar-dark > a,
-.toolbar-dark > a[disabled],
-.toolbar-dark > a[disabled]:hover,
-.toolbar-dark > a[disabled]:active,
-.toolbar-dark > a[disabled]:focus {
-  color: $color-gray;
-  border-color: $color-dark-black;
+  color: $color-white;
 }
 .toolbar-light {
   background: $color-light-haze;
   border-color: $color-dark-haze;
 }
-.toolbar-light > a,
-.toolbar-light > a[disabled],
-.toolbar-light > a[disabled]:hover,
-.toolbar-light > a[disabled]:active,
-.toolbar-light > a[disabled]:focus { border-color: $color-dark-haze; }
 
 /* # Media Queries
 ================================================== */
@@ -93,5 +80,6 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .toolbar,
+  .toolbar-alt,
   .toolbar > a { border-width: 0.5px; }
 }

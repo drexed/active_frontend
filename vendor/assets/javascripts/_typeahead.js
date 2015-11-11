@@ -1,7 +1,5 @@
 !function($){
-
   "use strict";
-  // jshint laxcomma: true
 
 
  /* TYPEAHEAD PUBLIC CLASS DEFINITION

@@ -49,7 +49,7 @@
       scaleStartValue: null,
 
       // String - Colour of the scale line
-      scaleLineColor: "rgba(239,240,243,1)",
+      scaleLineColor: "rgba(237,239,241,1)",
 
       // Number - Pixel width of the scale line
       scaleLineWidth: 1,
@@ -1910,7 +1910,7 @@
     scaleShowGridLines : true,
 
     //String - Colour of the grid lines
-    scaleGridLineColor : "rgba(239,240,243,1)",
+    scaleGridLineColor : "rgba(237,239,241,1)",
 
     //Number - Width of the grid lines
     scaleGridLineWidth : 1,
@@ -2387,7 +2387,7 @@
     scaleShowGridLines : true,
 
     //String - Colour of the grid lines
-    scaleGridLineColor : "rgba(239,240,243,1)",
+    scaleGridLineColor : "rgba(237,239,241,1)",
 
     //Number - Width of the grid lines
     scaleGridLineWidth : 1,
@@ -2992,7 +2992,7 @@
       scaleBeginAtZero : true,
 
       //String - Colour of the angle line
-      angleLineColor : "rgba(239,240,243,1)",
+      angleLineColor : "rgba(237,239,241,1)",
 
       //Number - Pixel width of the angle line
       angleLineWidth : 1,

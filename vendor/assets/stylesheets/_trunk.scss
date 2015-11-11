@@ -8,17 +8,23 @@
 ================================================== */
 .trunk {
   background: $color-white;
-  border-bottom: 1px solid $color-haze;
+  border-bottom: 1px solid;
+  border-color: $color-haze;
+  color: $color-gray;
   left: 0;
   position: fixed;
   right: 0;
   top: 50px;
   z-index: 1040;
 }
-.trunk-buffer { padding: 30px 0; }
+.trunk-buffer {
+  border-color: inherit !important;
+  padding: 30px 0;
+}
 .trunk-nav,
 .trunk-user {
-  list-style-type: none;
+  border-color: inherit !important;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -35,12 +41,14 @@
   margin: 5px;
 }
 .trunk-nav > li {
+  border-color: inherit;
   float: left;
   width: calc(33.333333% - 10px);
 }
 .trunk-nav > li.title,
 .trunk-nav > li.divider {
-  border-top: 1px solid $color-haze;
+  border-top: 1px solid;
+  border-color: inherit;
   box-sizing: border-box;
   display: block;
   float: none;
@@ -49,8 +57,8 @@
   width: calc(100% - 10px);
 }
 .trunk-nav > li.title {
-  border-bottom: 1px solid $color-haze;
-  color: $color-primary;
+  border-bottom: 1px solid;
+  border-color: inherit;
   font-size: 12px;
   letter-spacing: 1px;
   padding: 8px 10px;
@@ -66,7 +74,6 @@
 .trunk-user > li > a {
   @include appearance(none);
   border-radius: 2px;
-  color: $color-dark-gray;
   cursor: pointer;
   display: block;
   -webkit-font-smoothing: antialiased;
@@ -83,7 +90,10 @@
   vertical-align: middle;
   white-space: nowrap;
 }
-.trunk-nav > li > a { border: 1px solid $color-haze; }
+.trunk-nav > li > a {
+  border: 1px solid;
+  border-color: inherit;
+}
 .trunk-user > li > a { padding: 9px 0 8px 0; }
 .trunk-nav > li > a:hover,
 .trunk-nav > li > a:active,
@@ -118,39 +128,12 @@
 .trunk-dark {
   background: $color-black;
   border-color: $color-dark-black;
-}
-.trunk-dark .trunk-nav > li.title,
-.trunk-dark .trunk-nav > li > a,
-.trunk-dark .trunk-user > li > a { color: $color-gray; }
-.trunk-dark .trunk-nav > li.title,
-.trunk-dark .trunk-nav > li.divider,
-.trunk-dark .trunk-nav > li > a { border-color: $color-gray; }
-.trunk-dark .trunk-nav > li > a:hover,
-.trunk-dark .trunk-nav > li > a:active,
-.trunk-dark .trunk-nav > li > a.active,
-.trunk-dark .trunk-nav > li > a:focus,
-.trunk-dark .trunk-user > li > a:hover,
-.trunk-dark .trunk-user > li > a:active,
-.trunk-dark .trunk-user > li > a.active,
-.trunk-dark .trunk-user > li > a:focus {
-  border-color: $color-primary;
-  color: $color-primary;
+  color: $color-white;
 }
 .trunk-light {
   background: $color-light-haze;
   border-color: $color-dark-haze;
 }
-.trunk-light .trunk-nav > li.title,
-.trunk-light .trunk-nav > li.divider,
-.trunk-light .trunk-nav > li > a { border-color: $color-dark-haze; }
-.trunk-light .trunk-nav > li > a:hover,
-.trunk-light .trunk-nav > li > a:active,
-.trunk-light .trunk-nav > li > a.active,
-.trunk-light .trunk-nav > li > a:focus,
-.trunk-light .trunk-user > li > a:hover,
-.trunk-light .trunk-user > li > a:active,
-.trunk-light .trunk-user > li > a.active,
-.trunk-light .trunk-user > li > a:focus { border-color: $color-primary; }
 
 /* # Media Queries
 ================================================== */

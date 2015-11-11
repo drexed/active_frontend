@@ -1,79 +1,80 @@
 /* Table of Contents
 ==================================================
 # Keyframes
-# Animations
-# Delay
-# Duration */
+# Animation
+# Names
+# Delays
+# Durations */
 
 /* # Keyframes
 ================================================== */
-@-webkit-keyframes animated-bounce {
+@-webkit-keyframes animation-bounce {
   0%, 20%, 50%, 80%, 100% { @include transform(translateY(0)); }
   40% { @include transform(translateY(-30px)); }
   60% { @include transform(translateY(-15px)); }
 }
-@keyframes animated-bounce {
+@keyframes animation-bounce {
   0%, 20%, 50%, 80%, 100% { @include transform(translateY(0)); }
   40% { @include transform(translateY(-30px)); }
   60% { @include transform(translateY(-15px)); }
 }
-@-webkit-keyframes animated-flash {
+@-webkit-keyframes animation-flash {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
 }
-@keyframes animated-flash {
+@keyframes animation-flash {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
 }
-@-webkit-keyframes animated-pulse {
+@-webkit-keyframes animation-pulse {
   0% { @include transform(scale(1)); }
   50% { @include transform(scale(1.1)); }
   100% { @include transform(scale(1)); }
 }
-@keyframes animated-pulse {
+@keyframes animation-pulse {
   0% { @include transform(scale(1)); }
   50% { @include transform(scale(1.1)); }
   100% { @include transform(scale(1)); }
 }
-@-webkit-keyframes animated-shake {
+@-webkit-keyframes animation-shake {
   0%, 100% { @include transform(translateX(0)); }
   10%, 30%, 50%, 70%, 90% { @include transform(translateX(-10px)); }
   20%, 40%, 60%, 80% { @include transform(translateX(10px)); }
 }
-@keyframes animated-shake {
+@keyframes animation-shake {
   0%, 100% { @include transform(translateX(0)); }
   10%, 30%, 50%, 70%, 90% { @include transform(translateX(-10px)); }
   20%, 40%, 60%, 80% { @include transform(translateX(10px)); }
 }
-@-webkit-keyframes animated-swing {
+@-webkit-keyframes animation-swing {
   20% { @include transform(rotate(15deg)); }
   40% { @include transform(rotate(-10deg)); }
   60% { @include transform(rotate(5deg)); }
   80% { @include transform(rotate(-5deg)); }
   100% { @include transform(rotate(0)); }
 }
-@keyframes animated-swing {
+@keyframes animation-swing {
   20% { @include transform(rotate(15deg)); }
   40% { @include transform(rotate(-10deg)); }
   60% { @include transform(rotate(5deg)); }
   80% { @include transform(rotate(-5deg)); }
   100% { @include transform(rotate(0)); }
 }
-@-webkit-keyframes animated-tada {
+@-webkit-keyframes animation-tada {
   0% { @include transform(scale(1)); }
   10%, 20% { @include transform(scale(0.9) rotate(-3deg)); }
   30%, 50%, 70%, 90% { @include transform(scale(1.1) rotate(3deg)); }
   40%, 60%, 80% { @include transform(scale(1.1) rotate(-3deg)); }
   100% { @include transform(scale(1) rotate(0)); }
 }
-@keyframes animated-tada {
+@keyframes animation-tada {
   0% { @include transform(scale(1)); }
   10%, 20% { @include transform(scale(0.9) rotate(-3deg)); }
   30%, 50%, 70%, 90% { @include transform(scale(1.1) rotate(3deg)); }
   40%, 60%, 80% { @include transform(scale(1.1) rotate(-3deg)); }
   100% { @include transform(scale(1) rotate(0)); }
 }
-@-webkit-keyframes animated-wobble {
+@-webkit-keyframes animation-wobble {
   0% { @include transform(translateX(0)); }
   15% { @include transform(translateX(-25%) rotate(-5deg)); }
   30% { @include transform(translateX(20%) rotate(3deg)); }
@@ -82,7 +83,7 @@
   75% { @include transform(translateX(-5%) rotate(-1deg)); }
   100% { @include transform(translateX(0)); }
 }
-@keyframes animated-wobble {
+@keyframes animation-wobble {
   0% { @include transform(translateX(0)); }
   15% { @include transform(translateX(-25%) rotate(-5deg)); }
   30% { @include transform(translateX(20%) rotate(3deg)); }
@@ -91,7 +92,7 @@
   75% { @include transform(translateX(-5%) rotate(-1deg)); }
   100% { @include transform(translateX(0)); }
 }
-@-webkit-keyframes animated-bounce-in {
+@-webkit-keyframes animation-bounce-in {
   0% {
     opacity: 0;
     @include transform(scale(0.3));
@@ -103,7 +104,7 @@
   70% { @include transform(scale(0.9)); }
   100% { @include transform(scale(1)); }
 }
-@keyframes animated-bounce-in {
+@keyframes animation-bounce-in {
   0% {
     opacity: 0;
     @include transform(scale(0.3));
@@ -115,7 +116,7 @@
   70% { @include transform(scale(0.9)); }
   100% { @include transform(scale(1)); }
 }
-@-webkit-keyframes animated-bounce-in-down {
+@-webkit-keyframes animation-bounce-in-down {
   0% {
     opacity: 0;
     @include transform(translateY(-2000px));
@@ -127,7 +128,7 @@
   80% { @include transform(translateY(-10px)); }
   100% { @include transform(translateY(0)); }
 }
-@keyframes animated-bounce-in-down {
+@keyframes animation-bounce-in-down {
   0% {
     opacity: 0;
     @include transform(translateY(-2000px));
@@ -139,7 +140,7 @@
   80% { @include transform(translateY(-10px)); }
   100% { @include transform(translateY(0)); }
 }
-@-webkit-keyframes animated-bounce-in-left {
+@-webkit-keyframes animation-bounce-in-left {
   0% {
     opacity: 0;
     @include transform(translateX(-2000px));
@@ -151,7 +152,7 @@
   80% { @include transform(translateX(-10px)); }
   100% { @include transform(translateX(0)); }
 }
-@keyframes animated-bounce-in-left {
+@keyframes animation-bounce-in-left {
   0% {
     opacity: 0;
     @include transform(translateX(-2000px));
@@ -163,7 +164,7 @@
   80% { @include transform(translateX(-10px)); }
   100% { @include transform(translateX(0)); }
 }
-@-webkit-keyframes animated-bounce-in-right {
+@-webkit-keyframes animation-bounce-in-right {
   0% {
     opacity: 0;
     @include transform(translateX(2000px));
@@ -175,7 +176,7 @@
   80% { @include transform(translateX(10px)); }
   100% { @include transform(translateX(0)); }
 }
-@keyframes animated-bounce-in-right {
+@keyframes animation-bounce-in-right {
   0% {
     opacity: 0;
     @include transform(translateX(2000px));
@@ -187,7 +188,7 @@
   80% { @include transform(translateX(10px)); }
   100% { @include transform(translateX(0)); }
 }
-@-webkit-keyframes animated-bounce-in-up {
+@-webkit-keyframes animation-bounce-in-up {
   0% {
     opacity: 0;
     @include transform(translateY(2000px));
@@ -199,7 +200,7 @@
   80% { @include transform(translateY(10px)); }
   100% { @include transform(translateY(0)); }
 }
-@keyframes animated-bounce-in-up {
+@keyframes animation-bounce-in-up {
   0% {
     opacity: 0;
     @include transform(translateY(2000px));
@@ -211,7 +212,7 @@
   80% { @include transform(translateY(10px)); }
   100% { @include transform(translateY(0)); }
 }
-@-webkit-keyframes animated-bounce-out {
+@-webkit-keyframes animation-bounce-out {
   0% { @include transform(scale(1)); }
   25% { @include transform(scale(0.95)); }
   50% {
@@ -223,7 +224,7 @@
     @include transform(scale(0.3));
   }
 }
-@keyframes animated-bounce-out {
+@keyframes animation-bounce-out {
   0% { @include transform(scale(1)); }
   25% { @include transform(scale(0.95)); }
   50% {
@@ -235,7 +236,7 @@
     @include transform(scale(0.3));
   }
 }
-@-webkit-keyframes animated-bounce-out-down {
+@-webkit-keyframes animation-bounce-out-down {
   0% { @include transform(translateY(0)); }
   20% {
     opacity: 1;
@@ -246,7 +247,7 @@
     @include transform(translateY(2000px));
   }
 }
-@keyframes animated-bounce-out-down {
+@keyframes animation-bounce-out-down {
   0% { @include transform(translateY(0)); }
   20% {
     opacity: 1;
@@ -257,7 +258,7 @@
     @include transform(translateY(2000px));
   }
 }
-@-webkit-keyframes animated-bounce-out-left {
+@-webkit-keyframes animation-bounce-out-left {
   0% { @include transform(translateX(0)); }
   20% {
     opacity: 1;
@@ -268,7 +269,7 @@
     @include transform(translateX(-2000px));
   }
 }
-@keyframes animated-bounce-out-left {
+@keyframes animation-bounce-out-left {
   0% { @include transform(translateX(0)); }
   20% {
     opacity: 1;
@@ -279,7 +280,7 @@
     @include transform(translateX(-2000px));
   }
 }
-@-webkit-keyframes animated-bounce-out-right {
+@-webkit-keyframes animation-bounce-out-right {
   0% { @include transform(translateX(0)); }
   20% {
     opacity: 1;
@@ -290,7 +291,7 @@
     @include transform(translateX(2000px));
   }
 }
-@keyframes animated-bounce-out-right {
+@keyframes animation-bounce-out-right {
   0% { @include transform(translateX(0)); }
   20% {
     opacity: 1;
@@ -301,7 +302,7 @@
     @include transform(translateX(2000px));
   }
 }
-@-webkit-keyframes animated-bounce-out-up {
+@-webkit-keyframes animation-bounce-out-up {
   0% { @include transform(translateY(0)); }
   20% {
     opacity: 1;
@@ -312,7 +313,7 @@
     @include transform(translateY(-2000px));
   }
 }
-@keyframes animated-bounce-out-up {
+@keyframes animation-bounce-out-up {
   0% { @include transform(translateY(0)); }
   20% {
     opacity: 1;
@@ -323,15 +324,15 @@
     @include transform(translateY(-2000px));
   }
 }
-@-webkit-keyframes animated-fade-in {
+@-webkit-keyframes animation-fade-in {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-@keyframes animated-fade-in {
+@keyframes animation-fade-in {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-@-webkit-keyframes animated-fade-in-down {
+@-webkit-keyframes animation-fade-in-down {
   0% {
     opacity: 0;
     @include transform(translateY(-20px));
@@ -341,7 +342,7 @@
     @include transform(translateY(0));
   }
 }
-@keyframes animated-fade-in-down {
+@keyframes animation-fade-in-down {
   0% {
     opacity: 0;
     @include transform(translateY(-20px));
@@ -351,7 +352,7 @@
     @include transform(translateY(0));
   }
 }
-@-webkit-keyframes animated-fade-in-down-big {
+@-webkit-keyframes animation-fade-in-down-big {
   0% {
     opacity: 0;
     @include transform(translateY(-2000px));
@@ -361,7 +362,7 @@
     @include transform(translateY(0));
   }
 }
-@keyframes animated-fade-in-down-big {
+@keyframes animation-fade-in-down-big {
   0% {
     opacity: 0;
     @include transform(translateY(-2000px));
@@ -371,7 +372,7 @@
     @include transform(translateY(0));
   }
 }
-@-webkit-keyframes animated-fade-in-left {
+@-webkit-keyframes animation-fade-in-left {
   0% {
     opacity: 0;
     @include transform(translateX(-20px));
@@ -381,7 +382,7 @@
     @include transform(translateX(0));
   }
 }
-@keyframes animated-fade-in-left {
+@keyframes animation-fade-in-left {
   0% {
     opacity: 0;
     @include transform(translateX(-20px));
@@ -391,7 +392,7 @@
     @include transform(translateX(0));
   }
 }
-@-webkit-keyframes animated-fade-in-left-big {
+@-webkit-keyframes animation-fade-in-left-big {
   0% {
     opacity: 0;
     @include transform(translateX(-2000px));
@@ -401,7 +402,7 @@
     @include transform(translateX(0));
   }
 }
-@keyframes animated-fade-in-left-big {
+@keyframes animation-fade-in-left-big {
   0% {
     opacity: 0;
     @include transform(translateX(-2000px));
@@ -411,7 +412,7 @@
     @include transform(translateX(0));
   }
 }
-@-webkit-keyframes animated-fade-in-right {
+@-webkit-keyframes animation-fade-in-right {
   0% {
     opacity: 0;
     @include transform(translateX(20px));
@@ -421,7 +422,7 @@
     @include transform(translateX(0));
   }
 }
-@keyframes animated-fade-in-right {
+@keyframes animation-fade-in-right {
   0% {
     opacity: 0;
     @include transform(translateX(20px));
@@ -431,7 +432,7 @@
     @include transform(translateX(0));
   }
 }
-@-webkit-keyframes animated-fade-in-right-big {
+@-webkit-keyframes animation-fade-in-right-big {
   0% {
     opacity: 0;
     @include transform(translateX(2000px));
@@ -441,7 +442,7 @@
     @include transform(translateX(0));
   }
 }
-@keyframes animated-fade-in-right-big {
+@keyframes animation-fade-in-right-big {
   0% {
     opacity: 0;
     @include transform(translateX(2000px));
@@ -451,7 +452,7 @@
     @include transform(translateX(0));
   }
 }
-@-webkit-keyframes animated-fade-in-up {
+@-webkit-keyframes animation-fade-in-up {
   0% {
     opacity: 0;
     @include transform(translateY(20px));
@@ -461,7 +462,7 @@
     @include transform(translateY(0));
   }
 }
-@keyframes animated-fade-in-up {
+@keyframes animation-fade-in-up {
   0% {
     opacity: 0;
     @include transform(translateY(20px));
@@ -471,7 +472,7 @@
     @include transform(translateY(0));
   }
 }
-@-webkit-keyframes animated-fade-in-up-big {
+@-webkit-keyframes animation-fade-in-up-big {
   0% {
     opacity: 0;
     @include transform(translateY(2000px));
@@ -481,7 +482,7 @@
     @include transform(translateY(0));
   }
 }
-@keyframes animated-fade-in-up-big {
+@keyframes animation-fade-in-up-big {
   0% {
     opacity: 0;
     @include transform(translateY(2000px));
@@ -491,15 +492,15 @@
     @include transform(translateY(0));
   }
 }
-@-webkit-keyframes animated-fade-out {
+@-webkit-keyframes animation-fade-out {
   0%   { opacity: 1; }
   100% { opacity: 0; }
 }
-@keyframes animated-fade-out {
+@keyframes animation-fade-out {
   0%   { opacity: 1; }
   100% { opacity: 0; }
 }
-@-webkit-keyframes animated-fade-out-down {
+@-webkit-keyframes animation-fade-out-down {
   0% {
     opacity: 1;
     @include transform(translateY(0));
@@ -509,7 +510,7 @@
     @include transform(translateY(20px));
   }
 }
-@keyframes animated-fade-out-down {
+@keyframes animation-fade-out-down {
   0% {
     opacity: 1;
     @include transform(translateY(0));
@@ -519,7 +520,7 @@
     @include transform(translateY(20px));
   }
 }
-@-webkit-keyframes animated-fade-out-down-big {
+@-webkit-keyframes animation-fade-out-down-big {
   0% {
     opacity: 1;
     @include transform(translateY(0));
@@ -529,7 +530,7 @@
     @include transform(translateY(2000px));
   }
 }
-@keyframes animated-fade-out-down-big {
+@keyframes animation-fade-out-down-big {
   0% {
     opacity: 1;
     @include transform(translateY(0));
@@ -539,7 +540,7 @@
     @include transform(translateY(2000px));
   }
 }
-@-webkit-keyframes animated-fade-out-left {
+@-webkit-keyframes animation-fade-out-left {
   0% {
     opacity: 1;
     @include transform(translateX(0));
@@ -549,7 +550,7 @@
     @include transform(translateX(-20px));
   }
 }
-@keyframes animated-fade-out-left {
+@keyframes animation-fade-out-left {
   0% {
     opacity: 1;
     @include transform(translateX(0));
@@ -559,7 +560,7 @@
     @include transform(translateX(-20px));
   }
 }
-@-webkit-keyframes animated-fade-out-left-big {
+@-webkit-keyframes animation-fade-out-left-big {
   0% {
     opacity: 1;
     @include transform(translateX(0));
@@ -569,7 +570,7 @@
     @include transform(translateX(-2000px));
   }
 }
-@keyframes animated-fade-out-left-big {
+@keyframes animation-fade-out-left-big {
   0% {
     opacity: 1;
     @include transform(translateX(0));
@@ -579,7 +580,7 @@
     @include transform(translateX(-2000px));
   }
 }
-@-webkit-keyframes animated-fade-out-right {
+@-webkit-keyframes animation-fade-out-right {
   0% {
     opacity: 1;
     @include transform(translateX(0));
@@ -589,7 +590,7 @@
     @include transform(translateX(20px));
   }
 }
-@keyframes animated-fade-out-right {
+@keyframes animation-fade-out-right {
   0% {
     opacity: 1;
     @include transform(translateX(0));
@@ -599,7 +600,7 @@
     @include transform(translateX(20px));
   }
 }
-@-webkit-keyframes animated-fade-out-right-big {
+@-webkit-keyframes animation-fade-out-right-big {
   0% {
     opacity: 1;
     @include transform(translateX(0));
@@ -609,7 +610,7 @@
     @include transform(translateX(2000px));
   }
 }
-@keyframes animated-fade-out-right-big {
+@keyframes animation-fade-out-right-big {
   0% {
     opacity: 1;
     @include transform(translateX(0));
@@ -619,7 +620,7 @@
     @include transform(translateX(2000px));
   }
 }
-@-webkit-keyframes animated-fade-out-up {
+@-webkit-keyframes animation-fade-out-up {
   0% {
     opacity: 1;
     @include transform(translateY(0));
@@ -629,7 +630,7 @@
     @include transform(translateY(-20px));
   }
 }
-@keyframes animated-fade-out-up {
+@keyframes animation-fade-out-up {
   0% {
     opacity: 1;
     @include transform(translateY(0));
@@ -639,7 +640,7 @@
     @include transform(translateY(-20px));
   }
 }
-@-webkit-keyframes animated-fade-out-up-big {
+@-webkit-keyframes animation-fade-out-up-big {
   0% {
     opacity: 1;
     @include transform(translateY(0));
@@ -649,7 +650,7 @@
     @include transform(translateY(-2000px));
   }
 }
-@keyframes animated-fade-out-up-big {
+@keyframes animation-fade-out-up-big {
   0% {
     opacity: 1;
     @include transform(translateY(0));
@@ -659,7 +660,7 @@
     @include transform(translateY(-2000px));
   }
 }
-@-webkit-keyframes animated-flip {
+@-webkit-keyframes animation-flip {
   0% {
     @include animation-timing-function(ease-out);
     @include transform(perspective(400px) translateZ(0) rotateY(0) scale(1));
@@ -681,7 +682,7 @@
     @include transform(perspective(400px) translateZ(0) rotateY(360deg) scale(1));
   }
 }
-@keyframes animated-flip {
+@keyframes animation-flip {
   0% {
     @include animation-timing-function(ease-out);
     @include transform(perspective(400px) translateZ(0) rotateY(0) scale(1));
@@ -703,7 +704,7 @@
     @include transform(perspective(400px) translateZ(0) rotateY(360deg) scale(1));
   }
 }
-@-webkit-keyframes animated-flip-in-x {
+@-webkit-keyframes animation-flip-in-x {
   0% {
     opacity: 0;
     @include transform(perspective(400px) rotateX(90deg));
@@ -715,7 +716,7 @@
     @include transform(perspective(400px) rotateX(0));
   }
 }
-@keyframes animated-flip-in-x {
+@keyframes animation-flip-in-x {
   0% {
     opacity: 0;
     @include transform(perspective(400px) rotateX(90deg));
@@ -727,7 +728,7 @@
     @include transform(perspective(400px) rotateX(0));
   }
 }
-@-webkit-keyframes animated-flip-in-y {
+@-webkit-keyframes animation-flip-in-y {
   0% {
     opacity: 0;
     @include transform(perspective(400px) rotateY(90deg));
@@ -739,7 +740,7 @@
     @include transform(perspective(400px) rotateY(0));
   }
 }
-@keyframes animated-flip-in-y {
+@keyframes animation-flip-in-y {
   0% {
     opacity: 0;
     @include transform(perspective(400px) rotateY(90deg));
@@ -751,7 +752,7 @@
     @include transform(perspective(400px) rotateY(0));
   }
 }
-@-webkit-keyframes animated-flip-out-x {
+@-webkit-keyframes animation-flip-out-x {
   0% {
     opacity: 1;
     @include transform(perspective(400px) rotateX(0));
@@ -761,7 +762,7 @@
     @include transform(perspective(400px) rotateX(90deg));
   }
 }
-@keyframes animated-flip-out-x {
+@keyframes animation-flip-out-x {
   0% {
     opacity: 1;
     @include transform(perspective(400px) rotateX(0));
@@ -771,7 +772,7 @@
     @include transform(perspective(400px) rotateX(90deg));
   }
 }
-@-webkit-keyframes animated-flip-out-y {
+@-webkit-keyframes animation-flip-out-y {
   0% {
     opacity: 1;
     @include transform(perspective(400px) rotateY(0));
@@ -781,7 +782,7 @@
     @include transform(perspective(400px) rotateY(90deg));
   }
 }
-@keyframes animated-flip-out-y {
+@keyframes animation-flip-out-y {
   0% {
     opacity: 1;
     @include transform(perspective(400px) rotateY(0));
@@ -791,7 +792,7 @@
     @include transform(perspective(400px) rotateY(90deg));
   }
 }
-@-webkit-keyframes animated-light-speed-in {
+@-webkit-keyframes animation-light-speed-in {
   0% {
     opacity: 0;
     @include transform(translateX(100%) skewX(-30deg));
@@ -809,7 +810,7 @@
     @include transform(translateX(0) skewX(0));
   }
 }
-@keyframes animated-light-speed-in {
+@keyframes animation-light-speed-in {
   0% {
     opacity: 0;
     @include transform(translateX(100%) skewX(-30deg));
@@ -827,7 +828,7 @@
     @include transform(translateX(0) skewX(0));
   }
 }
-@-webkit-keyframes animated-light-speed-out {
+@-webkit-keyframes animation-light-speed-out {
   0% {
     opacity: 1;
     @include transform(translateX(0) skewX(0));
@@ -837,7 +838,7 @@
     @include transform(translateX(100%) skewX(-30deg));
   }
 }
-@keyframes animated-light-speed-out {
+@keyframes animation-light-speed-out {
   0% {
     opacity: 1;
     @include transform(translateX(0) skewX(0));
@@ -847,7 +848,7 @@
     @include transform(translateX(100%) skewX(-30deg));
   }
 }
-@-webkit-keyframes animated-rotate-in {
+@-webkit-keyframes animation-rotate-in {
   0% {
     opacity: 0;
     @include transform(rotate(-200deg));
@@ -859,7 +860,7 @@
     @include transform-origin(center center);
   }
 }
-@keyframes animated-rotate-in {
+@keyframes animation-rotate-in {
   0% {
     opacity: 0;
     @include transform(rotate(-200deg));
@@ -871,7 +872,7 @@
     @include transform-origin(center center);
   }
 }
-@-webkit-keyframes animated-rotate-in-down-left {
+@-webkit-keyframes animation-rotate-in-down-left {
   0% {
     opacity: 0;
     @include transform(rotate(-90deg));
@@ -883,7 +884,7 @@
     @include transform-origin(left bottom);
   }
 }
-@keyframes animated-rotate-in-down-left {
+@keyframes animation-rotate-in-down-left {
   0% {
     opacity: 0;
     @include transform(rotate(-90deg));
@@ -895,7 +896,7 @@
     @include transform-origin(left bottom);
   }
 }
-@-webkit-keyframes animated-rotate-in-down-right {
+@-webkit-keyframes animation-rotate-in-down-right {
   0% {
     opacity: 0;
     @include transform(rotate(90deg));
@@ -907,7 +908,7 @@
     @include transform-origin(right bottom);
   }
 }
-@keyframes animated-rotate-in-down-right {
+@keyframes animation-rotate-in-down-right {
   0% {
     opacity: 0;
     @include transform(rotate(90deg));
@@ -919,7 +920,7 @@
     @include transform-origin(right bottom);
   }
 }
-@-webkit-keyframes animated-rotate-in-up-left {
+@-webkit-keyframes animation-rotate-in-up-left {
   0% {
     opacity: 0;
     @include transform(rotate(90deg));
@@ -931,7 +932,7 @@
     @include transform-origin(left bottom);
   }
 }
-@keyframes animated-rotate-in-up-left {
+@keyframes animation-rotate-in-up-left {
   0% {
     opacity: 0;
     @include transform(rotate(90deg));
@@ -943,7 +944,7 @@
     @include transform-origin(left bottom);
   }
 }
-@-webkit-keyframes animated-rotate-in-up-right {
+@-webkit-keyframes animation-rotate-in-up-right {
   0% {
     opacity: 0;
     @include transform(rotate(-90deg));
@@ -955,7 +956,7 @@
     @include transform-origin(right bottom);
   }
 }
-@keyframes animated-rotate-in-up-right {
+@keyframes animation-rotate-in-up-right {
   0% {
     opacity: 0;
     @include transform(rotate(-90deg));
@@ -967,7 +968,7 @@
     @include transform-origin(right bottom);
   }
 }
-@-webkit-keyframes animated-rotate-out {
+@-webkit-keyframes animation-rotate-out {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -979,7 +980,7 @@
     @include transform-origin(center center);
   }
 }
-@keyframes animated-rotate-out {
+@keyframes animation-rotate-out {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -991,7 +992,7 @@
     @include transform-origin(center center);
   }
 }
-@-webkit-keyframes animated-rotate-out-down-left {
+@-webkit-keyframes animation-rotate-out-down-left {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -1003,7 +1004,7 @@
     @include transform-origin(left bottom);
   }
 }
-@keyframes animated-rotate-out-down-left {
+@keyframes animation-rotate-out-down-left {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -1015,7 +1016,7 @@
     @include transform-origin(left bottom);
   }
 }
-@-webkit-keyframes animated-rotate-out-down-right {
+@-webkit-keyframes animation-rotate-out-down-right {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -1027,7 +1028,7 @@
     @include transform-origin(right bottom);
   }
 }
-@keyframes animated-rotate-out-down-right {
+@keyframes animation-rotate-out-down-right {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -1039,7 +1040,7 @@
     @include transform-origin(right bottom);
   }
 }
-@-webkit-keyframes animated-rotate-out-up-left {
+@-webkit-keyframes animation-rotate-out-up-left {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -1051,7 +1052,7 @@
     @include transform-origin(left bottom);
   }
 }
-@keyframes animated-rotate-out-up-left {
+@keyframes animation-rotate-out-up-left {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -1063,7 +1064,7 @@
     @include transform-origin(left bottom);
   }
 }
-@-webkit-keyframes animated-rotate-out-up-right {
+@-webkit-keyframes animation-rotate-out-up-right {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -1075,7 +1076,7 @@
     @include transform-origin(right bottom);
   }
 }
-@keyframes animated-rotate-out-up-right {
+@keyframes animation-rotate-out-up-right {
   0% {
     opacity: 1;
     @include transform(rotate(0));
@@ -1087,91 +1088,91 @@
     @include transform-origin(right bottom);
   }
 }
-@-webkit-keyframes animated-slide-in-down {
+@-webkit-keyframes animation-slide-in-down {
   0% {
     opacity: 0;
     @include transform(translateY(-2000px));
   }
   100% { @include transform(translateY(0)); }
 }
-@keyframes animated-slide-in-down {
+@keyframes animation-slide-in-down {
   0% {
     opacity: 0;
     @include transform(translateY(-2000px));
   }
   100% { @include transform(translateY(0)); }
 }
-@-webkit-keyframes animated-slide-in-left {
+@-webkit-keyframes animation-slide-in-left {
   0% {
     opacity: 0;
     @include transform(translateX(-2000px));
   }
   100% { @include transform(translateX(0)); }
 }
-@keyframes animated-slide-in-left {
+@keyframes animation-slide-in-left {
   0% {
     opacity: 0;
     @include transform(translateX(-2000px));
   }
   100% { @include transform(translateX(0)); }
 }
-@-webkit-keyframes animated-slide-in-right {
+@-webkit-keyframes animation-slide-in-right {
   0% {
     opacity: 0;
     @include transform(translateX(2000px));
   }
   100% { @include transform(translateX(0)); }
 }
-@keyframes animated-slide-in-right {
+@keyframes animation-slide-in-right {
   0% {
     opacity: 0;
     @include transform(translateX(2000px));
   }
   100% { @include transform(translateX(0)); }
 }
-@-webkit-keyframes animated-slide-out-left {
+@-webkit-keyframes animation-slide-out-left {
   0% { @include transform(translateX(0)); }
   100% {
     opacity: 0;
     @include transform(translateX(-2000px));
   }
 }
-@keyframes animated-slide-out-left {
+@keyframes animation-slide-out-left {
   0% { @include transform(translateX(0)); }
   100% {
     opacity: 0;
     @include transform(translateX(-2000px));
   }
 }
-@-webkit-keyframes animated-slide-out-right {
+@-webkit-keyframes animation-slide-out-right {
   0% { @include transform(translateX(0)); }
   100% {
     opacity: 0;
     @include transform(translateX(2000px));
   }
 }
-@keyframes animated-slide-out-right {
+@keyframes animation-slide-out-right {
   0% { @include transform(translateX(0)); }
   100% {
     opacity: 0;
     @include transform(translateX(2000px));
   }
 }
-@-webkit-keyframes animated-slide-out-up {
+@-webkit-keyframes animation-slide-out-up {
   0% { @include transform(translateY(0)); }
   100% {
     opacity: 0;
     @include transform(translateY(-2000px));
   }
 }
-@keyframes animated-slide-out-up {
+@keyframes animation-slide-out-up {
   0% { @include transform(translateY(0)); }
   100% {
     opacity: 0;
     @include transform(translateY(-2000px));
   }
 }
-@-webkit-keyframes animated-hinge {
+@-webkit-keyframes animation-hinge {
   0% {
     @include transform(rotate(0));
     @include transform-origin(top left);
@@ -1194,7 +1195,7 @@
     @include transform(translateY(700px));
   }
 }
-@keyframes animated-hinge {
+@keyframes animation-hinge {
   0% {
     @include transform(rotate(0));
     @include transform-origin(top left);
@@ -1217,7 +1218,7 @@
     @include transform(translateY(700px));
   }
 }
-@-webkit-keyframes animated-roll-in {
+@-webkit-keyframes animation-roll-in {
   0% {
     opacity: 0;
     @include transform(translateX(-100%) rotate(-120deg));
@@ -1227,7 +1228,7 @@
     @include transform(translateX(0) rotate(0));
   }
 }
-@keyframes animated-roll-in {
+@keyframes animation-roll-in {
   0% {
     opacity: 0;
     @include transform(translateX(-100%) rotate(-120deg));
@@ -1237,7 +1238,7 @@
     @include transform(translateX(0) rotate(0));
   }
 }
-@-webkit-keyframes animated-roll-out {
+@-webkit-keyframes animation-roll-out {
   0% {
     opacity: 1;
     @include transform(translateX(0) rotate(0));
@@ -1247,7 +1248,7 @@
     @include transform(translateX(100%) rotate(120deg));
   }
 }
-@keyframes animated-roll-out {
+@keyframes animation-roll-out {
   0% {
     opacity: 1;
     @include transform(translateX(0) rotate(0));
@@ -1258,109 +1259,112 @@
   }
 }
 
-/* # Animations
+/* # Animation
 ================================================== */
-.animated {
+.animation {
   @include animation-duration(1s);
   @include animation-fill-mode(both);
   position: relative;
 }
-.animated-bounce { @include animation-name(animated-bounce); }
-.animated-flash { @include animation-name(animated-flash); }
-.animated-pulse { @include animation-name(animated-pulse); }
-.animated-shake { @include animation-name(animated-shake); }
-.animated-swing {
-  @include animation-name(animated-swing);
+
+/* # Names
+================================================== */
+.animation-bounce { @include animation-name(animation-bounce); }
+.animation-flash { @include animation-name(animation-flash); }
+.animation-pulse { @include animation-name(animation-pulse); }
+.animation-shake { @include animation-name(animation-shake); }
+.animation-swing {
+  @include animation-name(animation-swing);
   @include transform-origin(top center);
 }
-.animated-tada { @include animation-name(animated-tada); }
-.animated-wobble { @include animation-name(animated-wobble); }
-.animated-bounce-in { @include animation-name(animated-bounce-in); }
-.animated-bounce-in-down { @include animation-name(animated-bounce-in-down); }
-.animated-bounce-in-left { @include animation-name(animated-bounce-in-left); }
-.animated-bounce-in-right { @include animation-name(animated-bounce-in-right); }
-.animated-bounce-in-up { @include animation-name(animated-bounce-in-up); }
-.animated-bounce-out { @include animation-name(animated-bounce-out); }
-.animated-bounce-out-down { @include animation-name(animated-bounce-out-down); }
-.animated-bounce-out-left { @include animation-name(animated-bounce-out-left); }
-.animated-bounce-out-right { @include animation-name(animated-bounce-out-right); }
-.animated-bounce-out-up { @include animation-name(animated-bounce-out-up); }
-.animated-fade-in { @include animation-name(animated-fade-in); }
-.animated-fade-in-down { @include animation-name(animated-fade-in-down); }
-.animated-fade-in-down-big { @include animation-name(animated-fade-in-down-big); }
-.animated-fade-in-left { @include animation-name(animated-fade-in-left); }
-.animated-fade-in-left-big { @include animation-name(animated-fade-in-left); }
-.animated-fade-in-right { @include animation-name(animated-fade-in-right); }
-.animated-fade-in-right-big { @include animation-name(animated-fade-in-right-big); }
-.animated-fade-in-up { @include animation-name(animated-fade-in-up); }
-.animated-fade-in-up-big { @include animation-name(animated-fade-in-up-big); }
-.animated-fade-out { @include animation-name(animated-fade-out); }
-.animated-fade-out-down { @include animation-name(animated-fade-out-down); }
-.animated-fade-out-down-big { @include animation-name(animated-fade-out-down-big); }
-.animated-fade-out-left { @include animation-name(animated-fade-out-left); }
-.animated-fade-out-left-big { @include animation-name(animated-fade-out-left-big); }
-.animated-fade-out-right { @include animation-name(animated-fade-out-right); }
-.animated-fade-out-right-big { @include animation-name(animated-fade-out-right-big); }
-.animated-fade-out-up { @include animation-name(animated-fade-out-up); }
-.animated-fade-out-up-big { @include animation-name(animated-fade-out-up-big); }
-.animated-flip { @include animation-name(animated-flip); }
-.animated-flip-in-x { @include animation-name(animated-flip-in-x); }
-.animated-flip-in-y { @include animation-name(animated-flip-in-y); }
-.animated-flip-out-x { @include animation-name(animated-flip-out-x); }
-.animated-flip-out-y { @include animation-name(animated-flip-out-y); }
-.animated-flip,
-.animated-flip-in-x,
-.animated-flip-in-y,
-.animated-flip-out-x,
-.animated-flip-out-y { @include backface-visibility(visible); }
-.animated-light-speed-in {
-  @include animation-name(animated-light-speed-in);
+.animation-tada { @include animation-name(animation-tada); }
+.animation-wobble { @include animation-name(animation-wobble); }
+.animation-bounce-in { @include animation-name(animation-bounce-in); }
+.animation-bounce-in-down { @include animation-name(animation-bounce-in-down); }
+.animation-bounce-in-left { @include animation-name(animation-bounce-in-left); }
+.animation-bounce-in-right { @include animation-name(animation-bounce-in-right); }
+.animation-bounce-in-up { @include animation-name(animation-bounce-in-up); }
+.animation-bounce-out { @include animation-name(animation-bounce-out); }
+.animation-bounce-out-down { @include animation-name(animation-bounce-out-down); }
+.animation-bounce-out-left { @include animation-name(animation-bounce-out-left); }
+.animation-bounce-out-right { @include animation-name(animation-bounce-out-right); }
+.animation-bounce-out-up { @include animation-name(animation-bounce-out-up); }
+.animation-fade-in { @include animation-name(animation-fade-in); }
+.animation-fade-in-down { @include animation-name(animation-fade-in-down); }
+.animation-fade-in-down-big { @include animation-name(animation-fade-in-down-big); }
+.animation-fade-in-left { @include animation-name(animation-fade-in-left); }
+.animation-fade-in-left-big { @include animation-name(animation-fade-in-left); }
+.animation-fade-in-right { @include animation-name(animation-fade-in-right); }
+.animation-fade-in-right-big { @include animation-name(animation-fade-in-right-big); }
+.animation-fade-in-up { @include animation-name(animation-fade-in-up); }
+.animation-fade-in-up-big { @include animation-name(animation-fade-in-up-big); }
+.animation-fade-out { @include animation-name(animation-fade-out); }
+.animation-fade-out-down { @include animation-name(animation-fade-out-down); }
+.animation-fade-out-down-big { @include animation-name(animation-fade-out-down-big); }
+.animation-fade-out-left { @include animation-name(animation-fade-out-left); }
+.animation-fade-out-left-big { @include animation-name(animation-fade-out-left-big); }
+.animation-fade-out-right { @include animation-name(animation-fade-out-right); }
+.animation-fade-out-right-big { @include animation-name(animation-fade-out-right-big); }
+.animation-fade-out-up { @include animation-name(animation-fade-out-up); }
+.animation-fade-out-up-big { @include animation-name(animation-fade-out-up-big); }
+.animation-flip { @include animation-name(animation-flip); }
+.animation-flip-in-x { @include animation-name(animation-flip-in-x); }
+.animation-flip-in-y { @include animation-name(animation-flip-in-y); }
+.animation-flip-out-x { @include animation-name(animation-flip-out-x); }
+.animation-flip-out-y { @include animation-name(animation-flip-out-y); }
+.animation-flip,
+.animation-flip-in-x,
+.animation-flip-in-y,
+.animation-flip-out-x,
+.animation-flip-out-y { @include backface-visibility(visible); }
+.animation-light-speed-in {
+  @include animation-name(animation-light-speed-in);
   @include animation-timing-function(ease-out);
 }
-.animated-light-speed-out {
-  @include animation-name(animated-light-speed-out);
+.animation-light-speed-out {
+  @include animation-name(animation-light-speed-out);
   @include animation-timing-function(ease-in);
 }
-.animated-rotate-in { @include animation-name(animated-rotate-in); }
-.animated-rotate-in-down-left { @include animation-name(animated-rotate-in-down-left); }
-.animated-rotate-in-down-right { @include animation-name(animated-rotate-in-down-right); }
-.animated-rotate-in-up-left { @include animation-name(animated-rotate-in-up-left); }
-.animated-rotate-in-up-right { @include animation-name(animated-rotate-in-up-right); }
-.animated-rotate-out { @include animation-name(animated-rotate-out); }
-.animated-rotate-out-down-left { @include animation-name(animated-rotate-out-down-left); }
-.animated-rotate-out-down-right { @include animation-name(animated-rotate-out-down-right); }
-.animated-rotate-out-up-left { @include animation-name(animated-rotate-out-up-left); }
-.animated-rotate-out-up-right { @include animation-name(animated-rotate-out-up-right); }
-.animated-slide-in-down { @include animation-name(animated-slide-in-down); }
-.animated-slide-in-left { @include animation-name(animated-slide-in-left); }
-.animated-slide-in-right { @include animation-name(animated-slide-in-right); }
-.animated-slide-out-left { @include animation-name(animated-slide-out-left); }
-.animated-slide-out-right { @include animation-name(animated-slide-out-right); }
-.animated-slide-out-up { @include animation-name(animated-slide-out-up); }
-.animated-hinge {
+.animation-rotate-in { @include animation-name(animation-rotate-in); }
+.animation-rotate-in-down-left { @include animation-name(animation-rotate-in-down-left); }
+.animation-rotate-in-down-right { @include animation-name(animation-rotate-in-down-right); }
+.animation-rotate-in-up-left { @include animation-name(animation-rotate-in-up-left); }
+.animation-rotate-in-up-right { @include animation-name(animation-rotate-in-up-right); }
+.animation-rotate-out { @include animation-name(animation-rotate-out); }
+.animation-rotate-out-down-left { @include animation-name(animation-rotate-out-down-left); }
+.animation-rotate-out-down-right { @include animation-name(animation-rotate-out-down-right); }
+.animation-rotate-out-up-left { @include animation-name(animation-rotate-out-up-left); }
+.animation-rotate-out-up-right { @include animation-name(animation-rotate-out-up-right); }
+.animation-slide-in-down { @include animation-name(animation-slide-in-down); }
+.animation-slide-in-left { @include animation-name(animation-slide-in-left); }
+.animation-slide-in-right { @include animation-name(animation-slide-in-right); }
+.animation-slide-out-left { @include animation-name(animation-slide-out-left); }
+.animation-slide-out-right { @include animation-name(animation-slide-out-right); }
+.animation-slide-out-up { @include animation-name(animation-slide-out-up); }
+.animation-hinge {
   @include animation-duration(2s);
-  @include animation-name(animated-hinge);
+  @include animation-name(animation-hinge);
   @include animation-timing-function(ease-in-out);
 }
-.animated-roll-in { @include animation-name(animated-roll-in); }
-.animated-roll-out { @include animation-name(animated-roll-out); }
+.animation-roll-in { @include animation-name(animation-roll-in); }
+.animation-roll-out { @include animation-name(animation-roll-out); }
 
-/* # Delay
+/* # Delays
 ================================================== */
-.animated.animated-delay-shortest { @include animation-delay(0.25s); }
-.animated.animated-delay-shorter { @include animation-delay(0.5s); }
-.animated.animated-delay-short { @include animation-delay(0.75s); }
-.animated.animated-delay-default { @include animation-delay(1s); }
-.animated.animated-delay-long { @include animation-delay(1.25s); }
-.animated.animated-delay-longer { @include animation-delay(1.5s); }
-.animated.animated-delay-longest { @include animation-delay(1.75s); }
+.animation.animation-delay-shortest { @include animation-delay(0.25s); }
+.animation.animation-delay-shorter { @include animation-delay(0.5s); }
+.animation.animation-delay-short { @include animation-delay(0.75s); }
+.animation.animation-delay-default { @include animation-delay(1s); }
+.animation.animation-delay-long { @include animation-delay(1.25s); }
+.animation.animation-delay-longer { @include animation-delay(1.5s); }
+.animation.animation-delay-longest { @include animation-delay(1.75s); }
 
-/* # Duration
+/* # Durations
 ================================================== */
-.animated.animated-duration-fastest { @include animation-duration(0.25s); }
-.animated.animated-duration-faster { @include animation-duration(0.5s); }
-.animated.animated-duration-fast { @include animation-duration(0.75s); }
-.animated.animated-duration-default { @include animation-duration(1s); }
-.animated.animated-duration-slow { @include animation-duration(1.25s); }
-.animated.animated-duration-slower { @include animation-duration(1.5s); }
-.animated.animated-duration-slowest { @include animation-duration(1.75s); }
+.animation.animation-duration-fastest { @include animation-duration(0.25s); }
+.animation.animation-duration-faster { @include animation-duration(0.5s); }
+.animation.animation-duration-fast { @include animation-duration(0.75s); }
+.animation.animation-duration-default { @include animation-duration(1s); }
+.animation.animation-duration-slow { @include animation-duration(1.25s); }
+.animation.animation-duration-slower { @include animation-duration(1.5s); }
+.animation.animation-duration-slowest { @include animation-duration(1.75s); }

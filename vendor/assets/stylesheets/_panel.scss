@@ -8,40 +8,46 @@
 ================================================== */
 .panel {
   background: $color-white;
-  border: 1px solid $color-haze;
+  border: 1px solid;
+  border-color: $color-haze;
   border-radius: 2px;
+  color: $color-black;
   margin-bottom: 20px;
 }
 .panel-header {
-  background: $color-white;
-  border-bottom: 1px solid $color-haze;
+  border-bottom: 1px solid;
+  border-color: inherit;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   padding: 14px 15px 12px 15px;
 }
-.panel-header .btn {
-  margin-bottom: -4px;
-  margin-top: -6px;
-}
-.panel-title {
-  color: $color-black;
+.panel-header > h1,
+.panel-header > h2,
+.panel-header > h3,
+.panel-header > h4,
+.panel-header > h5,
+.panel-header > h6 {
   display: inline-block;
   font-size: 16px;
   line-height: 1;
   margin: 0;
+  padding: 0;
+}
+.panel-header .btn {
+  margin-bottom: -4px;
+  margin-top: -6px;
 }
 .panel-body { padding: 15px; }
 .panel-body-chart {
   margin-bottom: -10px;
   width: 100%;
 }
-.panel-body > .table-responsive {
-  border: 0;
-  margin: 0;
-}
+.panel-body > .table,
+.panel-body > .table-responsive { margin: 0; }
+.panel-body > .table-responsive { border: 0; }
 .panel-footer {
-  background: $color-white;
-  border-top: 1px solid $color-haze;
+  border-top: 1px solid;
+  border-color: inherit;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   padding: 14px 15px 13px 15px;
@@ -49,20 +55,12 @@
 
 /* # Colors
 ================================================== */
-.panel-dark,
-.panel-dark .panel-header,
-.panel-dark .panel-title,
-.panel-dark .panel-body,
-.panel-dark .panel-footer {
+.panel-dark {
   background: $color-black;
   border-color: $color-dark-black;
   color: $color-white;
 }
-.panel-light,
-.panel-light .panel-header,
-.panel-light .panel-title,
-.panel-light .panel-body,
-.panel-light .panel-footer {
+.panel-light {
   background: $color-light-haze;
   border-color: $color-dark-haze;
 }

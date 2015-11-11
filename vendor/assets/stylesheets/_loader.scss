@@ -1,7 +1,8 @@
 /* Table of Contents
 ==================================================
 # Keyframes
-# Loader */
+# Loader
+# Colors */
 
 /* # Keyframes
 ================================================== */
@@ -62,3 +63,8 @@
   pointer-events: none;
   width: 18px;
 }
+
+/* # Colors
+================================================== */
+.loader-dark { background: $color-black; }
+.loader-light { background: $color-haze; }

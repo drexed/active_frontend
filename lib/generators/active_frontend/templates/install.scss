@@ -1,23 +1,13 @@
 /* Table of Contents
 ==================================================
 # Required Imports
-# Required Variables
 # Optional Imports */
 
 /* # Required Imports
 ================================================== */
 @import 'mixin';
 @import 'color';
-
-/* # Required Variables
-================================================== */
-$color-primary: $color-blue;
-$color-secondary: $color-green;
-$color-tertiary: $color-red;
-$typography-font: 'Gotham Round';
-$typography-monospace: Monaco, Menlo, Consolas, 'Courier New', monospace;
-$typography-sans-serif: $typography-font, 'Helvetica', Helvetica, Arial, sans-serif;
-$typography-serif: 'Times New Roman', Times, serif;
+@import 'variable';
 
 /* # Optional Imports
 ================================================== */
@@ -49,7 +39,6 @@ $typography-serif: 'Times New Roman', Times, serif;
 @import 'map';
 @import 'missive';
 @import 'modal';
-@import 'aside';
 @import 'nav_and_tab';
 @import 'navbar';
 @import 'pagination';

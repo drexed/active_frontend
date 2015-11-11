@@ -1,7 +1,9 @@
 /* Table of Contents
 ==================================================
 # Ad
+# Alignments
 # Sizes
+# Colors
 # Media Queries */
 
 /* # Ad
@@ -14,6 +16,9 @@
   visibility: visible;
   @include dimensions(220px, 220px);
 }
+
+/* # Alignments
+================================================== */
 .ad-center { margin: 0 auto; }
 
 /* # Sizes

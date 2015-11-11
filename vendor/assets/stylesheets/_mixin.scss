@@ -24,6 +24,11 @@
       -ms-animation-fill-mode: $mode;
           animation-fill-mode: $mode;
 }
+@mixin animation-iteration-count($iteration-count) {
+  -webkit-animation-iteration-count: $iteration-count;
+      -ms-animation-iteration-count: $iteration-count;
+          animation-iteration-count: $iteration-count;
+}
 @mixin animation-name($name) {
   -webkit-animation-name: $name;
       -ms-animation-name: $name;

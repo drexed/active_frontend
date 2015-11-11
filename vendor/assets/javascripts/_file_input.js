@@ -63,9 +63,9 @@ $(function() {
 });
 
 function formFileGroup() { "use strict";
-  $('.form-file-input').click();
+  $('.form-file-group-input').click();
 
-  $('.form-file-input').change(function(){
-    $('.form-file-text').val($('.form-file-input').val());
+  $('.form-file-group-input').change(function(){
+    $('.form-file-group-text').val($('.form-file-group-input').val());
   });
 };

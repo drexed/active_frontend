@@ -114,7 +114,7 @@
   position: absolute;
 }
 .slider-track,
-.slider.slider-disabled .slider-track { background: $color-light-haze; }
+.slider.slider-disabled .slider-track { background: $color-haze; }
 .slider-selection,
 .slider-selection.tick-slider-selection,
 .slider.slider-disabled .slider-handle { background: $color-dark-haze; }
@@ -134,7 +134,7 @@
   width: 16px;
 }
 .slider-handle { background: $color-primary; }
-.slider-tick { background: $color-light-haze; }
+.slider-tick { background: $color-haze; }
 .slider-tick.in-selection { background: $color-dark-haze; }
 .slider-handle.round,
 .slider-tick.round { border-radius: 500px; }

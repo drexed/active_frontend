@@ -6,7 +6,11 @@
 
 /* # Carousel
 ================================================== */
-.carousel { position: relative; }
+.carousel {
+  border-color: $color-white;
+  color: $color-white;
+  position: relative;
+}
 .carousel-inner {
   overflow: hidden;
   position: relative;
@@ -42,7 +46,6 @@
 .carousel-inner > .active.right { left: 100%; }
 .carousel-control {
   bottom: 0;
-  color: $color-white;
   filter: alpha(opacity=50);
   left: 0;
   opacity: 0.5;
@@ -58,11 +61,9 @@
 .carousel-control:hover,
 .carousel-control:active,
 .carousel-control:focus {
-  color: $color-white;
   filter: alpha(opacity=90);
   opacity: 0.9;
   outline: none;
-  text-decoration: none;
 }
 .carousel-control > .icon-prev,
 .carousel-control > .icon-next,
@@ -92,6 +93,7 @@
 .carousel-control > .icon-prev:before { content: '\2039'; }
 .carousel-control > .icon-next:before { content: '\203a'; }
 .carousel-indicators {
+  border-color: inherit !important;
   bottom: 10px;
   left: 50%;
   list-style: none;
@@ -103,9 +105,9 @@
   z-index: 15;
 }
 .carousel-indicators > li {
-  background: $color-white;
   border-radius: 10px;
-  border: 1px solid $color-white;
+  border: 1px solid;
+  border-color: inherit;
   cursor: pointer;
   display: inline-block;
   height: 4px;
@@ -114,14 +116,12 @@
   width: 4px;
 }
 .carousel-indicators > .active {
-  background: $color-transparent;
   height: 8px;
   margin: 0 4px;
   width: 8px;
 }
 .carousel-caption {
   bottom: 20px;
-  color: $color-white;
   left: 15%;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -130,24 +130,17 @@
   text-align: center;
   z-index: 10;
 }
-.carousel-caption > h1,
-.carousel-caption > h2,
-.carousel-caption > h3,
-.carousel-caption > h4,
-.carousel-caption > h5,
-.carousel-caption > h6 { color: $color-white; }
 
 /* # Colors
 ================================================== */
-.carousel-dark .carousel-indicators > li,
-.carousel-primary .carousel-indicators > li {
-  background: $color-light-black;
+.carousel-dark {
   border-color: $color-light-black;
+  color: $color-light-black;
 }
-.carousel-dark .carousel-indicators > .active,
-.carousel-primary .carousel-indicators > .active { background: $color-transparent; }
-.carousel-dark .carousel-indicators > .active { border-color: $color-primary; }
-.carousel-primary .carousel-indicators > .active { border-color: $color-primary; }
+.carousel-light {
+  border-color: $color-light-haze;
+  color: $color-light-haze;
+}
 
 /* # Media Queries
 ================================================== */

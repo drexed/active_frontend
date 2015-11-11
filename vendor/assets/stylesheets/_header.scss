@@ -12,16 +12,10 @@
   background: $color-white;
   border-bottom: 1px solid $color-haze;
   box-sizing: border-box;
+  color: $color-black;
   height: 60px;
   padding-top: 15px;
   width: 100%;
-}
-.header-fixed {
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1030;
 }
 .header-brand {
   float: left;
@@ -40,33 +34,33 @@
   margin: -7px 0 0 20px;
   width: 280px;
 }
-.header-search > input { margin: 0; }
+.header-search button,
+.header-search input,
+.header-search select { margin: 0; }
 .header-nav,
 .header-nav-alt,
 .header-toolchain {
-  list-style-type: none;
+  float: right;
+  list-style: none;
+  margin: 9px 0 0 0;
   padding: 0;
 }
 .header-nav { float: left; }
-.header-nav-alt,
-.header-toolchain { float: right; }
-.header-nav,
-.header-nav-alt { margin: 9px 0 0 0; }
 .header-toolchain { margin: 1px 25px 0 0; }
 .header-nav > li,
 .header-nav-alt > li,
 .header-toolchain > li {
   float: left;
-  color: $color-black;
+  line-height: 1;
 }
 .header-nav > li,
 .header-nav-alt > li {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
-  line-height: 1;
   text-transform: uppercase;
 }
+.header-toolchain > li { font-size: 26px; }
 .header-nav > li,
 .header-nav > li.btn-group,
 .header-nav > li.btn-group + li.btn-group,
@@ -78,9 +72,6 @@
 .header-toolchain > li.btn-group + li.btn-group { margin-left: 15px; }
 .header-nav-alt > li:first-child,
 .header-toolchain > li:first-child { margin-left: 0; }
-.header-nav > li > a,
-.header-nav-alt > li > a,
-.header-toolchain > li > a { color: $color-black; }
 .header-nav > li.lined > a {
   border-radius: 0 !important;
   border-bottom: 3px solid $color-transparent;
@@ -92,10 +83,6 @@
 .header-nav > li.lined > a:focus,
 .header-nav > li.lined.active > a { border-color: $color-primary; }
 .header-nav-alt > li > a { padding: 10px 0; }
-.header-toolchain > li > a {
-  font-size: 26px;
-  line-height: 1;
-}
 .header-nav > li > a:hover,
 .header-nav > li > a.active,
 .header-nav > li > a:active,
@@ -125,8 +112,8 @@
 .header-nav-alt > li.inverse > a.active,
 .header-nav-alt > li.inverse > a:active,
 .header-nav-alt > li.inverse > a:focus {
-  background: darken($color-primary, 5%);
-  border-color: darken($color-primary, 5%);
+  background: darken($color-primary, 2%);
+  border-color: darken($color-primary, 2%);
   color: $color-white;
 }
 .header-user {
@@ -134,7 +121,6 @@
   font-size: 13px;
   margin: -3px 0 0 20px;
 }
-.header-user > a { color: $color-black; }
 .header-user > a:hover,
 .header-user > a.active,
 .header-user > a:active,
@@ -168,65 +154,46 @@
 /* # Styles
 ================================================== */
 .header-borderless { border-bottom-color: $color-transparent; }
+.header-fixed {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1030;
+}
 
 /* # Colors
 ================================================== */
 .header-dark {
   background: $color-black;
   border-color: $color-dark-black;
+  color: $color-white;
 }
 .header-invisible {
   background: $color-transparent;
   border-color: $color-transparent;
+  color: $color-white;
 }
 .header-light {
   background: $color-light-haze;
   border-color: $color-dark-haze;
 }
-.header-dark .header-nav > li,
-.header-dark .header-nav-alt > li,
-.header-dark .header-toolchain > li,
-.header-dark .header-nav > li > a,
-.header-dark .header-nav-alt > li > a,
-.header-dark .header-toolchain > li > a,
-.header-dark .header-user > a,
-.header-invisible .header-brand > a,
-.header-invisible .header-nav > li,
-.header-invisible .header-nav-alt > li,
-.header-invisible .header-toolchain > li,
-.header-invisible .header-nav > li > a,
-.header-invisible .header-nav-alt > li > a,
-.header-invisible .header-toolchain > li > a,
-.header-invisible .header-user > a { color: $color-white; }
-.header-dark .header-nav > li > a:hover,
-.header-dark .header-nav > li > a.active,
-.header-dark .header-nav > li > a:active,
-.header-dark .header-nav > li > a:focus,
-.header-dark .header-nav-alt > li > a:hover,
-.header-dark .header-nav-alt > li > a.active,
-.header-dark .header-nav-alt > li > a:active,
-.header-dark .header-nav-alt > li > a:focus,
-.header-dark .header-toolchain > li > a:hover,
-.header-dark .header-toolchain > li > a.active,
-.header-dark .header-toolchain > li > a:active,
-.header-dark .header-toolchain > li > a:focus,
-.header-dark .header-user > a:hover,
-.header-dark .header-user > a.active,
-.header-dark .header-user > a:active,
-.header-dark .header-user > a:focus { color: $color-primary; }
-.header-dark .header-nav-alt > li.inverse > a { color: $color-white; }
+.header-invisible .header-brand > a { color: $color-white; }
 .header-invisible .header-nav-alt > li.inverse > a {
   background: $color-white;
   border-color: $color-white;
+  color: $color-black;
+}
+.header-invisible .header-nav-alt > li.inverse.outline > a {
+  background: $color-transparent;
   color: $color-white;
 }
-.header-invisible .header-nav-alt > li.inverse.outline > a { background: $color-transparent; }
 .header-invisible .header-nav-alt > li.inverse > a:hover,
 .header-invisible .header-nav-alt > li.inverse > a.active,
 .header-invisible .header-nav-alt > li.inverse > a:active,
 .header-invisible .header-nav-alt > li.inverse > a:focus {
-  background: darken($color-white, 5%);
-  border-color: darken($color-white, 5%);
+  background: darken($color-white, 2%);
+  border-color: darken($color-white, 2%);
 }
 
 /* # Stripes

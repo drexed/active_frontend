@@ -5,6 +5,7 @@
 /* # Link
 ================================================== */
 a {
+  color: inherit;
   text-decoration: none;
   touch-action: manipulation;
   @include transition(all 0.3s ease-in-out);

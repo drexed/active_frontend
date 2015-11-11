@@ -35,11 +35,11 @@ $colors: (
 ================================================== */
 @-webkit-keyframes progress-bar-stripes {
   from { background-position: 40px 0; }
-  to   { background-position: 0 0; }
+  to { background-position: 0 0; }
 }
 @keyframes progress-bar-stripes {
   from { background-position: 40px 0; }
-  to   { background-position: 0 0; }
+  to { background-position: 0 0; }
 }
 
 /* # Progress
@@ -68,8 +68,7 @@ $colors: (
 @each $name, $color in $colors {
   .progress > .bar-#{$name} { background: $color; }
 }
-
-.progress-dark { background: $color-black; }
+.progress-dark { background: $color-light-black; }
 .progress-light { background: $color-light-haze; }
 
 /* # Animations

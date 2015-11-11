@@ -1,7 +1,9 @@
 /* Table of Contents
 ==================================================
 # Variables
-# Label and badge */
+# Label and badge
+# Styles
+# Colors */
 
 /* # Variables
 ================================================== */
@@ -55,6 +57,9 @@ $onwhite-colors: (
 .badge { border-radius: 500px; }
 .badge:empty,
 .label:empty { display: none; }
+
+/* # Styles
+================================================== */
 .badge-block,
 .label-block {
   display: block;

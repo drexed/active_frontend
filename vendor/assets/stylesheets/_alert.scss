@@ -2,6 +2,7 @@
 ==================================================
 # Variables
 # Alert
+# Styles
 # Colors */
 
 /* # Variables
@@ -35,13 +36,6 @@ $onwhite-colors: (
 
 /* # Alert
 ================================================== */
-.alert-fixed {
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1040;
-}
 .alert {
   background: $color-gray;
   border-bottom: 1px solid darken($color-gray, 5%);
@@ -59,13 +53,22 @@ $onwhite-colors: (
   color: $color-white;
   font-style: italic;
 }
-.alert-bordered { border: 1px solid darken($color-gray, 5%); }
 .alert > .alert-close {
   border: 0;
-  color: $color-white;
   float: right;
   font-size: 18px;
   line-height: 23px;
+}
+
+/* # Styles
+================================================== */
+.alert-bordered { border: 1px solid darken($color-gray, 5%); }
+.alert-fixed {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1040;
 }
 
 /* # Colors

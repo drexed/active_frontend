@@ -246,6 +246,11 @@ select[disabled] {
   color: $color-gray;
   padding: 0 13px;
 }
+.form-input-group-addon > i {
+  display: block;
+  font-size: 19px;
+  margin-top: 2px;
+}
 .form-file-group-button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -417,6 +422,35 @@ select[disabled] {
 ================================================== */
 .form-edge,
 .form-inline { clear: both; }
+.form-inline button,
+.form-inline input,
+.form-inline select,
+.form-inline textarea,
+.form-inline .form-select,
+.form-inline .form-input-group,
+.form-inline .form-file-group { margin: 0 0 5px 0; }
+.form-edge button,
+.form-edge input,
+.form-edge select,
+.form-edge textarea,
+.form-edge .form-select,
+.form-edge .form-input-group,
+.form-edge .form-file-group {
+  float: left;
+  margin: 0 5px 0 0;
+  width: 150px;
+}
+.form-edge button:last-child,
+.form-edge input:last-child,
+.form-edge select:last-child,
+.form-edge textarea:last-child,
+.form-edge .form-select:last-child,
+.form-edge .form-input-group:last-child,
+.form-edge .form-file-group:last-child { margin-right: 0; }
+.form-edge .form-select select {
+  float: none;
+  margin: 0;
+}
 .form-edge button,
 .form-edge input[type="submit"],
 .form-edge input[type="reset"],
@@ -428,24 +462,6 @@ select[disabled] {
   padding-bottom: 14px;
   padding-top: 14px;
   width: initial;
-}
-.form-inline button,
-.form-inline input,
-.form-inline select,
-.form-inline textarea,
-.form-inline .form-select { margin: 0 0 5px 0; }
-.form-edge button,
-.form-edge input,
-.form-edge select,
-.form-edge textarea,
-.form-edge .form-select {
-  float: left;
-  margin: 0 5px 0 0;
-  width: 150px;
-}
-.form-edge .form-select select {
-  float: none;
-  margin: 0;
 }
 .form-edge-link,
 .form-edge-icon {
@@ -466,6 +482,14 @@ select[disabled] {
 .form-edge-condensed :-moz-placeholder { line-height: 13px; }
 .form-edge-condensed ::-moz-placeholder { line-height: 13px; }
 .form-edge-condensed :-ms-input-placeholder { line-height: 13px; }
+.form-edge-condensed .form-input-group-addon,
+.form-edge-condensed .form-file-group-addon {
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.form-edge-condensed .form-input-group-addon i,
+.form-edge-condensed .form-file-group-addon i { font-size: 14px; }
 .form-edge-condensed input,
 .form-edge-condensed textarea,
 .form-edge-condensed select {

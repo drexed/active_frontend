@@ -194,6 +194,7 @@
 .header-invisible .header-nav-alt > li.inverse > a:focus {
   background: darken($color-white, 2%);
   border-color: darken($color-white, 2%);
+  color: $color-black;
 }
 
 /* # Stripes

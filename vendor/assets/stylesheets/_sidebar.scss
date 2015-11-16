@@ -12,9 +12,10 @@
   border-color: $color-haze;
   box-sizing: border-box;
   color: $color-black;
+  display: block;
+  max-height: 100%;
   height: 100%;
-  min-width: 280px;
-  position: fixed;
+  max-width: 280px;
   width: 280px;
 }
 .sidebar-alt {

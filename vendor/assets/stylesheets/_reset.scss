@@ -93,6 +93,7 @@ body {
   @include tap-highlight-color($color-transparent);
   text-rendering: optimizeLegibility;
   @include text-size-adjust(100%);
+  width: 100%;
 }
 ::-moz-selection {
   background: $color-primary;

@@ -2,6 +2,7 @@
 ==================================================
 # Header
 # Styles
+# Sizes
 # Colors
 # Stripes
 # Media Queries */
@@ -15,6 +16,7 @@
   color: $color-black;
   height: 60px;
   padding-top: 15px;
+  min-width: 100%;
   width: 100%;
 }
 .header-brand {
@@ -31,7 +33,7 @@
 }
 .header-search {
   float: left;
-  margin: -7px 0 0 20px;
+  margin: -6px 0 0 20px;
   width: 280px;
 }
 .header-search button,
@@ -151,14 +153,22 @@
   margin-top: 3px;
 }
 
+/* # Sizes
+================================================== */
+.header-condensed {
+  height: 50px;
+  padding-top: 10px;
+}
+.header-condensed .header-nav > li.lined > a { padding-bottom: 16px; }
+
 /* # Styles
 ================================================== */
 .header-borderless { border-bottom-color: $color-transparent; }
 .header-fixed {
-  left: 0;
   position: fixed;
-  right: 0;
   top: 0;
+  min-width: inherit;
+  width: inherit;
   z-index: 1030;
 }
 
@@ -178,23 +188,96 @@
   background: $color-light-haze;
   border-color: $color-dark-haze;
 }
-.header-invisible .header-brand > a { color: $color-white; }
-.header-invisible .header-nav-alt > li.inverse > a {
+.header-primary {
+  background: $color-primary;
+  border-color: darken($color-primary, 5%);
+  color: $color-white;
+}
+.header-white-on-black,
+.header-white-on-black .header-brand > a,
+.header-white-on-black .header-toggle > a { color: $color-white; }
+.header-white-on-black .header-search,
+.header-white-on-black .header-nav > li > a:hover,
+.header-white-on-black .header-nav > li > a.active,
+.header-white-on-black .header-nav > li > a:active,
+.header-white-on-black .header-nav > li > a:focus,
+.header-white-on-black .header-nav > li.lined.active > a,
+.header-white-on-black .header-nav-alt > li > a:hover,
+.header-white-on-black .header-nav-alt > li > a.active,
+.header-white-on-black .header-nav-alt > li > a:active,
+.header-white-on-black .header-nav-alt > li > a:focus,
+.header-white-on-black .header-toolchain > li > a:hover,
+.header-white-on-black .header-toolchain > li > a.active,
+.header-white-on-black .header-toolchain > li > a:active,
+.header-white-on-black .header-toolchain > li > a:focus,
+.header-white-on-black .header-user > a:hover,
+.header-white-on-black .header-user > a.active,
+.header-white-on-black .header-user > a:active,
+.header-white-on-black .header-user > a:focus { color: $color-black; }
+.header-white-on-black .header-nav > li.lined > a:hover,
+.header-white-on-black .header-nav > li.lined > a.active,
+.header-white-on-black .header-nav > li.lined > a:active,
+.header-white-on-black .header-nav > li.lined > a:focus,
+.header-white-on-black .header-nav > li.lined.active > a { border-color: $color-black; }
+.header-white-on-black .header-nav-alt > li.inverse > a {
   background: $color-white;
   border-color: $color-white;
   color: $color-black;
 }
-.header-invisible .header-nav-alt > li.inverse.outline > a {
+.header-white-on-black .header-nav-alt > li.inverse.outline > a {
   background: $color-transparent;
   color: $color-white;
 }
-.header-invisible .header-nav-alt > li.inverse > a:hover,
-.header-invisible .header-nav-alt > li.inverse > a.active,
-.header-invisible .header-nav-alt > li.inverse > a:active,
-.header-invisible .header-nav-alt > li.inverse > a:focus {
+.header-white-on-black .header-nav-alt > li.inverse > a:hover,
+.header-white-on-black .header-nav-alt > li.inverse > a.active,
+.header-white-on-black .header-nav-alt > li.inverse > a:active,
+.header-white-on-black .header-nav-alt > li.inverse > a:focus {
   background: darken($color-white, 2%);
   border-color: darken($color-white, 2%);
   color: $color-black;
+}
+.header-black-on-white,
+.header-black-on-white .header-brand > a,
+.header-black-on-white .header-toggle > a,
+.header-black-on-white .header-search { color: $color-black; }
+.header-black-on-white .header-nav > li > a:hover,
+.header-black-on-white .header-nav > li > a.active,
+.header-black-on-white .header-nav > li > a:active,
+.header-black-on-white .header-nav > li > a:focus,
+.header-black-on-white .header-nav > li.lined.active > a,
+.header-black-on-white .header-nav-alt > li > a:hover,
+.header-black-on-white .header-nav-alt > li > a.active,
+.header-black-on-white .header-nav-alt > li > a:active,
+.header-black-on-white .header-nav-alt > li > a:focus,
+.header-black-on-white .header-toolchain > li > a:hover,
+.header-black-on-white .header-toolchain > li > a.active,
+.header-black-on-white .header-toolchain > li > a:active,
+.header-black-on-white .header-toolchain > li > a:focus,
+.header-black-on-white .header-user > a:hover,
+.header-black-on-white .header-user > a.active,
+.header-black-on-white .header-user > a:active,
+.header-black-on-white .header-user > a:focus { color: $color-white; }
+.header-black-on-white .header-nav > li.lined > a:hover,
+.header-black-on-white .header-nav > li.lined > a.active,
+.header-black-on-white .header-nav > li.lined > a:active,
+.header-black-on-white .header-nav > li.lined > a:focus,
+.header-black-on-white .header-nav > li.lined.active > a { border-color: $color-white; }
+.header-black-on-white .header-nav-alt > li.inverse > a {
+  background: $color-black;
+  border-color: $color-black;
+  color: $color-white;
+}
+.header-black-on-white .header-nav-alt > li.inverse.outline > a {
+  background: $color-transparent;
+  color: $color-black;
+}
+.header-black-on-white .header-nav-alt > li.inverse > a:hover,
+.header-black-on-white .header-nav-alt > li.inverse > a.active,
+.header-black-on-white .header-nav-alt > li.inverse > a:active,
+.header-black-on-white .header-nav-alt > li.inverse > a:focus {
+  background: darken($color-black, 2%);
+  border-color: darken($color-black, 2%);
+  color: $color-white;
 }
 
 /* # Stripes
@@ -202,19 +285,33 @@
 .header-stripe {
   background: $color-primary;
   height: 2px;
-  left: 0;
   position: fixed;
-  right: 0;
   top: 0;
-  width: 100%;
+  min-width: inherit;
+  width: inherit;
   z-index: 1050;
 }
-.header-stripe-two {
+.header-stripe-secondary { background: $color-secondary; }
+.header-stripe-tertiary { background: $color-tertiary; }
+.header-stripe-dark { background: $color-black; }
+.header-stripe-light { background: $color-light-haze; }
+.header-stripe-white { background: $color-white; }
+.header-stripe-primary-and-secondary {
   background: -webkit-linear-gradient(45deg, $color-primary 0%, $color-secondary 100%);
   background:     -ms-linear-gradient(45deg, $color-primary 0%, $color-secondary 100%);
   background:         linear-gradient(45deg, $color-primary 0%, $color-secondary 100%);
 }
-.header-stripe-three {
+.header-stripe-primary-and-tertiary {
+  background: -webkit-linear-gradient(45deg, $color-primary 0%, $color-tertiary 100%);
+  background:     -ms-linear-gradient(45deg, $color-primary 0%, $color-tertiary 100%);
+  background:         linear-gradient(45deg, $color-primary 0%, $color-tertiary 100%);
+}
+.header-stripe-secondary-and-tertiary {
+  background: -webkit-linear-gradient(45deg, $color-secondary 0%, $color-tertiary 100%);
+  background:     -ms-linear-gradient(45deg, $color-secondary 0%, $color-tertiary 100%);
+  background:         linear-gradient(45deg, $color-secondary 0%, $color-tertiary 100%);
+}
+.header-stripe-primary-secondary-and-tertiary {
   background: -webkit-linear-gradient(45deg, $color-tertiary 0%, $color-primary 50%, $color-secondary 100%);
   background:     -ms-linear-gradient(45deg, $color-tertiary 0%, $color-primary 50%, $color-secondary 100%);
   background:         linear-gradient(45deg, $color-tertiary 0%, $color-primary 50%, $color-secondary 100%);

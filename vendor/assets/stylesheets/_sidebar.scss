@@ -65,6 +65,7 @@
   height: auto;
   max-height: calc(50% - 50px);
   @include overflow-scrolling(touch);
+  overflow-x: hidden;
   overflow-y: auto;
 }
 

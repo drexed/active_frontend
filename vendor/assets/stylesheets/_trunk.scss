@@ -11,10 +11,10 @@
   border-bottom: 1px solid;
   border-color: $color-haze;
   color: $color-gray;
-  left: 0;
   position: fixed;
-  right: 0;
   top: 50px;
+  min-width: inherit;
+  width: inherit;
   z-index: 1040;
 }
 .trunk-buffer {

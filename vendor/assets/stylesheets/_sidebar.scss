@@ -28,11 +28,7 @@
   border-color: inherit;
   font-size: 12px;
   line-height: 1;
-  padding: 10px 20px 8px 10px;
-}
-.sidebar-alt > .sidebar-header {
-  padding-left: 20px;
-  padding-right: 10px;
+  padding: 10px;
 }
 .sidebar-header > h1,
 .sidebar-header > h2,
@@ -53,11 +49,7 @@
   @include overflow-scrolling(touch);
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 10px 20px 10px 10px;
-}
-.sidebar-alt > .sidebar-content {
-  padding-right: 10px;
-  padding-left: 20px;
+  padding: 10px;
 }
 .sidebar-scrollable {
   border-bottom: 1px solid;

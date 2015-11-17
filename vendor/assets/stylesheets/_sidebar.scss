@@ -9,7 +9,7 @@
 .sidebar {
   background: $color-white;
   border-left: 1px solid;
-  border-color: $color-haze;
+  border-color: $color-haze !important;
   box-sizing: border-box;
   color: $color-black;
   display: block;
@@ -72,12 +72,12 @@
 ================================================== */
 .sidebar-dark {
   background: $color-black;
-  border-color: $color-dark-black;
+  border-color: $color-dark-black !important;
   color: $color-white;
 }
 .sidebar-light {
   background: $color-light-haze;
-  border-color: $color-dark-haze;
+  border-color: $color-dark-haze !important;
 }
 
 /* # Media Queries

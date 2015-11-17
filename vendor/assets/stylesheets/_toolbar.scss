@@ -9,8 +9,9 @@
 .toolbar {
   background: $color-white;
   border-right: 1px solid;
-  border-color: $color-haze;
+  border-color: $color-haze !important;
   box-sizing: border-box;
+  color: $color-black;
   display: block;
   max-height: 100%;
   height: 100%;
@@ -60,12 +61,12 @@
 ================================================== */
 .toolbar-dark {
   background: $color-black;
-  border-color: $color-dark-black;
+  border-color: $color-dark-black !important;
   color: $color-white;
 }
 .toolbar-light {
   background: $color-light-haze;
-  border-color: $color-dark-haze;
+  border-color: $color-dark-haze !important;
 }
 
 /* # Media Queries

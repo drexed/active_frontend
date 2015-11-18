@@ -257,6 +257,8 @@
 .header-primary .header-user > a.active,
 .header-primary .header-user > a:active,
 .header-primary .header-user > a:focus { color: $color-black; }
+.header-primary .header-btn-group > li > a.active,
+.header-primary .header-btn-group > li > a:active,
 .header-primary .header-nav > li.lined > a:hover,
 .header-primary .header-nav > li.lined > a.active,
 .header-primary .header-nav > li.lined > a:active,
@@ -336,5 +338,6 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .header { border-width: 0.5px; }
   .header-nav > li,
-  .header-nav-alt > li { letter-spacing: 0.5px; }
+  .header-nav-alt > li,
+  .header-btn-group > li { letter-spacing: 0.5px; }
 }

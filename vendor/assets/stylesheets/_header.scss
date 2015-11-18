@@ -2,7 +2,6 @@
 ==================================================
 # Header
 # Styles
-# Sizes
 # Colors
 # Stripes
 # Media Queries */
@@ -153,14 +152,6 @@
   margin-top: 3px;
 }
 
-/* # Sizes
-================================================== */
-.header-condensed {
-  height: 50px;
-  padding-top: 10px;
-}
-.header-condensed .header-nav > li.lined > a { padding-bottom: 16px; }
-
 /* # Styles
 ================================================== */
 .header-borderless { border-bottom-color: $color-transparent; }
@@ -193,91 +184,47 @@
   border-color: darken($color-primary, 5%);
   color: $color-white;
 }
-.header-white-on-black,
-.header-white-on-black .header-brand > a,
-.header-white-on-black .header-toggle > a { color: $color-white; }
-.header-white-on-black .header-search,
-.header-white-on-black .header-nav > li > a:hover,
-.header-white-on-black .header-nav > li > a.active,
-.header-white-on-black .header-nav > li > a:active,
-.header-white-on-black .header-nav > li > a:focus,
-.header-white-on-black .header-nav > li.lined.active > a,
-.header-white-on-black .header-nav-alt > li > a:hover,
-.header-white-on-black .header-nav-alt > li > a.active,
-.header-white-on-black .header-nav-alt > li > a:active,
-.header-white-on-black .header-nav-alt > li > a:focus,
-.header-white-on-black .header-toolchain > li > a:hover,
-.header-white-on-black .header-toolchain > li > a.active,
-.header-white-on-black .header-toolchain > li > a:active,
-.header-white-on-black .header-toolchain > li > a:focus,
-.header-white-on-black .header-user > a:hover,
-.header-white-on-black .header-user > a.active,
-.header-white-on-black .header-user > a:active,
-.header-white-on-black .header-user > a:focus { color: $color-black; }
-.header-white-on-black .header-nav > li.lined > a:hover,
-.header-white-on-black .header-nav > li.lined > a.active,
-.header-white-on-black .header-nav > li.lined > a:active,
-.header-white-on-black .header-nav > li.lined > a:focus,
-.header-white-on-black .header-nav > li.lined.active > a { border-color: $color-black; }
-.header-white-on-black .header-nav-alt > li.inverse > a {
+.header-primary .header-brand > a,
+.header-primary .header-toggle > a { color: $color-white; }
+.header-primary .header-search,
+.header-primary .header-nav > li > a:hover,
+.header-primary .header-nav > li > a.active,
+.header-primary .header-nav > li > a:active,
+.header-primary .header-nav > li > a:focus,
+.header-primary .header-nav > li.lined.active > a,
+.header-primary .header-nav-alt > li > a:hover,
+.header-primary .header-nav-alt > li > a.active,
+.header-primary .header-nav-alt > li > a:active,
+.header-primary .header-nav-alt > li > a:focus,
+.header-primary .header-toolchain > li > a:hover,
+.header-primary .header-toolchain > li > a.active,
+.header-primary .header-toolchain > li > a:active,
+.header-primary .header-toolchain > li > a:focus,
+.header-primary .header-user > a:hover,
+.header-primary .header-user > a.active,
+.header-primary .header-user > a:active,
+.header-primary .header-user > a:focus { color: $color-black; }
+.header-primary .header-nav > li.lined > a:hover,
+.header-primary .header-nav > li.lined > a.active,
+.header-primary .header-nav > li.lined > a:active,
+.header-primary .header-nav > li.lined > a:focus,
+.header-primary .header-nav > li.lined.active > a { border-color: $color-black; }
+.header-primary .header-nav-alt > li.inverse > a {
   background: $color-white;
   border-color: $color-white;
   color: $color-black;
 }
-.header-white-on-black .header-nav-alt > li.inverse.outline > a {
+.header-primary .header-nav-alt > li.inverse.outline > a {
   background: $color-transparent;
   color: $color-white;
 }
-.header-white-on-black .header-nav-alt > li.inverse > a:hover,
-.header-white-on-black .header-nav-alt > li.inverse > a.active,
-.header-white-on-black .header-nav-alt > li.inverse > a:active,
-.header-white-on-black .header-nav-alt > li.inverse > a:focus {
+.header-primary .header-nav-alt > li.inverse > a:hover,
+.header-primary .header-nav-alt > li.inverse > a.active,
+.header-primary .header-nav-alt > li.inverse > a:active,
+.header-primary .header-nav-alt > li.inverse > a:focus {
   background: darken($color-white, 2%);
   border-color: darken($color-white, 2%);
   color: $color-black;
-}
-.header-black-on-white,
-.header-black-on-white .header-brand > a,
-.header-black-on-white .header-toggle > a,
-.header-black-on-white .header-search { color: $color-black; }
-.header-black-on-white .header-nav > li > a:hover,
-.header-black-on-white .header-nav > li > a.active,
-.header-black-on-white .header-nav > li > a:active,
-.header-black-on-white .header-nav > li > a:focus,
-.header-black-on-white .header-nav > li.lined.active > a,
-.header-black-on-white .header-nav-alt > li > a:hover,
-.header-black-on-white .header-nav-alt > li > a.active,
-.header-black-on-white .header-nav-alt > li > a:active,
-.header-black-on-white .header-nav-alt > li > a:focus,
-.header-black-on-white .header-toolchain > li > a:hover,
-.header-black-on-white .header-toolchain > li > a.active,
-.header-black-on-white .header-toolchain > li > a:active,
-.header-black-on-white .header-toolchain > li > a:focus,
-.header-black-on-white .header-user > a:hover,
-.header-black-on-white .header-user > a.active,
-.header-black-on-white .header-user > a:active,
-.header-black-on-white .header-user > a:focus { color: $color-white; }
-.header-black-on-white .header-nav > li.lined > a:hover,
-.header-black-on-white .header-nav > li.lined > a.active,
-.header-black-on-white .header-nav > li.lined > a:active,
-.header-black-on-white .header-nav > li.lined > a:focus,
-.header-black-on-white .header-nav > li.lined.active > a { border-color: $color-white; }
-.header-black-on-white .header-nav-alt > li.inverse > a {
-  background: $color-black;
-  border-color: $color-black;
-  color: $color-white;
-}
-.header-black-on-white .header-nav-alt > li.inverse.outline > a {
-  background: $color-transparent;
-  color: $color-black;
-}
-.header-black-on-white .header-nav-alt > li.inverse > a:hover,
-.header-black-on-white .header-nav-alt > li.inverse > a.active,
-.header-black-on-white .header-nav-alt > li.inverse > a:active,
-.header-black-on-white .header-nav-alt > li.inverse > a:focus {
-  background: darken($color-black, 2%);
-  border-color: darken($color-black, 2%);
-  color: $color-white;
 }
 
 /* # Stripes

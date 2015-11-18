@@ -46,8 +46,8 @@
 .toolbar > a.active,
 .toolbar > a:active
 .toolbar > a:focus {
-  background: $color-primary;
-  color: $color-white;
+  background: $color-light-haze;
+  color: $color-primary;
 }
 .toolbar > a[disabled] {
   background: $color-transparent;
@@ -67,10 +67,18 @@
   border-color: $color-dark-black !important;
   color: $color-white;
 }
+.toolbar-dark > a:hover,
+.toolbar-dark > a.active,
+.toolbar-dark > a:active
+.toolbar-dark > a:focus { background: $color-light-black; }
 .toolbar-light {
   background: $color-light-haze;
   border-color: $color-dark-haze !important;
 }
+.toolbar-light > a:hover,
+.toolbar-light > a.active,
+.toolbar-light > a:active
+.toolbar-light > a:focus { background: $color-haze; }
 
 /* # Media Queries
 ================================================== */

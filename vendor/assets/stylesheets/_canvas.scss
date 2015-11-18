@@ -53,23 +53,13 @@
 }
 .canvas-section-with-header,
 .canvas-section-with-header-and-footer { margin-top: 60px; }
-.canvas-section-with-header-condensed,
-.canvas-section-with-header-condensed-and-footer { margin-top: 50px; }
 .canvas-section-with-header {
   max-height: calc(100% - 60px);
   height: calc(100% - 60px);
 }
-.canvas-section-with-header-condensed {
-  max-height: calc(100% - 50px);
-  height: calc(100% - 50px);
-}
 .canvas-section-with-header-and-footer {
   max-height: calc(100% - 90px);
   height: calc(100% - 90px);
-}
-.canvas-section-with-header-condensed-and-footer {
-  max-height: calc(100% - 80px);
-  height: calc(100% - 80px);
 }
 .canvas-section-with-footer {
   max-height: calc(100% - 30px);
@@ -128,12 +118,8 @@
   }
   .canvas-section-with-header,
   .canvas-section-with-header-and-footer,
-  .canvas-section-with-header-and-navbar,
-  .canvas-section-with-header-condensed,
-  .canvas-section-with-header-condensed-and-footer,
-  .canvas-section-with-header-condensed-and-navbar { margin-top: 50px; }
-  .canvas-section-with-header-and-navbar,
-  .canvas-section-with-header-condensed-and-navbar {
+  .canvas-section-with-header-and-navbar { margin-top: 50px; }
+  .canvas-section-with-header-and-navbar {
     max-height: calc(100% - 100px);
     height: calc(100% - 100px);
   }

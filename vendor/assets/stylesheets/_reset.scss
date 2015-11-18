@@ -78,13 +78,10 @@ select {
   *font-size: 100%;
   font-weight: inherit;
 }
-html {
-  background: $color-white;
-  color: $color-black;
-}
+html { background: $color-white; }
 html,
 body {
-  color: inherit;
+  color: $color-black;
   font-family: $typography-sans-serif;
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
@@ -109,10 +106,9 @@ body {
 
 /* # Color
 ================================================== */
-.html-dark {
-  background: $color-black;
-  color: $color-white;
-}
+.html-dark { background: $color-black; }
+.html-dark,
+.html-dark body { color: $color-white; }
 .html-light { background: $color-light-haze; }
 
 /* # Style

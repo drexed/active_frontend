@@ -98,16 +98,16 @@ textarea:focus:valid,
 select:focus:valid,
 input:focus:valid:focus,
 textarea:focus:valid:focus,
-select:focus:valid:focus { border-color: $color-green; }
+select:focus:valid:focus { border-color: $color-green !important; }
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
-  border-color: $color-red;
-  color: $color-red;
+  border-color: $color-red !important;
+  color: $color-red !important;
 }
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
-select:focus:invalid:focus { border-color: $color-red; }
+select:focus:invalid:focus { border-color: $color-red !important; }
 input[disabled],
 textarea[disabled],
 select[disabled] {

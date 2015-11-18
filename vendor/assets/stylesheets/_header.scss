@@ -38,6 +38,7 @@
 .header-search button,
 .header-search input,
 .header-search select { margin: 0; }
+.header-btn-group,
 .header-nav,
 .header-nav-alt,
 .header-toolchain {
@@ -46,20 +47,65 @@
   margin: 9px 0 0 0;
   padding: 0;
 }
+.header-btn-group,
 .header-nav { float: left; }
+.header-btn-group {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: -15px 0 0 0;
+}
 .header-toolchain { margin: 1px 25px 0 0; }
+.header-btn-group > li,
 .header-nav > li,
 .header-nav-alt > li,
 .header-toolchain > li {
   float: left;
   line-height: 1;
 }
+.header-btn-group > li,
 .header-nav > li,
 .header-nav-alt > li {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.header-btn-group > li {
+  box-sizing: border-box;
+  float: left;
+  margin-left: 20px;
+}
+.header-btn-group > li > a {
+  border-bottom: 3px solid $color-transparent;
+  box-sizing: border-box;
+  display: block;
+  padding: 19px 0 15px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+.header-btn-group > li > a:hover,
+.header-btn-group > li > a.active,
+.header-btn-group > li > a:active,
+.header-btn-group > li > a:focus { color: $color-primary; }
+.header-btn-group > li > a.active,
+.header-btn-group > li > a:active { border-color: $color-primary; }
+.header-btn-group > li > a > i {
+  display: inline-block;
+  font-size: 22px;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+.header-btn-group-label {
+  background: $color-primary;
+  border-radius: 2px;
+  color: $color-white;
+  display: inline-block;
+  font-size: 9px;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1;
+  padding: 4px 5px 3px 5px;
+  text-align: center;
 }
 .header-toolchain > li { font-size: 26px; }
 .header-nav > li,
@@ -185,8 +231,15 @@
   color: $color-white;
 }
 .header-primary .header-brand > a,
+.header-primary .header-btn-group > li,
+.header-primary .header-btn-group > li > a,
 .header-primary .header-toggle > a { color: $color-white; }
+.header-primary .header-btn-group-label { background: $color-black; }
 .header-primary .header-search,
+.header-primary .header-btn-group > li > a:hover,
+.header-primary .header-btn-group > li > a.active,
+.header-primary .header-btn-group > li > a:active,
+.header-primary .header-btn-group > li > a:focus,
 .header-primary .header-nav > li > a:hover,
 .header-primary .header-nav > li > a.active,
 .header-primary .header-nav > li > a:active,

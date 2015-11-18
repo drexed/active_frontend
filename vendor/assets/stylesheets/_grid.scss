@@ -77,26 +77,18 @@ $sizes: (
 }
 .hidden { display: none !important; }
 .hidden-desktop { display: none !important; }
-.hidden-laptop { display: inherit !important; }
-.hidden-tablet { display: inherit !important; }
-.hidden-phone { display: inherit !important; }
 .visible { display: inherit !important; }
-.visible-laptop { display: inherit !important; }
-.visible-laptop { display: none !important; }
-.visible-tablet { display: none !important; }
 .visible-phone { display: none !important; }
+.visible-tablet { display: none !important; }
+.visible-laptop { display: none !important; }
 
 /* # Laptop
 ================================================== */
 @media only screen and (min-width: 960px) and (max-width: 1365px) {
   .hidden-desktop { display: inherit !important; }
   .hidden-laptop { display: none !important; }
-  .hidden-tablet { display: inherit !important; }
-  .hidden-phone { display: inherit !important; }
   .visible-desktop { display: none !important ; }
   .visible-laptop { display: inherit !important; }
-  .visible-tablet { display: none !important; }
-  .visible-phone { display: none !important ; }
 }
 
 /* # Tablet
@@ -105,11 +97,9 @@ $sizes: (
   .hidden-desktop { display: inherit !important; }
   .hidden-laptop { display: inherit !important; }
   .hidden-tablet { display: none !important; }
-  .hidden-phone { display: inherit !important; }
   .visible-desktop { display: none !important ; }
   .visible-laptop { display: none !important ; }
   .visible-tablet { display: inherit !important; }
-  .visible-phone { display: none !important ; }
 }
 
 /* # Mobile
@@ -131,11 +121,9 @@ $sizes: (
   }
   .hidden-desktop { display: inherit !important; }
   .hidden-laptop { display: inherit !important; }
-  .hidden-tablet { display: inherit !important; }
   .hidden-phone { display: none !important; }
   .visible-desktop { display: none !important; }
   .visible-laptop { display: none !important; }
-  .visible-tablet { display: none !important; }
   .visible-phone { display: inherit !important; }
 }
 
@@ -158,6 +146,12 @@ $sizes: (
 .row-small { margin-bottom: 10px; }
 .row-medium { margin-bottom: 40px; }
 .row-large { margin-bottom: 60px; }
+@media only screen and (max-width: 767px) {
+  .row-responsive { margin-bottom: 20px; }
+  .row-responsive-small { margin-bottom: 10px; }
+  .row-responsive-medium { margin-bottom: 40px; }
+  .row-responsive-large { margin-bottom: 60px; }
+}
 
 /* # Clearing
 ================================================== */

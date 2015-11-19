@@ -23,6 +23,28 @@
   border-color: inherit;
   border-left: 0;
 }
+.sidebar-title {
+  border-bottom: 1px solid;
+  border-color: inherit;
+  box-sizing: border-box;
+  font-family: $typography-heading;
+  font-size: 18px;
+  font-weight: 500;
+  height: 60px;
+  letter-spacing: 5px;
+  line-height: 1;
+  padding: 13px 0;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.sidebar-title i {
+  color: $color-primary;
+  font-size: 32px;
+  letter-spacing: 0;
+  margin: 0 10px 0 5px;
+  vertical-align: middle;
+}
 .sidebar-header {
   border-bottom: 1px solid;
   border-color: inherit;
@@ -51,6 +73,7 @@
   overflow-y: auto;
   padding: 10px;
 }
+.sidebar-content-with-title { height: calc(100% - 111px); }
 .sidebar-scrollable {
   border-bottom: 1px solid;
   border-color: inherit;
@@ -59,6 +82,7 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+.sidebar-scrollable-with-title { height: calc(50% - 111px); }
 
 /* # Colors
 ================================================== */

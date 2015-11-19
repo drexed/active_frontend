@@ -6,7 +6,7 @@
 /* # Tooltip
 ================================================== */
 .tooltip {
-  border-color: $color-black;
+  border-color: $color-dark-black;
   color: $color-white;
   display: block;
   float: none;
@@ -45,7 +45,7 @@
   padding: 0 5px;
 }
 .tooltip-inner {
-  background: $color-black;
+  background: $color-dark-black;
   border-radius: 3px;
   letter-spacing: 0;
   max-width: 200px;

@@ -35,6 +35,7 @@
   line-height: 1;
   padding: 13px 0;
   text-align: center;
+  text-indent: -5px;
   text-transform: uppercase;
   vertical-align: middle;
 }
@@ -43,28 +44,111 @@
   font-size: 32px;
   letter-spacing: 0;
   margin: 0 10px 0 5px;
+  text-indent: 0;
   vertical-align: middle;
 }
 .sidebar-header {
   border-bottom: 1px solid;
   border-color: inherit;
+  box-sizing: border-box;
+  display: table;
   font-size: 12px;
   line-height: 1;
-  padding: 10px;
+  table-layout: fixed;
+  vertical-align: middle;
+  max-width: 100%;
+  width: 100%;
 }
-.sidebar-header > h1,
-.sidebar-header > h2,
-.sidebar-header > h3,
-.sidebar-header > h4,
-.sidebar-header > h5,
-.sidebar-header > h6 {
+.sidebar-header h1,
+.sidebar-header h2,
+.sidebar-header h3,
+.sidebar-header h4,
+.sidebar-header h5,
+.sidebar-header h6,
+.sidebar-header-btn {
+  box-sizing: border-box;
+  display: table-cell;
+  line-height: 1;
+  vertical-align: middle;
+}
+.sidebar-header h1,
+.sidebar-header h2,
+.sidebar-header h3,
+.sidebar-header h4,
+.sidebar-header h5,
+.sidebar-header h6 {
   font-size: 11px;
   font-weight: normal;
   letter-spacing: 1px;
-  line-height: 1;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   text-transform: uppercase;
+}
+.sidebar-header-btn {
+  border-left: 1px solid;
+  border-color: inherit;
+  color: $color-primary;
+  font-size: 18px;
+  padding-top: 2px;
+  text-align: center;
+  width: 33px;
+}
+.sidebar-header-btn:hover,
+.sidebar-header-btn.active,
+.sidebar-header-btn:active,
+.sidebar-header-btn:focus { background: $color-light-haze; }
+.sidebar-navbar {
+  border-collapse: separate;
+  border-bottom: 1px solid;
+  border-color: inherit;
+  box-sizing: border-box;
+  display: table;
+  height: 40px;
+  table-layout: fixed;
+  width: 100%;
+}
+.sidebar-navbar > a {
+  background: $color-light-black;
+  border-right: 1px solid;
+  border-color: inherit;
+  display: table-cell;
+  float: none;
+  font-size: 18px;
+  padding-top: 10px;
+  text-align: center;
+  width: 1%;
+}
+.sidebar-navbar > a:last-child { border: 0; }
+.sidebar-navbar > a:hover,
+.sidebar-navbar > a.active,
+.sidebar-navbar > a:active,
+.sidebar-navbar > a:focus {
+  background: $color-transparent;
+  color: $color-primary;
+}
+.sidebar-form {
+  border-bottom: 1px solid;
+  border-color: inherit;
+  padding: 10px;
+}
+.sidebar-form button,
+.sidebar-form input,
+.sidebar-form select,
+.sidebar-form textarea,
+.sidebar-form .form-select,
+.sidebar-form .form-input-group,
+.sidebar-form .form-file-group {
+  float: none;
+  margin: 0 !important;
+}
+.sidebar-form-mesh input,
+.sidebar-form-mesh select,
+.sidebar-form-mesh textarea, {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0;
+  margin: 0;
 }
 .sidebar-content {
   border-color: inherit;
@@ -91,10 +175,18 @@
   border-color: $color-dark-black !important;
   color: $color-white;
 }
+.sidebar-dark .sidebar-header-btn:hover,
+.sidebar-dark .sidebar-header-btn.active,
+.sidebar-dark .sidebar-header-btn:active,
+.sidebar-dark .sidebar-header-btn:focus { background: $color-light-black; }
 .sidebar-light {
   background: $color-light-haze;
   border-color: $color-dark-haze !important;
 }
+.sidebar-light .sidebar-header-btn:hover,
+.sidebar-light .sidebar-header-btn.active,
+.sidebar-light .sidebar-header-btn:active,
+.sidebar-light .sidebar-header-btn:focus { background: $color-haze; }
 
 /* # Media Queries
 ================================================== */
@@ -121,12 +213,20 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .sidebar,
+  .sidebar-title,
   .sidebar-header,
+  .sidebar-header-btn,
+  .sidebar-navbar,
+  .sidebar-navbar > a,
+  .sidebar-form,
+  .sidebar-form-mesh input,
+  .sidebar-form-mesh select,
+  .sidebar-form-mesh textarea,
   .sidebar-scrollable { border-width: 0.5px; }
-  .sidebar-header > h1,
-  .sidebar-header > h2,
-  .sidebar-header > h3,
-  .sidebar-header > h4,
-  .sidebar-header > h5,
-  .sidebar-header > h6 { letter-spacing: 0.5px; }
+  .sidebar-header h1,
+  .sidebar-header h2,
+  .sidebar-header h3,
+  .sidebar-header h4,
+  .sidebar-header h5,
+  .sidebar-header h6 { letter-spacing: 0.5px; }
 }

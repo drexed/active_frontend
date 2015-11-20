@@ -79,7 +79,8 @@
   border-bottom: 3px solid $color-transparent;
   box-sizing: border-box;
   display: block;
-  padding: 19px 0 15px 0;
+  height: 60px;
+  padding-top: 24px;
   text-align: center;
   vertical-align: middle;
 }
@@ -93,7 +94,8 @@
   display: inline-block;
   font-size: 22px;
   letter-spacing: 0;
-  vertical-align: middle;
+  margin-top: -5px;
+  vertical-align: top;
 }
 .header-btn-group-label {
   background: $color-primary;
@@ -227,7 +229,7 @@
 }
 .header-primary {
   background: $color-primary;
-  border-color: darken($color-primary, 5%);
+  border-color: darken($color-primary, 10%);
   color: $color-white;
 }
 .header-primary .header-brand > a,

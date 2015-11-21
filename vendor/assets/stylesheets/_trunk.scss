@@ -13,8 +13,8 @@
   color: $color-gray;
   position: fixed;
   top: 50px;
-  min-width: inherit;
-  width: inherit;
+  min-width: 100%;
+  width: 100%;
   z-index: 1040;
 }
 .trunk-buffer {
@@ -59,6 +59,7 @@
 .trunk-nav > li.title {
   border-bottom: 1px solid;
   border-color: inherit;
+  color: $color-primary;
   font-size: 12px;
   letter-spacing: 1px;
   padding: 8px 10px;

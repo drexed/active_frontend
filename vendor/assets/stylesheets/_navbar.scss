@@ -1,6 +1,7 @@
 /* Table of Contents
 ==================================================
 # Navbar
+# Styles
 # Colors
 # Media Queries */
 
@@ -11,25 +12,18 @@
   border-collapse: separate;
   border-top: 1px solid $color-haze;
   color: $color-black;
-  box-sizing: border-box;
   display: table;
   height: 50px;
+  line-height: 1;
   table-layout: fixed;
   width: 100%;
-}
-.navbar-fixed {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: 1030;
 }
 .navbar > a {
   display: table-cell;
   float: none;
   font-size: 27px;
-  padding-top: 10px;
   text-align: center;
+  vertical-align: middle;
   width: 1%;
 }
 .navbar > a:hover,
@@ -44,6 +38,16 @@
 .navbar > a.filled.active,
 .navbar > a.filled:active,
 .navbar > a.filled:focus { background: darken($color-primary, 5%); }
+
+/* # Styles
+================================================== */
+.navbar-fixed {
+  bottom: 0;
+  position: fixed;
+  min-width: inherit;
+  width: inherit;
+  z-index: 1030;
+}
 
 /* # Colors
 ================================================== */

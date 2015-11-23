@@ -28,7 +28,8 @@
 }
 .header-brand > a > img {
   border-radius: 0;
-  height: 36px;
+  padding-top: 7px;
+  height: 22px;
 }
 .header-search {
   float: left;
@@ -272,7 +273,9 @@
     height: 50px;
     padding: 0;
   }
-  .header-brand { margin-top: 5px; }
+  .header-brand { margin-top: 8px; }
+  .header-brand > a { font-size: 30px; }
+  .header-brand > a > img { padding-top: 8px; }
   .header-toggle { display: block; }
 }
 @media

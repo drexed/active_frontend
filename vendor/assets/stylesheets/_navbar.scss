@@ -13,7 +13,7 @@
   border-top: 1px solid $color-haze;
   color: $color-black;
   display: table;
-  height: 50px;
+  height: 49px;
   line-height: 1;
   table-layout: fixed;
   width: 100%;
@@ -38,6 +38,10 @@
 .navbar > a.filled.active,
 .navbar > a.filled:active,
 .navbar > a.filled:focus { background: darken($color-primary, 5%); }
+.navbar > a > i {
+  display: inline-block;
+  margin-top: 2px;
+}
 
 /* # Styles
 ================================================== */

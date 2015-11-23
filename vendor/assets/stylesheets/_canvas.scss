@@ -97,14 +97,17 @@
   }
 }
 @media only screen and (max-width: 959px) {
-  .canvas-sidebar { display: none; }
+  .canvas-sidebar {
+    max-width: 200px;
+    width: 200px;
+  }
   .canvas-content-with-sidebar {
-    max-width: 100%;
-    width: 100%;
+    max-width: calc(100% - 200px);
+    width: calc(100% - 200px);
   }
   .canvas-content-with-sidebar-and-toolbar {
-    max-width: calc(100% - 55px);
-    width: calc(100% - 55px);
+    max-width: calc(100% - 255px);
+    width: calc(100% - 255px);
   }
 }
 @media only screen and (max-width: 767px) {

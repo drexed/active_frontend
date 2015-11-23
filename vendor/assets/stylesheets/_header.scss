@@ -227,62 +227,6 @@
   background: $color-light-haze;
   border-color: $color-dark-haze;
 }
-.header-primary {
-  background: $color-primary;
-  border-color: darken($color-primary, 10%);
-  color: $color-white;
-}
-.header-primary .header-brand > a,
-.header-primary .header-btn-group > li,
-.header-primary .header-btn-group > li > a,
-.header-primary .header-toggle > a { color: $color-white; }
-.header-primary .header-btn-group-label { background: $color-black; }
-.header-primary .header-search,
-.header-primary .header-btn-group > li > a:hover,
-.header-primary .header-btn-group > li > a.active,
-.header-primary .header-btn-group > li > a:active,
-.header-primary .header-btn-group > li > a:focus,
-.header-primary .header-nav > li > a:hover,
-.header-primary .header-nav > li > a.active,
-.header-primary .header-nav > li > a:active,
-.header-primary .header-nav > li > a:focus,
-.header-primary .header-nav > li.lined.active > a,
-.header-primary .header-nav-alt > li > a:hover,
-.header-primary .header-nav-alt > li > a.active,
-.header-primary .header-nav-alt > li > a:active,
-.header-primary .header-nav-alt > li > a:focus,
-.header-primary .header-toolchain > li > a:hover,
-.header-primary .header-toolchain > li > a.active,
-.header-primary .header-toolchain > li > a:active,
-.header-primary .header-toolchain > li > a:focus,
-.header-primary .header-user > a:hover,
-.header-primary .header-user > a.active,
-.header-primary .header-user > a:active,
-.header-primary .header-user > a:focus { color: $color-black; }
-.header-primary .header-btn-group > li > a.active,
-.header-primary .header-btn-group > li > a:active,
-.header-primary .header-nav > li.lined > a:hover,
-.header-primary .header-nav > li.lined > a.active,
-.header-primary .header-nav > li.lined > a:active,
-.header-primary .header-nav > li.lined > a:focus,
-.header-primary .header-nav > li.lined.active > a { border-color: $color-black; }
-.header-primary .header-nav-alt > li.inverse > a {
-  background: $color-white;
-  border-color: $color-white;
-  color: $color-black;
-}
-.header-primary .header-nav-alt > li.inverse.outline > a {
-  background: $color-transparent;
-  color: $color-white;
-}
-.header-primary .header-nav-alt > li.inverse > a:hover,
-.header-primary .header-nav-alt > li.inverse > a.active,
-.header-primary .header-nav-alt > li.inverse > a:active,
-.header-primary .header-nav-alt > li.inverse > a:focus {
-  background: darken($color-white, 2%);
-  border-color: darken($color-white, 2%);
-  color: $color-black;
-}
 
 /* # Stripes
 ================================================== */

@@ -30,7 +30,7 @@
 }
 .loader-backdrop {
   height: 2px;
-  background: $color-light-haze;
+  background: $color-transparent;
 }
 .loader-bar { background: $color-primary; }
 .loader-peg {
@@ -68,3 +68,4 @@
 ================================================== */
 .loader-dark { background: $color-black; }
 .loader-light { background: $color-haze; }
+.loader-white { background: $color-white; }

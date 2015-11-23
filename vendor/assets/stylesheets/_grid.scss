@@ -156,16 +156,26 @@ $sizes: (
 /* # Clearing
 ================================================== */
 .clear,
+.clear:before,
+.clear:after,
 .clearfix:before,
-.clearfix:after,
 .row:before,
 .row-small:before,
 .row-medium:before,
 .row-large:before,
+.row-responsive:before,
+.row-responsive-small:before,
+.row-responsive-medium:before,
+.row-responsive-large:before,
 .row:after,
 .row-small:after,
 .row-medium:after,
-.row-large:after {
+.row-large:after,
+.row-responsive:after,
+.row-responsive-small:after,
+.row-responsive-medium:after,
+.row-responsive-large:after,
+.clearfix:after, {
   clear: both;
   content: '\0020';
   display: block;
@@ -174,15 +184,13 @@ $sizes: (
   visibility: hidden;
   width: 0;
 }
-.clear:after,
-.clearfix:after,
-.row:after,
-.row-small:after,
-.row-medium:after,
-.row-large:after { clear: both; }
 .clear,
 .clearfix,
 .row,
 .row-small,
 .row-medium,
-.row-large { zoom: 1; }
+.row-large,
+.row-responsive,
+.row-responsive-small,
+.row-responsive-medium,
+.row-responsive-large { zoom: 1; }

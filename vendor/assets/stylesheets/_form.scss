@@ -524,6 +524,11 @@ select[disabled] {
   right: 12px;
 }
 .form-edge-condensed .form-select::before { width: 31px; }
+.form-edge-condensed .btn-icon {
+  font-size: 14px !important;
+  padding: 7px 8px 5px 8px !important;
+  min-width: 30px !important;
+}
 
 /* # Colors
 ================================================== */

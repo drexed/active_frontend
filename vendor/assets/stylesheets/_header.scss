@@ -74,7 +74,6 @@
 .header-btn-group > li {
   box-sizing: border-box;
   float: left;
-  margin-left: 20px;
 }
 .header-btn-group > li > a {
   border-bottom: 3px solid $color-transparent;
@@ -91,13 +90,6 @@
 .header-btn-group > li > a:focus { color: $color-primary; }
 .header-btn-group > li > a.active,
 .header-btn-group > li > a:active { border-color: $color-primary; }
-.header-btn-group > li > a > i {
-  display: inline-block;
-  font-size: 22px;
-  letter-spacing: 0;
-  margin-top: -5px;
-  vertical-align: top;
-}
 .header-btn-group-label {
   background: $color-primary;
   border-radius: 2px;
@@ -111,6 +103,9 @@
   text-align: center;
 }
 .header-toolchain > li { font-size: 26px; }
+.header-btn-group > li,
+.header-btn-group > li.btn-group,
+.header-btn-group > li.btn-group + li.btn-group,
 .header-nav > li,
 .header-nav > li.btn-group,
 .header-nav > li.btn-group + li.btn-group,

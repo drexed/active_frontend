@@ -215,14 +215,20 @@
 ================================================== */
 @media only screen and (max-width: 1365px) {
   .sidebar {
-    min-width: 250px;
+    max-width: 250px;
     width: 250px;
   }
 }
 @media only screen and (max-width: 1199px) {
   .sidebar {
-    min-width: 220px;
+    max-width: 220px;
     width: 220px;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .sidebar {
+    max-width: 200px;
+    width: 200px;
   }
 }
 @media only screen and (max-width: 767px) {

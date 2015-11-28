@@ -85,7 +85,7 @@
 .sidebar-header h5,
 .sidebar-header h6 {
   font-size: 11px;
-  font-weight: normal;
+  font-weight: 500;
   letter-spacing: 1px;
   margin: 0;
   padding: 10px;
@@ -135,7 +135,7 @@
   font-size: 18px;
   padding-top: 10px;
   text-align: center;
-  width: 1%;
+  width: auto;
 }
 .sidebar-navbar > a:last-child { border: 0; }
 .sidebar-navbar > a:hover,
@@ -162,7 +162,7 @@
 }
 .sidebar-form-mesh input,
 .sidebar-form-mesh select,
-.sidebar-form-mesh textarea, {
+.sidebar-form-mesh textarea {
   border-left: 0;
   border-right: 0;
   border-top: 0;
@@ -209,7 +209,7 @@
 .sidebar-light .sidebar-header-btn.active,
 .sidebar-light .sidebar-header-btn:active,
 .sidebar-light .sidebar-header-btn:focus,
-.sidebar-light .sidebar-navbar > a { background: $color-haze; }
+.sidebar-light .sidebar-navbar > a { background: $color-white; }
 
 /* # Media Queries
 ================================================== */
@@ -249,6 +249,13 @@ only screen and (                min-resolution: 2dppx) {
   .sidebar-navbar,
   .sidebar-navbar > a,
   .sidebar-form,
+  .sidebar-form button,
+  .sidebar-form input,
+  .sidebar-form select,
+  .sidebar-form textarea,
+  .sidebar-form .form-select,
+  .sidebar-form .form-input-group,
+  .sidebar-form .form-file-group,
   .sidebar-form-mesh input,
   .sidebar-form-mesh select,
   .sidebar-form-mesh textarea,

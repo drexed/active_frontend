@@ -122,6 +122,14 @@
   .canvas-section-with-header,
   .canvas-section-with-header-and-footer,
   .canvas-section-with-header-and-navbar { margin-top: 50px; }
+  .canvas-section-with-header {
+    max-height: calc(100% - 50px);
+    height: calc(100% - 50px);
+  }
+  .canvas-section-with-header-and-footer {
+    max-height: calc(100% - 80px);
+    height: calc(100% - 80px);
+  }
   .canvas-section-with-header-and-navbar {
     max-height: calc(100% - 99px);
     height: calc(100% - 99px);

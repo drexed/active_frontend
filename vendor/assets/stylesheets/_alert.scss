@@ -32,7 +32,11 @@ $onwhite-colors: (
   pink: $color-pink,
   red: $color-red,
   orange: $color-orange,
-  yellow: $color-yellow
+  yellow: $color-yellow,
+  alert: $color-red,
+  error: $color-red,
+  warning: $color-yellow,
+  success: $color-green
 );
 
 /* # Alert
@@ -46,7 +50,7 @@ $onwhite-colors: (
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-  padding: 10px 20px;
+  padding: 12px 20px 9px 20px;
   width: 100%;
 }
 .alert > a {
@@ -63,7 +67,11 @@ $onwhite-colors: (
 
 /* # Styles
 ================================================== */
-.alert-bordered { border: 1px solid darken($color-gray, 5%); }
+.alert-bordered {
+  border: 1px solid darken($color-gray, 5%);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
 .alert-fixed {
   left: 0;
   position: fixed;

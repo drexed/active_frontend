@@ -2,6 +2,7 @@
 ==================================================
 # Toolbar
 # Colors
+# Styles
 # Media Queries */
 
 /* # Toolbar
@@ -42,7 +43,7 @@
 .toolbar > a.btn { line-height: 55px; }
 .toolbar > a:hover,
 .toolbar > a.active,
-.toolbar > a:active
+.toolbar > a:active,
 .toolbar > a:focus {
   background: $color-light-haze;
   color: $color-primary;
@@ -67,7 +68,7 @@
 }
 .toolbar-dark > a:hover,
 .toolbar-dark > a.active,
-.toolbar-dark > a:active
+.toolbar-dark > a:active,
 .toolbar-dark > a:focus { background: $color-light-black; }
 .toolbar-light {
   background: $color-light-haze;
@@ -75,8 +76,33 @@
 }
 .toolbar-light > a:hover,
 .toolbar-light > a.active,
-.toolbar-light > a:active
+.toolbar-light > a:active,
 .toolbar-light > a:focus { background: $color-haze; }
+
+/* # Styles
+================================================== */
+.toolbar-bordered > a {
+  border-right-width: 3px !important;
+  border-right-style: solid;
+  border-right-color: $color-transparent;
+}
+.toolbar-bordered > a:hover,
+.toolbar-bordered > a.active,
+.toolbar-bordered > a:active,
+.toolbar-bordered > a:focus {
+  background: $color-transparent;
+  border-right-color: $color-primary;
+}
+.toolbar-bordered.toolbar-alt > a {
+  border-left-width: 3px !important;
+  border-left-style: solid;
+  border-left-color: $color-transparent;
+  border-right: 0 !important;
+}
+.toolbar-bordered.toolbar-alt > a:hover,
+.toolbar-bordered.toolbar-alt > a.active,
+.toolbar-bordered.toolbar-alt > a:active,
+.toolbar-bordered.toolbar-alt > a:focus { border-left-color: $color-primary; }
 
 /* # Media Queries
 ================================================== */

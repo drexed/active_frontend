@@ -87,9 +87,10 @@
 .header-btn-group > li > a:hover,
 .header-btn-group > li > a.active,
 .header-btn-group > li > a:active,
-.header-btn-group > li > a:focus { color: $color-primary; }
-.header-btn-group > li > a.active,
-.header-btn-group > li > a:active { border-color: $color-primary; }
+.header-btn-group > li > a:focus {
+  border-color: $color-primary;
+  color: $color-primary;
+}
 .header-btn-group-label {
   background: $color-primary;
   border-radius: 2px;

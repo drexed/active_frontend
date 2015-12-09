@@ -89,10 +89,7 @@
 .toolbar-bordered > a:hover,
 .toolbar-bordered > a.active,
 .toolbar-bordered > a:active,
-.toolbar-bordered > a:focus {
-  background: $color-transparent;
-  border-right-color: $color-primary;
-}
+.toolbar-bordered > a:focus { border-right-color: $color-primary; }
 .toolbar-bordered.toolbar-alt > a {
   border-left-width: 3px !important;
   border-left-style: solid;

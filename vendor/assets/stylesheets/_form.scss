@@ -335,6 +335,11 @@ select[disabled] {
   width: 41px;
 }
 .form-select > select { text-overflow: ""; }
+.form-btn-inline {
+  margin: 2px 0 5px 0;
+  padding-bottom: 14px;
+  padding-top: 14px;
+}
 .form-checkbox-inline,
 .form-option-inline,
 .form-radio-inline { margin-top: 17px; }

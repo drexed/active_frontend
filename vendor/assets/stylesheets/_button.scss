@@ -51,7 +51,7 @@ $onwhite-colors: (
   border: 1px solid $color-light-haze;
   border-radius: 2px;
   box-sizing: border-box;
-  color: $color-black;
+  color: $color-dark-black;
   cursor: pointer;
   display: inline-block;
   -webkit-font-smoothing: antialiased;
@@ -188,7 +188,7 @@ $onwhite-colors: (
 .btn-outline:focus,
 .open > .dropdown-toggle.btn.btn-outline {
   background: darken($color-light-haze, 2%);
-  color: $color-black;
+  color: $color-dark-black;
 }
 @each $name, $color in $onblack-colors {
   .btn-outline.btn-#{$name},
@@ -199,7 +199,7 @@ $onwhite-colors: (
   .btn-outline.btn-#{$name}:focus,
   .open > .dropdown-toggle.btn.btn-outline.btn-#{$name} {
     background: darken($color, 2%);
-    color: $color-black;
+    color: $color-dark-black;
   }
 }
 @each $name, $color in $onwhite-colors {
@@ -231,7 +231,7 @@ $onwhite-colors: (
 .btn-link[disabled] {
   background: $color-transparent;
   border-color: $color-transparent;
-  color: $color-black;
+  color: $color-dark-black;
 }
 
 /* # Styles

@@ -94,12 +94,12 @@ ol { padding-left: 23px; }
 .list-light {
   background: $color-light-haze;
   border-color: $color-dark-haze !important;
-  color: $color-black;
+  color: $color-dark-black;
 }
 .list-white {
   background: $color-white;
   border-color: $color-haze !important;
-  color: $color-black;
+  color: $color-dark-black;
 }
 .list-dark.list-striped > li:nth-child(odd) { background: $color-light-black; }
 .list-dark.list-hover > li:hover { background: darken($color-black, 2%); }

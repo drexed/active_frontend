@@ -12,7 +12,7 @@ pre {
   background: $color-white;
   border: 1px solid $color-haze;
   border-radius: 2px;
-  color: $color-black;
+  color: $color-dark-black;
   font-family: $typography-monospace;
   font-size: 12px;
   font-weight: normal;
@@ -81,10 +81,10 @@ pre {
 } /* Generic.Heading */
 .gi { color: $color-green; } /* Generic.Inserted */
 .go { color: $color-gray; } /* Generic.Output */
-.gp { color: $color-black; } /* Generic.Prompt */
+.gp { color: $color-dark-black; } /* Generic.Prompt */
 .gs { font-weight: bold; } /* Generic.Strong */
 .gu {
-  color: $color-black;
+  color: $color-dark-black;
   font-weight: bold;
 } /* Generic.Subheading */
 .gt { color: $color-red; } /* Generic.Traceback */

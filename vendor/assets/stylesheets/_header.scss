@@ -12,7 +12,7 @@
   background: $color-white;
   border-bottom: 1px solid $color-haze;
   box-sizing: border-box;
-  color: $color-black;
+  color: inherit;
   height: 60px;
   padding-top: 15px;
   min-width: 100%;
@@ -67,7 +67,7 @@
 .header-nav > li,
 .header-nav-alt > li {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -282,7 +282,10 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .header { border-width: 0.5px; }
+  .header-btn-group > li,
   .header-nav > li,
-  .header-nav-alt > li,
-  .header-btn-group > li { letter-spacing: 0.5px; }
+  .header-nav-alt > li {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
 }

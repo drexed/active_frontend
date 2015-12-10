@@ -155,13 +155,13 @@ table {
 .table-light caption {
   background: $color-light-haze;
   border-color: $color-dark-haze !important;
-  color: $color-black;
+  color: $color-dark-black;
 }
 .table-white,
 .table-white caption {
   background: $color-white;
   border-color: $color-haze !important;
-  color: $color-black;
+  color: $color-dark-black;
 }
 .table-dark.table-striped tbody tr:nth-child(odd) td { background: $color-light-black; }
 .table-dark.table-hover tbody tr:hover td { background: darken($color-black, 2%); }

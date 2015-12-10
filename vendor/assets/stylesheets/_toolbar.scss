@@ -19,6 +19,7 @@
   @include overflow-scrolling(touch);
   max-width: 55px;
   width: 55px;
+  z-index: 1030;
 }
 .toolbar-alt {
   border-left: 1px solid;

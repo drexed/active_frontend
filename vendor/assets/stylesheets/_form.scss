@@ -3,6 +3,7 @@
 # Form
 # Components
 # Styles
+# Sizes
 # Colors
 # Media Queries */
 
@@ -457,6 +458,10 @@ select[disabled] {
   float: none;
   margin: 0;
 }
+.form-inline input[type="checkbox"],
+.form-inline input[type="radio"] { margin: 5px 0 0; }
+.form-inline .form-input-group-addon > input[type="checkbox"],
+.form-inline .form-input-group-addon > input[type="radio"] { margin: 0; }
 .form-edge button,
 .form-edge input[type="submit"],
 .form-edge input[type="reset"],
@@ -484,53 +489,56 @@ select[disabled] {
 .form-edge-input-medium { width: 125px !important; }
 .form-edge-input-small { width: 100px !important; }
 .form-edge-input-mini { width: 75px !important; }
-.form-edge-condensed ::-webkit-input-placeholder { line-height: 13px; }
-.form-edge-condensed :-moz-placeholder { line-height: 13px; }
-.form-edge-condensed ::-moz-placeholder { line-height: 13px; }
-.form-edge-condensed :-ms-input-placeholder { line-height: 13px; }
-.form-edge-condensed .form-input-group-addon,
-.form-edge-condensed .form-file-group-addon {
+
+/* # Sizes
+================================================== */
+.form-condensed ::-webkit-input-placeholder { line-height: 13px; }
+.form-condensed :-moz-placeholder { line-height: 13px; }
+.form-condensed ::-moz-placeholder { line-height: 13px; }
+.form-condensed :-ms-input-placeholder { line-height: 13px; }
+.form-condensed .form-input-group-addon,
+.form-condensed .form-file-group-addon {
   font-size: 12px;
   padding-left: 10px;
   padding-right: 10px;
 }
-.form-edge-condensed .form-input-group-addon i,
-.form-edge-condensed .form-file-group-addon i { font-size: 14px; }
-.form-edge-condensed input,
-.form-edge-condensed textarea,
-.form-edge-condensed select {
+.form-condensed .form-input-group-addon i,
+.form-condensed .form-file-group-addon i { font-size: 14px; }
+.form-condensed input,
+.form-condensed textarea,
+.form-condensed select {
   font-size: 12px;
   padding-bottom: 6px;
   padding-top: 7px;
 }
-.form-edge-condensed select {
+.form-condensed select {
   padding-bottom: 7px;
   padding-top: 8px;
 }
-.form-edge-condensed button,
-.form-edge-condensed input[type="submit"],
-.form-edge-condensed input[type="reset"],
-.form-edge-condensed input[type="button"] {
+.form-condensed button,
+.form-condensed input[type="submit"],
+.form-condensed input[type="reset"],
+.form-condensed input[type="button"] {
   font-size: 11px;
   line-height: 1;
   padding: 8px 15px;
 }
-.form-edge-condensed > .form-edge-link {
+.form-condensed > .form-edge-link {
   font-size: 12px;
   margin-top: 10px;
 }
-.form-edge-condensed > .form-edge-icon {
+.form-condensed > .form-edge-icon {
   font-size: 16px;
   margin-top: 7px;
 }
-.form-edge-condensed .form-select::after {
+.form-condensed .form-select::after {
   font-size: 14px;
   height: 14px;
   margin-top: -7px;
   right: 12px;
 }
-.form-edge-condensed .form-select::before { width: 31px; }
-.form-edge-condensed .btn-icon {
+.form-condensed .form-select::before { width: 31px; }
+.form-condensed .btn-icon {
   font-size: 14px !important;
   padding: 7px 8px 5px 8px !important;
   min-width: 30px !important;

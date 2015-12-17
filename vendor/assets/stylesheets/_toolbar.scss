@@ -83,6 +83,7 @@
 /* # Styles
 ================================================== */
 .toolbar-bordered > a {
+  background: $color-transparent;
   border-right-width: 3px !important;
   border-right-style: solid;
   border-right-color: $color-transparent;

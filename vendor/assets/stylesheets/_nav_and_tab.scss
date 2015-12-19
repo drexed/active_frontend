@@ -80,10 +80,7 @@
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:active,
-.nav-tabs > .active > a:focus {
-  border-color: $color-primary;
-  color: $color-primary;
-}
+.nav-tabs > .active > a:focus { border-color: $color-primary; }
 .nav-tabs .open a.dropdown-toggle { background: $color-transparent; }
 .nav-pills > li > a {
   background: $color-light-haze;

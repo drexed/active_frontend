@@ -76,7 +76,8 @@
   float: left;
 }
 .header-btn-group > li > a {
-  border-bottom: 3px solid $color-transparent;
+  border-bottom: 4px solid $color-transparent;
+  border-radius: 0 !important;
   box-sizing: border-box;
   display: block;
   height: 60px;

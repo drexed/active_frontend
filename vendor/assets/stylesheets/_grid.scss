@@ -75,30 +75,40 @@ $sizes: (
   .#{$name}.columns.alpha.omega { width: $size; }
   .offset-by-#{$name} { padding-left: $size; }
 }
-.hidden { display: none !important; }
-.hidden-desktop { display: none !important; }
-.visible { display: inherit !important; }
+.hidden,
+.hidden-desktop,
+.visible-laptop,
+.visible-tablet,
 .visible-phone { display: none !important; }
-.visible-tablet { display: none !important; }
-.visible-laptop { display: none !important; }
+.hidden-laptop,
+.hidden-tablet,
+.hidden-phone,
+.visible,
+.visible-desktop { display: inherit !important; }
 
 /* # Laptop
 ================================================== */
 @media only screen and (min-width: 960px) and (max-width: 1365px) {
-  .hidden-desktop { display: inherit !important; }
-  .hidden-laptop { display: none !important; }
-  .visible-desktop { display: none !important ; }
+  .hidden-laptop,
+  .visible-desktop,
+  .visible-tablet,
+  .visible-phone { display: none !important; }
+  .hidden-desktop,
+  .hidden-tablet,
+  .hidden-phone,
   .visible-laptop { display: inherit !important; }
 }
 
 /* # Tablet
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .hidden-desktop { display: inherit !important; }
-  .hidden-laptop { display: inherit !important; }
-  .hidden-tablet { display: none !important; }
-  .visible-desktop { display: none !important ; }
-  .visible-laptop { display: none !important ; }
+  .hidden-tablet,
+  .visible-desktop,
+  .visible-laptop,
+  .visible-phone { display: none !important; }
+  .hidden-desktop,
+  .hidden-laptop,
+  .hidden-phone,
   .visible-tablet { display: inherit !important; }
 }
 
@@ -119,11 +129,13 @@ $sizes: (
     }
     .offset-by-#{$name} { padding-left: 0; }
   }
-  .hidden-desktop { display: inherit !important; }
-  .hidden-laptop { display: inherit !important; }
-  .hidden-phone { display: none !important; }
-  .visible-desktop { display: none !important; }
-  .visible-laptop { display: none !important; }
+  .hidden-phone,
+  .visible-desktop,
+  .visible-laptop,
+  .visible-tablet { display: none !important; }
+  .hidden-desktop,
+  .hidden-laptop,
+  .hidden-tablet,
   .visible-phone { display: inherit !important; }
 }
 

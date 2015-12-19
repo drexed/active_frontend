@@ -10,7 +10,8 @@
 ================================================== */
 .header {
   background: $color-white;
-  border-bottom: 1px solid $color-haze;
+  border-bottom: 1px solid;
+  border-color: $color-haze;
   box-sizing: border-box;
   color: inherit;
   height: 60px;
@@ -53,13 +54,14 @@
 .header-btn-group {
   box-sizing: border-box;
   display: inline-block;
-  margin: -15px 0 0 0;
+  margin-top: -15px;
 }
 .header-toolchain { margin: 1px 25px 0 0; }
 .header-btn-group > li,
 .header-nav > li,
 .header-nav-alt > li,
 .header-toolchain > li {
+  border-color: $color-haze;
   float: left;
   line-height: 1;
 }
@@ -75,20 +77,29 @@
   box-sizing: border-box;
   float: left;
 }
-.header-btn-group > li > a {
+.header-btn-group > li > a,
+.header-nav > li.lined > a {
   border-bottom: 4px solid $color-transparent;
   border-radius: 0 !important;
+}
+.header-btn-group > li > a {
   box-sizing: border-box;
   display: block;
   height: 60px;
-  padding-top: 24px;
+  padding-top: 22px;
   text-align: center;
   vertical-align: middle;
 }
+.header-nav > li.lined > a { padding-bottom: 20px; }
 .header-btn-group > li > a:hover,
+.header-btn-group > li > a:focus,
+.header-nav > li.lined > a:hover,
+.header-nav > li.lined > a:focus { border-color: inherit; }
 .header-btn-group > li > a.active,
 .header-btn-group > li > a:active,
-.header-btn-group > li > a:focus { border-color: $color-primary; }
+.header-nav > li.lined > a.active,
+.header-nav > li.lined > a:active,
+.header-nav > li.lined.active > a { border-color: $color-primary; }
 .header-btn-group-label {
   background: $color-primary;
   border-radius: 2px;
@@ -116,16 +127,6 @@
 .header-toolchain > li.btn-group + li.btn-group { margin-left: 15px; }
 .header-nav-alt > li:first-child,
 .header-toolchain > li:first-child { margin-left: 0; }
-.header-nav > li.lined > a {
-  border-radius: 0 !important;
-  border-bottom: 3px solid $color-transparent;
-  padding-bottom: 21px;
-}
-.header-nav > li.lined > a:hover,
-.header-nav > li.lined > a.active,
-.header-nav > li.lined > a:active,
-.header-nav > li.lined > a:focus,
-.header-nav > li.lined.active > a { border-color: $color-primary; }
 .header-nav-alt > li > a { padding: 10px 0; }
 .header-nav > li > a:hover,
 .header-nav > li > a.active,
@@ -216,7 +217,6 @@
 .header-invisible {
   background: $color-transparent;
   border-color: $color-transparent;
-  color: $color-white;
 }
 .header-light {
   background: $color-light-haze;

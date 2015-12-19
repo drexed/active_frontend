@@ -1,3 +1,3 @@
 module ActiveFrontend
-  VERSION = "12.1.27"
+  VERSION = "12.1.28"
 end

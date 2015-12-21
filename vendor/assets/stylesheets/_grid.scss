@@ -75,9 +75,6 @@ $sizes: (
   .#{$name}.columns.alpha.omega { width: $size; }
   .offset-by-#{$name} { padding-left: $size; }
 }
-.hidden-laptop,
-.hidden-tablet,
-.hidden-phone,
 .visible { display: inherit !important; }
 .hidden,
 .hidden-desktop { display: none !important; }
@@ -85,18 +82,12 @@ $sizes: (
 /* # Laptop
 ================================================== */
 @media only screen and (min-width: 960px) and (max-width: 1365px) {
-  .hidden-desktop,
-  .hidden-tablet,
-  .hidden-phone { display: inherit !important; }
   .hidden-laptop { display: none !important; }
 }
 
 /* # Tablet
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .hidden-desktop,
-  .hidden-laptop,
-  .hidden-phone { display: inherit !important; }
   .hidden-tablet { display: none !important; }
 }
 
@@ -117,9 +108,6 @@ $sizes: (
     }
     .offset-by-#{$name} { padding-left: 0; }
   }
-  .hidden-desktop,
-  .hidden-laptop,
-  .hidden-tablet { display: inherit !important; }
   .hidden-phone { display: none !important; }
 }
 

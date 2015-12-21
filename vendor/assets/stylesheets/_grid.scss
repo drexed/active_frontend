@@ -75,41 +75,29 @@ $sizes: (
   .#{$name}.columns.alpha.omega { width: $size; }
   .offset-by-#{$name} { padding-left: $size; }
 }
-.hidden,
-.hidden-desktop,
-.visible-laptop,
-.visible-tablet,
-.visible-phone { display: none !important; }
 .hidden-laptop,
 .hidden-tablet,
 .hidden-phone,
-.visible,
-.visible-desktop { display: inherit !important; }
+.visible { display: inherit !important; }
+.hidden,
+.hidden-desktop { display: none !important; }
 
 /* # Laptop
 ================================================== */
 @media only screen and (min-width: 960px) and (max-width: 1365px) {
-  .hidden-laptop,
-  .visible-desktop,
-  .visible-tablet,
-  .visible-phone { display: none !important; }
   .hidden-desktop,
   .hidden-tablet,
-  .hidden-phone,
-  .visible-laptop { display: inherit !important; }
+  .hidden-phone { display: inherit !important; }
+  .hidden-laptop { display: none !important; }
 }
 
 /* # Tablet
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .hidden-tablet,
-  .visible-desktop,
-  .visible-laptop,
-  .visible-phone { display: none !important; }
   .hidden-desktop,
   .hidden-laptop,
-  .hidden-phone,
-  .visible-tablet { display: inherit !important; }
+  .hidden-phone { display: inherit !important; }
+  .hidden-tablet { display: none !important; }
 }
 
 /* # Mobile
@@ -129,14 +117,10 @@ $sizes: (
     }
     .offset-by-#{$name} { padding-left: 0; }
   }
-  .hidden-phone,
-  .visible-desktop,
-  .visible-laptop,
-  .visible-tablet { display: none !important; }
   .hidden-desktop,
   .hidden-laptop,
-  .hidden-tablet,
-  .visible-phone { display: inherit !important; }
+  .hidden-tablet { display: inherit !important; }
+  .hidden-phone { display: none !important; }
 }
 
 /* # Display

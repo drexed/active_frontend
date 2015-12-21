@@ -75,6 +75,9 @@ $sizes: (
   .#{$name}.columns.alpha.omega { width: $size; }
   .offset-by-#{$name} { padding-left: $size; }
 }
+.hidden-tablet,
+.hidden-laptop,
+.hidden-phone,
 .visible { display: inherit !important; }
 .hidden,
 .hidden-desktop { display: none !important; }
@@ -82,12 +85,14 @@ $sizes: (
 /* # Laptop
 ================================================== */
 @media only screen and (min-width: 960px) and (max-width: 1365px) {
+  .hidden-desktop { display: inline !important; }
   .hidden-laptop { display: none !important; }
 }
 
 /* # Tablet
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+  .hidden-desktop { display: inline !important; }
   .hidden-tablet { display: none !important; }
 }
 
@@ -108,6 +113,7 @@ $sizes: (
     }
     .offset-by-#{$name} { padding-left: 0; }
   }
+  .hidden-desktop { display: inline !important; }
   .hidden-phone { display: none !important; }
 }
 

@@ -75,9 +75,6 @@ $sizes: (
   .#{$name}.columns.alpha.omega { width: $size; }
   .offset-by-#{$name} { padding-left: $size; }
 }
-.hidden-tablet,
-.hidden-laptop,
-.hidden-phone,
 .visible { display: inherit !important; }
 .hidden,
 .hidden-desktop { display: none !important; }

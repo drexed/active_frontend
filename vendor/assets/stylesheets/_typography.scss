@@ -42,85 +42,89 @@ $colors: (
 
 /* # Font-Face
 ================================================== */
-@font-face {
-  font-family: 'Gotham Round';
-  font-style: normal;
-  font-weight: normal;
-  src: url(font_path('gotham/round/gothamrnd-book.eot'));
-  src: url(font_path('gotham/round/gothamrnd-book.eot')) format('embedded-opentype'),
-       url(font_path('gotham/round/gothamrnd-book.woff')) format('woff'),
-       url(font_path('gotham/round/gothamrnd-book.ttf')) format('truetype'),
-       url(font_path('gotham/round/gothamrnd-book.svg#GothamrndBookRegular')) format('svg');
+@if $typography-gotham-round {
+  @font-face {
+    font-family: 'Gotham Round';
+    font-style: normal;
+    font-weight: normal;
+    src: url(font_path('gotham/round/gothamrnd-book.eot'));
+    src: url(font_path('gotham/round/gothamrnd-book.eot')) format('embedded-opentype'),
+         url(font_path('gotham/round/gothamrnd-book.woff')) format('woff'),
+         url(font_path('gotham/round/gothamrnd-book.ttf')) format('truetype'),
+         url(font_path('gotham/round/gothamrnd-book.svg#GothamrndBookRegular')) format('svg');
+  }
+  @font-face {
+    font-family: 'Gotham Round';
+    font-style: normal;
+    font-weight: bold;
+    src: url(font_path('gotham/round/gothamrnd-bold.eot'));
+    src: url(font_path('gotham/round/gothamrnd-bold.eot')) format('embedded-opentype'),
+         url(font_path('gotham/round/gothamrnd-bold.woff')) format('woff'),
+         url(font_path('gotham/round/gothamrnd-bold.ttf')) format('truetype'),
+         url(font_path('gotham/round/gothamrnd-bold.svg#GothamrndBoldRegular')) format('svg');
+  }
+  @font-face {
+    font-family: 'Gotham Round';
+    font-style: normal;
+    font-weight: 500;
+    src: url(font_path('gotham/round/gothamrnd-medium.eot'));
+    src: url(font_path('gotham/round/gothamrnd-medium.eot')) format('embedded-opentype'),
+         url(font_path('gotham/round/gothamrnd-medium.woff')) format('woff'),
+         url(font_path('gotham/round/gothamrnd-medium.ttf')) format('truetype'),
+         url(font_path('gotham/round/gothamrnd-medium.svg#GothamrndMediumRegular')) format('svg');
+  }
+  @font-face {
+    font-family: 'Gotham Round';
+    font-style: normal;
+    font-weight: 200;
+    src: url(font_path('gotham/round/gothamrnd-light.eot'));
+    src: url(font_path('gotham/round/gothamrnd-light.eot')) format('embedded-opentype'),
+         url(font_path('gotham/round/gothamrnd-light.woff')) format('woff'),
+         url(font_path('gotham/round/gothamrnd-light.ttf')) format('truetype'),
+         url(font_path('gotham/round/gothamrnd-light.svg#GothamrndLightRegular')) format('svg');
+  }
 }
-@font-face {
-  font-family: 'Gotham Round';
-  font-style: normal;
-  font-weight: bold;
-  src: url(font_path('gotham/round/gothamrnd-bold.eot'));
-  src: url(font_path('gotham/round/gothamrnd-bold.eot')) format('embedded-opentype'),
-       url(font_path('gotham/round/gothamrnd-bold.woff')) format('woff'),
-       url(font_path('gotham/round/gothamrnd-bold.ttf')) format('truetype'),
-       url(font_path('gotham/round/gothamrnd-bold.svg#GothamrndBoldRegular')) format('svg');
-}
-@font-face {
-  font-family: 'Gotham Round';
-  font-style: normal;
-  font-weight: 500;
-  src: url(font_path('gotham/round/gothamrnd-medium.eot'));
-  src: url(font_path('gotham/round/gothamrnd-medium.eot')) format('embedded-opentype'),
-       url(font_path('gotham/round/gothamrnd-medium.woff')) format('woff'),
-       url(font_path('gotham/round/gothamrnd-medium.ttf')) format('truetype'),
-       url(font_path('gotham/round/gothamrnd-medium.svg#GothamrndMediumRegular')) format('svg');
-}
-@font-face {
-  font-family: 'Gotham Round';
-  font-style: normal;
-  font-weight: 200;
-  src: url(font_path('gotham/round/gothamrnd-light.eot'));
-  src: url(font_path('gotham/round/gothamrnd-light.eot')) format('embedded-opentype'),
-       url(font_path('gotham/round/gothamrnd-light.woff')) format('woff'),
-       url(font_path('gotham/round/gothamrnd-light.ttf')) format('truetype'),
-       url(font_path('gotham/round/gothamrnd-light.svg#GothamrndLightRegular')) format('svg');
-}
-@font-face {
-  font-family: 'Gotham';
-  font-style: normal;
-  font-weight: normal;
-  src: url(font_path('gotham/regular/gotham-book.eot'));
-  src: url(font_path('gotham/regular/gotham-book.eot')) format('embedded-opentype'),
-       url(font_path('gotham/regular/gotham-book.woff')) format('woff'),
-       url(font_path('gotham/regular/gotham-book.ttf')) format('truetype'),
-       url(font_path('gotham/regular/gotham-book.svg#GothamBookRegular')) format('svg');
-}
-@font-face {
-  font-family: 'Gotham';
-  font-style: normal;
-  font-weight: bold;
-  src: url(font_path('gotham/regular/gotham-bold.eot'));
-  src: url(font_path('gotham/regular/gotham-bold.eot')) format('embedded-opentype'),
-       url(font_path('gotham/regular/gotham-bold.woff')) format('woff'),
-       url(font_path('gotham/regular/gotham-bold.ttf')) format('truetype'),
-       url(font_path('gotham/regular/gotham-bold.svg#GothamBoldRegular')) format('svg');
-}
-@font-face {
-  font-family: 'Gotham';
-  font-style: normal;
-  font-weight: 500;
-  src: url(font_path('gotham/regular/gotham-medium.eot'));
-  src: url(font_path('gotham/regular/gotham-medium.eot')) format('embedded-opentype'),
-       url(font_path('gotham/regular/gotham-medium.woff')) format('woff'),
-       url(font_path('gotham/regular/gotham-medium.ttf')) format('truetype'),
-       url(font_path('gotham/regular/gotham-medium.svg#GothamMediumRegular')) format('svg');
-}
-@font-face {
-  font-family: 'Gotham';
-  font-style: normal;
-  font-weight: 200;
-  src: url(font_path('gotham/regular/gotham-light.eot'));
-  src: url(font_path('gotham/regular/gotham-light.eot')) format('embedded-opentype'),
-       url(font_path('gotham/regular/gotham-light.woff')) format('woff'),
-       url(font_path('gotham/regular/gotham-light.ttf')) format('truetype'),
-       url(font_path('gotham/regular/gotham-light.svg#GothamLightRegular')) format('svg');
+@if $typography-gotham {
+  @font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: normal;
+    src: url(font_path('gotham/regular/gotham-book.eot'));
+    src: url(font_path('gotham/regular/gotham-book.eot')) format('embedded-opentype'),
+         url(font_path('gotham/regular/gotham-book.woff')) format('woff'),
+         url(font_path('gotham/regular/gotham-book.ttf')) format('truetype'),
+         url(font_path('gotham/regular/gotham-book.svg#GothamBookRegular')) format('svg');
+  }
+  @font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: bold;
+    src: url(font_path('gotham/regular/gotham-bold.eot'));
+    src: url(font_path('gotham/regular/gotham-bold.eot')) format('embedded-opentype'),
+         url(font_path('gotham/regular/gotham-bold.woff')) format('woff'),
+         url(font_path('gotham/regular/gotham-bold.ttf')) format('truetype'),
+         url(font_path('gotham/regular/gotham-bold.svg#GothamBoldRegular')) format('svg');
+  }
+  @font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    src: url(font_path('gotham/regular/gotham-medium.eot'));
+    src: url(font_path('gotham/regular/gotham-medium.eot')) format('embedded-opentype'),
+         url(font_path('gotham/regular/gotham-medium.woff')) format('woff'),
+         url(font_path('gotham/regular/gotham-medium.ttf')) format('truetype'),
+         url(font_path('gotham/regular/gotham-medium.svg#GothamMediumRegular')) format('svg');
+  }
+  @font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 200;
+    src: url(font_path('gotham/regular/gotham-light.eot'));
+    src: url(font_path('gotham/regular/gotham-light.eot')) format('embedded-opentype'),
+         url(font_path('gotham/regular/gotham-light.woff')) format('woff'),
+         url(font_path('gotham/regular/gotham-light.ttf')) format('truetype'),
+         url(font_path('gotham/regular/gotham-light.svg#GothamLightRegular')) format('svg');
+  }
 }
 
 /* # Typography
@@ -216,7 +220,7 @@ strong { font-weight: 500; }
 /* # Colors
 ================================================== */
 @each $name, $color in $colors {
-  .text-#{$name} { color: $color; }
+  .text-#{$name} { color: $color !important; }
 }
 
 /* # Decorations

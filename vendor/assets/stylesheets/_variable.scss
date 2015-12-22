@@ -1,12 +1,18 @@
 /* Table of Contents
 ==================================================
-# Variable */
+# Variables Color
+# Variables Typography */
 
-/* # Variable
+/* # Variables Color
 ================================================== */
 $color-primary: $color-blue;
 $color-secondary: $color-green;
 $color-tertiary: $color-red;
+
+/* # Variables Typography
+================================================== */
+$typography-gotham-round: true;
+$typography-gotham: true;
 $typography-base-font: 'Gotham Round';
 $typography-heading-font: 'Gotham';
 $typography-heading: $typography-heading-font, 'Helvetica', Helvetica, Arial, sans-serif;

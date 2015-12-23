@@ -269,7 +269,7 @@ select[disabled] {
 .form-floating-label > label {
   font-size: 10px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   left: 10px;
   opacity: 0;
   position: absolute;
@@ -277,22 +277,22 @@ select[disabled] {
   top: 10px;
 }
 .form-floating-label > input:focus,
-.form-floating-label > input:valid,
+.form-floating-label > input:focus:invalid,
 .form-floating-label > textarea:focus,
-.form-floating-label > textarea:valid { padding-top: 15px; }
+.form-floating-label > textarea:focus:invalid { padding-top: 15px; }
 .form-floating-label > input:focus,
-.form-floating-label > input:valid { padding-bottom: 6px; }
+.form-floating-label > input:focus:invalid { padding-bottom: 6px; }
 .form-floating-label > input:focus + label,
+.form-floating-label > input:focus:invalid + label,
 .form-floating-label > textarea:focus + label,
-.form-floating-label > input:valid + label,
-.form-floating-label > textarea:valid + label {
+.form-floating-label > textarea:focus:invalid + label {
   opacity: 1;
   top: 2px;
 }
 .form-floating-label > input:focus + label,
 .form-floating-label > textarea:focus + label { color: $color-green; }
-.form-floating-label > input:invalid + label,
-.form-floating-label > textarea:invalid + label { color: $color-red; }
+.form-floating-label > input:focus:invalid + label,
+.form-floating-label > textarea:focus:invalid + label { color: $color-red; }
 .form-help-block {
   color: $color-light-gray;
   display: block;

@@ -149,10 +149,20 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.header-nav-alt > li.inverse.secondary > a {
+  background: $color-secondary;
+  border-color: $color-secondary;
+}
+.header-nav-alt > li.inverse.tertiary > a {
+  background: $color-tertiary;
+  border-color: $color-tertiary;
+}
 .header-nav-alt > li.inverse.outline > a {
   background: $color-transparent;
   color: $color-primary;
 }
+.header-nav-alt > li.inverse.outline.secondary > a { color: $color-secondary; }
+.header-nav-alt > li.inverse.outline.tertiary > a { color: $color-tertiary; }
 .header-nav-alt > li.inverse > a:hover,
 .header-nav-alt > li.inverse > a.active,
 .header-nav-alt > li.inverse > a:active,
@@ -161,29 +171,21 @@
   border-color: darken($color-primary, 2%);
   color: $color-white;
 }
-.header-nav-alt > li.inverse.secondary > a {
-  background: $color-secondary;
-  border-color: $color-secondary;
-}
-.header-nav-alt > li.inverse.outline.secondary > a { color: $color-primary; }
 .header-nav-alt > li.inverse.secondary > a:hover,
 .header-nav-alt > li.inverse.secondary > a.active,
 .header-nav-alt > li.inverse.secondary > a:active,
 .header-nav-alt > li.inverse.secondary > a:focus {
   background: darken($color-secondary, 2%);
   border-color: darken($color-secondary, 2%);
+  color: $color-white;
 }
-.header-nav-alt > li.inverse.tertiary > a {
-  background: $color-tertiary;
-  border-color: $color-tertiary;
-}
-.header-nav-alt > li.inverse.outline.tertiary > a { color: $color-tertiary; }
 .header-nav-alt > li.inverse.tertiary > a:hover,
 .header-nav-alt > li.inverse.tertiary > a.active,
 .header-nav-alt > li.inverse.tertiary > a:active,
 .header-nav-alt > li.inverse.tertiary > a:focus {
   background: darken($color-tertiary, 2%);
   border-color: darken($color-tertiary, 2%);
+  color: $color-white;
 }
 .header-user {
   float: right;

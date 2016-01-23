@@ -86,7 +86,7 @@
   box-sizing: border-box;
   display: block;
   height: 60px;
-  padding-top: 22px;
+  padding-top: 24px;
   text-align: center;
   vertical-align: middle;
 }
@@ -109,8 +109,10 @@
   font-style: normal;
   letter-spacing: 0;
   line-height: 1;
+  margin-top: -2px;
   padding: 4px 5px 3px 5px;
   text-align: center;
+  vertical-align: middle;
 }
 .header-toolchain > li { font-size: 26px; }
 .header-btn-group > li,

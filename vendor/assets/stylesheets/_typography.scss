@@ -47,41 +47,25 @@ $colors: (
     font-family: 'Gotham Round';
     font-style: normal;
     font-weight: normal;
-    src: url(font_path('gotham/round/gothamrnd-book.eot'));
-    src: url(font_path('gotham/round/gothamrnd-book.eot')) format('embedded-opentype'),
-         url(font_path('gotham/round/gothamrnd-book.woff')) format('woff'),
-         url(font_path('gotham/round/gothamrnd-book.ttf')) format('truetype'),
-         url(font_path('gotham/round/gothamrnd-book.svg#GothamrndBookRegular')) format('svg');
+    src: url(font_path('gotham/gotham-rounded-book.woff')) format('woff');
   }
   @font-face {
     font-family: 'Gotham Round';
     font-style: normal;
     font-weight: bold;
-    src: url(font_path('gotham/round/gothamrnd-bold.eot'));
-    src: url(font_path('gotham/round/gothamrnd-bold.eot')) format('embedded-opentype'),
-         url(font_path('gotham/round/gothamrnd-bold.woff')) format('woff'),
-         url(font_path('gotham/round/gothamrnd-bold.ttf')) format('truetype'),
-         url(font_path('gotham/round/gothamrnd-bold.svg#GothamrndBoldRegular')) format('svg');
+    src: url(font_path('gotham/gotham-rounded-bold.woff')) format('woff');
   }
   @font-face {
     font-family: 'Gotham Round';
     font-style: normal;
     font-weight: 500;
-    src: url(font_path('gotham/round/gothamrnd-medium.eot'));
-    src: url(font_path('gotham/round/gothamrnd-medium.eot')) format('embedded-opentype'),
-         url(font_path('gotham/round/gothamrnd-medium.woff')) format('woff'),
-         url(font_path('gotham/round/gothamrnd-medium.ttf')) format('truetype'),
-         url(font_path('gotham/round/gothamrnd-medium.svg#GothamrndMediumRegular')) format('svg');
+    src: url(font_path('gotham/gotham-rounded-medium.woff')) format('woff');
   }
   @font-face {
     font-family: 'Gotham Round';
     font-style: normal;
     font-weight: 200;
-    src: url(font_path('gotham/round/gothamrnd-light.eot'));
-    src: url(font_path('gotham/round/gothamrnd-light.eot')) format('embedded-opentype'),
-         url(font_path('gotham/round/gothamrnd-light.woff')) format('woff'),
-         url(font_path('gotham/round/gothamrnd-light.ttf')) format('truetype'),
-         url(font_path('gotham/round/gothamrnd-light.svg#GothamrndLightRegular')) format('svg');
+    src: url(font_path('gotham/gotham-rounded-light.woff')) format('woff');
   }
 }
 @if $typography-gotham {
@@ -89,41 +73,25 @@ $colors: (
     font-family: 'Gotham';
     font-style: normal;
     font-weight: normal;
-    src: url(font_path('gotham/regular/gotham-book.eot'));
-    src: url(font_path('gotham/regular/gotham-book.eot')) format('embedded-opentype'),
-         url(font_path('gotham/regular/gotham-book.woff')) format('woff'),
-         url(font_path('gotham/regular/gotham-book.ttf')) format('truetype'),
-         url(font_path('gotham/regular/gotham-book.svg#GothamBookRegular')) format('svg');
+    src: url(font_path('gotham/gotham-book.woff')) format('woff');
   }
   @font-face {
     font-family: 'Gotham';
     font-style: normal;
     font-weight: bold;
-    src: url(font_path('gotham/regular/gotham-bold.eot'));
-    src: url(font_path('gotham/regular/gotham-bold.eot')) format('embedded-opentype'),
-         url(font_path('gotham/regular/gotham-bold.woff')) format('woff'),
-         url(font_path('gotham/regular/gotham-bold.ttf')) format('truetype'),
-         url(font_path('gotham/regular/gotham-bold.svg#GothamBoldRegular')) format('svg');
+    src: url(font_path('gotham/gotham-bold.woff')) format('woff');
   }
   @font-face {
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 500;
-    src: url(font_path('gotham/regular/gotham-medium.eot'));
-    src: url(font_path('gotham/regular/gotham-medium.eot')) format('embedded-opentype'),
-         url(font_path('gotham/regular/gotham-medium.woff')) format('woff'),
-         url(font_path('gotham/regular/gotham-medium.ttf')) format('truetype'),
-         url(font_path('gotham/regular/gotham-medium.svg#GothamMediumRegular')) format('svg');
+    src: url(font_path('gotham/gotham-medium.woff')) format('woff');
   }
   @font-face {
     font-family: 'Gotham';
     font-style: normal;
     font-weight: 200;
-    src: url(font_path('gotham/regular/gotham-light.eot'));
-    src: url(font_path('gotham/regular/gotham-light.eot')) format('embedded-opentype'),
-         url(font_path('gotham/regular/gotham-light.woff')) format('woff'),
-         url(font_path('gotham/regular/gotham-light.ttf')) format('truetype'),
-         url(font_path('gotham/regular/gotham-light.svg#GothamLightRegular')) format('svg');
+    src: url(font_path('gotham/gotham-light.woff')) format('woff');
   }
 }
 

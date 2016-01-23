@@ -68,7 +68,7 @@
   Inputmask.prototype.listen = function() {
     if (this.$element.attr("readonly")) return
 
-    var pasteEventName = (isIE ? 'paste' : 'input') + ".mask"
+    var pasteEventName = (isIE ? 'paste' : 'input') + ".bs.inputmask"
 
     this.$element
       .on("unmask.bs.inputmask", $.proxy(this.unmask, this))
@@ -164,8 +164,8 @@
 
   Inputmask.prototype.unmask = function() {
     this.$element
-      .unbind(".mask")
-      .removeData("inputmask")
+      .unbind(".bs.inputmask")
+      .removeData("bs.inputmask")
   }
 
   Inputmask.prototype.focusEvent = function() {
@@ -188,8 +188,10 @@
 
   Inputmask.prototype.blurEvent = function() {
     this.checkVal()
-    if (this.$element.val() !== this.focusText)
+    if (this.$element.val() !== this.focusText) {
       this.$element.trigger('change')
+      this.$element.trigger('input')
+    }
   }
 
   Inputmask.prototype.keydownEvent = function(e) {

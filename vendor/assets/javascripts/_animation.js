@@ -9,7 +9,7 @@
     this.$element = $(element)
   };
 
-  Animation.VERSION  = '3.3.2'
+  Animation.VERSION  = '3.3.6'
 
   Animation.TRANSITION_END = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
@@ -35,7 +35,7 @@
       animation = function(element) {
         if (settings.infinite === true) {
           settings.klass += ' infinite';
-        }
+        };
 
         setDelay(element);
         setDuration(element);
@@ -51,10 +51,10 @@
       unhide = function(element) {
         if (element.css('visibility') === 'hidden') {
           element.css('visibility', 'visible');
-        }
+        };
         if (element.is(':hidden')) {
           return element.show();
-        }
+        };
       };
 
       removeClass = function(element) {
@@ -63,29 +63,29 @@
 
       setDelay = function(element) {
         return element.css({
-          '-webkit-animation-delay': settings.delay,
-          '-moz-animation-delay':    settings.delay,
-          '-o-animation-delay':      settings.delay,
-          'animation-delay':         settings.delay
+          '-webkit-animation-delay' : settings.delay,
+             '-moz-animation-delay' : settings.delay,
+               '-o-animation-delay' : settings.delay,
+                  'animation-delay' : settings.delay
         });
       };
 
       setDuration = function(element) {
         return element.css({
-          '-webkit-animation-duration': settings.duration,
-          '-moz-animation-duration':    settings.duration,
-          '-o-animation-duration':      settings.duration,
-          'animation-duration':         settings.duration
+          '-webkit-animation-duration' : settings.duration,
+             '-moz-animation-duration' : settings.duration,
+               '-o-animation-duration' : settings.duration,
+                  'animation-duration' : settings.duration
         });
       };
 
       callback = function(element) {
         if (settings.infinite === false) {
           removeClass(element);
-        }
+        };
         if (typeof settings.callback === 'function') {
           return settings.callback.call(element);
-        }
+        };
       };
 
       complete = function(element) {

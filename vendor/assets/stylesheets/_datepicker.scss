@@ -63,22 +63,23 @@
 .datepicker table th,
 .datepicker table td {
   height: 20px;
+  line-height: 1 !important;
   text-align: center;
   width: 20px;
 }
+.datepicker table th { padding: 7px 0 !important; }
 .datepicker table td {
-  font-weight: normal;
-  height: 22px;
-  line-height: 1;
+  font-size: 12px !important;
+  font-weight: bold;
 }
 .datepicker table td.new,
-.datepicker table td.old { color: $color-gray; }
+.datepicker table td.old { color: $color-dark-haze; }
 .datepicker table td > span {
   border-radius: 2px;
   display: block;
   height: 30px;
   float: left;
-  line-height: 33px;
+  line-height: 30px;
   margin: 2px;
   width: 51px;
 }
@@ -103,13 +104,13 @@
 .datepicker table > thead > tr:first-child > th { border-radius: 2px; }
 .datepicker table > thead > tr:first-child > th:nth-child(2) { font-weight: bold; }
 .datepicker table th.next,
-.datepicker table th.prev { font-size: 17px; }
+.datepicker table th.prev { font-size: 20px !important; }
 .datepicker table th.switch {
   font-weight: bold;
   width: 145px;
 }
 .datepicker table th.datepicker-switch { padding-bottom: 3px !important; }
-.datepicker table td.day.disabled { color: $color-gray; }
+.datepicker table td.day.disabled { color: $color-dark-haze; }
 .datepicker table td.day.disabled:hover,
 .datepicker table td.day.disabled.active,
 .datepicker table td.day.disabled:active,

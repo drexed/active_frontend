@@ -1,8 +1,23 @@
 /* Table of Contents
 ==================================================
-# Icon */
+# Keyframes
+# Font-face
+# Icon
+# Animation
+# Duration */
 
-/* # Icon
+/* # Keyframes
+================================================== */
+@-webkit-keyframes icon-spin {
+  0% { @include transform(rotate(0)); }
+  100% { @include transform(rotate(359deg)); }
+}
+@keyframes icon-spin {
+  0% { @include transform(rotate(0)); }
+  100% { @include transform(rotate(359deg)); }
+}
+
+/* # Font-face
 ================================================== */
 @font-face {
   font-family: "Ionicons";
@@ -14,8 +29,10 @@
        url(font_path("ionicons/ionicons.woff?v=2.0.1")) format("woff"),
        url(font_path("ionicons/ionicons.svg?v=2.0.1#Ionicons")) format("svg");
 }
+
+/* # Icon
+================================================== */
 .icon,
-.iconicons,
 .icon-alert:before,
 .icon-alert-circled:before,
 .icon-android-add:before,
@@ -764,23 +781,6 @@
   text-transform: none;
   text-rendering: auto;
 }
-.icon-spin,
-.icon-loading-a,
-.icon-loading-b,
-.icon-loading-c,
-.icon-loading-d,
-.icon-looping,
-.icon-refreshing,
-.icon-ios7-reloading { @include animation(spin 1s infinite linear); }
-@-webkit-keyframes spin {
-  0% { @include transform(rotate(0)); }
-  100% { @include transform(rotate(359deg)); }
-}
-@keyframes spin {
-  0% { @include transform(rotate(0)); }
-  100% { @include transform(rotate(359deg)); }
-}
-.icon-loading-a { @include animation-timing-function(steps(8, start)); }
 .icon-alert:before { content: "\f101" }
 .icon-alert-circled:before { content: "\f100" }
 .icon-android-add:before { content: "\f2c7" }
@@ -1514,3 +1514,17 @@
 .icon-woman:before { content: "\f25d" }
 .icon-wrench:before { content: "\f2ba" }
 .icon-xbox:before { content: "\f30c" }
+
+/* # Animation
+================================================== */
+.icon-spin:before { @include animation(icon-spin 2s infinite linear); }
+
+/* # Durations
+================================================== */
+.icon-spin.icon-spin-duration-fastest:before { @include animation-duration(0.5s); }
+.icon-spin.icon-spin-duration-faster:before { @include animation-duration(1s); }
+.icon-spin.icon-spin-duration-fast:before { @include animation-duration(1.5s); }
+.icon-spin.icon-spin-duration-default:before { @include animation-duration(2s); }
+.icon-spin.icon-spin-duration-slow:before { @include animation-duration(2.5s); }
+.icon-spin.icon-spin-duration-slower:before { @include animation-duration(3s); }
+.icon-spin.icon-spin-duration-slowest:before { @include animation-duration(3.5s); }

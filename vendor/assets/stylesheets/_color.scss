@@ -1,14 +1,15 @@
 /* Table of Contents
 ==================================================
 # Grayscale Colors
-# Base Colors */
+# Base Colors
+# Alt Colors */
 
 /* # Grayscale Colors
 ================================================== */
 $color-transparent: rgba(0,0,0,0);
-$color-dark-black: rgba(16,18,25,1);
-$color-black: rgba(35,40,55,1);
-$color-light-black: rgba(48,54,75,1);
+$color-dark-black: rgba(27,30,34,1);
+$color-black: rgba(50,56,64,1);
+$color-light-black: rgba(64,72,82,1);
 $color-dark-gray: rgba(71,82,93,1);
 $color-gray: rgba(106,122,138,1);
 $color-light-gray: rgba(151,163,175,1);
@@ -29,3 +30,16 @@ $color-pink: rgba(255,0,102,1);
 $color-red: rgba(240,35,17,1);
 $color-orange: rgba(255,102,0,1);
 $color-yellow: rgba(255,209,0,1);
+
+/* # Alt Colors
+==================================================
+# Blue Tint
+$color-dark-black: rgba(16,18,25,1) or #101219;
+$color-black: rgba(35,40,55,1) or #232837;
+$color-light-black: rgba(48,54,75,1) or #30364B;
+
+# Purple Tint
+$color-dark-black: rgba(24,19,32,1) or #181320;
+$color-black: rgba(41,32,56,1) or #292038;
+$color-light-black: rgba(59,48,77,1) or #3B304D;
+*/

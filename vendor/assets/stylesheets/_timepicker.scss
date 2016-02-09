@@ -43,12 +43,16 @@
   border-bottom: 0;
   border-top: 7px solid;
   border-color: inherit;
+  border-left-color: $color-transparent;
+  border-right-color: $color-transparent;
   bottom: -7px;
 }
 .timepicker-widget.timepicker-orient-bottom:after {
   border-bottom: 0;
   border-top: 6px solid;
   border-color: inherit;
+  border-left-color: $color-transparent;
+  border-right-color: $color-transparent;
   bottom: -6px;
 }
 .timepicker-widget > table {

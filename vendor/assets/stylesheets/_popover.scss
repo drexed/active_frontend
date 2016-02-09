@@ -1,14 +1,15 @@
 /* Table of Contents
 ==================================================
-# Popover */
+# Popover
+# Media Queries */
 
 /* # Popover
 ================================================== */
 .popover {
   background: $color-white;
   background-clip: padding-box;
-  border: 1px solid $color-dark-haze;
-  box-shadow: 0 0 3px $color-dark-haze;
+  border: 1px solid $color-haze;
+  border-radius: 3px;
   display: none;
   float: none;
   font-style: normal;
@@ -44,7 +45,6 @@
 }
 .popover-title:empty { display: none; }
 .popover-content {
-  background: $color-white;
   font-weight: normal;
   line-height: 20px;
 }
@@ -113,4 +113,16 @@
   border-left-color: $color-white;
   bottom: -10px;
   right: 1px;
+}
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .popover-title { border-width: 0.5px; }
 }

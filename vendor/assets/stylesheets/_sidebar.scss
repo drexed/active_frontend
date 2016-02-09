@@ -146,6 +146,15 @@
   background: $color-transparent !important;
   color: $color-primary;
 }
+.sidebar-navbar-indicator {
+  background: $color-primary;
+  border-radius: 500px;
+  display: inline-block;
+  height: 8px;
+  margin: -7px 0 0 -13px;
+  position: absolute;
+  width: 8px;
+}
 .sidebar-form {
   border-bottom: 1px solid;
   border-color: inherit;
@@ -267,4 +276,5 @@ only screen and (                min-resolution: 2dppx) {
   .sidebar-header h4,
   .sidebar-header h5,
   .sidebar-header h6 { letter-spacing: 0.5px; }
+  .sidebar-navbar-indicator { margin: -6.5px 0 0 -10.5px; }
 }

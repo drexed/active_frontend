@@ -59,14 +59,17 @@
   margin: 5px 0 4px 0;
   overflow: hidden;
 }
-.dropdown-menu > li { border-color: inherit;}
+.dropdown-menu > li {
+  border-color: inherit;
+  line-height: 1;
+}
 .dropdown-menu > li > a {
   border-bottom: 1px solid;
   border-top: 1px solid;
   border-color: $color-transparent;
   clear: both;
   display: block;
-  padding: 8px 15px;
+  padding: 8px 15px 9px 15px;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
@@ -84,7 +87,7 @@
 }
 .dropdown-menu > li .badge,
 .dropdown-menu > li .label {
-  margin: -5px 0;
+  margin: -4px 0 -6px 0;
   padding: 4px 6px;
 }
 .open > .dropdown-menu {

@@ -33,6 +33,7 @@
   border-color: inherit;
   border-radius: 0;
   box-sizing: border-box;
+  color: inherit;
   display: block;
   font-size: 21px;
   height: 55px;
@@ -91,10 +92,7 @@
 .toolbar-bordered > a:hover,
 .toolbar-bordered > a.active,
 .toolbar-bordered > a:active,
-.toolbar-bordered > a:focus {
-  border-right-color: $color-primary;
-  color: initial;
-}
+.toolbar-bordered > a:focus { border-right-color: $color-primary; }
 .toolbar-bordered.toolbar-alt > a {
   border-left-width: 4px !important;
   border-left-style: solid;

@@ -249,7 +249,7 @@
   position: fixed;
   text-transform: none;
   top: 60px;
-  width: 240px;
+  width: 280px;
 }
 .header-collapse-title {
   border-bottom: 1px solid;
@@ -485,13 +485,16 @@
 /* # Media Queries
 ================================================== */
 @media only screen and (max-width: 1365px) {
-  .header-btn-group > li.divider.fixed > a { width: 250px; }
+  .header-btn-group > li.divider.fixed > a,
+  .header-collapse { width: 250px; }
 }
 @media only screen and (max-width: 1199px) {
-  .header-btn-group > li.divider.fixed > a { width: 220px; }
+  .header-btn-group > li.divider.fixed > a,
+  .header-collapse { width: 220px; }
 }
 @media only screen and (max-width: 959px) {
-  .header-btn-group > li.divider.fixed > a { width: 200px; }
+  .header-btn-group > li.divider.fixed > a,
+  .header-collapse { width: 200px; }
 }
 @media only screen and (max-width: 767px) {
   .header {

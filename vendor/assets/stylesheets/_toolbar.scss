@@ -84,11 +84,14 @@
 /* # Styles
 ================================================== */
 .toolbar-bordered > a {
-  background: $color-transparent !important;
+  color: inherit !important;
   border-right-width: 4px !important;
   border-right-style: solid;
   border-right-color: $color-transparent;
+  text-indent: 1px;
 }
+.toolbar-bordered > a:hover,
+.toolbar-bordered > a:focus { background: $color-transparent !important; }
 .toolbar-bordered > a:hover,
 .toolbar-bordered > a.active,
 .toolbar-bordered > a:active,

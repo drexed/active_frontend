@@ -32,6 +32,15 @@
   padding-top: 7px;
   height: 22px;
 }
+.header-brand > a > .label {
+  border-radius: 2px !important;
+  font-size: 9px;
+  float: right;
+  line-height: 1;
+  margin-top: 2px;
+  padding: 3px 3px 2px 3px;
+  text-transform: uppercase;
+}
 .header-search {
   float: left;
   margin: -6px 0 0 20px;
@@ -113,16 +122,15 @@
 .header-nav > li.lined > a:focus { border-color: inherit; }
 .header-btn-group > li > a.active,
 .header-btn-group > li > a:active,
+.header-btn-group > li > a.subactive,
 .header-nav > li.lined > a.active,
 .header-nav > li.lined > a:active,
-.header-nav > li.lined.active > a { border-color: $color-primary; }
-.header-btn-group > li > a.subactive,
+.header-nav > li.lined.active > a,
 .header-nav > li.lined > a.subactive,
-.header-nav > li.lined.subactive > a { border-color: inherit; }
-.header-btn-group-label {
-  background: $color-primary;
+.header-nav > li.lined.subactive > a { border-color: $color-primary; }
+.header-btn-group > li > a.subactive { background: $color-light-haze; }
+.header-btn-group .label {
   border-radius: 2px;
-  color: $color-white;
   display: inline-block;
   font-size: 9px;
   font-style: normal;
@@ -415,7 +423,8 @@
 .header-dark .header-collapse-title-btn:focus,
 .header-dark .header-collapse-navbar > a,
 .header-dark .header-btn-group > li.header-btn-group-nav > a:hover,
-.header-dark .header-btn-group > li.header-btn-group-nav > a:focus { background: $color-light-black; }
+.header-dark .header-btn-group > li.header-btn-group-nav > a:focus,
+.header-dark .header-btn-group > li > a.subactive { background: $color-light-black; }
 .header-dark.header-shadow { box-shadow: 0 1px 2px $color-dark-black; }
 .header-invisible,
 .header-invisible .header-btn-group,
@@ -442,7 +451,8 @@
 .header-light .header-collapse-title-btn:focus,
 .header-light .header-collapse-navbar > a,
 .header-light .header-btn-group > li.header-btn-group-nav > a:hover,
-.header-light .header-btn-group > li.header-btn-group-nav > a:focus { background: $color-dark-haze; }
+.header-light .header-btn-group > li.header-btn-group-nav > a:focus,
+.header-light .header-btn-group > li > a.subactive { background: $color-dark-haze; }
 .header-light.header-shadow { box-shadow: 0 1px 2px lighten($color-light-gray, 15%); }
 
 /* # Stripes

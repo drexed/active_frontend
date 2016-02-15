@@ -292,12 +292,14 @@ $onwhite-colors: (
   width: 100%;
 }
 .btn-group-vertical > .btn:first-child {
+  border-radius: 0;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   margin-left: 0;
 }
 .btn-group-vertical > .btn:last-child,
 .btn-group-vertical > .dropdown-toggle {
+  border-radius: 0;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }

@@ -37,7 +37,8 @@
   border-right: 1px solid;
   border-color: inherit;
 }
-.subheader-nav > li.btn-group { border-radius: 0 !important; }
+.subheader-nav > li.btn-group,
+.subheader-nav > li.btn-group a { border-radius: 0 !important; }
 .subheader-nav > li.btn-group + li.btn-group { margin: 0 !important; }
 .subheader-nav > li > a {
   border-bottom: 4px solid $color-transparent;

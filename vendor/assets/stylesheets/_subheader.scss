@@ -37,6 +37,8 @@
   border-right: 1px solid;
   border-color: inherit;
 }
+.subheader-nav > li.btn-group { border-radius: 0 !important; }
+.subheader-nav > li.btn-group + li.btn-group { margin: 0 !important; }
 .subheader-nav > li > a {
   border-bottom: 4px solid $color-transparent;
   box-sizing: border-box;
@@ -118,5 +120,6 @@ only screen and (                min-resolution: 2dppx) {
   .subheader-nav > li,
   .subheader-nav > li:last-child { border-width: 0.5px; }
   .subheader-nav > li { font-weight: 500; }
+  .subheader-nav > li > a { padding-bottom: 7.5px; }
   .subheader-nav-toolbar-adjustment { margin-left: 34.5px; }
 }

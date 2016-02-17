@@ -56,30 +56,30 @@
 .canvas-section-with-header,
 .canvas-section-with-header-and-footer { margin-top: 60px; }
 .canvas-section-with-header-and-subheader,
-.canvas-section-with-header-and-subheader-and-footer { margin-top: 96px; }
+.canvas-section-with-header-and-subheader-and-footer { margin-top: 100px; }
 .canvas-section-with-header {
   min-height: calc(100% - 60px) !important;
   height: calc(100% - 60px) !important;
 }
 .canvas-section-with-header-and-subheader {
-  min-height: calc(100% - 96px) !important;
-  height: calc(100% - 96px) !important;
+  min-height: calc(100% - 100px) !important;
+  height: calc(100% - 100px) !important;
 }
 .canvas-section-with-header-and-footer {
   min-height: calc(100% - 90px) !important;
   height: calc(100% - 90px) !important;
 }
 .canvas-section-with-header-and-subheader-and-footer {
-  min-height: calc(100% - 126px) !important;
-  height: calc(100% - 126px) !important;
+  min-height: calc(100% - 130px) !important;
+  height: calc(100% - 130px) !important;
 }
 .canvas-section-with-footer {
   min-height: calc(100% - 30px) !important;
   height: calc(100% - 30px) !important;
 }
 .canvas-section-with-subheader-and-footer {
-  min-height: calc(100% - 66px) !important;
-  height: calc(100% - 66px) !important;
+  min-height: calc(100% - 70px) !important;
+  height: calc(100% - 70px) !important;
 }
 
 /* # Media Queries

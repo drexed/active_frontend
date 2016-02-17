@@ -1,8 +1,8 @@
 /* Table of Contents
 ==================================================
 # Toolbar
-# Colors
 # Styles
+# Colors
 # Media Queries */
 
 /* # Toolbar
@@ -60,6 +60,28 @@
   width: 80px;
 }
 
+/* # Styles
+================================================== */
+.toolbar-bordered > a {
+  background: $color-transparent !important;
+  border-right: 4px solid $color-transparent !important;
+  text-indent: 1px;
+}
+.toolbar-bordered > a:hover,
+.toolbar-bordered > a:focus {
+  border-left-color: inherit !important;
+  border-right-color: inherit !important;
+}
+.toolbar-bordered > a.active,
+.toolbar-bordered > a:active {
+  border-left-color: $color-primary !important;
+  border-right-color: $color-primary !important;
+}
+.toolbar-bordered.toolbar-alt > a {
+  border-left: 4px solid $color-transparent !important;
+  border-right: 0 !important;
+}
+
 /* # Colors
 ================================================== */
 .toolbar-dark {
@@ -79,26 +101,6 @@
 .toolbar-light > a.active,
 .toolbar-light > a:active,
 .toolbar-light > a:focus { background: $color-haze; }
-
-/* # Styles
-================================================== */
-.toolbar-bordered > a {
-  background: $color-transparent !important;
-  border-right: 4px solid $color-transparent !important;
-  text-indent: 1px;
-}
-.toolbar-bordered > a:hover,
-.toolbar-bordered > a.active,
-.toolbar-bordered > a:active,
-.toolbar-bordered > a:focus { border-right-color: $color-primary !important; }
-.toolbar-bordered.toolbar-alt > a {
-  border-left: 4px solid $color-transparent !important;
-  border-right: 0 !important;
-}
-.toolbar-bordered.toolbar-alt > a:hover,
-.toolbar-bordered.toolbar-alt > a.active,
-.toolbar-bordered.toolbar-alt > a:active,
-.toolbar-bordered.toolbar-alt > a:focus { border-left-color: $color-primary !important; }
 
 /* # Media Queries
 ================================================== */

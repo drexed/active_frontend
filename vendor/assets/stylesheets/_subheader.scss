@@ -13,7 +13,7 @@
   border-color: $color-haze;
   box-sizing: border-box;
   color: inherit;
-  height: 36px;
+  height: 40px;
   min-width: 100%;
   width: 100%;
 }
@@ -44,8 +44,8 @@
   border-bottom: 4px solid $color-transparent;
   box-sizing: border-box;
   display: block;
-  height: 35px;
-  padding: 12px 20px 8px 20px;
+  height: 40px;
+  padding: 14px 20px 10px 20px;
   min-width: 160px;
   text-align: center;
 }
@@ -64,7 +64,7 @@
   padding: 4px 5px 3px 5px;
   vertical-align: middle;
 }
-.subheader-btn-group { margin-top: 6px; }
+.subheader-btn-group { margin-top: 8px; }
 
 /* # Styles
 ================================================== */
@@ -119,6 +119,5 @@ only screen and (                min-resolution: 2dppx) {
   .subheader-nav > li,
   .subheader-nav > li:last-child { border-width: 0.5px; }
   .subheader-nav > li { font-weight: 500; }
-  .subheader-nav > li > a { height: 35.5px; }
   .subheader-nav-toolbar-adjustment { margin-left: 34.5px; }
 }

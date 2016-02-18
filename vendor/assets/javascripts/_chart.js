@@ -64,7 +64,7 @@
       scaleStartValue: null,
 
       // String - Colour of the scale line
-      scaleLineColor: "rgba(237,239,241,1)",
+      scaleLineColor: "rgba(235,237,239,1)",
 
       // Number - Pixel width of the scale line
       scaleLineWidth: 1,
@@ -91,7 +91,7 @@
       scaleFontStyle: "bold",
 
       // String - Scale label font colour
-      scaleFontColor: "rgba(27,30,34,1)",
+      scaleFontColor: "rgba(36,40,46,1)",
 
       // Boolean - whether or not the chart should be responsive and resize when the browser does.
       responsive: true,
@@ -109,7 +109,7 @@
       tooltipEvents: ["mousemove", "touchstart", "touchmove", "mouseout"],
 
       // String - Tooltip background colour
-      tooltipFillColor: "rgba(27,30,34,1)",
+      tooltipFillColor: "rgba(36,40,46,1)",
 
       // String - Tooltip label font declaration for the scale label
       tooltipFontFamily: "'Gotham Round', 'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
@@ -166,32 +166,32 @@
       segmentColorDefault: [
         "rgba(151,212,19,1)",
         "rgba(75,173,8,1)",
-        "rgba(59,187,178,1)",
+        "rgba(69,195,196,1)",
         "rgba(0,102,255,1)",
         "rgba(86,21,237,1)",
-        "rgba(115,24,242,1)",
+        "rgba(124,39,243,1)",
         "rgba(255,0,102,1)",
         "rgba(240,35,17,1)",
-        "rgba(255,102,0,1)",
+        "rgba(248,122,9,1)",
         "rgba(255,209,0,1)",
         "rgba(50,56,64,1)",
-        "rgba(106,122,138,1)"
+        "rgba(126,137,150,1)"
       ],
 
       // Array - A list of highlight colors to use as the defaults
       segmentHighlightColorDefaults: [
         "rgba(151,212,19,0.1)",
         "rgba(75,173,8,0.1)",
-        "rgba(59,187,178,0.1)",
+        "rgba(69,195,196,0.1)",
         "rgba(0,102,255,0.1)",
         "rgba(86,21,237,0.1)",
-        "rgba(115,24,242,0.1)",
+        "rgba(124,39,243,0.1)",
         "rgba(255,0,102,0.1)",
         "rgba(240,35,17,0.1)",
-        "rgba(255,102,0,0.1)",
+        "rgba(248,122,9,0.1)",
         "rgba(255,209,0,0.1)",
         "rgba(50,56,64,0.1)",
-        "rgba(106,122,138,0.1)"
+        "rgba(126,137,150,0.1)"
       ],
 
       // Function - Will fire on animation progression.
@@ -2280,7 +2280,7 @@
     scaleShowGridLines : true,
 
     //String - Colour of the grid lines
-    scaleGridLineColor : "rgba(237,239,241,1)",
+    scaleGridLineColor : "rgba(235,237,239,1)",
 
     //Number - Width of the grid lines
     scaleGridLineWidth : 1,
@@ -2776,7 +2776,7 @@
     scaleShowGridLines : true,
 
     //String - Colour of the grid lines
-    scaleGridLineColor : "rgba(237,239,241,1)",
+    scaleGridLineColor : "rgba(235,237,239,1)",
 
     //Number - Width of the grid lines
     scaleGridLineWidth : 1,
@@ -3423,7 +3423,7 @@
       scaleBeginAtZero : true,
 
       //String - Colour of the angle line
-      angleLineColor : "rgba(237,239,241,1)",
+      angleLineColor : "rgba(235,237,239,1)",
 
       //Number - Pixel width of the angle line
       angleLineWidth : 1,
@@ -3438,7 +3438,7 @@
       pointLabelFontSize : 11,
 
       //String - Point label font colour
-      pointLabelFontColor : "rgba(27,30,34,1)",
+      pointLabelFontColor : "rgba(36,40,46,1)",
 
       //Boolean - Whether to show a dot for each point
       pointDot : true,

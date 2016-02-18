@@ -2,19 +2,20 @@
 ==================================================
 # Grayscale Colors
 # Base Colors
-# Alt Colors */
+# Alt Grayscale Colors
+# Alt Base Colors */
 
 /* # Grayscale Colors
 ================================================== */
 $color-transparent: rgba(0,0,0,0);
-$color-dark-black: rgba(27,30,34,1);
+$color-dark-black: rgba(36,40,46,1);
 $color-black: rgba(50,56,64,1);
-$color-light-black: rgba(64,72,82,1);
-$color-dark-gray: rgba(71,82,93,1);
-$color-gray: rgba(106,122,138,1);
-$color-light-gray: rgba(151,163,175,1);
+$color-light-black: rgba(72,80,91,1);
+$color-dark-gray: rgba(99,111,126,1);
+$color-gray: rgba(126,137,150,1);
+$color-light-gray: rgba(152,162,174,1);
 $color-dark-haze: rgba(224,226,228,1);
-$color-haze: rgba(237,239,241,1);
+$color-haze: rgba(235,237,239,1);
 $color-light-haze: rgba(245,247,249,1);
 $color-white: rgba(255,255,255,1);
 
@@ -22,24 +23,33 @@ $color-white: rgba(255,255,255,1);
 ================================================== */
 $color-lime: rgba(151,212,19,1);
 $color-green: rgba(75,173,8,1);
-$color-teal: rgba(59,187,178,1);
+$color-teal: rgba(69,195,196,1);
 $color-blue: rgba(0,102,255,1);
 $color-indigo: rgba(86,21,237,1);
-$color-purple: rgba(115,24,242,1);
+$color-purple: rgba(124,39,243,1);
 $color-pink: rgba(255,0,102,1);
 $color-red: rgba(240,35,17,1);
-$color-orange: rgba(255,102,0,1);
+$color-orange: rgba(248,122,9,1);
 $color-yellow: rgba(255,209,0,1);
 
-/* # Alt Colors
-==================================================
-# Blue Tint
-$color-dark-black: rgba(16,18,25,1) or #101219;
-$color-black: rgba(35,40,55,1) or #232837;
-$color-light-black: rgba(48,54,75,1) or #30364B;
+/* # Alt Grayscale Colors
+================================================== */
+$color-dark-black-alt-1: rgba(24,27,37,1);
+$color-black-alt-1: rgba(36,41,56,1);
+$color-light-black-alt-1: rgba(48,54,75,1);
+$color-dark-black-alt-2: rgba(24,19,32,1);
+$color-black-alt-2: rgba(42,34,55,1);
+$color-light-black-alt-2: rgba(59,48,77,1);
 
-# Purple Tint
-$color-dark-black: rgba(24,19,32,1) or #181320;
-$color-black: rgba(41,32,56,1) or #292038;
-$color-light-black: rgba(59,48,77,1) or #3B304D;
-*/
+/* # Alt Base Colors
+================================================== */
+$color-lime-alt: rgba(181,228,78,1);
+$color-green-alt: rgba(139,200,65,1);
+$color-teal-alt: rgba(120,206,205,1);
+$color-blue-alt: rgba(0,153,255,1);
+$color-indigo-alt: rgba(94,94,237,1);
+$color-purple-alt: rgba(140,75,251,1);
+$color-pink-alt: rgba(255,64,127,1);
+$color-red-alt: rgba(255,72,71,1);
+$color-orange-alt: rgba(254,152,72,1);
+$color-yellow-alt: rgba(252,232,73,1);

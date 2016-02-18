@@ -40,7 +40,7 @@ table {
   line-height: 25px;
 }
 .table caption {
-  border-bottom: 1px solid;
+  // border-bottom: 1px solid;
   border-color: inherit;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -73,7 +73,6 @@ table {
 .table thead tr th.tablespy-sort-none { cursor: pointer; }
 .table thead tr th.tablespy-sort-empty:before { content: ""; }
 .table thead tr th.tablespy-sort-empty { pointer-events: none; }
-.table caption + thead tr:first-child th,
 .table colgroup + thead tr:first-child th,
 .table thead:first-child tr:first-child th { border-top: 0; }
 .table tbody + tbody {

@@ -29,7 +29,7 @@ module ActiveFrontendHelper
       orange:            { rgba: "rgba(248,122,9,#{opacity})",   hex: "#F87A09" },
       yellow:            { rgba: "rgba(255,209,0,#{opacity})",   hex: "#FFD100" },
       lime_alt:          { rgba: "rgba(181,228,78,#{opacity})",  hex: "#B5E44E" },
-      green_alt:         { rgba: "rgba(139,200,65,#{opacity})",  hex: "#64C21C" },
+      green_alt:         { rgba: "rgba(100,194,28,#{opacity})",  hex: "#64C21C" },
       teal_alt:          { rgba: "rgba(120,206,205,#{opacity})", hex: "#78CECD" },
       blue_alt:          { rgba: "rgba(0,153,255,#{opacity})",   hex: "#0099FF" },
       indigo_alt:        { rgba: "rgba(94,94,237,#{opacity})",   hex: "#5E5EED" },

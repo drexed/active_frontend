@@ -165,7 +165,7 @@
       // Array - A list of colors to use as the defaults
       segmentColorDefault: [
         "rgba(151,212,19,1)",
-        "rgba(100,194,28,1)",
+        "rgba(75,173,8,1)",
         "rgba(69,195,196,1)",
         "rgba(0,102,255,1)",
         "rgba(86,21,237,1)",
@@ -181,7 +181,7 @@
       // Array - A list of highlight colors to use as the defaults
       segmentHighlightColorDefaults: [
         "rgba(151,212,19,0.1)",
-        "rgba(100,194,28,0.1)",
+        "rgba(75,173,8,0.1)",
         "rgba(69,195,196,0.1)",
         "rgba(0,102,255,0.1)",
         "rgba(86,21,237,0.1)",

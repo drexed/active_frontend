@@ -216,12 +216,23 @@
   background: $color-tertiary;
   border-color: $color-tertiary;
 }
+.header-nav-alt > li.inverse.dark > a {
+  background: $color-black;
+  border-color: $color-black;
+}
+.header-nav-alt > li.inverse.light > a {
+  background: $color-white;
+  border-color: $color-white;
+  color: $color-dark-black;
+}
 .header-nav-alt > li.inverse.outline > a {
   background: $color-transparent;
   color: $color-primary;
 }
 .header-nav-alt > li.inverse.outline.secondary > a { color: $color-secondary; }
 .header-nav-alt > li.inverse.outline.tertiary > a { color: $color-tertiary; }
+.header-nav-alt > li.inverse.outline.dark > a { color: $color-dark-black; }
+.header-nav-alt > li.inverse.outline.light > a { color: $color-white; }
 .header-nav-alt > li.inverse > a:hover,
 .header-nav-alt > li.inverse > a.active,
 .header-nav-alt > li.inverse > a:active,
@@ -245,6 +256,22 @@
   background: darken($color-tertiary, 2%);
   border-color: darken($color-tertiary, 2%);
   color: $color-white;
+}
+.header-nav-alt > li.inverse.dark > a:hover,
+.header-nav-alt > li.inverse.dark > a.active,
+.header-nav-alt > li.inverse.dark > a:active,
+.header-nav-alt > li.inverse.dark > a:focus {
+  background: darken($color-black, 2%);
+  border-color: darken($color-black, 2%);
+  color: $color-white;
+}
+.header-nav-alt > li.inverse.light > a:hover,
+.header-nav-alt > li.inverse.light > a.active,
+.header-nav-alt > li.inverse.light > a:active,
+.header-nav-alt > li.inverse.light > a:focus {
+  background: darken($color-white, 2%);
+  border-color: darken($color-white, 2%);
+  color: $color-dark-black;
 }
 .header-collapse {
   background: $color-white;

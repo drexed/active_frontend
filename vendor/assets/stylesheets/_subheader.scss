@@ -97,13 +97,13 @@
 /* # Media Queries
 ================================================== */
 @media only screen and (max-width: 1365px) {
-  .subheader-nav > li > a { min-width: 140px; }
+  .subheader-nav > li > a { min-width: 130px; }
 }
 @media only screen and (max-width: 1199px) {
-  .subheader-nav > li > a { min-width: 120px; }
+  .subheader-nav > li > a { min-width: 100px; }
 }
 @media only screen and (max-width: 959px) {
-  .subheader-nav > li > a { min-width: 100px; }
+  .subheader-nav > li > a { min-width: 70px; }
 }
 @media only screen and (max-width: 767px) {
   .subheader { display: none; }

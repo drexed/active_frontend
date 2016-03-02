@@ -200,7 +200,8 @@ select[disabled] {
   border-collapse: separate;
   border-spacing: 0;
   display: table;
-  margin-bottom: 5px;
+  margin: 2px 0 5px 0;
+  padding: 0;
   position: relative;
   width: 100%;
 }

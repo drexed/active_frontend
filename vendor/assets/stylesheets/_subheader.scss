@@ -53,6 +53,7 @@
 .subheader-nav > li > a:focus { border-color: inherit; }
 .subheader-nav > li > a.active,
 .subheader-nav > li > a:active { border-color: $color-primary; }
+.subheader-nav-large > li > a { min-width: 220px; }
 .subheader-nav .label {
   border-radius: 2px;
   font-size: 9px;
@@ -98,12 +99,15 @@
 ================================================== */
 @media only screen and (max-width: 1365px) {
   .subheader-nav > li > a { min-width: 130px; }
+  .subheader-nav-large > li > a { min-width: 200px; }
 }
 @media only screen and (max-width: 1199px) {
   .subheader-nav > li > a { min-width: 100px; }
+  .subheader-nav-large > li > a { min-width: 200px; }
 }
 @media only screen and (max-width: 959px) {
   .subheader-nav > li > a { min-width: 70px; }
+  .subheader-nav-large > li > a { min-width: 180px; }
 }
 @media only screen and (max-width: 767px) {
   .subheader { display: none; }

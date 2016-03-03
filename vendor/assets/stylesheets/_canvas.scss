@@ -1,7 +1,6 @@
 /* Table of Contents
 ==================================================
 # Canvas
-# Canvas Alt
 # Media Queries */
 
 /* # Canvas
@@ -41,9 +40,17 @@
   max-width: calc(100% - 55px);
   width: calc(100% - 55px);
 }
+.canvas-content-with-dual-toolbar {
+  max-width: calc(100% - 110px);
+  width: calc(100% - 110px);
+}
 .canvas-content-with-sidebar-and-toolbar {
   max-width: calc(100% - 335px);
   width: calc(100% - 335px);
+}
+.canvas-content-with-sidebar-and-dual-toolbar {
+  max-width: calc(100% - 390px);
+  width: calc(100% - 390px);
 }
 .canvas-sidebar {
   max-width: 280px;
@@ -97,6 +104,10 @@
     max-width: calc(100% - 305px);
     width: calc(100% - 305px);
   }
+  .canvas-content-with-sidebar-and-dual-toolbar {
+    max-width: calc(100% - 360px);
+    width: calc(100% - 360px);
+  }
 }
 @media only screen and (max-width: 1199px) {
   .canvas-sidebar {
@@ -110,6 +121,10 @@
   .canvas-content-with-sidebar-and-toolbar {
     max-width: calc(100% - 275px);
     width: calc(100% - 275px);
+  }
+  .canvas-content-with-sidebar-and-dual-toolbar {
+    max-width: calc(100% - 330px);
+    width: calc(100% - 330px);
   }
 }
 @media only screen and (max-width: 959px) {
@@ -125,13 +140,18 @@
     max-width: calc(100% - 255px);
     width: calc(100% - 255px);
   }
+  .canvas-content-with-sidebar-and-dual-toolbar {
+    max-width: calc(100% - 310px);
+    width: calc(100% - 310px);
+  }
 }
 @media only screen and (max-width: 767px) {
   .canvas-sidebar,
   .canvas-toolbar { display: none; }
   .canvas-content-with-sidebar,
   .canvas-content-with-toolbar,
-  .canvas-content-with-sidebar-and-toolbar {
+  .canvas-content-with-sidebar-and-toolbar,
+  .canvas-content-with-sidebar-and-dual-toolbar {
     max-width: 100%;
     width: 100%;
   }

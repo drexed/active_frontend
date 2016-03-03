@@ -65,7 +65,12 @@
 .toolbar-bordered > a {
   background: $color-transparent !important;
   border-right: 4px solid $color-transparent !important;
-  text-indent: 1px;
+  text-indent: 1.5px;
+}
+.toolbar-bordered.toolbar-alt > a {
+  border-left: 4px solid $color-transparent !important;
+  border-right: 0 !important;
+  text-indent: -1.5px;
 }
 .toolbar-bordered > a:hover,
 .toolbar-bordered > a:focus {
@@ -76,10 +81,6 @@
 .toolbar-bordered > a:active {
   border-left-color: $color-primary !important;
   border-right-color: $color-primary !important;
-}
-.toolbar-bordered.toolbar-alt > a {
-  border-left: 4px solid $color-transparent !important;
-  border-right: 0 !important;
 }
 
 /* # Colors
@@ -117,4 +118,6 @@ only screen and (                min-resolution: 2dppx) {
   .toolbar,
   .toolbar-alt,
   .toolbar > a { border-width: 0.5px; }
+  .toolbar-bordered > a { text-indent: 2px; }
+  .toolbar-bordered.toolbar-alt > a { text-indent: -2px; }
 }

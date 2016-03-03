@@ -55,9 +55,23 @@
   cursor: not-allowed;
   pointer-events: none;
 }
+.toolbar > a > .label {
+  border-radius: 2px;
+  font-size: 9px;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 5px 0 0 -5px;
+  min-width: 19px;
+  padding: 4px 5px 3px 5px;
+  position: absolute;
+  text-indent: 0 !important;
+  vertical-align: middle;
+}
+.toolbar-alt > a > .label { margin-left: 5px; }
 .toolbar > .tooltip {
-  min-width: 80px;
-  width: 80px;
+  min-width: 90px;
+  width: 90px;
 }
 
 /* # Styles

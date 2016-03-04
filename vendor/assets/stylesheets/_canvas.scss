@@ -63,30 +63,30 @@
 .canvas-section-with-header,
 .canvas-section-with-header-and-footer { margin-top: 60px; }
 .canvas-section-with-header-and-subheader,
-.canvas-section-with-header-and-subheader-and-footer { margin-top: 100px; }
+.canvas-section-with-header-and-subheader-and-footer { margin-top: 102px; }
 .canvas-section-with-header {
   min-height: calc(100% - 60px) !important;
   height: calc(100% - 60px) !important;
 }
 .canvas-section-with-header-and-subheader {
-  min-height: calc(100% - 100px) !important;
-  height: calc(100% - 100px) !important;
+  min-height: calc(100% - 102px) !important;
+  height: calc(100% - 102px) !important;
 }
 .canvas-section-with-header-and-footer {
   min-height: calc(100% - 90px) !important;
   height: calc(100% - 90px) !important;
 }
 .canvas-section-with-header-and-subheader-and-footer {
-  min-height: calc(100% - 130px) !important;
-  height: calc(100% - 130px) !important;
+  min-height: calc(100% - 132px) !important;
+  height: calc(100% - 132px) !important;
 }
 .canvas-section-with-footer {
   min-height: calc(100% - 30px) !important;
   height: calc(100% - 30px) !important;
 }
 .canvas-section-with-subheader-and-footer {
-  min-height: calc(100% - 70px) !important;
-  height: calc(100% - 70px) !important;
+  min-height: calc(100% - 72px) !important;
+  height: calc(100% - 72px) !important;
 }
 
 /* # Media Queries
@@ -150,6 +150,7 @@
   .canvas-toolbar { display: none; }
   .canvas-content-with-sidebar,
   .canvas-content-with-toolbar,
+  .canvas-content-with-dual-toolbar,
   .canvas-content-with-sidebar-and-toolbar,
   .canvas-content-with-sidebar-and-dual-toolbar {
     max-width: 100%;

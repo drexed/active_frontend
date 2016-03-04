@@ -107,7 +107,10 @@
 .toolbar-dark > a:hover,
 .toolbar-dark > a.active,
 .toolbar-dark > a:active,
-.toolbar-dark > a:focus { background: $color-light-black; }
+.toolbar-dark > a:focus {
+  background: $color-light-black;
+  border-bottom-color: $color-dark-black !important;
+}
 .toolbar-light {
   background: $color-light-haze;
   border-color: $color-dark-haze !important;
@@ -115,7 +118,10 @@
 .toolbar-light > a:hover,
 .toolbar-light > a.active,
 .toolbar-light > a:active,
-.toolbar-light > a:focus { background: $color-haze; }
+.toolbar-light > a:focus {
+  background: $color-haze;
+  border-bottom-color: $color-dark-haze !important;
+}
 
 /* # Media Queries
 ================================================== */

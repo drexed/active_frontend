@@ -45,7 +45,7 @@
   border-bottom: 4px solid $color-transparent;
   box-sizing: border-box;
   display: block;
-  height: 42px;
+  height: 41px;
   padding: 15px 20px 11px 20px;
   min-width: 160px;
   text-align: center;
@@ -179,7 +179,7 @@
   border-color: inherit;
   padding: 10px;
 }
-.subheader-btn-group { margin-top: 9px; }
+.subheader-btn-group { margin-top: 8px; }
 
 /* # Styles
 ================================================== */
@@ -245,6 +245,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
+  .subheader-nav > li > a { height: 41.5px; }
   .subheader,
   .subheader-nav > li,
   .subheader-nav > li:last-child,

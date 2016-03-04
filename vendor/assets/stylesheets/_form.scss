@@ -249,6 +249,7 @@ select[disabled] {
   color: $color-gray;
   padding: 0 13px;
 }
+.form-input-group-addon > label { margin-top: 7px !important; }
 .form-input-group-addon > i {
   display: block;
   font-size: 19px;
@@ -505,14 +506,14 @@ select[disabled] {
 .form-condensed .form-input-group-addon i,
 .form-condensed .form-file-group-addon i { font-size: 14px; }
 .form-condensed input,
-.form-condensed textarea,
-.form-condensed select {
+.form-condensed textarea {
   font-size: 12px;
-  padding-bottom: 6px;
+  padding-bottom: 7px;
   padding-top: 7px;
 }
 .form-condensed select {
-  padding-bottom: 7px;
+  font-size: 12px;
+  padding-bottom: 8px;
   padding-top: 8px;
 }
 .form-condensed button,

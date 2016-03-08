@@ -3,7 +3,7 @@
 # Reset
 # Color
 # Style
-# OS */
+# Components */
 
 /* # Reset
 ================================================== */
@@ -118,9 +118,9 @@ body {
 .html-fixed,
 .body-fixed { overflow: hidden; }
 
-/* # OS
+/* # Components
 ================================================== */
-.html-linux {
+.html-scrollbar {
   ::-webkit-scrollbar {
     background: rgba(0,0,0,0);
     border-radius: 500px;

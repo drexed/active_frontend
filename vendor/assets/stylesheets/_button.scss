@@ -262,16 +262,17 @@ $onwhite-colors: (
   border-radius: 0;
   position: relative;
 }
-.btn-group > .btn-outline { margin-left: -1px; }
 .btn-group > .btn:first-child {
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
-  margin-left: 0;
 }
-.btn-group > .btn:last-child {
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
 }
+.btn-group > .btn-outline { margin-left: -1px; }
+.btn-group > .btn-outline:first-child { margin-left: -1px; }
 .btn-group-vertical > .btn {
   display: block;
   margin-left: 0;
@@ -279,16 +280,19 @@ $onwhite-colors: (
   width: 100%;
 }
 .btn-group-vertical > .btn-outline { margin-top: -1px; }
+.btn-group-vertical > .btn-outline:first-child { margin-top: 0; }
 .btn-group-vertical > .btn:first-child {
   border-radius: 0;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
 }
-.btn-group-vertical > .btn:last-child {
+.btn-group-vertical > .btn:last-child,
+.btn-group-vertical > .dropdown-toggle {
   border-radius: 0;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
+.btn-group > .btn:only-child,
 .btn-group-vertical > .btn:only-child { border-radius: 2px; }
 .btn-group > .btn-outline:hover,
 .btn-group > .btn-outline:active,

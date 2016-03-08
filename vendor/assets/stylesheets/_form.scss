@@ -547,7 +547,9 @@ select[disabled] {
 
 /* # Colors
 ================================================== */
-.form-dark { color: $color-white; }
+.form-dark,
+.form-dark .form-input-group-addon,
+.form-dark .form-file-group-button { color: $color-white; }
 .form-dark legend,
 .form-dark select,
 .form-dark textarea,
@@ -598,7 +600,8 @@ select[disabled] {
 .form-dark textarea[disabled],
 .form-dark select[disabled],
 .form-dark .form-error-messages,
-.form-dark .form-input-group-addon { background: $color-black; }
+.form-dark .form-input-group-addon,
+.form-dark .form-file-group-button { background: $color-black; }
 .form-dark .form-checkbox,
 .form-dark .form-radio { background: $color-dark-black; }
 .form-light legend,
@@ -626,7 +629,8 @@ select[disabled] {
 .form-light input[disabled],
 .form-light textarea[disabled],
 .form-light select[disabled],
-.form-light .form-input-group-addon { background: $color-haze; }
+.form-light .form-input-group-addon,
+.form-light .form-file-group-button { background: $color-haze; }
 .form-light .form-error-messages { background: $color-white; }
 .form-light .form-checkbox,
 .form-light .form-radio { background: $color-dark-haze; }

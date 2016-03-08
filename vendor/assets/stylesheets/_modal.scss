@@ -196,5 +196,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
+  .modal-header,
+  .modal-footer,
+  .modal-footer-btn { border-width: 0.5px; }
+  .modal-footer-btn:last-child { border-right: 0; }
   .modal-header > h3 { letter-spacing: 0.5px; }
 }

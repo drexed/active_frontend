@@ -254,6 +254,10 @@ $onwhite-colors: (
   margin-left: 0;
 }
 .btn-group > .dropdown-toggle:not(:first-child) { border-left-color: rgba(0,0,0,0.1); }
+.btn-group-vertical > .dropdown-toggle:not(:first-child) {
+  border-top-color: inherit;
+  border-left-color: rgba(0,0,0,0.1);
+}
 .btn-group > .btn,
 .btn-group-vertical > .btn {
   border-radius: 0;
@@ -265,25 +269,11 @@ $onwhite-colors: (
   border-top-left-radius: 2px;
   margin-left: 0;
 }
-.btn-group > .btn:last-child,
-.btn-group > .dropdown-toggle {
+.btn-group > .btn:last-child {
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
 }
-.btn-group > .btn:active,
-.btn-group > .btn.active,
-.btn-group > .btn:hover,
-.btn-group > .btn:hover,
-.btn-group > .btn:focus,
-.btn-group-vertical > .btn:hover,
-.btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active,
-.btn-group-vertical > .btn:focus { z-index: 2; }
-.btn-group .dropdown-toggle:active,
-.btn-group.open .dropdown-toggle { outline: 0; }
-.btn-group-vertical > .btn,
-.btn-group-vertical > .btn-group,
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn {
   border-radius: 0;
   display: block;
   margin-left: 0;
@@ -296,11 +286,20 @@ $onwhite-colors: (
   border-top-left-radius: 2px;
   margin-left: 0;
 }
-.btn-group-vertical > .btn:last-child,
-.btn-group-vertical > .dropdown-toggle {
+.btn-group-vertical > .btn:last-child {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
+.btn-group > .btn:hover,
+.btn-group > .btn:active,
+.btn-group > .btn.active,
+.btn-group > .btn:focus,
+.btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active,
+.btn-group-vertical > .btn:focus { z-index: 2; }
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle { outline: 0; }
 .btn-group-block {
   border-collapse: separate;
   display: table;
@@ -340,9 +339,7 @@ $onwhite-colors: (
 /* # Media Queries
 ================================================== */
 @media only screen and (max-width: 767px) {
-  .btn-group-responsive > .btn,
-  .btn-group-responsive > .btn-group,
-  .btn-group-responsive > .btn-group > .btn {
+  .btn-group-responsive > .btn {
     border-radius: 0;
     display: block;
     margin-left: 0;
@@ -355,14 +352,11 @@ $onwhite-colors: (
     border-top-left-radius: 2px;
     margin-left: 0;
   }
-  .btn-group-responsive > .btn:last-child,
-  .btn-group-responsive > .dropdown-toggle {
+  .btn-group-responsive > .btn:last-child {
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
   }
-  .btn-group-vertical-responsive > .btn,
-  .btn-group-vertical-responsive > .btn-group,
-  .btn-group-vertical-responsive > .btn-group > .btn {
+  .btn-group-vertical-responsive > .btn {
     display: inline-block;
     margin-left: -1px;
     margin-top: 0;
@@ -374,8 +368,7 @@ $onwhite-colors: (
     border-top-right-radius: 0;
     border-top-left-radius: 2px;
   }
-  .btn-group-vertical-responsive > .btn:last-child,
-  .btn-group-vertical-responsive > .dropdown-toggle {
+  .btn-group-vertical-responsive > .btn:last-child {
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 0;
     border-top-right-radius: 2px;
@@ -389,4 +382,5 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .btn-group > .dropdown-toggle:not(:first-child) { border-left-width: 0.5px; }
+  .btn-group-vertical > .dropdown-toggle:not(:first-child) { border-top-width: 0.5px; }
 }

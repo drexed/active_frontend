@@ -280,10 +280,12 @@ $onwhite-colors: (
 }
 .btn-group-vertical > .btn-outline { margin-top: -1px; }
 .btn-group-vertical > .btn:first-child {
+  border-radius: 0;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
 }
 .btn-group-vertical > .btn:last-child {
+  border-radius: 0;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }

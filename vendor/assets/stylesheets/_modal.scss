@@ -29,12 +29,16 @@
   top: -100%;
 }
 .modal.fade.in { top: 15%; }
-.modal form { border-color: inherit; }
+.modal form {
+  border-color: inherit;
+  color: inherit;
+}
 .modal-header {
   border-bottom: 1px solid;
   border-color: inherit;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  color: inherit;
   padding: 23px 15px 20px 15px;
 }
 .modal-header > h1,
@@ -43,6 +47,7 @@
 .modal-header > h4,
 .modal-header > h5,
 .modal-header > h6 {
+  color: inherit;
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 1;
@@ -52,6 +57,7 @@
   text-transform: uppercase;
 }
 .modal-body {
+  color: inherit;
   max-height: 300px;
   overflow-y: auto;
   padding: 15px 18px;
@@ -63,6 +69,7 @@
   border-color: inherit;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  color: inherit;
 }
 .modal-footer:after { clear: both; }
 .modal-footer-btn {

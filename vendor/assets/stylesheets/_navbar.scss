@@ -11,9 +11,10 @@
   background: $color-white;
   border-collapse: separate;
   border-top: 1px solid $color-haze;
+  box-sizing: border-box;
   color: $color-dark-black;
   display: table;
-  height: 49px;
+  height: 50px;
   line-height: 1;
   table-layout: fixed;
   width: 100%;
@@ -21,7 +22,7 @@
 .navbar > a {
   display: table-cell;
   float: none;
-  font-size: 27px;
+  font-size: 24px;
   text-align: center;
   vertical-align: middle;
   width: 1%;
@@ -30,18 +31,6 @@
 .navbar > a.active,
 .navbar > a:active,
 .navbar > a:focus { color: $color-primary; }
-.navbar > a.filled {
-  background: $color-primary;
-  color: $color-white;
-}
-.navbar > a.filled:hover,
-.navbar > a.filled.active,
-.navbar > a.filled:active,
-.navbar > a.filled:focus { background: darken($color-primary, 5%); }
-.navbar > a > i {
-  display: inline-block;
-  margin-top: 2px;
-}
 
 /* # Styles
 ================================================== */
@@ -50,8 +39,9 @@
   position: fixed;
   min-width: inherit;
   width: inherit;
-  z-index: 1030;
+  z-index: 1040;
 }
+.navbar-shadow { box-shadow: 0 0 3px lighten($color-light-gray, 20%); }
 
 /* # Colors
 ================================================== */
@@ -60,10 +50,12 @@
   border-color: $color-dark-black;
   color: $color-white;
 }
+.navbar-dark.navbar-shadow { box-shadow: 0 0 3px $color-dark-black; }
 .navbar-light {
   background: $color-light-haze;
   border-color: $color-dark-haze;
 }
+.navbar-light.navbar-shadow { box-shadow: 0 0 3px lighten($color-light-gray, 15%); }
 
 /* # Media Queries
 ================================================== */

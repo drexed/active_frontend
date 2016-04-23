@@ -20,7 +20,7 @@
   border-radius: 3px;
   box-sizing: border-box;
   color: $color-dark-black;
-  display: block;
+  display: none;
   float: left;
   font-size: 12px;
   font-weight: bold;
@@ -29,14 +29,12 @@
   list-style: none;
   margin: 2px 0 0 0;
   min-width: 180px;
-  opacity: 0;
   padding: 8px 0;
   position: absolute;
   text-align: left;
   text-transform: none;
   @include transition(all 0.09s ease-in-out);
   top: 100%;
-  visibility: hidden;
   z-index: 1040;
 }
 .dropdown-menu.pull-right {
@@ -91,9 +89,10 @@
   padding: 4px 6px;
 }
 .open > .dropdown-menu {
+  @include animation-duration(0.5s);
+  @include animation-fill-mode(both);
+  @include animation-name(animation-bounce-in);
   display: block;
-  opacity: 1;
-  visibility: visible;
 }
 .pull-right > .dropdown-menu {
   left: auto;
@@ -140,10 +139,14 @@
   margin-top: -6px;
   top: 0;
 }
-.dropdown-submenu:hover > .dropdown-menu {
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:active > .dropdown-menu,
+.dropdown-submenu.active > .dropdown-menu,
+.dropdown-submenu:focus > .dropdown-menu {
+  @include animation-duration(0.5s);
+  @include animation-fill-mode(both);
+  @include animation-name(animation-bounce-in);
   display: block;
-  opacity: 1;
-  visibility: visible;
 }
 .dropdown-submenu > a:after {
   content: " ";

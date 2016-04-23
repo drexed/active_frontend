@@ -48,7 +48,7 @@ input[type="tel"],
 input[type="color"] {
   @include appearance(none);
   background: $color-white;
-  border: 1px solid $color-haze;
+  border: 2px solid $color-light-haze;
   border-radius: 2px;
   box-sizing: border-box;
   color: inherit;
@@ -113,28 +113,24 @@ select:focus:invalid:focus { border-color: $color-red !important; }
 input[disabled],
 textarea[disabled],
 select[disabled] {
-  background: $color-light-haze;
-  color: $color-gray;
+  background: lighten($color-light-haze, 2%);
+  color: $color-light-gray;
   cursor: not-allowed;
 }
 ::-webkit-input-placeholder {
-  color: $color-gray;
-  font-weight: 200;
+  color: $color-light-gray;
   line-height: 18px;
 }
 :-moz-placeholder {
-  color: $color-gray;
-  font-weight: 200;
+  color: $color-light-gray;
   line-height: 18px;
 }
 ::-moz-placeholder {
-  color: $color-gray;
-  font-weight: 200;
+  color: $color-light-gray;
   line-height: 18px;
 }
 :-ms-input-placeholder {
-  color: $color-gray;
-  font-weight: 200;
+  color: $color-light-gray;
   line-height: 18px;
 }
 
@@ -166,7 +162,7 @@ select[disabled] {
 .form-error-messages > h4,
 .form-error-messages > h5,
 .form-error-messages > h6 {
-  background: $color-light-haze;
+  background: lighten($color-light-haze, 2%);
   border: 1px solid;
   border-color: inherit !important;
   border-top-left-radius: 2px;
@@ -241,26 +237,23 @@ select[disabled] {
 }
 .form-input-group-addon,
 .form-file-group-button {
-  background: $color-light-haze;
-  border: 1px solid $color-haze;
+  background: $color-white;
+  border: 2px solid $color-light-haze;
   border-right: 0;
 }
-.form-input-group-addon {
-  color: $color-gray;
-  padding: 0 13px;
-}
+.form-input-group-addon { padding: 0 13px; }
 .form-input-group-addon > label { margin-top: 7px !important; }
-.form-input-group-addon > i {
-  display: block;
-  font-size: 19px;
-  margin-top: 2px;
-}
+.form-input-group-addon > i { font-size: 20px; }
 .form-file-group-button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  margin: 0 -1px 0 0;
-  padding: 14px 20px;
+  margin: 0 -0.5px 0 0;
+  padding: 12px 20px;
 }
+.form-file-group-button:hover,
+.form-file-group-button.active,
+.form-file-group-button:active,
+.form-file-group-button:focus { background: lighten($color-light-haze, 2%); }
 .form-input-group-addon > input[type="radio"],
 .form-input-group-addon > input[type="checkbox"] { margin: 0; }
 .form-floating-label {
@@ -271,7 +264,7 @@ select[disabled] {
   font-size: 10px;
   font-style: normal;
   font-weight: 500;
-  left: 10px;
+  left: 12px;
   opacity: 0;
   position: absolute;
   @include transition(all 0.3s ease-in-out);
@@ -288,7 +281,7 @@ select[disabled] {
 .form-floating-label > textarea:focus + label,
 .form-floating-label > textarea:focus:invalid + label {
   opacity: 1;
-  top: 2px;
+  top: 0;
 }
 .form-floating-label > input:focus + label,
 .form-floating-label > textarea:focus + label { color: $color-green; }
@@ -315,14 +308,14 @@ select[disabled] {
   position: absolute;
 }
 .form-select::after {
-  content: "\f3d0";
-  font-family: "Ionicons";
-  font-size: 18px;
+  content: "\54";
+  font-family: "dripicons";
+  font-size: 20px;
   font-style: normal;
   font-weight: normal;
-  height: 18px;
+  height: 20px;
   line-height: 1;
-  margin-top: -9px;
+  margin-top: -10px;
   right: 16px;
   top: 50%;
 }
@@ -353,7 +346,7 @@ select[disabled] {
 }
 .form-checkbox,
 .form-radio {
-  background: $color-haze;
+  background: $color-light-haze;
   border-radius: 2px;
   display: inline-block;
   height: 22px;
@@ -365,11 +358,11 @@ select[disabled] {
   background: $color-white;
   border-radius: 1px;
   cursor: pointer;
-  height: 20px;
-  left: 1px;
+  height: 18px;
+  left: 2px;
   position: absolute;
-  top: -4px;
-  width: 20px;
+  top: -3px;
+  width: 18px;
 }
 .form-checkbox > label:after,
 .form-radio > label:after {
@@ -386,14 +379,14 @@ select[disabled] {
   height: 4px;
   left: 3px;
   @include transform(rotate(-45deg));
-  top: 5px;
+  top: 4px;
   width: 10px;
 }
 .form-radio > label:after {
   background: $color-green;
   height: 12px;
-  left: 4px;
-  top: 4px;
+  left: 3px;
+  top: 3px;
   width: 12px;
 }
 .form-radio,
@@ -412,10 +405,10 @@ select[disabled] {
   width: initial;
 }
 .form-slider-label {
-  font-size: 11px;
+  font-size: 13px;
   font-style: normal;
   font-weight: bold;
-  margin: 5px 0;
+  margin: 3px 0;
 }
 .form-footer {
   border-top: 1px solid $color-haze;
@@ -471,8 +464,9 @@ select[disabled] {
 .form-inline input[type="submit"],
 .form-inline input[type="reset"],
 .form-inline input[type="button"] {
-  padding-bottom: 14px;
-  padding-top: 14px;
+  font-size: 16px;
+  padding-bottom: 12px;
+  padding-top: 12px;
   width: initial;
 }
 .form-edge-link,
@@ -504,7 +498,7 @@ select[disabled] {
   padding-right: 10px;
 }
 .form-condensed .form-input-group-addon i,
-.form-condensed .form-file-group-addon i { font-size: 14px; }
+.form-condensed .form-file-group-addon i { font-size: 15px; }
 .form-condensed input,
 .form-condensed textarea {
   font-size: 12px;
@@ -520,7 +514,7 @@ select[disabled] {
 .form-condensed input[type="submit"],
 .form-condensed input[type="reset"],
 .form-condensed input[type="button"] {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1;
   padding: 8px 15px;
 }
@@ -540,9 +534,9 @@ select[disabled] {
 }
 .form-condensed .form-select::before { width: 31px; }
 .form-condensed .btn-icon {
-  font-size: 14px !important;
-  padding: 7px 8px 5px 8px !important;
-  min-width: 30px !important;
+  font-size: 16px !important;
+  padding: 7px 0 5px 0 !important;
+  min-width: 34px !important;
 }
 
 /* # Colors
@@ -646,6 +640,13 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   legend,
   .form-header,
+  .form-error-messages > h1,
+  .form-error-messages > h2,
+  .form-error-messages > h3,
+  .form-error-messages > h4,
+  .form-error-messages > h5,
+  .form-error-messages > h6,
+  .form-error-messages > ul,
   .form-footer { border-width: 0.5px; }
   legend { letter-spacing: 0.5px; }
 }

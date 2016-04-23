@@ -1,6 +1,7 @@
 /* Table of Contents
 ==================================================
-# Colorpicker */
+# Colorpicker
+# Media Queries */
 
 /* # Colorpicker
 ================================================== */
@@ -12,7 +13,7 @@
   width: 26px;
 }
 .dropdown-colorpicker > .dropdown-menu {
-  margin: 1px 0 0 -5px;
+  margin: 4px 0 0 -4px;
   min-width: 162px;
   padding: 4px;
 }
@@ -24,7 +25,9 @@
   width: 26px;
 }
 .dropdown-colorpicker > .dropdown-menu > li > .colorpicker-swatch {
+  border: 1px solid rgba(0,0,0,0.1);
   border-radius: 2px;
+  box-sizing: border-box;
   display: block;
   height: 26px;
   margin: 0;
@@ -36,13 +39,25 @@
 }
 .dropdown-colorpicker > .dropdown-menu > li > .colorpicker-swatch.selected:after {
   color: $color-white;
-  content: "\f3fe";
+  content: "\53";
   display: inline-block;
-  font-family: "Ionicons";
+  font-family: "dripicons";
   font-size: 16px;
   left: 0;
   line-height: 26px;
   position: absolute;
   right: 0;
   text-align: center;
+}
+
+/* # Media Queries
+================================================== */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .dropdown-colorpicker > .dropdown-menu > li > .colorpicker-swatch { border-width: 0.5px; }
 }

@@ -71,8 +71,8 @@ ol { padding-left: 23px; }
   padding-right: 0;
 }
 .list-lined > li:first-child { border: 0; }
-.list-striped > li:nth-child(odd) { background: $color-light-haze; }
-.list-hover > li:hover { background: darken($color-light-haze, 2%); }
+.list-striped > li:nth-child(odd) { background: lighten($color-light-haze, 2%); }
+.list-hover > li:hover { background: $color-light-haze }
 
 /* # Sizes
 ================================================== */

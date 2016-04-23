@@ -29,13 +29,11 @@
 .toolbar > a {
   background: $color-transparent;
   border: 0;
-  border-bottom: 1px solid;
-  border-color: inherit;
   border-radius: 0;
   box-sizing: border-box;
   color: inherit;
   display: block;
-  font-size: 21px;
+  font-size: 26px;
   height: 55px;
   line-height: 60px;
   padding: 0;
@@ -46,7 +44,7 @@
 .toolbar > a:hover,
 .toolbar > a.active,
 .toolbar > a:active,
-.toolbar > a:focus { background: $color-light-haze; }
+.toolbar > a:focus { background: $color-haze; }
 .toolbar > a.active,
 .toolbar > a:active { color: $color-primary; }
 .toolbar > a[disabled] {
@@ -57,22 +55,18 @@
 }
 .toolbar > a > .label {
   border-radius: 2px;
-  font-size: 9px;
+  font-size: 10px;
   font-style: normal;
   letter-spacing: 0;
   line-height: 1;
   margin: 5px 0 0 -5px;
   min-width: 19px;
-  padding: 4px 5px 3px 5px;
+  padding: 5px 5px 4px 5px;
   position: absolute;
   text-indent: 0 !important;
   vertical-align: middle;
 }
 .toolbar-alt > a > .label { margin-left: 5px; }
-.toolbar > .tooltip {
-  min-width: 90px;
-  width: 90px;
-}
 
 /* # Styles
 ================================================== */
@@ -111,17 +105,11 @@
   background: $color-light-black;
   border-bottom-color: $color-dark-black !important;
 }
-.toolbar-light {
-  background: $color-light-haze;
-  border-color: $color-dark-haze !important;
-}
+.toolbar-light { background: lighten($color-light-haze, 2%); }
 .toolbar-light > a:hover,
 .toolbar-light > a.active,
 .toolbar-light > a:active,
-.toolbar-light > a:focus {
-  background: $color-haze;
-  border-bottom-color: $color-dark-haze !important;
-}
+.toolbar-light > a:focus { background: $color-haze; }
 
 /* # Media Queries
 ================================================== */
@@ -136,8 +124,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .toolbar,
-  .toolbar-alt,
-  .toolbar > a { border-width: 0.5px; }
+  .toolbar-alt { border-width: 0.5px; }
   .toolbar-bordered > a { text-indent: 2px; }
   .toolbar-bordered.toolbar-alt > a { text-indent: -2px; }
 }

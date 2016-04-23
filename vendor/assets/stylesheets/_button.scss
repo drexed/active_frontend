@@ -48,7 +48,7 @@ $onwhite-colors: (
 .btn {
   @include appearance(none);
   background: $color-light-haze;
-  border: 1px solid $color-light-haze;
+  border: 2px solid $color-light-haze;
   border-radius: 2px;
   box-sizing: border-box;
   color: $color-dark-black;
@@ -56,16 +56,15 @@ $onwhite-colors: (
   display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: bold;
   letter-spacing: 0;
   line-height: 1;
   margin: 0;
-  padding: 15px 20px;
+  padding: 14px 20px 13px 20px;
   text-align: center;
   text-decoration: none;
   text-rendering: geometricPrecision;
-  text-transform: uppercase;
   touch-action: manipulation;
   @include transition(all 0.3s ease-in-out);
   vertical-align: middle;
@@ -89,14 +88,20 @@ $onwhite-colors: (
 /* # Sizes
 ================================================== */
 .btn-large {
-  font-size: 12px;
-  padding: 19px 30px;
+  font-size: 16px;
+  padding: 16px 30px;
 }
-.btn-medium { padding: 10px 15px; }
-.btn-small { padding: 8px 15px; }
+.btn-medium {
+  font-size: 12px;
+  padding: 10px 15px;
+}
+.btn-small {
+  font-size: 10px;
+  padding: 8px 15px;
+}
 .btn-mini {
-  font-size: 9px;
-  padding: 7px 10px 6px 10px;
+  font-size: 8px;
+  padding: 6px 10px;
 }
 .btn-block {
   display: block;
@@ -109,30 +114,29 @@ $onwhite-colors: (
 /* # Icons
 ================================================== */
 .btn-icon {
-  font-size: 18px;
+  font-size: 22px;
   min-width: 42px;
-  padding: 11px 15px 10px 15px;
+  padding: 10px 10px 9px 10px;
 }
 .btn-icon.btn-large {
-  font-size: 23px;
-  min-width: 52px;
-  padding-bottom: 12px;
-  padding-top: 13px;
+  font-size: 26px;
+  min-width: 54px;
+  padding: 12px 10px 10px 10px;
 }
 .btn-icon.btn-medium {
-  font-size: 15px;
-  min-width: 34px;
-  padding: 8px 10px 7px 10px;
+  font-size: 18px;
+  min-width: 38px;
+  padding: 8px 5px 6px 5px;
 }
 .btn-icon.btn-small {
   font-size: 14px;
-  min-width: 30px;
-  padding: 6px 7px;
+  min-width: 32px;
+  padding: 7px 5px 5px 5px;
 }
 .btn-icon.btn-mini {
-  font-size: 11px;
-  min-width: 25px;
-  padding: 5px 6px;
+  font-size: 10px;
+  min-width: 26px;
+  padding: 6px 5px 4px 5px;
 }
 
 /* # Colors
@@ -271,15 +275,15 @@ $onwhite-colors: (
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
 }
-.btn-group > .btn-outline { margin-left: -1px; }
-.btn-group > .btn-outline:first-child { margin-left: -1px; }
+.btn-group > .btn-outline { margin-left: -2px; }
+.btn-group > .btn-outline:first-child { margin-left: 0; }
 .btn-group-vertical > .btn {
   display: block;
   margin-left: 0;
   max-width: 100%;
   width: 100%;
 }
-.btn-group-vertical > .btn-outline { margin-top: -1px; }
+.btn-group-vertical > .btn-outline { margin-top: -2px; }
 .btn-group-vertical > .btn-outline:first-child { margin-top: 0; }
 .btn-group-vertical > .btn:first-child {
   border-radius: 0;
@@ -318,7 +322,7 @@ $onwhite-colors: (
 }
 .btn-group-block > .btn-group .btn { width: 100%; }
 .btn-group-block > .btn { border-right-width: 0; }
-.btn-group-block > .btn:last-child { border-right-width: 1px; }
+.btn-group-block > .btn:last-child { border-right-width: 2px; }
 
 /* # Toolbars
 ================================================== */
@@ -347,7 +351,7 @@ $onwhite-colors: (
     border-radius: 0;
     display: block;
     margin-left: 0;
-    margin-top: -1px;
+    margin-top: -2px;
     max-width: 100%;
     width: 100%;
   }
@@ -362,7 +366,7 @@ $onwhite-colors: (
   }
   .btn-group-vertical-responsive > .btn {
     display: inline-block;
-    margin-left: -1px;
+    margin-left: -2px;
     margin-top: 0;
     max-width: initial;
     width: initial;
@@ -377,14 +381,4 @@ $onwhite-colors: (
     border-bottom-left-radius: 0;
     border-top-right-radius: 2px;
   }
-}
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-  .btn-group > .dropdown-toggle:not(:first-child) { border-left-width: 0.5px; }
-  .btn-group-vertical > .dropdown-toggle:not(:first-child) { border-top-width: 0.5px; }
 }

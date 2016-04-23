@@ -4,16 +4,11 @@
 
 /* # Timepicker
 ================================================== */
-.timepicker-widget.dropdown-menu {
-  display: none;
-  opacity: 1;
-  padding: 5px 0;
-  @include transition(none);
-  visibility: visible;
-}
 .timepicker-widget.dropdown-menu.open {
+  @include animation-duration(0.5s);
+  @include animation-fill-mode(both);
+  @include animation-name(animation-bounce-in);
   display: block;
-  z-index: 1060;
 }
 .timepicker-widget.dropdown-menu:before {
   border-bottom: 7px solid;
@@ -60,6 +55,7 @@
   width: 100%;
 }
 .timepicker-widget > table td {
+  font-size: 14px;
   height: 30px;
   margin: 0;
   padding: 0;
@@ -69,8 +65,9 @@
 .timepicker-widget > table td span { width: 100%; }
 .timepicker-widget > table td > a {
   display: inline-block;
+  font-size: 24px;
   margin: 0;
-  padding: 8px 0;
+  padding: 0;
   outline: 0;
   width: 100%;
 }

@@ -85,7 +85,7 @@
       scaleFontFamily: "'Gotham Round', 'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
       // Number - Scale label font size in pixels
-      scaleFontSize: 11,
+      scaleFontSize: 13,
 
       // String - Scale label font weight style
       scaleFontStyle: "bold",
@@ -115,7 +115,7 @@
       tooltipFontFamily: "'Gotham Round', 'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
       // Number - Tooltip label font size in pixels
-      tooltipFontSize: 11,
+      tooltipFontSize: 12,
 
       // String - Tooltip font weight style
       tooltipFontStyle: "bold",
@@ -127,7 +127,7 @@
       tooltipTitleFontFamily: "'Gotham Round', 'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
       // Number - Tooltip title font size in pixels
-      tooltipTitleFontSize: 11,
+      tooltipTitleFontSize: 12,
 
       // String - Tooltip title font weight style
       tooltipTitleFontStyle: "bold",
@@ -139,7 +139,7 @@
       tooltipTitleTemplate: "<%= label %>",
 
       // Number - pixel width of padding around tooltip text
-      tooltipYPadding: 8,
+      tooltipYPadding: 10,
 
       // Number - pixel width of padding around tooltip text
       tooltipXPadding: 10,
@@ -173,7 +173,7 @@
         "rgba(255,0,102,1)",
         "rgba(240,35,17,1)",
         "rgba(248,122,9,1)",
-        "rgba(255,209,0,1)",
+        "rgba(245,200,0,1)",
         "rgba(50,56,64,1)",
         "rgba(126,137,150,1)"
       ],
@@ -189,7 +189,7 @@
         "rgba(255,0,102,0.1)",
         "rgba(240,35,17,0.1)",
         "rgba(248,122,9,0.1)",
-        "rgba(255,209,0,0.1)",
+        "rgba(245,200,0,0.1)",
         "rgba(50,56,64,0.1)",
         "rgba(126,137,150,0.1)"
       ],
@@ -3435,7 +3435,7 @@
       pointLabelFontStyle : "bold",
 
       //Number - Point label font size in pixels
-      pointLabelFontSize : 11,
+      pointLabelFontSize : 13,
 
       //String - Point label font colour
       pointLabelFontColor : "rgba(36,40,46,1)",

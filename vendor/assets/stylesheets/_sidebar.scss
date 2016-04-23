@@ -24,43 +24,12 @@
   border-color: inherit;
   border-left: 0;
 }
-.sidebar-title {
-  border-bottom: 1px solid;
-  border-color: inherit;
-  box-sizing: border-box;
-  font-family: $typography-heading;
-  font-size: 18px;
-  font-weight: 500;
-  height: 60px;
-  letter-spacing: 5px;
-  line-height: 1;
-  padding: 13px 0;
-  text-align: center;
-  text-indent: -5px;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-.sidebar-title i {
-  color: $color-primary;
-  font-size: 32px;
-  letter-spacing: 0;
-  margin: 0 10px 0 5px;
-  text-indent: 0;
-  vertical-align: middle;
-}
-.sidebar-title img {
-  border-radius: 0;
-  margin: 0 auto;
-  padding-top: 5px;
-  width: 80%;
-  vertical-align: middle;
-}
 .sidebar-header {
   border-bottom: 1px solid;
   border-color: inherit;
   box-sizing: border-box;
   display: table;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1;
   table-layout: fixed;
   vertical-align: middle;
@@ -85,12 +54,10 @@
 .sidebar-header h4,
 .sidebar-header h5,
 .sidebar-header h6 {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: bold;
   margin: 0;
-  padding: 10px;
-  text-transform: uppercase;
+  padding: 10px 10px 9px 10px;
 }
 .sidebar-header-btn {
   border-left: 1px solid;
@@ -105,99 +72,22 @@
 .sidebar-header-btn.active,
 .sidebar-header-btn:active,
 .sidebar-header-btn:focus { background: $color-light-haze; }
-.sidebar-footer {
-  border-top: 1px solid;
-  border-color: inherit;
-  box-sizing: border-box;
-  display: block;
-  font-size: 10px;
-  line-height: 1;
-  padding: 10px;
-  vertical-align: middle;
-  max-width: 100%;
-  width: 100%;
-}
-.sidebar-navbar {
-  border-collapse: separate;
-  border-bottom: 1px solid;
-  border-color: inherit;
-  box-sizing: border-box;
-  display: table;
-  height: 40px;
-  table-layout: fixed;
-  width: 100%;
-}
-.sidebar-navbar > a {
-  background: $color-light-haze;
-  border-right: 1px solid;
-  border-color: inherit;
-  display: table-cell;
-  float: none;
-  font-size: 18px;
-  padding-top: 10px;
-  text-align: center;
-  width: 1%;
-}
-.sidebar-navbar > a:last-child { border: 0; }
-.sidebar-navbar > a:hover,
-.sidebar-navbar > a.active,
-.sidebar-navbar > a:active,
-.sidebar-navbar > a:focus {
-  background: $color-transparent !important;
-  color: $color-primary;
-}
-.sidebar-navbar-indicator {
-  background: $color-primary;
-  border-radius: 500px;
-  display: inline-block;
-  height: 8px;
-  margin: -7px 0 0 -13px;
-  position: absolute;
-  width: 8px;
-}
-.sidebar-form {
-  border-bottom: 1px solid;
-  border-color: inherit;
-  padding: 10px;
-}
-.sidebar-form button,
-.sidebar-form input,
-.sidebar-form select,
-.sidebar-form textarea,
-.sidebar-form .form-select,
-.sidebar-form .form-input-group,
-.sidebar-form .form-file-group {
-  float: none;
-  margin: 0 !important;
-}
-.sidebar-form-mesh input,
-.sidebar-form-mesh select,
-.sidebar-form-mesh textarea {
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  border-radius: 0;
-  margin: 0;
-}
 .sidebar-content {
   border-color: inherit;
   box-sizing: border-box;
-  height: calc(100% - 30px);
+  height: 100%;
   @include overflow-scrolling(touch);
   overflow-x: hidden;
   overflow-y: auto;
   padding: 10px;
 }
-.sidebar-content-with-title { height: calc(100% - 91px); }
-.sidebar-content-with-footer { height: calc(100% - 61px); }
-.sidebar-content-with-title-and-footer { height: calc(100% - 122px); }
+.sidebar-header + .sidebar-content { height: calc(100% - 32px); }
 .sidebar-content-unpadded { padding: 0; }
 .sidebar-scrollable {
   border-bottom: 1px solid;
   border-color: inherit;
-  height: calc(50% - 50px);
+  height: calc(50% - 64px);
 }
-.sidebar-scrollable-with-title { height: calc(50% - 91px); }
 
 /* # Colors
 ================================================== */
@@ -212,7 +102,7 @@
 .sidebar-dark .sidebar-header-btn:focus,
 .sidebar-dark .sidebar-navbar > a { background: $color-light-black; }
 .sidebar-light {
-  background: $color-light-haze;
+  background: lighten($color-light-haze, 2%);
   border-color: $color-dark-haze !important;
 }
 .sidebar-light .sidebar-header-btn:hover,
@@ -252,29 +142,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
   .sidebar,
-  .sidebar-title,
   .sidebar-header,
   .sidebar-header-btn,
-  .sidebar-footer,
-  .sidebar-navbar,
-  .sidebar-navbar > a,
-  .sidebar-form,
-  .sidebar-form button,
-  .sidebar-form input,
-  .sidebar-form select,
-  .sidebar-form textarea,
-  .sidebar-form .form-select,
-  .sidebar-form .form-input-group,
-  .sidebar-form .form-file-group,
-  .sidebar-form-mesh input,
-  .sidebar-form-mesh select,
-  .sidebar-form-mesh textarea,
   .sidebar-scrollable { border-width: 0.5px; }
-  .sidebar-header h1,
-  .sidebar-header h2,
-  .sidebar-header h3,
-  .sidebar-header h4,
-  .sidebar-header h5,
-  .sidebar-header h6 { letter-spacing: 0.5px; }
-  .sidebar-navbar-indicator { margin: -6.5px 0 0 -10.5px; }
 }

@@ -3,8 +3,7 @@
 # Variables
 # Alert
 # Styles
-# Colors
-# Media Queries */
+# Colors */
 
 /* # Variables
 ================================================== */
@@ -43,7 +42,7 @@ $onwhite-colors: (
 ================================================== */
 .alert {
   background: $color-gray;
-  border-bottom: 1px solid darken($color-gray, 5%);
+  border-bottom: 2px solid darken($color-gray, 5%);
   box-sizing: border-box;
   color: $color-white;
   display: block;
@@ -68,7 +67,7 @@ $onwhite-colors: (
 /* # Styles
 ================================================== */
 .alert-bordered {
-  border: 1px solid darken($color-gray, 5%);
+  border: 2px solid darken($color-gray, 5%);
   padding-bottom: 10px;
   padding-top: 10px;
 }
@@ -111,16 +110,4 @@ $onwhite-colors: (
     background: $color;
     border-color: darken($color, 5%);
   }
-}
-
-/* # Media Queries
-================================================== */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-  .alert { border-width: 0.5px; }
 }

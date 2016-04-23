@@ -11,16 +11,17 @@
   display: block;
   float: none;
   font-family: $typography-sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-style: normal;
   font-weight: bold;
   letter-spacing: 0;
-  line-height: 17px;
+  line-height: 18px;
   opacity: 0;
   filter: alpha(opacity=0);
   position: absolute;
   text-decoration: none;
   text-transform: none;
+  @include transition(all 0.09s ease-in-out);
   visibility: visible;
   z-index: 1070;
 }

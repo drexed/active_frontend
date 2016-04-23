@@ -25,10 +25,9 @@
 }
 .footer-nav > li {
   float: left;
-  font-size: 9px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: bold;
   margin: 0 5px;
-  text-transform: uppercase;
 }
 .footer-nav > li:first-child { margin-left: 0; }
 .footer-nav > li:last-child { margin-right: 0; }
@@ -55,7 +54,7 @@
   color: $color-white;
 }
 .footer-light {
-  background: $color-light-haze;
+  background: lighten($color-light-haze, 2%);
   border-color: $color-dark-haze;
 }
 

@@ -491,7 +491,7 @@
 }
 .spinner-orbit,
 .spinner-orbit-child  {
-  border: 1px solid $color-primary;
+  border: 2px solid $color-primary;
   border-radius: 500px;
   box-sizing: border-box;
 }
@@ -499,6 +499,7 @@
 .spinner-orbit-child {
   background: $color-primary;
   height: 20px;
+  margin-top: -2px;
   width: 20px;
 }
 .spinner-plane-rotating {
@@ -521,6 +522,7 @@
 .spinner-wave-child {
   @include animation(spinner-wave 1.2s infinite ease-in-out);
   background: $color-primary;
+  border-radius: 2px;
   display: inline-block;
   height: 100%;
   width: 6px;
@@ -532,12 +534,12 @@
 .spinner-wave-child-5 { @include animation-delay(-0.8s); }
 .spinner-wobbler,
 .spinner-wobbler::after  {
-  border: 1px solid $color-primary;
+  border: 2px solid $color-primary;
   border-radius: 500px;
   box-sizing: border-box;
 }
 .spinner-wobbler {
-  height: 26px;
+  height: 28px;
   width: 150px;
 }
 .spinner-wobbler::after {

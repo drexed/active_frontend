@@ -34,8 +34,8 @@
   padding: 0;
 }
 .panel-header .btn {
-  margin-bottom: -4px;
-  margin-top: -6px;
+  margin-bottom: -6px;
+  margin-top: -8px;
 }
 .panel-body { padding: 15px; }
 .panel-body-chart {
@@ -61,7 +61,7 @@
   color: $color-white;
 }
 .panel-light {
-  background: $color-light-haze;
+  background: lighten($color-light-haze, 2%);
   border-color: $color-dark-haze;
 }
 

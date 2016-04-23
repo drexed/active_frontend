@@ -108,10 +108,12 @@ body {
 
 /* # Color
 ================================================== */
-.html-dark { background: $color-black; }
 .html-dark,
-.html-dark body { color: $color-white; }
-.html-light { background: $color-light-haze; }
+.html-dark body {
+  background: $color-black;
+  color: $color-white;
+}
+.html-light { background: lighten($color-light-haze, 2%); }
 
 /* # Style
 ================================================== */

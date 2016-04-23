@@ -55,7 +55,7 @@
   width: 0;
 }
 .slider.slider-horizontal .slider-tick-label-container {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
   margin-top: 20px;
   white-space: nowrap;
@@ -114,10 +114,10 @@
   position: absolute;
 }
 .slider-track,
-.slider.slider-disabled .slider-track { background: $color-haze; }
+.slider.slider-disabled .slider-track { background: $color-light-haze; }
 .slider-selection,
 .slider-selection.tick-slider-selection,
-.slider.slider-disabled .slider-handle { background: $color-dark-haze; }
+.slider.slider-disabled .slider-handle { background: $color-haze; }
 .slider-track-low,
 .slider-track-high { background: $color-transparent; }
 .slider.slider-disabled .slider-track,
@@ -134,8 +134,8 @@
   width: 16px;
 }
 .slider-handle { background: $color-primary; }
-.slider-tick { background: $color-haze; }
-.slider-tick.in-selection { background: $color-dark-haze; }
+.slider-tick { background: $color-light-haze; }
+.slider-tick.in-selection { background: $color-haze; }
 .slider-handle.round,
 .slider-tick.round { border-radius: 500px; }
 .slider-handle.custom,
@@ -144,8 +144,8 @@
 .slider-tick.triangle { background: $color-transparent none; }
 .slider-handle.custom::before,
 .slider-tick.custom::before {
-  line-height: 16px;
-  font-size: 16px;
+  color: $color-haze;
   content: '\2605';
-  color: $color-dark-haze;
+  font-size: 16px;
+  line-height: 16px;
 }

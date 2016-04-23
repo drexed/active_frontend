@@ -27,7 +27,7 @@ module ActiveFrontendHelper
       pink:              { rgba: "rgba(255,0,102,#{opacity})",   hex: "#FF0066" },
       red:               { rgba: "rgba(240,35,17,#{opacity})",   hex: "#F02311" },
       orange:            { rgba: "rgba(248,122,9,#{opacity})",   hex: "#F87A09" },
-      yellow:            { rgba: "rgba(255,209,0,#{opacity})",   hex: "#FFD100" },
+      yellow:            { rgba: "rgba(245,200,0,#{opacity})",   hex: "#F5C800" },
       lime_alt:          { rgba: "rgba(181,228,78,#{opacity})",  hex: "#B5E44E" },
       green_alt:         { rgba: "rgba(100,194,28,#{opacity})",  hex: "#64C21C" },
       teal_alt:          { rgba: "rgba(120,206,205,#{opacity})", hex: "#78CECD" },

@@ -38,7 +38,7 @@
   padding: 10px 15px;
 }
 .popover-title {
-  background: $color-light-haze;
+  background: lighten($color-light-haze, 2%);
   border-bottom: 1px solid $color-dark-haze;
   font-weight: bold;
   line-height: 18px;

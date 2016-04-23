@@ -46,7 +46,7 @@
   border-color: $color-dark-black;
 }
 .ad-light {
-  background: $color-light-haze;
+  background: lighten($color-light-haze, 2%);
   border-color: $color-dark-haze;
 }
 

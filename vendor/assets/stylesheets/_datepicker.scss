@@ -7,15 +7,17 @@
 .datepicker {
   left: 0;
   margin-top: 1px;
+  position: fixed;
   top: 0;
   z-index: 1060;
 }
 .datepicker-dropdown.dropdown-menu {
-  display: none;
-  opacity: 1;
+  @include animation-duration(0.5s);
+  @include animation-fill-mode(both);
+  @include animation-name(animation-bounce-in);
+  display: block;
   padding: 0;
-  @include transition(none);
-  visibility: visible;
+  position: fixed;
 }
 .datepicker:before {
   border-bottom: 7px solid;

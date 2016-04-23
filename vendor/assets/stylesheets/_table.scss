@@ -40,8 +40,7 @@ table {
   line-height: 25px;
 }
 .table caption {
-  // border-bottom: 1px solid;
-  border-color: inherit;
+  border-color: red;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -51,6 +50,11 @@ table {
   border-top: 1px solid;
   border-color: inherit;
 }
+.table thead tr th {
+  border-bottom: 2px solid;
+  border-color: inherit;
+}
+.table tfoot tr td { border-top-width: 2px; }
 .table thead tr th,
 .table tfoot tr td {
   font-size: 14px;
@@ -61,13 +65,13 @@ table {
 .table thead tr th.tablespy-sort-desc:before,
 .table thead tr th.tablespy-sort-none:before {
   float: right;
-  font-family: "Ionicons";
+  font-family: "dripicons";
   font-style: normal;
   font-weight: normal;
 }
-.table thead tr th.tablespy-sort-asc:before { content: "\f3d8"; }
-.table thead tr th.tablespy-sort-desc:before { content: "\f3d0"; }
-.table thead tr th.tablespy-sort-none:before { content: "\f462"; }
+.table thead tr th.tablespy-sort-asc:before { content: "\57"; }
+.table thead tr th.tablespy-sort-desc:before { content: "\54"; }
+.table thead tr th.tablespy-sort-none:before { content: "\e024"; }
 .table thead tr th.tablespy-sort-asc,
 .table thead tr th.tablespy-sort-desc,
 .table thead tr th.tablespy-sort-none { cursor: pointer; }
@@ -75,8 +79,9 @@ table {
 .table thead tr th.tablespy-sort-empty { pointer-events: none; }
 .table colgroup + thead tr:first-child th,
 .table thead:first-child tr:first-child th { border-top: 0; }
+.table caption + thead tr:first-child th,
 .table tbody + tbody {
-  border-top: 1px solid;
+  border-top: 2px solid;
   border-color: inherit;
 }
 @each $alignment in $alignments {
@@ -96,7 +101,6 @@ table {
 .table-bordered caption {
   border: 1px solid;
   border-color: inherit;
-  border-bottom-width: 0;
 }
 .table-bordered thead tr th,
 .table-bordered tbody tr td,
@@ -110,8 +114,10 @@ table {
 .table-bordered colgroup + tbody tr:first-child td,
 .table-bordered thead:first-child tr:first-child th,
 .table-bordered tbody:first-child tr:first-child td { border-top: 0; }
-.table-striped tbody tr:nth-child(odd) td { background: $color-light-haze; }
-.table-hover tbody tr:hover td { background: darken($color-light-haze, 2%); }
+.table-bordered thead tr th,
+.table-hover thead tr th { border-bottom-width: 1px; }
+.table-striped tbody tr:nth-child(odd) td { background: lighten($color-light-haze, 2%); }
+.table-hover tbody tr:hover td { background: $color-light-haze; }
 .table-unbordered,
 .table-unbordered thead,
 .table-unbordered tbody,
@@ -137,6 +143,9 @@ table {
   font-size: 13px;
   line-height: 21px;
 }
+.table-condensed thead tr th.tablespy-sort-asc:before,
+.table-condensed thead tr th.tablespy-sort-desc:before,
+.table-condensed thead tr th.tablespy-sort-none:before { font-size: 18px; }
 .table-scrollable {
   height: 300px;
   overflow: auto;

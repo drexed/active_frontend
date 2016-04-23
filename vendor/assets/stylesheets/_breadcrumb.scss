@@ -2,8 +2,7 @@
 ==================================================
 # Breadcrumb
 # Styles
-# Colors
-# Media Queries */
+# Colors */
 
 /* # Breadcrumb
 ================================================== */
@@ -15,7 +14,7 @@
 }
 .breadcrumb > li {
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
 }
 .breadcrumb > li > a:hover,
@@ -29,17 +28,15 @@
 .breadcrumb-flow {
   color: $color-dark-black;
   counter-reset: wizard;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: bold;
-  letter-spacing: 1px;
   line-height: 16px;
   list-style: none;
   margin: 0;
   overflow: hidden;
   padding: 0;
   position: relative;
-  text-transform: uppercase;
 }
 .breadcrumb-flow > li {
   float: left;
@@ -101,15 +98,3 @@
 .breadcrumb-light.breadcrumb-flow > li.active ~ li:before { background: $color-light-haze; }
 .breadcrumb-light.breadcrumb-flow > li.active ~ li:before { border-color: $color-dark-haze; }
 .breadcrumb-light.breadcrumb-flow > li.active ~ li:after { background: $color-dark-haze; }
-
-/* # Media Queries
-================================================== */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-  .breadcrumb-flow > li { letter-spacing: 0.5px; }
-}

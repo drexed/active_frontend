@@ -41,8 +41,8 @@ pre {
 }
 .code-light,
 .pre-light {
-  background: $color-light-haze;
-  border-color: $color-dark-haze;
+  background: lighten($color-light-haze, 2%);
+  border-color: $color-haze;
 }
 .pre-dark .err { background: $color-gray; }
 .pre-dark .gp,

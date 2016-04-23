@@ -8,12 +8,7 @@
   margin-top: 4px;
   z-index: 1060;
 }
-.typeahead.dropdown-menu {
-  display: none;
-  opacity: 1;
-  @include transition(none);
-  visibility: visible;
-}
+.typeahead.dropdown-menu { display: block; }
 .typeahead.dropdown-menu > li > a b { color: $color-primary; }
 x {
   display: block;

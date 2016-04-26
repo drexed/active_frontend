@@ -20,7 +20,7 @@ module ActiveFrontendHelper
       white:             { rgba: "rgba(255,255,255,#{opacity})", hex: "#FFFFFF" },
       lime:              { rgba: "rgba(151,212,19,#{opacity})",  hex: "#97D413" },
       green:             { rgba: "rgba(75,173,8,#{opacity})",    hex: "#4BAD08" },
-      teal:              { rgba: "rgba(69,195,196,#{opacity})",  hex: "#45C3C4" },
+      teal:              { rgba: "rgba(30,196,214,#{opacity})",  hex: "#1EC4D6" },
       blue:              { rgba: "rgba(0,102,255,#{opacity})",   hex: "#0066FF" },
       indigo:            { rgba: "rgba(86,21,237,#{opacity})",   hex: "#5615ED" },
       purple:            { rgba: "rgba(124,39,243,#{opacity})",  hex: "#7C27F3" },
@@ -28,16 +28,16 @@ module ActiveFrontendHelper
       red:               { rgba: "rgba(240,35,17,#{opacity})",   hex: "#F02311" },
       orange:            { rgba: "rgba(248,122,9,#{opacity})",   hex: "#F87A09" },
       yellow:            { rgba: "rgba(245,200,0,#{opacity})",   hex: "#F5C800" },
-      lime_alt:          { rgba: "rgba(181,228,78,#{opacity})",  hex: "#B5E44E" },
+      lime_alt:          { rgba: "rgba(171,218,58,#{opacity})",  hex: "#ABDA3A" },
       green_alt:         { rgba: "rgba(100,194,28,#{opacity})",  hex: "#64C21C" },
-      teal_alt:          { rgba: "rgba(120,206,205,#{opacity})", hex: "#78CECD" },
-      blue_alt:          { rgba: "rgba(0,153,255,#{opacity})",   hex: "#0099FF" },
+      teal_alt:          { rgba: "rgba(50,216,234,#{opacity})",  hex: "#32D8EA" },
+      blue_alt:          { rgba: "rgba(0,144,255,#{opacity})",   hex: "#0090FF" },
       indigo_alt:        { rgba: "rgba(94,94,237,#{opacity})",   hex: "#5E5EED" },
       purple_alt:        { rgba: "rgba(140,75,251,#{opacity})",  hex: "#8C4BFB" },
       pink_alt:          { rgba: "rgba(255,64,127,#{opacity})",  hex: "#FF407F" },
       red_alt:           { rgba: "rgba(255,72,71,#{opacity})",   hex: "#FF4847" },
-      orange_alt:        { rgba: "rgba(254,152,72,#{opacity})",  hex: "#FE9848" },
-      yellow_alt:        { rgba: "rgba(252,232,73,#{opacity})",  hex: "#FCE849" }
+      orange_alt:        { rgba: "rgba(254,142,62,#{opacity})",  hex: "#FE8E3E" },
+      yellow_alt:        { rgba: "rgba(255,219,59,#{opacity})",  hex: "#FFDB3B" }
     }
   end
 

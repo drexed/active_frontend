@@ -57,6 +57,7 @@ $onwhite-colors: (
   color: $color-white;
   font-style: italic;
 }
+.alert > i { font-size: 14px; }
 .alert > .alert-close {
   border: 0;
   float: right;

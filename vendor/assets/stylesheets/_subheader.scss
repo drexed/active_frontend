@@ -36,7 +36,7 @@
 .subheader-nav > li:last-child { margin-right: 0 !important; }
 .subheader-nav > li.btn-group,
 .subheader-nav > li.btn-group a { border-radius: 0 !important; }
-.subheader-nav > li.btn-group + li.btn-group { margin: 0 !important; }
+.subheader-nav > li.btn-group + li.btn-group { margin: 0 20px 0 0 !important; }
 .subheader-nav > li.spacer {
   color: $color-primary;
   font-size: 40px;

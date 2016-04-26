@@ -55,7 +55,7 @@
 .header-nav > li,
 .header-toolchain > li {
   float: left;
-  margin: 0 20px 0 0;
+  margin: 0 20px 0 0 !important;
 }
 .header-nav > li:last-child,
 .header-toolchain > li:last-child { margin: 0; }
@@ -72,7 +72,7 @@
 }
 .header-user {
   float: right;
-  margin-top: 1px;
+  margin-top: -1px;
 }
 .header-user > a:hover,
 .header-user > a.active,
@@ -80,12 +80,13 @@
 .header-user > a:focus { color: $color-primary; }
 .header-user > a > img {
   display: inline-block;
-  height: 36px;
-  width: 36px;
+  height: 40px;
+  width: 40px;
 }
 .header-user > a > i {
+  float: right;
   font-size: 14px;
-  margin-left: -3px;
+  margin: 13px 0 0 3px;
 }
 .header-user > ul.dropdown-menu { margin: -5px 10px 0 0; }
 .header-toggle {

@@ -44,6 +44,14 @@
   font-size: 18px;
   padding: 7px;
 }
+.pagination > ul > li.pagination-icon:first-child > a {
+  padding-left: 6px;
+  padding-right: 8px;
+}
+.pagination > ul > li.pagination-icon:last-child > a {
+  padding-left: 8px;
+  padding-right: 6px;
+}
 
 /* # Alignments
 ================================================== */

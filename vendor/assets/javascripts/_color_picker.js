@@ -1,6 +1,4 @@
-(function($) {
-  "use strict";
-
+(function($) {"use strict";
   var ColorPicker = function(select, options) {
     this.options = options;
     this.$select = $(select);
@@ -8,26 +6,27 @@
   };
 
   ColorPicker.prototype = {
-
     constructor : ColorPicker,
 
     _init : function() {
-      var callback    = this.options.callback;
+      var callback = this.options.callback;
+      var dropdown = this.options.dropdown;
+      var tooltip = this.options.tooltip;
       var selectValue = this.$select.val();
       var selectColor = this.$select.find("option:selected").data("color");
 
-      var $markupUl   = $("<ul>").addClass("dropdown-menu").addClass("dropdown-caret");
-      var $markupDiv  = $("<div>").addClass("dropdown").addClass("dropdown-colorpicker");
+      var $markupUl = $("<ul>").addClass(dropdown);
+      var $markupDiv = $("<div>").addClass("dropdown dropdown-colorpicker");
       var $markupSpan = $("<span>").addClass("dropdown-swatch").css("background", selectColor);
-      var $markupA    = $("<a>").attr("data-toggle", "dropdown").addClass("dropdown-toggle").attr("href", "#").append($markupSpan);
+      var $markupA = $("<a>").attr("data-toggle", "dropdown").attr("href", "#").addClass("dropdown-toggle").append($markupSpan);
 
       $("option", this.$select).each(function() {
         var option = $(this);
-        var value  = option.attr("value");
-        var color  = option.data("color");
-        var title  = option.text();
+        var value = option.attr("value");
+        var color = option.data("color");
+        var title = option.text();
 
-        var $markupA = $("<a>").addClass("colorpicker-swatch");
+        var $markupA = $("<a>").addClass("colorpicker-swatch ").addClass(tooltip);
         if (option.prop("selected") === true || selectValue === color) {
           $markupA.addClass("selected");
         }
@@ -99,9 +98,9 @@
   };
 
   $.fn.colorpicker.defaults = {
-    callback : function(value, color, title) {
-    },
-    colorsPerRow : 8
+    callback : function(value, color, title) {},
+    dropdown: "dropdown-menu dropdown-caret",
+    tooltip: null
   };
 
   $.fn.colorpicker.Constructor = ColorPicker;

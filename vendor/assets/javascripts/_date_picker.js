@@ -84,7 +84,7 @@
       this.picker.addClass('datepicker-inline').appendTo(this.element);
     }
     else {
-      this.picker.addClass('datepicker-dropdown dropdown-menu');
+      this.picker.addClass(this.o.dropdown);
     }
 
     if (this.o.rtl){
@@ -1372,6 +1372,7 @@
     calendarWeeks: false,
     clearBtn: false,
     daysOfWeekDisabled: [],
+    dropdown: 'datepicker-dropdown dropdown-menu',
     endDate: Infinity,
     forceParse: true,
     format: 'mm/dd/yyyy',

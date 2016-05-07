@@ -91,7 +91,7 @@
       scaleFontStyle: "bold",
 
       // String - Scale label font colour
-      scaleFontColor: "rgba(36,40,46,1)",
+      scaleFontColor: "rgba(27,30,34,1)",
 
       // Boolean - whether or not the chart should be responsive and resize when the browser does.
       responsive: true,
@@ -109,7 +109,7 @@
       tooltipEvents: ["mousemove", "touchstart", "touchmove", "mouseout"],
 
       // String - Tooltip background colour
-      tooltipFillColor: "rgba(36,40,46,1)",
+      tooltipFillColor: "rgba(27,30,34,1)",
 
       // String - Tooltip label font declaration for the scale label
       tooltipFontFamily: "'Gotham Round', 'Gotham', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
@@ -174,7 +174,7 @@
         "rgba(240,35,17,1)",
         "rgba(248,122,9,1)",
         "rgba(245,200,0,1)",
-        "rgba(50,56,64,1)",
+        "rgba(45,50,57,1)",
         "rgba(126,137,150,1)"
       ],
 
@@ -190,7 +190,7 @@
         "rgba(240,35,17,0.1)",
         "rgba(248,122,9,0.1)",
         "rgba(245,200,0,0.1)",
-        "rgba(50,56,64,0.1)",
+        "rgba(45,50,57,0.1)",
         "rgba(126,137,150,0.1)"
       ],
 
@@ -3438,7 +3438,7 @@
       pointLabelFontSize : 13,
 
       //String - Point label font colour
-      pointLabelFontColor : "rgba(36,40,46,1)",
+      pointLabelFontColor : "rgba(27,30,34,1)",
 
       //Boolean - Whether to show a dot for each point
       pointDot : true,

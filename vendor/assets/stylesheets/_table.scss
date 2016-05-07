@@ -40,7 +40,6 @@ table {
   line-height: 25px;
 }
 .table caption {
-  border-color: red;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -122,9 +121,10 @@ table {
 .table-unbordered thead,
 .table-unbordered tbody,
 .table-unbordered tfoot,
-.table-unbordered thead tr th,
-.table-unbordered tbody tr td,
-.table-unbordered tfoot tr td { border: 0; }
+.table-unbordered tbody tr td {
+  border: 0;
+  border-color: inherit;
+}
 
 /* # Sizes
 ================================================== */
@@ -160,13 +160,13 @@ table {
 .table-light caption {
   background: $color-light-haze;
   border-color: $color-dark-haze !important;
-  color: $color-dark-black;
+  color: $color-black;
 }
 .table-white,
 .table-white caption {
   background: $color-white;
   border-color: $color-haze !important;
-  color: $color-dark-black;
+  color: $color-black;
 }
 .table-dark.table-striped tbody tr:nth-child(odd) td { background: $color-light-black; }
 .table-dark.table-hover tbody tr:hover td { background: darken($color-black, 2%); }

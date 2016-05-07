@@ -86,13 +86,13 @@ $onwhite-colors: (
   .alert-#{$name} {
     background: $color;
     border-color: darken($color, 5%);
-    color: $color-dark-black;
+    color: $color-black;
   }
   .alert-#{$name} > a {
     border-bottom-color: $color-black;
-    color: $color-dark-black;
+    color: $color-black;
   }
-  .alert-#{$name} .alert-close { color: $color-dark-black; }
+  .alert-#{$name} .alert-close { color: $color-black; }
 }
 @each $name, $color in $ongray-colors {
   .alert-#{$name} {

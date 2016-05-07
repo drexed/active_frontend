@@ -95,11 +95,11 @@
 ================================================== */
 .tooltip-light {
   border-color: $color-light-haze;
-  color: $color-dark-black;
+  color: $color-black;
 }
 .tooltip-white {
   border-color: $color-white;
-  color: $color-dark-black;
+  color: $color-black;
 }
 .tooltip-light > .tooltip-inner { background: $color-light-haze; }
 .tooltip-white > .tooltip-inner { background: $color-white; }

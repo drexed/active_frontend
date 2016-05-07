@@ -9,7 +9,7 @@
 
 /* # Form
 ================================================== */
-form { color: $color-dark-black; }
+form { color: $color-black; }
 fieldset,
 legend { border: 0; }
 legend {
@@ -88,8 +88,9 @@ select {
 select[multiple],
 select[size] { height: auto; }
 textarea {
-  height: 140px;
+  height: 142px;
   line-height: 22px;
+  margin-top: 2px;
   padding-right: 10px;
 }
 input:focus,
@@ -189,8 +190,8 @@ select[disabled] {
   display: inline-block;
   width: initial;
 }
-.form-textarea-small { height: 80px; }
-.form-textarea-large { height: 200px; }
+.form-textarea-small { height: 93px; }
+.form-textarea-large { height: 191px; }
 .form-input-group,
 .form-file-group {
   border-collapse: separate;

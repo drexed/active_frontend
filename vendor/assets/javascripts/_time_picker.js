@@ -8,6 +8,7 @@
     this.defaultTime = options.defaultTime;
     this.disableFocus = options.disableFocus;
     this.disableMousewheel = options.disableMousewheel;
+    this.dropdown = options.dropdown;
     this.isOpen = options.isOpen;
     this.minuteStep = options.minuteStep;
     this.modalBackdrop = options.modalBackdrop;
@@ -289,7 +290,6 @@
       case 'modal':
         template = '<div class="timepicker-widget modal hide fade in" data-backdrop="'+ (this.modalBackdrop ? 'true' : 'false') +'">'+
           '<div class="modal-header">'+
-            '<a href="#" class="close" data-dismiss="modal">×</a>'+
             '<h3>Pick a Time</h3>'+
           '</div>'+
           '<div class="modal-content">'+
@@ -301,7 +301,7 @@
         '</div>';
         break;
       case 'dropdown':
-        template = '<div class="timepicker-widget dropdown-menu">'+ templateContent +'</div>';
+        template = '<div class="timepicker-widget ' + this.dropdown +'">'+ templateContent +'</div>';
         break;
       }
 
@@ -1069,6 +1069,7 @@
     defaultTime: 'current',
     disableFocus: false,
     disableMousewheel: false,
+    dropdown: 'dropdown-menu',
     isOpen: false,
     minuteStep: 15,
     modalBackdrop: false,

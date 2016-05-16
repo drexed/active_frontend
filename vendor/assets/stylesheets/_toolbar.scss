@@ -53,20 +53,20 @@
   cursor: not-allowed;
   pointer-events: none;
 }
-.toolbar > a > .label {
+.toolbar .label {
   border-radius: 2px;
   font-size: 10px;
   font-style: normal;
   letter-spacing: 0;
   line-height: 1;
   margin: 5px 0 0 -5px;
-  min-width: 19px;
+  min-width: 21px;
   padding: 5px 5px 4px 5px;
   position: absolute;
   text-indent: 0 !important;
   vertical-align: middle;
 }
-.toolbar-alt > a > .label { margin-left: 5px; }
+.toolbar-alt .label { margin-left: 5px; }
 
 /* # Styles
 ================================================== */

@@ -37,7 +37,7 @@ module ActiveFrontendHelper
       pink_alt: { rgba: "rgba(255,64,127,#{opacity})", hex: "#FF407F" },
       red_alt: { rgba: "rgba(255,72,71,#{opacity})", hex: "#FF4847" },
       orange_alt: { rgba: "rgba(254,142,62,#{opacity})", hex: "#FE8E3E" },
-      yellow_alt: { rgba: "rgba(255,219,59,#{opacity})", hex: "#FFDB3B" }
+      yellow_alt: { rgba: "rgba(255,200,44,#{opacity})", hex: "#FFC82C" }
     }
   end
 

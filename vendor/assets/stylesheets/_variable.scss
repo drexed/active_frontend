@@ -1,21 +1,203 @@
-/* Table of Contents
-==================================================
-# Variables Color
-# Variables Typography */
+// Table of Contents
+// ==================================================
+// Animation
+// Color
+// Common
+// Font
+// Grid
+// Progress
 
-/* # Variables Color
-================================================== */
-$color-primary: $color-blue;
-$color-secondary: $color-green;
-$color-tertiary: $color-red;
+// Animation
+// ==================================================
+$animation-delays: (
+  xxl: 2s,
+  xl: 1.75s,
+  l: 1.5s,
+  m: 1.25s,
+  b: 1s,
+  s: 0.75s,
+  xs: 0.5s,
+  xxs: 0.25s,
+  n: 0
+);
+$animation-durations: (
+  xxl: 2s,
+  xl: 1.75s,
+  l: 1.5s,
+  m: 1.25s,
+  b: 1s,
+  s: 0.75s,
+  xs: 0.5s,
+  xxs: 0.25s
+);
 
-/* # Variables Typography
-================================================== */
-$typography-gotham-round: true;
-$typography-gotham: true;
-$typography-base-font: 'Gotham Round';
-$typography-heading-font: 'Gotham';
-$typography-heading: $typography-heading-font, 'Helvetica', Helvetica, Arial, sans-serif;
-$typography-monospace: Monaco, Menlo, Consolas, 'Courier New', monospace;
-$typography-sans-serif: $typography-base-font, 'Helvetica', Helvetica, Arial, sans-serif;
-$typography-serif: 'Times New Roman', Times, serif;
+// Color
+// ==================================================
+$colors-brand: (
+  lime: rgba(171,208,38,1),
+  green: rgba(114,201,20,1),
+  teal: rgba(50,201,234,1),
+  blue: rgba(0,124,255,1),
+  indigo: rgba(92,92,235,1),
+  purple: rgba(140,75,251,1),
+  pink: rgba(255,95,132,1),
+  red: rgba(245,47,46,1),
+  orange: rgba(254,146,26,1),
+  yellow: rgba(255,214,19,1)
+);
+$colors-grayscale: (
+  transparent: rgba(0,0,0,0),
+  dark-black: rgba(31,45,61,1),
+  black: rgba(39,52,72,1),
+  light-black: rgba(50,65,86,1),
+  dark-gray: rgba(104,120,143,1),
+  gray: rgba(132,146,166,1),
+  light-gray: rgba(155,167,186,1),
+  dark-haze: rgba(227,232,240,1),
+  haze: rgba(239,242,248,1),
+  light-haze: rgba(249,250,252,1),
+  white: rgba(255,255,255,1)
+);
+$colors-global: (
+  primary: map-get($colors-brand, blue),
+  secondary: map-get($colors-brand, green),
+  tertiary: map-get($colors-brand, red),
+  quaditiary: map-get($colors-brand, yellow)
+);
+$colors: map-merge(map-merge($colors-brand, $colors-grayscale), $colors-global);
+$colors-black-text: transparent, dark-haze, haze, light-haze, white;
+
+// Common
+// ==================================================
+$common-border-radiuses: (
+  xl: 999px,
+  l: 10px,
+  m: 6px,
+  b: 3px,
+  s: 2px,
+  n: 0
+);
+$common-margins-and-paddings: (
+  xxxl: 100px,
+  xxl: 80px,
+  xl: 60px,
+  l: 40px,
+  m: 30px,
+  b: 20px,
+  s: 10px,
+  xs: 5px,
+  null: 0
+);
+$common-display-types: block, inline, inline-block, table, table-cell, table-row;
+$common-visibility-types: collapse, hidden, visible;
+
+// Font
+// ==================================================
+$font-families: (
+  monospace: (Menlo, Monaco, Courier, Consolas, monospace),
+  sans-serif: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
+  serif: (Georgia, 'Times New Roman', serif)
+);
+$font-indents: (
+  xxxl: 25px,
+  xxl: 20px,
+  xl: 15px,
+  l: 10px,
+  m: 5px,
+  b: 0,
+  s: -5px,
+  xs: -10px,
+  xxs: -15px,
+  xxxs: -20px
+);
+$font-line-heights: (
+  xxxl: 64px,
+  xxl: 50px,
+  xl: 36px,
+  l: 26px,
+  m: 24px,
+  b: 22px,
+  s: 18px,
+  xs: 16px,
+  xxs: 14px,
+  xxxs: 12px,
+  i: 1,
+  n: 0
+);
+$font-sizes: (
+  xxxl: 56px,
+  xxl: 42px,
+  xl: 28px,
+  l: 20px,
+  m: 18px,
+  b: 16px,
+  s: 14px,
+  xs: 12px,
+  xxs: 10px,
+  xxxs: 8px
+);
+$font-spaces: (
+  xxl: 10px,
+  xl: 6px,
+  l: 2px,
+  m: 1px,
+  b: 0,
+  s: -1px,
+  xs: -2px
+);
+$font-weights: (
+  bold: 700,
+  semibold: 500,
+  normal: 400,
+  semilight: 300
+);
+
+// Grid
+// ==================================================
+$grid-column-widths: (
+  one: 10%,
+  two: 20%,
+  three: 30%,
+  four: 40%,
+  five: 50%,
+  six: 60%,
+  seven: 70%,
+  eight: 80%,
+  nine: 90%,
+  ten: 100%,
+  one-fourth: 25%,
+  one-third: 33.33333%,
+  one-half: 50%,
+  two-thirds: 66.66666%,
+  three-fourths: 75%
+);
+$grid-container-widths: (
+  l: (calc(100% - 60px), 1360px),
+  m: (calc(100% - 40px), 1180px),
+  b: (calc(100% - 20px), 960px),
+  s: (calc(100% - 10px), 760px),
+  null: (100%, null)
+);
+$grid-row-margins: (
+  xxxl: 100px,
+  xxl: 80px,
+  xl: 60px,
+  l: 40px,
+  m: 30px,
+  b: 20px,
+  s: 10px,
+  xs: 5px,
+  null: 0
+);
+$grid-container-types: container, container-fixed;
+$grid-row-types: row, row-responsive;
+
+// Progress
+// ==================================================
+$progress-sizes: (
+  l: 40px,
+  m: 32px,
+  b: 24px,
+  s: 16px,
+  xs: 8px
+);

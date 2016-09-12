@@ -1,0 +1,17 @@
+// Table of Contents
+// ==================================================
+// Breadcrumb
+
+// Breadcrumb
+// ==================================================
+.breadcrumb {
+  font-weight: text-weight(semibold);
+  list-style: none;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+
+    &.divider { margin: 0 5px; }
+  }
+}

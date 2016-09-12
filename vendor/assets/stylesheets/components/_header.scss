@@ -1,0 +1,99 @@
+// Table of Contents
+// ==================================================
+// Header
+// Media Queries
+
+// Header
+// ==================================================
+.header {
+  // background: color(white);
+  background: color(light-haze);
+
+  border-bottom: 1px solid color(dark-haze);
+  box-sizing: border-box;
+  height: 76px;
+  line-height: 1;
+  padding: 18px;
+}
+.header-brand,
+.header-search,
+.header-nav,
+.header-user,
+.header-toggle {
+  box-sizing: border-box;
+  float: left;
+  height: 40px;
+}
+.header-brand {
+  font-size: 35px;
+
+  + .header-search,
+  + .header-nav {
+    margin-left: 20px;
+
+    &.pull-right {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}
+.header-search {
+  min-width: 260px;
+
+  input { margin-bottom: 0; }
+
+  + .header-nav {
+    margin-left: 20px;
+
+    &.pull-right {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}
+.header-nav {
+  list-style: none;
+  margin-top: 11px;
+  padding: 0;
+
+  > li {
+    float: left;
+    margin-right: 20px;
+
+    &:last-child { margin-right: 0; }
+    &.btn-group { font-size: inherit; }
+
+    .btn { margin-top: -11px; }
+  }
+}
+.header-user {
+  float: right;
+
+  img {
+    height: 40px;
+    display: inline-block;
+
+    + i { margin-left: -2px; }
+  }
+
+  &.btn-group { font-size: inherit; }
+}
+.header-toggle {
+  float: right;
+  font-size: 26px;
+  padding-top: 5px;
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: 767px) {
+  .header {
+    height: 50px;
+    padding: 10px;
+  }
+  .header-brand,
+  .header-toggle {
+    font-size: 26px;
+    padding-top: 1px;
+  }
+}

@@ -1,0 +1,74 @@
+// Table of Contents
+// ==================================================
+// Sidebar
+
+// scss-lint:disable NestingDepth
+
+// Sidebar
+// ==================================================
+.sidebar {
+  border-right-style: solid;
+  border-right-width: 1px;
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+
+  &.dark {
+    .sidebar-nav {
+      > ul { background: color(light-black); }
+    }
+  }
+  &.light {
+    .sidebar-nav {
+      > ul { background: color(white); }
+    }
+  }
+  &.right {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right: 0;
+  }
+}
+.sidebar-header,
+.sidebar-footer {
+  padding: 30px 0;
+  text-align: center;
+}
+.sidebar-body { padding: 0 15px; }
+.sidebar-nav {
+  > a {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    box-sizing: border-box;
+    display: block;
+    padding: 20px;
+    width: 100%;
+
+    &:first-child {
+      border-top-style: solid;
+      border-top-width: 1px;
+    }
+  }
+  > ul {
+    background: color(light-haze);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    list-style: none;
+    padding: 15px 30px;
+
+    a {
+      display: block;
+      padding: 5px;
+
+      &:hover,
+      &.active,
+      &:active,
+      &:focus { color: color(primary); }
+    }
+
+    > li.active { color: color(primary); }
+  }
+}

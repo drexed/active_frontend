@@ -1,61 +1,58 @@
-/* Table of Contents
-==================================================
-# Required Imports
-# Optional Imports */
+// Table of Contents
+// ==================================================
+// Global Imports
+// Specific Imports
 
-/* # Required Imports
-================================================== */
-@import 'mixin';
-@import 'color';
+// Global Imports
+// ==================================================
+@import 'utility';
 @import 'variable';
 
-/* # Optional Imports
-================================================== */
-@import 'reset';
-@import 'ad';
-@import 'affix';
-@import 'alert';
-@import 'animation';
-@import 'breadcrumb';
-@import 'button';
-@import 'canvas';
-@import 'carousel';
-@import 'chart';
-@import 'code';
-@import 'collapse';
-@import 'colorpicker';
-@import 'datepicker';
-@import 'dropdown';
-@import 'footer';
-@import 'form';
-@import 'grid';
-@import 'header';
-@import 'icon';
-@import 'image';
-@import 'label_and_badge';
-@import 'link';
-@import 'list';
-@import 'loader';
-@import 'map';
-@import 'missive';
-@import 'modal';
-@import 'nav_and_tab';
-@import 'navbar';
-@import 'pagination';
-@import 'panel';
-@import 'placeholder';
-@import 'popover';
-@import 'progress';
-@import 'sidebar';
-@import 'slider';
-@import 'spinner';
-@import 'subheader';
-@import 'swoggle';
-@import 'table';
-@import 'timepicker';
-@import 'toolbar';
-@import 'tooltip';
-@import 'transition';
-@import 'trunk';
-@import 'typography';
-@import 'typeahead';
+// Specific Imports
+// ==================================================
+@import 'blocks/reset';
+@import 'blocks/anchor';
+@import 'blocks/code';
+@import 'blocks/list';
+@import 'blocks/table';
+@import 'blocks/button';
+@import 'blocks/form';
+@import 'blocks/multimedia';
+@import 'blocks/icon';
+@import 'components/layout';
+@import 'components/grid';
+@import 'components/animation';
+@import 'components/transition';
+@import 'components/spinner';
+@import 'components/affix';
+@import 'components/sidebar';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/navbar';
+@import 'components/modal';
+@import 'components/card';
+@import 'components/alert';
+@import 'components/missive';
+@import 'components/nav_and_tab';
+@import 'components/carousel';
+@import 'components/collapse';
+@import 'components/tooltip';
+@import 'components/popover';
+@import 'components/dropmenu';
+@import 'components/colorpicker';
+@import 'components/datepicker';
+@import 'components/timepicker';
+@import 'components/typeahead';
+@import 'components/ad';
+@import 'components/label_and_badge';
+@import 'components/breadcrumb';
+@import 'components/pagination';
+@import 'components/progress';
+@import 'components/placeholder';
+@import 'components/milestone';
+@import 'components/switch';
+@import 'components/calendar';
+@import 'components/map';
+@import 'components/chart';
+@import 'blocks/common';
+@import 'blocks/typography';

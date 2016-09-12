@@ -1,0 +1,50 @@
+// Table of Contents
+// ==================================================
+// Alert
+// Colors
+// Styles
+
+// Alert
+// ==================================================
+.alert {
+  background: color(light-haze);
+  border: 0;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: dark-color(light-haze);
+  box-sizing: border-box;
+  color: color(black);
+  display: block;
+  padding: 10px 20px;
+  width: 100%;
+
+  .alert-close { float: right; }
+
+  &.fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1050;
+  }
+}
+
+// Colors
+// ==================================================
+@each $name, $color in $colors {
+  .alert-color-#{$name} {
+    background: color($name);
+    border-color: dark-color($name);
+    color: text-color-on($name);
+
+    &.alert-outline {
+      border-color: color($name);
+      color: color($name);
+    }
+  }
+}
+
+// Styles
+// ==================================================
+.alert-border { border-width: 1px; }
+.alert-outline { background: color(transparent); }

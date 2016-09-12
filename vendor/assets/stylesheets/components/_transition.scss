@@ -1,0 +1,12 @@
+// Table of Contents
+// ==================================================
+// Transition
+
+// Transition
+// ==================================================
+.fade {
+  opacity: 0;
+  @include transition(opacity 0.3s linear);
+
+  &.in { opacity: 1; }
+}

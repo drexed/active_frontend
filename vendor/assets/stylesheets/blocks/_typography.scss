@@ -1,0 +1,204 @@
+// Table of Contents
+// ==================================================
+// Font-face
+// Reset
+// Whitespace
+// Weights
+// Variants
+// Transformations
+// Styles
+// Sizes
+// Modifiers
+// Line Heights
+// Letter Spacing
+// Indents
+// Families
+// Decorations
+// Colors
+// Alignments
+
+// Font-face
+// ==================================================
+@if index(text-family(sans-serif), 'Fakt Pro') {
+  @each $name, $weight in $font-weights {
+    @font-face {
+      font-display: swap;
+      font-family: 'Fakt Pro';
+      font-style: normal;
+      font-weight: $weight;
+      src: url(font-path('fakt-pro/fakt-pro-#{$name}.woff')) format('woff');
+    }
+  }
+}
+@if index(text-family(sans-serif), 'Fakt Soft Pro') {
+  @each $name, $weight in $font-weights {
+    @font-face {
+      font-display: swap;
+      font-family: 'Fakt Soft Pro';
+      font-style: normal;
+      font-weight: $weight;
+      src: url(font-path('fakt-soft-pro/fakt-soft-pro-#{$name}.woff')) format('woff');
+    }
+  }
+}
+
+// Reset
+// ==================================================
+$font-headings: h1, h2, h3, h4, h5, h6;
+@each $heading in $font-headings {
+  $i: index($font-headings, $heading);
+  $name: nth(map-keys($font-sizes), $i);
+
+  #{$heading} {
+    font-size: text-size($name);
+    font-weight: text-weight(semibold);
+    line-height: text-line-height($name);
+    margin-bottom: #{30 - (5 * $i)}px;
+  }
+}
+abbr {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+blockquote {
+  border-left: 3px solid color(primary);
+  padding: 10px 0 10px 20px;
+
+  > cite {
+    display: block;
+    margin-top: 5px;
+  }
+}
+cite,
+small {
+  font-size: text-size(xs);
+  line-height: text-line-height(xs);
+}
+del,
+s { text-decoration: line-through; }
+b { font-weight: text-weight(bold); }
+address,
+dfn,
+i,
+em { font-style: italic; }
+em,
+mark,
+strong { font-weight: text-weight(semibold); }
+ins,
+u { text-decoration: underline; }
+mark {
+  background: color(transparent);
+  border-bottom: 3px solid color(yellow);
+}
+p { margin-bottom: 20px; }
+q {
+  &::before,
+  &::after { content: ''; }
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sub { vertical-align: text-bottom; }
+sup { vertical-align: text-top; }
+
+// Whitespace
+// ==================================================
+@each $name in normal, nowrap, pre, pre-line, pre-wrap {
+  .text-whitespace-#{$name} { white-space: $name; }
+}
+
+// Weights
+// ==================================================
+@each $name, $weight in $font-weights {
+  .text-weight-#{$name} { font-weight: $weight; }
+}
+
+// Variants
+// ==================================================
+@each $name in normal, small-caps {
+  .text-variant-#{$name} { font-variant: $name; }
+}
+
+// Transformations
+// ==================================================
+@each $name in capitalize, none, lowercase, uppercase {
+  .text-transform-#{$name} { text-transform: $name; }
+}
+
+// Styles
+// ==================================================
+@each $name in italic, normal, oblique {
+  .text-style-#{$name} { font-style: $name; }
+}
+
+// Sizes
+// ==================================================
+@each $name, $size in $font-sizes {
+  .text-size-#{$name} {
+    font-size: text-size($name);
+    line-height: text-line-height($name);
+  }
+}
+
+// Modifiers
+// ==================================================
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+// Line Heights
+// ==================================================
+@each $name, $size in $font-line-heights {
+  .text-line-height-#{$name} { line-height: $size; }
+}
+
+// Letter Spacing
+// ==================================================
+@each $name, $space in $font-spaces {
+  .text-letter-spacing-#{$name} { letter-spacing: $space; }
+}
+
+// Indents
+// ==================================================
+@each $name, $indent in $font-indents {
+  .text-indent-#{$name} { text-indent: $indent; }
+}
+
+// Families
+// ==================================================
+@each $name, $family in $font-families {
+  .text-family-#{$name} { font-family: $family; }
+}
+
+// Decorations
+// ==================================================
+@each $name in line-through, none, overline, underline {
+  .text-decoration-#{$name} { text-decoration: $name; }
+}
+
+// Colors
+// ==================================================
+@each $name, $color in $colors {
+  .text-color-#{$name} { color: $color; }
+  .text-color-hover-#{$name} {
+    &:hover { color: $color; }
+  }
+  .text-color-focus-#{$name} {
+    &:focus { color: $color; }
+  }
+  .text-color-active-#{$name} {
+    &:active { color: $color; }
+  }
+}
+
+// Alignments
+// ==================================================
+@each $name in center, justify, left, right {
+  .text-align-#{$name} { text-align: $name; }
+}

@@ -1,0 +1,80 @@
+// Table of Contents
+// ==================================================
+// Datepicker
+
+// scss-lint:disable NestingDepth
+// scss-lint:disable SelectorDepth
+
+// Datepicker
+// ==================================================
+.datepicker {
+  padding: 4px;
+
+  table {
+    width: 100%;
+
+    td,
+    th {
+      border-radius: border-radius(b);
+      padding: 8px 6px;
+      text-align: center;
+    }
+    th:not(.dow) {
+      &:hover,
+      &:focus {
+        background: color(haze);
+        cursor: pointer;
+      }
+    }
+    td {
+      &.today { color: color(primary); }
+      &.day,
+      &.today {
+        &:hover,
+        &:focus {
+          background: color(haze);
+          cursor: pointer;
+        }
+        &:active,
+        &.active {
+          background: color(primary);
+          color: color(white);
+        }
+      }
+      &.old,
+      &.new { color: color(gray); }
+      &.disabled {
+        background: color(transparent);
+        color: color(gray);
+        cursor: not-allowed;
+      }
+
+      span {
+        border-radius: border-radius(b);
+        display: block;
+        float: left;
+        margin: 1%;
+        padding: 13px 0;
+        width: 23%;
+
+        &:hover,
+        &.focus,
+        &.focused {
+          background: color(haze);
+          cursor: pointer;
+        }
+        &:active,
+        &.active,
+        &.focused {
+          background: color(primary);
+          color: color(white);
+        }
+        &.disabled {
+          background: color(transparent);
+          color: color(gray);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

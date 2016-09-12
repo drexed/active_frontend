@@ -1,0 +1,83 @@
+// Table of Contents
+// ==================================================
+// Keyframes
+// Spinner
+// Backdrop
+
+// Keyframes
+// ==================================================
+@-webkit-keyframes spinner-colors {
+  0% { stroke: color(primary); }
+  34% { stroke: color(secondary); }
+  67% { stroke: color(tertiary); }
+  100% { stroke: color(quaditiary); }
+}
+@keyframes spinner-colors {
+  0% { stroke: color(primary); }
+  34% { stroke: color(secondary); }
+  67% { stroke: color(tertiary); }
+  100% { stroke: color(quaditiary); }
+}
+@-webkit-keyframes spinner-dash {
+  0% { stroke-dashoffset: 187; }
+  50% {
+    stroke-dashoffset: (187 / 4);
+    @include transform(rotate(135deg));
+  }
+  100% {
+    stroke-dashoffset: 187;
+    @include transform(rotate(450deg));
+  }
+}
+@keyframes spinner-dash {
+  0% { stroke-dashoffset: 187; }
+  50% {
+    stroke-dashoffset: (187 / 4);
+    @include transform(rotate(135deg));
+  }
+  100% {
+    stroke-dashoffset: 187;
+    @include transform(rotate(450deg));
+  }
+}
+@-webkit-keyframes spinner-rotator {
+  0% { @include transform(rotate(0deg)); }
+  100% { @include transform(rotate(270deg)); }
+}
+@keyframes spinner-rotator {
+  0% { @include transform(rotate(0deg)); }
+  100% { @include transform(rotate(270deg)); }
+}
+
+// Spinner
+// ==================================================
+.spinner {
+  @include animation(spinner-rotator 1.4s linear infinite);
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2050;
+
+  .bar {
+    @include animation(spinner-dash 1.4s ease-in-out infinite, spinner-colors (1.4s * 4) ease-in-out infinite);
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+  }
+}
+
+// Backdrop
+// ==================================================
+.spinner-backdrop {
+  background: transparentize(color(white), 0.15);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2040;
+}

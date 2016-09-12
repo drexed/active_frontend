@@ -1,0 +1,62 @@
+// Table of Contents
+// ==================================================
+// Keyframes
+// Reset
+// Progress
+// Sizes
+// Colors
+
+// Keyframes
+// ==================================================
+@-webkit-keyframes progress-bar-stripes {
+  from { background-position: 40px 0; }
+  to { background-position: 0 0; }
+}
+@keyframes progress-bar-stripes {
+  from { background-position: 40px 0; }
+  to { background-position: 0 0; }
+}
+
+// Reset
+// ==================================================
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+// Progress
+// ==================================================
+.progress {
+  background: color(haze);
+  border-radius: border-radius(b);
+  height: progress-size(b);
+  overflow: hidden;
+}
+.bar {
+  @include transition(width 0.6s ease);
+  background: color(primary);
+  box-sizing: border-box;
+  float: left;
+  height: 100%;
+  width: 0;
+
+  &.striped {
+    @include background-image(45deg, transparentize(color(white), 0.85) 25%, color(transparent) 25%, color(transparent) 50%, transparentize(color(white), 0.85) 50%, transparentize(color(white), 0.85) 75%, color(transparent) 75%, color(transparent));
+    @include background-size(40px 40px);
+    @include transition(width 0.6s ease);
+
+    &.active { @include animation(progress-bar-stripes 2s linear infinite); }
+  }
+}
+
+// Sizes
+// ==================================================
+@each $name, $size in $progress-sizes {
+  .progress-size-#{$name} { height: $size; }
+}
+
+// Colors
+// ==================================================
+@each $name, $color in $colors {
+  .bar-color-#{$name} { background: $color; }
+}

@@ -1,0 +1,66 @@
+// Table of Contents
+// ==================================================
+// Navbar
+
+// scss-lint:disable NestingDepth
+
+// Navbar
+// ==================================================
+.navbar {
+  background: color(white);
+  border-collapse: separate;
+  border-top: 1px solid color(dark-haze);
+  box-sizing: border-box;
+  display: table;
+  height: 50px;
+  line-height: 1;
+  table-layout: fixed;
+  width: 100%;
+
+  > a {
+    display: table-cell;
+    float: none;
+    font-size: text-size(xxs);
+    font-weight: text-weight(semibold);
+    text-align: center;
+    vertical-align: middle;
+    width: 1%;
+
+    &:hover,
+    &.active,
+    &:active,
+    &:focus { color: color(primary); }
+
+    > i {
+      font-size: text-size(l);
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+
+  &.primary {
+    > a {
+      &:hover,
+      &.active,
+      &:active,
+      &:focus {
+        background: darkish-color(primary);
+        color: color(white);
+      }
+    }
+  }
+
+  &.fixed {
+    bottom: 0;
+    position: fixed;
+    min-width: inherit;
+    width: inherit;
+    z-index: 1040;
+  }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (min-width: 768px) {
+  .navbar { display: none; }
+}

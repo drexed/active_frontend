@@ -1,0 +1,79 @@
+// Table of Contents
+// ==================================================
+// Pagination
+
+// scss-lint:disable NestingDepth
+
+// Pagination
+// ==================================================
+.pagination {
+  color: color(black);
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    line-height: 1;
+    margin-right: 2px;
+
+    &:last-child { margin: 0; }
+
+    a,
+    &.active {
+      border-radius: border-radius(xl);
+      display: inline-block;
+      min-width: 8px;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    a { background: color(haze); }
+    a:hover,
+    a:focus { background: darkish-color(haze); }
+    a:active { background: lightish-color(haze); }
+
+    &.active {
+      background: color(primary);
+      color: color(white);
+    }
+    &.pagination-icon {
+      a {
+        font-size: text-size(m);
+        padding: 7px;
+      }
+
+      &:first-child {
+        a {
+          padding-left: 6px;
+          padding-right: 8px;
+        }
+      }
+      &:last-child {
+        a {
+          padding-left: 8px;
+          padding-right: 6px;
+        }
+      }
+    }
+  }
+
+  &.dark,
+  &.light,
+  &.white { background: color(transparent); }
+  &.dark {
+    li {
+      a { background: color(light-black); }
+      a:hover,
+      a:focus { background: darkish-color(light-black); }
+      a:active { background: lightish-color(light-black); }
+    }
+  }
+  &.light {
+    li {
+      a { background: color(dark-haze); }
+      a:hover,
+      a:focus { background: darkish-color(dark-haze); }
+      a:active { background: lightish-color(dark-haze); }
+    }
+  }
+}

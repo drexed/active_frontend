@@ -1,0 +1,57 @@
+// Table of Contents
+// ==================================================
+// Label & Badge
+// Colors
+// Styles
+
+// Label & Badge
+// ==================================================
+.badge,
+.label {
+  background: color(haze);
+  border: 1px solid color(haze);
+  border-radius: border-radius(b);
+  color: color(black);
+  display: inline-block;
+  font-size: text-size(s);
+  font-weight: text-weight(semibold);
+  line-height: 1;
+  overflow: hidden;
+  padding: 6px 10px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+
+  &:empty { display: none; }
+}
+.badge {
+  border-radius: border-radius(xl);
+  min-width: 14px;
+  padding: 6px;
+}
+
+// Colors
+// ==================================================
+@each $name, $color in map-keys($colors) {
+  .badge-color-#{$name},
+  .label-color-#{$name} {
+    background: color($name);
+    border-color: color($name);
+    color: text-color-on($name);
+
+    &.badge-outline,
+    &.label-outline { color: color($name); }
+  }
+}
+
+// Styles
+// ==================================================
+.badge-block,
+.label-block {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+.badge-outline,
+.label-outline { background: color(transparent); }

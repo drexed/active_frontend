@@ -1,0 +1,127 @@
+// Table of Contents
+// ==================================================
+// Visibility
+// Scrollbars
+// Pushes
+// Pulls
+// Paddings
+// Margins
+// Displays
+// Colors
+// Box shadows
+// Border radiuses
+// Border colors
+// Background colors
+
+// Visibility
+// ==================================================
+@each $name in $common-visibility-types {
+  .visibility-#{$name} { visibility: $name; }
+}
+
+// Scrollbars
+// ==================================================
+.scrollbar {
+  &::-webkit-scrollbar {
+    background: color(transparent);
+    border-radius: 999px;
+    width: 6px;
+  }
+  &::-webkit-scrollbar:hover { background: rgba(color(transparent), 0.15); }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(color(transparent), 0.5);
+    border-radius: 999px;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: rgba(color(transparent), 0.6);
+    border-radius: 999px;
+  }
+}
+
+// Pushes
+// ==================================================
+@each $name, $margin in (center: (0 auto), left: (0 auto 0 0), right: (0 0 0 auto)) {
+  .push-#{$name} { margin: $margin; }
+}
+
+// Pulls
+// ==================================================
+@each $name in left, none, right {
+  .pull-#{$name} { float: $name; }
+}
+
+// Paddings
+// ==================================================
+@each $name, $size in $common-margins-and-paddings {
+  .padding-size-#{$name} { padding: $size; }
+  .padding-size-bottom-#{$name} { padding-bottom: $size; }
+  .padding-size-left-#{$name} { padding-left: $size; }
+  .padding-size-right-#{$name} { padding-right: $size; }
+  .padding-size-top-#{$name} { padding-top: $size; }
+}
+
+// Margins
+// ==================================================
+@each $name, $size in $common-margins-and-paddings {
+  .margin-size-#{$name} { margin: $size; }
+  .margin-size-bottom-#{$name} { margin-bottom: $size; }
+  .margin-size-left-#{$name} { margin-left: $size; }
+  .margin-size-right-#{$name} { margin-right: $size; }
+  .margin-size-top-#{$name} { margin-top: $size; }
+}
+
+// Displays
+// ==================================================
+@each $name in $common-display-types {
+  .display-#{$name} { display: $name; }
+}
+
+// Colors
+// ==================================================
+.dark,
+.primary { color: color(white); }
+.dark {
+  background: color(black);
+  border-color: color(dark-black);
+}
+.primary {
+  background: color(primary);
+  border-color: darker-color(primary);
+}
+.light,
+.white {
+  border-color: color(dark-haze);
+  color: color(black);
+}
+.light { background: color(light-haze); }
+.white { background: color(white); }
+
+// Box shadows
+// ==================================================
+.box-shadow-bottom { box-shadow: 0 2px 3px color(dark-haze); }
+.box-shadow-left { box-shadow: -2px 0 3px color(dark-haze); }
+.box-shadow-right { box-shadow: 2px 0 3px color(dark-haze); }
+.box-shadow-top { box-shadow: 0 -2px 3px color(dark-haze); }
+.box-shadow { box-shadow: 0 0 3px color(dark-haze); }
+
+// Border radiuses
+// ==================================================
+@each $name, $radius in $common-border-radiuses {
+  .border-radius-#{$name} { border-radius: $radius; }
+}
+
+// Border colors
+// ==================================================
+@each $name, $color in $colors {
+  .border-color-#{$name} { border-color: $color; }
+  .border-color-bottom-#{$name} { border-bottom-color: $color; }
+  .border-color-left-#{$name} { border-left-color: $color; }
+  .border-color-right-#{$name} { border-right-color: $color; }
+  .border-color-top-#{$name} { border-top-color: $color; }
+}
+
+// Background colors
+// ==================================================
+@each $name, $color in $colors {
+  .background-color-#{$name} { background-color: $color; }
+}

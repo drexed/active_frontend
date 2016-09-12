@@ -1,0 +1,49 @@
+// Table of Contents
+// ==================================================
+// Milestone
+// Colors
+
+// Milestone
+// ==================================================
+.milestones {
+  list-style: none;
+  padding-left: 20px;
+
+  > li {
+    border-left: 1px dashed;
+    border-bottom: 1px dashed;
+    border-color: inherit;
+    padding: 25px 30px;
+
+    &:last-child { border-bottom: 0; }
+
+    > [class^='icon-'],
+    > [class*=' icon-'],
+    > [class^='icon-weather-'],
+    > [class*=' icon-weather-'] {
+      border-radius: border-radius(xl);
+      box-sizing: border-box;
+      float: left;
+      height: 40px;
+      margin: -9px 0 0 -50px;
+      padding-top: 8px;
+      position: relative;
+      text-align: center;
+      width: 40px;
+    }
+  }
+}
+.milestone {
+  background: color(light-haze);
+  border: 1px solid color(dark-haze);
+}
+
+// Colors
+// ==================================================
+@each $name, $color in map-keys($colors) {
+  .milestone-#{$name} {
+    background: color($name);
+    border-color: darker-color($name);
+    color: text-color-on($name);
+  }
+}

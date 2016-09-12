@@ -1,0 +1,40 @@
+// Table of Contents
+// ==================================================
+// Missive
+
+// Missive
+// ==================================================
+.missive {
+  border: 1px solid color(dark-haze);
+  border-radius: border-radius(b);
+
+  &::before,
+  &::after {
+    clear: both;
+    content: '\0020';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+  }
+}
+.missive-icon,
+.missive-content {
+  box-sizing: border-box;
+  float: left;
+  padding: 20px;
+  white-space: normal;
+}
+.missive-icon {
+  font-size: text-size(xxl);
+  padding-top: 30px;
+  text-align: center;
+  width: 80px;
+}
+.missive-content {
+  padding-left: 0;
+  width: calc(100% - 80px);
+
+  p:last-child { margin-bottom: 0; }
+}

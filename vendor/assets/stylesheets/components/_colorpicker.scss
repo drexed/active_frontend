@@ -1,0 +1,38 @@
+// Table of Contents
+// ==================================================
+// Colorpicker
+
+// Colorpicker
+// ==================================================
+.colorpicker {
+  min-width: 170px;
+  padding: 8px;
+
+  li {
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 2px;
+    width: 30px;
+  }
+
+  .swatch {
+    @include appearance(none);
+    border: 1px solid rgba(0,0,0,0.075);
+    border-radius: border-radius(b);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: inherit;
+    padding: 0;
+    vertical-align: middle;
+    width: inherit;
+  }
+}
+.colorpicker-active {
+  border: 1px solid rgba(0,0,0,0.075);
+  border-radius: border-radius(b);
+  box-sizing: border-box;
+  height: 28px;
+  width: 28px;
+}

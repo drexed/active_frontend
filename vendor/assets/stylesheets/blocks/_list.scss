@@ -1,0 +1,76 @@
+// Table of Contents
+// ==================================================
+// Reset
+// Styles
+// Decorations
+// Colors
+
+// Reset
+// ==================================================
+dd,
+ol,
+ul { padding-left: 20px; }
+dl,
+ol,
+ul {
+  background: color(trasparent);
+  border-color: color(dark-haze);
+}
+
+// Styles
+// ==================================================
+.list-stripe {
+  > li:nth-child(even) { background: color(light-haze); }
+
+  &.dark {
+    > li:nth-child(even) { background: inherit; }
+    > li:nth-child(odd) { background: color(light-black); }
+  }
+  &.light {
+    > li:nth-child(even) { background: color(haze); }
+  }
+}
+.list-hover {
+  > li:hover { background: color(haze); }
+
+  &.dark {
+    > li:hover { background: background-hover-color(black); }
+  }
+  &.light {
+    > li:hover { background: background-hover-color(haze); }
+  }
+}
+.list-inline {
+  > li { display: inline-block; }
+}
+.list-clear {
+  list-style: none;
+  padding: 0;
+}
+.list-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+// Decorations
+// ==================================================
+.list-line,
+.list-border {
+  > li {
+    padding: 5px 0;
+
+    &:not(:last-child) {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+    }
+  }
+}
+.list-border {
+  border-style: solid;
+  border-width: 1px;
+
+  > li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

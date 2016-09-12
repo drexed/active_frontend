@@ -1,0 +1,15 @@
+// Table of Contents
+// ==================================================
+// Anchor
+
+// Anchor
+// ==================================================
+a {
+  @include text-decoration-skip(objects);
+  @include transition(all 0.3s ease-in-out);
+  background: color(transparent);
+  color: inherit;
+  outline-width: 0;
+  text-decoration: none;
+  touch-action: manipulation;
+}

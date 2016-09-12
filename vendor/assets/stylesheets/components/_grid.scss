@@ -1,0 +1,144 @@
+// Table of Contents
+// ==================================================
+// Visibilities
+// Rows
+// Containers
+// Columns
+// Media Queries
+
+// Visibilities
+// ==================================================
+.visible { display: inherit; }
+.hidden,
+.hidden-desktop { display: none; }
+
+// Rows
+// ==================================================
+@each $type in $grid-row-types {
+  @each $name, $margin in $grid-row-margins {
+    .#{dasherize($type, $name)} {
+      &::before,
+      &::after {
+        clear: both;
+        content: '\0020';
+        display: block;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+      }
+    }
+  }
+}
+@each $name, $margin in $grid-row-margins {
+  .#{dasherize(row, $name)} { margin-bottom: $margin; }
+}
+
+// Containers
+// ==================================================
+@each $type in $grid-container-types {
+  $i: index($grid-container-types, $type);
+
+  @each $name, $widths in $grid-container-widths {
+    $width: nth($widths, $i);
+
+    @if $width {
+      .#{dasherize($type, $name)} {
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: $width;
+      }
+
+      @if $i == 2 {
+        .container-max-#{$name} { max-width: $width; }
+      }
+    }
+  }
+}
+
+// Columns
+// ==================================================
+.cols {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &.alpha { margin-left: 0; }
+  &.omega { margin-right: 0; }
+}
+
+@each $name, $width in $grid-column-widths {
+  .#{$name}.cols {
+    width: calc(#{$width} - 20px);
+
+    &.alpha,
+    &.omega { width: calc(#{$width} - 10px); }
+    &.alpha.omega { width: $width; }
+  }
+  .offset-by-#{$name} { padding-left: $width; }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (min-width: 960px) and (max-width: 1365px) {
+  @each $name, $widths in $grid-container-widths {
+    $width: nth($widths, 2);
+
+    @if $width {
+      @if $width > 960 {
+        .conatinerFixed-#{$name} { width: 960px; }
+      }
+    }
+  }
+
+  .hidden-desktop { display: inherit; }
+  .hidden-laptop { display: none; }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  @each $name, $widths in $grid-container-widths {
+    $width: nth($widths, 2);
+
+    @if $width {
+      @if $width > 760 {
+        .conatinerFixed-#{$name} { width: 760px; }
+      }
+    }
+  }
+
+  .hidden-desktop { display: inherit; }
+  .hidden-tablet { display: none; }
+}
+@media only screen and (max-width: 767px) {
+  @each $name, $margin in $grid-row-margins {
+    .#{dasherize(rowResponsive, $name)} { margin-bottom: $margin; }
+  }
+  @each $type in $grid-container-types {
+    $i: index($grid-container-types, $type);
+
+    @each $name, $widths in $grid-container-widths {
+      $width: nth($widths, $i);
+
+      @if $width {
+        .#{dasherize($type, $name)} { width: calc(100% - 20px); }
+      }
+    }
+  }
+  @each $name, $width in $grid-column-widths {
+    .#{$name}.cols {
+      margin: 0;
+      width: 100%;
+
+      &.alpha,
+      &.omega,
+      &.alpha.omega {
+        margin: 0;
+        width: 100%;
+      }
+    }
+    .offset-by-#{$name} { padding-left: 0; }
+  }
+  .hidden-desktop { display: inherit; }
+  .hidden-phone { display: none; }
+}

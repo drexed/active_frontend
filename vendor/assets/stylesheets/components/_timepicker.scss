@@ -1,0 +1,30 @@
+// Table of Contents
+// ==================================================
+// Timepicker
+
+// scss-lint:disable NestingDepth
+// scss-lint:disable SelectorDepth
+
+// Timepicker
+// ==================================================
+.timepicker {
+  padding: 4px;
+
+  table {
+    width: 100%;
+
+    td {
+      height: 30px;
+      padding: 0;
+      text-align: center;
+
+      a {
+        font-size: 24px;
+
+        &:hover,
+        &:active,
+        &:focus { color: color(primary); }
+      }
+    }
+  }
+}

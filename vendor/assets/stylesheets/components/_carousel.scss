@@ -1,0 +1,135 @@
+// Table of Contents
+// ==================================================
+// Carousel
+// Media Queries
+
+// Carousel
+// ==================================================
+.carousel {
+  border-color: color(white);
+  color: color(white);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &.dark { border-color: color(white); }
+  &.light,
+  &.white { border-color: color(black); }
+}
+.carousel-inner {
+  overflow: inherit;
+  width: inherit;
+
+  .item {
+    @include transition(0.6s ease-in-out left);
+    display: none;
+  }
+  .active,
+  .next,
+  .prev { display: block; }
+  .next,
+  .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .next.left,
+  .prev.right,
+  .active { left: 0; }
+  .prev,
+  .active.left { left: -100%; }
+  .next,
+  .active.right { left: 100%; }
+}
+.carousel-control {
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 70px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+    outline: none;
+  }
+
+  &.right {
+    left: auto;
+    right: 0;
+  }
+
+  .icon-prev,
+  .icon-next {
+    display: inline-block;
+    font-size: 56px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: calc(50% - 56px);
+    z-index: 5;
+  }
+  .icon-prev {
+    left: 20px;
+
+    &::before { content: '\2039'; }
+  }
+  .icon-next {
+    right: 20px;
+
+    &::before { content: '\203a'; }
+  }
+}
+.carousel-indicators {
+  bottom: 20px;
+  left: 20%;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 60%;
+  z-index: 15;
+
+  li {
+    border-radius: border-radius(xl);
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    display: inline-block;
+    height: 4px;
+    margin: 2px 6px;
+    width: 4px;
+
+    &.active {
+      height: 8px;
+      margin: 0 4px;
+      width: 8px;
+    }
+  }
+}
+.carousel-caption {
+  bottom: 20px;
+  color: inherit;
+  left: 15%;
+  padding: 20px 0;
+  position: absolute;
+  right: 15%;
+  text-align: center;
+  z-index: 10;
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: 767px) {
+  .carousel-control {
+    .icon-prev,
+    .icon-next {
+      font-size: 20px;
+      top: calc(50% - 20px);
+    }
+  }
+  .carousel-caption { display: none; }
+}

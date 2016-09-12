@@ -1,0 +1,17 @@
+// Table of Contents
+// ==================================================
+// Collapse
+
+// Collapse
+// ==================================================
+.collapse {
+  display: none;
+
+  &.in { display: block; }
+}
+.collapsing {
+  @include transition(height 0.3s ease-in-out);
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}

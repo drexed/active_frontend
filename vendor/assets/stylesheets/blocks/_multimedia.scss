@@ -1,0 +1,62 @@
+// Table of Contents
+// ==================================================
+// Reset
+// Groups
+// Avatars
+// Media Queries
+
+// Reset
+// ==================================================
+audio,
+canvas,
+video { display: inline-block; }
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+img {
+  border: 0;
+  border-radius: border-radius(b);
+  display: block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  width: auto;
+}
+svg:not(:root) { overflow: hidden; }
+
+// Groups
+// ==================================================
+.img-group {
+  > * {
+    display: inline-block;
+    margin-right: -20px;
+  }
+  > *:last-child { margin-right: 0; }
+}
+
+// Avatars
+// ==================================================
+.img-avatar {
+  @include transition(border-color 300ms ease-in-out);
+  border: 2px solid color(dark-haze);
+  display: inline-block;
+  padding: 2px;
+
+  img { border-radius: inherit; }
+
+  &.dark { border-color: color(dark-black); }
+}
+@each $name, $color in $colors {
+  .img-avatar-hover-#{$name} {
+    &:hover,
+    &:active,
+    &:focus { border-color: $color; }
+  }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: 767px) {
+  .img-responsive { max-width: 60%; }
+}

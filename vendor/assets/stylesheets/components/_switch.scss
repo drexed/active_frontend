@@ -1,0 +1,150 @@
+// Table of Contents
+// ==================================================
+// Switch
+// Sizes
+// Colors
+
+// Switch
+// ==================================================
+.switch {
+  border: 1px solid;
+  border-color: color(dark-haze);
+  border-radius: border-radius(xl);
+  display: inline-block;
+  height: 28px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  width: 60px;
+
+  input[type='checkbox'] { display: none; }
+
+  .switch-group {
+    @include transition(left 0.125s ease-in-out);
+    @include user-select(none);
+    border-color: inherit;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 200%;
+  }
+  .switch-handle {
+    @include transition(right 0.125s ease-in-out);
+    background: color(white);
+    border: 1px solid;
+    border-color: inherit;
+    border-radius: border-radius(xl);
+    box-sizing: border-box;
+    display: block;
+    height: 28px;
+    position: absolute;
+    right: calc(50% - 1px);
+    width: 28px;
+  }
+  .switch-off,
+  .switch-on {
+    border-radius: border-radius(xl);
+    bottom: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 6px;
+    position: absolute;
+    top: 0;
+  }
+  .switch-off {
+    left: 50%;
+    padding-right: 10px;
+    right: 0;
+    text-align: right;
+  }
+  .switch-on {
+    left: 0;
+    padding-left: 10px;
+    right: 50%;
+  }
+
+  &.off {
+    .switch-group { left: -100%; }
+    .switch-handle { right: calc(50% - 27px); }
+  }
+  &.dark {
+    .switch-handle { background: color(light-black); }
+  }
+  &.light {
+    .switch-handle { background: color(haze); }
+  }
+}
+
+// Sizes
+// ==================================================
+.switch-size-l {
+  height: 36px;
+  width: 80px;
+
+  .switch-handle {
+    height: 36px;
+    width: 36px;
+  }
+  .switch-off,
+  .switch-on {
+    font-size: text-size(l);
+    padding-top: 8px;
+  }
+  .switch-off { padding-right: 14px; }
+  .switch-on { padding-left: 14px; }
+
+  &.off {
+    .switch-handle { right: calc(50% - 35px); }
+  }
+}
+.switch-size-m {
+  height: 32px;
+  width: 70px;
+
+  .switch-handle {
+    height: 32px;
+    width: 32px;
+  }
+  .switch-off,
+  .switch-on {
+    font-size: text-size(l);
+    padding-top: 6px;
+  }
+  .switch-off { padding-right: 12px; }
+  .switch-on { padding-left: 12px; }
+
+  &.off {
+    .switch-handle { right: calc(50% - 31px); }
+  }
+}
+.switch-size-s {
+  height: 24px;
+  width: 50px;
+
+  .switch-handle {
+    height: 24px;
+    width: 24px;
+  }
+  .switch-off,
+  .switch-on {
+    font-size: text-size(s);
+    padding-top: 5px;
+  }
+  .switch-off { padding-right: 8px; }
+  .switch-on { padding-left: 8px; }
+
+  &.off {
+    .switch-handle { right: calc(50% - 23px); }
+  }
+}
+
+// Colors
+// ==================================================
+@each $name, $color in $colors {
+  .switch-color-#{$name} {
+    background: color($name);
+    color: text-color-on($name);
+  }
+}

@@ -1,0 +1,278 @@
+// Table of Contents
+// ==================================================
+// Button
+// Colors
+// Styles
+// Sizes
+// Groups
+// Data Toggles
+// Media Queries
+
+// scss-lint:disable NestingDepth
+
+// Button
+// ==================================================
+.btn {
+  @include appearance(none);
+  @include transition(all 0.3s ease-in-out);
+  background: color(haze);
+  border: 1px solid darker-color(haze);
+  border-radius: border-radius(b);
+  box-sizing: border-box;
+  color: color(black);
+  cursor: pointer;
+  display: inline-block;
+  font-size: text-size(b);
+  font-weight: text-weight(semibold);
+  line-height: 1;
+  padding: 11px 20px;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &.active,
+  &:focus { background: darkish-color(haze); }
+  &:active,
+  &.disabled,
+  &[disabled] { background: lightish-color(haze); }
+
+  .badge,
+  .label {
+    font-size: text-size(xxxs);
+    padding: 2px 1px 1px;
+    min-width: 9px;
+    vertical-align: top;
+  }
+}
+
+// Colors
+// ==================================================
+@each $name, $color in map-keys($colors) {
+  .btn-color-#{$name} {
+    background: color($name);
+    border-color: darker-color($name);
+    color: text-color-on($name);
+
+    &.btn-link,
+    &.btn-outline { color: color($name); }
+    &.btn-link {
+      &:hover,
+      &.active,
+      &:focus { color: darkish-color($name); }
+      &:active,
+      &.disabled,
+      &[disabled] { color: lightish-color($name); }
+    }
+    &.btn-outline {
+      border-color: color($name);
+
+      &:hover,
+      &:active,
+      &.active,
+      &:focus,
+      &.disabled,
+      &[disabled] {
+        border-color: darker-color($name);
+        color: text-color-on($name);
+      }
+    }
+
+    &:hover,
+    &.active,
+    &:focus { background: darkish-color($name); }
+    &:active,
+    &.disabled,
+    &[disabled] { background: lightish-color($name); }
+  }
+}
+
+// Styles
+// ==================================================
+.btn-link,
+.btn-outline { background: color(transparent); }
+.btn-link {
+  border-color: color(transparent);
+  border-radius: 0;
+  padding: 0;
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.disabled,
+  &[disabled] { background: inherit; }
+}
+.btn-block {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+// Sizes
+// ==================================================
+.btn-size-l,
+.btn-size-m { font-size: text-size(m); }
+.btn-size-l { padding: 19px 30px 20px; }
+.btn-size-m { padding: 15px 25px 16px; }
+.btn-size-s {
+  font-size: text-size(s);
+  padding: 7px 15px 8px;
+}
+.btn-icon {
+  min-width: 42px;
+  padding: 11px 0;
+
+  &.btn-size-l,
+  &.btn-size-m { font-size: text-size(l); }
+  &.btn-size-l {
+    min-width: 60px;
+    padding: 18px 0;
+  }
+  &.btn-size-m {
+    min-width: 52px;
+    padding: 14px 0;
+  }
+  &.btn-size-s {
+    min-width: 32px;
+    padding: 7px 0 8px;
+  }
+}
+
+// Groups
+// ==================================================
+.btn-group {
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  > .btn {
+    border-radius: 0;
+    margin-left: -1px;
+    position: relative;
+
+    &:hover,
+    &:active,
+    &.active,
+    &:focus { z-index: 2; }
+    &:first-child {
+      border-bottom-left-radius: border-radius(b);
+      border-top-left-radius: border-radius(b);
+      margin-left: 0;
+    }
+    &:last-child,
+    &.dropdown-toggle {
+      border-bottom-right-radius: border-radius(b);
+      border-top-right-radius: border-radius(b);
+    }
+  }
+
+  + .btn-group { margin-left: 5px; }
+  &.pull-right + .btn-group.pull-right {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}
+.btn-group-vertical {
+  > .btn {
+    display: block;
+    margin-left: 0;
+    margin-top: -1px;
+    width: 100%;
+
+    &:first-child {
+      border-radius: 0;
+      border-top-right-radius: border-radius(b);
+      border-top-left-radius: border-radius(b);
+      margin-top: 0;
+    }
+    &:last-child {
+      border-radius: 0;
+      border-bottom-right-radius: border-radius(b);
+      border-bottom-left-radius: border-radius(b);
+    }
+  }
+}
+.btn-group-block {
+  border-collapse: separate;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  > .btn {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &:not(.btn-group-vertical) {
+    > .btn {
+      border-right-width: 0;
+      display: table-cell;
+      width: 1%;
+
+      &:last-child { border-right-width: 1px; }
+    }
+  }
+}
+
+// Data Toggles
+// ==================================================
+[data-toggle='buttons'] {
+  .btn {
+    input[type='checkbox'],
+    input[type='radio'] {
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: 767px) {
+  .btn-group-responsive {
+    > .btn {
+      border-radius: 0;
+      display: block;
+      margin-left: 0;
+      margin-top: -1px;
+      width: 100%;
+
+      &:first-child {
+        border-top-right-radius: border-radius(b);
+        border-top-left-radius: border-radius(b);
+        margin-left: 0;
+      }
+      &:last-child {
+        border-bottom-right-radius: border-radius(b);
+        border-bottom-left-radius: border-radius(b);
+      }
+    }
+
+    &.btn-group-vertical {
+      > .btn {
+        display: inline-block;
+        margin-left: -1px;
+        margin-top: 0;
+        max-width: initial;
+        width: initial;
+
+        &:first-child {
+          border-bottom-left-radius: border-radius(b);
+          border-top-right-radius: 0;
+          border-top-left-radius: border-radius(b);
+        }
+        &:last-child {
+          border-bottom-right-radius: border-radius(b);
+          border-bottom-left-radius: 0;
+          border-top-right-radius: border-radius(b);
+        }
+      }
+    }
+  }
+}

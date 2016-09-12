@@ -1,0 +1,63 @@
+// Table of Contents
+// ==================================================
+// Layout
+// Styles
+// Media Queries
+
+// Layout
+// ==================================================
+.layout {
+  height: 100%;
+  width: 100%;
+}
+.layout-body,
+.layout-sidebar {
+  @include overflow-scrolling(touch);
+  float: left;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.layout-body { width: 100%; }
+.layout-sidebar {
+  width: 360px;
+
+  &:not(.hidden) + .layout-body { width: calc(100% - 360px); }
+
+  &.fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1060;
+
+    + .layout-body { width: 100%; }
+  }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (min-width: 960px) and (max-width: 1365px) {
+  .layout-sidebar {
+    width: 260px;
+
+    &:not(.hidden) + .layout-body { width: calc(100% - 260px); }
+    &.fixed + .layout-body { width: 100%; }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .layout-sidebar {
+    width: 210px;
+
+    &:not(.hidden) + .layout-body { width: calc(100% - 210px); }
+    &.fixed + .layout-body { width: 100%; }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .layout-sidebar {
+    width: 260px;
+
+    &:not(.hidden) + .layout-body { width: calc(100% - 260px); }
+    &.fixed + .layout-body { width: 100%; }
+  }
+}

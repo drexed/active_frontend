@@ -1,0 +1,27 @@
+exclude: '*application.css'
+
+linters:
+  ColorKeyword:
+    enabled: false
+  ColorVariable:
+    enabled: false
+  DeclarationOrder:
+    enabled: false
+  EmptyLineBetweenBlocks:
+    enabled: false
+  Indentation:
+    enabled: false
+  LeadingZero:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  PropertySpelling:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  SingleLinePerSelector:
+    enabled: false
+  SpaceAfterComma:
+    enabled: false
+  VendorPrefix:
+    enabled: false

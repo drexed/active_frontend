@@ -1,0 +1,27 @@
+---
+Attribute:
+  enabled: false
+BooleanParameter:
+  enabled: false
+ControlParameter:
+  enabled: false
+FeatureEnvy:
+  enabled: false
+IrresponsibleModule:
+  enabled: false
+LongParameterList:
+  enabled: false
+ManualDispatch:
+  enabled: false
+NestedIterators:
+  max_allowed_nesting: 2
+NilCheck:
+  enabled: false
+PrimaDonnaMethod:
+  enabled: false
+RepeatedConditional:
+  enabled: false
+TooManyStatements:
+  max_statements: 10
+UtilityFunction:
+  enabled: false

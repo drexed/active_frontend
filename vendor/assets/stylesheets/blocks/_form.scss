@@ -72,6 +72,10 @@ input {
   &::-moz-placeholder { line-height: 24px; }
   &:-ms-input-placeholder { line-height: 24px; }
 }
+input[type='submit'] {
+  margin: 0;
+  width: initial;
+}
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button { height: auto; }
 input[type='search'] {

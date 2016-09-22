@@ -516,10 +516,16 @@
   // TOOLTIP DATA-API
   // ================
 
-  $(document).on('hover.bs.tooltip.data-api', '[data-toggle="tooltip"]', function (e) {
-    var $this = $(this);
-    if ($this.data('tooltip')) return;
-    Plugin.call($this, $this.data());
-  });
+  $(document).on('ready.bs.tooltip.data-api', function () {
+      $('[data-toggle="tooltip"]').each(function () {
+        var $this = $(this);
+        if ($this.data('tooltip')) return;
+        Plugin.call($this, $this.data());
+      });
+    }).on('hover.bs.tooltip.data-api', '[data-toggle="tooltip"]', function (e) {
+      var $this = $(this);
+      if ($this.data('tooltip')) return;
+      Plugin.call($this, $this.data());
+    });
 
 }(jQuery);

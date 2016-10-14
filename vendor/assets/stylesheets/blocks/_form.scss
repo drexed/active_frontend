@@ -111,21 +111,17 @@ textarea {
   border-color: color(dark-haze);
   vertical-align: middle;
 
-  &.form-size-l,
-  &.form-size-m {
+  &.form-size-l {
     input,
-    textarea { font-size: text-size(l); }
-
+    textarea {
+      font-size: text-size(l);
+      padding: 14px 20px 15px;
+    }
     input {
       &::-webkit-input-placeholder { line-height: 30px; }
       &::-moz-placeholder { line-height: 30px; }
       &:-ms-input-placeholder { line-height: 30px; }
     }
-
-  }
-  &.form-size-l {
-    input,
-    textarea { padding: 14px 20px 15px; }
     textarea { height: 197px; }
 
     &.form-height-m {
@@ -137,7 +133,15 @@ textarea {
   }
   &.form-size-m {
     input,
-    textarea { padding: 10px 20px 11px; }
+    textarea {
+      font-size: text-size(m);
+      padding: 11px 20px 12px;
+    }
+    input {
+      &::-webkit-input-placeholder { line-height: 28px; }
+      &::-moz-placeholder { line-height: 28px; }
+      &:-ms-input-placeholder { line-height: 28px; }
+    }
     textarea { height: 173px; }
 
     &.form-height-m {
@@ -221,9 +225,11 @@ textarea {
     right: 15px;
     top: 50%;
   }
-  &.form-size-l,
-  &.form-size-m {
-    select { font-size: text-size(l); }
+  &.form-size-l {
+    select {
+      font-size: text-size(l);
+      padding: 19px 20px 20px;
+    }
 
     &::after {
       font-size: text-size(l);
@@ -231,11 +237,17 @@ textarea {
       right: 20px;
     }
   }
-  &.form-size-l {
-    select { padding: 19px 20px 20px; }
-  }
   &.form-size-m {
-    select { padding: 15px 20px 16px; }
+    select {
+      font-size: text-size(m);
+      padding: 16px 20px 17px;
+    }
+
+    &::after {
+      font-size: text-size(m);
+      margin-top: -9px;
+      right: 20px;
+    }
   }
   &.form-size-s {
     select {
@@ -376,7 +388,7 @@ textarea {
     @include transition(all 0.3s ease-in-out);
     font-size: text-size(xxs);
     font-weight: text-weight(bold);
-    left: 18px;
+    left: 16px;
     margin: 2px 0 0;
     opacity: 0;
     position: absolute;
@@ -386,7 +398,7 @@ textarea {
   &.form-size-m {
     label {
       font-size: text-size(xs);
-      left: 22px;
+      left: 21px;
       margin-top: 3px;
     }
   }
@@ -486,10 +498,8 @@ textarea {
   &.form-size-m {
     .form-addon {
       font-size: text-size(m);
-      min-width: 50px;
+      min-width: 52px;
     }
-
-    i { margin-top: 2px; }
   }
   &.form-size-s {
     .form-addon {

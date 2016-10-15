@@ -317,6 +317,10 @@ textarea {
 
     &:hover { background: color(haze); }
   }
+  + label {
+    margin-top: 2px;
+    vertical-align: top;
+  }
   input[type='checkbox'],
   input[type='radio'] {
     margin: 0;
@@ -334,16 +338,22 @@ textarea {
     height: 26px;
     line-height: 26px;
     width: 26px;
+
+    + label { margin-top: 7px; }
   }
   &.form-size-m {
     height: 22px;
     line-height: 22px;
     width: 22px;
+
+    + label { margin-top: 5px; }
   }
   &.form-size-s {
     height: 14px;
     line-height: 14px;
     width: 14px;
+
+    + label { margin-top: 0; }
   }
   &.dark {
     background: color(dark-black);
@@ -387,13 +397,14 @@ textarea {
   label {
     @include transition(all 0.3s ease-in-out);
     font-size: text-size(xxs);
-    font-weight: text-weight(bold);
+    font-weight: text-weight(semibold);
     left: 16px;
     margin: 2px 0 0;
     opacity: 0;
     position: absolute;
     top: 20px;
   }
+
   &.form-size-l,
   &.form-size-m {
     label {
@@ -402,6 +413,9 @@ textarea {
       margin-top: 3px;
     }
   }
+  &.form-size-m {
+    label { margin-top: 2px; }
+  }
   &.form-size-s {
     label {
       font-size: text-size(xxxs);
@@ -409,6 +423,7 @@ textarea {
       margin-top: 1px;
     }
   }
+
   input,
   textarea,
   select {

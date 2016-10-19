@@ -317,10 +317,7 @@ textarea {
 
     &:hover { background: color(haze); }
   }
-  + label {
-    margin-top: 2px;
-    vertical-align: top;
-  }
+  + label { vertical-align: baseline; }
   input[type='checkbox'],
   input[type='radio'] {
     margin: 0;
@@ -338,23 +335,18 @@ textarea {
     height: 26px;
     line-height: 26px;
     width: 26px;
-
-    + label { margin-top: 7px; }
   }
   &.form-size-m {
     height: 22px;
     line-height: 22px;
     width: 22px;
-
-    + label { margin-top: 5px; }
   }
   &.form-size-s {
     height: 14px;
     line-height: 14px;
     width: 14px;
-
-    + label { margin-top: 0; }
   }
+  &.form-align-vertical { vertical-align: middle; }
   &.dark {
     background: color(dark-black);
 

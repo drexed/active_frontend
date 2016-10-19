@@ -18,7 +18,7 @@
   Colorpicker.DEFAULTS = {
     callback: function (color) {},
     colors: [
-      '#DDEA4C', '#6DCA96', '#56D2EE', '#1F8CEB', '#7E61EA',
+      '#DDEA4C', '#5AC389', '#56D2EE', '#1F8CEB', '#7E61EA',
       '#9A6FC7', '#FF7F7F', '#E04E50', '#FF904E', '#F2C330',
       '#343B4A', '#9BA7BA', '#ECEFF5', '#FFFFFF'
     ],

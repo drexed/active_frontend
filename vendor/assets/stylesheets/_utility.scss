@@ -46,7 +46,7 @@
   @return darken(color($color), 2.5%);
 }
 @function color($color) {
-  @return map-get($colors, $color);
+  @return map-get($colors, '' + $color);
 }
 @function lightish-color($color) {
   @return lighten(color($color), 2.5%);

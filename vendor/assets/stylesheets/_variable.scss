@@ -34,38 +34,38 @@ $animation-durations: (
 // Color
 // ==================================================
 $colors-brand: (
-  lime: rgba(221,234,76,1),
-  green: rgba(90,195,137,1),
-  teal: rgba(86,210,238,1),
-  blue: rgba(31,140,235,1),
-  indigo: rgba(126,97,234,1),
-  purple: rgba(154,111,199,1),
-  pink: rgba(255,127,127,1),
-  red: rgba(224,78,80,1),
-  orange: rgba(255,144,78,1),
-  yellow: rgba(242,195,48,1)
+  'lime': rgba(221,234,76,1),
+  'green': rgba(90,195,137,1),
+  'teal': rgba(86,210,238,1),
+  'blue': rgba(31,140,235,1),
+  'indigo': rgba(126,97,234,1),
+  'purple': rgba(154,111,199,1),
+  'pink': rgba(255,127,127,1),
+  'red': rgba(224,78,80,1),
+  'orange': rgba(255,144,78,1),
+  'yellow': rgba(242,195,48,1)
 );
 $colors-grayscale: (
-  transparent: rgba(0,0,0,0),
-  dark-black: rgba(44,50,62,1),
-  black: rgba(52,59,74,1),
-  light-black: rgba(60,68,86,1),
-  dark-gray: rgba(143,157,178,1),
-  gray: rgba(155,167,186,1),
-  light-gray: rgba(167,177,194,1),
-  dark-haze: rgba(227,232,240,1),
-  haze: rgba(239,242,248,1),
-  light-haze: rgba(249,250,252,1),
-  white: rgba(255,255,255,1)
+  'transparent': rgba(0,0,0,0),
+  'dark-black': rgba(44,50,62,1),
+  'black': rgba(52,59,74,1),
+  'light-black': rgba(60,68,86,1),
+  'dark-gray': rgba(143,157,178,1),
+  'gray': rgba(155,167,186,1),
+  'light-gray': rgba(167,177,194,1),
+  'dark-haze': rgba(227,232,240,1),
+  'haze': rgba(239,242,248,1),
+  'light-haze': rgba(249,250,252,1),
+  'white': rgba(255,255,255,1)
 );
 $colors-global: (
-  primary: map-get($colors-brand, blue),
-  secondary: map-get($colors-brand, green),
-  tertiary: map-get($colors-brand, red),
-  quaditiary: map-get($colors-brand, yellow)
+  'primary': map-get($colors-brand, 'blue'),
+  'secondary': map-get($colors-brand, 'green'),
+  'tertiary': map-get($colors-brand, 'red'),
+  'quaditiary': map-get($colors-brand, 'yellow')
 );
 $colors: map-merge(map-merge($colors-brand, $colors-grayscale), $colors-global);
-$colors-black-text: transparent, dark-haze, haze, light-haze, white;
+$colors-black-text: 'transparent', 'dark-haze', 'haze', 'light-haze', 'white';
 
 // Common
 // ==================================================

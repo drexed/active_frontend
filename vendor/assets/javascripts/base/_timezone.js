@@ -34,7 +34,7 @@
       '-3': 'America/Argentina/Buenos_Aires',
       '-2': 'Atlantic/Azores',
       '-1': 'Atlantic/Azores',
-      '0': 'UTC',
+      '0': 'Etc/UTC',
       '1': 'Europe/Paris',
       '2': 'Europe/Helsinki',
       '3': 'Europe/Moscow',

@@ -95,6 +95,8 @@ select {
 
   [multiple],
   [size] { height: auto; }
+
+  &[disabled] { color: color(dark-gray); }
 }
 textarea {
   height: 140px;
@@ -364,7 +366,6 @@ textarea {
   color: color(gray);
   display: block;
   font-size: text-size(xs);
-  font-style: italic;
   margin: -10px 0 10px;
 }
 

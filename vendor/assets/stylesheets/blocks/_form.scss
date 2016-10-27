@@ -58,7 +58,10 @@ textarea {
 
   &:focus { border-color: color(blue); }
   &:focus:invalid { border-color: color(red); }
-  &[disabled] { background: color(light-haze); }
+  &[disabled] {
+    background: color(light-haze);
+    color: color(dark-gray);
+  }
 
   &.dark {
     &[disabled] { background: color(light-black); }
@@ -95,8 +98,6 @@ select {
 
   [multiple],
   [size] { height: auto; }
-
-  &[disabled] { color: color(dark-gray); }
 }
 textarea {
   height: 140px;

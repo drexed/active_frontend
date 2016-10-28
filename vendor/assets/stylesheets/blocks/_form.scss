@@ -59,6 +59,7 @@ textarea {
   &:focus { border-color: color(blue); }
   &:focus:invalid { border-color: color(red); }
   &[disabled] {
+    @include text-fill-color(color(dark-gray));
     background: color(light-haze);
     color: color(dark-gray);
   }

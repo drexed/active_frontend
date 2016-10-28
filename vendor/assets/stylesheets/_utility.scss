@@ -149,15 +149,20 @@
       -ms-tap-highlight-color: $color;
           tap-highlight-color: $color;
 }
-@mixin text-size-adjust($size) {
-  -webkit-text-size-adjust: $size;
-      -ms-text-size-adjust: $size;
-          text-size-adjust: $size;
-}
 @mixin text-decoration-skip($object) {
   -webkit-text-decoration-skip: $object;
       -ms-text-decoration-skip: $object;
           text-decoration-skip: $object;
+}
+@mixin text-fill-color($color) {
+  -webkit-text-fill-color: $color;
+      -ms-text-fill-color: $color;
+          text-fill-color: $color;
+}
+@mixin text-size-adjust($size) {
+  -webkit-text-size-adjust: $size;
+      -ms-text-size-adjust: $size;
+          text-size-adjust: $size;
 }
 @mixin transform($transform) {
   -webkit-transform: $transform;

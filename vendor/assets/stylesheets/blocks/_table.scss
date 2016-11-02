@@ -24,10 +24,9 @@ thead,
 tfoot { font-weight: text-weight(semibold); }
 caption,
 td,
-th {
-  padding: 6px 10px 5px;
-  vertical-align: middle;
-}
+th { vertical-align: middle; }
+td { padding: 8px; }
+th { padding: 10px 10px 8px; }
 thead {
   tr:not(:last-child) {
     th { text-align: center; }

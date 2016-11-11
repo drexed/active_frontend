@@ -8,6 +8,7 @@
 // Labels
 // Addons
 
+// scss-lint:disable ImportantRule
 // scss-lint:disable NestingDepth
 // scss-lint:disable SelectorDepth
 
@@ -58,6 +59,10 @@ textarea {
 
   &:focus { border-color: color(blue); }
   &:focus:invalid { border-color: color(red); }
+}
+input:not([type='submit']),
+select,
+textarea {
   &[disabled] {
     @include text-fill-color(color(dark-gray));
     background: color(light-haze);
@@ -99,6 +104,8 @@ select {
 
   [multiple],
   [size] { height: auto; }
+
+  &[disabled] { font-weight: text-weight(semilight); }
 }
 textarea {
   height: 140px;
@@ -438,6 +445,7 @@ textarea {
   position: relative;
   width: 100%;
 
+  button,
   input,
   select,
   .btn,
@@ -464,11 +472,18 @@ textarea {
     white-space: nowrap;
     width: 1%;
 
-    &.dark { border-color: color(dark-black); }
-
     i {
       display: inline-block;
       margin-top: -2px;
+    }
+
+    &.dark { border-color: color(dark-black); }
+    &.with-addon-btn {
+      border: 0;
+      min-width: auto;
+      padding: 0;
+
+      .btn { border-radius: 0; }
     }
 
     .form-checkbox,
@@ -492,10 +507,20 @@ textarea {
   *:first-child {
     border-bottom-left-radius: border-radius(b);
     border-top-left-radius: border-radius(b);
+
+    .btn {
+      border-bottom-left-radius: border-radius(b) !important;
+      border-top-left-radius: border-radius(b) !important;
+    }
   }
   *:last-child {
     border-bottom-right-radius: border-radius(b);
     border-top-right-radius: border-radius(b);
+
+    .btn {
+      border-bottom-right-radius: border-radius(b) !important;
+      border-top-right-radius: border-radius(b) !important;
+    }
   }
   *:not(:last-child) { border-right: 0; }
 
@@ -526,6 +551,7 @@ textarea {
     }
 
     i { font-size: text-size(s); }
+    button,
     input,
     select { margin-bottom: 0; }
   }

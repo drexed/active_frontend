@@ -9,7 +9,6 @@
 // ==================================================
 .nav {
   border-color: color(dark-haze);
-  font-weight: text-weight(semibold);
   list-style: none;
   padding: 0;
 
@@ -201,12 +200,12 @@
       padding-bottom: 8px;
 
       &:hover,
+      &:active,
       &:focus { border-color: inherit; }
-      &:active { border-color: color(primary); }
     }
 
     &.active > a {
-      border-color: color(primary);
+      border-color: inherit;
       color: color(primary);
     }
   }

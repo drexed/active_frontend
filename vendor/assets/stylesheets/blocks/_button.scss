@@ -36,7 +36,12 @@
   &:focus { background: darkish-color(haze); }
   &:active,
   &.disabled,
-  &[disabled] { background: lightish-color(haze); }
+  &[disabled] {
+    background: lightish-color(haze);
+    color: transparentize(color(black), 0.35);
+  }
+  &.disabled,
+  &[disabled] { cursor: not-allowed; }
 
   .badge,
   .label {
@@ -77,6 +82,8 @@
         border-color: darker-color($name);
         color: text-color-on($name);
       }
+      &.disabled,
+      &[disabled] { color: color($name); }
     }
 
     &:hover,
@@ -84,14 +91,22 @@
     &:focus { background: darkish-color($name); }
     &:active,
     &.disabled,
-    &[disabled] { background: lightish-color($name); }
+    &[disabled] {
+      background: lightish-color($name);
+      color: transparentize(text-color-on($name), 0.35);
+    }
   }
 }
 
 // Styles
 // ==================================================
 .btn-link,
-.btn-outline { background: color(transparent); }
+.btn-outline {
+  background: color(transparent);
+
+  .disabled,
+  &[disabled] { background: inherit; }
+}
 .btn-link {
   border-color: color(transparent);
   border-radius: 0;

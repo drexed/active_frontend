@@ -1,0 +1,28 @@
+// Table of Contents
+// ==================================================
+// Font-face
+
+// Font-face
+// ==================================================
+@if index(text-family(sans-serif), 'Fakt Pro') {
+  @each $name, $weight in $font-weights {
+    @font-face {
+      font-display: swap;
+      font-family: 'Fakt Pro';
+      font-style: normal;
+      font-weight: $weight;
+      src: url(font-path('fakt-pro/fakt-pro-#{$name}.woff')) format('woff');
+    }
+  }
+}
+@if index(text-family(sans-serif), 'Fakt Soft Pro') {
+  @each $name, $weight in $font-weights {
+    @font-face {
+      font-display: swap;
+      font-family: 'Fakt Soft Pro';
+      font-style: normal;
+      font-weight: $weight;
+      src: url(font-path('fakt-soft-pro/fakt-soft-pro-#{$name}.woff')) format('woff');
+    }
+  }
+}

@@ -213,12 +213,7 @@
   @each $name, $color in $colors-global {
     &.#{$name} {
       > li {
-        > a:active { border-color: color($name); }
-
-        &.active > a {
-          border-color: color($name);
-          color: color($name);
-        }
+        &.active > a { color: color($name); }
       }
     }
   }

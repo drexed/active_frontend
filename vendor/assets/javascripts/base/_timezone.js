@@ -6,7 +6,6 @@
 
   var Timezone = function (element, options) {
     this.$element = $(element);
-    this.$window = $(window);
     this.settings = {
       default: this.$element.data('default'),
       format: this.$element.data('format')

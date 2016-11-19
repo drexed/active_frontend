@@ -18,9 +18,9 @@
   Colorpicker.DEFAULTS = {
     callback: function (color) {},
     colors: [
-      '#A7E254', '#13CE56', '#21D5E9', '#148DFF', '#7050E8',
-      '#9061C2', '#FF6658', '#E64235', '#FF843A', '#F8D104',
-      '#343B4A', '#9BA7BA', '#ECEFF5', '#FFFFFF'
+      '#94E254', '#13CE56', '#33C9EB', '#148DFF', '#7E5BEF',
+      '#9861C2', '#FF5DC4', '#FF3B3B', '#FF6935', '#FFD718',
+      '#273444', '#9BA7BA', '#F0F3F9', '#FFFFFF'
     ],
     item: '<li><button type="button"></button></li>',
     menu: '<ul class="colorpicker dropmenu caret"></ul>'

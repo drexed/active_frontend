@@ -20,9 +20,9 @@
 }
 .layout-body { width: 100%; }
 .layout-sidebar {
-  width: 360px;
+  width: 300px;
 
-  &:not(.hidden) + .layout-body { width: calc(100% - 360px); }
+  &:not(.hidden) + .layout-body { width: calc(100% - 300px); }
 
   &.fixed {
     left: 0;
@@ -47,9 +47,9 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .layout-sidebar {
-    width: 210px;
+    width: 220px;
 
-    &:not(.hidden) + .layout-body { width: calc(100% - 210px); }
+    &:not(.hidden) + .layout-body { width: calc(100% - 220px); }
     &.fixed + .layout-body { width: 100%; }
   }
 }

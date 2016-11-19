@@ -98,11 +98,11 @@
 
 // Box shadows
 // ==================================================
-.box-shadow-bottom { box-shadow: 0 2px 3px color(dark-haze); }
-.box-shadow-left { box-shadow: -2px 0 3px color(dark-haze); }
-.box-shadow-right { box-shadow: 2px 0 3px color(dark-haze); }
-.box-shadow-top { box-shadow: 0 -2px 3px color(dark-haze); }
-.box-shadow { box-shadow: 0 0 3px color(dark-haze); }
+.box-shadow-bottom { box-shadow: 0 1px 2px darker-color(dark-haze); }
+.box-shadow-left { box-shadow: -1px 0 2px darker-color(dark-haze); }
+.box-shadow-right { box-shadow: 1px 0 2px darker-color(dark-haze); }
+.box-shadow-top { box-shadow: 0 -1px 2px darker-color(dark-haze); }
+.box-shadow { box-shadow: 0 0 2px darker-color(dark-haze); }
 
 // Border radiuses
 // ==================================================

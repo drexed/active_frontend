@@ -14,7 +14,7 @@
 .modal {
   background: color(white);
   border-radius: border-radius(b);
-  box-shadow: 0 0 6px darkish-color(dark-haze);
+  box-shadow: 0 0 3px dark-color(dark-haze);
   display: none;
   left: 0;
   margin: 0 auto;
@@ -24,6 +24,12 @@
   top: 0;
   width: 560px;
   z-index: 1060;
+
+  &.clean {
+    background: color(transparent);
+    border-color: color(transparent);
+    box-shadow: none;
+  }
 
   &.fade {
     @include transition((opacity 0.2s linear, top 0.4s ease-in-out));
@@ -102,7 +108,7 @@
 // Backdrop
 // ==================================================
 .modal-backdrop {
-  background: transparentize(color(white), 0.15);
+  background: transparentize(color(white), 0.05);
   bottom: 0;
   height: 100%;
   left: 0;
@@ -116,6 +122,8 @@
 
     &.in { opacity: 1; }
   }
+
+  &.dark { background: transparentize(color(black), 0.05); }
 }
 
 // Media Queries

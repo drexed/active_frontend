@@ -113,7 +113,7 @@
   };
 
   // LAYOUT DATA-API
-  // ==================
+  // ===============
 
   $(document).on('ready.bs.layout.data-api', function () {
     $('[data-toggle="layout"]').each(function () {

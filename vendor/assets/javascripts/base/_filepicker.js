@@ -54,8 +54,9 @@
     this.$element
       .attr('tabindex', '-1')
       .css({
+        'clip' : 'rect(0 0 0 0)',
         'position' : 'absolute',
-        'clip' : 'rect(0 0 0 0)'
+        'width' : '0'
       })
       .after(this.$elementFilepicker);
 

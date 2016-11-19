@@ -49,9 +49,9 @@
 
     element.removeClass(animation)
       .addClass(animation)
-      .on(Animation.TRANSITION_END, function (event) {
-        event.stopPropagation();
-        event.preventDefault();
+      .on(Animation.TRANSITION_END, function (e) {
+        e.stopPropagation();
+        e.preventDefault();
 
         if (infinite !== true) element.removeClass(animation);
         if (hide === true) element.addClass('hidden');

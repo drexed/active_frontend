@@ -7,16 +7,24 @@
   var Affirm = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      title: this.$element.data('title'),
-      offset: this.$element.data('offset'),
-      removeClass: this.$element.data('remove-class')
+      btnClass: {
+        cancel: this.$element.data('btn-class-cancel') || Affirm.DEFAULTS.btnClass.cancel,
+        confirm: this.$element.data('btn-class-confirm') || Affirm.DEFAULTS.btnClass.confirm
+      },
+      format: this.$element.data('format'),
+      text: {
+        cancel: this.$element.data('text-cancel') || Affirm.DEFAULTS.text.cancel,
+        confirm: this.$element.data('text-confirm') || Affirm.DEFAULTS.text.confirm
+      },
+      title: this.$element.data('title')
     };
-    this.options = $.extend({}, Affirm.DEFAULTS, options);
+    this.options = $.extend({}, Affirm.DEFAULTS, this.settings, options);
 
     this.init();
   };
 
   if (!$.fn.modal) throw new Error('Affirm requires modal.js');
+  if (!$.fn.popover) throw new Error('Affirm requires popover.js');
 
   Affirm.VERSION = '1.0.0';
   Affirm.DEFAULTS = {
@@ -24,14 +32,12 @@
       cancel: 'btn margin-size-right-xs',
       confirm: 'btn btn-color-red'
     },
-    modalClass: 'modal fade',
-    modalId: 'bsAffirmModal',
     format: 'modal',
     text: {
       cancel: 'No, Cancel',
       confirm: 'Yes, Confirm'
     },
-    title: 'Are you 100% sure about this?'
+    title: 'Are you sure about this?'
   };
 
   Affirm.prototype.constructor = Affirm;
@@ -39,19 +45,23 @@
   Affirm.prototype.init = function () {
     var _self = this;
     var body = $('body');
-    var modalId = '#' + this.options.modalId;
 
-    this.$element.click(function () {
-      $(modalId).remove();
-      body.append(_self.modalTemplate());
-      $(modalId).modal('show');
+    this.$element.click(function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+
+      _self.displayFormat();
 
       return false;
     });
 
-    body.on('click', '[data-affirm-toggle="confirm"]', function () {
-      $(modalId).modal('hide');
-    });
+    $('body')
+      .on('click', '[data-affirm-toggle="cancel"]', function () {
+        _self.cancelFormat();
+      })
+      .on('click', '[data-affirm-toggle="confirm"]', function () {
+        _self.confirmFormat();
+      });
   };
 
   Affirm.prototype.cancelBtn = function () {
@@ -85,14 +95,74 @@
     var footer = $('<div class="modal-footer text-align-right">')
       .append(this.cancelBtn())
       .append(this.confirmBtn());
-    var modal = $('<div role="modal">')
-      .addClass(this.options.modalClass)
-      .attr('id', this.options.modalId)
+    var modal = $('<div class="modal fade" role="modal">')
+      .attr('id', 'bsAffirmModal')
       .append(header)
       .append(body)
       .append(footer);
 
     return modal;
+  };
+
+  Affirm.prototype.displayModal = function () {
+    var modalId = '#bsAffirmModal';
+
+    $(modalId).remove();
+    $('body').append(this.modalTemplate());
+    $(modalId).modal('show');
+  };
+
+  Affirm.prototype.popoverTemplate = function () {
+    var cancelBtn = this.cancelBtn()
+      .addClass('btn-size-s');
+    var confirmBtn = this.confirmBtn()
+      .addClass('btn-size-s');
+    var navigation = $('<div class="popover-nav text-align-center row">')
+      .append(cancelBtn)
+      .append(confirmBtn);
+    var popover = $('<div class="popover" role="tooltip">')
+      .append('<div class="arrow"></div>')
+      .append('<strong class="popover-title"></strong>')
+      .append('<div class="popover-content"></div>')
+      .append(navigation);
+
+    return popover;
+  };
+
+  Affirm.prototype.displayPopover = function () {
+    $('.popover').remove();
+
+    this.$element.popover({
+      container: false,
+      content: this.$element.attr('data-affirm'),
+      html: true,
+      placement: 'top',
+      title: this.options.title,
+      template: this.popoverTemplate(),
+      trigger: 'manual'
+    });
+
+    this.$element.popover('show');
+  };
+
+  Affirm.prototype.displayFormat = function () {
+    if (this.options.format === 'popover') {
+      this.displayPopover();
+    } else {
+      this.displayModal();
+    }
+  };
+
+  Affirm.prototype.cancelFormat = function () {
+    if (this.options.format === 'popover') this.$element.popover('hide');
+  };
+
+  Affirm.prototype.confirmFormat = function () {
+    if (this.options.format === 'popover') {
+      this.$element.popover('hide');
+    } else {
+      $('#bsAffirmModal').modal('show');
+    }
   };
 
   // AFFIRM PLUGIN DEFINITION

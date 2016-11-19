@@ -197,7 +197,7 @@
 
     > a {
       border-bottom: 2px solid color(transparent);
-      padding-bottom: 13px;
+      padding-bottom: 15px;
 
       &:hover,
       &:active,
@@ -216,6 +216,14 @@
         &.active > a { color: color($name); }
       }
     }
+  }
+
+  > .btn,
+  > .btn-group {
+    margin-top: -12px;
+
+    &.pull-left,
+    &.pull-right { margin-top: -7px; }
   }
 }
 .nav-stacked > li {

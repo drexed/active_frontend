@@ -65,7 +65,7 @@ select,
 textarea {
   &[disabled] {
     @include text-fill-color(color(dark-gray));
-    background: color(light-haze);
+    background: darkish-color(light-haze);
     color: color(dark-gray);
   }
 

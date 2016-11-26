@@ -87,9 +87,7 @@
     $width: nth($widths, 2);
 
     @if $width {
-      @if $width > 960 {
-        .conatinerFixed-#{$name} { width: 960px; }
-      }
+      .container-fixed-#{$name} { width: 960px; }
     }
   }
 
@@ -101,9 +99,7 @@
     $width: nth($widths, 2);
 
     @if $width {
-      @if $width > 760 {
-        .conatinerFixed-#{$name} { width: 760px; }
-      }
+      .container-fixed-#{$name} { width: 760px; }
     }
   }
 

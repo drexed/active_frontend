@@ -52,9 +52,9 @@
 
   &.fixed {
     bottom: 0;
+    left: 0;
     position: fixed;
-    min-width: inherit;
-    width: inherit;
+    right: 0;
     z-index: 1040;
   }
 }

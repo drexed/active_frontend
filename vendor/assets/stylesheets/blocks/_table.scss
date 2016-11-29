@@ -43,37 +43,22 @@ thead {
 // Styles
 // ==================================================
 .table-stripe {
-  thead,
-  tfoot {
-    td,
-    th { background: color(light-haze); }
-  }
   tbody {
-    tr:nth-child(even) {
+    tr:nth-child(odd) {
       td { background: color(light-haze); }
     }
   }
 
   &.dark {
-    thead,
-    tfoot {
-      td,
-      th { background: color(light-black); }
-    }
     tbody {
-      tr:nth-child(even) {
+      tr:nth-child(odd) {
         td { background: color(light-black); }
       }
     }
   }
   &.light {
-    thead,
-    tfoot {
-      td,
-      th { background: color(haze); }
-    }
     tbody {
-      tr:nth-child(even) {
+      tr:nth-child(odd) {
         td { background: color(haze); }
       }
     }

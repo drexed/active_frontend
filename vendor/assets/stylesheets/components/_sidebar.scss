@@ -63,13 +63,6 @@
     a {
       display: block;
       padding: 5px;
-
-      &:hover,
-      &.active,
-      &:active,
-      &:focus { color: color(primary); }
     }
-
-    > li.active { color: color(primary); }
   }
 }

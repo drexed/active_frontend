@@ -48,7 +48,7 @@
     daysOfWeekHighlighted: [],
     endDate: Infinity,
     forceParse: true,
-    format: 'mm/dd/yyyy',
+    format: 'yyyy-mm-dd',
     maxViewMode: 2,
     menu: '<div class="datepicker dropmenu caret"></div>',
     minViewMode: 0,

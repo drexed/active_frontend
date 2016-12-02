@@ -160,9 +160,10 @@
 // Groups
 // ==================================================
 .btn-group {
-  display: inline-block;
-  font-size: 0;
+  border-collapse: separate;
+  display: table;
   position: relative;
+  table-layout: fixed;
   white-space: nowrap;
   vertical-align: middle;
 

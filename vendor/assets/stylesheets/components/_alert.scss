@@ -22,12 +22,10 @@
 
   &.absolute,
   &.fixed { z-index: 1050; }
-
   &.absolute {
     position: absolute;
     width: inherit;
   }
-
   &.fixed {
     left: 0;
     position: fixed;

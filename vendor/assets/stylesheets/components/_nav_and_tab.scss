@@ -220,10 +220,17 @@
 
   > .btn,
   > .btn-group {
+    margin-bottom: 4px;
     margin-top: -12px;
 
     &.pull-left,
-    &.pull-right { margin-top: -7px; }
+    &.pull-right {
+      margin-bottom: 9px;
+      margin-top: -7px;
+    }
+    &.dropmenu {
+      font-size: inherit;
+    }
   }
 }
 .nav-stacked > li {

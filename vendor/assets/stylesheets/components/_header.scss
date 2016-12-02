@@ -15,12 +15,10 @@
 
   &.absolute,
   &.fixed { z-index: 1040; }
-
   &.absolute {
     position: absolute;
     width: inherit;
   }
-
   &.fixed {
     left: 0;
     position: fixed;
@@ -74,7 +72,6 @@
     margin-right: 20px;
 
     &:last-child { margin-right: 0; }
-    &.btn-group { font-size: inherit; }
 
     .btn { margin-top: -12px; }
   }
@@ -88,8 +85,6 @@
 
     + i { margin-left: -2px; }
   }
-
-  &.btn-group { font-size: inherit; }
 }
 .header-toggle {
   float: right;

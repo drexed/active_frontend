@@ -220,16 +220,9 @@
 
   > .btn,
   > .btn-group {
-    margin-bottom: 4px;
-    margin-top: -12px;
-
-    &.pull-left,
-    &.pull-right {
+    &:not(.dropdown):not(.dropup) {
       margin-bottom: 9px;
       margin-top: -7px;
-    }
-    &.dropmenu {
-      font-size: inherit;
     }
   }
 }

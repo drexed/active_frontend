@@ -11,7 +11,7 @@
   box-sizing: border-box;
   height: 76px;
   line-height: 1;
-  padding: 18px;
+  padding: 18px 0;
 
   &.absolute,
   &.fixed { z-index: 1040; }
@@ -97,7 +97,7 @@
 @media only screen and (max-width: 767px) {
   .header {
     height: 50px;
-    padding: 10px;
+    padding: 10px 0;
   }
   .header-brand,
   .header-toggle {

@@ -398,11 +398,15 @@ textarea {
 
   label {
     @include transition(all 0.3s ease-in-out);
+    background: color(haze);
+    border-radius: border-radius(s);
     font-size: text-size(xxs);
     font-weight: text-weight(semibold);
     left: 16px;
-    margin: 2px 0 0;
+    line-height: 1;
+    margin: -7px 0 0;
     opacity: 0;
+    padding: 3px 6px;
     position: absolute;
     top: 20px;
   }
@@ -412,18 +416,23 @@ textarea {
     label {
       font-size: text-size(xs);
       left: 21px;
-      margin-top: 3px;
+      margin-top: -9px;
+      padding: 4px 8px;
     }
-  }
-  &.form-size-m {
-    label { margin-top: 2px; }
   }
   &.form-size-s {
     label {
-      font-size: text-size(xxxs);
+      font-size: text-size(xxs);
       left: 12px;
-      margin-top: 1px;
+      margin-top: -6px;
+      padding: 2px 3px 1px;
     }
+  }
+  &.dark {
+    label { background: color(light-black); }
+  }
+  &.light {
+    label { background: color(dark-haze); }
   }
 
   input,
@@ -483,7 +492,10 @@ textarea {
       min-width: auto;
       padding: 0;
 
-      .btn { border-radius: 0; }
+      .btn {
+        border-left-width: inherit;
+        border-radius: 0;
+      }
     }
 
     .form-checkbox,
@@ -504,6 +516,7 @@ textarea {
     }
   }
 
+  *:not(:first-child) { border-left: 0; }
   *:first-child {
     border-bottom-left-radius: border-radius(b);
     border-top-left-radius: border-radius(b);
@@ -522,7 +535,6 @@ textarea {
       border-top-right-radius: border-radius(b) !important;
     }
   }
-  *:not(:last-child) { border-right: 0; }
 
   &.form-size-l {
     .form-addon {

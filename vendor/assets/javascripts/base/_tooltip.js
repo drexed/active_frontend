@@ -517,12 +517,12 @@
   // ================
 
   $(document).on('ready.bs.tooltip.data-api', function () {
-      $('[data-toggle="tooltip"]').each(function () {
+      $('[data-hover="tooltip"]').each(function () {
         var $this = $(this);
         if ($this.data('tooltip')) return;
         Plugin.call($this, $this.data());
       });
-    }).on('hover.bs.tooltip.data-api', '[data-toggle="tooltip"]', function (e) {
+    }).on('hover.bs.tooltip.data-api', '[data-hover="tooltip"]', function (e) {
       var $this = $(this);
       if ($this.data('tooltip')) return;
       Plugin.call($this, $this.data());

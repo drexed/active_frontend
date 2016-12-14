@@ -4,6 +4,17 @@
 
 // Font-face
 // ==================================================
+@if index(text-family(display), 'Branding') {
+  @each $name, $weight in $font-weights {
+    @font-face {
+      font-display: swap;
+      font-family: 'Branding';
+      font-style: normal;
+      font-weight: $weight;
+      src: url(font-path('branding/branding-#{$name}.woff')) format('woff');
+    }
+  }
+}
 @if index(text-family(sans-serif), 'Fakt Pro') {
   @each $name, $weight in $font-weights {
     @font-face {

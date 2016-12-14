@@ -169,11 +169,5 @@ body {
   text-decoration: none;
   text-transform: none;
 }
-::-moz-selection {
-  background: color(primary);
-  color: color(white);
-}
-::selection {
-  background: color(primary);
-  color: color(white);
-}
+::-moz-selection { background: transparentize(color(primary), 0.85); }
+::selection { background: transparentize(color(primary), 0.85); }

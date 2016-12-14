@@ -47,13 +47,13 @@ $colors-brand: (
 );
 $colors-grayscale: (
   'transparent': rgba(0,0,0,0),
-  'dark-black': rgba(30,40,52,1),
+  'dark-black': rgba(32,42,58,1),
   'black': rgba(39,52,68,1),
-  'light-black': rgba(48,64,84,1),
-  'dark-gray': rgba(109,126,150,1),
-  'gray': rgba(132,146,166,1),
-  'light-gray': rgba(155,166,182,1),
-  'dark-haze': rgba(227,232,240,1),
+  'light-black': rgba(48,64,80,1),
+  'dark-gray': rgba(108,126,144,1),
+  'gray': rgba(130,146,164,1),
+  'light-gray': rgba(153,166,181,1),
+  'dark-haze': rgba(228,231,238,1),
   'haze': rgba(238,240,246,1),
   'light-haze': rgba(249,250,252,1),
   'white': rgba(255,255,255,1)
@@ -94,6 +94,7 @@ $common-visibility-types: collapse, hidden, visible;
 // Font
 // ==================================================
 $font-families: (
+  display: ('Branding', Verdana, Tahoma, sans-serif),
   monospace: (Courier, Consolas, Menlo, Monaco, monospace),
   sans-serif: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
   serif: (Georgia, 'Times New Roman', serif)

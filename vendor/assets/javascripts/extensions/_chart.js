@@ -1331,8 +1331,8 @@ var cssKeywords = {
   lightsalmon:  [255,160,122],
   lightseagreen:  [32,178,170],
   lightskyblue: [135,206,250],
-  lightslategray: [119,136,153],
-  lightslategrey: [119,136,153],
+  lightslategray: [130,146,164],
+  lightslategrey: [130,146,164],
   lightsteelblue: [176,196,222],
   lightyellow:  [255,255,224],
   lime: [0,255,0],
@@ -6138,14 +6138,14 @@ module.exports = function (Chart) {
     position: 'left',
     gridLines: {
       display: true,
-      color: 'rgba(227,232,240,1)',
+      color: 'rgba(228,231,238,1)',
       lineWidth: 1,
       drawBorder: true,
       drawOnChartArea: true,
       drawTicks: true,
       tickMarkLength: 10,
       zeroLineWidth: 1,
-      zeroLineColor: 'rgba(227,232,240,1)',
+      zeroLineColor: 'rgba(228,231,238,1)',
       offsetGridLines: false
     },
     scaleLabel: {
@@ -8681,7 +8681,7 @@ module.exports = function (Chart) {
     position: 'chartArea',
     angleLines: {
       display: true,
-      color: 'rgba(227,232,240,1)',
+      color: 'rgba(228,231,238,1)',
       lineWidth: 1
     },
     ticks: {

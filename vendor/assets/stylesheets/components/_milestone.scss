@@ -36,14 +36,22 @@
 .milestone {
   background: color(light-haze);
   border: 1px solid color(dark-haze);
+
+  &.milestone-outline { background: color(white); }
 }
 
 // Colors
 // ==================================================
 @each $name, $color in map-keys($colors) {
-  .milestone-#{$name} {
+  .milestone-color-#{$name} {
     background: color($name);
     border-color: darker-color($name);
     color: text-color-on($name);
+
+    &.milestone-outline {
+      background: color(white);
+      border-color: color($name);
+      color: color($name);
+    }
   }
 }

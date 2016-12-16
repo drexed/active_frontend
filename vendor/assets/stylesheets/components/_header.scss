@@ -3,6 +3,8 @@
 // Header
 // Media Queries
 
+// scss-lint:disable NestingDepth
+
 // Header
 // ==================================================
 .header {
@@ -38,6 +40,13 @@
 .header-brand {
   font-size: 35px;
 
+  img {
+    border-radius: border-radius(n);
+    display: inline-block;
+    height: 40px;
+    margin: 0 auto;
+  }
+
   + .header-search,
   + .header-nav {
     margin-left: 20px;
@@ -49,7 +58,7 @@
   }
 }
 .header-search {
-  min-width: 260px;
+  width: 260px;
 
   input { margin-bottom: 0; }
 
@@ -73,6 +82,20 @@
 
     &:last-child { margin-right: 0; }
 
+    &.header-nav-icon {
+      font-size: text-size(l);
+      margin-top: -3px;
+
+      .indicator {
+        background: color(red);
+        border-radius: border-radius(xl);
+        height: 5px;
+        margin-left: 17px;
+        position: absolute;
+        width: 5px;
+      }
+    }
+
     .btn { margin-top: -12px; }
   }
 }
@@ -85,15 +108,24 @@
 
     + i { margin-left: -2px; }
   }
+
+  + .header-nav {
+    &.pull-right { margin-right: 20px; }
+  }
 }
 .header-toggle {
   float: right;
   font-size: 26px;
   padding-top: 5px;
+
+  + .header-toggle { margin-right: 20px; }
 }
 
 // Media Queries
 // ==================================================
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .header-search { width: 220px; }
+}
 @media only screen and (max-width: 767px) {
   .header {
     height: 50px;
@@ -103,5 +135,8 @@
   .header-toggle {
     font-size: 26px;
     padding-top: 1px;
+  }
+  .header-brand {
+    img { height: 32px; }
   }
 }

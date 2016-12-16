@@ -109,7 +109,11 @@
 }
 .nav-pills,
 .nav-tabs {
-  > li { float: left; }
+  > li {
+    float: left;
+
+    &.pull-right { float: right; }
+  }
 }
 .nav-pills {
   > li {
@@ -132,6 +136,10 @@
       }
     }
 
+    &.pull-right {
+      margin-left: 5px;
+      margin-right: 0;
+    }
     &.active > a {
       background: color(primary);
       border-color: darker-color(primary);
@@ -204,6 +212,10 @@
       &:focus { border-color: inherit; }
     }
 
+    &.pull-right {
+      margin-left: 20px;
+      margin-right: 0;
+    }
     &.active > a {
       border-color: inherit;
       color: color(primary);

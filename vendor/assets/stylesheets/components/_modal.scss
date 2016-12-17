@@ -43,13 +43,12 @@
   border-bottom-width: 1px;
   box-sizing: border-box;
   text-align: center;
-  padding: 24px 20px;
-
-  h5 {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-  }
+  padding: 21px 20px 19px;
+}
+.modal-title {
+  font-size: text-size(m);
+  font-weight: text-weight(semibold);
+  line-height: 1;
 }
 .modal-body {
   box-sizing: border-box;

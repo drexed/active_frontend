@@ -10,8 +10,8 @@
   padding-left: 20px;
 
   > li {
-    border-left: 1px dashed;
-    border-bottom: 1px dashed;
+    border-left: 1px dotted;
+    border-bottom: 1px dotted;
     border-color: inherit;
     padding: 25px 30px;
 
@@ -24,18 +24,19 @@
       border-radius: border-radius(xl);
       box-sizing: border-box;
       float: left;
-      height: 40px;
-      margin: -7px 0 0 -50px;
-      padding-top: 6px;
+      font-size: text-size(xs);
+      height: 34px;
+      margin: -4px 0 0 -48px;
+      padding-top: 2px;
       position: relative;
       text-align: center;
-      width: 40px;
+      width: 34px;
     }
   }
 }
 .milestone {
-  background: color(light-haze);
-  border: 1px solid color(dark-haze);
+  background: color(haze);
+  border: 2px solid color(haze);
 
   &.milestone-outline { background: color(white); }
 }
@@ -45,12 +46,11 @@
 @each $name, $color in map-keys($colors) {
   .milestone-color-#{$name} {
     background: color($name);
-    border-color: darker-color($name);
+    border-color: color($name);
     color: text-color-on($name);
 
     &.milestone-outline {
       background: color(white);
-      border-color: color($name);
       color: color($name);
     }
   }

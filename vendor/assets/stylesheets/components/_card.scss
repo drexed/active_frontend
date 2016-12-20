@@ -17,12 +17,16 @@
   border-color: inherit;
   padding: 10px 15px;
 }
+.card-header,
+.card-footer {
+  padding-bottom: 9px;
+  padding-top: 9px;
+}
 .card-header {
   border-bottom: 0;
   border-top-left-radius: border-radius(b);
   border-top-right-radius: border-radius(b);
   font-weight: text-weight(semibold);
-  padding-bottom: 9px;
 }
 .card-footer {
   border-top: 0;

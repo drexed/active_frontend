@@ -33,11 +33,15 @@
 
   &:hover,
   &.active,
-  &:focus { background: darkish-color(haze); }
+  &:focus {
+    background: darkish-color(haze);
+    box-shadow: inset 0 -2px dark-color(haze);
+  }
   &:active,
   &.disabled,
   &[disabled] {
     background: lightish-color(haze);
+    box-shadow: none;
     color: transparentize(color(black), 0.35);
   }
   &.disabled,
@@ -88,11 +92,15 @@
 
     &:hover,
     &.active,
-    &:focus { background: darkish-color($name); }
+    &:focus {
+      background: darkish-color($name);
+      box-shadow: inset 0 -2px dark-color($name);
+    }
     &:active,
     &.disabled,
     &[disabled] {
       background: lightish-color($name);
+      box-shadow: none;
       color: transparentize(text-color-on($name), 0.35);
     }
   }
@@ -117,7 +125,10 @@
   &.active,
   &:focus,
   &.disabled,
-  &[disabled] { background: inherit; }
+  &[disabled] {
+    background: inherit;
+    box-shadow: none;
+  }
 }
 .btn-block {
   display: block;
@@ -155,6 +166,7 @@
     min-width: 32px;
     padding: 7px 0 8px;
   }
+  &.btn-link { padding: 0; }
 }
 
 // Groups

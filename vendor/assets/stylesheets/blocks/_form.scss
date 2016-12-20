@@ -64,22 +64,30 @@ input:not([type='submit']),
 select,
 textarea {
   &[disabled] {
-    @include text-fill-color(color(dark-gray));
-    background: darkish-color(light-haze);
-    color: color(dark-gray);
+    @include text-fill-color(color(gray));
+    background: color(light-haze);
+    color: color(gray);
   }
 
   &.dark {
-    &[disabled] { background: color(light-black); }
+    background: color(light-black);
+
+    &[disabled] { background: color(black); }
   }
   &.light {
-    &[disabled] { background: color(haze); }
+    &[disabled] { background: color(light-haze); }
   }
 }
 input {
   &::-webkit-input-placeholder { line-height: 24px; }
   &::-moz-placeholder { line-height: 24px; }
   &:-ms-input-placeholder { line-height: 24px; }
+}
+input,
+textarea {
+  &::-webkit-input-placeholder { font-weight: text-weight(normal); }
+  &::-moz-placeholder { line-height: text-weight(normal); }
+  &:-ms-input-placeholder { line-height: text-weight(normal); }
 }
 input[type='submit'] {
   margin: 0;
@@ -359,12 +367,18 @@ textarea {
   }
   &.form-align-vertical { vertical-align: middle; }
   &.dark {
-    background: color(dark-black);
+    label {
+      background: color(light-black);
 
-    label { background: color(black); }
+      &:hover { background: color(dark-black); }
+    }
   }
   &.light {
-    label { background: color(haze); }
+    label {
+      background: color(light-haze);
+
+      &:hover { background: color(dark-haze); }
+    }
   }
 }
 .form-radio { border-radius: border-radius(xl); }

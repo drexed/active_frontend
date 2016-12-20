@@ -34,26 +34,26 @@ $animation-durations: (
 // Color
 // ==================================================
 $colors-brand: (
-  'lime': rgba(154,191,91,1),
-  'green': rgba(50,194,81,1),
-  'teal': rgba(55,186,212,1),
-  'blue': rgba(36,126,236,1),
-  'indigo': rgba(126,97,234,1),
-  'purple': rgba(173,101,228,1),
-  'pink': rgba(241,93,121,1),
-  'red': rgba(221,61,63,1),
-  'orange': rgba(234,133,50,1),
-  'yellow': rgba(242,203,36,1)
+  'lime': rgba(161,215,77,1),
+  'green': rgba(46,204,64,1),
+  'teal': rgba(46,207,221,1),
+  'blue': rgba(13,134,246,1),
+  'indigo': rgba(126,99,226,1),
+  'purple': rgba(186,91,206,1),
+  'pink': rgba(239,76,136,1),
+  'red': rgba(235,70,34,1),
+  'orange': rgba(253,163,13,1),
+  'yellow': rgba(246,209,35,1)
 );
 $colors-grayscale: (
   'transparent': rgba(0,0,0,0),
-  'dark-black': rgba(32,42,58,1),
-  'black': rgba(39,52,68,1),
-  'light-black': rgba(48,64,80,1),
-  'dark-gray': rgba(108,126,144,1),
+  'dark-black': rgba(47,59,72,1),
+  'black': rgba(54,68,83,1),
+  'light-black': rgba(61,77,93,1),
+  'dark-gray': rgba(110,128,150,1),
   'gray': rgba(130,146,164,1),
-  'light-gray': rgba(153,166,181,1),
-  'dark-haze': rgba(228,231,238,1),
+  'light-gray': rgba(153,166,183,1),
+  'dark-haze': rgba(229,232,241,1),
   'haze': rgba(238,240,246,1),
   'light-haze': rgba(249,250,252,1),
   'white': rgba(255,255,255,1)
@@ -73,7 +73,7 @@ $common-border-radiuses: (
   xl: 999px,
   l: 10px,
   m: 6px,
-  b: 3px,
+  b: 4px,
   s: 2px,
   n: 0
 );

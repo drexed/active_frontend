@@ -24,7 +24,6 @@ $font-headings: h1, h2, h3, h4, h5, h6;
   $name: nth(map-keys($font-sizes), $i);
 
   #{$heading} {
-    font-family: text-family(display);
     font-size: text-size($name);
     font-weight: text-weight(semibold);
     line-height: text-line-height($name);

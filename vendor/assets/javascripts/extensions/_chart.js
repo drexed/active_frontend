@@ -5415,8 +5415,8 @@ module.exports = function () {
         animationDuration: 400
       },
       onClick: null,
-      defaultColor: 'rgba(39,52,68,0.1)',
-      defaultFontColor: 'rgba(39,52,68,1)',
+      defaultColor: 'rgba(54,68,83,0.1)',
+      defaultFontColor: 'rgba(54,68,83,1)',
       defaultFontFamily: "'Fakt Soft Pro', Verdana, Tahoma, sans-serif",
       defaultFontSize: 16,
       defaultFontStyle: 'normal',
@@ -6138,14 +6138,14 @@ module.exports = function (Chart) {
     position: 'left',
     gridLines: {
       display: true,
-      color: 'rgba(228,231,238,1)',
+      color: 'rgba(229,232,241,1)',
       lineWidth: 1,
       drawBorder: true,
       drawOnChartArea: true,
       drawTicks: true,
       tickMarkLength: 10,
       zeroLineWidth: 1,
-      zeroLineColor: 'rgba(228,231,238,1)',
+      zeroLineColor: 'rgba(229,232,241,1)',
       offsetGridLines: false
     },
     scaleLabel: {
@@ -7006,7 +7006,7 @@ module.exports = function (Chart) {
     enabled: true,
     custom: null,
     mode: 'single',
-    backgroundColor: 'rgba(39,52,68,1)',
+    backgroundColor: 'rgba(54,68,83,1)',
     titleFontStyle: '500',
     titleSpacing: 0,
     titleMarginBottom: 3,
@@ -8681,7 +8681,7 @@ module.exports = function (Chart) {
     position: 'chartArea',
     angleLines: {
       display: true,
-      color: 'rgba(228,231,238,1)',
+      color: 'rgba(229,232,241,1)',
       lineWidth: 1
     },
     ticks: {

@@ -3,9 +3,9 @@ module ActiveFrontendHelper
   def colors(opacity = 1)
     {
       transparent: { rgba: "rgba(0,0,0,0)", hex: '#FFFFFF' },
-      dark_black: { rgba: "rgba(47,59,72,#{opacity})", hex: '#2F3B48' },
-      black: { rgba: "rgba(54,68,83,#{opacity})", hex: '#364453' },
-      light_black: { rgba: "rgba(61,77,93,#{opacity})", hex: '#3D4D5D' },
+      dark_black: { rgba: "rgba(37,49,62,#{opacity})", hex: '#25313E' },
+      black: { rgba: "rgba(44,58,73,#{opacity})", hex: '#2C3A49' },
+      light_black: { rgba: "rgba(51,67,83,#{opacity})", hex: '#334353' },
       dark_gray: { rgba: "rgba(110,128,150,#{opacity})",  hex: '#6E8096' },
       gray: { rgba: "rgba(130,146,164,#{opacity})", hex: '#8292A4' },
       light_gray: { rgba: "rgba(153,166,183,#{opacity})", hex: '#99A6B7' },
@@ -20,7 +20,7 @@ module ActiveFrontendHelper
       indigo: { rgba: "rgba(126,99,226,#{opacity})", hex: '#7E63E2' },
       purple: { rgba: "rgba(186,91,206,#{opacity})", hex: '#BA5BCE' },
       pink: { rgba: "rgba(239,76,136,#{opacity})", hex: '#EA4C88' },
-      red: { rgba: "rgba(235,70,34,#{opacity})", hex: '#EB4622' },
+      red: { rgba: "rgba(235,60,34,#{opacity})", hex: '#EB3C22' },
       orange: { rgba: "rgba(253,163,13,#{opacity})", hex: '#FDA30D' },
       yellow: { rgba: "rgba(246,209,35,#{opacity})", hex: '#F6D123' }
     }

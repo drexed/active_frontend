@@ -41,15 +41,15 @@ $colors-brand: (
   'indigo': rgba(126,99,226,1),
   'purple': rgba(186,91,206,1),
   'pink': rgba(239,76,136,1),
-  'red': rgba(235,70,34,1),
+  'red': rgba(235,60,34,1),
   'orange': rgba(253,163,13,1),
   'yellow': rgba(246,209,35,1)
 );
 $colors-grayscale: (
   'transparent': rgba(0,0,0,0),
-  'dark-black': rgba(47,59,72,1),
-  'black': rgba(54,68,83,1),
-  'light-black': rgba(61,77,93,1),
+  'dark-black': rgba(37,49,62,1),
+  'black': rgba(44,58,73,1),
+  'light-black': rgba(51,67,83,1),
   'dark-gray': rgba(110,128,150,1),
   'gray': rgba(130,146,164,1),
   'light-gray': rgba(153,166,183,1),
@@ -73,7 +73,7 @@ $common-border-radiuses: (
   xl: 999px,
   l: 10px,
   m: 6px,
-  b: 4px,
+  b: 3px,
   s: 2px,
   n: 0
 );

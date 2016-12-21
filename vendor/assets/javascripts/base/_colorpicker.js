@@ -19,8 +19,8 @@
     callback: function (color) {},
     colors: [
       '#A1D74D', '#2ECC40', '#2ECFDD', '#0D86F6', '#7E63E2',
-      '#BA5BCE', '#EA4C88', '#EB4622', '#FDA30D', '#F6D123',
-      '#364453', '#8292A4', '#EEF0F6', '#FFFFFF'
+      '#BA5BCE', '#EA4C88', '#EB3C22', '#FDA30D', '#F6D123',
+      '#2C3A49', '#8292A4', '#EEF0F6', '#FFFFFF'
     ],
     item: '<li><button type="button"></button></li>',
     menu: '<ul class="colorpicker dropmenu caret"></ul>'

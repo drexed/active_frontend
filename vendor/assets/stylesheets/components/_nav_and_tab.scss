@@ -203,7 +203,8 @@
 
     &:last-child { margin: 0; }
 
-    > a {
+    > a,
+    &.nav-tab {
       border-bottom: 2px solid color(transparent);
       padding-bottom: 15px;
 
@@ -220,6 +221,7 @@
       border-color: inherit;
       color: color(primary);
     }
+    &.nav-tab { border-color: inherit; }
   }
 
   @each $name, $color in $colors-global {

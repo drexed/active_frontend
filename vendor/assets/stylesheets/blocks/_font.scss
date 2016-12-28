@@ -4,7 +4,7 @@
 
 // Font-face
 // ==================================================
-@if index(text-family(display), 'Branding') {
+@if index(text-family(sans-serif), 'Branding') {
   @each $name, $weight in $font-weights {
     @font-face {
       font-display: swap;
@@ -34,6 +34,17 @@
       font-style: normal;
       font-weight: $weight;
       src: url(font-path('fakt-soft-pro/fakt-soft-pro-#{$name}.woff')) format('woff');
+    }
+  }
+}
+@if index(text-family(sans-serif), 'Proxima Nova') {
+  @each $name, $weight in $font-weights {
+    @font-face {
+      font-display: swap;
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: $weight;
+      src: url(font-path('proxima-nova/proxima-nova-#{$name}.woff')) format('woff');
     }
   }
 }

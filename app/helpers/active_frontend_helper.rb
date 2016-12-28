@@ -14,7 +14,7 @@ module ActiveFrontendHelper
       light_haze: { rgba: "rgba(249,250,252,#{opacity})", hex: '#F9FAFC' },
       white: { rgba: "rgba(255,255,255,#{opacity})", hex: '#FFFFFF' },
       lime: { rgba: "rgba(161,215,77,#{opacity})", hex: '#A1D74D' },
-      green: { rgba: "rgba(46,204,64,#{opacity})", hex: '#2ECC40' },
+      green: { rgba: "rgba(27,202,42,#{opacity})", hex: '#1BCA2A' },
       teal: { rgba: "rgba(46,207,221,#{opacity})", hex: '#2ECFDD' },
       blue: { rgba: "rgba(13,134,246,#{opacity})", hex: '#0D86F6' },
       indigo: { rgba: "rgba(126,99,226,#{opacity})", hex: '#7E63E2' },

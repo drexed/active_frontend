@@ -38,6 +38,8 @@
   Choicepicker.prototype.constructor = Choicepicker;
 
   Choicepicker.prototype.init = function () {
+    if (!this.hasOptions()) return;
+
     this.setWidget();
     this.setVal();
 
@@ -50,6 +52,8 @@
 
   Choicepicker.prototype.clickWidget = function (e) {
     e.stopPropagation();
+
+    if (!this.hasOptions()) return;
 
     this.setVal();
   };
@@ -164,9 +168,17 @@
     return label + ' (+' + count + ')';
   };
 
+  Choicepicker.prototype.optionsCount = function () {
+    return Object.keys(this.options.options).length;
+  };
+
+  Choicepicker.prototype.hasOptions = function () {
+    return this.optionsCount() !== 0;
+  };
+
   Choicepicker.prototype.setSelectionsLabel = function () {
     var _self = this;
-    var total = Object.keys(this.options.options).length;
+    var total = this.optionsCount();
     var count = 0;
     var label = '';
 

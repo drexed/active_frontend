@@ -63,7 +63,7 @@ textarea {
 input:not([type='submit']),
 select,
 textarea {
-  box-shadow: inset 0 -2px 0 0 darkish-color(light-haze);
+  box-shadow: inset 0 2px 0 0 darkish-color(light-haze);
 
   &[disabled] {
     @include text-fill-color(color(gray));
@@ -74,12 +74,12 @@ textarea {
 
   &.dark {
     background: color(light-black);
-    box-shadow: inset 0 -2px 0 0 dark-color(light-black);
+    box-shadow: inset 0 2px 0 0 dark-color(light-black);
 
     &[disabled] { background: color(black); }
   }
   &.light {
-    box-shadow: inset 0 -2px 0 0 darker-color(light-haze);
+    box-shadow: inset 0 2px 0 0 darker-color(light-haze);
 
     &[disabled] { background: color(light-haze); }
   }
@@ -320,7 +320,7 @@ textarea {
   border: 1px solid;
   border-color: color(dark-haze);
   border-radius: border-radius(b);
-  box-shadow: inset 0 -2px 0 0 darkish-color(light-haze);
+  box-shadow: inset 0 2px 0 0 darkish-color(light-haze);
   display: inline-block;
   height: 18px;
   line-height: 18px;
@@ -376,7 +376,7 @@ textarea {
   &.dark {
     label {
       background: color(light-black);
-      box-shadow: inset 0 -2px 0 0 dark-color(light-black);
+      box-shadow: inset 0 2px 0 0 dark-color(light-black);
 
       &:hover { background: color(dark-black); }
     }
@@ -384,7 +384,7 @@ textarea {
   &.light {
     label {
       background: color(light-haze);
-      box-shadow: inset 0 -2px 0 0 darker-color(light-haze);
+      box-shadow: inset 0 2px 0 0 darker-color(light-haze);
 
       &:hover { background: color(dark-haze); }
     }

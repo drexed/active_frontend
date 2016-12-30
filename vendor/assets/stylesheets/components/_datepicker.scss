@@ -2,6 +2,7 @@
 // ==================================================
 // Datepicker
 
+// scss-lint:disable ImportantRule
 // scss-lint:disable NestingDepth
 // scss-lint:disable SelectorDepth
 
@@ -44,9 +45,10 @@
       &.old,
       &.new { color: color(gray); }
       &.disabled {
-        background: color(transparent);
-        color: color(gray);
-        cursor: not-allowed;
+        background: color(transparent) !important;
+        color: dark-color(dark-haze) !important;
+        cursor: not-allowed !important;
+        text-decoration: line-through;
       }
 
       span {
@@ -70,9 +72,10 @@
           color: color(white);
         }
         &.disabled {
-          background: color(transparent);
-          color: color(gray);
-          cursor: not-allowed;
+          background: color(transparent) !important;
+          color: dark-color(dark-haze) !important;
+          cursor: not-allowed !important;
+          text-decoration: line-through;
         }
       }
     }

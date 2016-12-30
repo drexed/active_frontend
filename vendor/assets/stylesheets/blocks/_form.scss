@@ -69,6 +69,7 @@ textarea {
     @include text-fill-color(color(gray));
     background: color(light-haze);
     color: color(gray);
+    font-weight: text-weight(normal) !important;
   }
 
   &.dark {

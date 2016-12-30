@@ -23,6 +23,7 @@
 //= require base/_button
 //= require base/_dropdown
 //= require base/_hoverdown
+//= require base/_choicepicker
 //= require base/_colorpicker
 //= require base/_datepicker
 //= require base/_filepicker

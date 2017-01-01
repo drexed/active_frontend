@@ -25,7 +25,7 @@
   font-size: text-size(b);
   font-weight: text-weight(semibold);
   line-height: 1;
-  padding: 11px 20px;
+  padding: 13px 20px;
   text-align: center;
   touch-action: manipulation;
   vertical-align: middle;
@@ -146,11 +146,11 @@
 .btn-size-m { padding: 15px 25px 16px; }
 .btn-size-s {
   font-size: text-size(s);
-  padding: 7px 15px 8px;
+  padding: 8px 15px 9px;
 }
 .btn-icon {
-  min-width: 42px;
-  padding: 11px 0;
+  min-width: 46px;
+  padding: 13px 0;
 
   &.btn-size-l,
   &.btn-size-m { font-size: text-size(l); }
@@ -163,8 +163,8 @@
     padding: 14px 0;
   }
   &.btn-size-s {
-    min-width: 32px;
-    padding: 7px 0 8px;
+    min-width: 34px;
+    padding: 8px 0 9px;
   }
   &.btn-link { padding: 0; }
 }

@@ -2,30 +2,33 @@
 // ==================================================
 // Choicepicker
 
+// scss-lint:disable NestingDepth
+// scss-lint:disable SelectorDepth
+
 // Choicepicker
 // ==================================================
 .choicepicker {
-   span {
+   > span {
      display: block;
      max-height: 230px;
      overflow-x: auto;
+
+     > li {
+       border-bottom: 1px solid;
+       border-bottom-color: inherit;
+       clear: both;
+       display: block;
+       font-weight: inherit;
+       line-height: 1;
+       padding: 16px 20px 14px;
+       margin: 0;
+
+       &:last-child { border-bottom: 0; }
+
+       > label {
+         font-weight: text-weight(normal);
+         margin: 0 0 0 10px;
+       }
+     }
    }
-
-  li {
-    border-bottom: 1px solid;
-    border-bottom-color: inherit;
-    clear: both;
-    display: block;
-    font-weight: inherit;
-    line-height: 1;
-    padding: 16px 20px 14px;
-    margin: 0;
-
-    &:last-child { border-bottom: 0; }
-
-    > label {
-      font-weight: text-weight(normal);
-      margin: 0 0 0 10px;
-    }
-  }
 }

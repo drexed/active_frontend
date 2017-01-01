@@ -40,6 +40,7 @@
   Choicepicker.prototype.init = function () {
     if (!this.hasOptions()) return;
 
+    this.elementReadOnly();
     this.setWidget();
     this.setVal();
 
@@ -116,6 +117,10 @@
     }
 
     return type;
+  };
+
+  Choicepicker.prototype.elementReadOnly = function () {
+    this.$element.prop('readonly', true);
   };
 
   Choicepicker.prototype.selector = function (hash) {

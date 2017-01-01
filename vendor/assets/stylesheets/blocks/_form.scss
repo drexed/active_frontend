@@ -53,7 +53,7 @@ textarea {
   display: block;
   line-height: 1;
   margin-bottom: 10px;
-  padding: 7px 15px;
+  padding: 9px 15px;
   width: 100%;
   vertical-align: middle;
 
@@ -114,7 +114,7 @@ label {
   margin-bottom: 5px;
 }
 select {
-  padding: 11px 15px;
+  padding: 13px 15px;
 
   [multiple],
   [size] { height: auto; }
@@ -122,7 +122,7 @@ select {
   &[disabled] { font-weight: text-weight(semilight); }
 }
 textarea {
-  height: 140px;
+  height: 152px;
   overflow: auto;
 
   &::-webkit-input-placeholder { line-height: 1; }
@@ -181,27 +181,27 @@ textarea {
     textarea {
       font-size: text-size(s);
       margin-bottom: 5px;
-      padding: 4px 10px;
+      padding: 5px 10px;
     }
     input {
       &::-webkit-input-placeholder { line-height: 20px; }
       &::-moz-placeholder { line-height: 20px; }
       &:-ms-input-placeholder { line-height: 20px; }
     }
-    textarea { height: 103px; }
+    textarea { height: 109px; }
 
     &.form-height-m {
-      textarea { height: 139px; }
+      textarea { height: 145px; }
     }
     &.form-height-s {
-      textarea { height: 67px; }
+      textarea { height: 73px; }
     }
   }
   &.form-height-m {
-    textarea { height: 190px; }
+    textarea { height: 202px; }
   }
   &.form-height-s {
-    textarea { height: 90px; }
+    textarea { height: 102px; }
   }
   &.form-width-l {
     input,
@@ -278,7 +278,7 @@ textarea {
     select {
       font-size: text-size(s);
       margin-bottom: 5px;
-      padding: 7px 10px 8px;
+      padding: 8px 10px 9px;
     }
 
     &::after {
@@ -493,12 +493,11 @@ textarea {
     padding-left: 10px;
     padding-right: 10px;
   }
-
   .form-addon {
     border-style: solid;
     border-width: 1px;
     line-height: 1;
-    min-width: 40px;
+    min-width: 44px;
     padding: 0 10px;
     text-align: center;
     white-space: nowrap;
@@ -523,14 +522,12 @@ textarea {
 
     .form-checkbox,
     .form-radio { border: 0; }
-
     .form-checkbox {
       border-radius: border-radius(b);
 
       label,
       label::after { border-radius: border-radius(s); }
     }
-
     .form-radio {
       border-radius: border-radius(xl);
 
@@ -575,6 +572,7 @@ textarea {
     .form-addon {
       font-size: text-size(s);
       min-width: 30px;
+      padding: 0 9px;
 
       .color-picker {
         .dropmenu { margin-left: -7px; }

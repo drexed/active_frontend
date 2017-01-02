@@ -56,21 +56,11 @@ textarea {
   padding: 9px 15px;
   width: 100%;
   vertical-align: middle;
-
-  &:focus { border-color: color(blue); }
-  &:focus:invalid { border-color: color(red); }
 }
 input:not([type='submit']),
 select,
 textarea {
   box-shadow: inset 0 2px 0 0 darkish-color(light-haze);
-
-  &[disabled] {
-    @include text-fill-color(color(gray));
-    background: color(light-haze);
-    color: color(gray);
-    font-weight: text-weight(normal) !important;
-  }
 
   &.dark {
     background: color(light-black);
@@ -82,6 +72,21 @@ textarea {
     box-shadow: inset 0 2px 0 0 darker-color(light-haze);
 
     &[disabled] { background: color(light-haze); }
+  }
+
+  &[disabled] {
+    @include text-fill-color(color(gray));
+    background: color(light-haze);
+    color: color(gray);
+    font-weight: text-weight(normal) !important;
+  }
+  &:focus {
+    box-shadow: inset 0 2px 0 0 transparentize(color(blue), 0.5);
+    border-color: color(blue);
+  }
+  &:focus:invalid {
+    box-shadow: inset 0 2px 0 0 transparentize(color(red), 0.5);
+    border-color: color(red);
   }
 }
 input {
@@ -336,25 +341,32 @@ textarea {
     cursor: pointer;
     height: 100%;
     line-height: inherit;
-    margin: -3px 0 0 -1px;
+    margin: -1px 0 0 -1px;
     position: absolute;
     text-align: center;
     width: 100%;
 
-    &:hover { background: color(haze); }
+    &:hover {
+      background: color(haze);
+      box-shadow: none !important;
+    }
   }
-  + label { vertical-align: baseline; }
   input[type='checkbox'],
   input[type='radio'] {
+    left: -9999px;
     margin: 0;
     padding: 0;
+    position: absolute;
     visibility: hidden;
+    top: -9999px;
 
     &:checked + label {
       background: color(green);
       border-color: color(green);
       color: color(white);
     }
+
+    + label { vertical-align: baseline; }
   }
 
   &.form-size-l {

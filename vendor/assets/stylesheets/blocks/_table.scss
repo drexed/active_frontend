@@ -169,7 +169,6 @@ thead {
   .table-responsive {
     @include overflow-scrolling(touch);
     background: color(transparent);
-    border: 2px solid color(dark-haze);
     max-height: 300px;
     overflow: scroll;
 

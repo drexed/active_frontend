@@ -1,12 +1,12 @@
 // Table of Contents
 // ==================================================
 // Missive
+// Styles
 
 // Missive
 // ==================================================
 .missive {
   border: 1px solid color(dark-haze);
-  border-radius: border-radius(b);
 
   &::before,
   &::after {
@@ -37,4 +37,14 @@
   width: calc(100% - 80px);
 
   p:last-child { margin-bottom: 0; }
+}
+
+// Styles
+// ==================================================
+.missive-banner {
+  border-left-width: 4px;
+
+  @each $name, $color in $colors {
+    &.missive-banner-#{$name} { border-left-color: color($name); }
+  }
 }

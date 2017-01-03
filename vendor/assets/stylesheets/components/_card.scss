@@ -6,7 +6,6 @@
 // ==================================================
 .card {
   border-color: color(dark-haze);
-  border-radius: border-radius(b);
 
   img { border-radius: 0; }
 }
@@ -24,12 +23,6 @@
 }
 .card-header {
   border-bottom: 0;
-  border-top-left-radius: border-radius(b);
-  border-top-right-radius: border-radius(b);
   font-weight: text-weight(semibold);
 }
-.card-footer {
-  border-top: 0;
-  border-bottom-left-radius: border-radius(b);
-  border-bottom-right-radius: border-radius(b);
-}
+.card-footer { border-top: 0; }

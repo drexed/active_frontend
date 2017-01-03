@@ -1,7 +1,6 @@
 // Table of Contents
 // ==================================================
 // Layout
-// Styles
 // Media Queries
 
 // Layout
@@ -17,6 +16,11 @@
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+
+  &.with-sticky-header {
+    height: calc(100% - 76px);
+    margin-top: 76px;
+  }
 }
 .layout-body { width: 100%; }
 .layout-sidebar {
@@ -54,6 +58,15 @@
   }
 }
 @media only screen and (max-width: 767px) {
+  .layout-body,
+  .layout-sidebar {
+    &.with-sticky-header {
+      height: calc(100% - 50px);
+      margin-top: 50px;
+
+      &.with-sticky-navbar { height: calc(100% - 100px); }
+    }
+  }
   .layout-sidebar {
     width: 260px;
 

@@ -2,6 +2,7 @@
 // ==================================================
 // Missive
 // Styles
+// Colors
 
 // Missive
 // ==================================================
@@ -43,8 +44,10 @@
 // ==================================================
 .missive-banner {
   border-left-width: 4px;
+}
 
-  @each $name, $color in $colors {
-    &.missive-banner-#{$name} { border-left-color: color($name); }
-  }
+// Colors
+// ==================================================
+@each $name, $color in $colors {
+  .missive-banner-color-#{$name} { border-left-color: color($name); }
 }

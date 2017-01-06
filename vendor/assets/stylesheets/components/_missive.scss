@@ -4,6 +4,8 @@
 // Styles
 // Colors
 
+// scss-lint:disable ImportantRule
+
 // Missive
 // ==================================================
 .missive {
@@ -49,5 +51,5 @@
 // Colors
 // ==================================================
 @each $name, $color in $colors {
-  .missive-banner-color-#{$name} { border-left-color: color($name); }
+  .missive-banner-color-#{$name} { border-left-color: color($name) !important; }
 }

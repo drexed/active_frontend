@@ -84,13 +84,15 @@
   };
 
   Switch.prototype.enable = function () {
-    this.$switch.removeAttr('disabled');
     this.$element.prop('disabled', false);
+    this.$switch.removeAttr('disabled')
+                .removeClass('disabled');
   };
 
   Switch.prototype.disable = function () {
-    this.$switch.attr('disabled', 'disabled');
     this.$element.prop('disabled', true);
+    this.$switch.attr('disabled', 'disabled')
+                .addClass('disabled');
   };
 
   Switch.prototype.update = function (silent) {
@@ -101,8 +103,12 @@
     }
 
     if (this.$element.prop('checked')) {
+      this.$switch
+          .addClass(this.options.onClass);
       this.on(silent);
     } else {
+      this.$switch
+          .addClass(this.options.offClass);
       this.off(silent);
     }
   };

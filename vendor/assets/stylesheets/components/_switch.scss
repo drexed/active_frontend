@@ -18,7 +18,15 @@
   vertical-align: top;
   width: 56px;
 
-  input[type='checkbox'] { display: none; }
+  input[type='checkbox'],
+  input[type='radio'] {
+    left: -9999px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+    top: -9999px;
+  }
 
   .switch-group {
     @include transition(left 0.125s ease-in-out);
@@ -69,6 +77,11 @@
   &.off {
     .switch-group { left: -100%; }
     .switch-handle { right: calc(50% - 27px); }
+  }
+  &.disabled {
+    cursor: not-allowed;
+
+    * { cursor: not-allowed; }
   }
   &.dark {
     .switch-handle { background: color(light-black); }

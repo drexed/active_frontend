@@ -440,17 +440,17 @@ textarea {
 .form-radio {
   &.form-size-l,
   &.form-size-m {
-    label { font-size: text-size(m); }
+    > label { font-size: text-size(m); }
   }
   &.form-size-s {
-    label { font-size: text-size(s); }
+    > label { font-size: text-size(s); }
   }
 }
 .with-floating-label {
   position: relative;
   vertical-align: top;
 
-  label {
+  > label {
     @include transition(all 0.3s ease-in-out);
     background: color(haze);
     border-radius: border-radius(s);
@@ -467,7 +467,7 @@ textarea {
 
   &.form-size-l,
   &.form-size-m {
-    label {
+    > label {
       font-size: text-size(xs);
       left: 21px;
       margin-top: -9px;
@@ -475,7 +475,7 @@ textarea {
     }
   }
   &.form-size-s {
-    label {
+    > label {
       font-size: text-size(xxs);
       left: 12px;
       margin-top: -6px;
@@ -483,10 +483,10 @@ textarea {
     }
   }
   &.dark {
-    label { background: color(light-black); }
+    > label { background: color(light-black); }
   }
   &.light {
-    label { background: color(dark-haze); }
+    > label { background: color(dark-haze); }
   }
 
   input,

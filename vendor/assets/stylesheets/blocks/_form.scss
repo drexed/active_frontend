@@ -492,7 +492,10 @@ textarea {
   input,
   textarea,
   select {
-    &:focus + label {
+    &:focus + label,
+    &:focus + .dropmenu + label,
+    &:focus + .dropdown + label,
+    &:focus + .dropup + label {
       opacity: 1;
       top: 0;
     }
@@ -520,10 +523,6 @@ textarea {
     vertical-align: middle;
   }
 
-  .btn {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
   .form-addon {
     border-style: solid;
     border-width: 1px;

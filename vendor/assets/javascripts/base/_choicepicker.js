@@ -7,7 +7,12 @@
   var Choicepicker = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      options: this.$element.data('options'),
+      choices: this.$element.data('choices'),
+      text: {
+        all: this.$element.data('text-all') || Choicepicker.DEFAULTS.text.all,
+        choiceless: this.$element.data('text-choiceless') || Choicepicker.DEFAULTS.text.choiceless,
+        none: this.$element.data('text-none') || Choicepicker.DEFAULTS.text.none
+      },
       type: this.$element.data('type')
     };
     this.options = $.extend({}, Choicepicker.DEFAULTS, this.settings, options);
@@ -22,15 +27,15 @@
 
   Choicepicker.VERSION = '1.0.0';
   Choicepicker.DEFAULTS = {
-    callback: function (option) {},
+    callback: function (choice) {},
+    choices: [],
+    choiceClass: 'form-align-vertical',
     item: '<li></li>',
     menu: '<ul class="choicepicker dropmenu caret"><span></span></ul>',
-    optionClass: 'form-align-vertical',
-    options: [],
     text: {
       all: 'All',
-      none: 'None',
-      optionless: 'No options available'
+      choiceless: 'No choices available',
+      none: 'None'
     },
     type: 'checkbox'
   };
@@ -38,7 +43,7 @@
   Choicepicker.prototype.constructor = Choicepicker;
 
   Choicepicker.prototype.init = function () {
-    if (!this.hasOptions()) return;
+    if (!this.hasChoices()) return;
 
     this.elementReadOnly();
     this.setWidget();
@@ -54,7 +59,7 @@
   Choicepicker.prototype.clickWidget = function (e) {
     e.stopPropagation();
 
-    if (!this.hasOptions()) return;
+    if (!this.hasChoices()) return;
 
     this.setVal();
   };
@@ -63,7 +68,7 @@
     var _self = this;
     var menu = $(this.options.menu);
 
-    $.each(this.options.options, function (index, hash) {
+    $.each(this.options.choices, function (index, hash) {
       var item = $(_self.options.item);
 
       item.append(_self.optionTemplate(hash))
@@ -145,7 +150,7 @@
     var checkbox = $('<input type="' + type +'" value="' + hash.value + '" name="' + hash.name + '" id="' + selector + '">');
     checkbox.prop('checked', hash.checked);
 
-    var container = $('<div class="form-' + type + ' ' + this.options.optionClass + '">');
+    var container = $('<div class="form-' + type + ' ' + this.options.choiceClass + '">');
     container.append(checkbox);
     container.append(label);
 
@@ -173,23 +178,23 @@
     return label + ' (+' + count + ')';
   };
 
-  Choicepicker.prototype.optionsCount = function () {
-    return Object.keys(this.options.options).length;
+  Choicepicker.prototype.choiceCount = function () {
+    return Object.keys(this.options.choices).length;
   };
 
-  Choicepicker.prototype.hasOptions = function () {
-    return this.optionsCount() !== 0;
+  Choicepicker.prototype.hasChoices = function () {
+    return this.choiceCount() !== 0;
   };
 
   Choicepicker.prototype.setSelectionsLabel = function () {
     var _self = this;
-    var total = this.optionsCount();
+    var total = this.choiceCount();
     var count = 0;
     var label = '';
 
-    if (total === 0) return this.options.text.optionless;
+    if (total === 0) return this.options.text.choiceless;
 
-    $.each(this.options.options, function (index, hash) {
+    $.each(this.options.choices, function (index, hash) {
       if (hash.checked === undefined) {
         hash.checked = false;
       } else {
@@ -247,10 +252,12 @@
 
   $(document)
     .on('ready.bs.choicepicker.data-api', function () {
-      var $this = $(this).find('[data-toggle="choicepicker"]');
-      if ($this.data('choicepicker')) return;
-      Plugin.call($this, $this.data());
-    }).on('focus.bs.choicepicker.data-api click.bs.choicepicker.data-api', function (e) {
+      $('[data-toggle="choicepicker"]').each(function () {
+        var $this = $(this);
+        if ($this.data('choicepicker')) return;
+        Plugin.call($this, $this.data());
+      });
+    }).on('focus.bs.choicepicker.data-api click.bs.choicepicker.data-api', '[data-toggle="choicepicker"]', function (e) {
       var $this = $(this);
       if ($this.data('choicepicker')) return;
       Plugin.call($this, $this.data());

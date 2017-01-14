@@ -71,6 +71,13 @@ $colors-black-text: 'transparent', 'dark-haze', 'haze', 'light-haze', 'white';
 
 // Common
 // ==================================================
+$common-border-widths: (
+  xl: 6px,
+  l: 3px,
+  m: 2px,
+  b: 1px,
+  n: 0
+);
 $common-border-radiuses: (
   xl: 999px,
   l: 10px,

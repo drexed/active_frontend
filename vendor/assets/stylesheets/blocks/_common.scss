@@ -8,6 +8,7 @@
 // Margins
 // Displays
 // Colors
+// Border widths
 // Box shadows
 // Border radiuses
 // Border colors
@@ -95,6 +96,16 @@
 }
 .light { background: color(light-haze); }
 .white { background: color(white); }
+
+// Border width
+// ==================================================
+@each $name, $width in $common-border-widths {
+  .border-width-#{$name} { border-width: $width; }
+  .border-width-bottom-#{$name} { border-bottom-width: $width; }
+  .border-width-left-#{$name} { border-left-width: $width; }
+  .border-width-right-#{$name} { border-right-width: $width; }
+  .border-width-top-#{$name} { border-top-width: $width; }
+}
 
 // Box shadows
 // ==================================================

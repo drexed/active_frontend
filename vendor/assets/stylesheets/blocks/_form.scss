@@ -492,6 +492,10 @@ textarea {
   input,
   textarea,
   select {
+    &.active + label,
+    &.active + .dropmenu + label,
+    &.active + .dropdown + label,
+    &.active + .dropup + label,
     &:focus + label,
     &:focus + .dropmenu + label,
     &:focus + .dropdown + label,

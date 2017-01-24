@@ -11,12 +11,14 @@
       text: {
         all: this.$element.data('text-all') || Choicepicker.DEFAULTS.text.all,
         choiceless: this.$element.data('text-choiceless') || Choicepicker.DEFAULTS.text.choiceless,
-        none: this.$element.data('text-none') || Choicepicker.DEFAULTS.text.none
+        none: this.$element.data('text-none') || Choicepicker.DEFAULTS.text.none,
+        selectAll: this.$element.data('text-select-all') || Choicepicker.DEFAULTS.text.selectAll
       },
       type: this.$element.data('type')
     };
     this.options = $.extend({}, Choicepicker.DEFAULTS, this.settings, options);
 
+    this.$checkAll = false;
     this.$selector = 'bsChoicepicker-label-' + this.randomNumber() + '-';
     this.$widget = $(this.initWidget()).on('click', $.proxy(this.clickWidget, this));
 
@@ -35,7 +37,8 @@
     text: {
       all: 'All',
       choiceless: 'No choices available',
-      none: 'None'
+      none: 'None',
+      selectAll: 'Select all'
     },
     type: 'checkbox'
   };
@@ -48,6 +51,7 @@
     this.elementReadOnly();
     this.setWidget();
     this.setVal();
+    this.clickCheckAll();
 
     this.$element.on({
       'focus.bs.choicepicker': $.proxy(this.showWidget, this),
@@ -68,13 +72,19 @@
     var _self = this;
     var menu = $(this.options.menu);
 
+    if (this.options.type === 'checkbox') {
+      menu.find('span')
+        .append(this.titleTemplate());
+    }
+
     $.each(this.options.choices, function (index, hash) {
       var item = $(_self.options.item);
 
       item.append(_self.optionTemplate(hash))
         .append(_self.labelTemplate(hash).text(hash.label));
 
-      menu.find('span').append(item);
+      menu.find('span')
+        .append(item);
     });
 
     return menu;
@@ -134,10 +144,57 @@
     return selector;
   };
 
+  Choicepicker.prototype.checkAllSelector = function () {
+    var selector = this.$selector + 'checkall';
+
+    return selector;
+  };
+
+  Choicepicker.prototype.clickCheckAll = function () {
+    var _self = this;
+    var checkAll = $('#' + this.checkAllSelector());
+
+    checkAll.on('change', function () {
+      $.each(_self.options.choices, function (index, hash) {
+        var selector = $('#' + _self.selector(hash));
+
+        if (selector) selector.prop('checked', checkAll.is(':checked'));
+      });
+    });
+  };
+
+  Choicepicker.prototype.setCheckAll = function (checked) {
+    var checkbox = $('#' + this.checkAllSelector());
+
+    this.$checkAll = checked;
+    checkbox.prop('checked', checked);
+  };
+
   Choicepicker.prototype.labelTemplate = function (hash) {
     var selector = this.selector(hash);
 
     return $('<label for="' + selector + '">');
+  };
+
+  Choicepicker.prototype.titleTemplate = function () {
+    var selector = this.checkAllSelector();
+    var boxLabel = $('<label for="' + selector + '">');
+    var textLabel = boxLabel.clone();
+
+    boxLabel.append('<i class="icon-checkmark"></i>');
+
+    var checkbox = $('<input type="checkbox" id="' + selector + '">');
+    checkbox.prop('checked', this.$checkAll);
+
+    var container = $('<div class="form-checkbox ' + this.options.choiceClass + '">');
+    container.append(checkbox);
+    container.append(boxLabel);
+
+    var item = $(this.options.item);
+    item.append(container)
+      .append(textLabel.text(this.options.text.selectAll));
+
+    return item;
   };
 
   Choicepicker.prototype.optionTemplate = function (hash) {
@@ -214,9 +271,17 @@
       }
     });
 
-    if (count === total) return this.options.text.all;
-    if (count === 0) return this.options.text.none;
+    if (count === total) {
+      this.setCheckAll(true);
+      return this.options.text.all;
+    }
 
+    if (count === 0) {
+      this.setCheckAll(false);
+      return this.options.text.none;
+    }
+
+    this.setCheckAll(false);
     return this.selectionLabel(label, count);
   };
 

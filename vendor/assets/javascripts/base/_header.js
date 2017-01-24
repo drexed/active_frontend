@@ -19,9 +19,9 @@
 
   Header.VERSION = '1.0.0';
   Header.DEFAULTS = {
-    addClass: 'border-color-bottom-transparent box-shadow-bottom',
+    addClass: '',
     offset: 10,
-    removeClass: 'background-color-transparent'
+    removeClass: 'background-color-transparent border-color-bottom-transparent'
   };
 
   Header.prototype.constructor = Header;

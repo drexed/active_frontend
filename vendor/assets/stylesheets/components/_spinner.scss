@@ -72,7 +72,7 @@
 // Backdrop
 // ==================================================
 .spinner-backdrop {
-  background: transparentize(color(white), 0.05);
+  background: transparentize(color(white), 0.15);
   bottom: 0;
   height: 100%;
   left: 0;
@@ -81,5 +81,5 @@
   top: 0;
   z-index: 2040;
 
-  &.dark { background: transparentize(color(black), 0.05); }
+  &.dark { background: transparentize(color(black), 0.15); }
 }

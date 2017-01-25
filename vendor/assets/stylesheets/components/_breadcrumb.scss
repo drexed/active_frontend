@@ -2,6 +2,8 @@
 // ==================================================
 // Breadcrumb
 
+// scss-lint:disable NestingDepth
+
 // Breadcrumb
 // ==================================================
 .breadcrumb {
@@ -12,5 +14,21 @@
     display: inline-block;
 
     &.divider { margin: 0 5px; }
+
+    > a {
+      &:hover,
+      &:active,
+      &:focus { color: color(primary); }
+    }
+  }
+
+  @each $name, $color in $colors-global {
+    &.#{$name} {
+      > li {
+        &:hover,
+        &:active,
+        &:focus { color: color($name); }
+      }
+    }
   }
 }

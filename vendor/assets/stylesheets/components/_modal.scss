@@ -113,7 +113,7 @@
 // Backdrop
 // ==================================================
 .modal-backdrop {
-  background: transparentize(color(white), 0.05);
+  background: transparentize(color(white), 0.15);
   bottom: 0;
   height: 100%;
   left: 0;
@@ -128,7 +128,7 @@
     &.in { opacity: 1; }
   }
 
-  &.dark { background: transparentize(color(black), 0.05); }
+  &.dark { background: transparentize(color(black), 0.15); }
 }
 
 // Media Queries

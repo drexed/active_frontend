@@ -40,4 +40,5 @@
 //= require extensions/_calendar
 //= require extensions/_chart
 //= require extensions/_map
+//= require extensions/_wysiwyg
 //

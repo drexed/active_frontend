@@ -106,11 +106,17 @@
   // ==================
 
   $(document).on('ready.bs.hoverdown.data-api', function () {
-    $('[data-hover="dropdown"]').each(function () {
-      var $this = $(this);
-      if ($this.data('hoverdown')) return;
-      Plugin.call($this, $this.data());
+      $('[data-hover="dropdown"]').each(function () {
+        var $this = $(this);
+        if ($this.data('hoverdown')) return;
+        Plugin.call($this, $this.data());
+      });
+    }).on('DOMCharacterDataModified.bs.hoverdown.data-api DOMSubtreeModified.bs.hoverdown.data-api DOMNodeInserted.bs.hoverdown.data-api', function () {
+      $('[data-hover="dropdown"]').each(function () {
+        var $this = $(this);
+        if ($this.data('hoverdown')) return;
+        Plugin.call($this, $this.data());
+      });
     });
-  });
 
 }(jQuery);

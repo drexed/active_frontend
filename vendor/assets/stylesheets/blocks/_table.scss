@@ -159,7 +159,7 @@ thead {
 // ==================================================
 @each $name, $color in $colors {
   .table-row-color-#{$name} {
-    > td { color: color($color); }
+    > td { color: color($name); }
   }
 }
 

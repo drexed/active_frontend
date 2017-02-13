@@ -4,6 +4,7 @@
 // Table
 // Styles
 // Decorations
+// Colors
 // Alignments
 // Media Queries
 
@@ -151,6 +152,14 @@ thead {
   th {
     border-left-style: solid;
     border-left-width: 1px;
+  }
+}
+
+// Colors
+// ==================================================
+@each $name, $color in $colors {
+  .table-row-color-#{$name} {
+    > td { color: color($color); }
   }
 }
 

@@ -8,10 +8,12 @@
     this.$element = $(element);
     this.settings = {
       choices: this.$element.data('choices'),
+      fuzzySearch: this.$element.data('fuzzySearch'),
       text: {
         all: this.$element.data('text-all') || Choicepicker.DEFAULTS.text.all,
         choiceless: this.$element.data('text-choiceless') || Choicepicker.DEFAULTS.text.choiceless,
         none: this.$element.data('text-none') || Choicepicker.DEFAULTS.text.none,
+        placeholder: this.$element.data('text-placeholder') || Choicepicker.DEFAULTS.text.placeholder,
         selectAll: this.$element.data('text-select-all') || Choicepicker.DEFAULTS.text.selectAll
       },
       type: this.$element.data('type')
@@ -20,24 +22,28 @@
 
     this.$checkAll = false;
     this.$selector = 'bsChoicepicker-label-' + this.randomNumber() + '-';
+    this.$fuzzyId = 'bsChoicepicker-fuzzy-' + this.randomNumber();
     this.$widget = $(this.initWidget()).on('click', $.proxy(this.clickWidget, this));
 
     this.init();
   };
 
   if (!$.fn.dropdown) throw new Error('Choicepicker requires dropdown.js');
+  if (!$.fn.list) throw new Error('Choicepicker requires list.js');
 
   Choicepicker.VERSION = '1.0.0';
   Choicepicker.DEFAULTS = {
     callback: function (choice) {},
     choices: [],
     choiceClass: 'form-align-vertical',
+    fuzzySearch: true,
     item: '<li></li>',
     menu: '<ul class="choicepicker dropmenu caret"><span></span></ul>',
     text: {
       all: 'All',
       choiceless: 'No choices available',
       none: 'None',
+      placeholder: 'Filter options...',
       selectAll: 'Select all'
     },
     type: 'checkbox'
@@ -72,9 +78,16 @@
     var _self = this;
     var menu = $(this.options.menu);
 
+    if (this.options.fuzzySearch) {
+      menu.attr('data-toggle', 'list')
+        .attr('data-input', '#' + this.$fuzzyId)
+        .find('span')
+        .append(this.fuzzyTemplate());
+    }
+
     if (this.options.type === 'checkbox') {
       menu.find('span')
-        .append(this.titleTemplate());
+        .append(this.allTemplate());
     }
 
     $.each(this.options.choices, function (index, hash) {
@@ -176,7 +189,20 @@
     return $('<label for="' + selector + '">');
   };
 
-  Choicepicker.prototype.titleTemplate = function () {
+  Choicepicker.prototype.fuzzyTemplate = function () {
+    var container = $('<div class="form-input form-size-s">');
+    var textbox = $('<input type="text" placeholder="' + this.options.text.placeholder + '" id="' + this.$fuzzyId + '" autofocus>');
+
+    container.append(textbox);
+
+    var item = $(this.options.item);
+    item.addClass('choicepicker-fuzzy list-skip-filter')
+      .append(container);
+
+    return item;
+  };
+
+  Choicepicker.prototype.allTemplate = function () {
     var selector = this.checkAllSelector();
     var boxLabel = $('<label for="' + selector + '">');
     var textLabel = boxLabel.clone();
@@ -191,7 +217,8 @@
     container.append(boxLabel);
 
     var item = $(this.options.item);
-    item.append(container)
+    item.addClass('list-skip-filter')
+      .append(container)
       .append(textLabel.text(this.options.text.selectAll));
 
     return item;

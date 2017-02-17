@@ -13,7 +13,7 @@
     this.options = $.extend({}, List.DEFAULTS, this.settings, options);
 
     this.$input = $(this.options.input);
-    this.$lis = this.$element.children();
+    this.$lis = this.listLis();
     this.$len = this.$lis.length;
 
     this.init();
@@ -41,6 +41,7 @@
 
       for (var i = 0; i < _self.$len; i++) {
         var li = $(_self.$lis[i]);
+        if (li.hasClass('list-skip-filter')) { continue; }
 
         if (li.text().toLowerCase().indexOf(filter) >= 0) {
           li.removeClass('hidden');
@@ -51,15 +52,36 @@
       }
 
       if (_self.options.placeholder !== null) {
+        var emptyLi = '<li class="bsListEmpty">' + _self.options.emptyText + '</li>';
         list.find('.bsListEmpty').remove();
 
-        if (visible === 0) list.append('<li class="bsListEmpty">' + _self.options.emptyText + '</li>');
+        if (visible === 0) {
+          if (_self.hasSpan()) {
+            list.find('span').append(emptyLi);
+          } else {
+            list.append(emptyLi);
+          }
+        }
       }
 
       _self.options.callback(visible);
 
       return false;
     });
+  };
+
+  List.prototype.hasSpan = function () {
+    return this.$element.children().first().is('span');
+  };
+
+  List.prototype.listLis = function () {
+    var kids = this.$element.children();
+
+    if (this.hasSpan()) {
+      kids = kids.children();
+    }
+
+    return kids;
   };
 
   // LIST PLUGIN DEFINITION

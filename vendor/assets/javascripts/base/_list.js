@@ -114,12 +114,19 @@
   // LIST DATA-API
   // =============
 
-  $(document).on('ready.bs.list.data-api', function () {
-    $('[data-toggle="list"]').each(function () {
-      var $this = $(this);
-      if ($this.data('list')) return;
-      Plugin.call($this, $this.data());
+  $(document)
+    .on('ready.bs.list.data-api', function () {
+      $('[data-toggle="list"]').each(function () {
+        var $this = $(this);
+        if ($this.data('list')) return;
+        Plugin.call($this, $this.data());
+      });
+    }).on('DOMCharacterDataModified.bs.list.data-api DOMSubtreeModified.bs.list.data-api DOMNodeInserted.bs.list.data-api', function () {
+      $('[data-toggle="list"]').each(function () {
+        var $this = $(this);
+        if ($this.data('list')) return;
+        Plugin.call($this, $this.data());
+      });
     });
-  });
 
 }(jQuery);

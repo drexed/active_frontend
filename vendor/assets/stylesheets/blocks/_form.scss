@@ -315,6 +315,9 @@ textarea {
 
     &::after { display: none; }
   }
+  &.with-multiple {
+    &::after { display: none; }
+  }
 }
 
 // Checkboxes & Radios

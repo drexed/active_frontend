@@ -108,7 +108,7 @@
 }
 @media only screen and (max-width: 767px) {
   @each $name, $margin in $grid-row-margins {
-    .#{dasherize(rowResponsive, $name)} { margin-bottom: $margin; }
+    .#{dasherize(row-responsive, $name)} { margin-bottom: $margin; }
   }
   @each $type in $grid-container-types {
     $i: index($grid-container-types, $type);

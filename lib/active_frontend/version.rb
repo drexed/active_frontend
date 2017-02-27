@@ -1,3 +1,3 @@
 module ActiveFrontend
-  VERSION = '14.0.72'.freeze
+  VERSION = '14.0.73'.freeze
 end

@@ -78,7 +78,7 @@
     var _self = this;
     var menu = $(this.options.menu);
 
-    if (this.options.fuzzySearch) {
+    if (this.options.fuzzySearch && this.hasFuzzyAmount()) {
       menu.attr('data-toggle', 'list')
         .attr('data-input', '#' + this.$fuzzyId)
         .find('span')
@@ -187,6 +187,14 @@
     var selector = this.selector(hash);
 
     return $('<label for="' + selector + '">');
+  };
+
+  Choicepicker.prototype.hasFuzzyAmount = function () {
+    if (this.options.type === 'radio') {
+      return this.options.choices.length > 4;
+    } else {
+      return this.options.choices.length > 3;
+    }
   };
 
   Choicepicker.prototype.fuzzyTemplate = function () {

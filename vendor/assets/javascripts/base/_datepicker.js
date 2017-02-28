@@ -7,7 +7,14 @@
   var Datepicker = function (element, options) {
     this.$element = $(element);
     this.$element.data('datepicker', this);
-    this.options = $.extend({}, Datepicker.DEFAULTS, options);
+    this.settings = {
+      endDate: this.$element.data('end-date'),
+      forceParse: this.$element.data('force-parse'),
+      format: this.$element.data('format'),
+      multidate: this.$element.data('multidate'),
+      startDate: this.$element.data('start-date')
+    };
+    this.options = $.extend({}, Datepicker.DEFAULTS, this.settings, options);
 
     this.$allowUpdate = true;
 

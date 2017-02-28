@@ -21,8 +21,8 @@
     seconds: false,
     step: 5,
     text: {
-      am: 'AM',
-      pm: 'PM'
+      am: 'am',
+      pm: 'pm'
     },
     time: 'current'
   };

@@ -90,6 +90,7 @@
   font-size: text-size(s);
   padding: 0 3px 1px;
 }
+a.calendar-event { cursor: pointer; }
 .calendar-event-draggable { cursor: pointer; }
 .calendar-event-inner {
   height: 100%;

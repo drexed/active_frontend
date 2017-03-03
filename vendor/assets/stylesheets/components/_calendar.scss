@@ -89,6 +89,14 @@
   cursor: default;
   font-size: text-size(s);
   padding: 0 3px 1px;
+
+  @each $name, $color in map-keys($colors) {
+    .calendar-event-color-#{$name} {
+      background: color($name);
+      border-color: darker-color($name);
+      color: text-color-on($name);
+    }
+  }
 }
 a.calendar-event { cursor: pointer; }
 .calendar-event-draggable { cursor: pointer; }

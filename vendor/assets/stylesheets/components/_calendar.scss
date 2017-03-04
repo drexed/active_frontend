@@ -91,7 +91,7 @@
   padding: 0 3px 1px;
 
   @each $name, $color in map-keys($colors) {
-    .calendar-event-color-#{$name} {
+    &.calendar-event-color-#{$name} {
       background: color($name);
       border-color: darker-color($name);
       color: text-color-on($name);

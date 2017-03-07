@@ -26,20 +26,16 @@
     duration: 'b',
     effect: 'bounce',
     hide: false,
-    infinite: false
+    infinite: false,
+    onTransitionEndCallback: function () {}
   };
 
   Animation.prototype.constructor = Animation;
 
   Animation.prototype.init = function () {
+    var _self = this;
     var element = this.reset();
-    var hide = this.options.hide;
-    var infinite = this.options.infinite;
-    var animation = 'animation' +
-      ' animation-effect-' + this.options.effect +
-      ' animation-delay-' + this.options.delay +
-      ' animation-duration-' + this.options.duration +
-      (infinite === true ? ' infinite' : '');
+    var animation = this.animationClass();
 
     if (element.hasClass('hidden') || element.is(':hidden')) {
       element.removeClass('hidden');
@@ -53,9 +49,19 @@
         e.stopPropagation();
         e.preventDefault();
 
-        if (infinite !== true) element.removeClass(animation);
-        if (hide === true) element.addClass('hidden');
+        if (!_self.options.infinite) element.removeClass(animation);
+        if (_self.options.hide) element.addClass('hidden');
+
+        _self.options.onTransitionEndCallback();
       });
+  };
+
+  Animation.prototype.animationClass = function () {
+    return 'animation' +
+      ' animation-effect-' + this.options.effect +
+      ' animation-delay-' + this.options.delay +
+      ' animation-duration-' + this.options.duration +
+      (this.options.infinite ? ' infinite' : '');
   };
 
   Animation.prototype.reset = function () {

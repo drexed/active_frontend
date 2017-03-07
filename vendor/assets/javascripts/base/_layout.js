@@ -24,6 +24,7 @@
   Layout.DEFAULTS = {
     direction: 'left',
     effect: 'slide',
+    onToggleCallback: function (toggle) {},
     target: '#layout-target'
   };
 
@@ -50,6 +51,8 @@
         effect: effect,
         hide: toggle === 'out'
       });
+
+      _self.options.onToggleCallback(toggle);
     });
   };
 

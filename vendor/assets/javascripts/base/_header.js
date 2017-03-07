@@ -21,6 +21,7 @@
   Header.DEFAULTS = {
     addClass: '',
     offset: 10,
+    onSwapClassCallback: function () {},
     removeClass: 'background-color-transparent border-color-bottom-transparent'
   };
 
@@ -35,8 +36,11 @@
   };
 
   Header.prototype.swapClass = function (removeClass, addClass) {
-    this.$element.removeClass(removeClass)
-                 .addClass(addClass);
+    this.$element
+      .removeClass(removeClass)
+      .addClass(addClass);
+
+    this.options.onSwapClassCallback();
   };
 
   Header.prototype.toggleClasses = function () {

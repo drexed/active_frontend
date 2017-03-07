@@ -18,6 +18,7 @@
   Timepicker.DEFAULTS = {
     menu: '<div class="timepicker dropmenu caret"></div>',
     meridian: true,
+    onSetValCallback: function (value) {},
     seconds: false,
     step: 5,
     text: {
@@ -341,7 +342,10 @@
   };
 
   Timepicker.prototype.setVal = function () {
-    this.setTime(this.$element.val());
+    var value = this.$element.val();
+
+    this.setTime(value);
+    this.options.onSetValCallback(value);
   };
 
   Timepicker.prototype.clear = function () {

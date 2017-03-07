@@ -20,6 +20,7 @@
   Timeago.DEFAULTS = {
     approximate: true,
     maxRelative: false,
+    onRefreshCallback: function () {},
     showNow: false,
     showSeconds: false,
     spacing: true,
@@ -71,6 +72,7 @@
 
   Timeago.prototype.refresh = function () {
     this.updateTime();
+    this.options.onRefreshCallback();
     return this.updateInterval();
   };
 

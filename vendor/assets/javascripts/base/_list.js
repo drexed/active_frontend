@@ -21,9 +21,10 @@
 
   List.VERSION = '1.0.0';
   List.DEFAULTS = {
-    callback: function (visible) {},
     emptyText: 'No matches found',
-    input: null
+    input: null,
+    onPlaceholderCallback: function () {},
+    onVisibleItemsCallback: function (count) {}
   };
 
   List.prototype.constructor = List;
@@ -61,10 +62,12 @@
           } else {
             list.append(emptyLi);
           }
+
+          _self.options.onPlaceholderCallback();
         }
       }
 
-      _self.options.callback(visible);
+      _self.options.onVisibleItemsCallback(count);
 
       return false;
     });

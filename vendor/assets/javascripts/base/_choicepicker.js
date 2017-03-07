@@ -33,12 +33,13 @@
 
   Choicepicker.VERSION = '1.0.0';
   Choicepicker.DEFAULTS = {
-    callback: function (choice) {},
     choices: [],
     choiceClass: 'form-align-vertical',
     fuzzySearch: true,
     item: '<li></li>',
     menu: '<ul class="choicepicker dropmenu caret"><span></span></ul>',
+    onCheckAllCallback: function (value) {},
+    onSetValCallback: function (choice) {},
     text: {
       all: 'All',
       choiceless: 'No choices available',
@@ -173,6 +174,8 @@
 
         if (selector) selector.prop('checked', checkAll.is(':checked'));
       });
+
+      _self.options.onCheckAllCallback(checkAll.val());
     });
   };
 
@@ -255,7 +258,7 @@
     if (label == '[object Object]') return;
 
     this.$element.val(label);
-    this.options.callback(label);
+    this.options.onSetValCallback(label);
   };
 
   Choicepicker.prototype.randomNumber = function () {

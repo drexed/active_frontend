@@ -13,6 +13,7 @@
 
   Table.VERSION = '1.0.0';
   Table.DEFAULTS = {
+    onSortCallback: function (direction) {},
     templates: {
       downArrow: '<i class="icon-chevron-down pull-right"></i>',
       noArrow: '<i class="icon-minus pull-right"></i>',
@@ -114,6 +115,7 @@
           break;
       }
 
+      _self.options.onSortCallback(dataSort);
       _self.setSortStatus(trTh, reSort);
 
       var colIndex = 0;

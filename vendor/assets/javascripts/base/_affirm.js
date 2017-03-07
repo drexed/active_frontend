@@ -33,6 +33,9 @@
       confirm: 'btn btn-color-red'
     },
     format: 'modal',
+    onCancelCallback: function () {},
+    onConfirmCallback: function () {},
+    onDisplayCallback: function () {},
     text: {
       cancel: 'No, Cancel',
       confirm: 'Yes, Confirm'
@@ -51,6 +54,7 @@
       e.preventDefault();
 
       _self.displayFormat();
+      _self.options.onDisplayCallback();
 
       return false;
     });
@@ -58,9 +62,11 @@
     $('body')
       .on('click', '[data-affirm-toggle="cancel"]', function () {
         _self.cancelFormat();
+        _self.options.onCancelCallback();
       })
       .on('click', '[data-affirm-toggle="confirm"]', function () {
         _self.confirmFormat();
+        _self.options.onConfirmCallback();
       });
   };
 
@@ -161,7 +167,7 @@
     if (this.options.format === 'popover') {
       this.$element.popover('hide');
     } else {
-      $('#bsAffirmModal').modal('show');
+      $('#bsAffirmModal').modal('hide');
     }
   };
 

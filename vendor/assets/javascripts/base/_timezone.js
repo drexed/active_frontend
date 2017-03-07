@@ -19,6 +19,7 @@
   Timezone.DEFAULTS = {
     default: 'America/New_York',
     format: 'olson',
+    onGetTimezoneCallback: function (value) {},
     timezones: {
       '-12': 'Pacific/Kwajalein',
       '-11': 'Pacific/Samoa',
@@ -72,7 +73,10 @@
     offset = -offset / 60;
     if (offset === 'undefined') return this.options.default;
 
-    return this.options.timezones[offset];
+    var timezone = this.options.timezones[offset];
+    this.options.onGetTimezoneCallback(timezone);
+
+    return timezone;
   };
 
   Timezone.prototype.formatTimezone = function () {

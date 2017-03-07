@@ -21,6 +21,8 @@
     baseClass: 'switch',
     offClass: 'switch-color-light-haze',
     onClass: 'switch-color-green',
+    onOffCallback: function () {},
+    onOnCallback: function () {},
     text: {
       off: '<i class="icon-cross"></i>',
       on: '<i class="icon-checkmark"></i>'
@@ -71,6 +73,8 @@
     this.$element.prop('checked', true);
 
     if (!silent) this.trigger();
+
+    this.options.onOnCallback();
   };
 
   Switch.prototype.off = function (silent) {
@@ -81,6 +85,8 @@
     this.$element.prop('checked', false);
 
     if (!silent) this.trigger();
+
+    this.options.onOffCallback();
   };
 
   Switch.prototype.enable = function () {

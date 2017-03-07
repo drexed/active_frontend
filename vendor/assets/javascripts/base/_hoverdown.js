@@ -24,6 +24,10 @@
   Hoverdown.VERSION = '1.0.0';
   Hoverdown.DEFAULTS = {
     delay: 500,
+    onCloseMenuCallback: function () {},
+    onHoverOutDelayCallback: function () {},
+    onHoverOutTimeoutCallback: function () {},
+    onOpenMenuCallback: function () {},
     timeout: 500
   };
 
@@ -55,6 +59,8 @@
     this.$timeout = window.setTimeout(function () {
       _self.closeMenu();
     }, this.options.timeout);
+
+    this.options.onHoverOutTimeoutCallback();
   };
 
   Hoverdown.prototype.hoverOutDelay = function () {
@@ -63,16 +69,20 @@
     window.setTimeout(function () {
       _self.closeMenu();
     }, this.options.delay);
+
+    this.options.onHoverOutDelayCallback();
   };
 
   Hoverdown.prototype.openMenu = function () {
     this.$parent.addClass('open');
     this.$dropmenu.trigger('show.bs.dropdown');
+    this.options.onOpenMenuCallback();
   };
 
   Hoverdown.prototype.closeMenu = function () {
     this.$parent.removeClass('open');
     this.$dropmenu.trigger('hide.bs.dropdown');
+    this.options.onCloseMenuCallback();
   };
 
   // HOVERDOWN PLUGIN DEFINITION

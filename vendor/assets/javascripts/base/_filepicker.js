@@ -36,6 +36,8 @@
     iconClass: 'icon-folder-open',
     inputClass: 'form-input',
     inputPlaceholder: 'Select a file...',
+    onFilesDeselectedCallback: function () {},
+    onFilesSelectedCallback: function (count) {},
     showBadge: true,
     showIcon: true,
     showInput: true
@@ -64,6 +66,12 @@
 
     this.$element.change(function () {
       var files = _self.pushNameFiles();
+
+      if (files.length === 0) {
+        _self.options.onFilesDeselectedCallback();
+      } else {
+        _self.options.onFilesSelectedCallback(files.length);
+      }
 
       if (_self.options.showInput === false && _self.options.showBadge) {
         if (_self.$elementFilepicker.find('.badge').length === 0) {

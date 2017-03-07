@@ -61,6 +61,7 @@
     minViewMode: 0,
     multidate: false,
     multidateSeparator: ',',
+    onSetValCallback: function (value) {},
     startDate: -Infinity,
     startView: 0,
     templates: {
@@ -288,8 +289,11 @@
     }
   };
 
-  Datepicker.prototype.setValue = function () {
-    this.$element.val(this.getFormattedDate());
+  Datepicker.prototype.setVal = function () {
+    var value = this.getFormattedDate();
+
+    this.$element.val(value);
+    this.options.onSetValCallback(value);
   };
 
   Datepicker.prototype.setDate = function (date, which) {
@@ -297,7 +301,7 @@
     if (!which || which === 'view') this.$viewDate = date && new Date(date);
 
     this.fill();
-    this.setValue();
+    this.setVal();
 
     if (!which || which !== 'view') this.triggerEvent('changeDate');
     if (this.$element) this.$element.change();
@@ -328,7 +332,7 @@
 
     this.update.apply(this, $.map(args, this.utcToLocal));
     this.triggerEvent('changeDate');
-    this.setValue();
+    this.setVal();
   };
 
   Datepicker.prototype.updateAll = function () {
@@ -727,7 +731,7 @@
     }
 
     if (fromArgs) {
-      this.setValue();
+      this.setVal();
     } else if (dates.length) {
       if (String(oldDates) !== String(this.$dates)) this.triggerEvent('changeDate');
     }
@@ -953,7 +957,7 @@
     this.unapplyEvents(this.$eventsAlt);
     this.$viewMode = this.$Options.startView;
 
-    if (this.$Options.forceParse) this.setValue();
+    if (this.$Options.forceParse) this.setVal();
 
     this.updateWidgetMode();
     this.$widget.detach();

@@ -16,14 +16,14 @@
 
   Colorpicker.VERSION = '1.0.0';
   Colorpicker.DEFAULTS = {
-    callback: function (color) {},
     colors: [
       '#A1D74D', '#1BB933', '#2ECFDD', '#0D86F6', '#7E63E2',
       '#BA5BCE', '#EA4C88', '#EB3C22', '#FDA30D', '#F6D123',
       '#2C3A49', '#8292A4', '#EEF0F6', '#FFFFFF'
     ],
     item: '<li><button type="button"></button></li>',
-    menu: '<ul class="colorpicker dropmenu caret"></ul>'
+    menu: '<ul class="colorpicker dropmenu caret"></ul>',
+    onSetValCallback: function (color) {}
   };
 
   Colorpicker.prototype.constructor = Colorpicker;
@@ -105,7 +105,7 @@
     if (!this.$active) return;
 
     this.$element.val(color);
-    this.options.callback(color);
+    this.options.onSetValCallback(color);
   };
 
   // COLORPICKER PLUGIN DEFINITION

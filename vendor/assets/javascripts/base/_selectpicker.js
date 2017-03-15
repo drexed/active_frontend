@@ -9,7 +9,8 @@
     this.settings = {
       fuzzySearch: this.$element.data('fuzzySearch'),
       includePrompt: this.$element.data('includePrompt'),
-      optionClass: this.$element.data('optionClass'),
+      optionHoverClass: this.$element.data('optionHoverClass'),
+      optionSelectedClass: this.$element.data('optionSelectedClass'),
       text: {
         selectless: this.$element.data('text-selectless') || Selectpicker.DEFAULTS.text.selectless,
         placeholder: this.$element.data('text-placeholder') || Selectpicker.DEFAULTS.text.placeholder,
@@ -18,6 +19,8 @@
     };
     this.options = $.extend({}, Selectpicker.DEFAULTS, this.settings, options);
 
+    this.$options = this.getOptions();
+    this.$selected = this.getSelectedOptionVal();
     this.$fuzzyId = 'bsSelectpicker-fuzzy-' + this.randomNumber();
     this.$widget = $(this.initWidget()).on('click', $.proxy(this.clickWidget, this));
 
@@ -33,8 +36,10 @@
     includePrompt: true,
     item: '<li></li>',
     menu: '<ul class="selectpicker dropmenu caret"><span></span></ul>',
-    onSetValCallback: function (select) {},
-    optionClass: 'text-color-hover-blue',
+    onChangeCallback: function (old_value, new_value) {},
+    onSetValCallback: function (value) {},
+    optionHoverClass: 'text-color-hover-blue',
+    optionSelectedClass: 'text-color-blue',
     text: {
       selectless: 'No options available',
       placeholder: 'Filter options...',
@@ -66,7 +71,10 @@
 
     var value = $(e.target).data('val');
 
+    if (value === undefined) return;
+
     this.setVal(value);
+    this.hideWidget();
   };
 
   Selectpicker.prototype.initWidget = function () {
@@ -80,7 +88,7 @@
         .append(this.fuzzyTemplate());
     }
 
-    $.each(this.getOptions(), function (index, hash) {
+    $.each(this.parseOptionsToHash(), function (index, hash) {
       var item = $(_self.options.item);
 
       item.append(_self.optionTemplate(hash));
@@ -110,6 +118,7 @@
   };
 
   Selectpicker.prototype.showWidget = function (e) {
+    this.$selected = this.getSelectedOptionVal();
     this.$container.addClass('open');
 
     var _self = this;
@@ -131,24 +140,35 @@
 
     this.$element.val(value);
     this.options.onSetValCallback(value);
+
+    if (this.$selected !== value.toString()) {
+      this.$container
+        .find('.' + this.options.optionSelectedClass)
+        .removeClass(this.options.optionSelectedClass);
+      this.$container
+        .find("a[data-val='" + value + "']")
+        .addClass(this.options.optionSelectedClass);
+      this.options.onChangeCallback(this.$selected, value);
+    }
   };
 
   Selectpicker.prototype.randomNumber = function () {
     return Math.floor((Math.random() * 100000) + 1);
   };
 
-  Selectpicker.prototype.getOptions = function () {
+  Selectpicker.prototype.parseOptionsToHash = function () {
     var _self = this;
     var array = [];
 
-    this.$element.find('option').each(function() {
+    this.$options.each(function() {
       var option = $(this);
 
       if (!_self.options.includePrompt && option.val() === '') return;
 
       var hash = {
         text: option.text(),
-        value: option.val()
+        value: option.val(),
+        selected: (option.val() === _self.$selected)
       };
 
       if (option.val() === '') {
@@ -161,8 +181,20 @@
     return array;
   };
 
+  Selectpicker.prototype.getOptions = function () {
+    return this.$element.find('option');
+  };
+
+  Selectpicker.prototype.getSelectedOption = function () {
+    return this.$element.find('option:selected');
+  };
+
+  Selectpicker.prototype.getSelectedOptionVal = function () {
+    return this.getSelectedOption().val();
+  };
+
   Selectpicker.prototype.optionCount = function () {
-    return this.getOptions().length;
+    return this.parseOptionsToHash().length;
   };
 
   Selectpicker.prototype.hasSelects = function () {
@@ -186,9 +218,14 @@
     return item;
   };
 
+  Selectpicker.prototype.optionClass = function (hash) {
+    return this.options.optionHoverClass +
+      (hash.selected ? (' ' + this.options.optionSelectedClass) : '');
+  };
+
   Selectpicker.prototype.optionTemplate = function (hash) {
     return '<a href="#" class="' +
-             this.options.optionClass +
+             this.optionClass(hash) +
              '" data-val="' +
              hash.value +
              '">' +

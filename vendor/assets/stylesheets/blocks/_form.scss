@@ -371,6 +371,7 @@ textarea {
     &:checked + label {
       background: color(green);
       border-color: color(green);
+      box-shadow: none !important;
       color: color(white);
     }
     &[disabled]:checked + label {

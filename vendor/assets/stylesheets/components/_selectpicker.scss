@@ -1,0 +1,40 @@
+// Table of Contents
+// ==================================================
+// Selectpicker
+
+// scss-lint:disable NestingDepth
+// scss-lint:disable SelectorDepth
+// scss-lint:disable SelectorFormat
+
+// Selectpicker
+// ==================================================
+.selectpicker {
+   > span {
+     display: block;
+     max-height: 230px;
+     overflow-x: auto;
+
+     > li {
+       border-top: 1px solid;
+       border-top-color: inherit;
+       clear: both;
+       display: block;
+       font-weight: inherit;
+       line-height: 1;
+       padding: 6px 0;
+       margin: 0;
+
+       &:first-child {
+         border-top: 0;
+         > a { padding-top: 10px; }
+       }
+       &:last-child {
+         > a { padding-bottom: 10px; }
+       }
+
+       &.hidden { display: none; }
+       &.selectpicker-fuzzy { padding: 10px 10px 5px; }
+       &.bsListEmpty { padding: 16px 20px; }
+     }
+   }
+}

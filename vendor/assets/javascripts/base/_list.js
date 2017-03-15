@@ -67,7 +67,7 @@
         }
       }
 
-      _self.options.onVisibleItemsCallback(count);
+      _self.options.onVisibleItemsCallback(visible);
 
       return false;
     });

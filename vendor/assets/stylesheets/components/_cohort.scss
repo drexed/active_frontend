@@ -8,9 +8,11 @@
 // Cohort
 // ==================================================
 .cohort-title {
+  border: 1px solid color(dark-haze);
+  border-bottom: 0;
   font-size: text-size(b);
   font-weight: text-weight(semibold);
-  padding-bottom: 20px;
+  padding: 8px;
   text-align: center;
 }
 .cohort-table {

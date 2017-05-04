@@ -87,6 +87,28 @@ thead {
     }
   }
 }
+.table-highlight {
+  tbody {
+    tr {
+      td:hover { background: color(haze); }
+    }
+  }
+
+  &.dark {
+    tbody {
+      tr {
+        td:hover { background: background-hover-color(black); }
+      }
+    }
+  }
+  &.light {
+    tbody {
+      tr {
+        td:hover { background: background-hover-color(haze); }
+      }
+    }
+  }
+}
 .table-scroll {
   max-height: 300px;
   overflow-y: auto;

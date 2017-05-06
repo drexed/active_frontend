@@ -9,7 +9,11 @@
     this.settings = {
       baseClass: this.$element.data('base-class'),
       offClass: this.$element.data('off-class'),
-      onClass: this.$element.data('on-class')
+      onClass: this.$element.data('on-class'),
+      text: {
+        off: this.$element.data('text-off') || Switch.DEFAULTS.text.off,
+        on: this.$element.data('text-on') || Switch.DEFAULTS.text.on
+      }
     };
     this.options = $.extend({}, Switch.DEFAULTS, this.settings, options);
 
@@ -70,7 +74,8 @@
 
     this.$switch.removeClass('off');
     this.$switch.addClass(this.options.onClass);
-    this.$element.prop('checked', true);
+    this.$element.prop('checked', true)
+                 .attr('checked', 'checked');
 
     if (!silent) this.trigger();
 
@@ -82,7 +87,8 @@
 
     this.$switch.removeClass(this.options.onClass);
     this.$switch.addClass('off');
-    this.$element.prop('checked', false);
+    this.$element.prop('checked', false)
+                 .removeAttr('checked');
 
     if (!silent) this.trigger();
 

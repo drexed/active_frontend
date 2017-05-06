@@ -7,14 +7,14 @@
   var Selectpicker = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      fuzzySearch: this.$element.data('fuzzySearch'),
-      includePrompt: this.$element.data('includePrompt'),
-      optionHoverClass: this.$element.data('optionHoverClass'),
-      optionSelectedClass: this.$element.data('optionSelectedClass'),
+      fuzzySearch: this.$element.data('fuzzy-search'),
+      includePrompt: this.$element.data('include-prompt'),
+      optionHoverClass: this.$element.data('option-hover-class'),
+      optionSelectedClass: this.$element.data('option-selected-class'),
       text: {
         selectless: this.$element.data('text-selectless') || Selectpicker.DEFAULTS.text.selectless,
         placeholder: this.$element.data('text-placeholder') || Selectpicker.DEFAULTS.text.placeholder,
-        prompt: this.$element.data('text-prompt') || Selectpicker.DEFAULTS.text.prompt,
+        prompt: this.$element.data('text-prompt') || Selectpicker.DEFAULTS.text.prompt
       }
     };
     this.options = $.extend({}, Selectpicker.DEFAULTS, this.settings, options);

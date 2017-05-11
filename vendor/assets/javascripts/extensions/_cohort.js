@@ -11,7 +11,8 @@
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ],
     repeatLevels: {
-      'low': [0, 10],
+      'extra-low': [0, 1],
+      'low': [1, 10],
       'medium-low': [10, 20],
       'medium': [20, 30],
       'medium-high': [30, 40],

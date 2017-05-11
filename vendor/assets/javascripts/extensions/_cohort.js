@@ -22,7 +22,7 @@
     labels: {
       time: 'Time',
       total: 'Total',
-      weekOf: 'Week of'
+      weekOf: 'Week'
     },
     emptyPlaceholder: '---',
     timeInterval: 'monthly',
@@ -47,12 +47,11 @@
         name = this.monthNames[date.getMonth()];
       }
 
-      return name + ' ' + date.getDate() + ', ' + getYear(date);
+      return name + ' ' + date.getDate();
     },
     formatWeeklyLabel: function(date, i) {
       date.setDate(date.getDate() + i * 7);
-      return this.labels.weekOf + ' ' + i + ' ' + this.shortMonthNames[date.getMonth()] +
-             ' ' + getYear(date);
+      return this.shortMonthNames[date.getMonth()] + ' ' + this.labels.weekOf + ' ' + i;
     },
     formatMonthlyLabel: function(date, i) {
       var name;

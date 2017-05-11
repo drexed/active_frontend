@@ -29,24 +29,43 @@
     drawEmptyCells: true,
     rawNumberOnHover: true,
     initialIntervalNumber: 1,
-    percentagePercision: 1,
+    percentagePercision: 0,
     classPrefix: 'cohort-',
+    useShortMonthNames: true,
 
     formatHeaderLabel: function(i) {
       return (this.initialIntervalNumber - 1 + i).toString();
     },
     formatDailyLabel: function(date, i) {
+      var name;
+
       date.setDate(date.getDate() + i);
-      return this.monthNames[date.getMonth()] + ' ' + date.getDate() + ', ' + getYear(date);
+
+      if (this.useShortMonthNames === true) {
+        name = this.shortMonthNames[date.getMonth()];
+      } else {
+        name = this.monthNames[date.getMonth()];
+      }
+
+      return name + ' ' + date.getDate() + ', ' + getYear(date);
     },
     formatWeeklyLabel: function(date, i) {
       date.setDate(date.getDate() + i * 7);
-      return this.labels.weekOf + ' ' + this.shortMonthNames[date.getMonth()] + ' ' +
-              date.getDate() + ', ' + getYear(date);
+      return this.labels.weekOf + ' ' + i + ' ' + this.shortMonthNames[date.getMonth()] +
+             ' ' + getYear(date);
     },
     formatMonthlyLabel: function(date, i) {
+      var name;
+
       date.setMonth(date.getMonth() + i);
-      return this.monthNames[date.getMonth()] + ' ' + getYear(date);
+
+      if (this.useShortMonthNames === true) {
+        name = this.shortMonthNames[date.getMonth()];
+      } else {
+        name = this.monthNames[date.getMonth()];
+      }
+
+      return name + ' ' + getYear(date);
     },
     formatYearlyLabel: function(date, i) {
       return date.getYear() + 1900 + i;
@@ -86,7 +105,7 @@
     } else if (isNumber(value) && base > 0) {
       return (value / base * 100).toFixed(cohortDefaults.percentagePercision);
     } else if (isNumber(value)) {
-      return '0.00';
+      return '0';
     }
   }
 

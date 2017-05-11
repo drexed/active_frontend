@@ -49,7 +49,7 @@
 .cohort-percentage {
   &::after {
     content: '%';
-    margin-left: 2px;
+    margin-left: 1px;
   }
 }
 .cohort-label,
@@ -60,7 +60,7 @@
 }
 .cohort-label {
   text-align: left !important;
-  width: 140px;
+  width: 100px;
 }
 .cohort-total {
   border-right-width: 3px;

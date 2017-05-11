@@ -64,7 +64,7 @@
         name = this.monthNames[date.getMonth()];
       }
 
-      return name + ' ' + getYear(date);
+      return name;
     },
     formatYearlyLabel: function(date, i) {
       return date.getYear() + 1900 + i;

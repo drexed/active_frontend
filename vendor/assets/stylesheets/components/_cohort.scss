@@ -57,15 +57,12 @@
   border-bottom: 1px solid color(dark-haze);
   border-right: 1px solid color(dark-haze);
   font-weight: text-weight(semibold);
+  width: 80px;
 }
-.cohort-label {
-  text-align: left !important;
-  width: 100px;
-}
+.cohort-label { text-align: left !important; }
 .cohort-total {
   border-right-width: 3px;
   font-weight: text-weight(normal);
-  width: 80px;
 }
 .cohort-empty {
   background: color(white);

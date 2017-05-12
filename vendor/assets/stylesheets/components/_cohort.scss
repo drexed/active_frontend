@@ -77,7 +77,7 @@
 .cohort-high,
 .cohort-hot,
 .cohort-extra-hot { color: color(white); }
-@each $name, $multiplier in (extra-low: 3.5, low: 3, medium-low: 2, medium: 1) {
+@each $name, $multiplier in (extra-low: 3.25, low: 3, medium-low: 2, medium: 1) {
   .cohort-#{$name} { background: lighten(color(primary), percentage((12.5 * $multiplier) / 100)); }
 }
 .cohort-medium-high {

@@ -36,7 +36,7 @@ module ActiveFrontendHelper
   # rubocop:enable Metrics/MethodLength
 
   def colors_global(opacity = 1)
-    available_colors = brand_colors(opacity)
+    available_colors = colors_brand(opacity)
 
     {
       primary: available_colors[:blue],
@@ -47,9 +47,8 @@ module ActiveFrontendHelper
   end
 
   def colors(opacity = 1)
-    colors_global(opacity)
-      .merge(colors_brand(opacity))
-      .merge(colors_grayscale(opacity))
+    colors_global(opacity).merge(colors_brand(opacity))
+                          .merge(colors_grayscale(opacity))
   end
 
 end

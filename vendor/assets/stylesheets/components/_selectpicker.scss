@@ -35,6 +35,12 @@
        &.hidden { display: none; }
        &.selectpicker-fuzzy { padding: 10px 10px 5px; }
        &.bsListEmpty { padding: 16px 20px; }
+       &.optgroup {
+         background: color(light-haze);
+         font-size: text-size(xs);
+         font-weight: text-weight(semibold);
+         padding: 5px 10px;
+       }
      }
    }
 }

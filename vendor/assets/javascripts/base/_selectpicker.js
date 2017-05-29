@@ -19,6 +19,7 @@
     };
     this.options = $.extend({}, Selectpicker.DEFAULTS, this.settings, options);
 
+    this.$optgroups = this.getOptgroups();
     this.$options = this.getOptions();
     this.$selected = this.getSelectedOptionVal();
     this.$fuzzyId = 'bsSelectpicker-fuzzy-' + this.randomNumber();
@@ -80,6 +81,7 @@
   Selectpicker.prototype.initWidget = function () {
     var _self = this;
     var menu = $(this.options.menu);
+    var optgroups = this.parseOptgroupsToHash();
 
     if (this.options.fuzzySearch && this.hasFuzzyAmount()) {
       menu.attr('data-toggle', 'list')
@@ -89,6 +91,12 @@
     }
 
     $.each(this.parseOptionsToHash(), function (index, hash) {
+      var optgroup = optgroups[hash.value];
+
+      if (optgroup !== undefined) {
+        menu.find('span').append(_self.optgroupTemplate(optgroup));
+      }
+
       var item = $(_self.options.item);
 
       item.append(_self.optionTemplate(hash));
@@ -156,6 +164,20 @@
     return Math.floor((Math.random() * 100000) + 1);
   };
 
+  Selectpicker.prototype.parseOptgroupsToHash = function () {
+    var _self = this;
+    var hash = {};
+
+    this.$optgroups.each(function() {
+      var optgroup = $(this);
+      var first_option = optgroup.find('option').first().val();
+
+      hash[first_option] = optgroup.attr('label');
+    });
+
+    return hash;
+  };
+
   Selectpicker.prototype.parseOptionsToHash = function () {
     var _self = this;
     var array = [];
@@ -179,6 +201,10 @@
     });
 
     return array;
+  };
+
+  Selectpicker.prototype.getOptgroups = function () {
+    return this.$element.find('optgroup');
   };
 
   Selectpicker.prototype.getOptions = function () {
@@ -221,6 +247,10 @@
   Selectpicker.prototype.optionClass = function (hash) {
     return this.options.optionHoverClass +
       (hash.selected ? (' ' + this.options.optionSelectedClass) : '');
+  };
+
+  Selectpicker.prototype.optgroupTemplate = function (label) {
+    return '<li class="optgroup">' + label + '</li>';
   };
 
   Selectpicker.prototype.optionTemplate = function (hash) {

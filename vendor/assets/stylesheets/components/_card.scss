@@ -25,4 +25,7 @@
   border-bottom: 0;
   font-weight: text-weight(semibold);
 }
+.card-body {
+  + .card-body { border-top: 0; }
+}
 .card-footer { border-top: 0; }

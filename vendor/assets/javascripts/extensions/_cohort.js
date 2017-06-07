@@ -51,24 +51,26 @@
       return name + ' ' + date.getDate();
     },
     formatQuarterlyLabel: function(date, i) {
-      var baseDate = date.getDate();
       var name;
+      var newdate;
 
-      date.setDate(baseDate + (i * 3));
+      newdate = new Date(date);
+      newdate.setDate(newdate.getDate() + (i * 3));
       if (this.useShortMonthNames === true) {
-        name = this.shortMonthNames[date.getMonth()];
+        name = this.shortMonthNames[newdate.getMonth()];
       } else {
-        name = this.monthNames[date.getMonth()];
+        name = this.monthNames[newdate.getMonth()];
       }
-      var alphaDate = name + ' ' + date.getDate();
+      var alphaDate = name + ' ' + newdate.getDate();
 
-      date.setDate(baseDate + ((i * 3) + 2));
+      newdate = new Date(date);
+      newdate.setDate(newdate.getDate() + (i * 3) + 2);
       if (this.useShortMonthNames === true) {
-        name = this.shortMonthNames[date.getMonth()];
+        name = this.shortMonthNames[newdate.getMonth()];
       } else {
-        name = this.monthNames[date.getMonth()];
+        name = this.monthNames[newdate.getMonth()];
       }
-      var omegaDate = name + ' ' + date.getDate();
+      var omegaDate = name + ' ' + newdate.getDate();
 
       return alphaDate + '-' + omegaDate;
     },

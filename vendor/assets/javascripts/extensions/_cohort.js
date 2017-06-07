@@ -50,9 +50,62 @@
 
       return name + ' ' + date.getDate();
     },
+    formatQuarterlyLabel: function(date, i) {
+      var baseDate = date.getDate();
+      var name;
+
+      date.setDate(baseDate + (i * 3));
+      if (this.useShortMonthNames === true) {
+        name = this.shortMonthNames[date.getMonth()];
+      } else {
+        name = this.monthNames[date.getMonth()];
+      }
+      var alphaDate = name + ' ' + date.getDate();
+
+      date.setDate(baseDate + ((i * 3) + 2));
+      if (this.useShortMonthNames === true) {
+        name = this.shortMonthNames[date.getMonth()];
+      } else {
+        name = this.monthNames[date.getMonth()];
+      }
+      var omegaDate = name + ' ' + date.getDate();
+
+      return alphaDate + '-' + omegaDate;
+    },
     formatWeeklyLabel: function(date, i) {
-      date.setDate(date.getDate() + i * 7);
-      return this.shortMonthNames[date.getMonth()] + ' ' + this.labels.weekOf + ' ' + i;
+      var baseDate = date.getDate();
+      var morning = [0,3,6,9,12,15,18];
+      var noon = [1,4,7,10,13,16,19];
+      var night = [2,5,8,11,14,17,20];
+      var indexPosition;
+      var timerange;
+      var name;
+
+      indexPosition = morning.indexOf(i);
+      if (indexPosition > -1) {
+        date.setDate(baseDate + indexPosition);
+        timerange = '12A-8A';
+      }
+
+      indexPosition = noon.indexOf(i);
+      if (indexPosition > -1) {
+        date.setDate(baseDate + indexPosition);
+        timerange = '8A-4P';
+      }
+
+      indexPosition = night.indexOf(i);
+      if (indexPosition > -1) {
+        date.setDate(baseDate + indexPosition);
+        timerange = '4P-12A';
+      }
+
+      if (this.useShortMonthNames === true) {
+        name = this.shortMonthNames[date.getMonth()];
+      } else {
+        name = this.monthNames[date.getMonth()];
+      }
+
+      return name + ' ' + date.getDate() + ' ' + timerange;
     },
     formatMonthlyLabel: function(date, i) {
       var name;
@@ -203,6 +256,8 @@
 
       if (timeInterval === 'daily') {
           formatFn = 'formatDailyLabel';
+      } else if (timeInterval === 'quarterly') {
+          formatFn = 'formatQuarterlyLabel';
       } else if (timeInterval === 'weekly') {
           formatFn = 'formatWeeklyLabel';
       } else if (timeInterval === 'monthly') {

@@ -26,6 +26,10 @@
   top: 100%;
   z-index: 1040;
 
+  &.pull-center {
+    left: calc(-25% - 20px);
+    right: calc(-25% - 20px);
+  }
   &.pull-right {
     left: auto;
     right: 0;
@@ -56,6 +60,10 @@
       top: -6px;
     }
 
+    &.pull-center {
+      &::before { left: calc(50% - 4px); }
+      &::after { left: calc(50% - 3px); }
+    }
     &.pull-right {
       &::before,
       &::after { left: auto; }
@@ -134,6 +142,10 @@
         left: 10px;
       }
 
+      &.pull-center {
+        &::before { left: calc(50% - 4px); }
+        &::after { left: calc(50% - 3px); }
+      }
       &.pull-right {
         &::before,
         &::after { left: auto; }

@@ -5,6 +5,7 @@
 // Selects
 // Checkboxes & Radios
 // Notes
+// Tags
 // Labels
 // Addons
 
@@ -43,7 +44,8 @@ input { overflow: visible; }
 optgroup { font-weight: text-weight(semibold); }
 input,
 select,
-textarea {
+textarea,
+.form-tags {
   @include appearance(none);
   @include transition(all 0.3s ease-in-out);
   background: color(white);
@@ -59,7 +61,8 @@ textarea {
 }
 input:not([type='submit']),
 select,
-textarea {
+textarea,
+.form-tags {
   box-shadow: inset 0 2px 0 0 darkish-color(light-haze);
 
   &.dark {
@@ -80,11 +83,13 @@ textarea {
     color: color(gray);
     font-weight: text-weight(normal) !important;
   }
-  &:focus {
+  &:focus,
+  &.focus {
     box-shadow: inset 0 2px 0 0 transparentize(color(blue), 0.5);
     border-color: color(blue);
   }
-  &:focus:invalid {
+  &:focus:invalid,
+  &.focus:invalid {
     box-shadow: inset 0 2px 0 0 transparentize(color(red), 0.5);
     border-color: color(red);
   }
@@ -434,6 +439,24 @@ textarea {
   display: block;
   font-size: text-size(xs);
   margin: -10px 0 10px;
+}
+
+// Tags
+// ==================================================
+.form-tags {
+  white-space: normal;
+
+  input,
+  input:focus {
+    background: color(transparent);
+    border: 0;
+    box-shadow: none;
+    display: inline-block;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
 }
 
 // Labels

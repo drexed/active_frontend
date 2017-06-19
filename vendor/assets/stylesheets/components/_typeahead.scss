@@ -10,11 +10,9 @@
   margin-top: 10px;
   z-index: 1060;
 
-  > li > a b { color: color(blue); }
-}
-x {
-  display: block;
-  color: color(gray);
-  font-style: italic;
-  font-weight: normal;
+  > li > a b,
+  > li.active > a {
+    color: color(blue);
+    font-weight: text-weight(semibold);
+  }
 }

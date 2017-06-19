@@ -1,0 +1,23 @@
+// Table of Contents
+// ==================================================
+// Tag
+
+// scss-lint:disable ImportantRule
+
+// Tag
+// ==================================================
+.tag {
+  margin: 2px 2px 2px 0;
+  padding-right: 22px !important;
+
+  [data-role='remove'] {
+    cursor: pointer;
+    margin-left: 5px;
+
+    &::after {
+      content: '\39';
+      font-family: 'dripicons';
+      position: absolute;
+    }
+  }
+}

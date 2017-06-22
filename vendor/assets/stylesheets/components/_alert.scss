@@ -21,7 +21,7 @@
   .alert-close { float: right; }
 
   &.absolute,
-  &.fixed { z-index: 1050; }
+  &.fixed { z-index: 2060; }
   &.absolute {
     position: absolute;
     width: inherit;

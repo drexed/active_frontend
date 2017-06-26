@@ -39,6 +39,7 @@
 //
 // Extensions Imports
 // ==================================================
+//= require extensions/_antiblocker
 //= require extensions/_calendar
 //= require extensions/_chart
 //= require extensions/_cohort

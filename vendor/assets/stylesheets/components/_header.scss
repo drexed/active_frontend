@@ -108,17 +108,6 @@
 
     + i { margin-left: -2px; }
   }
-
-  + .header-nav {
-    &.pull-right { margin-right: 20px; }
-  }
-}
-.header-toggle {
-  float: right;
-  font-size: 26px;
-  padding-top: 5px;
-
-  + .header-toggle { margin-right: 20px; }
 }
 
 // Media Queries
@@ -131,12 +120,17 @@
     height: 50px;
     padding: 10px 0;
   }
-  .header-brand,
-  .header-toggle {
+  .header-brand {
     font-size: 26px;
     padding-top: 1px;
-  }
-  .header-brand {
+
     img { height: 32px; }
+  }
+  .header-nav {
+    margin-top: 4px;
+
+    > li {
+      &.header-nav-icon { font-size: 26px; }
+    }
   }
 }

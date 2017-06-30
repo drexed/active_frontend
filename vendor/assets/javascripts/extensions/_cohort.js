@@ -218,6 +218,11 @@
         el.className = prefixClass(className, config.classPrefix);
       }
 
+      if ((baseClassName = options.baseClassName)) {
+        delete options.baseClassName;
+        el.className = baseClassName;
+      }
+
       if (!isEmpty(options.text)) {
         var text = options.text.toString();
         setText(el, text);
@@ -335,6 +340,7 @@
     }
 
     var mainContainer = create('div', { className: 'container' }),
+        responsive = create('div', { baseClassName: 'table-responsive' }),
         table = create('table', { className: 'table' });
 
     table.appendChild(drawHeader(values));
@@ -344,7 +350,8 @@
       mainContainer.appendChild(create('div', { text: title, className: 'title' }));
     }
 
-    mainContainer.appendChild(table);
+    responsive.appendChild(table);
+    mainContainer.appendChild(responsive);
 
     container.innerHTML = '';
     container.appendChild(mainContainer);

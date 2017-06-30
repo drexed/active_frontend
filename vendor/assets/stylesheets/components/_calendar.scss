@@ -1,7 +1,9 @@
 // Table of Contents
 // ==================================================
 // Calendar
+// Media Queries
 
+// scss-lint:disable ImportantRule
 // scss-lint:disable NestingDepth
 // scss-lint:disable SelectorDepth
 // scss-lint:disable SelectorFormat
@@ -228,5 +230,25 @@ table.calendar-border-separate {
   tr.calendar-minor {
     th,
     td { border-top-style: dotted; }
+  }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: 767px) {
+  .calendar-header td { display: block; }
+  .calendar-header-left,
+  .calendar-header-center,
+  .calendar-header-right {
+    text-align: center;
+    width: 100%;
+
+    > * { margin: 0 auto; }
+  }
+  .calendar-header-center {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }

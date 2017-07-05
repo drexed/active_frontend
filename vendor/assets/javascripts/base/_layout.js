@@ -35,8 +35,7 @@
     var options = this.options;
 
     this.$element.click(function () {
-      var target = $(_self.options.target);
-      var next = _self.getNext();
+      var target = $(options.target);
       var toggle = 'out';
 
       if (target.hasClass('hidden') || target.is(':hidden') || target.css('visibility') === 'hidden') {
@@ -52,20 +51,8 @@
         hide: toggle === 'out'
       });
 
-      _self.options.onToggleCallback(toggle);
+      options.onToggleCallback(toggle);
     });
-  };
-
-  Layout.prototype.getNext = function () {
-    var next = $(this.options.target).next();
-    var id = next.attr('id');
-
-    if (id === undefined || id === '') {
-      id = 'show-bs-layout';
-      next.attr('id', id);
-    }
-
-    return $('#' + id);
   };
 
   Layout.prototype.togglePosition = function (klass) {

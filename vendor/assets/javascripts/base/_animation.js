@@ -16,7 +16,7 @@
     };
     this.options = $.extend({}, Animation.DEFAULTS, this.settings, options);
 
-    this.init(this.$element);
+    this.trigger();
   };
 
   Animation.VERSION = '1.0.0';
@@ -32,7 +32,7 @@
 
   Animation.prototype.constructor = Animation;
 
-  Animation.prototype.init = function () {
+  Animation.prototype.trigger = function () {
     var _self = this;
     var element = this.reset();
     var animation = this.animationClass();
@@ -65,7 +65,7 @@
   };
 
   Animation.prototype.reset = function () {
-    this.$element.before(this.$element.clone(true));
+    this.$element.before(this.$element.clone());
 
     var clone = this.$element.prev();
     this.$element.remove();

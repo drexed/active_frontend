@@ -55,10 +55,11 @@
 
     this.setWidget();
 
-    this.$element.on('mousedown', function(e) {
-         e.preventDefault();
-         this.blur();
-         this.focus();
+    this.$element.on('mousedown', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        this.blur();
+        this.focus();
       }).on({
         'focus.bs.selectpicker': $.proxy(this.showWidget, this),
         'click.bs.selectpicker': $.proxy(this.showWidget, this),
@@ -293,17 +294,12 @@
   // SELECTPICKER DATA-API
   // =====================
 
-  $(document)
-    .on('ready.bs.selectpicker.data-api', function () {
-      $('[data-toggle="selectpicker"]').each(function () {
-        var $this = $(this);
-        if ($this.data('selectpicker')) return;
-        Plugin.call($this, $this.data());
-      });
-    }).on('focus.bs.selectpicker.data-api click.bs.selectpicker.data-api', '[data-toggle="selectpicker"]', function (e) {
+  $(document).on('ready.bs.selectpicker.data-api focus.bs.selectpicker.data-api click.bs.selectpicker.data-api', function (e) {
+    $('[data-toggle="selectpicker"]').each(function () {
       var $this = $(this);
       if ($this.data('selectpicker')) return;
       Plugin.call($this, $this.data());
     });
+  });
 
 }(jQuery);

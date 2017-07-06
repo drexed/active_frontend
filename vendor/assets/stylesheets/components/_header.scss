@@ -82,6 +82,7 @@
 
     &:last-child { margin-right: 0; }
 
+    &.btn-group + .btn-group { margin-left: 0; }
     &.header-nav-icon {
       font-size: text-size(l);
       margin-top: -3px;

@@ -1,0 +1,54 @@
+// Table of Contents
+// ==================================================
+// Subheader
+
+// Subheader
+// ==================================================
+.subheader {
+  background: color(white);
+  border-bottom: 1px solid color(dark-haze);
+  box-sizing: border-box;
+  height: 54px;
+  line-height: 1;
+  padding: 10px 0;
+
+  &.absolute,
+  &.fixed { z-index: 1040; }
+  &.absolute {
+    position: absolute;
+    width: inherit;
+  }
+  &.fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 76px;
+  }
+}
+.subheader-switch {
+  margin-top: 5px;
+  line-height: 25px;
+}
+.subheader-nav {
+  list-style: none;
+  margin-top: 9px;
+  padding: 0;
+
+  > li {
+    float: left;
+    margin-right: 15px;
+
+    &:last-child { margin-right: 0; }
+
+    &.btn-group + .btn-group { margin-left: 0; }
+
+    .indicator {
+      background: color(red);
+      border-radius: border-radius(xl);
+      height: 5px;
+      margin-left: 17px;
+      position: absolute;
+      width: 5px;
+    }
+  }
+}

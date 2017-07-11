@@ -8,12 +8,12 @@
   background: color(white);
   border-bottom: 1px solid color(dark-haze);
   box-sizing: border-box;
-  height: 54px;
+  height: 55px;
   line-height: 1;
   padding: 10px 0;
 
   &.absolute,
-  &.fixed { z-index: 1040; }
+  &.fixed { z-index: 1030; }
   &.absolute {
     position: absolute;
     width: inherit;

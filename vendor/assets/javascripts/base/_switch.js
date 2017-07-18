@@ -72,7 +72,8 @@
   Switch.prototype.on = function (silent) {
     if (this.$element.prop('disabled')) return false;
 
-    this.$switch.removeClass('off');
+    this.$switch.removeClass('off')
+                .removeClass(this.options.offClass);
     this.$switch.addClass(this.options.onClass);
     this.$element.prop('checked', true)
                  .attr('checked', 'checked');
@@ -86,7 +87,8 @@
     if (this.$element.prop('disabled')) return false;
 
     this.$switch.removeClass(this.options.onClass);
-    this.$switch.addClass('off');
+    this.$switch.addClass('off')
+                .addClass(this.options.offClass);
     this.$element.prop('checked', false)
                  .removeAttr('checked');
 

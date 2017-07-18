@@ -77,12 +77,10 @@
 .cohort-high,
 .cohort-hot,
 .cohort-extra-hot { color: color(white); }
-@each $name, $multiplier in (extra-low: 3.25, low: 3, medium-low: 2, medium: 1) {
+@each $name, $multiplier in (extra-low: 2.5, low: 2.25, medium-low: 1.75, medium: 1) {
   .cohort-#{$name} { background: lighten(color(primary), percentage((12.5 * $multiplier) / 100)); }
 }
-.cohort-medium-high {
-  background: color(primary);
-}
-@each $name, $multiplier in (high: 1, hot: 2, extra-hot: 3) {
+.cohort-medium-high { background: color(primary); }
+@each $name, $multiplier in (high: 1, hot: 1.75, extra-hot: 2.25) {
   .cohort-#{$name} { background: darken(color(primary), percentage((12.5 * $multiplier) / 100)); }
 }

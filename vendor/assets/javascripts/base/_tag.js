@@ -18,6 +18,7 @@
     this.$input = $('<input type="text" placeholder="' + this.placeholderText + '"/>').appendTo(this.$container);
     this.$element.before(this.$container);
     this.build(options);
+    this.moveLabel();
     this.isInit = false;
   };
 
@@ -34,13 +35,13 @@
     },
     onTagExists: function(item, $tag) {},
     tagClass: function(item) {
-      return 'label';
+      return 'label label-color-primary label-color-inverted';
     },
     addOnBlur: true,
     allowDuplicates: false,
     cancelConfirmKeysOnEmpty: false,
     confirmKeys: [13, 44],
-    delimiter: ',',
+    delimiter: ', ',
     delimiterRegex: null,
     focusClass: 'focus',
     freeInput: true,
@@ -291,6 +292,12 @@
     _self.$element.val(val, true);
 
     if (_self.options.triggerChange) _self.$element.trigger('change');
+  };
+
+  Tag.prototype.moveLabel = function () {
+    var label = this.$element.next('label');
+
+    if (label.length) label.insertAfter(this.$container);
   };
 
   Tag.prototype.build = function(options) {

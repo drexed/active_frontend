@@ -43,6 +43,19 @@
     &.label-outline { color: color($name); }
   }
 }
+@each $name, $color in map-keys($colors-inversions) {
+  .badge-color-#{$name},
+  .label-color-#{$name} {
+    &.badge-color-inverted,
+    &.label-color-inverted {
+      background: color-inverted($name);
+      border-color: color-inverted($name);
+      color: color($name);
+    }
+    &.badge-outline,
+    &.label-outline { border-color: color($name); }
+  }
+}
 
 // Sizes
 // ==================================================

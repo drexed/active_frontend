@@ -18,7 +18,7 @@
   Typeahead.DEFAULTS = {
     autoSelect: true,
     item: '<li><a href="#"></a></li>',
-    items: 8,
+    items: 5,
     menu: '<ul class="typeahead dropmenu caret"></ul>',
     minLength: 1,
     scrollHeight: 0,

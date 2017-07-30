@@ -1,11 +1,29 @@
 // Table of Contents
 // ==================================================
+// Functions
 // Animation
 // Color
 // Common
 // Font
 // Grid
 // Progress
+
+// Functions
+// ==================================================
+@function map-collect($maps...) {
+  $collection: ();
+
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+
+  @return $collection;
+}
+@function map-global-collect($global-collection, $global-name) {
+  $name: map-get($colors-global, $global-name);
+
+  @return map-get($global-collection, $name);
+}
 
 // Animation
 // ==================================================
@@ -33,6 +51,12 @@ $animation-durations: (
 
 // Color
 // ==================================================
+$colors-global: (
+  'primary': 'blue',
+  'secondary': 'green',
+  'tertiary': 'red',
+  'quaditiary': 'yellow'
+);
 $colors-brand: (
   'lime': rgba(164,217,111,1),
   'green': rgba(52,208,102,1),
@@ -47,6 +71,32 @@ $colors-brand: (
   'orange': rgba(252,174,70,1),
   'yellow': rgba(248,214,72,1)
 );
+$colors-brand-global: (
+  'primary': map-global-collect($colors-brand, 'primary'),
+  'secondary': map-global-collect($colors-brand, 'secondary'),
+  'tertiary': map-global-collect($colors-brand, 'tertiary'),
+  'quaditiary': map-global-collect($colors-brand, 'quaditiary')
+);
+$colors-inverted: (
+  'lime': rgba(242,250,235,1),
+  'green': rgba(227,249,234,1),
+  'teal': rgba(234,251,248,1),
+  'sky': rgba(235,249,255,1),
+  'blue': rgba(227,241,255,1),
+  'indigo': rgba(245,242,252,1),
+  'purple': rgba(249,236,252,1),
+  'pink': rgba(253,234,236,1),
+  'red': rgba(253,229,228,1),
+  'brown': rgba(250,241,232,1),
+  'orange': rgba(255,242,224,1),
+  'yellow': rgba(254,248,223,1)
+);
+$colors-inverted-global: (
+  'primary': map-global-collect($colors-inverted, 'primary'),
+  'secondary': map-global-collect($colors-inverted, 'secondary'),
+  'tertiary': map-global-collect($colors-inverted, 'tertiary'),
+  'quaditiary': map-global-collect($colors-inverted, 'quaditiary')
+);
 $colors-grayscale: (
   'transparent': rgba(0,0,0,0),
   'dark-black': rgba(37,49,62,1),
@@ -60,13 +110,8 @@ $colors-grayscale: (
   'light-haze': rgba(248,249,253,1),
   'white': rgba(255,255,255,1)
 );
-$colors-global: (
-  'primary': map-get($colors-brand, 'blue'),
-  'secondary': map-get($colors-brand, 'green'),
-  'tertiary': map-get($colors-brand, 'red'),
-  'quaditiary': map-get($colors-brand, 'yellow')
-);
-$colors: map-merge(map-merge($colors-brand, $colors-grayscale), $colors-global);
+$colors: map-collect($colors-brand, $colors-brand-global, $colors-grayscale);
+$colors-inversions: map-collect($colors-inverted, $colors-inverted-global);
 $colors-black-text: 'transparent', 'dark-haze', 'haze', 'light-haze', 'white';
 
 // Common

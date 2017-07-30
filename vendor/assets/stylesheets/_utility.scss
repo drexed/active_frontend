@@ -48,6 +48,9 @@
 @function color($color) {
   @return map-get($colors, '' + $color);
 }
+@function color-inverted($color) {
+  @return map-get($colors-inversions, '' + $color);
+}
 @function lightish-color($color) {
   @return lighten(color($color), 2.5%);
 }

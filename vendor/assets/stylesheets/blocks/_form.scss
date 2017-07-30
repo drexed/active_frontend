@@ -148,7 +148,8 @@ textarea {
 
   &.form-size-l {
     input,
-    textarea {
+    textarea,
+    .form-tags {
       font-size: text-size(l);
       padding: 14px 20px 15px;
     }
@@ -168,7 +169,8 @@ textarea {
   }
   &.form-size-m {
     input,
-    textarea {
+    textarea,
+    .form-tags {
       font-size: text-size(m);
       padding: 11px 20px 12px;
     }
@@ -188,7 +190,8 @@ textarea {
   }
   &.form-size-s {
     input,
-    textarea {
+    textarea,
+    .form-tags {
       font-size: text-size(s);
       margin-bottom: 5px;
       padding: 5px 10px;
@@ -454,7 +457,9 @@ textarea {
     display: inline-block;
     outline: none;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
+    min-width: auto;
+    vertical-align: top;
     width: auto;
   }
 }
@@ -477,7 +482,8 @@ textarea {
   position: relative;
   vertical-align: top;
 
-  > label {
+  > label,
+  > .form-tags + label {
     @include transition(all 0.3s ease-in-out);
     background: color(haze);
     border-radius: border-radius(s);
@@ -494,7 +500,8 @@ textarea {
 
   &.form-size-l,
   &.form-size-m {
-    > label {
+    > label,
+    > .form-tags + label {
       font-size: text-size(xs);
       left: 21px;
       margin-top: -9px;
@@ -502,7 +509,8 @@ textarea {
     }
   }
   &.form-size-s {
-    > label {
+    > label,
+    > .form-tags + label {
       font-size: text-size(xxs);
       left: 12px;
       margin-top: -6px;
@@ -510,10 +518,12 @@ textarea {
     }
   }
   &.dark {
-    > label { background: color(light-black); }
+    > label,
+    > .form-tags + label { background: color(light-black); }
   }
   &.light {
-    > label { background: color(dark-haze); }
+    > label,
+    > .form-tags + label { background: color(dark-haze); }
   }
 
   input,
@@ -529,6 +539,19 @@ textarea {
     &:focus + .dropup + label {
       opacity: 1;
       top: 0;
+    }
+  }
+
+  > .form-tags {
+    &.focus + label {
+       opacity: 1;
+       top: 0;
+     }
+
+    > .tag + input {
+      &::-webkit-input-placeholder { color: color(transparent); }
+      &::-moz-placeholder { color: color(transparent); }
+      &:-ms-input-placeholder { color: color(transparent); }
     }
   }
 }

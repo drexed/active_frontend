@@ -77,7 +77,7 @@ $colors-brand-global: (
   'tertiary': map-global-collect($colors-brand, 'tertiary'),
   'quaditiary': map-global-collect($colors-brand, 'quaditiary')
 );
-$colors-inverted: (
+$colors-brand-inverted: (
   'lime': rgba(242,250,235,1),
   'green': rgba(227,249,234,1),
   'teal': rgba(234,251,248,1),
@@ -91,11 +91,11 @@ $colors-inverted: (
   'orange': rgba(255,242,224,1),
   'yellow': rgba(254,248,223,1)
 );
-$colors-inverted-global: (
-  'primary': map-global-collect($colors-inverted, 'primary'),
-  'secondary': map-global-collect($colors-inverted, 'secondary'),
-  'tertiary': map-global-collect($colors-inverted, 'tertiary'),
-  'quaditiary': map-global-collect($colors-inverted, 'quaditiary')
+$colors-brand-inverted-global: (
+  'primary': map-global-collect($colors-brand-inverted, 'primary'),
+  'secondary': map-global-collect($colors-brand-inverted, 'secondary'),
+  'tertiary': map-global-collect($colors-brand-inverted, 'tertiary'),
+  'quaditiary': map-global-collect($colors-brand-inverted, 'quaditiary')
 );
 $colors-grayscale: (
   'transparent': rgba(0,0,0,0),
@@ -110,8 +110,21 @@ $colors-grayscale: (
   'light-haze': rgba(248,249,253,1),
   'white': rgba(255,255,255,1)
 );
+$colors-grayscale-inverted: (
+  'transparent': rgba(0,0,0,0),
+  'dark-black': rgba(231,236,241,1),
+  'black': rgba(242,245,247,1),
+  'light-black': rgba(241,244,246,1),
+  'dark-gray': rgba(236,240,242,1),
+  'gray': rgba(236,239,242,1),
+  'light-gray': rgba(236,239,242,1),
+  'dark-haze': rgba(237,242,252,1),
+  'haze': rgba(243,246,255,1),
+  'light-haze': rgba(250,251,255,1),
+  'white': rgba(255,255,255,1)
+);
 $colors: map-collect($colors-brand, $colors-brand-global, $colors-grayscale);
-$colors-inversions: map-collect($colors-inverted, $colors-inverted-global);
+$colors-inversions: map-collect($colors-brand-inverted, $colors-brand-inverted-global, $colors-grayscale-inverted);
 $colors-black-text: 'transparent', 'dark-haze', 'haze', 'light-haze', 'white';
 
 // Common

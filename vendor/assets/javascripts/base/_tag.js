@@ -41,7 +41,7 @@
     allowDuplicates: false,
     cancelConfirmKeysOnEmpty: false,
     confirmKeys: [13, 44],
-    delimiter: ', ',
+    delimiter: ',',
     delimiterRegex: null,
     focusClass: 'focus',
     freeInput: true,

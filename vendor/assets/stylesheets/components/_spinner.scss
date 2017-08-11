@@ -61,6 +61,11 @@
   top: 0;
   z-index: 2050;
 
+  &.relative {
+    display: block;
+    position: relative;
+  }
+
   .bar {
     @include animation(spinner-dash 1.4s ease-in-out infinite, spinner-colors (1.4s * 4) ease-in-out infinite);
     stroke-dasharray: 187;

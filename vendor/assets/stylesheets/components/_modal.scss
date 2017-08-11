@@ -14,7 +14,8 @@
 .modal {
   background: color(white);
   border-radius: border-radius(b);
-  box-shadow: 0 0 3px dark-color(dark-haze);
+  border-style: solid;
+  border-width: 1px;
   display: none;
   left: 0;
   margin: 0 auto;
@@ -113,7 +114,7 @@
 // Backdrop
 // ==================================================
 .modal-backdrop {
-  background: transparentize(color(white), 0.15);
+  background: transparentize(color(black), 0.15);
   bottom: 0;
   height: 100%;
   left: 0;
@@ -128,7 +129,7 @@
     &.in { opacity: 1; }
   }
 
-  &.dark { background: transparentize(color(black), 0.15); }
+  &.white { background: transparentize(color(white), 0.15); }
 }
 
 // Media Queries

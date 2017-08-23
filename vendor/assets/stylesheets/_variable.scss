@@ -2,6 +2,7 @@
 // ==================================================
 // Functions
 // Animation
+// Box shadow
 // Color
 // Common
 // Font
@@ -47,6 +48,16 @@ $animation-durations: (
   s: 0.75s,
   xs: 0.5s,
   xxs: 0.25s
+);
+
+// Box shadow
+// ==================================================
+$box-shadows: (
+  xxl: 14px,
+  xl: 10px,
+  l: 6px,
+  m: 4px,
+  b: 2px
 );
 
 // Color

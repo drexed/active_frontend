@@ -64,6 +64,7 @@
   &.relative {
     display: block;
     position: relative;
+    z-index: initial;
   }
 
   .bar {

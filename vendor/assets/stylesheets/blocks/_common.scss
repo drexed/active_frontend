@@ -110,7 +110,7 @@
 
 // Box shadow insets
 // ==================================================
-@each $name, $spread in $box-shadows {
+@each $name, $spread in $common-box-shadows {
   .box-shadow-inset-#{$name} { box-shadow: inset 0 0 $spread darker-color(dark-haze); }
   .box-shadow-inset-bottom-#{$name} { box-shadow: inset 0 1px $spread darker-color(dark-haze); }
   .box-shadow-inset-left-#{$name} { box-shadow: inset -1px 0 $spread darker-color(dark-haze); }
@@ -120,7 +120,7 @@
 
 // Box shadows
 // ==================================================
-@each $name, $spread in $box-shadows {
+@each $name, $spread in $common-box-shadows {
   .box-shadow-#{$name} { box-shadow: 0 0 $spread darker-color(dark-haze); }
   .box-shadow-bottom-#{$name} { box-shadow: 0 1px $spread darker-color(dark-haze); }
   .box-shadow-left-#{$name} { box-shadow: -1px 0 $spread darker-color(dark-haze); }

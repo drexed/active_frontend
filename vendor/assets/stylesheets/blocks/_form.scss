@@ -486,7 +486,7 @@ textarea {
   > .form-tags + label {
     @include transition(all 0.3s ease-in-out);
     background: color(haze);
-    border-radius: border-radius(s);
+    border-radius: border-radius(b);
     font-size: text-size(xxs);
     font-weight: text-weight(semibold);
     left: 16px;
@@ -610,7 +610,7 @@ textarea {
       border-radius: border-radius(b);
 
       label,
-      label::after { border-radius: border-radius(s); }
+      label::after { border-radius: border-radius(b); }
     }
     .form-radio {
       border-radius: border-radius(xl);

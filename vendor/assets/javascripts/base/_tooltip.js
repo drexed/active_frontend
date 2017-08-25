@@ -28,7 +28,7 @@
     selector: false,
     template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
     title: '',
-    trigger: 'hover focus',
+    trigger: 'hover',
     viewport: {
       selector: 'body',
       padding: 0

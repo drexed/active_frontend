@@ -7,9 +7,9 @@
   var Switch = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      baseClass: this.$element.data('base-class'),
-      offClass: this.$element.data('off-class'),
-      onClass: this.$element.data('on-class'),
+      baseClass: this.$element.data('base-class') || Switch.DEFAULTS.baseClass,
+      offClass: this.$element.data('off-class') || Switch.DEFAULTS.offClass,
+      onClass: this.$element.data('on-class') || Switch.DEFAULTS.onClass,
       text: {
         off: this.$element.data('text-off') || Switch.DEFAULTS.text.off,
         on: this.$element.data('text-on') || Switch.DEFAULTS.text.on

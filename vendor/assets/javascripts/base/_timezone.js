@@ -7,8 +7,8 @@
   var Timezone = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      default: this.$element.data('default'),
-      format: this.$element.data('format')
+      default: this.$element.data('default') || Timezone.DEFAULTS.default,
+      format: this.$element.data('format') || Timezone.DEFAULTS.format
     };
     this.options = $.extend({}, Timezone.DEFAULTS, this.settings, options);
 

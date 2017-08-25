@@ -8,9 +8,9 @@
     this.$element = $(element);
     this.$window = $(window);
     this.settings = {
-      addClass: this.$element.data('add-class'),
-      offset: this.$element.data('offset'),
-      removeClass: this.$element.data('remove-class')
+      addClass: this.$element.data('add-class') || Header.DEFAULTS.addClass,
+      offset: this.$element.data('offset') || Header.DEFAULTS.offset,
+      removeClass: this.$element.data('remove-class') || Header.DEFAULTS.removeClass
     };
     this.options = $.extend({}, Header.DEFAULTS, this.settings, options);
 

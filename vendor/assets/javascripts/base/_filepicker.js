@@ -8,17 +8,17 @@
   var Filepicker = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      badgeClass: this.$element.data('badge-class'),
-      buttonBefore: this.$element.data('button-before'),
-      buttonClass: this.$element.data('button-class'),
-      buttonText: this.$element.data('button-text'),
-      disabled: this.$element.data('disabled'),
-      iconClass: this.$element.data('icon-class'),
-      inputClass: this.$element.data('input-class'),
-      inputPlaceholder: this.$element.data('input-placeholder'),
-      showBadge: this.$element.data('show-badge'),
-      showIcon: this.$element.data('show-icon'),
-      showInput: this.$element.data('show-input')
+      badgeClass: this.$element.data('badge-class') || Filepicker.DEFAULTS.badgeClass,
+      buttonBefore: this.$element.data('button-before') || Filepicker.DEFAULTS.buttonBefore,
+      buttonClass: this.$element.data('button-class') || Filepicker.DEFAULTS.buttonClass,
+      buttonText: this.$element.data('button-text') || Filepicker.DEFAULTS.buttonText,
+      disabled: this.$element.data('disabled') || Filepicker.DEFAULTS.disabled,
+      iconClass: this.$element.data('icon-class') || Filepicker.DEFAULTS.iconClass,
+      inputClass: this.$element.data('input-class') || Filepicker.DEFAULTS.inputClass,
+      inputPlaceholder: this.$element.data('input-placeholder') || Filepicker.DEFAULTS.inputPlaceholder,
+      showBadge: this.$element.data('show-badge') || Filepicker.DEFAULTS.showBadge,
+      showIcon: this.$element.data('show-icon') || Filepicker.DEFAULTS.showIcon,
+      showInput: this.$element.data('show-input') || Filepicker.DEFAULTS.showInput
     };
     this.options = $.extend({}, Filepicker.DEFAULTS, this.settings, options);
 

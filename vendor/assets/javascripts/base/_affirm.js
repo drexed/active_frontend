@@ -11,12 +11,12 @@
         cancel: this.$element.data('btn-class-cancel') || Affirm.DEFAULTS.btnClass.cancel,
         confirm: this.$element.data('btn-class-confirm') || Affirm.DEFAULTS.btnClass.confirm
       },
-      format: this.$element.data('format'),
+      format: this.$element.data('format') || Affirm.DEFAULTS.text.format,
       text: {
         cancel: this.$element.data('text-cancel') || Affirm.DEFAULTS.text.cancel,
         confirm: this.$element.data('text-confirm') || Affirm.DEFAULTS.text.confirm
       },
-      title: this.$element.data('title')
+      title: this.$element.data('title') || Affirm.DEFAULTS.text.title
     };
     this.options = $.extend({}, Affirm.DEFAULTS, this.settings, options);
 

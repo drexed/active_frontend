@@ -8,11 +8,11 @@
     this.$element = $(element);
     this.$element.data('datepicker', this);
     this.settings = {
-      endDate: this.$element.data('end-date'),
-      forceParse: this.$element.data('force-parse'),
-      format: this.$element.data('format'),
-      multidate: this.$element.data('multidate'),
-      startDate: this.$element.data('start-date')
+      endDate: this.$element.data('end-date') || Datepicker.DEFAULTS.endDate,
+      forceParse: this.$element.data('force-parse') || Datepicker.DEFAULTS.forceParse,
+      format: this.$element.data('format') || Datepicker.DEFAULTS.format,
+      multidate: this.$element.data('multidate') || Datepicker.DEFAULTS.multidate,
+      startDate: this.$element.data('start-date') || Datepicker.DEFAULTS.startDate
     };
     this.options = $.extend({}, Datepicker.DEFAULTS, this.settings, options);
 

@@ -8,11 +8,11 @@
     this.$element = $(element);
 
     this.settings = {
-      delay: this.$element.data('delay'),
-      duration: this.$element.data('duration'),
-      effect: this.$element.data('effect'),
-      hide: this.$element.data('hide'),
-      infinite: this.$element.data('infinite')
+      delay: this.$element.data('delay') || Animation.DEFAULTS.delay,
+      duration: this.$element.data('duration') || Animation.DEFAULTS.duration,
+      effect: this.$element.data('effect') || Animation.DEFAULTS.effect,
+      hide: this.$element.data('hide') || Animation.DEFAULTS.hide,
+      infinite: this.$element.data('infinite') || Animation.DEFAULTS.infinite
     };
     this.options = $.extend({}, Animation.DEFAULTS, this.settings, options);
 

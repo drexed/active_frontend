@@ -8,11 +8,14 @@
     this.$element = $(element);
     this.$window = $(window);
     this.settings = {
-      direction: this.$element.data('direction'),
-      effect: this.$element.data('effect'),
-      target: this.$element.data('target')
+      autoDetect: this.$element.data('auto-detect') || Layout.DEFAULTS.autoDetect,
+      direction: this.$element.data('direction') || Layout.DEFAULTS.direction,
+      effect: this.$element.data('effect') || Layout.DEFAULTS.effect,
+      target: this.$element.data('target') || Layout.DEFAULTS.target
     };
     this.options = $.extend({}, Layout.DEFAULTS, this.settings, options);
+
+    this.$initialClass = $(this.options.target).attr('class');
 
     this.init();
     this.toggleViewport();
@@ -22,6 +25,7 @@
 
   Layout.VERSION = '1.0.0';
   Layout.DEFAULTS = {
+    autoDetect: true,
     direction: 'left',
     effect: 'slide',
     onToggleCallback: function (toggle) {},
@@ -57,18 +61,28 @@
 
   Layout.prototype.togglePosition = function (klass) {
     var target = $(this.options.target);
+    var isMobile = this.$window.width() < 767;
 
-    if (this.$window.width() < 767) {
-      target.addClass(klass);
+    if (this.options.autoDetect === true) {
+      if (isMobile) {
+        target.addClass(klass);
+      } else {
+        target.removeClass(klass);
+      }
     } else {
-      target.removeClass(klass);
+      if (isMobile) {
+        target.addClass(klass);
+      } else {
+        target.removeClass(klass)
+          .addClass(this.$initialClass);
+      }
     }
   };
 
   Layout.prototype.toggleViewport = function () {
     var _self = this;
 
-    this.togglePosition('hidden fixed');
+    if (this.options.autoDetect === true) this.togglePosition('hidden fixed');
 
     this.$window.on('resize.bs.layout orientationChange.bs.layout', function () {
       _self.togglePosition('hidden fixed');

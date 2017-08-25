@@ -7,8 +7,8 @@
   var List = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      input: this.$element.data('input'),
-      emptyText: this.$element.data('empty-text')
+      emptyText: this.$element.data('empty-text') || List.DEFAULTS.emptyText,
+      input: this.$element.data('input') || List.DEFAULTS.input
     };
     this.options = $.extend({}, List.DEFAULTS, this.settings, options);
 

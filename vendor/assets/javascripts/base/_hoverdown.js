@@ -7,8 +7,8 @@
   var Hoverdown = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      delay: this.$element.data('delay'),
-      timeout: this.$element.data('timeout')
+      delay: this.$element.data('delay') || Hoverdown.DEFAULTS.delay,
+      timeout: this.$element.data('timeout') || Hoverdown.DEFAULTS.timeout
     };
     this.options = $.extend({}, Hoverdown.DEFAULTS, this.settings, options);
 

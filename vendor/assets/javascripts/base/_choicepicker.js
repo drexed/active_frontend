@@ -7,8 +7,8 @@
   var Choicepicker = function (element, options) {
     this.$element = $(element);
     this.settings = {
-      choices: this.$element.data('choices'),
-      fuzzySearch: this.$element.data('fuzzySearch'),
+      choices: this.$element.data('choices') || Choicepicker.DEFAULTS.text.choices,
+      fuzzySearch: this.$element.data('fuzzy-search') || Choicepicker.DEFAULTS.text.fuzzySearch,
       text: {
         all: this.$element.data('text-all') || Choicepicker.DEFAULTS.text.all,
         choiceless: this.$element.data('text-choiceless') || Choicepicker.DEFAULTS.text.choiceless,
@@ -16,7 +16,7 @@
         placeholder: this.$element.data('text-placeholder') || Choicepicker.DEFAULTS.text.placeholder,
         selectAll: this.$element.data('text-select-all') || Choicepicker.DEFAULTS.text.selectAll
       },
-      type: this.$element.data('type')
+      type: this.$element.data('type') || Choicepicker.DEFAULTS.text.type
     };
     this.options = $.extend({}, Choicepicker.DEFAULTS, this.settings, options);
 

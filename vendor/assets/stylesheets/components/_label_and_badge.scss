@@ -17,7 +17,7 @@
   font-weight: text-weight(semibold);
   line-height: 1;
   overflow: hidden;
-  padding: 6px 10px 7px;
+  padding: 6px 10px;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -63,12 +63,12 @@
 .badge-size-m { min-width: 16px; }
 .badge-size-l { padding: 15px; }
 .badge-size-m { padding: 10px; }
-.label-size-l { padding: 13px 20px; }
-.label-size-m { padding: 10px 15px; }
+.label-size-l { padding: 12px 20px; }
+.label-size-m { padding: 8px 15px; }
 .badge-size-s,
 .label-size-s {
   font-size: text-size(xs);
-  padding: 4px 8px 5px;
+  padding: 4px 8px;
 }
 .badge-size-s {
   min-width: 0;

@@ -55,7 +55,7 @@ textarea,
   display: block;
   line-height: 1;
   margin-bottom: 10px;
-  padding: 9px 15px;
+  padding: 9px 15px 10px;
   width: 100%;
   vertical-align: middle;
 }
@@ -95,9 +95,9 @@ textarea,
   }
 }
 input {
-  &::-webkit-input-placeholder { line-height: 24px; }
-  &::-moz-placeholder { line-height: 24px; }
-  &:-ms-input-placeholder { line-height: 24px; }
+  &::-webkit-input-placeholder { line-height: 22px; }
+  &::-moz-placeholder { line-height: 22px; }
+  &:-ms-input-placeholder { line-height: 22px; }
 }
 input,
 textarea {
@@ -124,7 +124,7 @@ label {
   margin-bottom: 5px;
 }
 select {
-  padding: 13px 15px;
+  padding: 12px 15px;
 
   [multiple],
   [size] { height: auto; }
@@ -154,9 +154,9 @@ textarea {
       padding: 14px 20px 15px;
     }
     input {
-      &::-webkit-input-placeholder { line-height: 30px; }
-      &::-moz-placeholder { line-height: 30px; }
-      &:-ms-input-placeholder { line-height: 30px; }
+      &::-webkit-input-placeholder { line-height: 28px; }
+      &::-moz-placeholder { line-height: 28px; }
+      &:-ms-input-placeholder { line-height: 28px; }
     }
     textarea { height: 197px; }
 
@@ -172,12 +172,12 @@ textarea {
     textarea,
     .form-tags {
       font-size: text-size(m);
-      padding: 11px 20px 12px;
+      padding: 12px 20px;
     }
     input {
-      &::-webkit-input-placeholder { line-height: 28px; }
-      &::-moz-placeholder { line-height: 28px; }
-      &:-ms-input-placeholder { line-height: 28px; }
+      &::-webkit-input-placeholder { line-height: 25px; }
+      &::-moz-placeholder { line-height: 25px; }
+      &:-ms-input-placeholder { line-height: 25px; }
     }
     textarea { height: 173px; }
 
@@ -194,7 +194,7 @@ textarea {
     .form-tags {
       font-size: text-size(s);
       margin-bottom: 5px;
-      padding: 5px 10px;
+      padding: 6px 10px 5px;
     }
     input {
       &::-webkit-input-placeholder { line-height: 20px; }
@@ -266,7 +266,7 @@ textarea {
   &.form-size-l {
     select {
       font-size: text-size(l);
-      padding: 19px 20px 20px;
+      padding: 18px 20px;
     }
 
     &::after {
@@ -278,7 +278,7 @@ textarea {
   &.form-size-m {
     select {
       font-size: text-size(m);
-      padding: 16px 20px 17px;
+      padding: 15px 20px;
     }
 
     &::after {
@@ -291,7 +291,7 @@ textarea {
     select {
       font-size: text-size(s);
       margin-bottom: 5px;
-      padding: 8px 10px 9px;
+      padding: 8px 10px;
     }
 
     &::after {
@@ -596,7 +596,7 @@ textarea {
     &.with-addon-btn {
       border: 0;
       min-width: auto;
-      padding: 0;
+      padding: 0 !important;
 
       .btn {
         border-left-width: inherit;
@@ -656,7 +656,7 @@ textarea {
     .form-addon {
       font-size: text-size(s);
       min-width: 30px;
-      padding: 0 9px;
+      padding: 0 8px;
 
       .color-picker {
         .dropmenu { margin-left: -7px; }
@@ -667,7 +667,10 @@ textarea {
       }
     }
 
-    i { font-size: text-size(s); }
+    i {
+      font-size: text-size(s);
+      margin-top: 2px;
+    }
     button,
     input,
     select { margin-bottom: 0; }

@@ -93,6 +93,10 @@
     height: calc(100% - 136px);
     max-height: none;
   }
+  .modal-footer {
+    > .btn,
+    > .btn-group { margin-top: -2px; }
+  }
 
   &.left {
     left: 0;

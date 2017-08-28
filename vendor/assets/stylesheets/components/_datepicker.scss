@@ -28,7 +28,10 @@
       }
     }
     td {
-      &.today { color: color(primary); }
+      &.today {
+        background: color-inverted(primary);
+        color: color(primary);
+      }
       &.day,
       &.today {
         &:hover,

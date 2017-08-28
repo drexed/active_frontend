@@ -149,8 +149,8 @@
   padding: 8px 15px;
 }
 .btn-icon {
-  min-width: 46px;
-  padding: 13px 0;
+  min-width: 44px;
+  padding: 12px 0;
 
   &.btn-size-l,
   &.btn-size-m { font-size: text-size(l); }
@@ -163,8 +163,8 @@
     padding: 14px 0;
   }
   &.btn-size-s {
-    min-width: 34px;
-    padding: 9px 0 8px;
+    min-width: 32px;
+    padding: 7px 0;
   }
   &.btn-link { padding: 0; }
 }

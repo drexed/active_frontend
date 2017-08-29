@@ -653,6 +653,10 @@ textarea {
     }
   }
   &.form-size-s {
+    .btn-size-s {
+      min-width: 32px;
+      padding: 7px 0;
+    }
     .form-addon {
       font-size: text-size(s);
       min-width: 30px;

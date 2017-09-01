@@ -18,6 +18,7 @@ samp {
   font-family: text-family(monospace);
   font-size: text-size(s);
   line-height: text-line-height(s);
+  white-space: nowrap;
 }
 code,
 kbd { padding: 3px 7px 5px; }

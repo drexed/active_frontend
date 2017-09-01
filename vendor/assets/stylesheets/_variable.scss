@@ -167,6 +167,16 @@ $common-visibility-types: collapse, hidden, visible;
 
 // Font
 // ==================================================
+$font-available: (
+  blender-pro: 'Blender Pro',
+  branding: 'Branding',
+  clear-sans: 'Clear Sans',
+  fakt-pro: 'Fakt Pro',
+  fakt-soft-pro: 'Fakt Soft Pro',
+  gibson: 'Gibson',
+  source-sans-pro: 'Source Sans Pro',
+  ubuntu-sans: 'Ubuntu Sans'
+);
 $font-families: (
   display: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
   monospace: (Courier, Consolas, Menlo, Monaco, monospace),

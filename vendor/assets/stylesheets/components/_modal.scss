@@ -60,8 +60,7 @@
 .modal-footer {
   border-top-style: solid;
   border-top-width: 1px;
-  padding-bottom: 15px;
-  padding: 15px 20px;
+  padding: 16px 20px 15px;
 }
 
 // Styles
@@ -95,7 +94,7 @@
   }
   .modal-footer {
     > .btn,
-    > .btn-group { margin-top: -2px; }
+    > .btn-group { margin-top: -4px; }
   }
 
   &.left {
@@ -140,5 +139,5 @@
 // ==================================================
 @media only screen and (max-width: 767px) {
   .modal { width: calc(100% - 20px); }
-  .modal-body { max-height: 180px; }
+  .modal-body { max-height: 260px; }
 }

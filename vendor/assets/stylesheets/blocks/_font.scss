@@ -5,69 +5,16 @@
 // Font-face
 // ==================================================
 @each $type, $families in $font-families {
-  @if index(text-family($type), 'Branding') {
-    @each $name, $weight in $font-weights {
-      @font-face {
-        font-display: swap;
-        font-family: 'Branding';
-        font-style: normal;
-        font-weight: $weight;
-        src: url(font-path('branding/branding-#{$name}.woff')) format('woff');
-      }
-    }
-  }
-  @if index(text-family($type), 'Blender Pro') {
-    @each $name, $weight in $font-weights {
-      @font-face {
-        font-display: swap;
-        font-family: 'Blender Pro';
-        font-style: normal;
-        font-weight: $weight;
-        src: url(font-path('blender-pro/blender-pro-#{$name}.woff')) format('woff');
-      }
-    }
-  }
-  @if index(text-family($type), 'Clear Sans') {
-    @each $name, $weight in $font-weights {
-      @font-face {
-        font-display: swap;
-        font-family: 'Clear Sans';
-        font-style: normal;
-        font-weight: $weight;
-        src: url(font-path('clear-sans/clear-sans-#{$name}.woff')) format('woff');
-      }
-    }
-  }
-  @if index(text-family($type), 'Fakt Pro') {
-    @each $name, $weight in $font-weights {
-      @font-face {
-        font-display: swap;
-        font-family: 'Fakt Pro';
-        font-style: normal;
-        font-weight: $weight;
-        src: url(font-path('fakt-pro/fakt-pro-#{$name}.woff')) format('woff');
-      }
-    }
-  }
-  @if index(text-family($type), 'Fakt Soft Pro') {
-    @each $name, $weight in $font-weights {
-      @font-face {
-        font-display: swap;
-        font-family: 'Fakt Soft Pro';
-        font-style: normal;
-        font-weight: $weight;
-        src: url(font-path('fakt-soft-pro/fakt-soft-pro-#{$name}.woff')) format('woff');
-      }
-    }
-  }
-  @if index(text-family($type), 'Source Sans Pro') {
-    @each $name, $weight in $font-weights {
-      @font-face {
-        font-display: swap;
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: $weight;
-        src: url(font-path('source-sans-pro/source-sans-pro-#{$name}.woff')) format('woff');
+  @each $file-name, $family in $font-available {
+    @if index(text-family($type), $family) {
+      @each $name, $weight in $font-weights {
+        @font-face {
+          font-display: swap;
+          font-family: $family;
+          font-style: normal;
+          font-weight: $weight;
+          src: url(font-path('#{$file-name}/#{$file-name}-#{$name}.woff')) format('woff');
+        }
       }
     }
   }

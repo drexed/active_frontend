@@ -60,7 +60,7 @@
 .modal-footer {
   border-top-style: solid;
   border-top-width: 1px;
-  padding: 16px 20px 15px;
+  padding: 15px 20px;
 }
 
 // Styles
@@ -94,7 +94,7 @@
   }
   .modal-footer {
     > .btn,
-    > .btn-group { margin-top: -4px; }
+    > .btn-group { margin-top: -2px; }
   }
 
   &.left {

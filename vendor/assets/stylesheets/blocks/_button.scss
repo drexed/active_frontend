@@ -25,7 +25,7 @@
   font-size: text-size(b);
   font-weight: text-weight(semibold);
   line-height: 1;
-  padding: 12px 20px;
+  padding: 13px 20px;
   text-align: center;
   touch-action: manipulation;
   vertical-align: middle;
@@ -142,15 +142,15 @@
 // ==================================================
 .btn-size-l,
 .btn-size-m { font-size: text-size(m); }
-.btn-size-l { padding: 19px 30px; }
-.btn-size-m { padding: 15px 25px; }
+.btn-size-l { padding: 19px 30px 20px; }
+.btn-size-m { padding: 15px 25px 16px; }
 .btn-size-s {
   font-size: text-size(s);
-  padding: 8px 15px;
+  padding: 8px 15px 9px;
 }
 .btn-icon {
-  min-width: 44px;
-  padding: 12px 0;
+  min-width: 46px;
+  padding: 13px 0;
 
   &.btn-size-l,
   &.btn-size-m { font-size: text-size(l); }
@@ -164,7 +164,7 @@
   }
   &.btn-size-s {
     min-width: 34px;
-    padding: 9px 0 7px;
+    padding: 9px 0 8px;
   }
   &.btn-link { padding: 0; }
 }

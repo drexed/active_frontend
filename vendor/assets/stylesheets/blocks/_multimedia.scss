@@ -14,18 +14,17 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-
 img,
 svg:not(:root) {
-  height: auto;
   max-width: 100%;
   vertical-align: middle;
-  width: auto;
 }
 img {
   border: 0;
   border-radius: border-radius(b);
   display: block;
+  height: auto;
+  width: auto;
 }
 svg:not(:root) { overflow: hidden; }
 

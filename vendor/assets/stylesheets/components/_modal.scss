@@ -36,7 +36,7 @@
     @include transition((opacity 0.2s linear, top 0.4s ease-in-out));
     top: -100%;
 
-    &.in { top: 15%; }
+    &.in { top: 12.5%; }
   }
 }
 .modal-header {
@@ -139,5 +139,9 @@
 // ==================================================
 @media only screen and (max-width: 767px) {
   .modal { width: calc(100% - 20px); }
-  .modal-body { max-height: 260px; }
+  .modal-body { max-height: 280px; }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .modal { width: calc(100% - 120px); }
+  .modal-body { max-height: 140px; }
 }

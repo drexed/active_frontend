@@ -40,7 +40,7 @@
     addOnBlur: true,
     allowDuplicates: false,
     cancelConfirmKeysOnEmpty: false,
-    confirmKeys: [13, 44],
+    confirmKeys: [13, 44, 188],
     delimiter: ',',
     delimiterRegex: null,
     focusClass: 'focus',
@@ -303,7 +303,19 @@
   Tag.prototype.build = function(options) {
     var _self = this;
 
-    _self.options = $.extend({}, Tag.DEFAULTS, options);
+    _self.settings = {
+      addOnBlur: _self.$element.data('add-on-blur') || Tag.DEFAULTS.addOnBlur,
+      allowDuplicates: _self.$element.data('allow-duplicates') || Tag.DEFAULTS.allowDuplicates,
+      cancelConfirmKeysOnEmpty: _self.$element.data('cancel-confirm-keys-on-empty') || Tag.DEFAULTS.cancelConfirmKeysOnEmpty,
+      delimiter: _self.$element.data('delimiter') || Tag.DEFAULTS.delimiter,
+      freeInput: _self.$element.data('free-input') || Tag.DEFAULTS.freeInput,
+      maxChars: _self.$element.data('max-chars') || Tag.DEFAULTS.maxChars,
+      maxTags: _self.$element.data('max-tags') || Tag.DEFAULTS.maxTags,
+      triggerChange: _self.$element.data('trigger-change') || Tag.DEFAULTS.triggerChange,
+      trimValue: _self.$element.data('trim-value') || Tag.DEFAULTS.trimValue
+    };
+
+    _self.options = $.extend({}, Tag.DEFAULTS, _self.settings, options);
 
     if (_self.objectItems) _self.options.freeInput = false;
 

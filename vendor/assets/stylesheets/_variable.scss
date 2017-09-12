@@ -58,18 +58,18 @@ $colors-global: (
   'quaditiary': 'yellow'
 );
 $colors-brand: (
-  'lime': rgba(164,217,111,1),
-  'green': rgba(52,208,102,1),
-  'teal': rgba(66,223,193,1),
-  'sky': rgba(19,190,255,1),
-  'blue': rgba(50,156,255,1),
-  'indigo': rgba(146,112,226,1),
-  'purple': rgba(194,111,212,1),
-  'pink': rgba(240,129,143,1),
-  'red': rgba(241,91,83,1),
-  'brown': rgba(222,163,103,1),
-  'orange': rgba(252,174,70,1),
-  'yellow': rgba(248,214,72,1)
+  'lime': rgba(151,212,91,1),
+  'green': rgba(52,208,76,1),
+  'teal': rgba(44,219,186,1),
+  'sky': rgba(31,182,255,1),
+  'blue': rgba(25,144,255,1),
+  'indigo': rgba(130,91,222,1),
+  'purple': rgba(186,91,206,1),
+  'pink': rgba(237,106,123,1),
+  'red': rgba(239,69,59,1),
+  'brown': rgba(217,139,82,1),
+  'orange': rgba(252,163,45,1),
+  'yellow': rgba(247,208,47,1)
 );
 $colors-brand-global: (
   'primary': map-global-collect($colors-brand, 'primary'),

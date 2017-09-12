@@ -17,8 +17,8 @@
   Colorpicker.VERSION = '1.0.0';
   Colorpicker.DEFAULTS = {
     colors: [
-      '#A4D96F', '#34D066', '#42DFC1', '#329CFF', '#9270E2',
-      '#C26FD4', '#F0818F', '#F15B53', '#FCAE46', '#F8D648',
+      '#97D45B', '#34D059', '#2CDBBA', '#1990ff', '#825BDE',
+      '#BA5BCE', '#ED6A7B', '#EF453B', '#FCA32D', '#F7D02F',
       '#2C3A49', '#7890A2', '#EEF1FA', '#FFFFFF'
     ],
     item: '<li><button type="button"></button></li>',

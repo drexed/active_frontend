@@ -44,7 +44,7 @@
       pPrecision: 1,
       labelLineColor: '#E5EAF4',
       labelFontColor: '#2C3A49',
-      sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#329CFF', '#3298F7', '#57ABF9', '#7CDDFA'],
+      sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#1990ff', '#3298F7', '#57ABF9', '#7CDDFA'],
       pSectionColor: '#F8F9FD',
       font: 'Verdana',
       maxFontSize: 12,

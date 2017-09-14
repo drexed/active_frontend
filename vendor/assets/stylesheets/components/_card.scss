@@ -35,6 +35,12 @@
   border-bottom-width: 1px;
   font-weight: text-weight(semibold);
 }
+.card-body {
+  + .card-body {
+    border-top-style: solid;
+    border-top-width: 1px;
+  }
+}
 .card-footer {
   border-top-style: solid;
   border-top-width: 1px;

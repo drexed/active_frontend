@@ -58,18 +58,18 @@ $colors-global: (
   'quaditiary': 'yellow'
 );
 $colors-brand: (
-  'lime': rgba(151,212,91,1),
-  'green': rgba(52,208,76,1),
-  'teal': rgba(44,219,186,1),
-  'sky': rgba(31,182,255,1),
-  'blue': rgba(25,144,255,1),
-  'indigo': rgba(130,91,222,1),
-  'purple': rgba(186,91,206,1),
-  'pink': rgba(237,106,123,1),
-  'red': rgba(239,69,59,1),
-  'brown': rgba(217,139,82,1),
-  'orange': rgba(252,163,45,1),
-  'yellow': rgba(247,208,47,1)
+  'lime': rgba(164,217,111,1),
+  'green': rgba(52,208,102,1),
+  'teal': rgba(66,223,193,1),
+  'sky': rgba(19,190,255,1),
+  'blue': rgba(50,156,255,1),
+  'indigo': rgba(146,112,226,1),
+  'purple': rgba(194,111,212,1),
+  'pink': rgba(240,129,143,1),
+  'red': rgba(241,91,83,1),
+  'brown': rgba(211,143,95,1),
+  'orange': rgba(252,174,70,1),
+  'yellow': rgba(248,214,72,1)
 );
 $colors-brand-global: (
   'primary': map-global-collect($colors-brand, 'primary'),
@@ -87,7 +87,7 @@ $colors-brand-inverted: (
   'purple': rgba(249,236,252,1),
   'pink': rgba(253,234,236,1),
   'red': rgba(253,229,228,1),
-  'brown': rgba(250,241,232,1),
+  'brown': rgba(249,240,233,1),
   'orange': rgba(255,242,224,1),
   'yellow': rgba(254,248,223,1)
 );
@@ -99,12 +99,12 @@ $colors-brand-inverted-global: (
 );
 $colors-grayscale: (
   'transparent': rgba(0,0,0,0),
-  'dark-black': rgba(37,49,62,1),
-  'black': rgba(44,58,73,1),
-  'light-black': rgba(51,67,83,1),
-  'dark-gray': rgba(99,125,144,1),
-  'gray': rgba(120,144,162,1),
-  'light-gray': rgba(143,163,178,1),
+  'dark-black': rgba(50,59,73,1),
+  'black': rgba(60,71,88,1),
+  'light-black': rgba(70,83,103,1),
+  'dark-gray': rgba(130,149,167,1),
+  'gray': rgba(145,162,178,1),
+  'light-gray': rgba(160,174,188,1),
   'dark-haze': rgba(229,234,244,1),
   'haze': rgba(238,241,250,1),
   'light-haze': rgba(248,249,253,1),
@@ -112,12 +112,12 @@ $colors-grayscale: (
 );
 $colors-grayscale-inverted: (
   'transparent': rgba(0,0,0,0),
-  'dark-black': rgba(231,236,241,1),
-  'black': rgba(242,245,247,1),
-  'light-black': rgba(241,244,246,1),
-  'dark-gray': rgba(236,240,242,1),
-  'gray': rgba(236,239,242,1),
-  'light-gray': rgba(236,239,242,1),
+  'dark-black': rgba(223,227,233,1),
+  'black': rgba(226,230,235,1),
+  'light-black': rgba(230,233,238,1),
+  'dark-gray': rgba(222,227,232,1),
+  'gray': rgba(226,230,235,1),
+  'light-gray': rgba(229,233,237,1),
   'dark-haze': rgba(237,242,252,1),
   'haze': rgba(243,246,255,1),
   'light-haze': rgba(250,251,255,1),
@@ -140,8 +140,8 @@ $common-border-radiuses: (
   xl: 999px,
   l: 10px,
   m: 6px,
-  b: 2px,
-  s: 1px,
+  b: 3px,
+  s: 2px,
   n: 0
 );
 $common-box-shadows: (

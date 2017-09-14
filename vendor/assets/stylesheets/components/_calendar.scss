@@ -21,6 +21,18 @@
     vertical-align: top;
   }
   th.calendar-widget-header { padding: 6px 0 5px; }
+  thead {
+    tr:first-child {
+      th:first-child { border-top-left-radius: border-radius(b); }
+      th:last-child { border-top-right-radius: border-radius(b); }
+    }
+  }
+  tbody {
+    tr:last-child {
+      td:first-child { border-bottom-left-radius: border-radius(b); }
+      td:last-child { border-bottom-right-radius: border-radius(b); }
+    }
+  }
 
   .ui-resizable-handle { display: none; }
 }

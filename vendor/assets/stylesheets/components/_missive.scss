@@ -10,6 +10,7 @@
 // ==================================================
 .missive {
   border: 1px solid color(dark-haze);
+  border-radius: border-radius(b);
 
   &::before,
   &::after {
@@ -29,24 +30,26 @@
   padding: 20px;
   white-space: normal;
 }
+.missive-content {
+  width: 100%;
+
+  p:last-child { margin-bottom: 0; }
+}
 .missive-icon {
   font-size: text-size(xxl);
   padding-top: 30px;
   text-align: center;
   width: 80px;
-}
-.missive-content {
-  padding-left: 0;
-  width: calc(100% - 80px);
 
-  p:last-child { margin-bottom: 0; }
+  + .missive-content {
+    padding-left: 0;
+    width: calc(100% - 80px);
+  }
 }
 
 // Styles
 // ==================================================
-.missive-banner {
-  border-left-width: 4px;
-}
+.missive-banner { border-left-width: 4px; }
 
 // Colors
 // ==================================================

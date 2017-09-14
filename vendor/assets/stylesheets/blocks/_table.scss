@@ -134,10 +134,19 @@ thead {
 }
 .table-encase,
 .table-border {
+  border-radius: border-radius(b);
   border-style: solid;
   border-width: 1px;
-  border-top-width: 0;
-  border-left-width: 0;
+
+  thead {
+    tr:first-child {
+      th { border-top-width: 0; }
+    }
+  }
+  tr {
+    td:first-child,
+    th:first-child { border-left-width: 0; }
+  }
 
   &.dark { border-color: color(dark-black); }
 }
@@ -154,17 +163,6 @@ thead {
   tbody + tfoot {
     tr:first-child {
       td { border-top-width: 2px; }
-    }
-  }
-}
-.table-encase {
-  tr {
-    td,
-    th {
-      &:first-child {
-        border-left-style: solid;
-        border-left-width: 1px;
-      }
     }
   }
 }
@@ -199,21 +197,29 @@ thead {
   .table-responsive {
     @include overflow-scrolling(touch);
     background: color(transparent);
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid color(dark-haze);
+    border-radius: border-radius(b);
     max-height: 300px;
     overflow: scroll;
 
     td,
     th { white-space: nowrap; }
+    tr {
+      td:first-child,
+      th:first-child { border-left-width: 0; }
+    }
+    tfoot {
+      tr:last-child {
+        td:last-child { border-bottom-width: 0; }
+      }
+    }
 
     .table-line,
     .table-encase,
     .table-border {
       caption {
-        border-style: solid;
-        border-width: 1px;
-        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-width: 3px;
         padding: 10px 10px 8px;
       }
     }
@@ -223,6 +229,9 @@ thead {
       border-color: inherit;
     }
     .table-encase,
-    .table-border { margin: -1px 0 0 -1px; }
+    .table-border {
+      border-radius: 0;
+      border-width: 0;
+    }
   }
 }

@@ -5,27 +5,37 @@
 // Card
 // ==================================================
 .card {
+  border: 1px solid;
   border-color: color(dark-haze);
+  border-radius: border-radius(b);
 
-  > img { border-radius: 0; }
+  > img {
+    border-radius: 0;
+    margin-left: -1px;
+    max-width: calc(100% + 3px);
+    width: calc(100% + 3px);
+  }
+
+  .table-encase,
+  .table-border {
+    border-radius: 0;
+    border-width: 0;
+  }
 }
 .card-header,
 .card-body,
-.card-footer {
-  border: 1px solid;
-  border-color: inherit;
-  padding: 10px 15px;
-}
+.card-footer { padding: 10px 15px; }
 .card-header,
 .card-footer {
   padding-bottom: 9px;
   padding-top: 9px;
 }
 .card-header {
-  border-bottom: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   font-weight: text-weight(semibold);
 }
-.card-body {
-  + .card-body { border-top: 0; }
+.card-footer {
+  border-top-style: solid;
+  border-top-width: 1px;
 }
-.card-footer { border-top: 0; }

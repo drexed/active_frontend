@@ -51,5 +51,8 @@
 
 // Styles
 // ==================================================
-.alert-border { border-width: 1px; }
+.alert-border {
+  border-radius: border-radius(b);
+  border-width: 1px;
+}
 .alert-outline { background: color(transparent); }

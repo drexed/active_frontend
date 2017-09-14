@@ -1,16 +1,21 @@
 // Table of Contents
 // ==================================================
 // Cohort
+// Media Queries
 
 // scss-lint:disable ImportantRule
 // scss-lint:disable NestingDepth
 
 // Cohort
 // ==================================================
+.cohort-container {
+  border: 1px solid color(dark-haze);
+  border-radius: border-radius(b);
+}
 .cohort-title {
   background: color(white);
-  border: 1px solid color(dark-haze);
-  border-bottom: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
   font-size: text-size(b);
   font-weight: text-weight(semibold);
   padding: 10px;
@@ -18,7 +23,6 @@
 }
 .cohort-table {
   background: light-color(light-haze);
-  border: 1px solid color(dark-haze);
   border-spacing: 0;
   border-collapse: collapse;
   font-size: text-size(b);
@@ -26,23 +30,31 @@
   max-width: 100%;
   width: 100%;
 
-  tr:first-child {
-    th {
-      border-bottom-width: 3px;
+  tr {
+    td:last-child,
+    th:last-child { border-right-width: 0; }
+    &:first-child {
+      th {
+        border-bottom-width: 3px;
 
-      &:last-child { border-right: 0; }
+        &:last-child { border-right: 0; }
+      }
+    }
+    &:last-child {
+      td,
+      th { border-bottom-width: 0; }
     }
   }
-
   td,
   th {
     text-align: center;
     padding: 8px;
   }
-
   th {
-    border-bottom: 1px solid color(dark-haze);
-    border-right: 1px solid color(dark-haze);
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
     font-weight: text-weight(semibold);
   }
 }
@@ -54,8 +66,10 @@
 }
 .cohort-label,
 .cohort-total {
-  border-bottom: 1px solid color(dark-haze);
-  border-right: 1px solid color(dark-haze);
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
   font-weight: text-weight(semibold);
   width: 80px;
 }
@@ -66,8 +80,10 @@
 }
 .cohort-empty {
   background: color(white);
-  border-bottom: 1px solid color(dark-haze);
-  border-right: 1px solid color(dark-haze);
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
 }
 .cohort-extra-low,
 .cohort-low,
@@ -83,4 +99,15 @@
 .cohort-medium-high { background: color(primary); }
 @each $name, $multiplier in (high: 1, hot: 1.75, extra-hot: 2.25) {
   .cohort-#{$name} { background: darken(color(primary), percentage((12.5 * $multiplier) / 100)); }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: 960px) {
+  .cohort-container {
+    .table-responsive {
+      border-radius: 0;
+      border-width: 0;
+    }
+  }
 }

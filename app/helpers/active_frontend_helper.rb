@@ -21,9 +21,9 @@ module ActiveFrontendHelper
   def colors_grayscale(opacity = 1)
     {
       transparent: { rgba: 'rgba(0,0,0,0)', hex: '#FFFFFF' },
-      dark_black: { rgba: "rgba(50,59,73,#{opacity})", hex: '#323B49' },
-      black: { rgba: "rgba(60,71,88,#{opacity})", hex: '#3C4758' },
-      light_black: { rgba: "rgba(70,83,103,#{opacity})", hex: '#465367' },
+      dark_black: { rgba: "rgba(37,49,62,#{opacity})", hex: '#25313E' },
+      black: { rgba: "rgba(44,58,73,#{opacity})", hex: '#2C3A49' },
+      light_black: { rgba: "rgba(51,67,83,#{opacity})", hex: '#334353' },
       dark_gray: { rgba: "rgba(130,149,167,#{opacity})", hex: '#8295A7' },
       gray: { rgba: "rgba(145,162,178,#{opacity})", hex: '#91A2B2' },
       light_gray: { rgba: "rgba(160,174,188,#{opacity})", hex: '#A0AEBC' },

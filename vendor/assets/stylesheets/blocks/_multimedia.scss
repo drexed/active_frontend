@@ -24,7 +24,10 @@ img {
   width: auto;
   vertical-align: middle;
 }
-svg:not(:root) { overflow: hidden; }
+svg:not(:root) {
+  fill: currentColor;
+  overflow: hidden;
+}
 
 // Groups
 // ==================================================

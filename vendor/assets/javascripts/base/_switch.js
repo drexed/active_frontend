@@ -29,7 +29,7 @@
     onOnCallback: function () {},
     text: {
       off: '<i class="icon-cross"></i>',
-      on: '<i class="icon-checkmark"></i>'
+      on: '<i class="icon-check"></i>'
     }
   };
 

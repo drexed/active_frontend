@@ -253,14 +253,24 @@ textarea {
   width: 100%;
 
   &::after {
-    content: '\54';
-    font-family: 'dripicons';
+    @if $font-icon == 'Active Icons' {
+      content: '\e929';
+    }
+    @if $font-icon == 'Dripicons' {
+      content: '\39';
+    }
+    font-family: $font-icon;
     font-size: text-size(m);
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
     line-height: 1;
     margin-top: -8px;
     pointer-events: none;
     position: absolute;
     right: 15px;
+    speak: none;
+    text-transform: none;
     top: 50%;
   }
   &.form-size-l {

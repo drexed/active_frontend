@@ -218,7 +218,7 @@
     var boxLabel = $('<label for="' + selector + '">');
     var textLabel = boxLabel.clone();
 
-    boxLabel.append('<i class="icon-checkmark"></i>');
+    boxLabel.append('<i class="icon-check"></i>');
 
     var checkbox = $('<input type="checkbox" id="' + selector + '">');
     checkbox.prop('checked', this.$checkAll);
@@ -240,7 +240,7 @@
     var selector = this.selector(hash);
 
     var label = this.labelTemplate(hash);
-    label.append('<i class="icon-checkmark"></i>');
+    label.append('<i class="icon-check"></i>');
 
     var checkbox = $('<input type="' + type +'" value="' + hash.value + '" name="' + hash.name + '" id="' + selector + '">');
     checkbox.prop('checked', hash.checked);

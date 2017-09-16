@@ -99,9 +99,9 @@ $colors-brand-inverted-global: (
 );
 $colors-grayscale: (
   'transparent': rgba(0,0,0,0),
-  'dark-black': rgba(50,59,73,1),
-  'black': rgba(60,71,88,1),
-  'light-black': rgba(70,83,103,1),
+  'dark-black': rgba(37,49,62,1),
+  'black': rgba(44,58,73,1),
+  'light-black': rgba(51,67,83,1),
   'dark-gray': rgba(130,149,167,1),
   'gray': rgba(145,162,178,1),
   'light-gray': rgba(160,174,188,1),
@@ -112,9 +112,9 @@ $colors-grayscale: (
 );
 $colors-grayscale-inverted: (
   'transparent': rgba(0,0,0,0),
-  'dark-black': rgba(223,227,233,1),
-  'black': rgba(226,230,235,1),
-  'light-black': rgba(230,233,238,1),
+  'dark-black': rgba(231,236,241,1),
+  'black': rgba(242,245,247,1),
+  'light-black': rgba(241,244,246,1),
   'dark-gray': rgba(222,227,232,1),
   'gray': rgba(226,230,235,1),
   'light-gray': rgba(229,233,237,1),
@@ -167,15 +167,14 @@ $common-visibility-types: collapse, hidden, visible;
 
 // Font
 // ==================================================
-$font-available: (
-  blender-pro: 'Blender Pro',
+$font-available-typography: (
   branding: 'Branding',
-  clear-sans: 'Clear Sans',
   fakt-pro: 'Fakt Pro',
-  fakt-soft-pro: 'Fakt Soft Pro',
-  gibson: 'Gibson',
-  source-sans-pro: 'Source Sans Pro',
-  ubuntu-sans: 'Ubuntu Sans'
+  fakt-soft-pro: 'Fakt Soft Pro'
+);
+$font-available-icons: (
+  active-icons: 'Active Icons',
+  dripicons: 'Dripicons'
 );
 $font-families: (
   display: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
@@ -183,6 +182,7 @@ $font-families: (
   sans-serif: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
   serif: (Georgia, 'Times New Roman', serif)
 );
+$font-icon: 'Active Icons';
 $font-indents: (
   xxxl: 25px,
   xxl: 20px,

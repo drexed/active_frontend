@@ -5,7 +5,7 @@
 // Font-face
 // ==================================================
 @each $type, $families in $font-families {
-  @each $file-name, $family in $font-available {
+  @each $file-name, $family in $font-available-typography {
     @if index(text-family($type), $family) {
       @each $name, $weight in $font-weights {
         @font-face {

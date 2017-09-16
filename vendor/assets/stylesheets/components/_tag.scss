@@ -8,6 +8,7 @@
 // ==================================================
 .tag {
   margin: 2px 2px 2px 0;
+  padding-top: 5px !important;
   padding-right: 22px !important;
 
   [data-role='remove'] {
@@ -15,9 +16,20 @@
     margin-left: 5px;
 
     &::after {
-      content: '\39';
-      font-family: 'dripicons';
+      @if $font-icon == 'Active Icons' {
+        content: '\e9fc';
+      }
+      @if $font-icon == 'Dripicons' {
+        content: '\54';
+      }
+      font-family: $font-icon;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      margin-top: 1px;
       position: absolute;
+      speak: none;
+      text-transform: none;
     }
   }
 }

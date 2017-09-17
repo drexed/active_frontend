@@ -19,3 +19,16 @@
     }
   }
 }
+@each $file-name, $family in $font-available-typography {
+  @if index(text-family(display), $family) {
+    @each $name, $weight in (bold: 700, normal: 400) {
+      @font-face {
+        font-display: swap;
+        font-family: $family;
+        font-style: normal;
+        font-weight: $weight;
+        src: url(font-path('#{$file-name}/#{$file-name}-#{$name}.woff')) format('woff');
+      }
+    }
+  }
+}

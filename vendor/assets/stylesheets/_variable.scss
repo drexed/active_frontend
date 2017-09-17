@@ -170,14 +170,15 @@ $common-visibility-types: collapse, hidden, visible;
 $font-available-typography: (
   branding: 'Branding',
   fakt-pro: 'Fakt Pro',
-  fakt-soft-pro: 'Fakt Soft Pro'
+  fakt-soft-pro: 'Fakt Soft Pro',
+  ventura-edding: 'Ventura Edding'
 );
 $font-available-icons: (
   active-icons: 'Active Icons',
   dripicons: 'Dripicons'
 );
 $font-families: (
-  display: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
+  display: ('Ventura Edding', Verdana, Tahoma, sans-serif),
   monospace: (Courier, Consolas, Menlo, Monaco, monospace),
   sans-serif: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
   serif: (Georgia, 'Times New Roman', serif)

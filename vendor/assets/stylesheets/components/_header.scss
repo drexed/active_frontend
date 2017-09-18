@@ -39,11 +39,15 @@
 }
 .header-brand {
   font-size: 35px;
+  margin-top: -2px;
 
+  img,
+  svg {
+    display: inline-block;
+    height: 44px;
+  }
   img {
     border-radius: border-radius(n);
-    display: inline-block;
-    height: 40px;
     margin: 0 auto;
   }
 
@@ -131,14 +135,15 @@
   .header-brand {
     font-size: 26px;
 
-    img { height: 26px; }
+    img,
+    svg { height: 26px; }
   }
   .header-brand-label { margin-top: 3px; }
   .header-nav {
-    margin-top: 4px;
+    margin-top: 3px;
 
     > li {
-      &.header-nav-icon { font-size: 26px; }
+      &.header-nav-icon { font-size: 30px; }
     }
   }
 }

@@ -32,15 +32,7 @@
     &:active,
     &:focus { color: color(primary); }
 
-    > i {
-      font-size: text-size(l);
-      display: block;
-      margin-bottom: 3px;
-    }
-  }
-
-  &.primary {
-    > a {
+    &.primary {
       &:hover,
       &.active,
       &:active,
@@ -49,7 +41,14 @@
         color: color(white);
       }
     }
+
+    > i {
+      font-size: text-size(l);
+      display: block;
+      margin-bottom: 3px;
+    }
   }
+
   &.fixed {
     bottom: 0;
     left: 0;

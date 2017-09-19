@@ -112,7 +112,7 @@
     }
   }
 }
-a.calendar-event { cursor: pointer; }
+a.calendar-event,
 .calendar-event-draggable { cursor: pointer; }
 .calendar-event-inner {
   height: 100%;
@@ -158,6 +158,7 @@ table.calendar-border-separate {
   th,
   td {
     border-width: 1px 0 0 1px;
+    width: 1%;
 
     &.calendar-last { border-right-width: 1px; }
   }
@@ -256,6 +257,9 @@ table.calendar-border-separate {
     width: 100%;
 
     > * { margin: 0 auto; }
+
+    .btn-prev,
+    .btn-next { margin-top: 0; }
   }
   .calendar-header-center {
     display: none !important;

@@ -2,6 +2,8 @@
 // ==================================================
 // Card
 
+// scss-lint:disable NestingDepth
+
 // Card
 // ==================================================
 .card {
@@ -25,18 +27,65 @@
 .card-header,
 .card-body,
 .card-footer { padding: 10px 15px; }
-.card-header,
-.card-footer {
-  padding-bottom: 9px;
-  padding-top: 9px;
-}
 .card-header {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   font-weight: text-weight(semibold);
 }
+.card-wizard {
+  border-collapse: separate;
+  box-sizing: border-box;
+  display: table;
+  font-size: text-size(s);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  table-layout: fixed;
+  white-space: nowrap;
+
+  > a,
+  > li {
+    display: table-cell;
+    padding: 8px 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 1%;
+
+    &:not(:first-child) {
+      border-left-style: solid;
+      border-left-width: 1px;
+    }
+
+    &.current {
+      background: color(haze);
+      color: color(primary);
+    }
+    &.completed {
+      background: color(light-haze);
+      color: color(gray);
+    }
+  }
+
+  &.dark {
+    > a,
+    > li {
+      &.current { background: color(light-black); }
+      &.completed { background: color(black); }
+    }
+  }
+  &.light {
+    > a,
+    > li {
+      &.current { background: color(dark-haze); }
+      &.completed { background: color(haze); }
+    }
+  }
+}
+.card-wizard,
 .card-body {
-  + .card-body {
+  + .card-body,
+  + .card-wizard {
     border-top-style: solid;
     border-top-width: 1px;
   }

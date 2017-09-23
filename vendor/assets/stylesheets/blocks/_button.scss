@@ -54,6 +54,12 @@
     min-width: 9px;
     vertical-align: top;
   }
+
+  img,
+  svg {
+    height: 1em;
+    vertical-align: text-top;
+  }
 }
 
 // Colors
@@ -219,7 +225,8 @@
       border-top-left-radius: border-radius(b);
       margin-top: 0;
     }
-    &:last-child {
+    &:last-child,
+    &.dropdown-toggle {
       border-radius: 0;
       border-bottom-right-radius: border-radius(b);
       border-bottom-left-radius: border-radius(b);
@@ -277,7 +284,8 @@
         border-top-left-radius: border-radius(b);
         margin-left: 0;
       }
-      &:last-child {
+      &:last-child,
+      &.dropdown-toggle {
         border-bottom-right-radius: border-radius(b);
         border-bottom-left-radius: border-radius(b);
       }
@@ -296,7 +304,8 @@
           border-top-right-radius: 0;
           border-top-left-radius: border-radius(b);
         }
-        &:last-child {
+        &:last-child,
+        &.dropdown-toggle {
           border-bottom-right-radius: border-radius(b);
           border-bottom-left-radius: 0;
           border-top-right-radius: border-radius(b);

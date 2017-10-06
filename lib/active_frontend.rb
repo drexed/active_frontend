@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails/engine'
 require 'active_frontend/version'
 require 'generators/active_frontend/install_generator'

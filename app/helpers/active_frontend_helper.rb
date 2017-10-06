@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ActiveFrontendHelper
 
   # rubocop:disable Metrics/MethodLength

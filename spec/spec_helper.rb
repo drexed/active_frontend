@@ -1,10 +1,8 @@
-require 'coveralls'
-Coveralls.wear!
+# frozen_string_literal: true
 
-require 'fileutils'
-require 'pathname'
-require 'generator_spec'
-require 'active_frontend'
+%w[active_frontend pathname generator_spec].each do |file_name|
+  require file_name
+end
 
 spec_tmp_path = Pathname.new(File.expand_path('../spec/lib/generators/tmp', File.dirname(__FILE__)))
 

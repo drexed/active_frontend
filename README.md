@@ -2,7 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/active.svg)](http://badge.fury.io/rb/active_frontend)
 [![Build Status](https://travis-ci.org/drexed/active_frontend.svg?branch=master)](https://travis-ci.org/drexed/active_frontend)
-[![Coverage Status](https://coveralls.io/repos/drexed/active_frontend/badge.png)](https://coveralls.io/r/drexed/active_frontend)
 
 [ActiveFrontend](https://github.com/drexed/active_frontend) is a refreshingly modern responsive web framework for beautiful and faster project development.
 

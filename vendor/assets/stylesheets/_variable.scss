@@ -171,6 +171,7 @@ $font-available-typography: (
   branding: 'Branding',
   fakt-pro: 'Fakt Pro',
   fakt-soft-pro: 'Fakt Soft Pro',
+  tiempos-headline: 'Tiempos Headline',
   ventura-edding: 'Ventura Edding'
 );
 $font-available-icons: (
@@ -181,7 +182,7 @@ $font-families: (
   display: ('Ventura Edding', Verdana, Tahoma, sans-serif),
   monospace: (Courier, Consolas, Menlo, Monaco, monospace),
   sans-serif: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
-  serif: (Georgia, 'Times New Roman', serif)
+  serif: ('Tiempos Headline', Georgia, 'Times New Roman', serif)
 );
 $font-icon: 'Active Icons';
 $font-indents: (

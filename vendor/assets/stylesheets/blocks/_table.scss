@@ -143,6 +143,17 @@ thead {
       th { border-top-width: 0; }
     }
   }
+  tbody {
+    tr:first-child {
+      td { border-top-width: 0; }
+    }
+
+    + tbody {
+      tr:first-child {
+        td { border-top-width: 3px; }
+      }
+    }
+  }
   tr {
     td:first-child,
     th:first-child { border-left-width: 0; }
@@ -160,9 +171,12 @@ thead {
       }
     }
   }
-  tbody + tfoot {
-    tr:first-child {
-      td { border-top-width: 2px; }
+  tbody {
+    + tbody,
+    + tfoot {
+      tr:first-child {
+        td { border-top-width: 2px; }
+      }
     }
   }
 }

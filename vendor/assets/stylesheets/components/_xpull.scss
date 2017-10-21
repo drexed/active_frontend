@@ -1,0 +1,49 @@
+// Table of Contents
+// ==================================================
+// Xpull
+
+// Xpull
+// ==================================================
+.xpull {
+  color: color(gray);
+  display: none;
+  font-size: text-size(s);
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  transform: translate3d(0, 0, 0) rotate(0deg);
+}
+.xpull-pulled {
+  .xpull-arrow {
+    top: 5px;
+    transform: rotate(180deg);
+  }
+}
+.xpull-arrow {
+  @include transition(transform 0.3s ease-in-out);
+  background: color(gray);
+  border-top-left-radius: border-radius(b);
+  border-top-right-radius: border-radius(b);
+  height: 10px;
+  margin: 5px auto;
+  position: relative;
+  width: 4px;
+
+  &::after {
+    border-top: 6px solid color(gray);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    content: '';
+    height: 0;
+    left: -3px;
+    position: absolute;
+    top: 100%;
+    width: 0;
+  }
+}
+.xpull-spinner {
+  display: none;
+  font-size: text-size(xl);
+  padding: 20px;
+}

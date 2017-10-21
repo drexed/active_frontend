@@ -61,10 +61,10 @@
   .layout-body,
   .layout-sidebar {
     &.with-sticky-header {
-      height: calc(100% - 50px);
-      margin-top: 50px;
+      height: calc(100% - 54px);
+      margin-top: 54px;
 
-      &.with-sticky-navbar { height: calc(100% - 100px); }
+      &.with-sticky-navbar { height: calc(100% - 108px); }
     }
   }
   .layout-sidebar {

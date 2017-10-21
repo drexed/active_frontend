@@ -48,4 +48,5 @@
 //= require extensions/_map
 //= require extensions/_push
 //= require extensions/_wysiwyg
+//= require extensions/_xpull
 //

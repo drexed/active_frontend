@@ -46,6 +46,7 @@
 //= require extensions/_copy
 //= require extensions/_funnel
 //= require extensions/_map
+//= require extensions/_mobile_events
 //= require extensions/_push
 //= require extensions/_wysiwyg
 //= require extensions/_xpull

@@ -85,7 +85,11 @@
 .card-wizard,
 .card-body {
   + .card-body,
-  + .card-wizard {
+  + .card-wizard,
+  + .table-encase,
+  + .table-border
+  + .table-responsive .table-encase,
+  + .table-responsive .table-border {
     border-top-style: solid;
     border-top-width: 1px;
   }

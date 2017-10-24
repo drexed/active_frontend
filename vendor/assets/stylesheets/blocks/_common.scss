@@ -8,17 +8,20 @@
 // Margins
 // Displays
 // Colors
-// Border widths
 // Box shadow insets
 // Box shadows
+// Border widths
+// Border styles
 // Border radiuses
 // Border colors
 // Background colors
 
+// scss-lint:disable ImportantRule
+
 // Visibility
 // ==================================================
 @each $name in $common-visibility-types {
-  .visibility-#{$name} { visibility: $name; }
+  .visibility-#{$name} { visibility: $name !important; }
 }
 
 // Scrollbars
@@ -43,39 +46,39 @@
 // Pushes
 // ==================================================
 @each $name, $margin in (center: (0 auto), left: (0 auto 0 0), right: (0 0 0 auto)) {
-  .push-#{$name} { margin: $margin; }
+  .push-#{$name} { margin: $margin !important; }
 }
 
 // Pulls
 // ==================================================
 @each $name in left, none, right {
-  .pull-#{$name} { float: $name; }
+  .pull-#{$name} { float: $name !important; }
 }
 
 // Paddings
 // ==================================================
 @each $name, $size in $common-margins-and-paddings {
-  .padding-size-#{$name} { padding: $size; }
-  .padding-size-bottom-#{$name} { padding-bottom: $size; }
-  .padding-size-left-#{$name} { padding-left: $size; }
-  .padding-size-right-#{$name} { padding-right: $size; }
-  .padding-size-top-#{$name} { padding-top: $size; }
+  .padding-size-#{$name} { padding: $size !important; }
+  .padding-size-bottom-#{$name} { padding-bottom: $size !important; }
+  .padding-size-left-#{$name} { padding-left: $size !important; }
+  .padding-size-right-#{$name} { padding-right: $size !important; }
+  .padding-size-top-#{$name} { padding-top: $size !important; }
 }
 
 // Margins
 // ==================================================
 @each $name, $size in $common-margins-and-paddings {
-  .margin-size-#{$name} { margin: $size; }
-  .margin-size-bottom-#{$name} { margin-bottom: $size; }
-  .margin-size-left-#{$name} { margin-left: $size; }
-  .margin-size-right-#{$name} { margin-right: $size; }
-  .margin-size-top-#{$name} { margin-top: $size; }
+  .margin-size-#{$name} { margin: $size !important; }
+  .margin-size-bottom-#{$name} { margin-bottom: $size !important; }
+  .margin-size-left-#{$name} { margin-left: $size !important; }
+  .margin-size-right-#{$name} { margin-right: $size !important; }
+  .margin-size-top-#{$name} { margin-top: $size !important; }
 }
 
 // Displays
 // ==================================================
 @each $name in $common-display-types {
-  .display-#{$name} { display: $name; }
+  .display-#{$name} { display: $name !important; }
 }
 
 // Colors
@@ -98,54 +101,64 @@
 .light { background: color(light-haze); }
 .white { background: color(white); }
 
-// Border width
-// ==================================================
-@each $name, $width in $common-border-widths {
-  .border-width-#{$name} { border-width: $width; }
-  .border-width-bottom-#{$name} { border-bottom-width: $width; }
-  .border-width-left-#{$name} { border-left-width: $width; }
-  .border-width-right-#{$name} { border-right-width: $width; }
-  .border-width-top-#{$name} { border-top-width: $width; }
-}
-
 // Box shadow insets
 // ==================================================
 @each $name, $spread in $common-box-shadows {
-  .box-shadow-inset-#{$name} { box-shadow: inset 0 0 $spread darker-color(dark-haze); }
-  .box-shadow-inset-bottom-#{$name} { box-shadow: inset 0 1px $spread darker-color(dark-haze); }
-  .box-shadow-inset-left-#{$name} { box-shadow: inset -1px 0 $spread darker-color(dark-haze); }
-  .box-shadow-inset-right-#{$name} { box-shadow: inset 1px 0 $spread darker-color(dark-haze); }
-  .box-shadow-inset-top-#{$name} { box-shadow: inset 0 -1px $spread darker-color(dark-haze); }
+  .box-shadow-inset-#{$name} { box-shadow: inset 0 0 $spread darker-color(dark-haze) !important; }
+  .box-shadow-inset-bottom-#{$name} { box-shadow: inset 0 1px $spread darker-color(dark-haze) !important; }
+  .box-shadow-inset-left-#{$name} { box-shadow: inset -1px 0 $spread darker-color(dark-haze) !important; }
+  .box-shadow-inset-right-#{$name} { box-shadow: inset 1px 0 $spread darker-color(dark-haze) !important; }
+  .box-shadow-inset-top-#{$name} { box-shadow: inset 0 -1px $spread darker-color(dark-haze) !important; }
 }
 
 // Box shadows
 // ==================================================
 @each $name, $spread in $common-box-shadows {
-  .box-shadow-#{$name} { box-shadow: 0 0 $spread darker-color(dark-haze); }
-  .box-shadow-bottom-#{$name} { box-shadow: 0 1px $spread darker-color(dark-haze); }
-  .box-shadow-left-#{$name} { box-shadow: -1px 0 $spread darker-color(dark-haze); }
-  .box-shadow-right-#{$name} { box-shadow: 1px 0 $spread darker-color(dark-haze); }
-  .box-shadow-top-#{$name} { box-shadow: 0 -1px $spread darker-color(dark-haze); }
+  .box-shadow-#{$name} { box-shadow: 0 0 $spread darker-color(dark-haze) !important; }
+  .box-shadow-bottom-#{$name} { box-shadow: 0 1px $spread darker-color(dark-haze) !important; }
+  .box-shadow-left-#{$name} { box-shadow: -1px 0 $spread darker-color(dark-haze) !important; }
+  .box-shadow-right-#{$name} { box-shadow: 1px 0 $spread darker-color(dark-haze) !important; }
+  .box-shadow-top-#{$name} { box-shadow: 0 -1px $spread darker-color(dark-haze) !important; }
+}
+
+// Border width
+// ==================================================
+@each $name, $width in $common-border-widths {
+  .border-width-#{$name} { border-width: $width !important; }
+  .border-width-bottom-#{$name} { border-bottom-width: $width !important; }
+  .border-width-left-#{$name} { border-left-width: $width !important; }
+  .border-width-right-#{$name} { border-right-width: $width !important; }
+  .border-width-top-#{$name} { border-top-width: $width !important; }
+}
+
+// Border styles
+// ==================================================
+@each $name in $common-border-styles {
+  .border-style-#{$name} { border-style: $name !important; }
+  .border-style-bottom-#{$name} { border-bottom-style: $name !important; }
+  .border-style-left-#{$name} { border-left-style: $name !important; }
+  .border-style-right-#{$name} { border-right-style: $name !important; }
+  .border-style-top-#{$name} { border-top-style: $name !important; }
 }
 
 // Border radiuses
 // ==================================================
 @each $name, $radius in $common-border-radiuses {
-  .border-radius-#{$name} { border-radius: $radius; }
+  .border-radius-#{$name} { border-radius: $radius !important; }
 }
 
 // Border colors
 // ==================================================
 @each $name, $color in $colors {
-  .border-color-#{$name} { border-color: $color; }
-  .border-color-bottom-#{$name} { border-bottom-color: $color; }
-  .border-color-left-#{$name} { border-left-color: $color; }
-  .border-color-right-#{$name} { border-right-color: $color; }
-  .border-color-top-#{$name} { border-top-color: $color; }
+  .border-color-#{$name} { border-color: $color !important; }
+  .border-color-bottom-#{$name} { border-bottom-color: $color !important; }
+  .border-color-left-#{$name} { border-left-color: $color !important; }
+  .border-color-right-#{$name} { border-right-color: $color !important; }
+  .border-color-top-#{$name} { border-top-color: $color !important; }
 }
 
 // Background colors
 // ==================================================
 @each $name, $color in $colors {
-  .background-color-#{$name} { background-color: $color; }
+  .background-color-#{$name} { background-color: $color !important; }
 }

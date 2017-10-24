@@ -158,6 +158,8 @@
       }
 
       this.indicator.css(changeCss);
+
+      delete changeCss.height;
       this.elm.css(changeCss);
     },
     reset: function() {

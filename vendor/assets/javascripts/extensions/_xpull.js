@@ -144,9 +144,13 @@
       });
     },
     changeStyle: function (top, transition) {
+      var topPx = top + 'px';
+      var heightPx = top > 50 ? '50px' : topPx;
+
       var changeCss = {
-        transform: 'translate3d(0px, ' + top + 'px, 0px)',
-        transition: 'transform 0.3s ease-in-out'
+        height: heightPx,
+        transform: 'translate3d(0px, ' + heightPx + ', 0px)',
+        transition: 'transform 0s ease-in-out'
       };
 
       if (!transition) {

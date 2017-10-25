@@ -40,8 +40,8 @@
     menu: '<ul class="selectpicker dropmenu caret"><span></span></ul>',
     onChangeCallback: function (old_value, new_value) {},
     onSetValCallback: function (value) {},
-    optionHoverClass: 'text-color-hover-blue',
-    optionSelectedClass: 'text-color-blue',
+    optionHoverClass: 'text-color-hover-primary',
+    optionSelectedClass: 'text-color-primary',
     text: {
       selectless: 'No options available',
       placeholder: 'Filter options...',

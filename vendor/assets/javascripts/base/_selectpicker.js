@@ -33,6 +33,7 @@
 
   Selectpicker.VERSION = '1.0.0';
   Selectpicker.DEFAULTS = {
+    filterClass: 'dark',
     fuzzySearch: true,
     includePrompt: true,
     item: '<li></li>',
@@ -234,7 +235,7 @@
 
   Selectpicker.prototype.fuzzyTemplate = function () {
     var container = $('<div class="form-input form-size-s">');
-    var textbox = $('<input type="text" placeholder="' + this.options.text.placeholder + '" id="' + this.$fuzzyId + '" autofocus>');
+    var textbox = $('<input type="text" class="' + this.options.filterClass + '" placeholder="' + this.options.text.placeholder + '" id="' + this.$fuzzyId + '" autofocus>');
 
     container.append(textbox);
 

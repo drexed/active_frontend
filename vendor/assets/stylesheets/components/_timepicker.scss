@@ -8,6 +8,7 @@
 // Timepicker
 // ==================================================
 .timepicker {
+  color: color(white);
   padding: 4px;
 
   table {
@@ -19,6 +20,7 @@
       text-align: center;
 
       a {
+        color: color(gray);
         font-size: 24px;
 
         &:hover,

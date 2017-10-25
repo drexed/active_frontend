@@ -34,7 +34,8 @@
   Choicepicker.VERSION = '1.0.0';
   Choicepicker.DEFAULTS = {
     choices: [],
-    choiceClass: 'form-align-vertical',
+    choiceClass: 'form-align-vertical dark',
+    filterClass: 'dark',
     fuzzySearch: true,
     item: '<li></li>',
     menu: '<ul class="choicepicker dropmenu caret"><span></span></ul>',
@@ -202,7 +203,7 @@
 
   Choicepicker.prototype.fuzzyTemplate = function () {
     var container = $('<div class="form-input form-size-s">');
-    var textbox = $('<input type="text" placeholder="' + this.options.text.placeholder + '" id="' + this.$fuzzyId + '" autofocus>');
+    var textbox = $('<input type="text" class="' + this.options.filterClass + '" placeholder="' + this.options.text.placeholder + '" id="' + this.$fuzzyId + '" autofocus>');
 
     container.append(textbox);
 

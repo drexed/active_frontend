@@ -83,15 +83,15 @@
 
 // Colors
 // ==================================================
-.dark,
-.primary { color: color(white); }
 .dark {
   background: color(black);
   border-color: color(dark-black);
+  color: color(gray);
 }
 .primary {
   background: color(primary);
   border-color: darker-color(primary);
+  color: color(white);
 }
 .light,
 .white {

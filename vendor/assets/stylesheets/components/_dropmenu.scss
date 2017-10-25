@@ -10,10 +10,10 @@
 // ==================================================
 .dropmenu {
   @include transition(all 0.09s ease-in-out);
-  background: color(white);
-  border: 1px solid color(dark-haze);
+  background: color(black);
+  border: 1px solid color(dark-black);
   border-radius: border-radius(b);
-  color: color(black);
+  color: color(gray);
   display: none;
   float: left;
   font-size: text-size(b);
@@ -53,7 +53,7 @@
     }
     &::after {
       border-bottom: 6px solid;
-      border-bottom-color: color(white);
+      border-bottom-color: color(black);
       border-left: 6px solid color(transparent);
       border-right: 6px solid color(transparent);
       left: 10px;
@@ -70,11 +70,11 @@
       &::before { right: 9px; }
       &::after { right: 10px; }
     }
-    &.dark {
-      &::after { border-bottom-color: color(black); }
-    }
     &.light {
       &::after { border-bottom-color: color(light-haze); }
+    }
+    &.dark {
+      &::after { border-bottom-color: color(white); }
     }
   }
 
@@ -137,7 +137,7 @@
         left: 9px;
       }
       &::after {
-        border-top: 6px solid color(white);
+        border-top: 6px solid color(black);
         bottom: -6px;
         left: 10px;
       }
@@ -152,11 +152,11 @@
         &::before { right: 9px; }
         &::after { right: 10px; }
       }
-      &.dark {
-        &::after { border-top-color: color(black); }
-      }
       &.light {
         &::after { border-top-color: color(light-haze); }
+      }
+      &.white {
+        &::after { border-top-color: color(white); }
       }
     }
   }

@@ -23,20 +23,24 @@
     th:not(.dow) {
       &:hover,
       &:focus {
-        background: color(haze);
+        background: color(gray);
+        color: color(white);
         cursor: pointer;
       }
     }
     td {
+      color: color(white);
+
       &.today {
-        background: color-inverted(primary);
+        background: color(light-black);
         color: color(primary);
       }
       &.day,
       &.today {
         &:hover,
         &:focus {
-          background: color(haze);
+          background: color(gray);
+          color: color(white);
           cursor: pointer;
         }
         &:active,
@@ -46,10 +50,15 @@
         }
       }
       &.old,
-      &.new { color: color(gray); }
+      &.new {
+        color: color(light-gray);
+
+        &:hover,
+        &:focus { color: color(white); }
+      }
       &.disabled {
         background: color(transparent) !important;
-        color: dark-color(dark-haze) !important;
+        color: color(dark-gray) !important;
         cursor: not-allowed !important;
         text-decoration: line-through;
       }
@@ -65,7 +74,8 @@
         &:hover,
         &.focus,
         &.focused {
-          background: color(haze);
+          background: color(gray);
+          color: color(white);
           cursor: pointer;
         }
         &:active,
@@ -76,7 +86,7 @@
         }
         &.disabled {
           background: color(transparent) !important;
-          color: dark-color(dark-haze) !important;
+          color: color(dark-gray) !important;
           cursor: not-allowed !important;
           text-decoration: line-through;
         }

@@ -136,8 +136,6 @@
         }
 
         setTimeout(function() {
-          elm.css({ 'transition': '' });
-          that.indicator.css({ 'transition': '' });
           $(document.body).unbind('touchmove.' + pluginName);
           that.elast = true;
         }, 300);
@@ -146,23 +144,15 @@
     changeStyle: function (top, transition) {
       var topPx = top + 'px';
       var heightPx = top > 50 ? '50px' : topPx;
+      var paddingPx = top > 50 ? '10px 0' : '0';
 
       var changeCss = {
         height: heightPx,
         overflow: 'initial',
-        transform: 'translate3d(0px, ' + heightPx + ', 0px)',
-        transition: 'transform 0.3s ease-in-out'
+        padding: paddingPx
       };
 
-      if (!transition) {
-        changeCss.transition = '';
-      }
-
       this.indicator.css(changeCss);
-
-      delete changeCss.height;
-      delete changeCss.overflow;
-      this.elm.css(changeCss);
     },
     reset: function() {
       var that = this;

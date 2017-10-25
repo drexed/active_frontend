@@ -10,10 +10,11 @@
   font-size: text-size(s);
   height: 0;
   margin: 0 auto;
+  padding: 0;
   overflow: hidden;
   position: relative;
   text-align: center;
-  transform: translate3d(0, 0, 0) rotate(0deg);
+  transform: rotate(0deg);
 }
 .xpull-pulled {
   .xpull-arrow {

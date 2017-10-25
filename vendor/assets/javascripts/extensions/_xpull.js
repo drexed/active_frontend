@@ -149,6 +149,7 @@
 
       var changeCss = {
         height: heightPx,
+        overflow: 'initial',
         transform: 'translate3d(0px, ' + heightPx + ', 0px)',
         transition: 'transform 0.3s ease-in-out'
       };
@@ -160,6 +161,7 @@
       this.indicator.css(changeCss);
 
       delete changeCss.height;
+      delete changeCss.overflow;
       this.elm.css(changeCss);
     },
     reset: function() {

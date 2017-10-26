@@ -1,11 +1,11 @@
 // Table of Contents
 // ==================================================
+// Common Functions
 // Helper Functions
 // Attribute Functions
-// Attribute Mixins
 // Vendor Mixins
 
-// Helper Funtions
+// Common Funtions
 // ==================================================
 @function dasherize($selector, $key) {
   @if $key {
@@ -13,6 +13,23 @@
   } @else {
     @return #{$selector};
   }
+}
+@function map-collect($maps...) {
+  $collection: ();
+
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+
+  @return $collection;
+}
+
+// Helper Funtions
+// ==================================================
+@function map-global-collect($global-collection, $global-name) {
+  $name: map-get($colors-global, $global-name);
+
+  @return map-get($global-collection, $name);
 }
 @function text-color-on($color) {
   @if index($colors-black-text, $color) {

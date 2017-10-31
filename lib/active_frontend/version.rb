@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module ActiveFrontend
-  VERSION ||= '15.0.14'
+  VERSION ||= '15.0.15'
 end

@@ -38,7 +38,10 @@
     var _self = this;
     var options = this.options;
 
-    this.$element.click(function () {
+    this.$element.click(function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+
       var target = $(options.target);
       var toggle = 'out';
 

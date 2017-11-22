@@ -5,32 +5,32 @@ module ActiveFrontendHelper
   # rubocop:disable Metrics/MethodLength
   def colors_brand(opacity = 1)
     {
-      lime: { rgba: "rgba(151,212,91,#{opacity})", hex: '#97D45B' },
-      green: { rgba: "rgba(52,208,89,#{opacity})", hex: '#34D059' },
-      teal: { rgba: "rgba(66,223,180,#{opacity})", hex: '#42DFB4' },
-      sky: { rgba: "rgba(0,179,255,#{opacity})", hex: '#00B3FF' },
-      blue: { rgba: "rgba(50,139,255,#{opacity})", hex: '#328BFF' },
-      indigo: { rgba: "rgba(141,99,239,#{opacity})", hex: '#8D63EF' },
-      purple: { rgba: "rgba(179,104,219,#{opacity})", hex: '#B368DB' },
+      lime: { rgba: "rgba(132,207,71,#{opacity})", hex: '#84CF47' },
+      green: { rgba: "rgba(86,198,62,#{opacity})", hex: '#56C63E' },
+      teal: { rgba: "rgba(40,215,157,#{opacity})", hex: '#28D79D' },
+      sky: { rgba: "rgba(18,174,255,#{opacity})", hex: '#12AEFF' },
+      blue: { rgba: "rgba(2,141,255,#{opacity})", hex: '#028DFF' },
+      indigo: { rgba: "rgba(132,99,239,#{opacity})", hex: '#8463EF' },
+      purple: { rgba: "rgba(177,99,218,#{opacity})", hex: '#B163DA' },
+      brown: { rgba: "rgba(160,116,88,#{opacity})", hex: '#A07458' },
       pink: { rgba: "rgba(237,106,123,#{opacity})", hex: '#ED6A7B' },
-      brown: { rgba: "rgba(198,115,89,#{opacity})", hex: '#C67359' },
-      red: { rgba: "rgba(240,74,65#{opacity})", hex: '#F04A41' },
-      orange: { rgba: "rgba(252,163,45,#{opacity})", hex: '#FCA32D' },
-      yellow: { rgba: "rgba(247,208,47,#{opacity})", hex: '#F7D02F' }
+      red: { rgba: "rgba(236,70,61,#{opacity})", hex: '#EC463D' },
+      orange: { rgba: "rgba(252,146,35,#{opacity})", hex: '#FC9223' },
+      yellow: { rgba: "rgba(247,208,32,#{opacity})", hex: '#F7D020' }
     }
   end
 
   def colors_grayscale(opacity = 1)
     {
-      light_black: { rgba: "rgba(58,67,84,#{opacity})", hex: '#3A4354' },
-      black: { rgba: "rgba(44,53,70,#{opacity})", hex: '#2C3546' },
-      dark_black: { rgba: "rgba(30,39,55,#{opacity})", hex: '#1E2737' },
-      light_gray: { rgba: "rgba(152,166,184,#{opacity})", hex: '#98A6B8' },
-      gray: { rgba: "rgba(138,152,170,#{opacity})", hex: '#8A98AA' },
-      dark_gray: { rgba: "rgba(124,138,156,#{opacity})", hex: '#7C8A9C' },
-      light_haze: { rgba: "rgba(248,249,253,#{opacity})", hex: '#F8F9FD' },
-      haze: { rgba: "rgba(238,241,250,#{opacity})", hex: '#EEF1FA' },
-      dark_haze: { rgba: "rgba(229,234,244,#{opacity})", hex: '#E5EAF4' },
+      light_black: { rgba: "rgba(48,67,85,#{opacity})", hex: '#304355' },
+      black: { rgba: "rgba(38,54,70,#{opacity})", hex: '#263646' },
+      dark_black: { rgba: "rgba(31,44,60,#{opacity})", hex: '#1F2C3C' },
+      light_gray: { rgba: "rgba(143,162,185,#{opacity})", hex: '#8FA2B9' },
+      gray: { rgba: "rgba(127,146,170,#{opacity})", hex: '#7F92AA' },
+      dark_gray: { rgba: "rgba(110,129,153,#{opacity})", hex: '#6E8199' },
+      light_haze: { rgba: "rgba(247,248,253,#{opacity})", hex: '#F7F8FD' },
+      haze: { rgba: "rgba(238,241,250,#{opacity})", hex: '#EDF0F9' },
+      dark_haze: { rgba: "rgba(237,240,249,#{opacity})", hex: '#E4E9F4' },
       white: { rgba: "rgba(255,255,255,#{opacity})", hex: '#FFFFFF' },
       transparent: { rgba: 'rgba(0,0,0,0)', hex: '#FFFFFF' }
     }

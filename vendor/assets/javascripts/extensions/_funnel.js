@@ -42,10 +42,10 @@
     settings: {
       displayPercentageChange: false,
       pPrecision: 1,
-      labelLineColor: '#E5EAF4',
-      labelFontColor: '#2C3546',
-      sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#328BFF', '#3298F7', '#57ABF9', '#7CDDFA'],
-      pSectionColor: '#F8F9FD',
+      labelLineColor: '#E4E9F4',
+      labelFontColor: '#263646',
+      sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#028DFF', '#3298F7', '#57ABF9', '#7CDDFA'],
+      pSectionColor: '#F7F8FD',
       font: 'Verdana',
       maxFontSize: 12,
       fontWeight: '600',
@@ -127,7 +127,7 @@
 
         this.drawClippingArea(ctx, settings);
 
-        ctx.fillStyle = '#E5EAF4';
+        ctx.fillStyle = '#E4E9F4';
         ctx.fill();
         ctx.clip();
 
@@ -135,7 +135,7 @@
         this.drawClippingArea(ctx, settings, true);
 
         ctx.lineWidth = 0;
-        ctx.strokeStyle = '#E5EAF4';
+        ctx.strokeStyle = '#E4E9F4';
         ctx.stroke();
       }
     },

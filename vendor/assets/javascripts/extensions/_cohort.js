@@ -11,14 +11,13 @@
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ],
     repeatLevels: {
-      'extra-low': [0, 1],
-      'low': [1, 10],
-      'medium-low': [10, 20],
-      'medium': [20, 30],
-      'medium-high': [30, 40],
-      'high': [40, 60],
-      'hot': [60, 70],
-      'extra-hot': [70, 100]
+      'lowest': [0, 10],
+      'low': [10, 20],
+      'lowish': [20, 30],
+      'medium': [30, 40],
+      'highish': [40, 60],
+      'high': [60, 70],
+      'highest': [70, 100]
     },
     labels: {
       time: 'Time',

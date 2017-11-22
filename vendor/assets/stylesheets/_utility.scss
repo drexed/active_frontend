@@ -26,11 +26,6 @@
 
 // Helper Funtions
 // ==================================================
-@function map-global-collect($global-collection, $global-name) {
-  $name: map-get($colors-global, $global-name);
-
-  @return map-get($global-collection, $name);
-}
 @function text-color-on($color) {
   @if index($colors-black-text, $color) {
     @return color(black);
@@ -65,8 +60,17 @@
 @function color($color) {
   @return map-get($colors, '' + $color);
 }
-@function color-inverted($color) {
-  @return map-get($colors-inversions, '' + $color);
+@function shade($color, $percentage) {
+  @return mix(black, color($color), $percentage);
+}
+@function shadeish-color($color) {
+  @return shade($color, 20%);
+}
+@function shade-color($color) {
+  @return shade($color, 40%);
+}
+@function shadiest-color($color) {
+  @return shade($color, 60%);
 }
 @function lightish-color($color) {
   @return lighten(color($color), 2.5%);
@@ -100,6 +104,18 @@
 }
 @function text-weight($weight) {
   @return map-get($font-weights, $weight);
+}
+@function tint($color, $percentage) {
+  @return mix(white, color($color), $percentage);
+}
+@function tintish-color($color) {
+  @return tint($color, 20%);
+}
+@function tint-color($color) {
+  @return tint($color, 40%);
+}
+@function tintiest-color($color) {
+  @return tint($color, 60%);
 }
 
 // Vendor Mixins

@@ -305,13 +305,8 @@ textarea {
   width: 100%;
 
   &::after {
-    @if $font-icon == 'Active Icons' {
-      content: '\e929';
-    }
-    @if $font-icon == 'Dripicons' {
-      content: '\39';
-    }
-    font-family: $font-icon;
+    content: '\e929';
+    font-family: 'Active Icons';
     font-size: text-size(m);
     font-style: normal;
     font-variant: normal;

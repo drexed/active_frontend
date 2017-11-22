@@ -16,13 +16,8 @@
     margin-left: 5px;
 
     &::after {
-      @if $font-icon == 'Active Icons' {
-        content: '\e9fc';
-      }
-      @if $font-icon == 'Dripicons' {
-        content: '\54';
-      }
-      font-family: $font-icon;
+      content: '\e9fc';
+      font-family: 'Active Icons';
       font-style: normal;
       font-variant: normal;
       font-weight: normal;

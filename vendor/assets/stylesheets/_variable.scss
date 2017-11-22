@@ -33,67 +33,40 @@ $animation-durations: (
 
 // Color
 // ==================================================
-$colors-global: (
-  'primary': 'blue',
-  'secondary': 'green',
-  'tertiary': 'red',
-  'quaditiary': 'yellow'
-);
-$colors-brand: (
-  'lime': rgba(151,212,91,1),
-  'green': rgba(52,208,89,1),
-  'teal': rgba(66,223,180,1),
-  'sky': rgba(0,179,255,1),
-  'blue': rgba(50,139,255,1),
-  'indigo': rgba(141,99,239,1),
-  'purple': rgba(179,104,219,1),
-  'pink': rgba(237,106,123,1),
-  'red': rgba(240,74,65,1),
-  'brown': rgba(198,115,89,1),
-  'orange': rgba(252,163,45,1),
-  'yellow': rgba(247,208,47,1)
-);
-$colors-brand-global: (
-  'primary': map-global-collect($colors-brand, 'primary'),
-  'secondary': map-global-collect($colors-brand, 'secondary'),
-  'tertiary': map-global-collect($colors-brand, 'tertiary'),
-  'quaditiary': map-global-collect($colors-brand, 'quaditiary')
-);
-$colors-brand-inverted: (
-  'lime': rgba(232,246,223,1),
-  'green': rgba(221,243,226,1),
-  'teal': rgba(229,246,242,1),
-  'sky': rgba(230,244,250,1),
-  'blue': rgba(225,237,253,1),
-  'indigo': rgba(232,224,252,1),
-  'purple': rgba(240,228,246,1),
-  'pink': rgba(248,225,228,1),
-  'brown': rgba(239,222,216,1),
-  'red': rgba(250,217,214,1),
-  'orange': rgba(254,232,200,1),
-  'yellow': rgba(254,241,200,1)
-);
-$colors-brand-inverted-global: (
-  'primary': map-global-collect($colors-brand-inverted, 'primary'),
-  'secondary': map-global-collect($colors-brand-inverted, 'secondary'),
-  'tertiary': map-global-collect($colors-brand-inverted, 'tertiary'),
-  'quaditiary': map-global-collect($colors-brand-inverted, 'quaditiary')
-);
 $colors-grayscale: (
-  'light-black': rgba(58,67,84,1),
-  'black': rgba(44,53,70,1),
-  'dark-black': rgba(30,39,55,1),
-  'light-gray': rgba(152,166,184,1),
-  'gray': rgba(138,152,170,1),
-  'dark-gray': rgba(124,138,156,1),
-  'light-haze': rgba(248,249,253,1),
-  'haze': rgba(238,241,250,1),
-  'dark-haze': rgba(229,234,244,1),
+  'light-black': rgba(48,67,85,1),
+  'black': rgba(38,54,70,1),
+  'dark-black': rgba(31,44,60,1),
+  'light-gray': rgba(143,162,185,1),
+  'gray': rgba(127,146,170,1),
+  'dark-gray': rgba(110,129,153,1),
+  'light-haze': rgba(247,248,253,1),
+  'haze': rgba(237,240,249,1),
+  'dark-haze': rgba(228,233,244,1),
   'white': rgba(255,255,255,1),
   'transparent': rgba(0,0,0,0)
 );
-$colors: map-collect($colors-brand, $colors-brand-global, $colors-grayscale);
-$colors-inversions: map-collect($colors-brand-inverted, $colors-brand-inverted-global);
+$colors-brand: (
+  'lime': rgba(132,207,71,1),
+  'green': rgba(86,198,62,1),
+  'teal': rgba(40,215,157,1),
+  'sky': rgba(18,174,255,1),
+  'blue': rgba(2,141,255,1),
+  'indigo': rgba(132,99,239,1),
+  'purple': rgba(177,99,218,1),
+  'pink': rgba(237,106,123,1),
+  'red': rgba(236,70,61,1),
+  'brown': rgba(160,116,88,1),
+  'orange': rgba(252,146,35,1),
+  'yellow': rgba(247,208,32,1)
+);
+$colors-global: (
+  'primary': map-get($colors-brand, 'blue'),
+  'secondary': map-get($colors-brand, 'green'),
+  'tertiary': map-get($colors-brand, 'red'),
+  'quaditiary': map-get($colors-brand, 'yellow')
+);
+$colors: map-collect($colors-grayscale, $colors-brand, $colors-global);
 $colors-black-text: 'transparent', 'dark-haze', 'haze', 'light-haze', 'white';
 
 // Common
@@ -109,8 +82,8 @@ $common-border-radiuses: (
   xl: 999px,
   l: 10px,
   m: 6px,
-  b: 3px,
-  s: 2px,
+  b: 2px,
+  s: 1px,
   n: 0
 );
 $common-box-shadows: (
@@ -138,15 +111,9 @@ $common-visibility-types: collapse, hidden, visible;
 // Font
 // ==================================================
 $font-available-typography: (
-  branding: 'Branding',
-  fakt-pro: 'Fakt Pro',
   fakt-soft-pro: 'Fakt Soft Pro',
   tiempos-headline: 'Tiempos Headline',
   ventura-edding: 'Ventura Edding'
-);
-$font-available-icons: (
-  active-icons: 'Active Icons',
-  dripicons: 'Dripicons'
 );
 $font-families: (
   display: ('Ventura Edding', Verdana, Tahoma, sans-serif),
@@ -154,7 +121,6 @@ $font-families: (
   sans-serif: ('Fakt Soft Pro', Verdana, Tahoma, sans-serif),
   serif: ('Tiempos Headline', Georgia, 'Times New Roman', serif)
 );
-$font-icon: 'Active Icons';
 $font-indents: (
   xxxl: 25px,
   xxl: 20px,

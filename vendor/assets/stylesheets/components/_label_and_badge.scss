@@ -41,10 +41,10 @@
 
     &.badge-outline,
     &.label-outline { color: color($name); }
-    &.badge-color-inverted,
-    &.label-color-inverted {
-      background: color-inverted($name);
-      border-color: color-inverted($name);
+    &.badge-color-tint,
+    &.label-color-tint {
+      background: tint($name, 80%);
+      border-color: tint($name, 80%);
       color: color($name);
 
       &.badge-outline,

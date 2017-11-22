@@ -1331,8 +1331,8 @@ var cssKeywords = {
   lightsalmon:  [255,160,122],
   lightseagreen:  [32,178,170],
   lightskyblue: [135,206,250],
-  lightslategray: [138,152,170],
-  lightslategrey: [138,152,170],
+  lightslategray: [127,146,170],
+  lightslategrey: [127,146,170],
   lightsteelblue: [176,196,222],
   lightyellow:  [255,255,224],
   lime: [0,255,0],
@@ -5415,8 +5415,8 @@ module.exports = function () {
         animationDuration: 400
       },
       onClick: null,
-      defaultColor: 'rgba(44,53,70,0.1)',
-      defaultFontColor: 'rgba(44,53,70,1)',
+      defaultColor: 'rgba(38,54,70,0.1)',
+      defaultFontColor: 'rgba(38,54,70,1)',
       defaultFontFamily: "'Fakt Soft Pro', Verdana, Tahoma, sans-serif",
       defaultFontSize: 16,
       defaultFontStyle: 'normal',
@@ -6138,14 +6138,14 @@ module.exports = function (Chart) {
     position: 'left',
     gridLines: {
       display: true,
-      color: 'rgba(229,234,244,1)',
+      color: 'rgba(228,233,244,1)',
       lineWidth: 1,
       drawBorder: true,
       drawOnChartArea: true,
       drawTicks: true,
       tickMarkLength: 10,
       zeroLineWidth: 1,
-      zeroLineColor: 'rgba(229,234,244,1)',
+      zeroLineColor: 'rgba(228,233,244,1)',
       offsetGridLines: false
     },
     scaleLabel: {
@@ -7006,7 +7006,7 @@ module.exports = function (Chart) {
     enabled: true,
     custom: null,
     mode: 'single',
-    backgroundColor: 'rgba(44,53,70,1)',
+    backgroundColor: 'rgba(38,54,70,1)',
     titleFontStyle: '500',
     titleSpacing: 0,
     titleMarginBottom: 3,
@@ -8681,7 +8681,7 @@ module.exports = function (Chart) {
     position: 'chartArea',
     angleLines: {
       display: true,
-      color: 'rgba(229,234,244,1)',
+      color: 'rgba(228,233,244,1)',
       lineWidth: 1
     },
     ticks: {

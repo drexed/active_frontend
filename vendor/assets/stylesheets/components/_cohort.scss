@@ -85,21 +85,20 @@
   border-bottom-width: 1px;
   border-right-width: 1px;
 }
-.cohort-extra-low,
+.cohort-lowest,
 .cohort-low,
-.cohort-medium-low,
+.cohort-lowish,
 .cohort-medium,
-.cohort-medium-high,
+.cohort-highish,
 .cohort-high,
-.cohort-hot,
-.cohort-extra-hot { color: color(white); }
-@each $name, $multiplier in (extra-low: 2.5, low: 2.25, medium-low: 1.75, medium: 1) {
-  .cohort-#{$name} { background: lighten(color(primary), percentage((12.5 * $multiplier) / 100)); }
-}
-.cohort-medium-high { background: color(primary); }
-@each $name, $multiplier in (high: 1, hot: 1.75, extra-hot: 2.25) {
-  .cohort-#{$name} { background: darken(color(primary), percentage((12.5 * $multiplier) / 100)); }
-}
+.cohort-highest { color: color(white); }
+.cohort-lowest { background: tintiest-color(primary); }
+.cohort-low { background: tint-color(primary); }
+.cohort-lowish { background: tintish-color(primary); }
+.cohort-medium { background: color(primary); }
+.cohort-highish { background: shadeish-color(primary); }
+.cohort-high { background: shade-color(primary); }
+.cohort-highest { background: shadiest-color(primary); }
 
 // Media Queries
 // ==================================================

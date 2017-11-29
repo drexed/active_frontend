@@ -73,7 +73,7 @@
     &.light {
       &::after { border-bottom-color: color(light-haze); }
     }
-    &.dark {
+    &.white {
       &::after { border-bottom-color: color(white); }
     }
   }

@@ -68,11 +68,11 @@
       var files = _self.pushNameFiles();
 
       if (files.length === 0) {
-        $.event.trigger('filepickerOnFilesDeSelectedCallback');
+        $.event.trigger('bs.filepicker.on-files-deselected');
         _self.options.onFilesDeselectedCallback();
       } else {
         $.event.trigger({
-          type: 'filepickerOnFilesSelectedCallback',
+          type: 'bs.filepicker.on-files-selected',
           count: files.length
         });
         _self.options.onFilesSelectedCallback(files.length);

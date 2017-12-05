@@ -150,7 +150,7 @@
 
     this.$element.val(value);
     $.event.trigger({
-      type: 'selectpickerOnSetVal',
+      type: 'bs.selectpicker.on-set-val',
       value: value
     });
     this.options.onSetValCallback(value);
@@ -163,7 +163,7 @@
         .find("a[data-val='" + value + "']")
         .addClass(this.options.optionSelectedClass);
       $.event.trigger({
-        type: 'selectpickerOnChangeCallback',
+        type: 'bs.selectpicker.on-change',
         old_value: this.$selected,
         new_value: value
       });

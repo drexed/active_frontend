@@ -346,7 +346,7 @@
 
     this.setTime(value);
     $.event.trigger({
-      type: 'timepickerOnSetVal',
+      type: 'bs.timepicker.on-set-val',
       value: value
     });
     this.options.onSetValCallback(value);

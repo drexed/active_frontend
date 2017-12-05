@@ -177,7 +177,7 @@
       });
 
       $.event.trigger({
-        type: 'choicepickerOnCheckAll',
+        type: 'bs.choicepicker.on-check-all',
         value: checkAll.val()
       });
       _self.options.onCheckAllCallback(checkAll.val());
@@ -264,7 +264,7 @@
 
     this.$element.val(label);
     $.event.trigger({
-      type: 'choicepickerOnSetVal',
+      type: 'bs.choicepicker.on-set-val',
       choice: label
     });
     this.options.onSetValCallback(label);

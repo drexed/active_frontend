@@ -59,7 +59,7 @@
       });
 
       $.event.trigger({
-        type: 'layoutOnToggle',
+        type: 'bs.layout.on-toggle',
         toggle: toggle
       });
       options.onToggleCallback(toggle);

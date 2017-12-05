@@ -63,13 +63,13 @@
             list.append(emptyLi);
           }
 
-          $.event.trigger('listOnPlaceholderCallback');
+          $.event.trigger('bs.list.on-placeholder');
           _self.options.onPlaceholderCallback();
         }
       }
 
       $.event.trigger({
-        type: 'listOnVisibleItemsCallback',
+        type: 'bs.list.on-visible-items',
         count: visible
       });
       _self.options.onVisibleItemsCallback(visible);

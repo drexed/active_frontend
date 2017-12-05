@@ -52,7 +52,7 @@
         if (!_self.options.infinite) element.removeClass(animation);
         if (_self.options.hide) element.addClass('hidden');
 
-        $.event.trigger('animationOnTransitionEnd');
+        $.event.trigger('bs.animation.on-transition-end');
         _self.options.onTransitionEndCallback();
       });
   };

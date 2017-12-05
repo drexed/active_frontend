@@ -54,7 +54,7 @@
       e.preventDefault();
 
       _self.displayFormat();
-      $.event.trigger('affirmOnDisplay');
+      $.event.trigger('bs.affirm.on-display');
       _self.options.onDisplayCallback();
 
       return false;
@@ -63,12 +63,12 @@
     $('body')
       .on('click', '[data-affirm-toggle="cancel"]', function () {
         _self.cancelFormat();
-        $.event.trigger('affirmOnCancel');
+        $.event.trigger('bs.affirm.on-cancel');
         _self.options.onCancelCallback();
       })
       .on('click', '[data-affirm-toggle="confirm"]', function () {
         _self.confirmFormat();
-        $.event.trigger('affirmOnConfirm');
+        $.event.trigger('bs.affirm.on-confirm');
         _self.options.onConfirmCallback();
       });
   };

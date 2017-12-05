@@ -144,7 +144,7 @@
     this.removeItems();
 
     $.event.trigger({
-      type: 'tourOnShowCallback',
+      type: 'bs.tour.on-show',
       item: item
     });
     this.options.onShowCallback(item);
@@ -167,14 +167,14 @@
       }, 225);
 
       $.event.trigger({
-        type: 'tourOnShownCallback',
+        type: 'bs.tour.on-shown',
         item: item
       });
       this.options.onShownCallback(item);
     } else {
       if (this.options.skip) this.nextItem();
       $.event.trigger({
-        type: 'tourOnMissCallback',
+        type: 'bs.tour.on-miss',
         item: item
       });
       this.options.onMissCallback(item);

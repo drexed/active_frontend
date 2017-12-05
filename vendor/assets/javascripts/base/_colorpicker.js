@@ -106,7 +106,7 @@
 
     this.$element.val(color);
     $.event.trigger({
-      type: 'colorpickerOnSetVal',
+      type: 'bs.colorpicker.on-set-val',
       color: color
     });
     this.options.onSetValCallback(color);

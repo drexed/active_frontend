@@ -75,7 +75,7 @@
 
     var timezone = this.options.timezones[offset];
     $.event.trigger({
-      type: 'timezoneOnGetTimezone',
+      type: 'bs.timezone.on-get-timezone',
       timezone: timezone
     });
     this.options.onGetTimezoneCallback(timezone);

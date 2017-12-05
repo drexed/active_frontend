@@ -149,6 +149,10 @@
     if (value == '[object Object]') return;
 
     this.$element.val(value);
+    $.event.trigger({
+      type: 'selectpickerOnSetVal',
+      value: value
+    });
     this.options.onSetValCallback(value);
 
     if (this.$selected !== value.toString()) {
@@ -158,6 +162,11 @@
       this.$container
         .find("a[data-val='" + value + "']")
         .addClass(this.options.optionSelectedClass);
+      $.event.trigger({
+        type: 'selectpickerOnChangeCallback',
+        old_value: this.$selected,
+        new_value: value
+      });
       this.options.onChangeCallback(this.$selected, value);
     }
   };

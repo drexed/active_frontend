@@ -293,6 +293,10 @@
     var value = this.getFormattedDate();
 
     this.$element.val(value);
+    $.event.trigger({
+      type: 'datepickerOnSetVal',
+      value: value
+    });
     this.options.onSetValCallback(value);
   };
 

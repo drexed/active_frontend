@@ -18,7 +18,10 @@
   padding: 13px 20px;
   width: 100%;
 
-  .alert-close { float: right; }
+  .alert-close {
+    float: right;
+    margin-left: 15px;
+  }
 
   &.absolute,
   &.fixed { z-index: 2060; }

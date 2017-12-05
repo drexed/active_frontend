@@ -63,10 +63,15 @@
             list.append(emptyLi);
           }
 
+          $.event.trigger('listOnPlaceholderCallback');
           _self.options.onPlaceholderCallback();
         }
       }
 
+      $.event.trigger({
+        type: 'listOnVisibleItemsCallback',
+        count: visible
+      });
       _self.options.onVisibleItemsCallback(visible);
 
       return false;

@@ -52,6 +52,7 @@
         if (!_self.options.infinite) element.removeClass(animation);
         if (_self.options.hide) element.addClass('hidden');
 
+        $.event.trigger('animationOnTransitionEnd');
         _self.options.onTransitionEndCallback();
       });
   };

@@ -58,6 +58,10 @@
         hide: toggle === 'out'
       });
 
+      $.event.trigger({
+        type: 'layoutOnToggle',
+        toggle: toggle
+      });
       options.onToggleCallback(toggle);
     });
   };

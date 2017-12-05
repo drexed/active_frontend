@@ -105,6 +105,10 @@
     if (!this.$active) return;
 
     this.$element.val(color);
+    $.event.trigger({
+      type: 'colorpickerOnSetVal',
+      color: color
+    });
     this.options.onSetValCallback(color);
   };
 

@@ -54,6 +54,7 @@
       e.preventDefault();
 
       _self.displayFormat();
+      $.event.trigger('affirmOnDisplay');
       _self.options.onDisplayCallback();
 
       return false;
@@ -62,10 +63,12 @@
     $('body')
       .on('click', '[data-affirm-toggle="cancel"]', function () {
         _self.cancelFormat();
+        $.event.trigger('affirmOnCancel');
         _self.options.onCancelCallback();
       })
       .on('click', '[data-affirm-toggle="confirm"]', function () {
         _self.confirmFormat();
+        $.event.trigger('affirmOnConfirm');
         _self.options.onConfirmCallback();
       });
   };

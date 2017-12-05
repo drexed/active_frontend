@@ -74,6 +74,10 @@
     if (offset === 'undefined') return this.options.default;
 
     var timezone = this.options.timezones[offset];
+    $.event.trigger({
+      type: 'timezoneOnGetTimezone',
+      timezone: timezone
+    });
     this.options.onGetTimezoneCallback(timezone);
 
     return timezone;

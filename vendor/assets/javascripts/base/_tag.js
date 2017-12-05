@@ -33,7 +33,7 @@
     itemValue: function(item) {
       return item ? item.toString() : item;
     },
-    onTagExists: function(item, $tag) {},
+    onTagExists: function(item, tag) {},
     tagClass: function(item) {
       return 'label label-color-primary label-color-tint label-outline';
     },
@@ -118,6 +118,11 @@
           return $(this).data('item') === existing;
         });
 
+        $.event.trigger({
+          type: 'tagOnTagExists',
+          item: item,
+          tag: $existingTag
+        });
         _self.options.onTagExists(item, $existingTag);
       }
 

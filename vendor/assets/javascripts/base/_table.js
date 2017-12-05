@@ -115,6 +115,10 @@
           break;
       }
 
+      $.event.trigger({
+        type: 'tableOnSort',
+        direction: dataSort
+      });
       _self.options.onSortCallback(dataSort);
       _self.setSortStatus(trTh, reSort);
 

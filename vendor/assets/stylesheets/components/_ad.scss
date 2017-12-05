@@ -2,6 +2,7 @@
 // ==================================================
 // Ad
 // Sizes
+// Media Queries
 
 // Ad
 // ==================================================
@@ -75,4 +76,20 @@
 .ad-small-square {
   height: 200px;
   width: 200px;
+}
+.ad-custom,
+.ad-responsive {
+  height: 60px;
+  width: 100%;
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: 767px) {
+  .ad {
+    &.responsive {
+      height: 60px;
+      width: 100%;
+    }
+  }
 }

@@ -143,6 +143,10 @@
 
     this.removeItems();
 
+    $.event.trigger({
+      type: 'tourOnShowCallback',
+      item: item
+    });
     this.options.onShowCallback(item);
 
     if (element.length !== 0 && element.is(':visible')) {
@@ -162,9 +166,17 @@
         element.popover('show');
       }, 225);
 
+      $.event.trigger({
+        type: 'tourOnShownCallback',
+        item: item
+      });
       this.options.onShownCallback(item);
     } else {
       if (this.options.skip) this.nextItem();
+      $.event.trigger({
+        type: 'tourOnMissCallback',
+        item: item
+      });
       this.options.onMissCallback(item);
     }
   };

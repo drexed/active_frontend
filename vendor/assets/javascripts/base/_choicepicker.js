@@ -176,6 +176,10 @@
         if (selector) selector.prop('checked', checkAll.is(':checked'));
       });
 
+      $.event.trigger({
+        type: 'choicepickerOnCheckAll',
+        value: checkAll.val()
+      });
       _self.options.onCheckAllCallback(checkAll.val());
     });
   };
@@ -259,6 +263,10 @@
     if (label == '[object Object]') return;
 
     this.$element.val(label);
+    $.event.trigger({
+      type: 'choicepickerOnSetVal',
+      choice: label
+    });
     this.options.onSetValCallback(label);
   };
 

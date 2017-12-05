@@ -345,6 +345,10 @@
     var value = this.$element.val();
 
     this.setTime(value);
+    $.event.trigger({
+      type: 'timepickerOnSetVal',
+      value: value
+    });
     this.options.onSetValCallback(value);
   };
 

@@ -31,21 +31,23 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  &:hover,
-  &.active,
-  &:focus {
-    background: darkish-color(haze);
-    box-shadow: inset 0 -2px dark-color(haze);
+  @if ($pseudo-elements) {
+    &:hover,
+    &.active,
+    &:focus {
+      background: darkish-color(haze);
+      box-shadow: inset 0 -2px dark-color(haze);
+    }
+    &:active,
+    &.disabled,
+    &[disabled] {
+      background: lightish-color(haze);
+      box-shadow: none;
+      color: transparentize(color(black), 0.35);
+    }
+    &.disabled,
+    &[disabled] { cursor: not-allowed; }
   }
-  &:active,
-  &.disabled,
-  &[disabled] {
-    background: lightish-color(haze);
-    box-shadow: none;
-    color: transparentize(color(black), 0.35);
-  }
-  &.disabled,
-  &[disabled] { cursor: not-allowed; }
 
   .badge,
   .label {
@@ -73,41 +75,47 @@
     &.btn-link,
     &.btn-outline { color: color($name); }
     &.btn-link {
-      &:hover,
-      &.active,
-      &:focus { color: darkish-color($name); }
-      &:active,
-      &.disabled,
-      &[disabled] { color: lightish-color($name); }
+      @if ($pseudo-elements) {
+        &:hover,
+        &.active,
+        &:focus { color: darkish-color($name); }
+        &:active,
+        &.disabled,
+        &[disabled] { color: lightish-color($name); }
+      }
     }
     &.btn-outline {
       border-color: color($name);
 
-      &:hover,
-      &:active,
-      &.active,
-      &:focus,
-      &.disabled,
-      &[disabled] {
-        border-color: darker-color($name);
-        color: text-color-on($name);
+      @if ($pseudo-elements) {
+        &:hover,
+        &:active,
+        &.active,
+        &:focus,
+        &.disabled,
+        &[disabled] {
+          border-color: darker-color($name);
+          color: text-color-on($name);
+        }
+        &.disabled,
+        &[disabled] { color: color($name); }
       }
-      &.disabled,
-      &[disabled] { color: color($name); }
     }
 
-    &:hover,
-    &.active,
-    &:focus {
-      background: darkish-color($name);
-      box-shadow: inset 0 -2px dark-color($name);
-    }
-    &:active,
-    &.disabled,
-    &[disabled] {
-      background: lightish-color($name);
-      box-shadow: none;
-      color: transparentize(text-color-on($name), 0.35);
+    @if ($pseudo-elements) {
+      &:hover,
+      &.active,
+      &:focus {
+        background: darkish-color($name);
+        box-shadow: inset 0 -2px dark-color($name);
+      }
+      &:active,
+      &.disabled,
+      &[disabled] {
+        background: lightish-color($name);
+        box-shadow: none;
+        color: transparentize(text-color-on($name), 0.35);
+      }
     }
   }
 }
@@ -118,22 +126,26 @@
 .btn-outline {
   background: color(transparent);
 
-  .disabled,
-  &[disabled] { background: inherit; }
+  @if ($pseudo-elements) {
+    .disabled,
+    &[disabled] { background: inherit; }
+  }
 }
 .btn-link {
   border-color: color(transparent);
   border-radius: 0;
   padding: 0;
 
-  &:hover,
-  &:active,
-  &.active,
-  &:focus,
-  &.disabled,
-  &[disabled] {
-    background: inherit;
-    box-shadow: none;
+  @if ($pseudo-elements) {
+    &:hover,
+    &:active,
+    &.active,
+    &:focus,
+    &.disabled,
+    &[disabled] {
+      background: inherit;
+      box-shadow: none;
+    }
   }
 }
 .btn-block {

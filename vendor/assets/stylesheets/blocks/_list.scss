@@ -30,14 +30,16 @@ ul {
     > li:nth-child(even) { background: color(haze); }
   }
 }
-.list-hover {
-  > li:hover { background: color(haze); }
+@if ($pseudo-elements) {
+  .list-hover {
+    > li:hover { background: color(haze); }
 
-  &.dark {
-    > li:hover { background: background-hover-color(black); }
-  }
-  &.light {
-    > li:hover { background: background-hover-color(haze); }
+    &.dark {
+      > li:hover { background: background-hover-color(black); }
+    }
+    &.light {
+      > li:hover { background: background-hover-color(haze); }
+    }
   }
 }
 .list-inline {

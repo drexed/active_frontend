@@ -52,8 +52,10 @@
     display: inline-block;
     margin-top: 5px;
 
-    &:hover,
-    &:active { color: color(primary); }
+    @if ($pseudo-elements) {
+      &:hover,
+      &:active { color: color(primary); }
+    }
   }
 }
 .calendar-header-left {

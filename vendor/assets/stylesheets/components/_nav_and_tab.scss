@@ -127,12 +127,14 @@
       border-radius: border-radius(b);
       padding: 8px 10px;
 
-      &:hover,
-      &:focus { background: color(haze); }
-      &:active {
-        background: color(primary);
-        border-color: darker-color(primary);
-        color: color(white);
+      @if ($pseudo-elements) {
+        &:hover,
+        &:focus { background: color(haze); }
+        &:active {
+          background: color(primary);
+          border-color: darker-color(primary);
+          color: color(white);
+        }
       }
     }
 
@@ -153,8 +155,10 @@
         background: color(black);
         border-color: dark-color(black);
 
-        &:hover,
-        &:focus { background: color(light-black); }
+        @if ($pseudo-elements) {
+          &:hover,
+          &:focus { background: color(light-black); }
+        }
       }
     }
   }
@@ -163,8 +167,10 @@
       > a {
         background: color(white);
 
-        &:hover,
-        &:focus { background: color(light-haze); }
+        @if ($pseudo-elements) {
+          &:hover,
+          &:focus { background: color(light-haze); }
+        }
       }
     }
   }
@@ -208,9 +214,11 @@
       border-bottom: 2px solid color(transparent);
       padding-bottom: 15px;
 
-      &:hover,
-      &:active,
-      &:focus { border-color: inherit; }
+      @if ($pseudo-elements) {
+        &:hover,
+        &:active,
+        &:focus { border-color: inherit; }
+      }
     }
 
     &.pull-right {

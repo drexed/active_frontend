@@ -160,14 +160,16 @@ sup { vertical-align: text-top; }
 // ==================================================
 @each $name, $color in $colors {
   .text-color-#{$name} { color: $color; }
-  .text-color-hover-#{$name} {
-    &:hover { color: $color; }
-  }
-  .text-color-focus-#{$name} {
-    &:focus { color: $color; }
-  }
-  .text-color-active-#{$name} {
-    &:active { color: $color; }
+  @if ($pseudo-elements) {
+    .text-color-hover-#{$name} {
+      &:hover { color: $color; }
+    }
+    .text-color-focus-#{$name} {
+      &:focus { color: $color; }
+    }
+    .text-color-active-#{$name} {
+      &:active { color: $color; }
+    }
   }
 }
 

@@ -23,9 +23,11 @@
         color: color(gray);
         font-size: 24px;
 
-        &:hover,
-        &:active,
-        &:focus { color: color(primary); }
+        @if ($pseudo-elements) {
+          &:hover,
+          &:active,
+          &:focus { color: color(primary); }
+        }
       }
     }
   }

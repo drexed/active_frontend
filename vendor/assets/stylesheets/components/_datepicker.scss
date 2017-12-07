@@ -20,12 +20,14 @@
       padding: 8px 6px;
       text-align: center;
     }
-    th:not(.dow) {
-      &:hover,
-      &:focus {
-        background: color(gray);
-        color: color(white);
-        cursor: pointer;
+    @if ($pseudo-elements) {
+      th:not(.dow) {
+        &:hover,
+        &:focus {
+          background: color(gray);
+          color: color(white);
+          cursor: pointer;
+        }
       }
     }
     td {
@@ -35,32 +37,34 @@
         background: color(light-black);
         color: color(primary);
       }
-      &.day,
-      &.today {
-        &:hover,
-        &:focus {
-          background: color(gray);
-          color: color(white);
-          cursor: pointer;
+      @if ($pseudo-elements) {
+        &.day,
+        &.today {
+          &:hover,
+          &:focus {
+            background: color(gray);
+            color: color(white);
+            cursor: pointer;
+          }
+          &:active,
+          &.active {
+            background: color(primary);
+            color: color(white);
+          }
         }
-        &:active,
-        &.active {
-          background: color(primary);
-          color: color(white);
-        }
-      }
-      &.old,
-      &.new {
-        color: color(light-gray);
+        &.old,
+        &.new {
+          color: color(light-gray);
 
-        &:hover,
-        &:focus { color: color(white); }
-      }
-      &.disabled {
-        background: color(transparent) !important;
-        color: color(dark-gray) !important;
-        cursor: not-allowed !important;
-        text-decoration: line-through;
+          &:hover,
+          &:focus { color: color(white); }
+        }
+        &.disabled {
+          background: color(transparent) !important;
+          color: color(dark-gray) !important;
+          cursor: not-allowed !important;
+          text-decoration: line-through;
+        }
       }
 
       span {
@@ -71,24 +75,26 @@
         padding: 13px 0;
         width: 23%;
 
-        &:hover,
-        &.focus,
-        &.focused {
-          background: color(gray);
-          color: color(white);
-          cursor: pointer;
-        }
-        &:active,
-        &.active,
-        &.focused {
-          background: color(primary);
-          color: color(white);
-        }
-        &.disabled {
-          background: color(transparent) !important;
-          color: color(dark-gray) !important;
-          cursor: not-allowed !important;
-          text-decoration: line-through;
+        @if ($pseudo-elements) {
+          &:hover,
+          &.focus,
+          &.focused {
+            background: color(gray);
+            color: color(white);
+            cursor: pointer;
+          }
+          &:active,
+          &.active,
+          &.focused {
+            background: color(primary);
+            color: color(white);
+          }
+          &.disabled {
+            background: color(transparent) !important;
+            color: color(dark-gray) !important;
+            cursor: not-allowed !important;
+            text-decoration: line-through;
+          }
         }
       }
     }

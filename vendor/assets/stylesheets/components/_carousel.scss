@@ -50,11 +50,13 @@
   top: 0;
   width: 70px;
 
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: 1;
-    outline: none;
+  @if ($pseudo-elements) {
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+      outline: none;
+    }
   }
 
   &.right {

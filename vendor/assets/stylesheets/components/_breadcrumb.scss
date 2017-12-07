@@ -15,19 +15,23 @@
 
     &.divider { margin: 0 5px; }
 
-    > a {
-      &:hover,
-      &:active,
-      &:focus { color: color(primary); }
+    @if ($pseudo-elements) {
+      > a {
+        &:hover,
+        &:active,
+        &:focus { color: color(primary); }
+      }
     }
   }
 
-  @each $name, $color in $colors-global {
-    &.#{$name} {
-      > li {
-        &:hover,
-        &:active,
-        &:focus { color: color($name); }
+  @if ($pseudo-elements) {
+    @each $name, $color in $colors-global {
+      &.#{$name} {
+        > li {
+          &:hover,
+          &:active,
+          &:focus { color: color($name); }
+        }
       }
     }
   }

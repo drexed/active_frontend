@@ -351,10 +351,12 @@
         a {
           i { display: none; }
 
-          &.checked,
-          &:hover,
-          &:active,
-          &:focus { color: color(primary); }
+          @if ($pseudo-elements) {
+            &.checked,
+            &:hover,
+            &:active,
+            &:focus { color: color(primary); }
+          }
         }
       }
     }
@@ -371,7 +373,9 @@
         padding: 0;
         width: 20px;
 
-        &:hover { border: 1px solid color(black); }
+        @if ($pseudo-elements) {
+          &:hover { border: 1px solid color(black); }
+        }
       }
     }
   }
@@ -482,19 +486,21 @@
         display: block !important;
         padding: 3px;
 
-        &:hover,
-        &.active,
-        &:active,
-        &:focus {
-          background: #428bca;
-          clear: both;
-          color: color(white);
-          cursor: pointer;
-          display: block;
-          font-weight: text-weight(normal);
-          outline: 0;
-          text-decoration: none;
-          white-space: nowrap;
+        @if ($pseudo-elements) {
+          &:hover,
+          &.active,
+          &:active,
+          &:focus {
+            background: #428bca;
+            clear: both;
+            color: color(white);
+            cursor: pointer;
+            display: block;
+            font-weight: text-weight(normal);
+            outline: 0;
+            text-decoration: none;
+            white-space: nowrap;
+          }
         }
       }
     }

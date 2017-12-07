@@ -27,18 +27,20 @@
     vertical-align: middle;
     width: 1%;
 
-    &:hover,
-    &.active,
-    &:active,
-    &:focus { color: color(primary); }
-
-    &.primary {
+    @if ($pseudo-elements) {
       &:hover,
       &.active,
       &:active,
-      &:focus {
-        background: darkish-color(primary);
-        color: color(white);
+      &:focus { color: color(primary); }
+
+      &.primary {
+        &:hover,
+        &.active,
+        &:active,
+        &:focus {
+          background: darkish-color(primary);
+          color: color(white);
+        }
       }
     }
 

@@ -32,14 +32,18 @@
     border-radius: 999px;
     width: 6px;
   }
-  &::-webkit-scrollbar:hover { background: rgba(color(transparent), 0.15); }
+  @if ($pseudo-elements) {
+    &::-webkit-scrollbar:hover { background: rgba(color(transparent), 0.15); }
+  }
   &::-webkit-scrollbar-thumb {
     background: rgba(color(transparent), 0.5);
     border-radius: 999px;
   }
-  &::-webkit-scrollbar-thumb:active {
-    background: rgba(color(transparent), 0.6);
-    border-radius: 999px;
+  @if ($pseudo-elements) {
+    &::-webkit-scrollbar-thumb:active {
+      background: rgba(color(transparent), 0.6);
+      border-radius: 999px;
+    }
   }
 }
 

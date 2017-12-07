@@ -51,11 +51,13 @@ svg:not(:root) {
 
   &.dark { border-color: color(dark-black); }
 }
-@each $name, $color in $colors {
-  .img-avatar-hover-#{$name} {
-    &:hover,
-    &:active,
-    &:focus { border-color: $color; }
+@if ($pseudo-elements) {
+  @each $name, $color in $colors {
+    .img-avatar-hover-#{$name} {
+      &:hover,
+      &:active,
+      &:focus { border-color: $color; }
+    }
   }
 }
 

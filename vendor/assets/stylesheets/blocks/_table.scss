@@ -64,46 +64,48 @@ thead {
     }
   }
 }
-.table-hover {
-  tbody {
-    tr:hover {
-      td { background: color(haze); }
-    }
-  }
-
-  &.dark {
+@if ($pseudo-elements) {
+  .table-hover {
     tbody {
       tr:hover {
-        td { background: background-hover-color(black); }
+        td { background: color(haze); }
       }
     }
-  }
-  &.light {
-    tbody {
-      tr:hover {
-        td { background: background-hover-color(haze); }
-      }
-    }
-  }
-}
-.table-highlight {
-  tbody {
-    tr {
-      td:hover { background: color(haze); }
-    }
-  }
 
-  &.dark {
-    tbody {
-      tr {
-        td:hover { background: background-hover-color(black); }
+    &.dark {
+      tbody {
+        tr:hover {
+          td { background: background-hover-color(black); }
+        }
+      }
+    }
+    &.light {
+      tbody {
+        tr:hover {
+          td { background: background-hover-color(haze); }
+        }
       }
     }
   }
-  &.light {
+  .table-highlight {
     tbody {
       tr {
-        td:hover { background: background-hover-color(haze); }
+        td:hover { background: color(haze); }
+      }
+    }
+
+    &.dark {
+      tbody {
+        tr {
+          td:hover { background: background-hover-color(black); }
+        }
+      }
+    }
+    &.light {
+      tbody {
+        tr {
+          td:hover { background: background-hover-color(haze); }
+        }
       }
     }
   }

@@ -23,6 +23,13 @@
   vertical-align: baseline;
 
   &:empty { display: none; }
+
+  > img,
+  > svg {
+    margin-right: 2px;
+    max-height: text-size(xs);
+    width: text-size(xs);
+  }
 }
 .badge {
   border-radius: border-radius(xl);
@@ -58,7 +65,15 @@
 .badge-size-l,
 .label-size-l,
 .badge-size-m,
-.label-size-m { font-size: text-size(b); }
+.label-size-m {
+  font-size: text-size(b);
+
+  > img,
+  > svg {
+    max-height: text-size(s);
+    width: text-size(s);
+  }
+}
 .badge-size-l,
 .badge-size-m { min-width: 16px; }
 .badge-size-l { padding: 15px; }
@@ -69,6 +84,12 @@
 .label-size-s {
   font-size: text-size(xs);
   padding: 4px 8px 5px;
+
+  > img,
+  > svg {
+    max-height: text-size(xxs);
+    width: text-size(xxs);
+  }
 }
 .badge-size-s {
   min-width: 0;

@@ -1,6 +1,7 @@
 // Table of Contents
 // ==================================================
 // Subheader
+// Media Queries
 
 // Subheader
 // ==================================================
@@ -53,6 +54,18 @@
       margin-left: 17px;
       position: absolute;
       width: 5px;
+    }
+  }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: 767px) {
+  .subheader {
+    &.absolute,
+    &.fixed {
+      position: fixed;
+      top: 54px;
     }
   }
 }

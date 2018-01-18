@@ -283,6 +283,13 @@
 // Media Queries
 // ==================================================
 @media only screen and (max-width: 767px) {
+  .btn-block-responsive {
+    display: block;
+    min-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
   .btn-group-responsive {
     > .btn {
       border-radius: 0;

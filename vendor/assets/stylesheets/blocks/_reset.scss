@@ -154,8 +154,9 @@ body {
   @include text-size-adjust(100%);
   display: inline;
   height: 100%;
-  width: 100%;
   touch-action: manipulation;
+  visibility: visible;
+  width: 100%;
 }
 body {
   background: color(white);

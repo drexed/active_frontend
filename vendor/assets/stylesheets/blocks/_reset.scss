@@ -152,6 +152,7 @@ body {
   @include overflow-scrolling(touch);
   @include tap-highlight-color(color(transparent));
   @include text-size-adjust(100%);
+  display: inline;
   height: 100%;
   width: 100%;
   touch-action: manipulation;

@@ -69,6 +69,7 @@ textarea,
   &.dark {
     background: color(light-black);
     box-shadow: inset 0 2px 0 0 dark-color(light-black);
+    color: color(white);
 
     &[disabled] { background: color(black); }
   }

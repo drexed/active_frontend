@@ -331,5 +331,49 @@
         }
       }
     }
+    &.btn-group-block {
+      > .btn {
+        border-radius: 0;
+        border-right-width: 1px;
+        display: block;
+        margin-left: 0;
+        margin-top: -1px;
+        width: 100%;
+
+        &:first-child {
+          border-top-right-radius: border-radius(b);
+          border-top-left-radius: border-radius(b);
+          margin-left: 0;
+        }
+        &:last-child,
+        &.dropdown-toggle {
+          border-bottom-right-radius: border-radius(b);
+          border-bottom-left-radius: border-radius(b);
+        }
+      }
+
+      &.btn-group-vertical {
+        > .btn {
+          border-right-width: 0;
+          display: table-cell;
+          width: 1%;
+
+          &:first-child {
+            border-bottom-left-radius: border-radius(b);
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-top-left-radius: border-radius(b);
+          }
+          &:last-child,
+          &.dropdown-toggle {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: border-radius(b);
+            border-right-width: 1px;
+            border-top-left-radius: 0;
+            border-top-right-radius: border-radius(b);
+          }
+        }
+      }
+    }
   }
 }

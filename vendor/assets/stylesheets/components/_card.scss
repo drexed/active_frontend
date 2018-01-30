@@ -8,7 +8,7 @@
 // ==================================================
 .card {
   border: 1px solid;
-  border-color: color(dark-haze);
+  border-color: color(haze);
   border-radius: border-radius(b);
 
   > img {
@@ -25,19 +25,20 @@
     border-width: 0;
   }
 }
-.card-header,
 .card-body,
 .card-footer { padding: 10px 15px; }
 .card-header {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   font-weight: text-weight(semibold);
+  padding: 9px 15px 11px;
 }
 .card-wizard {
   border-collapse: separate;
   box-sizing: border-box;
   display: table;
   font-size: text-size(s);
+  font-weight: text-weight(normal);
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -48,7 +49,7 @@
   > a,
   > li {
     display: table-cell;
-    padding: 8px 0 10px;
+    padding: 9px 0;
     text-align: center;
     vertical-align: middle;
     width: 1%;
@@ -59,7 +60,7 @@
     }
 
     &.current {
-      background: color(haze);
+      background: background-hover-color(light-haze);
       color: color(primary);
     }
     &.completed {
@@ -71,14 +72,14 @@
   &.dark {
     > a,
     > li {
-      &.current { background: color(light-black); }
-      &.completed { background: color(black); }
+      &.current { background: background-hover-color(slate); }
+      &.completed { background: color(slate); }
     }
   }
   &.light {
     > a,
     > li {
-      &.current { background: color(dark-haze); }
+      &.current { background: background-hover-color(haze); }
       &.completed { background: color(haze); }
     }
   }
@@ -95,7 +96,25 @@
     border-top-width: 1px;
   }
 }
-.card-footer {
+.card-footer,
+.card-actions {
   border-top-style: solid;
   border-top-width: 1px;
+}
+.card-actions {
+  display: table;
+  width: 100%;
+
+  a {
+    display: table-cell;
+    line-height: 1;
+    padding: 15px 0;
+    text-align: center;
+    width: 1%;
+
+    &:not(:last-child) {
+      border-right-style: solid;
+      border-right-width: 1px;
+    }
+  }
 }

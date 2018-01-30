@@ -501,7 +501,7 @@ GMaps.prototype.createControl = function (options) {
   control.style.cursor = 'pointer';
 
   if (options.disableDefaultStyles !== true) {
-    control.style.fontFamily = '"Fakt Soft Pro", "Fakt Pro", Roboto, Arial, sans-serif';
+    control.style.fontFamily = '"Circular", Roboto, Arial, sans-serif';
     control.style.fontSize = '12px';
     control.style.boxShadow = 'rgba(0,0,0,0.298039) 0px 1px 4px -1px';
   }

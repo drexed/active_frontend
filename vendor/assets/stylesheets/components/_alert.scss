@@ -11,9 +11,9 @@
   border: 0;
   border-bottom-width: 1px;
   border-style: solid;
-  border-color: dark-color(light-haze);
+  border-color: color(haze);
   box-sizing: border-box;
-  color: color(black);
+  color: color(slate);
   display: block;
   padding: 13px 20px;
   width: 100%;
@@ -42,7 +42,7 @@
 @each $name, $color in $colors {
   .alert-color-#{$name} {
     background: color($name);
-    border-color: dark-color($name);
+    border-color: darker-color($name);
     color: text-color-on($name);
 
     &.alert-outline {

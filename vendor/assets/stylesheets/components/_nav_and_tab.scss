@@ -8,7 +8,7 @@
 // Nav & Tab
 // ==================================================
 .nav {
-  border-color: color(dark-haze);
+  border-color: color(haze);
   list-style: none;
   padding: 0;
 
@@ -66,7 +66,7 @@
 
   &.dark {
     > li {
-      &.nav-header { background: color(light-black); }
+      &.nav-header { background: color(light-slate); }
     }
   }
   &.light {
@@ -123,7 +123,7 @@
 
     > a {
       background: color(light-haze);
-      border: 1px solid darker-color(light-haze);
+      border: 1px solid color(light-haze);
       border-radius: border-radius(b);
       padding: 8px 10px;
 
@@ -132,7 +132,7 @@
         &:focus { background: color(haze); }
         &:active {
           background: color(primary);
-          border-color: darker-color(primary);
+          border-color: color(primary);
           color: color(white);
         }
       }
@@ -144,7 +144,7 @@
     }
     &.active > a {
       background: color(primary);
-      border-color: darker-color(primary);
+      border-color: color(primary);
       color: color(white);
     }
   }
@@ -152,12 +152,12 @@
   &.dark {
     > li {
       > a {
-        background: color(black);
-        border-color: dark-color(black);
+        background: color(slate);
+        border-color: color(dark-slate);
 
         @if ($pseudo-elements) {
           &:hover,
-          &:focus { background: color(light-black); }
+          &:focus { background: color(light-slate); }
         }
       }
     }
@@ -181,8 +181,8 @@
       > a:active,
       &.active > a {
         background: color(primary);
-        border-color: dark-color(primary);
-        color: color(white);
+        border-color: color(primary);
+        color: text-color-on(primary);
       }
     }
   }
@@ -193,8 +193,8 @@
         > a:active,
         &.active > a {
           background: color($name);
-          border-color: dark-color($name);
-          color: color(white);
+          border-color: color($name);
+          color: text-color-on($name);
         }
       }
     }

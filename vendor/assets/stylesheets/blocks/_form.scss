@@ -17,22 +17,16 @@
 // Reset
 // ==================================================
 ::-webkit-file-upload-button { @include appearance(button); }
-::-webkit-input-placeholder {
-  color: color(gray);
-  font-weight: 300;
-}
-::-moz-placeholder {
-  color: color(gray);
-  font-weight: 300;
-}
-:-ms-input-placeholder {
-  color: color(gray);
-  font-weight: 300;
+::placeholder {
+  color: color(light-gray);
+  font-weight: text-weight(semilight);
+  line-height: 1;
+  vertical-align: middle;
 }
 fieldset,
 legend { border: 0; }
 legend {
-  border-bottom: 1px solid color(dark-haze);
+  border-bottom: 1px solid color(haze);
   box-sizing: border-box;
   display: table;
   max-width: 100%;
@@ -50,13 +44,13 @@ textarea,
   @include appearance(none);
   @include transition(all 0.3s ease-in-out);
   background: color(white);
-  border: 1px solid color(dark-haze);
+  border: 1px solid color(haze);
   border-radius: border-radius(b);
   box-sizing: border-box;
   display: block;
   line-height: 1;
   margin-bottom: 10px;
-  padding: 9px 15px;
+  padding: 11px 15px 12px;
   width: 100%;
   vertical-align: middle;
 }
@@ -64,18 +58,13 @@ input:not([type='submit']),
 select,
 textarea,
 .form-tags {
-  box-shadow: inset 0 2px 0 0 darkish-color(light-haze);
-
   &.dark {
-    background: color(light-black);
-    box-shadow: inset 0 2px 0 0 dark-color(light-black);
+    background: color(light-slate);
     color: color(white);
 
-    &[disabled] { background: color(black); }
+    &[disabled] { background: color(slate); }
   }
   &.light {
-    box-shadow: inset 0 2px 0 0 darker-color(light-haze);
-
     &[disabled] { background: color(light-haze); }
   }
 
@@ -83,29 +72,15 @@ textarea,
     @include text-fill-color(color(gray));
     background: color(light-haze);
     color: color(gray);
-    font-weight: text-weight(normal) !important;
+    font-weight: text-weight(semilight) !important;
   }
   &:focus,
   &.focus {
-    box-shadow: inset 0 2px 0 0 transparentize(color(blue), 0.5);
     border-color: color(blue);
+
+    &:invalid,
+    &.invalid { border-color: color(red); }
   }
-  &:focus:invalid,
-  &.focus:invalid {
-    box-shadow: inset 0 2px 0 0 transparentize(color(red), 0.5);
-    border-color: color(red);
-  }
-}
-input {
-  &::-webkit-input-placeholder { line-height: 24px; }
-  &::-moz-placeholder { line-height: 24px; }
-  &:-ms-input-placeholder { line-height: 24px; }
-}
-input,
-textarea {
-  &::-webkit-input-placeholder { font-weight: text-weight(normal); }
-  &::-moz-placeholder { line-height: text-weight(normal); }
-  &:-ms-input-placeholder { line-height: text-weight(normal); }
 }
 input[type='submit'] {
   margin: 0;
@@ -125,6 +100,9 @@ label {
   line-height: 1;
   margin-bottom: 5px;
 }
+input {
+  &::placeholder { line-height: 20px; }
+}
 select {
   padding: 13px 15px;
 
@@ -136,16 +114,12 @@ select {
 textarea {
   height: 152px;
   overflow: auto;
-
-  &::-webkit-input-placeholder { line-height: 1; }
-  &::-moz-placeholder { line-height: 1; }
-  &:-ms-input-placeholder { line-height: 1; }
 }
 
 // Inputs
 // ==================================================
 .form-input {
-  border-color: color(dark-haze);
+  border-color: color(haze);
   vertical-align: middle;
 
   &.form-size-l {
@@ -153,12 +127,10 @@ textarea {
     textarea,
     .form-tags {
       font-size: text-size(l);
-      padding: 13px 20px 14px;
+      padding: 18px 20px;
     }
     input {
-      &::-webkit-input-placeholder { line-height: 30px; }
-      &::-moz-placeholder { line-height: 30px; }
-      &:-ms-input-placeholder { line-height: 30px; }
+      &::placeholder { line-height: 24px; }
     }
     textarea { height: 197px; }
 
@@ -174,12 +146,10 @@ textarea {
     textarea,
     .form-tags {
       font-size: text-size(m);
-      padding: 10px 20px 11px;
+      padding: 14px 20px;
     }
     input {
-      &::-webkit-input-placeholder { line-height: 28px; }
-      &::-moz-placeholder { line-height: 28px; }
-      &:-ms-input-placeholder { line-height: 28px; }
+      &::placeholder { line-height: 22px; }
     }
     textarea { height: 173px; }
 
@@ -196,12 +166,10 @@ textarea {
     .form-tags {
       font-size: text-size(s);
       margin-bottom: 5px;
-      padding: 5px 10px;
+      padding: 7px 10px;
     }
     input {
-      &::-webkit-input-placeholder { line-height: 20px; }
-      &::-moz-placeholder { line-height: 20px; }
-      &:-ms-input-placeholder { line-height: 20px; }
+      &::placeholder { line-height: 18px; }
     }
     textarea { height: 109px; }
 
@@ -244,6 +212,9 @@ textarea {
       width: inherit;
     }
   }
+  &.dark,
+  &.light,
+  &.white { background: color(transparent); }
 }
 
 // Selects
@@ -252,13 +223,13 @@ textarea {
   &.form-size-l {
     select {
       font-size: text-size(l);
-      padding: 19px 20px 20px;
+      padding: 20px;
     }
   }
   &.form-size-m {
     select {
       font-size: text-size(m);
-      padding: 16px 20px 17px;
+      padding: 15px 20px 17px;
     }
   }
   &.form-size-s {
@@ -311,7 +282,7 @@ textarea {
     font-size: text-size(m);
     font-style: normal;
     font-variant: normal;
-    font-weight: normal;
+    font-weight: text-weight(normal);
     line-height: 1;
     margin-top: -8px;
     pointer-events: none;
@@ -342,6 +313,9 @@ textarea {
       right: 10px;
     }
   }
+  &.dark,
+  &.light,
+  &.white { background: color(transparent); }
 }
 
 // Checkboxes & Radios
@@ -350,9 +324,8 @@ textarea {
 .form-radio {
   background: color(white);
   border: 1px solid;
-  border-color: color(dark-haze);
+  border-color: color(haze);
   border-radius: border-radius(b);
-  box-shadow: inset 0 2px 0 0 darkish-color(light-haze);
   display: inline-block;
   height: 18px;
   line-height: 18px;
@@ -374,10 +347,7 @@ textarea {
     width: 100%;
 
     @if ($pseudo-elements) {
-      &:hover {
-        background: color(haze);
-        box-shadow: none !important;
-      }
+      &:hover { background: color(haze); }
     }
   }
   input[type='checkbox'],
@@ -391,13 +361,11 @@ textarea {
 
     &[disabled] + label {
       background: lightish-color(haze);
-      box-shadow: none !important;
       cursor: not-allowed;
     }
     &:checked + label {
       background: color(green);
       border-color: color(green);
-      box-shadow: none !important;
       color: color(white);
     }
     &[disabled]:checked + label {
@@ -426,23 +394,21 @@ textarea {
   &.form-align-vertical { vertical-align: middle; }
   &.dark {
     label {
-      background: color(light-black);
-      box-shadow: inset 0 2px 0 0 dark-color(light-black);
+      background: color(light-slate);
 
       @if ($pseudo-elements) {
-        &:hover { background: color(dark-black); }
+        &:hover { background: color(dark-slate); }
       }
     }
 
     input[type='checkbox'],
     input[type='radio'] {
-      &[disabled] + label { background: lightish-color(dark-black); }
+      &[disabled] + label { background: lightish-color(dark-slate); }
     }
   }
   &.light {
     label {
       background: color(light-haze);
-      box-shadow: inset 0 2px 0 0 darker-color(light-haze);
 
       @if ($pseudo-elements) {
         &:hover { background: color(dark-haze); }
@@ -475,7 +441,6 @@ textarea {
   input:focus {
     background: color(transparent);
     border: 0;
-    box-shadow: none;
     display: inline-block;
     outline: none;
     margin: 0;
@@ -541,7 +506,7 @@ textarea {
   }
   &.dark {
     > label,
-    > .form-tags + label { background: color(light-black); }
+    > .form-tags + label { background: color(light-slate); }
   }
   &.light {
     > label,
@@ -614,7 +579,7 @@ textarea {
       margin-top: -2px;
     }
 
-    &.dark { border-color: color(dark-black); }
+    &.dark { border-color: color(dark-slate); }
     &.with-addon-btn {
       border: 0;
       min-width: auto;

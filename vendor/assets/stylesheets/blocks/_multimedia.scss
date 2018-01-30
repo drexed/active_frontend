@@ -49,7 +49,7 @@ svg:not(:root) {
 
   img { border-radius: inherit; }
 
-  &.dark { border-color: color(dark-black); }
+  &.dark { border-color: color(dark-slate); }
 }
 @if ($pseudo-elements) {
   @each $name, $color in $colors {

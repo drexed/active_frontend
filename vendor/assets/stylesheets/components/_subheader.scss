@@ -5,17 +5,13 @@
 
 // Subheader
 // ==================================================
-.subheader,
-.subheader-buffer {
-  border-bottom: 1px solid color(transparent);
+.subheader {
+  background: color(white);
+  border-bottom: 1px solid color(haze);
   box-sizing: border-box;
   height: 49px;
   line-height: 1;
   padding: 7px 0;
-}
-.subheader {
-  background: color(white);
-  border-bottom-color: color(dark-haze);
 
   &.absolute,
   &.fixed { z-index: 1030; }

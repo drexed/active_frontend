@@ -3,6 +3,7 @@
 // Reset
 // Pygments
 
+// scss-lint:disable ImportantRule
 // scss-lint:disable MergeableSelector
 
 // Reset
@@ -11,31 +12,29 @@ code,
 kbd,
 pre,
 samp {
-  background: color(light-haze);
-  border: 1px solid color(dark-haze);
+  background: color(slate);
+  border: 1px solid color(dark-slate);
   border-radius: border-radius(b);
-  color: color(black);
+  color: color(dark-haze);
   font-family: text-family(monospace);
   font-size: text-size(s);
   line-height: text-line-height(s);
   white-space: nowrap;
 }
 code,
-kbd { padding: 3px 7px 5px; }
-code {
-  color: color(red);
-
-  &.dark,
-  &.light,
-  &.white { color: color(red); }
+kbd {
+  padding: 4px 8px 6px;
+  vertical-align: text-top;
 }
+code { color: color(orange) !important; }
 kbd {
   border-bottom-width: 3px;
-  box-shadow: inset 0 0 0 2px color(white);
-  padding-bottom: 3px;
+  box-shadow: inset 0 0 0 2px color(light-slate);
+  padding-bottom: 4px;
   text-transform: uppercase;
 
-  &.dark { box-shadow: inset 0 0 0 2px color(light-black); }
+  &.light,
+  &.white { box-shadow: inset 0 0 0 2px color(white); }
 }
 pre,
 samp {
@@ -57,7 +56,7 @@ samp {
   } // Comment
   .err {
     color: color(red);
-    background: color(black);
+    background: color(slate);
   } // Error
   .k { color: color(blue); } // Keyword
   .cm {
@@ -82,10 +81,10 @@ samp {
   } // Generic.Heading
   .gi { color: color(green); } // Generic.Inserted
   .go { color: color(gray); } // Generic.Output
-  .gp { color: color(black); } // Generic.Prompt
+  .gp { color: color(slate); } // Generic.Prompt
   .gs { font-weight: bold; } // Generic.Strong
   .gu {
-    color: color(black);
+    color: color(slate);
     font-weight: bold;
   } // Generic.Subheading
   .gt { color: color(red); } // Generic.Traceback

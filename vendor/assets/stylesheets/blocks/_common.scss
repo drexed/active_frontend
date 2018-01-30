@@ -88,19 +88,19 @@
 // Colors
 // ==================================================
 .dark {
-  background: color(black);
-  border-color: color(dark-black);
-  color: color(gray);
+  background: color(slate);
+  border-color: color(dark-slate);
+  color: color(dark-haze);
 }
 .primary {
   background: color(primary);
   border-color: darker-color(primary);
-  color: color(white);
+  color: text-color-on(primary);
 }
 .light,
 .white {
-  border-color: color(dark-haze);
-  color: color(black);
+  border-color: color(haze);
+  color: color(slate);
 }
 .light { background: color(light-haze); }
 .white { background: color(white); }
@@ -118,11 +118,11 @@
 // Box shadows
 // ==================================================
 @each $name, $spread in $common-box-shadows {
-  .box-shadow-#{$name} { box-shadow: 0 0 $spread darker-color(dark-haze) !important; }
-  .box-shadow-bottom-#{$name} { box-shadow: 0 1px $spread darker-color(dark-haze) !important; }
-  .box-shadow-left-#{$name} { box-shadow: -1px 0 $spread darker-color(dark-haze) !important; }
-  .box-shadow-right-#{$name} { box-shadow: 1px 0 $spread darker-color(dark-haze) !important; }
-  .box-shadow-top-#{$name} { box-shadow: 0 -1px $spread darker-color(dark-haze) !important; }
+  .box-shadow-#{$name} { box-shadow: 0 0 $spread 0 darker-color(dark-haze) !important; }
+  .box-shadow-bottom-#{$name} { box-shadow: 0 1px $spread 0 darker-color(dark-haze) !important; }
+  .box-shadow-left-#{$name} { box-shadow: -1px 0 $spread 0 darker-color(dark-haze) !important; }
+  .box-shadow-right-#{$name} { box-shadow: 1px 0 $spread 0 darker-color(dark-haze) !important; }
+  .box-shadow-top-#{$name} { box-shadow: 0 -1px $spread 0 darker-color(dark-haze) !important; }
 }
 
 // Border width

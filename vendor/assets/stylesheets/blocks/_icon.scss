@@ -9,7 +9,7 @@
   font-display: auto;
   font-family: 'Active Icons';
   font-style: normal;
-  font-weight: normal;
+  font-weight: text-weight(normal);
   src: url(font-path('active-icons/active-icons.woff')) format('woff');
 }
 
@@ -24,7 +24,7 @@
     font-family: 'Active Icons';
     font-style: normal;
     font-variant: normal;
-    font-weight: normal;
+    font-weight: text-weight(normal);
     margin: 0;
     padding: 0;
     speak: none;

@@ -31,10 +31,10 @@
       }
     }
     td {
-      color: color(white);
+      color: color(dark-haze);
 
       &.today {
-        background: color(light-black);
+        background: color(light-slate);
         color: color(primary);
       }
       @if ($pseudo-elements) {
@@ -49,7 +49,7 @@
           &:active,
           &.active {
             background: color(primary);
-            color: color(white);
+            color: text-color-on(primary);
           }
         }
         &.old,
@@ -57,7 +57,7 @@
           color: color(light-gray);
 
           &:hover,
-          &:focus { color: color(white); }
+          &:focus { color: color(dark-haze); }
         }
         &.disabled {
           background: color(transparent) !important;
@@ -87,7 +87,7 @@
           &.active,
           &.focused {
             background: color(primary);
-            color: color(white);
+            color: text-color-on(primary);
           }
           &.disabled {
             background: color(transparent) !important;

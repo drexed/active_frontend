@@ -16,7 +16,7 @@
 table {
   background: color(trasparent);
   border-collapse: collapse;
-  border-color: color(dark-haze);
+  border-color: color(haze);
   border-spacing: 0;
 }
 caption,
@@ -24,9 +24,10 @@ thead,
 tfoot { font-weight: text-weight(semibold); }
 caption,
 td,
-th { vertical-align: middle; }
-td { padding: 8px; }
-th { padding: 10px 10px 8px; }
+th {
+  padding: 8px;
+  vertical-align: middle;
+}
 thead {
   tr:not(:last-child) {
     th { text-align: center; }
@@ -52,7 +53,7 @@ thead {
   &.dark {
     tbody {
       tr:nth-child(odd) {
-        td { background: color(light-black); }
+        td { background: color(light-slate); }
       }
     }
   }
@@ -68,14 +69,14 @@ thead {
   .table-hover {
     tbody {
       tr:hover {
-        td { background: color(haze); }
+        td { background: background-hover-color(light-haze); }
       }
     }
 
     &.dark {
       tbody {
         tr:hover {
-          td { background: background-hover-color(black); }
+          td { background: background-hover-color(slate); }
         }
       }
     }
@@ -90,14 +91,14 @@ thead {
   .table-highlight {
     tbody {
       tr {
-        td:hover { background: color(haze); }
+        td:hover { background: background-hover-color(light-haze); }
       }
     }
 
     &.dark {
       tbody {
         tr {
-          td:hover { background: background-hover-color(black); }
+          td:hover { background: background-hover-color(slate); }
         }
       }
     }
@@ -161,7 +162,7 @@ thead {
     th:first-child { border-left-width: 0; }
   }
 
-  &.dark { border-color: color(dark-black); }
+  &.dark { border-color: color(dark-slate); }
 }
 .table-line {
   tbody,
@@ -213,10 +214,12 @@ thead {
   .table-responsive {
     @include overflow-scrolling(touch);
     background: color(transparent);
-    border: 1px solid color(dark-haze);
+    border: 1px solid color(haze);
     border-radius: border-radius(b);
     max-height: 300px;
     overflow: scroll;
+
+    &.dark { border-color: color(dark-slate); }
 
     td,
     th { white-space: nowrap; }
@@ -236,7 +239,6 @@ thead {
       caption {
         border-bottom-style: solid;
         border-bottom-width: 3px;
-        padding: 10px 10px 8px;
       }
     }
     .table-line {

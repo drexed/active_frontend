@@ -8,7 +8,7 @@
 // ==================================================
 .switch {
   border: 1px solid;
-  border-color: color(dark-haze);
+  border-color: color(haze);
   border-radius: border-radius(xl);
   cursor: pointer;
   display: inline-block;
@@ -48,6 +48,7 @@
     box-sizing: border-box;
     display: block;
     height: 28px;
+    left: initial;
     position: absolute;
     right: calc(50% - 1px);
     width: 28px;
@@ -76,7 +77,10 @@
 
   &.off {
     .switch-group { left: -100%; }
-    .switch-handle { right: calc(50% - 27px); }
+    .switch-handle {
+      left: calc(50% - 1px);
+      right: initial;
+    }
   }
   &.disabled {
     cursor: not-allowed;
@@ -84,7 +88,7 @@
     * { cursor: not-allowed; }
   }
   &.dark {
-    .switch-handle { background: color(light-black); }
+    .switch-handle { background: color(light-slate); }
   }
   &.light {
     .switch-handle { background: color(haze); }
@@ -108,10 +112,6 @@
   }
   .switch-off { padding-right: 14px; }
   .switch-on { padding-left: 14px; }
-
-  &.off {
-    .switch-handle { right: calc(50% - 35px); }
-  }
 }
 .switch-size-m {
   height: 32px;
@@ -128,10 +128,6 @@
   }
   .switch-off { padding-right: 12px; }
   .switch-on { padding-left: 12px; }
-
-  &.off {
-    .switch-handle { right: calc(50% - 31px); }
-  }
 }
 .switch-size-s {
   height: 24px;
@@ -148,10 +144,6 @@
   }
   .switch-off { padding-right: 8px; }
   .switch-on { padding-left: 8px; }
-
-  &.off {
-    .switch-handle { right: calc(50% - 23px); }
-  }
 }
 
 // Colors

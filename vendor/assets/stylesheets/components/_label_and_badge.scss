@@ -11,13 +11,13 @@
   background: color(haze);
   border: 1px solid color(haze);
   border-radius: border-radius(b);
-  color: color(black);
+  color: color(slate);
   display: inline-block;
   font-size: text-size(s);
   font-weight: text-weight(semibold);
   line-height: 1;
   overflow: hidden;
-  padding: 6px 10px 7px;
+  padding: 6px 10px;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -58,6 +58,8 @@
       &.label-outline { border-color: color($name); }
     }
   }
+  .badge-banner-color-#{$name},
+  .label-banner-color-#{$name} { border-left-color: color($name); }
 }
 
 // Sizes
@@ -78,12 +80,12 @@
 .badge-size-m { min-width: 16px; }
 .badge-size-l { padding: 15px; }
 .badge-size-m { padding: 10px; }
-.label-size-l { padding: 13px 20px; }
+.label-size-l { padding: 15px 20px; }
 .label-size-m { padding: 10px 15px; }
 .badge-size-s,
 .label-size-s {
   font-size: text-size(xs);
-  padding: 4px 8px 5px;
+  padding: 4px 8px;
 
   > img,
   > svg {
@@ -93,7 +95,7 @@
 }
 .badge-size-s {
   min-width: 0;
-  padding: 4px 6px;
+  padding: 4px 6px 4px 7px;
 }
 
 // Styles
@@ -107,3 +109,5 @@
 }
 .badge-outline,
 .label-outline { background: color(transparent); }
+.badge-banner,
+.label-banner { border-left-width: 3px; }

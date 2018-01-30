@@ -16,16 +16,16 @@
   @include appearance(none);
   @include transition(all 0.3s ease-in-out);
   background: color(haze);
-  border: 1px solid darker-color(haze);
+  border: 1px solid color(haze);
   border-radius: border-radius(b);
   box-sizing: border-box;
-  color: color(black);
+  color: color(slate);
   cursor: pointer;
   display: inline-block;
   font-size: text-size(b);
-  font-weight: text-weight(semibold);
+  font-weight: text-weight(normal);
   line-height: 1;
-  padding: 13px 20px;
+  padding: 12px 20px 14px;
   text-align: center;
   touch-action: manipulation;
   vertical-align: middle;
@@ -36,14 +36,14 @@
     &.active,
     &:focus {
       background: darkish-color(haze);
-      box-shadow: inset 0 -2px dark-color(haze);
+      border-color: darkish-color(haze);
     }
     &:active,
     &.disabled,
     &[disabled] {
       background: lightish-color(haze);
-      box-shadow: none;
-      color: transparentize(color(black), 0.35);
+      border-color: lightish-color(haze);
+      color: transparentize(color(slate), 0.35);
     }
     &.disabled,
     &[disabled] { cursor: not-allowed; }
@@ -69,7 +69,7 @@
 @each $name, $color in map-keys($colors) {
   .btn-color-#{$name} {
     background: color($name);
-    border-color: darker-color($name);
+    border-color: color($name);
     color: text-color-on($name);
 
     &.btn-link,
@@ -94,7 +94,8 @@
         &:focus,
         &.disabled,
         &[disabled] {
-          border-color: darker-color($name);
+          background: darkish-color($name);
+          border-color: darkish-color($name);
           color: text-color-on($name);
         }
         &.disabled,
@@ -107,13 +108,13 @@
       &.active,
       &:focus {
         background: darkish-color($name);
-        box-shadow: inset 0 -2px dark-color($name);
+        border-color: darkish-color($name);
       }
       &:active,
       &.disabled,
       &[disabled] {
         background: lightish-color($name);
-        box-shadow: none;
+        border-color: lightish-color($name);
         color: transparentize(text-color-on($name), 0.35);
       }
     }
@@ -132,7 +133,7 @@
   }
 }
 .btn-link {
-  border-color: color(transparent);
+  border: 0;
   border-radius: 0;
   padding: 0;
 
@@ -142,10 +143,7 @@
     &.active,
     &:focus,
     &.disabled,
-    &[disabled] {
-      background: inherit;
-      box-shadow: none;
-    }
+    &[disabled] { background: inherit; }
   }
 }
 .btn-block {
@@ -160,8 +158,8 @@
 // ==================================================
 .btn-size-l,
 .btn-size-m { font-size: text-size(m); }
-.btn-size-l { padding: 19px 30px 20px; }
-.btn-size-m { padding: 15px 25px 16px; }
+.btn-size-l { padding: 21px 30px; }
+.btn-size-m { padding: 16px 25px; }
 .btn-size-s {
   font-size: text-size(s);
   padding: 8px 15px 9px;
@@ -182,7 +180,7 @@
   }
   &.btn-size-s {
     min-width: 34px;
-    padding: 9px 0 8px;
+    padding: 8px 0;
   }
   &.btn-link { padding: 0; }
 }
@@ -263,6 +261,17 @@
       width: 1%;
 
       &:last-child { border-right-width: 1px; }
+    }
+  }
+
+  &.dropdown,
+  &.dropup {
+    display: block;
+    table-layout: auto;
+
+    > .btn {
+      display: block;
+      width: 100%;
     }
   }
 }

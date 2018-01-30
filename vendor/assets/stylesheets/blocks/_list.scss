@@ -14,7 +14,7 @@ dl,
 ol,
 ul {
   background: color(trasparent);
-  border-color: color(dark-haze);
+  border-color: color(haze);
 }
 
 // Styles
@@ -24,7 +24,7 @@ ul {
 
   &.dark {
     > li:nth-child(even) { background: inherit; }
-    > li:nth-child(odd) { background: color(light-black); }
+    > li:nth-child(odd) { background: color(light-slate); }
   }
   &.light {
     > li:nth-child(even) { background: color(haze); }
@@ -32,10 +32,10 @@ ul {
 }
 @if ($pseudo-elements) {
   .list-hover {
-    > li:hover { background: color(haze); }
+    > li:hover { background: background-hover-color(light-haze); }
 
     &.dark {
-      > li:hover { background: background-hover-color(black); }
+      > li:hover { background: background-hover-color(slate); }
     }
     &.light {
       > li:hover { background: background-hover-color(haze); }
@@ -59,7 +59,7 @@ ul {
 .list-line,
 .list-border {
   > li {
-    padding: 5px 0;
+    padding: 8px 0;
 
     &:not(:last-child) {
       border-bottom-style: solid;
@@ -73,7 +73,7 @@ ul {
   border-width: 1px;
 
   > li {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }

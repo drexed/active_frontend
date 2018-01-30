@@ -10,7 +10,7 @@
 .navbar {
   background: color(white);
   border-collapse: separate;
-  border-top: 1px solid color(dark-haze);
+  border-top: 1px solid color(haze);
   box-sizing: border-box;
   display: table;
   height: 54px;
@@ -38,8 +38,8 @@
         &.active,
         &:active,
         &:focus {
-          background: darkish-color(primary);
-          color: color(white);
+          background: color(primary);
+          color: text-color-on(primary);
         }
       }
     }

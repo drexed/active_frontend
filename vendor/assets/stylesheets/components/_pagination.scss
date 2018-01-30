@@ -7,7 +7,7 @@
 // Pagination
 // ==================================================
 .pagination {
-  color: color(black);
+  color: color(slate);
   list-style: none;
   padding: 0;
 
@@ -68,12 +68,12 @@
   &.dark {
     li {
       a {
-        background: color(light-black);
+        background: color(light-slate);
 
         @if ($pseudo-elements) {
           &:hover,
-          &:focus { background: darkish-color(light-black); }
-          &:active { background: lightish-color(light-black); }
+          &:focus { background: darkish-color(light-slate); }
+          &:active { background: lightish-color(light-slate); }
         }
       }
     }

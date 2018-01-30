@@ -62,7 +62,7 @@ ins,
 u { text-decoration: underline; }
 mark {
   background: color(transparent);
-  border-bottom: 3px solid color(secondary);
+  border-bottom: 3px solid color(yellow);
 }
 p { margin-bottom: 20px; }
 q {
@@ -154,12 +154,31 @@ sup { vertical-align: text-top; }
 // ==================================================
 @each $name in line-through, none, overline, underline {
   .text-decoration-#{$name} { text-decoration: $name; }
+
+  @if ($pseudo-elements) {
+    .text-decoration-hover-#{$name} {
+      &:hover { text-decoration: $name; }
+    }
+    .text-decoration-focus-#{$name} {
+      &:focus { text-decoration: $name; }
+    }
+    .text-decoration-active-#{$name} {
+      &:active { text-decoration: $name; }
+    }
+  }
 }
 
 // Colors
 // ==================================================
 @each $name, $color in $colors {
+  .text-color-tintiest-#{$name} { color: tintiest-color($name); }
+  .text-color-tint-#{$name} { color: tint-color($name); }
+  .text-color-tintish-#{$name} { color: tintish-color($name); }
   .text-color-#{$name} { color: $color; }
+  .text-color-shadeish-#{$name} { color: shadeish-color($name); }
+  .text-color-shade-#{$name} { color: shade-color($name); }
+  .text-color-shadiest-#{$name} { color: shadiest-color($name); }
+
   @if ($pseudo-elements) {
     .text-color-hover-#{$name} {
       &:hover { color: $color; }

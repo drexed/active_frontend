@@ -28,7 +28,7 @@
 // ==================================================
 @function text-color-on($color) {
   @if index($colors-black-text, $color) {
-    @return color(black);
+    @return color(slate);
   } @else {
     @return color(white);
   }

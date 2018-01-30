@@ -8,9 +8,9 @@
 // ==================================================
 .popover {
   background: color(white);
-  border: 1px solid color(dark-haze);
+  border: 1px solid color(haze);
   border-radius: border-radius(b);
-  color: color(black);
+  color: color(slate);
   display: none;
   left: 0;
   position: absolute;
@@ -111,21 +111,21 @@
   }
   &.dark {
     &.bottom {
-      .arrow::after { border-bottom-color: color(light-black); }
+      .arrow::after { border-bottom-color: color(light-slate); }
     }
     &.left {
-      .arrow::after { border-left-color: color(black); }
+      .arrow::after { border-left-color: color(slate); }
     }
     &.right {
-      .arrow::after { border-right-color: color(black); }
+      .arrow::after { border-right-color: color(slate); }
     }
     &.top {
-      .arrow::after { border-top-color: color(black); }
+      .arrow::after { border-top-color: color(slate); }
     }
 
     .popover-title {
-      background: color(light-black);
-      border-color: color(dark-black);
+      background: color(light-slate);
+      border-color: color(dark-slate);
     }
   }
   &.light {

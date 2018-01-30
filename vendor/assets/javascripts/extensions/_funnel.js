@@ -42,15 +42,15 @@
     settings: {
       displayPercentageChange: false,
       pPrecision: 1,
-      labelLineColor: '#E4E9F4',
-      labelFontColor: '#263646',
-      sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#028DFF', '#3298F7', '#57ABF9', '#7CDDFA'],
-      pSectionColor: '#F7F8FD',
-      font: 'Verdana',
+      labelLineColor: '#edf0f9',
+      labelFontColor: '#304455',
+      sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#167eff', '#3298F7', '#57ABF9', '#7CDDFA'],
+      pSectionColor: '#f7f8fd',
+      font: "'Circular', Verdana, Tahoma, sans-serif",
       maxFontSize: 12,
-      fontWeight: '600',
-      sectionFontColor: '#FFFFFF',
-      pSectionFontColor: '#FFFFFF',
+      fontWeight: '700',
+      sectionFontColor: '#ffffff',
+      pSectionFontColor: '#ffffff',
       pSectionHeightPercent: 50,
       labelWidthPercent: 30,
       funnelReductionPercent: 50,
@@ -127,7 +127,7 @@
 
         this.drawClippingArea(ctx, settings);
 
-        ctx.fillStyle = '#E4E9F4';
+        ctx.fillStyle = '#e4e9f4';
         ctx.fill();
         ctx.clip();
 
@@ -135,7 +135,7 @@
         this.drawClippingArea(ctx, settings, true);
 
         ctx.lineWidth = 0;
-        ctx.strokeStyle = '#E4E9F4';
+        ctx.strokeStyle = '#e4e9f4';
         ctx.stroke();
       }
     },

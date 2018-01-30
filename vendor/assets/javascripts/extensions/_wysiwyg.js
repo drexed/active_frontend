@@ -5333,13 +5333,13 @@
       direction: null,
       styleTags: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'blockquote', 'pre'],
       fontNames: [
-        'Fakt Soft Pro', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New',
+        'Circular', 'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New',
         'Helvetica Neue', 'Helvetica', 'Impact', 'Lucida Grande',
         'Tahoma', 'Times New Roman', 'Verdana'
       ],
       fontSizes: ['8', '10', '12', '14', '16', '18', '20', '28', '42', '56'],
       colors: [
-        ['#000000', '#424242', '#636363', '#9C9C94', '#CEC6CE', '#EFEFEF', '#F7F7F7', '#FFFFFF'],
+        ['#000000', '#424242', '#636363', '#9C9C94', '#CEC6CE', '#EFEFEF', '#F7F7F7', '#ffffff'],
         ['#FF0000', '#FF9C00', '#FFFF00', '#00FF00', '#00FFFF', '#0000FF', '#9C00FF', '#FF00FF'],
         ['#F7C6CE', '#FFE7CE', '#FFEFC6', '#D6EFD6', '#CEDEE7', '#CEE7F7', '#D6D6E7', '#E7D6DE'],
         ['#E79C9C', '#FFC69C', '#FFE79C', '#B5D6A5', '#A5C6CE', '#9CC6EF', '#B5A5D6', '#D6A5BD'],

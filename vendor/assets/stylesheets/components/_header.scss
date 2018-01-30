@@ -8,9 +8,10 @@
 // Header
 // ==================================================
 .header {
-  background: color(white);
-  border-bottom: 1px solid color(dark-haze);
+  background: color(transparent);
+  border-bottom: 1px solid color(transparent);
   box-sizing: border-box;
+  color: color(white);
   height: 76px;
   line-height: 1;
   padding: 18px 0;

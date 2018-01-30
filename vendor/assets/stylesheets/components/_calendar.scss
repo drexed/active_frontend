@@ -20,7 +20,7 @@
     padding: 0;
     vertical-align: top;
   }
-  th.calendar-widget-header { padding: 6px 0 5px; }
+  th.calendar-widget-header { padding: 6px 0; }
   thead {
     tr:first-child {
       th:first-child { border-top-left-radius: border-radius(b); }
@@ -90,7 +90,7 @@
   width: 100%;
 }
 .calendar-widget-header,
-.calendar-widget-content { border: 1px solid color(dark-haze); }
+.calendar-widget-content { border: 1px solid color(haze); }
 .calendar-state-highlight { background: color(light-haze); }
 .calendar-cell-overlay {
   background: color(primary);
@@ -99,17 +99,17 @@
 .calendar-event {
   @include transition(none);
   background: color(primary);
-  border: 1px solid darker-color(primary);
+  border: 1px solid color(primary);
   border-radius: border-radius(b);
-  color: color(white);
+  color: text-color-on(primary);
   cursor: default;
   font-size: text-size(s);
-  padding: 0 3px 1px;
+  padding: 1px 3px 0;
 
   @each $name, $color in map-keys($colors) {
     &.calendar-event-color-#{$name} {
       background: color($name);
-      border-color: darker-color($name);
+      border-color: color($name);
       color: text-color-on($name);
     }
   }

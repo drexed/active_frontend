@@ -5,34 +5,37 @@ module ActiveFrontendHelper
   # rubocop:disable Metrics/MethodLength
   def colors_brand(opacity = 1)
     {
-      lime: { rgba: "rgba(132,207,71,#{opacity})", hex: '#84CF47' },
-      green: { rgba: "rgba(86,198,62,#{opacity})", hex: '#56C63E' },
-      teal: { rgba: "rgba(40,215,157,#{opacity})", hex: '#28D79D' },
-      sky: { rgba: "rgba(18,174,255,#{opacity})", hex: '#12AEFF' },
-      blue: { rgba: "rgba(2,141,255,#{opacity})", hex: '#028DFF' },
-      indigo: { rgba: "rgba(132,99,239,#{opacity})", hex: '#8463EF' },
-      purple: { rgba: "rgba(177,99,218,#{opacity})", hex: '#B163DA' },
-      brown: { rgba: "rgba(160,116,88,#{opacity})", hex: '#A07458' },
-      pink: { rgba: "rgba(237,106,123,#{opacity})", hex: '#ED6A7B' },
-      red: { rgba: "rgba(236,70,61,#{opacity})", hex: '#EC463D' },
-      orange: { rgba: "rgba(252,146,35,#{opacity})", hex: '#FC9223' },
-      yellow: { rgba: "rgba(247,208,32,#{opacity})", hex: '#F7D020' }
+      lime: { rgba: "rgba(122,197,61,#{opacity})", hex: '#7ac53d' },
+      green: { rgba: "rgba(76,188,52,#{opacity})", hex: '#4cbc34' },
+      teal: { rgba: "rgba(30,205,147,#{opacity})", hex: '#1ecd93' },
+      sky: { rgba: "rgba(0,165,255,#{opacity})", hex: '#00a5ff' },
+      blue: { rgba: "rgba(22,126,255,#{opacity})", hex: '#167eff' },
+      indigo: { rgba: "rgba(128,95,235,#{opacity})", hex: '#805feb' },
+      purple: { rgba: "rgba(157,94,213,#{opacity})", hex: '#9d5ed5' },
+      brown: { rgba: "rgba(145,101,73,#{opacity})", hex: '#916549' },
+      pink: { rgba: "rgba(232,101,118,#{opacity})", hex: '#e86576' },
+      red: { rgba: "rgba(244,53,67,#{opacity})", hex: '#f43543' },
+      orange: { rgba: "rgba(252,131,35,#{opacity})", hex: '#fc8323' },
+      yellow: { rgba: "rgba(245,202,9,#{opacity})", hex: '#f5ca09' }
     }
   end
 
   def colors_grayscale(opacity = 1)
     {
-      light_black: { rgba: "rgba(48,67,85,#{opacity})", hex: '#304355' },
-      black: { rgba: "rgba(38,54,70,#{opacity})", hex: '#263646' },
-      dark_black: { rgba: "rgba(31,44,60,#{opacity})", hex: '#1F2C3C' },
-      light_gray: { rgba: "rgba(143,162,185,#{opacity})", hex: '#8FA2B9' },
-      gray: { rgba: "rgba(127,146,170,#{opacity})", hex: '#7F92AA' },
-      dark_gray: { rgba: "rgba(110,129,153,#{opacity})", hex: '#6E8199' },
-      light_haze: { rgba: "rgba(247,248,253,#{opacity})", hex: '#F7F8FD' },
-      haze: { rgba: "rgba(238,241,250,#{opacity})", hex: '#EDF0F9' },
-      dark_haze: { rgba: "rgba(237,240,249,#{opacity})", hex: '#E4E9F4' },
-      white: { rgba: "rgba(255,255,255,#{opacity})", hex: '#FFFFFF' },
-      transparent: { rgba: 'rgba(0,0,0,0)', hex: '#FFFFFF' }
+      light_black: { rgba: "rgba(17,42,62,#{opacity})", hex: '#112a3e' },
+      black: { rgba: "rgba(13,32,47,#{opacity})", hex: '#0d202f' },
+      dark_black: { rgba: "rgba(9,22,32,#{opacity})", hex: '#091620' },
+      light_slate: { rgba: "rgba(55,78,98,#{opacity})", hex: '#374e62' },
+      slate: { rgba: "rgba(48,68,85,#{opacity})", hex: '#304455' },
+      dark_slate: { rgba: "rgba(41,58,72,#{opacity})", hex: '#293a48' },
+      light_gray: { rgba: "rgba(113,129,142,#{opacity})", hex: '#71818e' },
+      gray: { rgba: "rgba(105,119,131,#{opacity})", hex: '#697783' },
+      dark_gray: { rgba: "rgba(96,109,120,#{opacity})", hex: '#606d78' },
+      light_haze: { rgba: "rgba(247,248,253,#{opacity})", hex: '#f7f8fd' },
+      haze: { rgba: "rgba(238,241,250,#{opacity})", hex: '#edf0f9' },
+      dark_haze: { rgba: "rgba(237,240,249,#{opacity})", hex: '#e4e9f4' },
+      white: { rgba: "rgba(255,255,255,#{opacity})", hex: '#ffffff' },
+      transparent: { rgba: 'rgba(0,0,0,0)', hex: '#ffffff' }
     }
   end
   # rubocop:enable Metrics/MethodLength

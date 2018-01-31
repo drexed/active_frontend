@@ -17,7 +17,7 @@
   font-weight: text-weight(semibold);
   line-height: 1;
   overflow: hidden;
-  padding: 6px 10px;
+  padding: 5.5px 10px 6.5px;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -34,7 +34,7 @@
 .badge {
   border-radius: border-radius(xl);
   min-width: 14px;
-  padding: 6px;
+  padding: 5px 6px 7px;
 }
 
 // Colors
@@ -78,14 +78,14 @@
 }
 .badge-size-l,
 .badge-size-m { min-width: 16px; }
-.badge-size-l { padding: 15px; }
-.badge-size-m { padding: 10px; }
-.label-size-l { padding: 15px 20px; }
-.label-size-m { padding: 10px 15px; }
+.badge-size-l { padding: 14px 15px 16px; }
+.badge-size-m { padding: 9px 10px 11px; }
+.label-size-l { padding: 14px 20px 16px; }
+.label-size-m { padding: 9px 15px 11px; }
 .badge-size-s,
 .label-size-s {
   font-size: text-size(xs);
-  padding: 4px 8px;
+  padding: 3.5px 8px 4.5px;
 
   > img,
   > svg {

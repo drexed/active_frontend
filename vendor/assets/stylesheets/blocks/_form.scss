@@ -18,7 +18,7 @@
 // ==================================================
 ::-webkit-file-upload-button { @include appearance(button); }
 ::placeholder {
-  color: color(light-gray);
+  color: color(gray);
   font-weight: text-weight(semilight);
   line-height: 1;
   vertical-align: middle;
@@ -60,7 +60,7 @@ textarea,
 .form-tags {
   &.dark {
     background: color(light-slate);
-    color: color(white);
+    color: color(dark-haze);
 
     &[disabled] { background: color(slate); }
   }
@@ -99,6 +99,7 @@ label {
   font-weight: text-weight(semibold);
   line-height: 1;
   margin-bottom: 5px;
+  vertical-align: middle;
 }
 input {
   &::placeholder { line-height: 20px; }

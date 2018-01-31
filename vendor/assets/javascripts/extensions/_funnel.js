@@ -43,7 +43,7 @@
       displayPercentageChange: false,
       pPrecision: 1,
       labelLineColor: '#edf0f9',
-      labelFontColor: '#304455',
+      labelFontColor: '#2d4152',
       sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#167eff', '#3298F7', '#57ABF9', '#7CDDFA'],
       pSectionColor: '#f7f8fd',
       font: "'Circular', Verdana, Tahoma, sans-serif",

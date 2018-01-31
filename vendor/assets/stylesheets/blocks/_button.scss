@@ -99,7 +99,10 @@
           color: text-color-on($name);
         }
         &.disabled,
-        &[disabled] { color: color($name); }
+        &[disabled] {
+          background: color(transparent);
+          color: color($name);
+        }
       }
     }
 

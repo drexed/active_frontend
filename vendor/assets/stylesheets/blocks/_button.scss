@@ -168,22 +168,22 @@
   padding: 8px 15px 9px;
 }
 .btn-icon {
-  min-width: 46px;
+  min-width: 44px;
   padding: 13px 0;
 
   &.btn-size-l,
   &.btn-size-m { font-size: text-size(l); }
   &.btn-size-l {
-    min-width: 60px;
-    padding: 18px 0;
+    min-width: 62px;
+    padding: 20px 0;
   }
   &.btn-size-m {
     min-width: 52px;
-    padding: 14px 0;
+    padding: 15px 0;
   }
   &.btn-size-s {
-    min-width: 34px;
-    padding: 8px 0;
+    min-width: 33px;
+    padding: 8.5px 0;
   }
   &.btn-link { padding: 0; }
 }

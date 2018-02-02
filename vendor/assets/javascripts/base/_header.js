@@ -6,13 +6,15 @@
 
   var Header = function (element, options) {
     this.$element = $(element);
-    this.$window = $(window);
     this.settings = {
       addClass: this.$element.data('add-class') || Header.DEFAULTS.addClass,
+      container: this.$element.data('container') || Header.DEFAULTS.container,
       offset: this.$element.data('offset') || Header.DEFAULTS.offset,
       removeClass: this.$element.data('remove-class') || Header.DEFAULTS.removeClass
     };
     this.options = $.extend({}, Header.DEFAULTS, this.settings, options);
+
+    this.$window = $(this.options.container);
 
     this.init();
   };
@@ -20,9 +22,10 @@
   Header.VERSION = '1.0.0';
   Header.DEFAULTS = {
     addClass: '',
-    offset: 10,
+    container: window,
+    offset: 50,
     onSwapClassCallback: function () {},
-    removeClass: 'background-color-transparent border-color-bottom-transparent'
+    removeClass: ''
   };
 
   Header.prototype.constructor = Header;
@@ -40,7 +43,8 @@
       .removeClass(removeClass)
       .addClass(addClass);
 
-    this.options.onSwapClassCallback();
+    this.options
+      .onSwapClassCallback();
   };
 
   Header.prototype.toggleClasses = function () {

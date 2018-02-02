@@ -97,6 +97,11 @@
   border-color: darker-color(primary);
   color: text-color-on(primary);
 }
+.transparent {
+  background: color(transparent);
+  border-color: color(transparent);
+  color: color(white);
+}
 .light,
 .white {
   border-color: color(haze);

@@ -60,7 +60,7 @@ textarea,
 .form-tags {
   &.dark {
     background: color(light-slate);
-    color: color(dark-haze);
+    color: color(white);
 
     &[disabled] { background: color(slate); }
   }

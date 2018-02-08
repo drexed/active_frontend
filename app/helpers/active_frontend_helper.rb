@@ -22,12 +22,12 @@ module ActiveFrontendHelper
 
   def colors_grayscale(opacity = 1)
     {
-      light_black: { rgba: "rgba(24,51,61,#{opacity})", hex: '#18283d' },
-      black: { rgba: "rgba(17,36,43,#{opacity})", hex: '#111c2b' },
-      dark_black: { rgba: "rgba(10,21,25,#{opacity})", hex: '#0a1019' },
-      light_slate: { rgba: "rgba(54,78,98,#{opacity})", hex: '#364e62' },
-      slate: { rgba: "rgba(45,65,82,#{opacity})", hex: '#2d4152' },
-      dark_slate: { rgba: "rgba(36,52,66,#{opacity})", hex: '#243442' },
+      light_black: { rgba: "rgba(24,51,69,#{opacity})", hex: '#183345' },
+      black: { rgba: "rgba(17,39,52,#{opacity})", hex: '#112734' },
+      dark_black: { rgba: "rgba(10,21,25,#{opacity})", hex: '#0a1519' },
+      light_slate: { rgba: "rgba(48,72,93,#{opacity})", hex: '#30485d' },
+      slate: { rgba: "rgba(42,62,80,#{opacity})", hex: '#2a3e50' },
+      dark_slate: { rgba: "rgba(35,49,63,#{opacity})", hex: '#23313f' },
       light_gray: { rgba: "rgba(163,179,200,#{opacity})", hex: '#a3b3c8' },
       gray: { rgba: "rgba(147,166,190,#{opacity})", hex: '#7f92aa' },
       dark_gray: { rgba: "rgba(131,153,180,#{opacity})", hex: '#8399b4' },

@@ -58,16 +58,6 @@ input:not([type='submit']),
 select,
 textarea,
 .form-tags {
-  &.dark {
-    background: color(light-slate);
-    color: color(white);
-
-    &[disabled] { background: color(slate); }
-  }
-  &.light {
-    &[disabled] { background: color(light-haze); }
-  }
-
   &[disabled] {
     @include text-fill-color(color(gray));
     background: color(light-haze);
@@ -80,6 +70,22 @@ textarea,
 
     &:invalid,
     &.invalid { border-color: color(red); }
+
+    &.without-border { border-color: color(transparent); }
+  }
+
+  &.dark {
+    background: color(light-slate);
+    color: color(white);
+
+    &[disabled] { background: color(slate); }
+  }
+  &.light {
+    &[disabled] { background: color(light-haze); }
+  }
+  &.without-border {
+    background: color(transparent);
+    border-color: color(transparent);
   }
 }
 input[type='submit'] {

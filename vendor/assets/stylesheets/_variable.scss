@@ -124,9 +124,9 @@ $font-available-typography: (
 );
 $font-families: (
   display: (Impact, Verdana, Tahoma, sans-serif),
-  monospace: (Courier, Consolas, Menlo, Monaco, monospace),
+  monospace: (Courier, 'Courier New', 'Lucida Sans Typewriter', 'Ubuntu Mono', Consolas, Menlo, Monaco, monospace),
   sans-serif: ('Circular', Verdana, Tahoma, sans-serif),
-  serif: ('Tiempos Headline', Georgia, 'Times New Roman', serif)
+  serif: ('Tiempos Headline', Georgia, 'Times New Roman', Times, serif)
 );
 $font-indents: (
   xxxl: 25px,

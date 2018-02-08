@@ -35,7 +35,7 @@
     },
     onTagExists: function(item, tag) {},
     tagClass: function(item) {
-      return 'label label-color-primary label-color-tint label-outline';
+      return 'label label-color-primary';
     },
     addOnBlur: true,
     allowDuplicates: false,

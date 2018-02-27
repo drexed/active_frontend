@@ -17,11 +17,16 @@
   width: 100%;
 
   &.dark {
+    .sidebar-subtitle {
+      background: color(light-slate);
+      color: color(white);
+    }
     .sidebar-nav {
       > ul { background: color(light-slate); }
     }
   }
   &.light {
+    .sidebar-subtitle { background: color(haze); }
     .sidebar-nav {
       > ul { background: color(white); }
     }
@@ -37,20 +42,23 @@
   padding: 30px 0;
   text-align: center;
 }
-.sidebar-body { padding: 0 15px; }
+.sidebar-body,
+.sidebar-subtitle { padding: 0 15px; }
+.sidebar-subtitle {
+  background: color(light-haze);
+  border-bottom: 1px solid;
+  border-bottom-color: inherit;
+  font-size: text-size(xs);
+  font-weight: text-weight(semibold);
+}
 .sidebar-nav {
   > a {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     box-sizing: border-box;
     display: block;
-    padding: 20px;
+    padding: 20px 15px;
     width: 100%;
-
-    &:first-child {
-      border-top-style: solid;
-      border-top-width: 1px;
-    }
   }
   > ul {
     background: color(light-haze);

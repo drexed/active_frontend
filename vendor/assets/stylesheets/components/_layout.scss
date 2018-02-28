@@ -58,8 +58,7 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .layout-body,
-  .layout-sidebar {
+  .layout-body {
     &.with-sticky-header {
       height: calc(100% - 54px);
       margin-top: 54px;
@@ -68,8 +67,15 @@
     }
   }
   .layout-sidebar {
-    width: 260px;
+    max-width: 300px;
+    width: 75%;
 
+    &.with-sticky-header {
+      height: 100%;
+      margin-top: 0;
+
+      &.with-sticky-navbar { height: 100%; }
+    }
     &:not(.hidden) + .layout-body { width: calc(100% - 260px); }
     &.fixed + .layout-body { width: 100%; }
   }

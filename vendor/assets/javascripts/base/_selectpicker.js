@@ -19,6 +19,7 @@
     };
     this.options = $.extend({}, Selectpicker.DEFAULTS, this.settings, options);
 
+    this.$touchDevice = ('ontouchstart' in window || navigator.msMaxTouchPoints);
     this.$optgroups = this.getOptgroups();
     this.$options = this.getOptions();
     this.$selected = this.getSelectedOptionVal();
@@ -54,18 +55,27 @@
   Selectpicker.prototype.init = function () {
     if (!this.hasSelects()) return;
 
-    this.setWidget();
+    if (this.$touchDevice) {
+      var _self = this;
+      var old_value = this.$element.val();
 
-    this.$element.on('mousedown', function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        this.blur();
-        this.focus();
-      }).on({
-        'focus.bs.selectpicker': $.proxy(this.showWidget, this),
-        'click.bs.selectpicker': $.proxy(this.showWidget, this),
-        'blur.bs.selectpicker': $.proxy(this.setVal, this)
+      this.$element.change(function (e) {
+        _self.options.onChangeCallback(old_value, this.value);
       });
+    } else {
+      this.setWidget();
+
+      this.$element.on('mousedown', function (e) {
+          e.stopPropagation();
+          e.preventDefault();
+          this.blur();
+          this.focus();
+        }).on({
+          'focus.bs.selectpicker': $.proxy(this.showWidget, this),
+          'click.bs.selectpicker': $.proxy(this.showWidget, this),
+          'blur.bs.selectpicker': $.proxy(this.setVal, this)
+        });
+    }
   };
 
   Selectpicker.prototype.clickWidget = function (e) {

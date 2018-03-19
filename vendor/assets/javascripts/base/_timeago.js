@@ -72,7 +72,7 @@
 
   Timeago.prototype.refresh = function () {
     this.updateTime();
-    $.event.trigger('bs.timeago.on-refresh');
+    $.event.trigger('refresh.bs.timeago');
     this.options.onRefreshCallback();
     return this.updateInterval();
   };

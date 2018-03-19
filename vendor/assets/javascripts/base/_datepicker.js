@@ -294,7 +294,7 @@
 
     this.$element.val(value);
     $.event.trigger({
-      type: 'bs.datepicker.on-set-val',
+      type: 'set-val.bs.datepicker',
       value: value
     });
     this.options.onSetValCallback(value);

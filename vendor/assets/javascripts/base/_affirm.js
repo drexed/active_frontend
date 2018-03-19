@@ -49,12 +49,12 @@
     var _self = this;
     var body = $('body');
 
-    this.$element.click(function (e) {
+    this.$element.on('click', function (e) {
       e.stopPropagation();
       e.preventDefault();
 
       _self.displayFormat();
-      $.event.trigger('bs.affirm.on-display');
+      $.event.trigger('display.bs.affirm');
       _self.options.onDisplayCallback();
 
       return false;
@@ -63,12 +63,12 @@
     $('body')
       .on('click', '[data-affirm-toggle="cancel"]', function () {
         _self.cancelFormat();
-        $.event.trigger('bs.affirm.on-cancel');
+        $.event.trigger('cancel.bs.affirm');
         _self.options.onCancelCallback();
       })
       .on('click', '[data-affirm-toggle="confirm"]', function () {
         _self.confirmFormat();
-        $.event.trigger('bs.affirm.on-confirm');
+        $.event.trigger('confirm.bs.affirm');
         _self.options.onConfirmCallback();
       });
   };

@@ -47,7 +47,7 @@
   Tour.prototype.init = function () {
     var _self = this;
 
-    this.$element.click(function () {
+    this.$element.on('click', function () {
       if (_self.$totalItems === 0) return this;
 
       if (_self.$active) {
@@ -144,7 +144,7 @@
     this.removeItems();
 
     $.event.trigger({
-      type: 'bs.tour.on-show',
+      type: 'show.bs.tour',
       item: item
     });
     this.options.onShowCallback(item);
@@ -167,14 +167,14 @@
       }, 225);
 
       $.event.trigger({
-        type: 'bs.tour.on-shown',
+        type: 'shown.bs.tour',
         item: item
       });
       this.options.onShownCallback(item);
     } else {
       if (this.options.skip) this.nextItem();
       $.event.trigger({
-        type: 'bs.tour.on-miss',
+        type: 'miss.bs.tour',
         item: item
       });
       this.options.onMissCallback(item);

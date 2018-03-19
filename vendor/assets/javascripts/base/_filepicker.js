@@ -68,11 +68,11 @@
       var files = _self.pushNameFiles();
 
       if (files.length === 0) {
-        $.event.trigger('bs.filepicker.on-files-deselected');
+        $.event.trigger('files-deselected.bs.filepicker');
         _self.options.onFilesDeselectedCallback();
       } else {
         $.event.trigger({
-          type: 'bs.filepicker.on-files-selected',
+          type: 'files-selected.bs.filepicker',
           count: files.length
         });
         _self.options.onFilesSelectedCallback(files.length);
@@ -94,7 +94,7 @@
     });
 
     if (window.navigator.userAgent.search(/firefox/i) > -1) {
-      this.$elementFilepicker.find('label').click(function () {
+      this.$elementFilepicker.find('label').on('click', function () {
         _self.$element.click();
         return false;
       });

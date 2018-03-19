@@ -119,7 +119,7 @@
         });
 
         $.event.trigger({
-          type: 'bs.tag.on-tag-exists',
+          type: 'tag-exists.bs.tag',
           item: item,
           tag: $existingTag
         });

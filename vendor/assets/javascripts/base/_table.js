@@ -116,7 +116,7 @@
       }
 
       $.event.trigger({
-        type: 'bs.table.on-sort',
+        type: 'sort.bs.table',
         direction: dataSort
       });
       _self.options.onSortCallback(dataSort);

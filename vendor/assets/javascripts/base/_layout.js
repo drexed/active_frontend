@@ -38,7 +38,7 @@
     var _self = this;
     var options = this.options;
 
-    this.$element.click(function (e) {
+    this.$element.on('click', function (e) {
       e.stopPropagation();
       e.preventDefault();
 
@@ -59,7 +59,7 @@
       });
 
       $.event.trigger({
-        type: 'bs.layout.on-toggle',
+        type: 'toggle.bs.layout',
         toggle: toggle
       });
       options.onToggleCallback(toggle);

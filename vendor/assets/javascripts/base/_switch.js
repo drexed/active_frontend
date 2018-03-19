@@ -80,7 +80,7 @@
 
     if (!silent) this.trigger();
 
-    $.event.trigger('bs.switch.on-on');
+    $.event.trigger('on.bs.switch');
     this.options.onOnCallback();
   };
 
@@ -95,7 +95,7 @@
 
     if (!silent) this.trigger();
 
-    $.event.trigger('bs.switch.on-off');
+    $.event.trigger('off.bs.switch');
     this.options.onOffCallback();
   };
 

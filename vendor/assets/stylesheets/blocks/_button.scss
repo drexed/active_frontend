@@ -168,24 +168,32 @@
   padding: 8px 15px 9px;
 }
 .btn-icon {
-  min-width: 44px;
+  max-width: 44px;
   padding: 13px 0;
+  width: 44px;
 
   &.btn-size-l,
   &.btn-size-m { font-size: text-size(l); }
   &.btn-size-l {
-    min-width: 62px;
+    max-width: 62px;
     padding: 20px 0;
+    width: 62px;
   }
   &.btn-size-m {
-    min-width: 52px;
+    max-width: 52px;
     padding: 15px 0;
+    width: 52px;
   }
   &.btn-size-s {
-    min-width: 33px;
+    max-width: 33px;
     padding: 8.5px 0;
+    width: 33px;
   }
-  &.btn-link { padding: 0; }
+  &.btn-link {
+    max-width: initial;
+    padding: 0;
+    width: initial;
+  }
 }
 
 // Groups
@@ -246,7 +254,8 @@
     }
   }
 }
-.btn-group-block {
+.btn-group-block,
+.btn-group-flex {
   border-collapse: separate;
   display: table;
   table-layout: fixed;
@@ -261,7 +270,6 @@
     > .btn {
       border-right-width: 0;
       display: table-cell;
-      width: 1%;
 
       &:last-child { border-right-width: 1px; }
     }
@@ -276,6 +284,11 @@
       display: block;
       width: 100%;
     }
+  }
+}
+.btn-group-block {
+  &:not(.btn-group-vertical) {
+    > .btn { width: 1%; }
   }
 }
 

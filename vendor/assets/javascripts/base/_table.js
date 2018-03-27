@@ -145,6 +145,10 @@
         var currentRow = clonedTable.find('tbody tr:eq(' + i + ')');
         var key = currentRow.children('td:eq(' + sudoColIndex + ')').html();
 
+        if (key.indexOf('$') === 0 || key.indexOf('#') === 0) {
+          key = key.replace(/\D/g,'');
+        }
+
         if ($.isNumeric(key)) {
           var trailing_i;
 

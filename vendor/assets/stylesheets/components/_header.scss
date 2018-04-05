@@ -107,6 +107,31 @@
 
     .btn { margin-top: -14px; }
   }
+
+  &.header-nav-hero {
+    margin-top: -18px;
+
+    > li {
+      margin: 0;
+
+      > a {
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+        box-sizing: border-box;
+        display: block;
+        line-height: 1;
+        min-width: 160px;
+        padding: 28px 20px;
+        text-align: center;
+
+        &:hover,
+        &:focus { border-bottom-color: inherit; }
+        &.active,
+        &:active { border-bottom-color: color(primary); }
+      }
+    }
+  }
 }
 .header-user {
   float: right;

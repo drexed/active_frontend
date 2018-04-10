@@ -143,7 +143,7 @@
 
       for (i = 0; i < clonedTr.length; i++) {
         var currentRow = clonedTable.find('tbody tr:eq(' + i + ')');
-        var key = currentRow.children('td:eq(' + sudoColIndex + ')').html();
+        var key = currentRow.children('td:eq(' + sudoColIndex + ')').html().trim();
 
         if (key.indexOf('$') === 0 || key.indexOf('#') === 0) {
           key = key.replace(/\D/g,'');

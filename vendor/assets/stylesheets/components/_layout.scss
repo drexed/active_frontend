@@ -18,8 +18,8 @@
   overflow-y: auto;
 
   &.with-sticky-header {
-    height: calc(100% - 76px);
-    margin-top: 76px;
+    height: calc(100% - 64px);
+    margin-top: 64px;
   }
 }
 .layout-body { width: 100%; }
@@ -63,6 +63,8 @@
     height: initial;
     min-height: 100%;
     margin: 0;
+    max-width: 100%;
+    width: 100%;
 
     &.with-sticky-header {
       margin: 0;
@@ -78,11 +80,10 @@
     }
   }
   .layout-sidebar {
-    max-width: 300px;
-    width: 75%;
-
-    &.with-sticky-header { height: 100%; }
-    &:not(.hidden) + .layout-body { width: calc(100% - 260px); }
-    &.fixed + .layout-body { width: 100%; }
+    &.with-sticky-header {
+      height: calc(100% - 54px);
+      margin-top: 54px;
+      min-height: calc(100% - 54px);
+    }
   }
 }

@@ -99,7 +99,8 @@ $common-box-shadows: (
   xl: 10px,
   l: 6px,
   m: 4px,
-  b: 2px
+  b: 2px,
+  n: 0
 );
 $common-margins-and-paddings: (
   xxxl: 100px,
@@ -171,7 +172,7 @@ $font-spaces: (
   xl: 6px,
   l: 2px,
   m: 1px,
-  b: 0,
+  b: -0.4px,
   s: -1px,
   xs: -2px
 );

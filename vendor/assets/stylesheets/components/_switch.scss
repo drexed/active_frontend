@@ -10,6 +10,7 @@
   border: 1px solid;
   border-color: color(haze);
   border-radius: border-radius(xl);
+  box-shadow: 0 0 3px darkish-color(haze);
   cursor: pointer;
   display: inline-block;
   height: 28px;
@@ -88,6 +89,8 @@
     * { cursor: not-allowed; }
   }
   &.dark {
+    box-shadow: 0 0 3px darkish-color(dark-slate);
+
     .switch-handle { background: color(light-slate); }
   }
   &.light {

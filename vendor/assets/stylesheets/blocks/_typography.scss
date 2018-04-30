@@ -187,7 +187,8 @@ sup { vertical-align: text-top; }
       &:focus { color: $color; }
     }
     .text-color-active-#{$name} {
-      &:active { color: $color; }
+      &:active,
+      &.active { color: $color; }
     }
   }
 }

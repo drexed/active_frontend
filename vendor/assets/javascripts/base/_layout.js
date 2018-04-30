@@ -47,6 +47,9 @@
 
       if (target.hasClass('hidden') || target.is(':hidden') || target.css('visibility') === 'hidden') {
         toggle = 'in';
+        _self.$element.addClass('active');
+      } else {
+        _self.$element.removeClass('active');
       }
 
       var effect = options.effect + '-' + toggle + '-' + options.direction;

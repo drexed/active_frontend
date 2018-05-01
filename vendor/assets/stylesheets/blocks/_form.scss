@@ -47,7 +47,6 @@ textarea,
   border: 1px solid color(haze);
   border-radius: border-radius(b);
   box-sizing: border-box;
-  box-shadow: 0 0 3px darkish-color(haze);
   display: block;
   line-height: 1;
   margin-bottom: 10px;
@@ -72,15 +71,11 @@ textarea,
     &:invalid,
     &.invalid { border-color: color(red); }
 
-    &.without-border {
-      border-color: color(transparent);
-      box-shadow: none;
-    }
+    &.without-border { border-color: color(transparent); }
   }
 
   &.dark {
     background: color(light-slate);
-    box-shadow: 0 0 3px darkish-color(dark-slate);
     color: color(white);
 
     &[disabled] { background: color(slate); }
@@ -338,7 +333,6 @@ textarea {
   border: 1px solid;
   border-color: color(haze);
   border-radius: border-radius(b);
-  box-shadow: 0 0 3px darkish-color(haze);
   display: inline-block;
   height: 18px;
   line-height: 18px;
@@ -406,8 +400,6 @@ textarea {
   }
   &.form-align-vertical { vertical-align: middle; }
   &.dark {
-    box-shadow: 0 0 3px darkish-color(slate);
-
     label {
       background: color(light-slate);
 
@@ -456,7 +448,6 @@ textarea {
   input:focus {
     background: color(transparent);
     border: 0;
-    box-shadow: none;
     display: inline-block;
     outline: none;
     margin: 0;
@@ -583,7 +574,6 @@ textarea {
   .form-addon {
     border-style: solid;
     border-width: 1px;
-    box-shadow: 0 0 3px darkish-color(haze);
     line-height: 1;
     min-width: 44px;
     padding: 0 10px;
@@ -596,10 +586,7 @@ textarea {
       margin-top: -2px;
     }
 
-    &.dark {
-      border-color: color(dark-slate);
-      box-shadow: 0 0 3px darkish-color(dark-slate);
-    }
+    &.dark { border-color: color(dark-slate); }
     &.with-addon-btn {
       border: 0;
       min-width: auto;

@@ -5417,7 +5417,7 @@ module.exports = function () {
       onClick: null,
       defaultColor: 'rgba(42,62,80,0.1)',
       defaultFontColor: 'rgba(42,62,80,1)',
-      defaultFontFamily: "'Circular', Verdana, Tahoma, sans-serif",
+      defaultFontFamily: "'Circular', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Verdana, Tahoma, sans-serif",
       defaultFontSize: 14,
       defaultFontStyle: 'normal',
       showLines: true,

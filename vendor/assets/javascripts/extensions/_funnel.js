@@ -46,7 +46,7 @@
       labelFontColor: '#2a3e50',
       sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#167eff', '#3298F7', '#57ABF9', '#7CDDFA'],
       pSectionColor: '#f7f8fd',
-      font: "'Circular', Verdana, Tahoma, sans-serif",
+      font: "'Circular', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Verdana, Tahoma, sans-serif",
       maxFontSize: 12,
       fontWeight: '700',
       sectionFontColor: '#ffffff',

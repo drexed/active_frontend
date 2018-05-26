@@ -94,19 +94,19 @@
   .hidden-desktop { display: inherit; }
   .hidden-laptop { display: none; }
 }
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 813px) and (max-width: 959px) {
   @each $name, $widths in $grid-container-widths {
     $width: nth($widths, 2);
 
     @if $width {
-      .container-fixed-#{$name} { width: 760px; }
+      .container-fixed-#{$name} { width: 813px; }
     }
   }
 
   .hidden-desktop { display: inherit; }
   .hidden-tablet { display: none; }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 812px) {
   @each $name, $margin in $grid-row-margins {
     .#{dasherize(row-responsive, $name)} { margin-bottom: $margin; }
   }
@@ -117,7 +117,7 @@
       $width: nth($widths, $i);
 
       @if $width {
-        .#{dasherize($type, $name)} { width: calc(100% - 20px); }
+        .#{dasherize($type, $name)} { width: calc(100% - (20px + env(safe-area-inset-right) + env(safe-area-inset-left))); }
       }
     }
   }

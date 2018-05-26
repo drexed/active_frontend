@@ -137,11 +137,11 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 812px) {
   .modal { width: calc(100% - 20px); }
   .modal-body { max-height: 280px; }
 }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 812px) {
   .modal { width: calc(100% - 120px); }
   .modal-body { max-height: 140px; }
 }

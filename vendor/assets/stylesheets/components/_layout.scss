@@ -49,7 +49,7 @@
     &.fixed + .layout-body { width: 100%; }
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 813px) and (max-width: 959px) {
   .layout-sidebar {
     width: 220px;
 
@@ -57,7 +57,7 @@
     &.fixed + .layout-body { width: 100%; }
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 812px) {
   .layout-body,
   .layout-sidebar {
     height: initial;
@@ -76,7 +76,7 @@
       height: initial;
       padding-top: 54px;
 
-      &.with-sticky-navbar { padding-bottom: 54px; }
+      &.with-sticky-navbar { padding-bottom: calc(54px + env(safe-area-inset-bottom)); }
     }
   }
   .layout-sidebar {

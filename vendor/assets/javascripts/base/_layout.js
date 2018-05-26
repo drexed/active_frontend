@@ -11,6 +11,7 @@
       autoDetect: this.$element.data('auto-detect') || Layout.DEFAULTS.autoDetect,
       direction: this.$element.data('direction') || Layout.DEFAULTS.direction,
       effect: this.$element.data('effect') || Layout.DEFAULTS.effect,
+      mobileWidth: this.$element.data('mobile-width') || Layout.DEFAULTS.mobileWidth,
       target: this.$element.data('target') || Layout.DEFAULTS.target
     };
     this.options = $.extend({}, Layout.DEFAULTS, this.settings, options);
@@ -28,6 +29,7 @@
     autoDetect: true,
     direction: 'left',
     effect: 'slide',
+    mobileWidth: 813,
     onToggleCallback: function (toggle) {},
     target: '#layout-target'
   };
@@ -71,7 +73,7 @@
 
   Layout.prototype.togglePosition = function (klass) {
     var target = $(this.options.target);
-    var isMobile = this.$window.width() < 767;
+    var isMobile = this.$window.width() < this.options.mobileWidth;
 
     if (this.options.autoDetect === true) {
       if (isMobile) {

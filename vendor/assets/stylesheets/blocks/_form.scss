@@ -67,11 +67,18 @@ textarea,
   &:focus,
   &.focus {
     border-color: color(blue);
+    box-shadow: inset 0 0 4px color(blue);
 
     &:invalid,
-    &.invalid { border-color: color(red); }
+    &.invalid {
+      border-color: color(red);
+      box-shadow: inset 0 0 4px color(red);
+    }
 
-    &.without-border { border-color: color(transparent); }
+    &.without-border {
+      border-color: color(transparent);
+      box-shadow: none;
+    }
   }
 
   &.dark {
@@ -448,6 +455,7 @@ textarea {
   input:focus {
     background: color(transparent);
     border: 0;
+    box-shadow: none;
     display: inline-block;
     outline: none;
     margin: 0;
@@ -569,6 +577,8 @@ textarea {
     display: table-cell;
     margin: 0;
     vertical-align: middle;
+
+    + .form-addon { border-left: 0; }
   }
 
   .form-addon {
@@ -580,6 +590,8 @@ textarea {
     text-align: center;
     white-space: nowrap;
     width: 1%;
+
+    &:not(:last-child) { border-right: 0; }
 
     i {
       display: inline-block;
@@ -614,7 +626,6 @@ textarea {
     }
   }
 
-  *:not(:first-child) { border-left: 0; }
   *:first-child {
     border-bottom-left-radius: border-radius(b);
     border-top-left-radius: border-radius(b);

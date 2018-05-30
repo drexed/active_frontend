@@ -2,6 +2,7 @@
 // ==================================================
 // Typeahead
 
+// scss-lint:disable NestingDepth
 // scss-lint:disable SelectorDepth
 
 // Typeahead
@@ -9,11 +10,20 @@
 .typeahead {
   margin-top: 10px;
   z-index: 1061;
+  font-weight: text-weight(semilight);
 
-  > li > a b,
+  > li > a b {
+    color: color(secondary);
+    font-weight: inherit;
+    text-decoration: underline;
+  }
   > li.active > a {
     color: color(primary);
-    font-weight: text-weight(normal);
+
+    &:hover,
+    &:active,
+    &:focus {
+      > b { color: inherit; }
+    }
   }
-  > li > a b { text-decoration: underline; }
 }

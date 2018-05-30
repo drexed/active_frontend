@@ -195,7 +195,19 @@ thead {
 // ==================================================
 @each $name, $color in $colors {
   .table-row-color-#{$name} {
-    > td { color: color($name); }
+    td {
+      background: tint($name, 87.5%);
+      color: color($name);
+    }
+  }
+}
+.table-hover {
+  tbody {
+    @each $name, $color in $colors {
+      tr.table-row-color-#{$name}:hover {
+        td { background: tint($name, 82.5%); }
+      }
+    }
   }
 }
 

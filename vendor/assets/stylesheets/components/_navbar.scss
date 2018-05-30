@@ -56,6 +56,6 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (min-width: 813px) {
+@media only screen and (min-width: breakpoint-min-width(s)) {
   .navbar { display: none; }
 }

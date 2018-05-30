@@ -63,6 +63,6 @@ svg:not(:root) {
 
 // Media Queries
 // ==================================================
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: breakpoint-max-width(s)) {
   .img-responsive { max-width: 60%; }
 }

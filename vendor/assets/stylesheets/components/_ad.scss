@@ -85,7 +85,7 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: breakpoint-max-width(s)) {
   .ad {
     &.responsive {
       height: 60px;

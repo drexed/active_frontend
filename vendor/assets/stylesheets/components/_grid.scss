@@ -82,7 +82,7 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (min-width: 960px) and (max-width: 1365px) {
+@media only screen and (min-width: breakpoint-min-width(b)) and (max-width: breakpoint-max-width(l)) {
   @each $name, $widths in $grid-container-widths {
     $width: nth($widths, 2);
 
@@ -94,7 +94,7 @@
   .hidden-desktop { display: inherit; }
   .hidden-laptop { display: none; }
 }
-@media only screen and (min-width: 813px) and (max-width: 959px) {
+@media only screen and (min-width: breakpoint-min-width(s)) and (max-width: breakpoint-max-width(b)) {
   @each $name, $widths in $grid-container-widths {
     $width: nth($widths, 2);
 
@@ -106,7 +106,7 @@
   .hidden-desktop { display: inherit; }
   .hidden-tablet { display: none; }
 }
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: breakpoint-max-width(s)) {
   @each $name, $margin in $grid-row-margins {
     .#{dasherize(row-responsive, $name)} { margin-bottom: $margin; }
   }

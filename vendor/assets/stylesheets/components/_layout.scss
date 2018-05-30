@@ -41,7 +41,7 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (min-width: 960px) and (max-width: 1365px) {
+@media only screen and (min-width: breakpoint-min-width(b)) and (max-width: breakpoint-max-width(l)) {
   .layout-sidebar {
     width: 260px;
 
@@ -49,7 +49,7 @@
     &.fixed + .layout-body { width: 100%; }
   }
 }
-@media only screen and (min-width: 813px) and (max-width: 959px) {
+@media only screen and (min-width: breakpoint-min-width(s)) and (max-width: breakpoint-max-width(b)) {
   .layout-sidebar {
     width: 220px;
 
@@ -57,7 +57,7 @@
     &.fixed + .layout-body { width: 100%; }
   }
 }
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: breakpoint-max-width(s)) {
   .layout-body,
   .layout-sidebar {
     height: initial;

@@ -126,10 +126,10 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (min-width: 813px) and (max-width: 959px) {
+@media only screen and (min-width: breakpoint-min-width(s)) and (max-width: breakpoint-max-width(b)) {
   .header-search { width: 220px; }
 }
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: breakpoint-max-width(s)) {
   .header {
     height: 54px;
     padding: 12px 0;

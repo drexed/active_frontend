@@ -318,7 +318,7 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: breakpoint-max-width(s)) {
   .btn-block-responsive {
     display: block;
     min-width: 100%;

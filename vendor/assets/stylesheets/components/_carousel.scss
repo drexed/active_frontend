@@ -125,7 +125,7 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: breakpoint-max-width(s)) {
   .carousel-control {
     .icon-prev,
     .icon-next {

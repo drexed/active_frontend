@@ -222,7 +222,7 @@ thead {
 
 // Media Queries
 // ==================================================
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: breakpoint-max-width(b)) {
   .table-responsive {
     @include overflow-scrolling(touch);
     background: color(transparent);

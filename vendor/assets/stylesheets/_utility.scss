@@ -26,6 +26,16 @@
 
 // Helper Funtions
 // ==================================================
+@function breakpoint-min-width($size) {
+  $widths: map-get($grid-container-widths, $size);
+
+  @return nth($widths, 2);
+}
+@function breakpoint-max-width($size) {
+  $width: breakpoint-min-width($size);
+
+  @return $width - 1px;
+}
 @function text-color-on($color) {
   @if index($colors-black-text, $color) {
     @return color(slate);

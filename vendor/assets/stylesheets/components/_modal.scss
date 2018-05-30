@@ -141,7 +141,7 @@
   .modal { width: calc(100% - 20px); }
   .modal-body { max-height: 280px; }
 }
-@media only screen and (min-width: (breakpoint-min-width(b) / 2)) and (max-width: breakpoint-max-width(s)) {
+@media only screen and (min-width: breakpoint-half-width(b)) and (max-width: breakpoint-max-width(s)) {
   .modal { width: calc(100% - 120px); }
   .modal-body { max-height: 140px; }
 }

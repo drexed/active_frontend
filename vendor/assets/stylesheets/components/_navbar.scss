@@ -13,6 +13,8 @@
   border-top: 1px solid color(haze);
   box-sizing: border-box;
   display: table;
+  height: 54px;
+  height: calc(54px + constant(safe-area-inset-bottom));
   height: calc(54px + env(safe-area-inset-bottom));
   line-height: 1;
   table-layout: fixed;

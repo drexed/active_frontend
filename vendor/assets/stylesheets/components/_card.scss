@@ -3,6 +3,7 @@
 // Card
 
 // scss-lint:disable NestingDepth
+// scss-lint:disable SelectorDepth
 
 // Card
 // ==================================================
@@ -16,6 +17,24 @@
     margin-left: -1px;
     max-width: calc(100% + 3px);
     width: calc(100% + 3px);
+  }
+
+  > .nav-tabs {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    > li {
+      display: table-cell;
+      float: none;
+      margin: 0;
+      width: 1%;
+
+      > a {
+        padding: 15px 0 14px;
+        text-align: center;
+      }
+    }
   }
 
   .table-encase,

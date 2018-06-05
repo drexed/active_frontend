@@ -117,7 +117,11 @@
       $width: nth($widths, $i);
 
       @if $width {
-        .#{dasherize($type, $name)} { width: calc(100% - (20px + env(safe-area-inset-right) + env(safe-area-inset-left))); }
+        .#{dasherize($type, $name)} {
+          width: calc(100% - 20px);
+          width: calc(100% - (20px + constant(safe-area-inset-right) + constant(safe-area-inset-left)));
+          width: calc(100% - (20px + env(safe-area-inset-right) + env(safe-area-inset-left)));
+        }
       }
     }
   }

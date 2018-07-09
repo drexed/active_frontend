@@ -1,7 +1,8 @@
 ---
-FeatureEnvy:
-  enabled: false
-IrresponsibleModule:
-  enabled: false
-TooManyStatements:
-  max_statements: 10
+detectors:
+  FeatureEnvy:
+    enabled: false
+  IrresponsibleModule:
+    enabled: false
+  TooManyStatements:
+    max_statements: 10

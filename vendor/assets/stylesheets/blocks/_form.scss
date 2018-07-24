@@ -118,7 +118,10 @@ input {
   &::placeholder { line-height: 20px; }
 }
 select {
-  padding: 13px 15px;
+  overflow: hidden;
+  padding: 13px 35px 13px 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   [multiple],
   [size] { height: auto; }
@@ -237,20 +240,20 @@ textarea {
   &.form-size-l {
     select {
       font-size: text-size(l);
-      padding: 20px;
+      padding: 20px 40px 20px 20px;
     }
   }
   &.form-size-m {
     select {
       font-size: text-size(m);
-      padding: 15px 20px 17px;
+      padding: 15px 40px 17px 20px;
     }
   }
   &.form-size-s {
     select {
       font-size: text-size(s);
       margin-bottom: 5px;
-      padding: 9px 10px 8px;
+      padding: 9px 25px 8px 10px;
     }
   }
   &.form-width-l {

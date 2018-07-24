@@ -85,7 +85,10 @@
     > a {
       clear: both;
       display: block;
+      overflow: hidden;
       padding: 10px 20px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
       i:first-child {
         display: inline-block;

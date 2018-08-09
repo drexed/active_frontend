@@ -146,6 +146,14 @@
 
     > li {
       &.header-nav-icon { font-size: 30px; }
+      &.header-nav-icon-size-s {
+        font-size: 24px;
+        margin-top: 0;
+      }
+    }
+    + .header-brand {
+      width: calc(100% - 60px);
+      text-align: center;
     }
   }
 }

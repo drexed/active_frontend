@@ -42,10 +42,10 @@
     settings: {
       displayPercentageChange: false,
       pPrecision: 1,
-      labelLineColor: '#edf0f9',
-      labelFontColor: '#2a3e50',
-      sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#167eff', '#3298F7', '#57ABF9', '#7CDDFA'],
-      pSectionColor: '#f7f8fd',
+      labelLineColor: '#eaedf8',
+      labelFontColor: '#223648',
+      sectionColor: ['#054B8B', '#075FB0', '#0872D5', '#035eff', '#3298F7', '#57ABF9', '#7CDDFA'],
+      pSectionColor: '#f4f5fa',
       font: "'Circular', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Verdana, Tahoma, sans-serif",
       maxFontSize: 12,
       fontWeight: '700',
@@ -127,7 +127,7 @@
 
         this.drawClippingArea(ctx, settings);
 
-        ctx.fillStyle = '#e4e9f4';
+        ctx.fillStyle = '#dee3f1';
         ctx.fill();
         ctx.clip();
 
@@ -135,7 +135,7 @@
         this.drawClippingArea(ctx, settings, true);
 
         ctx.lineWidth = 0;
-        ctx.strokeStyle = '#e4e9f4';
+        ctx.strokeStyle = '#dee3f1';
         ctx.stroke();
       }
     },

@@ -16,3 +16,5 @@ Lint/ScriptPermission:
   Enabled: false
 Style/Documentation:
   Enabled: false
+Style/ExpandPathArguments:
+  Enabled: false

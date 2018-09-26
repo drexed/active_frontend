@@ -5,8 +5,6 @@
 
 [ActiveFrontend](https://github.com/drexed/active_frontend) is a refreshingly modern responsive web framework for beautiful and faster project development.
 
-To get started, check out [https://github.com/drexed/active](https://github.com/drexed/active)!
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -24,8 +22,6 @@ Or install it yourself as:
 ## Table of Contents
 
 * [Configuration](#configuration)
-* [Stylesheets](#stylesheets)
-* [Javascripts](#javascripts)
 
 ## Configuration
 

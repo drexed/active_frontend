@@ -12,8 +12,6 @@ Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 LineLength:
   Max: 100
-Lint/ScriptPermission:
-  Enabled: false
 Style/Documentation:
   Enabled: false
 Style/ExpandPathArguments:

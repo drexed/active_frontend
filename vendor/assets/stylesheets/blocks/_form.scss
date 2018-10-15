@@ -85,7 +85,7 @@ textarea,
     background: color(light-slate);
     color: color(white);
 
-    &[disabled] { background: color(slate); }
+    &[disabled] { background: lightish-color(dark-slate); }
   }
   &.light {
     &[disabled] { background: color(light-haze); }

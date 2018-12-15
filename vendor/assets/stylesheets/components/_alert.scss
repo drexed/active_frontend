@@ -35,11 +35,18 @@
   &.fixed {
     left: 0;
     top: 0;
+
+    &.bottom {
+      bottom: 0;
+      top: auto;
+    }
   }
   &.floating {
     left: 160px;
-    top: 49px;
+    top: 50px;
     width: calc(100% - 320px);
+
+    &.bottom { bottom: 50px; }
   }
 }
 

@@ -31,7 +31,7 @@
     &:last-child { border-bottom: 0; }
 
     > a {
-      padding: 13px 15px;
+      padding: 15px 20px;
 
       &:active { color: color(primary); }
     }
@@ -46,21 +46,21 @@
       > li {
         > a {
           display: block;
-          padding: 7px 15px;
+          padding: 12px 20px;
         }
 
         &:first-child {
-          > a { padding-top: 15px; }
+          > a { padding-top: 19px; }
         }
         &:last-child {
-          > a { padding-bottom: 13px; }
+          > a { padding-bottom: 17px; }
         }
       }
     }
 
     &.nav-header {
       background: color(light-haze);
-      padding: 13px 15px;
+      padding: 17px 20px;
     }
   }
 
@@ -88,7 +88,7 @@
   .divider {
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    margin: 5px 15px;
+    margin: 5px 20px;
     overflow: hidden;
   }
 }
@@ -212,7 +212,7 @@
     > a,
     &.nav-tab {
       border-bottom: 2px solid color(transparent);
-      padding-bottom: 15px;
+      padding-bottom: 20px;
 
       @if ($pseudo-elements) {
         &:hover,

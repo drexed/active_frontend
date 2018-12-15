@@ -44,13 +44,13 @@ textarea,
   @include appearance(none);
   @include transition(all 0.3s ease-in-out);
   background: color(white);
-  border: 1px solid color(haze);
+  border: 2px solid color(haze);
   border-radius: border-radius(b);
   box-sizing: border-box;
   display: block;
   line-height: 1;
   margin-bottom: 10px;
-  padding: 11px 15px 12px;
+  padding: 10px 15px 11px;
   width: 100%;
   vertical-align: middle;
 }
@@ -67,12 +67,12 @@ textarea,
   &:focus,
   &.focus {
     border-color: color(blue);
-    box-shadow: inset 0 0 4px color(blue);
+    box-shadow: 0 0 0 3px color-lucidity(blue, 0.2);
 
     &:invalid,
     &.invalid {
       border-color: color(red);
-      box-shadow: inset 0 0 4px color(red);
+      box-shadow: 0 0 0 3px color-lucidity(red, 0.2);
     }
 
     &.without-border {
@@ -85,7 +85,7 @@ textarea,
     background: color(light-slate);
     color: color(white);
 
-    &[disabled] { background: lightish-color(dark-slate); }
+    &[disabled] { background: color(dark-slate); }
   }
   &.light {
     &[disabled] { background: color(light-haze); }
@@ -119,7 +119,7 @@ input {
 }
 select {
   overflow: hidden;
-  padding: 13px 35px 13px 15px;
+  padding: 12px 35px 12px 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
 
@@ -129,7 +129,7 @@ select {
   &[disabled] { font-weight: text-weight(semilight); }
 }
 textarea {
-  height: 152px;
+  height: 150px;
   overflow: auto;
 }
 
@@ -144,18 +144,18 @@ textarea {
     textarea,
     .form-tags {
       font-size: text-size(l);
-      padding: 18px 20px;
+      padding: 17px 20px;
     }
     input {
       &::placeholder { line-height: 24px; }
     }
-    textarea { height: 197px; }
+    textarea { height: 195px; }
 
     &.form-height-m {
-      textarea { height: 266px; }
+      textarea { height: 264px; }
     }
     &.form-height-s {
-      textarea { height: 128px; }
+      textarea { height: 126px; }
     }
   }
   &.form-size-m {
@@ -163,18 +163,18 @@ textarea {
     textarea,
     .form-tags {
       font-size: text-size(m);
-      padding: 14px 20px;
+      padding: 13px 20px;
     }
     input {
       &::placeholder { line-height: 22px; }
     }
-    textarea { height: 173px; }
+    textarea { height: 171px; }
 
     &.form-height-m {
-      textarea { height: 234px; }
+      textarea { height: 232px; }
     }
     &.form-height-s {
-      textarea { height: 112px; }
+      textarea { height: 110px; }
     }
   }
   &.form-size-s {
@@ -183,25 +183,25 @@ textarea {
     .form-tags {
       font-size: text-size(s);
       margin-bottom: 5px;
-      padding: 7px 10px;
+      padding: 6px 10px;
     }
     input {
       &::placeholder { line-height: 18px; }
     }
-    textarea { height: 109px; }
+    textarea { height: 107px; }
 
     &.form-height-m {
-      textarea { height: 145px; }
+      textarea { height: 143px; }
     }
     &.form-height-s {
-      textarea { height: 73px; }
+      textarea { height: 71px; }
     }
   }
   &.form-height-m {
-    textarea { height: 202px; }
+    textarea { height: 200px; }
   }
   &.form-height-s {
-    textarea { height: 102px; }
+    textarea { height: 100px; }
   }
   &.form-width-l {
     input,
@@ -240,20 +240,20 @@ textarea {
   &.form-size-l {
     select {
       font-size: text-size(l);
-      padding: 20px 40px 20px 20px;
+      padding: 19px 40px 19px 20px;
     }
   }
   &.form-size-m {
     select {
       font-size: text-size(m);
-      padding: 15px 40px 17px 20px;
+      padding: 14px 40px 16px 20px;
     }
   }
   &.form-size-s {
     select {
       font-size: text-size(s);
       margin-bottom: 5px;
-      padding: 9px 25px 8px 10px;
+      padding: 8px 25px 7px 10px;
     }
   }
   &.form-width-l {
@@ -276,9 +276,8 @@ textarea {
       display: inherit;
       width: inherit;
     }
-
-    &::after { display: none !important; }
   }
+  &.form-style-inline,
   &.with-multiple {
     &::after { display: none !important; }
   }
@@ -340,31 +339,27 @@ textarea {
 .form-checkbox,
 .form-radio {
   background: color(white);
-  border: 1px solid;
+  border: 2px solid;
   border-color: color(haze);
   border-radius: border-radius(b);
   display: inline-block;
-  height: 18px;
-  line-height: 18px;
+  height: 16px;
   position: relative;
-  width: 18px;
+  width: 16px;
 
   label {
     @include transition(all 0.3s ease-in-out);
-    border: 1px solid;
-    border-color: inherit;
-    border-radius: inherit;
+    border-radius: border-radius(s);
     color: color(transparent);
     cursor: pointer;
-    height: 100%;
-    line-height: inherit;
-    margin: -1px 0 0 -1px;
+    height: calc(100% - 4px);
+    margin: 2px 0 0 2px;
     position: absolute;
-    text-align: center;
-    width: 100%;
+    width: calc(100% - 4px);
 
     @if ($pseudo-elements) {
-      &:hover { background: color(haze); }
+      &:hover,
+      &:focus { background: color(haze); }
     }
   }
   input[type='checkbox'],
@@ -376,37 +371,27 @@ textarea {
     visibility: hidden;
     top: -9999px;
 
+    + label { vertical-align: baseline; }
+
+    &:checked + label { background: color(green); }
     &[disabled] + label {
-      background: lightish-color(haze);
+      background: color(light-haze);
       cursor: not-allowed;
     }
-    &:checked + label {
-      background: color(green);
-      border-color: color(green);
-      color: color(white);
-    }
-    &[disabled]:checked + label {
-      background: lightish-color(green) !important;
-      color: transparentize(color(white), 0.35);
-    }
-
-    + label { vertical-align: baseline; }
+    &[disabled]:checked + label { background: color-100(green); }
   }
 
   &.form-size-l {
-    height: 26px;
-    line-height: 26px;
-    width: 26px;
+    height: 24px;
+    width: 24px;
   }
   &.form-size-m {
-    height: 22px;
-    line-height: 22px;
-    width: 22px;
+    height: 20px;
+    width: 20px;
   }
   &.form-size-s {
-    height: 14px;
-    line-height: 14px;
-    width: 14px;
+    height: 12px;
+    width: 12px;
   }
   &.form-align-vertical { vertical-align: middle; }
   &.dark {
@@ -414,13 +399,14 @@ textarea {
       background: color(light-slate);
 
       @if ($pseudo-elements) {
-        &:hover { background: color(dark-slate); }
+        &:hover,
+        &:focus { background: color(dark-slate); }
       }
     }
 
     input[type='checkbox'],
     input[type='radio'] {
-      &[disabled] + label { background: lightish-color(dark-slate); }
+      &[disabled] + label { background: color(light-slate); }
     }
   }
   &.light {
@@ -428,17 +414,29 @@ textarea {
       background: color(light-haze);
 
       @if ($pseudo-elements) {
-        &:hover { background: color(dark-haze); }
+        &:hover,
+        &:focus { background: color(dark-haze); }
       }
     }
 
     input[type='checkbox'],
     input[type='radio'] {
-      &[disabled] + label { background: lightish-color(dark-haze); }
+      &[disabled] + label { background: color(light-haze); }
+    }
+  }
+  &.dark,
+  &.light {
+    input[type='checkbox'],
+    input[type='radio'] {
+      &[disabled]:checked + label { background: color-100(primary); }
     }
   }
 }
-.form-radio { border-radius: border-radius(xl); }
+.form-radio {
+  border-radius: border-radius(xxl);
+
+  label { border-radius: inherit; }
+}
 
 // Notes
 // ==================================================
@@ -464,7 +462,7 @@ textarea {
     margin: 0;
     padding: 0 !important;
     min-width: auto;
-    vertical-align: top;
+    vertical-align: middle;
     width: auto;
   }
 }
@@ -491,7 +489,7 @@ textarea {
   > .form-tags + label {
     @include transition(all 0.3s ease-in-out);
     background: color(haze);
-    border-radius: border-radius(b);
+    border-radius: border-radius(s);
     font-size: text-size(xxs);
     font-weight: text-weight(normal);
     left: 16px;
@@ -586,9 +584,9 @@ textarea {
 
   .form-addon {
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     line-height: 1;
-    min-width: 44px;
+    min-width: 42px;
     padding: 0 10px;
     text-align: center;
     white-space: nowrap;
@@ -622,10 +620,10 @@ textarea {
       label::after { border-radius: border-radius(b); }
     }
     .form-radio {
-      border-radius: border-radius(xl);
+      border-radius: border-radius(xxl);
 
       label,
-      label::after { border-radius: border-radius(xl); }
+      label::after { border-radius: border-radius(xxl); }
     }
   }
 
@@ -651,19 +649,19 @@ textarea {
   &.form-size-l {
     .form-addon {
       font-size: text-size(l);
-      min-width: 60px;
+      min-width: 58px;
     }
   }
   &.form-size-m {
     .form-addon {
       font-size: text-size(m);
-      min-width: 52px;
+      min-width: 50px;
     }
   }
   &.form-size-s {
     .form-addon {
       font-size: text-size(s);
-      min-width: 30px;
+      min-width: 28px;
       padding: 0 9px;
 
       .color-picker {

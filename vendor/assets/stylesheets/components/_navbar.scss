@@ -37,7 +37,7 @@
       &:hover,
       &.active,
       &:active,
-      &:focus { background: darkish-color(primary); }
+      &:focus { background: color-600(primary); }
     }
 
     > i {

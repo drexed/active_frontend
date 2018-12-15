@@ -31,7 +31,7 @@
       width: 1%;
 
       > a {
-        padding: 15px 0 14px;
+        padding: 16px 0;
         text-align: center;
       }
     }
@@ -44,19 +44,21 @@
     border-width: 0;
   }
 }
+.card-header,
 .card-body,
-.card-footer { padding: 10px 15px; }
+.card-footer { padding: 12px 20px; }
 .card-header {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   font-weight: text-weight(semibold);
-  padding: 9px 15px 11px;
+  padding-bottom: 13px;
+  padding-top: 11px;
 }
 .card-wizard {
   border-collapse: separate;
   box-sizing: border-box;
   display: table;
-  font-size: text-size(s);
+  font-size: text-size(xs);
   font-weight: text-weight(normal);
   list-style-type: none;
   margin: 0;
@@ -67,8 +69,10 @@
 
   > a,
   > li {
+    background: color(light-haze);
+    color: color(gray);
     display: table-cell;
-    padding: 9px 0;
+    padding: 2px 0;
     text-align: center;
     vertical-align: middle;
     width: 1%;
@@ -77,29 +81,23 @@
       border-left-style: solid;
       border-left-width: 1px;
     }
-
-    &.current {
-      background: background-hover-color(light-haze);
-      color: color(primary);
-    }
-    &.completed {
-      background: color(light-haze);
-      color: color(gray);
-    }
+    &.current,
+    &.completed { background: color(white); }
+    &.current { color: color(primary); }
   }
 
   &.dark {
     > a,
     > li {
-      &.current { background: background-hover-color(slate); }
-      &.completed { background: color(slate); }
+      &.current,
+      &.completed { background: color(light-slate); }
     }
   }
   &.light {
     > a,
     > li {
-      &.current { background: background-hover-color(haze); }
-      &.completed { background: color(haze); }
+      &.current,
+      &.completed { background: color(dark-haze); }
     }
   }
 }
@@ -126,8 +124,9 @@
 
   a {
     display: table-cell;
+    font-size: text-size(b);
     line-height: 1;
-    padding: 15px 0;
+    padding: 17px 0;
     text-align: center;
     width: 1%;
 

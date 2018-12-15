@@ -25,7 +25,7 @@ tfoot { font-weight: text-weight(semibold); }
 caption,
 td,
 th {
-  padding: 8px;
+  padding: 10px 20px;
   vertical-align: middle;
 }
 thead {
@@ -69,21 +69,21 @@ thead {
   .table-hover {
     tbody {
       tr:hover {
-        td { background: background-hover-color(light-haze); }
+        td { background: color-hover(light-haze); }
       }
     }
 
     &.dark {
       tbody {
         tr:hover {
-          td { background: background-hover-color(slate); }
+          td { background: color-hover(slate); }
         }
       }
     }
     &.light {
       tbody {
         tr:hover {
-          td { background: background-hover-color(haze); }
+          td { background: color-hover(haze); }
         }
       }
     }
@@ -91,21 +91,21 @@ thead {
   .table-highlight {
     tbody {
       tr {
-        td:hover { background: background-hover-color(light-haze); }
+        td:hover { background: color-hover(light-haze); }
       }
     }
 
     &.dark {
       tbody {
         tr {
-          td:hover { background: background-hover-color(slate); }
+          td:hover { background: color-hover(slate); }
         }
       }
     }
     &.light {
       tbody {
         tr {
-          td:hover { background: background-hover-color(haze); }
+          td:hover { background: color-hover(haze); }
         }
       }
     }
@@ -195,14 +195,14 @@ thead {
 // ==================================================
 @each $name, $color in $colors {
   .table-row-color-#{$name} {
-    td { background: tint($name, 87.5%); }
+    td { background: color-0($name); }
   }
 }
 .table-hover {
   tbody {
     @each $name, $color in $colors {
       tr.table-row-color-#{$name}:hover {
-        td { background: tint($name, 82.5%); }
+        td { background: color-50($name); }
       }
     }
   }

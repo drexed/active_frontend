@@ -40,12 +40,11 @@
     margin-right: 15px;
 
     &:last-child { margin-right: 0; }
-
     &.btn-group + .btn-group { margin-left: 0; }
 
     .indicator {
       background: color(red);
-      border-radius: border-radius(xl);
+      border-radius: border-radius(xxl);
       height: 5px;
       margin-left: 17px;
       position: absolute;

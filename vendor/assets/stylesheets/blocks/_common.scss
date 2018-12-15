@@ -29,7 +29,7 @@
 .scrollbar {
   &::-webkit-scrollbar {
     background: color(transparent);
-    border-radius: 999px;
+    border-radius: border-radius(xxl);
     width: 6px;
   }
   @if ($pseudo-elements) {
@@ -37,12 +37,12 @@
   }
   &::-webkit-scrollbar-thumb {
     background: rgba(color(transparent), 0.5);
-    border-radius: 999px;
+    border-radius: border-radius(xxl);
   }
   @if ($pseudo-elements) {
     &::-webkit-scrollbar-thumb:active {
       background: rgba(color(transparent), 0.6);
-      border-radius: 999px;
+      border-radius: border-radius(xxl);
     }
   }
 }
@@ -92,11 +92,6 @@
   border-color: color(dark-slate);
   color: color(gray);
 }
-.primary {
-  background: color(primary);
-  border-color: darker-color(primary);
-  color: text-color-on(primary);
-}
 .transparent {
   background: color(transparent);
   border-color: color(transparent);
@@ -105,7 +100,7 @@
 .light,
 .white {
   border-color: color(haze);
-  color: color(slate);
+  color: color(black);
 }
 .light { background: color(light-haze); }
 .white { background: color(white); }
@@ -113,21 +108,21 @@
 // Box shadow insets
 // ==================================================
 @each $name, $spread in $common-box-shadows {
-  .box-shadow-inset-#{$name} { box-shadow: inset 0 0 $spread darker-color(dark-haze) !important; }
-  .box-shadow-inset-bottom-#{$name} { box-shadow: inset 0 1px $spread darker-color(dark-haze) !important; }
-  .box-shadow-inset-left-#{$name} { box-shadow: inset -1px 0 $spread darker-color(dark-haze) !important; }
-  .box-shadow-inset-right-#{$name} { box-shadow: inset 1px 0 $spread darker-color(dark-haze) !important; }
-  .box-shadow-inset-top-#{$name} { box-shadow: inset 0 -1px $spread darker-color(dark-haze) !important; }
+  .box-shadow-inset-#{$name} { box-shadow: inset 0 0 $spread color(dark-haze) !important; }
+  .box-shadow-inset-bottom-#{$name} { box-shadow: inset 0 ($spread / 2) $spread color(dark-haze) !important; }
+  .box-shadow-inset-left-#{$name} { box-shadow: inset (-$spread / 2) 0 $spread color(dark-haze) !important; }
+  .box-shadow-inset-right-#{$name} { box-shadow: inset ($spread / 2) 0 $spread color(dark-haze) !important; }
+  .box-shadow-inset-top-#{$name} { box-shadow: inset 0 (-$spread / 2) $spread color(dark-haze) !important; }
 }
 
 // Box shadows
 // ==================================================
 @each $name, $spread in $common-box-shadows {
-  .box-shadow-#{$name} { box-shadow: 0 0 $spread 0 darker-color(dark-haze) !important; }
-  .box-shadow-bottom-#{$name} { box-shadow: 0 1px $spread 0 darker-color(dark-haze) !important; }
-  .box-shadow-left-#{$name} { box-shadow: -1px 0 $spread 0 darker-color(dark-haze) !important; }
-  .box-shadow-right-#{$name} { box-shadow: 1px 0 $spread 0 darker-color(dark-haze) !important; }
-  .box-shadow-top-#{$name} { box-shadow: 0 -1px $spread 0 darker-color(dark-haze) !important; }
+  .box-shadow-#{$name} { box-shadow: 0 0 $spread 0 color(dark-haze) !important; }
+  .box-shadow-bottom-#{$name} { box-shadow: 0 ($spread / 2) $spread 0 color(dark-haze) !important; }
+  .box-shadow-left-#{$name} { box-shadow: (-$spread / 2) 0 $spread 0 color(dark-haze) !important; }
+  .box-shadow-right-#{$name} { box-shadow: ($spread / 2) 0 $spread 0 color(dark-haze) !important; }
+  .box-shadow-top-#{$name} { box-shadow: 0 (-$spread / 2) $spread 0 color(dark-haze) !important; }
 }
 
 // Border width
@@ -154,6 +149,10 @@
 // ==================================================
 @each $name, $radius in $common-border-radiuses {
   .border-radius-#{$name} { border-radius: $radius !important; }
+  .border-radius-bottom-left-#{$name} { border-bottom-left-radius: $radius !important; }
+  .border-radius-bottom-right-#{$name} { border-bottom-right-radius: $radius !important; }
+  .border-radius-top-left-#{$name} { border-top-left-radius: $radius !important; }
+  .border-radius-top-right-#{$name} { border-top-right-radius: $radius !important; }
 }
 
 // Border colors

@@ -6,79 +6,49 @@
 
 // Keyframes
 // ==================================================
-@-webkit-keyframes spinner-colors {
-  0% { stroke: color(primary); }
-  34% { stroke: color(secondary); }
-  67% { stroke: color(tertiary); }
-  100% { stroke: color(quaditiary); }
+@-webkit-keyframes spinner-wiggle {
+  0% { @include transform(rotate(0deg) scale(1)); }
+  50% { @include transform(rotate(180deg) scale(0.5)); }
+  100% { @include transform(rotate(360deg) scale(1)); }
 }
-@keyframes spinner-colors {
-  0% { stroke: color(primary); }
-  34% { stroke: color(secondary); }
-  67% { stroke: color(tertiary); }
-  100% { stroke: color(quaditiary); }
-}
-@-webkit-keyframes spinner-dash {
-  0% { stroke-dashoffset: 187; }
-  50% {
-    stroke-dashoffset: (187 / 4);
-    @include transform(rotate(135deg));
-  }
-  100% {
-    stroke-dashoffset: 187;
-    @include transform(rotate(450deg));
-  }
-}
-@keyframes spinner-dash {
-  0% { stroke-dashoffset: 187; }
-  50% {
-    stroke-dashoffset: (187 / 4);
-    @include transform(rotate(135deg));
-  }
-  100% {
-    stroke-dashoffset: 187;
-    @include transform(rotate(450deg));
-  }
-}
-@-webkit-keyframes spinner-rotator {
-  0% { @include transform(rotate(0deg)); }
-  100% { @include transform(rotate(270deg)); }
-}
-@keyframes spinner-rotator {
-  0% { @include transform(rotate(0deg)); }
-  100% { @include transform(rotate(270deg)); }
+@keyframes spinner-wiggle {
+  0% { @include transform(rotate(0deg) scale(1)); }
+  50% { @include transform(rotate(180deg) scale(0.5)); }
+  100% { @include transform(rotate(360deg) scale(1)); }
 }
 
 // Spinner
 // ==================================================
 .spinner {
-  @include animation(spinner-rotator 1.4s linear infinite);
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 2050;
+  height: 50px;
+  position: relative;
+  width: 50px;
 
-  &.relative {
-    display: block;
-    position: relative;
-    z-index: initial;
+  &::before,
+  &::after {
+    @include animation(spinner-wiggle 1.4s ease infinite);
+    border: solid 8px color(transparent);
+    border-radius: 50%;
+    content: '';
+    height: 50px;
+    position: absolute;
+    width: 50px;
   }
-
-  .bar {
-    @include animation(spinner-dash 1.4s ease-in-out infinite, spinner-colors (1.4s * 4) ease-in-out infinite);
-    stroke-dasharray: 187;
-    stroke-dashoffset: 0;
-    transform-origin: center;
+  &::before {
+    border-bottom-color: color(secondary);
+    border-top-color: color(primary);
+  }
+  &::after {
+    @include animation-delay(0.7s);
+    border-left-color: color(tertiary);
+    border-right-color: color(quaditiary);
   }
 }
 
 // Backdrop
 // ==================================================
 .spinner-backdrop {
-  background: transparentize(color(white), 0.15);
+  background: color-transparentize(slate, 0.15);
   bottom: 0;
   height: 100%;
   left: 0;
@@ -87,5 +57,11 @@
   top: 0;
   z-index: 2040;
 
-  &.dark { background: transparentize(color(black), 0.15); }
+  &.white { background: color-transparentize(white, 0.15); }
+
+  > .spinner {
+    left: calc(50% - 25px);
+    position: fixed;
+    top: calc(50% - 25px);
+  }
 }

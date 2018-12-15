@@ -35,7 +35,7 @@ abbr {
   cursor: help;
 }
 blockquote {
-  border-left: 3px solid color(primary);
+  border-left: 3.5px solid color(primary);
   padding: 10px 0 10px 20px;
 
   > cite {
@@ -170,14 +170,19 @@ sup { vertical-align: text-top; }
 
 // Colors
 // ==================================================
+@each $name, $color in $colors-brand {
+  .text-color-#{$name}-100 { color: color-100($name); }
+  .text-color-#{$name}-200 { color: color-200($name); }
+  .text-color-#{$name}-300 { color: color-300($name); }
+  .text-color-#{$name}-400 { color: color-400($name); }
+  .text-color-#{$name}-500 { color: color-500($name); }
+  .text-color-#{$name}-600 { color: color-600($name); }
+  .text-color-#{$name}-700 { color: color-700($name); }
+  .text-color-#{$name}-800 { color: color-800($name); }
+  .text-color-#{$name}-900 { color: color-900($name); }
+}
 @each $name, $color in $colors {
-  .text-color-tintiest-#{$name} { color: tintiest-color($name); }
-  .text-color-tint-#{$name} { color: tint-color($name); }
-  .text-color-tintish-#{$name} { color: tintish-color($name); }
   .text-color-#{$name} { color: $color; }
-  .text-color-shadeish-#{$name} { color: shadeish-color($name); }
-  .text-color-shade-#{$name} { color: shade-color($name); }
-  .text-color-shadiest-#{$name} { color: shadiest-color($name); }
 
   @if ($pseudo-elements) {
     .text-color-hover-#{$name} {

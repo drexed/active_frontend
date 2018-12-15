@@ -23,13 +23,13 @@
   Switch.VERSION = '1.0.0';
   Switch.DEFAULTS = {
     baseClass: 'switch',
-    offClass: 'switch-color-light-haze',
-    onClass: 'switch-color-green',
+    offClass: 'switch-color-haze',
+    onClass: 'switch-color-primary',
     onOffCallback: function () {},
     onOnCallback: function () {},
     text: {
-      off: '<i class="icon-cross"></i>',
-      on: '<i class="icon-check"></i>'
+      off: '',
+      on: ''
     }
   };
 

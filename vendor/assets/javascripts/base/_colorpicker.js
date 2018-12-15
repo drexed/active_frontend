@@ -17,9 +17,9 @@
   Colorpicker.VERSION = '1.0.0';
   Colorpicker.DEFAULTS = {
     colors: [
-      '#73d325', '#3bc91d', '#15d696', '#035eff', '#5e40ff',
-      '#9c3cf1', '#fc5167', '#f31d2c', '#ff7319', '#ffcd00',
-      '#102533', '#223648', '#8ea1bc', '#eaedf8', '#ffffff'
+      '#abbd31', '#43c540', '#27c490', '#2979fe', '#8660fe',
+      '#bb64fa', '#f57081', '#ef3843', '#f77337', '#f9ca28',
+      '#102533', '#22364e', '#a5bacf', '#eaeffa', '#ffffff'
     ],
     item: '<li><button type="button"></button></li>',
     menu: '<ul class="colorpicker dropmenu caret"></ul>',

@@ -3,6 +3,7 @@
 // Alert
 // Colors
 // Styles
+// Media Queries
 
 // Alert
 // ==================================================
@@ -11,9 +12,9 @@
   border: 0;
   border-bottom-width: 1px;
   border-style: solid;
-  border-color: color(haze);
+  border-color: color(light-haze);
   box-sizing: border-box;
-  color: color(slate);
+  color: color(black);
   display: block;
   padding: 13px 20px;
   width: 100%;
@@ -29,11 +30,16 @@
     position: absolute;
     width: inherit;
   }
+  &.fixed,
+  &.floating { position: fixed; }
   &.fixed {
     left: 0;
-    position: fixed;
-    right: 0;
     top: 0;
+  }
+  &.floating {
+    left: 160px;
+    top: 49px;
+    width: calc(100% - 320px);
   }
 }
 
@@ -42,7 +48,7 @@
 @each $name, $color in $colors {
   .alert-color-#{$name} {
     background: color($name);
-    border-color: darker-color($name);
+    border-color: color($name);
     color: text-color-on($name);
 
     &.alert-outline {
@@ -59,3 +65,15 @@
   border-width: 1px;
 }
 .alert-outline { background: color(transparent); }
+
+// Media Queries
+// ==================================================
+@media only screen and (max-width: breakpoint-max-width(s)) {
+  .alert {
+    &.floating {
+      left: 10px;
+      top: 26px;
+      width: calc(100% - 20px);
+    }
+  }
+}

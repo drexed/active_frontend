@@ -11,7 +11,7 @@
   background: color(haze);
   border: 1px solid color(haze);
   border-radius: border-radius(b);
-  color: color(slate);
+  color: color(black);
   display: inline-block;
   font-size: text-size(s);
   font-weight: text-weight(semibold);
@@ -32,7 +32,7 @@
   }
 }
 .badge {
-  border-radius: border-radius(xl);
+  border-radius: border-radius(xxl);
   min-width: 14px;
   padding: 5px 6px 7px;
 }
@@ -50,8 +50,8 @@
     &.label-outline { color: color($name); }
     &.badge-color-tint,
     &.label-color-tint {
-      background: tint($name, 80%);
-      border-color: tint($name, 80%);
+      background: color-50($name);
+      border-color: color-50($name);
       color: color($name);
 
       &.badge-outline,

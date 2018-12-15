@@ -84,13 +84,13 @@
   position: relative;
 
   .wysiwyg-dropzone {
-    background: transparentize(color(white), 0.15);
+    background: color-transparentize(white, 0.15);
     color: color(gray);
     display: none;
     position: absolute;
     z-index: 100;
 
-    &.hover { color: color(slate); }
+    &.hover { color: color(black); }
 
     .wysiwyg-dropzone-message {
       display: table-cell;
@@ -142,8 +142,8 @@
 
       .wysiwyg-editable {
         background: color(white);
-        box-shadow: inset 0 2px 0 0 darkish-color(light-haze);
-        color: color(slate);
+        box-shadow: inset 0 2px 0 0 color(dark-haze);
+        color: color(black);
         min-height: 140px;
         overflow: auto;
         padding: 10px;
@@ -210,7 +210,7 @@
   background: color(light-haze);
   border-bottom: 1px solid color(haze);
   margin: 0;
-  padding: 0 5px 5px;
+  padding: 5px 10px 10px;
 
   > .wysiwyg-btn-group {
     .wysiwyg-btn {

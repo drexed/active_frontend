@@ -5,6 +5,8 @@
 // Decorations
 // Colors
 
+// scss-lint:disable ImportantRule
+
 // Reset
 // ==================================================
 dd,
@@ -32,13 +34,13 @@ ul {
 }
 @if ($pseudo-elements) {
   .list-hover {
-    > li:hover { background: background-hover-color(light-haze); }
+    > li:hover { background: color-hover(light-haze); }
 
     &.dark {
-      > li:hover { background: background-hover-color(slate); }
+      > li:hover { background: color-hover(slate); }
     }
     &.light {
-      > li:hover { background: background-hover-color(haze); }
+      > li:hover { background: color-hover(haze); }
     }
   }
 }
@@ -57,9 +59,10 @@ ul {
 // Decorations
 // ==================================================
 .list-line,
+.list-encase,
 .list-border {
   > li {
-    padding: 8px 0;
+    padding: 10px 0;
 
     &:not(:last-child) {
       border-bottom-style: solid;
@@ -67,13 +70,17 @@ ul {
     }
   }
 }
+.list-encase,
 .list-border {
   border-radius: border-radius(b);
   border-style: solid;
   border-width: 1px;
 
   > li {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+}
+.list-encase {
+  > li { border-bottom: 0 !important; }
 }

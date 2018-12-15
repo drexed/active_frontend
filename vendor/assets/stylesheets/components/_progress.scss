@@ -41,7 +41,7 @@ progress {
   width: 0;
 
   &.striped {
-    @include background-image(45deg, transparentize(color(white), 0.85) 25%, color(transparent) 25%, color(transparent) 50%, transparentize(color(white), 0.85) 50%, transparentize(color(white), 0.85) 75%, color(transparent) 75%, color(transparent));
+    @include background-image(45deg, color-transparentize(white, 0.85) 25%, color(transparent) 25%, color(transparent) 50%, color-transparentize(white, 0.85) 50%, color-transparentize(white, 0.85) 75%, color(transparent) 75%, color(transparent));
     @include background-size(40px 40px);
     @include transition(width 0.6s ease);
 

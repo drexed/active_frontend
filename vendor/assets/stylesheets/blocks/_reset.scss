@@ -170,7 +170,7 @@ body {
 body {
   background: color(white);
   border-color: color(haze);
-  color: color(slate);
+  color: color(black);
   font-family: text-family(sans-serif);
   font-size: text-size(b);
   font-variant: normal;
@@ -183,5 +183,5 @@ body {
   text-decoration: none;
   text-transform: none;
 }
-::-moz-selection { background: transparentize(color(primary), 0.8); }
-::selection { background: transparentize(color(primary), 0.8); }
+::-moz-selection { background: color-transparentize(primary, 0.8); }
+::selection { background: color-transparentize(primary, 0.8); }

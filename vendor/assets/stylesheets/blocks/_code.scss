@@ -51,7 +51,7 @@ samp { white-space: pre-wrap; }
 pre,
 samp {
   .c {
-    color: color(light-gray);
+    color: color(white);
     font-style: italic;
   } // Comment
   .err {
@@ -60,12 +60,12 @@ samp {
   } // Error
   .k { color: color(blue); } // Keyword
   .cm {
-    color: color(light-gray);
+    color: color(white);
     font-style: italic;
   } // Comment.Multiline
   .cp { color: color(green); } // Comment.Preproc
   .c1 {
-    color: color(light-gray);
+    color: color(white);
     font-style: italic;
   } // Comment.Single
   .cs {
@@ -81,10 +81,10 @@ samp {
   } // Generic.Heading
   .gi { color: color(green); } // Generic.Inserted
   .go { color: color(gray); } // Generic.Output
-  .gp { color: color(slate); } // Generic.Prompt
+  .gp { color: color(black); } // Generic.Prompt
   .gs { font-weight: bold; } // Generic.Strong
   .gu {
-    color: color(slate);
+    color: color(black);
     font-weight: bold;
   } // Generic.Subheading
   .gt { color: color(red); } // Generic.Traceback
@@ -136,7 +136,11 @@ samp {
   .vi { color: color(red); } // Name.Variable.Instance
   .il { color: color(green); } // Literal.Number.Integer.Long
 
-  &.dark {
+  &.light,
+  &.white {
+    .c,
+    .cm,
+    .c1 { color: color(gray); }
     .err { background: color(gray); }
     .gp,
     .gu { color: inherit; }

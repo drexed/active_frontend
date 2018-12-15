@@ -7,7 +7,7 @@
 // Pagination
 // ==================================================
 .pagination {
-  color: color(slate);
+  color: color(black);
   list-style: none;
   padding: 0;
 
@@ -20,7 +20,7 @@
 
     a,
     &.active {
-      border-radius: border-radius(xl);
+      border-radius: border-radius(xxl);
       display: inline-block;
       min-width: 8px;
       padding: 8px 12px;
@@ -32,8 +32,8 @@
 
       @if ($pseudo-elements) {
         &:hover,
-        &:focus { background: darkish-color(haze); }
-        &:active { background: lightish-color(haze); }
+        &:active,
+        &:focus { background: color(dark-haze); }
       }
     }
 
@@ -72,8 +72,8 @@
 
         @if ($pseudo-elements) {
           &:hover,
-          &:focus { background: darkish-color(light-slate); }
-          &:active { background: lightish-color(light-slate); }
+          &:active,
+          &:focus { background: color(dark-slate); }
         }
       }
     }
@@ -85,8 +85,8 @@
 
         @if ($pseudo-elements) {
           &:hover,
-          &:focus { background: darkish-color(dark-haze); }
-          &:active { background: lightish-color(dark-haze); }
+          &:active,
+          &:focus { background: color(light-haze); }
         }
       }
     }

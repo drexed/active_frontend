@@ -10,7 +10,7 @@
   background: color(white);
   border: 1px solid color(haze);
   border-radius: border-radius(b);
-  color: color(slate);
+  color: color(black);
   display: none;
   left: 0;
   position: absolute;
@@ -160,6 +160,8 @@
   border-top-right-radius: border-radius(b);
   display: block;
   font-weight: text-weight(semibold);
+  padding-bottom: 11px;
+  padding-top: 9px;
 }
 .popover-nav {
   border-top-style: solid;

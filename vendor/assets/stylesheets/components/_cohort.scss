@@ -22,7 +22,7 @@
   text-align: center;
 }
 .cohort-table {
-  background: light-color(light-haze);
+  background: color(light-haze);
   border-spacing: 0;
   border-collapse: collapse;
   font-size: text-size(b);
@@ -92,13 +92,13 @@
 .cohort-highish,
 .cohort-high,
 .cohort-highest { color: color(white); }
-.cohort-lowest { background: tintiest-color(primary); }
-.cohort-low { background: tint-color(primary); }
-.cohort-lowish { background: tintish-color(primary); }
+.cohort-lowest { background: color-100(primary); }
+.cohort-low { background: color-200(primary); }
+.cohort-lowish { background: color-300(primary); }
 .cohort-medium { background: color(primary); }
-.cohort-highish { background: shadeish-color(primary); }
-.cohort-high { background: shade-color(primary); }
-.cohort-highest { background: shadiest-color(primary); }
+.cohort-highish { background: color-700(primary); }
+.cohort-high { background: color-800(primary); }
+.cohort-highest { background: color-900(primary); }
 
 // Media Queries
 // ==================================================

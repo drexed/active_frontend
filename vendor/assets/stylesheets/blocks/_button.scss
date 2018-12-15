@@ -16,16 +16,16 @@
   @include appearance(none);
   @include transition(all 0.3s ease-in-out);
   background: color(haze);
-  border: 1px solid color(haze);
+  border: 2px solid color(haze);
   border-radius: border-radius(b);
   box-sizing: border-box;
-  color: color(slate);
+  color: color(black);
   cursor: pointer;
   display: inline-block;
   font-size: text-size(b);
   font-weight: text-weight(normal);
   line-height: 1;
-  padding: 12px 20px 14px;
+  padding: 11px 20px 13px;
   text-align: center;
   touch-action: manipulation;
   vertical-align: middle;
@@ -36,15 +36,15 @@
       &:hover,
       &.active,
       &:focus {
-        background: darkish-color(haze);
-        border-color: darkish-color(haze);
+        background: color(dark-haze);
+        border-color: color(dark-haze);
       }
       &:active,
       &.disabled,
       &[disabled] {
-        background: lightish-color(haze);
-        border-color: lightish-color(haze);
-        color: transparentize(color(slate), 0.35);
+        background: color(light-haze);
+        border-color: color(light-haze);
+        color: color-transparentize(black, 0.35);
       }
       &.disabled,
       &[disabled] { cursor: not-allowed; }
@@ -70,32 +70,32 @@
 // ==================================================
 .btn-size-l,
 .btn-size-m { font-size: text-size(m); }
-.btn-size-l { padding: 21px 30px; }
-.btn-size-m { padding: 16px 25px; }
+.btn-size-l { padding: 20px 30px; }
+.btn-size-m { padding: 15px 25px; }
 .btn-size-s {
   font-size: text-size(s);
-  padding: 8px 15px 9px;
+  padding: 7px 15px 8px;
 }
 .btn-icon {
   max-width: 44px;
-  padding: 13px 0;
+  padding: 12px 0;
   width: 44px;
 
   &.btn-size-l,
   &.btn-size-m { font-size: text-size(l); }
   &.btn-size-l {
     max-width: 62px;
-    padding: 20px 0;
+    padding: 19px 0;
     width: 62px;
   }
   &.btn-size-m {
     max-width: 52px;
-    padding: 15px 0;
+    padding: 14px 0;
     width: 52px;
   }
   &.btn-size-s {
     max-width: 33px;
-    padding: 8.5px 0;
+    padding: 7.5px 0;
     width: 33px;
   }
   &.btn-link {
@@ -124,14 +124,14 @@
         &:hover,
         &.active,
         &:focus {
-          background: darkish-color($name);
-          border-color: darkish-color($name);
+          background: color-600($name);
+          border-color: color-600($name);
         }
         &:active,
         &.disabled,
         &[disabled] {
-          background: lightish-color($name);
-          border-color: lightish-color($name);
+          background: color-400($name);
+          border-color: color-400($name);
           color: transparentize(text-color-on($name), 0.35);
         }
       }
@@ -144,10 +144,10 @@
         @if ($pseudo-elements) {
           &:hover,
           &.active,
-          &:focus { color: darkish-color($name); }
+          &:focus { color: color-600($name); }
           &:active,
           &.disabled,
-          &[disabled] { color: lightish-color($name); }
+          &[disabled] { color: color-400($name); }
         }
       }
     }
@@ -162,8 +162,8 @@
           &:focus,
           &.disabled,
           &[disabled] {
-            background: darkish-color($name);
-            border-color: darkish-color($name);
+            background: color-600($name);
+            border-color: color-600($name);
             color: text-color-on($name);
           }
           &.disabled,
@@ -219,7 +219,7 @@
 
   > .btn {
     border-radius: 0;
-    margin-left: -1px;
+    margin-left: -2px;
     position: relative;
 
     &:hover,
@@ -248,7 +248,7 @@
   > .btn {
     display: block;
     margin-left: 0;
-    margin-top: -1px;
+    margin-top: -2px;
     width: 100%;
 
     &:first-child {
@@ -282,7 +282,7 @@
       border-right-width: 0;
       display: table-cell;
 
-      &:last-child { border-right-width: 1px; }
+      &:last-child { border-right-width: 2px; }
     }
   }
 
@@ -331,7 +331,7 @@
       border-radius: 0;
       display: block;
       margin-left: 0;
-      margin-top: -1px;
+      margin-top: -2px;
       width: 100%;
 
       &:first-child {
@@ -349,7 +349,7 @@
     &.btn-group-vertical {
       > .btn {
         display: inline-block;
-        margin-left: -1px;
+        margin-left: -2px;
         margin-top: 0;
         max-width: initial;
         width: initial;
@@ -370,10 +370,10 @@
     &.btn-group-block {
       > .btn {
         border-radius: 0;
-        border-right-width: 1px;
+        border-right-width: 2px;
         display: block;
         margin-left: 0;
-        margin-top: -1px;
+        margin-top: -2px;
         width: 100%;
 
         &:first-child {
@@ -404,7 +404,7 @@
           &.dropdown-toggle {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: border-radius(b);
-            border-right-width: 1px;
+            border-right-width: 2px;
             border-top-left-radius: 0;
             border-top-right-radius: border-radius(b);
           }

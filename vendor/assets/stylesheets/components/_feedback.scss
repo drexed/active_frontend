@@ -5,7 +5,7 @@
 // Feedback
 // ==================================================
 .feedback {
-  background: transparentize(color(black), 0.15);
+  background: color-transparentize(slate, 0.15);
   border-radius: border-radius(b);
   bottom: 0;
   color: color(white);
@@ -24,8 +24,8 @@
   z-index: 2040;
 
   &.white {
-    background: transparentize(color(white), 0.15);
-    color: color(slate);
+    background: color-transparentize(white, 0.15);
+    color: color(black);
   }
 
   > i {

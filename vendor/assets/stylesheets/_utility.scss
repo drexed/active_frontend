@@ -43,7 +43,7 @@
 }
 @function text-color-on($color) {
   @if index($colors-black-text, $color) {
-    @return color(slate);
+    @return color(black);
   } @else {
     @return color(white);
   }
@@ -51,59 +51,62 @@
 
 // Attribute Funtions
 // ==================================================
-@function background-hover-color($color) {
-  @return darken(color($color), 1.75%);
-}
 @function border-radius($size) {
   @return map-get($common-border-radiuses, $size);
-}
-@function darkest-color($color) {
-  @return darken(color($color), 12.5%);
-}
-@function darksome-color($color) {
-  @return darken(color($color), 10%);
-}
-@function dark-color($color) {
-  @return darken(color($color), 7.5%);
-}
-@function darker-color($color) {
-  @return darken(color($color), 5%);
-}
-@function darkish-color($color) {
-  @return darken(color($color), 2.5%);
 }
 @function color($color) {
   @return map-get($colors, '' + $color);
 }
-@function shade($color, $percentage) {
-  @return mix(black, color($color), $percentage);
+@function color-0($color) {
+  @return tint($color, 90%);
 }
-@function shadeish-color($color) {
-  @return shade($color, 20%);
+@function color-50($color) {
+  @return tint($color, 80%);
 }
-@function shade-color($color) {
-  @return shade($color, 40%);
+@function color-100($color) {
+  @return tint($color, 60%);
 }
-@function shadiest-color($color) {
+@function color-200($color) {
+  @return tint($color, 45%);
+}
+@function color-300($color) {
+  @return tint($color, 30%);
+}
+@function color-400($color) {
+  @return tint($color, 15%);
+}
+@function color-500($color) {
+  @return color($color);
+}
+@function color-600($color) {
+  @return shade($color, 15%);
+}
+@function color-700($color) {
+  @return shade($color, 30%);
+}
+@function color-800($color) {
+  @return shade($color, 45%);
+}
+@function color-900($color) {
   @return shade($color, 60%);
 }
-@function lightish-color($color) {
-  @return lighten(color($color), 2.5%);
+@function color-hover($color) {
+  @return darken(color($color), 1.75%);
 }
-@function lighter-color($color) {
-  @return lighten(color($color), 5%);
+@function color-lucidity($color, $percentage) {
+  @return rgba(color($color), $percentage);
 }
-@function light-color($color) {
-  @return lighten(color($color), 7.5%);
+@function color-opacify($color, $percentage) {
+  @return opacify(color($color), $percentage);
 }
-@function lightsome-color($color) {
-  @return lighten(color($color), 10%);
-}
-@function lightest-color($color) {
-  @return lighten(color($color), 12.5%);
+@function color-transparentize($color, $percentage) {
+  @return transparentize(color($color), $percentage);
 }
 @function progress-size($size) {
   @return map-get($progress-sizes, $size);
+}
+@function shade($color, $percentage) {
+  @return mix(black, color($color), $percentage);
 }
 @function text-family($family) {
   @return map-get($font-families, $family);
@@ -122,15 +125,6 @@
 }
 @function tint($color, $percentage) {
   @return mix(white, color($color), $percentage);
-}
-@function tintish-color($color) {
-  @return tint($color, 20%);
-}
-@function tint-color($color) {
-  @return tint($color, 40%);
-}
-@function tintiest-color($color) {
-  @return tint($color, 60%);
 }
 
 // Vendor Mixins

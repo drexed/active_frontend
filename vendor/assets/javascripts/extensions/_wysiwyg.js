@@ -4461,7 +4461,7 @@
                    '<div class="row">' +
                      '<div class="form-checkbox form-align-vertical">' +
                        '<input type="checkbox" id="bsopenInNewWindow" checked> ' +
-                       '<label for="bsopenInNewWindow"><i class="icon-check"></i></label>' +
+                       '<label for="bsopenInNewWindow"></label>' +
                      '</div> ' +
                      '<label for="bsopenInNewWindow">' + lang.link.openInNewWindow + '?</label>' +
                    '</div>': ''

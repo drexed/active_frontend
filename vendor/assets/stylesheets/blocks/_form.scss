@@ -65,7 +65,6 @@ textarea,
     color: color(gray);
     font-weight: text-weight(semilight) !important;
   }
-  &:invalid,
   &.invalid {
     border-color: color(red);
     box-shadow: 0 0 0 3px color-lucidity(red, 0.2);

@@ -5,6 +5,7 @@
 // Selects
 // Choicepickers
 // Checkboxes & Radios
+// Errors
 // Notes
 // Tags
 // Labels
@@ -63,6 +64,11 @@ textarea,
     background: color(light-haze);
     color: color(gray);
     font-weight: text-weight(semilight) !important;
+  }
+  &:invalid,
+  &.invalid {
+    border-color: color(red);
+    box-shadow: 0 0 0 3px color-lucidity(red, 0.2);
   }
   &:focus,
   &.focus {
@@ -394,6 +400,10 @@ textarea {
     width: 12px;
   }
   &.form-align-vertical { vertical-align: middle; }
+  &.invalid {
+    border-color: color(red);
+    box-shadow: 0 0 0 3px color-lucidity(red, 0.2);
+  }
   &.dark {
     label {
       background: color(light-slate);
@@ -436,6 +446,35 @@ textarea {
   border-radius: border-radius(xxl);
 
   label { border-radius: inherit; }
+}
+
+// Notes
+// ==================================================
+.form-error {
+  background: color-lucidity(red, 0.2);
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-color: color(red);
+  border-bottom-right-radius: border-radius(b);
+  border-top-left-radius: border-radius(s);
+  color: color(red);
+  font-size: text-size(xxxs);
+  height: 10px;
+  margin: 2px 0 0 2px;
+  position: absolute;
+  width: 10px;
+
+  &::after {
+    content: '\e99a';
+    font-family: 'Active Icons';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: text-weight(normal);
+    position: absolute;
+    margin: -7.5px 0 0 1px;
+    speak: none;
+    text-transform: none;
+  }
 }
 
 // Notes

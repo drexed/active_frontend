@@ -6,6 +6,7 @@ module ActiveFrontendHelper
   def colors_base(opacity = 1)
     {
       black: { rgba: "rgba(16,37,51,#{opacity})", hex: '#102533' },
+      steel: { rgba: "rgba(61,81,112,#{opacity})", hex: '#3d5170' },
       white: { rgba: "rgba(255,255,255,#{opacity})", hex: '#ffffff' },
       transparent: { rgba: 'rgba(0,0,0,0)', hex: '#ffffff' }
     }
@@ -14,17 +15,17 @@ module ActiveFrontendHelper
   def colors_brand(opacity = 1)
     {
       lime: { rgba: "rgba(171,189,49,#{opacity})", hex: '#abbd31' },
-      green: { rgba: "rgba(67,197,64,#{opacity})", hex: '#43c540' },
+      green: { rgba: "rgba(72,197,54,#{opacity})", hex: '#48c536' },
       teal: { rgba: "rgba(39,196,144,#{opacity})", hex: '#27c490' },
-      sky: { rgba: "rgba(65,176,255,#{opacity})", hex: '#41b0ff' },
-      blue: { rgba: "rgba(41,121,254,#{opacity})", hex: '#2979fe' },
+      sky: { rgba: "rgba(45,166,255,#{opacity})", hex: '#2da6ff' },
+      blue: { rgba: "rgba(0,123,255,#{opacity})", hex: '#007bff' },
       indigo: { rgba: "rgba(134,96,254,#{opacity})", hex: '#8660fe' },
       purple: { rgba: "rgba(187,100,250,#{opacity})", hex: '#bb64fa' },
       brown: { rgba: "rgba(128,88,78,#{opacity})", hex: '#80584e' },
       pink: { rgba: "rgba(245,112,129,#{opacity})", hex: '#f57081' },
-      red: { rgba: "rgba(239,56,67,#{opacity})", hex: '#ef3843' },
+      red: { rgba: "rgba(239,46,67,#{opacity})", hex: '#ef2e43' },
       orange: { rgba: "rgba(247,115,55,#{opacity})", hex: '#f77337' },
-      yellow: { rgba: "rgba(249,202,40,#{opacity})", hex: '#f9ca28' }
+      yellow: { rgba: "rgba(245,200,40,#{opacity})", hex: '#f5c828' }
     }
   end
 

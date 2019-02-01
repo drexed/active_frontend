@@ -28,7 +28,7 @@
 
   Filepicker.VERSION = '1.0.0';
   Filepicker.DEFAULTS = {
-    badgeClass: 'badge badge-color-black',
+    badgeClass: 'badge badge-color-steel',
     buttonBefore: false,
     buttonClass: 'btn',
     buttonText: 'Browse',

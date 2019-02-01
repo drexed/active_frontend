@@ -90,7 +90,7 @@
     position: absolute;
     z-index: 100;
 
-    &.hover { color: color(black); }
+    &.hover { color: color(steel); }
 
     .wysiwyg-dropzone-message {
       display: table-cell;
@@ -142,8 +142,7 @@
 
       .wysiwyg-editable {
         background: color(white);
-        box-shadow: inset 0 2px 0 0 color(dark-haze);
-        color: color(black);
+        color: color(steel);
         min-height: 140px;
         overflow: auto;
         padding: 10px;

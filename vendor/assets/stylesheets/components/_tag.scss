@@ -7,9 +7,9 @@
 // Tag
 // ==================================================
 .tag {
-  margin: 2px 2px 2px 0;
-  padding-top: 5px !important;
-  padding-right: 22px !important;
+  font-size: text-size(xxs) !important;
+  margin: 0 2px 0 0;
+  padding: 2.5px 12px 3.5px 4px !important;
 
   [data-role='remove'] {
     cursor: pointer;

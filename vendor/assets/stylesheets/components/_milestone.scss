@@ -35,13 +35,13 @@
   }
 }
 .milestone {
-  background: color(gray);
-  border: 2px solid color(gray);
+  background: color(steel);
+  border: 2px solid color(steel);
   color: color(white);
 
   &.milestone-outline {
     background: color(white);
-    color: color(gray);
+    color: color(steel);
   }
 }
 

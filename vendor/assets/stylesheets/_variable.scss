@@ -40,6 +40,7 @@ $animation-durations: (
 // ==================================================
 $colors-base: (
   'black': rgba(16,37,51,1),
+  'steel': rgba(61,81,112,1),
   'white': rgba(255,255,255,1),
   'transparent': rgba(0,0,0,0)
 );
@@ -56,17 +57,17 @@ $colors-grayscale: (
 );
 $colors-brand: (
   'lime': rgba(171,189,49,1),
-  'green': rgba(67,197,64,1),
+  'green': rgba(72,197,54,1),
   'teal': rgba(39,196,144,1),
-  'sky': rgba(65,176,255,1),
-  'blue': rgba(41,121,254,1),
+  'sky': rgba(45,166,255,1),
+  'blue': rgba(0,123,255,1),
   'indigo': rgba(134,96,254,1),
   'purple': rgba(187,100,250,1),
   'brown': rgba(128,88,78,1),
   'pink': rgba(245,112,129,1),
-  'red': rgba(239,56,67,1),
+  'red': rgba(239,46,67,1),
   'orange': rgba(247,115,55,1),
-  'yellow': rgba(249,202,40,1)
+  'yellow': rgba(245,200,40,1)
 );
 $colors-global: (
   'primary': map-get($colors-brand, 'blue'),
@@ -75,7 +76,7 @@ $colors-global: (
   'quaditiary': map-get($colors-brand, 'yellow')
 );
 $colors: map-collect($colors-base, $colors-grayscale, $colors-brand, $colors-global);
-$colors-black-text: 'transparent', 'dark-haze', 'haze', 'light-haze', 'white';
+$colors-text-alt: 'transparent', 'dark-haze', 'haze', 'light-haze', 'white';
 
 // Common
 // ==================================================

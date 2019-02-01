@@ -42,8 +42,8 @@
   @return $width / 2;
 }
 @function text-color-on($color) {
-  @if index($colors-black-text, $color) {
-    @return color(black);
+  @if index($colors-text-alt, $color) {
+    @return color(steel);
   } @else {
     @return color(white);
   }

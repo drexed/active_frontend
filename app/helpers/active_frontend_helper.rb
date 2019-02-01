@@ -34,9 +34,9 @@ module ActiveFrontendHelper
       light_slate: { rgba: "rgba(40,63,92,#{opacity})", hex: '#283f5c' },
       slate: { rgba: "rgba(34,54,78,#{opacity})", hex: '#22364e' },
       dark_slate: { rgba: "rgba(28,45,64,#{opacity})", hex: '#1c2d40' },
-      light_gray: { rgba: "rgba(178,196,214,#{opacity})", hex: '#b2c4d6' },
-      gray: { rgba: "rgba(165,186,207,#{opacity})", hex: '#a5bacf' },
-      dark_gray: { rgba: "rgba(152,176,200,#{opacity})", hex: '#98b0c8' },
+      light_gray: { rgba: "rgba(171,189,212,#{opacity})", hex: '#abbdd4' },
+      gray: { rgba: "rgba(158,179,205,#{opacity})", hex: '#9eb3cd' },
+      dark_gray: { rgba: "rgba(145,169,198,#{opacity})", hex: '#91a9c6' },
       light_haze: { rgba: "rgba(246,248,252,#{opacity})", hex: '#f6f8fc' },
       haze: { rgba: "rgba(234,239,250,#{opacity})", hex: '#eaeffa' },
       dark_haze: { rgba: "rgba(223,230,246,#{opacity})", hex: '#dfe6f6' }

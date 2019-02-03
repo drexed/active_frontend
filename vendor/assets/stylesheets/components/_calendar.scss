@@ -90,7 +90,10 @@
   width: 100%;
 }
 .calendar-widget-header,
-.calendar-widget-content { border: 1px solid color(haze); }
+.calendar-widget-content {
+  border: 1px solid color(haze);
+  width: auto !important;
+}
 .calendar-state-highlight { background: color(light-haze); }
 .calendar-cell-overlay {
   background: color(primary);
@@ -198,15 +201,16 @@ table.calendar-border-separate {
 .calendar-agenda {
   table { border-collapse: separate; }
 
-  .calendar-day-content { padding: 3px 3px 2px;}
-  .calendar-week-number { font-weight: text-weight(semibold); }
   th.calendar-agenda-axis {
     padding: 0 5px;
     text-align: right;
     vertical-align: middle;
     white-space: nowrap;
-    width: 60px;
+
   }
+  .calendar-day-content { padding: 3px 3px 2px;}
+  .calendar-week-number { font-weight: text-weight(semibold); }
+  .calendar-agenda-axis { width: 60px !important; }
 }
 .calendar-view-agendaDay {
   .calendar-event-hori { margin-left: 3px; }

@@ -622,7 +622,12 @@ textarea {
     display: table-cell;
     margin: 0;
     vertical-align: middle;
+  }
 
+  button,
+  input,
+  select,
+  .btn {
     + .form-addon { border-left: 0; }
   }
 

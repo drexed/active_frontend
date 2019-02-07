@@ -354,6 +354,7 @@ textarea {
 
   label {
     @include transition(all 0.3s ease-in-out);
+    background: color(light-haze);
     border-radius: border-radius(s);
     color: color(transparent);
     cursor: pointer;
@@ -404,8 +405,11 @@ textarea {
     box-shadow: 0 0 0 3px color-lucidity(red, 0.2);
   }
   &.dark {
+    background: color(slate);
+
     label {
       background: color(light-slate);
+
 
       @if ($pseudo-elements) {
         &:hover,
@@ -419,8 +423,10 @@ textarea {
     }
   }
   &.light {
+    background: color(light-haze);
+
     label {
-      background: color(light-haze);
+      background: color(haze);
 
       @if ($pseudo-elements) {
         &:hover,
@@ -430,7 +436,7 @@ textarea {
 
     input[type='checkbox'],
     input[type='radio'] {
-      &[disabled] + label { background: color(light-haze); }
+      &[disabled] + label { background: color(haze); }
     }
   }
   &.dark,
@@ -454,7 +460,7 @@ textarea {
   border-bottom: 2px solid;
   border-right: 2px solid;
   border-color: color(red);
-  border-bottom-right-radius: border-radius(b);
+  border-bottom-right-radius: border-radius(s);
   border-top-left-radius: border-radius(s);
   color: color(red);
   font-size: text-size(xxxs);
@@ -664,6 +670,8 @@ textarea {
       label::after { border-radius: border-radius(xxl); }
     }
   }
+
+  > label + .form-addon { border-left-width: 0; }
 
   *:first-child {
     border-bottom-left-radius: border-radius(b);

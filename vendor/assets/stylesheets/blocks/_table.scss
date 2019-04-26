@@ -25,8 +25,11 @@ tfoot { font-weight: text-weight(semibold); }
 caption,
 td,
 th {
-  padding: 10px 20px;
+  padding: 10px;
   vertical-align: middle;
+
+  &:first-child { padding-left: 20px; }
+  &:last-child { padding-right: 20px; }
 }
 thead {
   tr:not(:last-child) {
@@ -188,6 +191,8 @@ thead {
   th {
     border-left-style: solid;
     border-left-width: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

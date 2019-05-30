@@ -7006,7 +7006,7 @@ module.exports = function (Chart) {
     enabled: true,
     custom: null,
     mode: 'single',
-    backgroundColor: 'rgba(34,54,78,1)',
+    backgroundColor: 'rgba(16,37,51,1)',
     titleFontStyle: '500',
     titleSpacing: 0,
     titleMarginBottom: 3,

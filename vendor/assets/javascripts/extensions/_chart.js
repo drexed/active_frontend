@@ -5415,8 +5415,8 @@ module.exports = function () {
         animationDuration: 400
       },
       onClick: null,
-      defaultColor: 'rgba(61,81,112,0.1)',
-      defaultFontColor: 'rgba(61,81,112,1)',
+      defaultColor: 'rgba(51,71,102,0.1)',
+      defaultFontColor: 'rgba(51,71,102,1)',
       defaultFontFamily: "'Circular', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Verdana, Tahoma, sans-serif",
       defaultFontSize: 14,
       defaultFontStyle: 'normal',
@@ -7006,7 +7006,7 @@ module.exports = function (Chart) {
     enabled: true,
     custom: null,
     mode: 'single',
-    backgroundColor: 'rgba(61,81,112,1)',
+    backgroundColor: 'rgba(34,54,78,1)',
     titleFontStyle: '500',
     titleSpacing: 0,
     titleMarginBottom: 3,
@@ -7028,7 +7028,7 @@ module.exports = function (Chart) {
     yAlign : 'center',
     xAlign : 'center',
     caretSize: 5,
-    cornerRadius: 3,
+    cornerRadius: 4,
     multiKeyBackground: 'rgba(255,255,255,1)',
     callbacks: {
       beforeTitle: helpers.noop,

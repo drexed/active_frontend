@@ -136,3 +136,10 @@
     }
   }
 }
+.card-cohort {
+  > .cohort-container {
+    border: 0;
+    border-color: inherit;
+    border-radius: 0;
+  }
+}

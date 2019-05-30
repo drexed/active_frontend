@@ -16,9 +16,7 @@
 // Icons
 // ==================================================
 [class^='icon-'],
-[class*=' icon-'],
-[class^='icon-weather-'],
-[class*=' icon-weather-'] {
+[class*=' icon-'] {
   &::before {
     display: inline-block;
     font-family: 'Active Icons';

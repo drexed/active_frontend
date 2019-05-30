@@ -111,16 +111,18 @@
 .header-user {
   float: right;
 
-  img {
-    height: 40px;
+  img,
+  .placeholder-initials {
     display: inline-block;
 
     + i::before {
       line-height: 1;
-      vertical-align: middle;
+      margin-top: 14px;
     }
   }
 
+  img { height: 40px; }
+  .placeholder-initials { width: 40px; }
   .img-avatar { margin-top: -4px; }
 }
 

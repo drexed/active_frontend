@@ -1,6 +1,7 @@
 // Table of Contents
 // ==================================================
 // Placeholder
+// Placeholder initials
 
 // Placeholder
 // ==================================================
@@ -17,5 +18,35 @@
   > img {
     max-width: 280px;
     margin: 0 auto 20px;
+  }
+}
+
+// Placeholder initials
+// ==================================================
+.placeholder-initials {
+  background: color(gray);
+  border-radius: border-radius(b);
+  position: relative;
+  width: 50%;
+
+  &::after {
+    content: '';
+    background: inherit;
+    border-radius: inherit;
+    display: block;
+    padding-bottom: 100%;
+  }
+  .initials {
+    @include transform(translate(-50%, -50%));
+    color: color(white);
+    font-size: 115%;
+    font-style: none;
+    font-weight: text-weight(normal);
+    line-height: 1;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
   }
 }

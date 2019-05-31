@@ -34,8 +34,8 @@
 
   &::after {
     border-top: 6px solid color(gray);
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
+    border-left: 5px solid color(transparent);
+    border-right: 5px solid color(transparent);
     content: '';
     height: 0;
     left: -3px;

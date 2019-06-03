@@ -1276,7 +1276,7 @@
       });
     }
   });
-  var dropdown = renderer.create('<ul class="dropmenu caret">', function ($node, options) {
+  var dropdown = renderer.create('<ul class="dropmenu white caret">', function ($node, options) {
     var markup = $.isArray(options.items) ? options.items.map(function (item) {
       var value = (typeof item === 'string') ? item : (item.value || '');
       var content = options.template ? options.template(item) : item;
@@ -1286,7 +1286,7 @@
     $node.html(markup);
   });
 
-  var dropdownCheck = renderer.create('<ul class="dropmenu caret wysiwyg-check">', function ($node, options) {
+  var dropdownCheck = renderer.create('<ul class="dropmenu white caret wysiwyg-check">', function ($node, options) {
     var markup = $.isArray(options.items) ? options.items.map(function (item) {
       var value = (typeof item === 'string') ? item : (item.value || '');
       var content = options.template ? options.template(item) : item;

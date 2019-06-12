@@ -1,6 +1,8 @@
 // Table of Contents
 // ==================================================
 // Card
+// Masonry
+// Media Queries
 
 // scss-lint:disable NestingDepth
 // scss-lint:disable SelectorDepth
@@ -141,5 +143,36 @@
     border: 0;
     border-color: inherit;
     border-radius: 0;
+  }
+}
+
+// Masonry
+// ==================================================
+.card-masonry {
+  column-count: 4;
+  column-gap: 20px;
+  white-space: normal;
+
+  > .card {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &:last-child { margin: 0; }
+  }
+}
+
+// Media Queries
+// ==================================================
+@media only screen and (min-width: breakpoint-min-width(b)) and (max-width: breakpoint-max-width(m)) {
+  .card-masonry { column-count: 3; }
+}
+@media only screen and (min-width: breakpoint-min-width(s)) and (max-width: breakpoint-max-width(b)) {
+  .card-masonry { column-count: 2; }
+}
+@media only screen and (max-width: breakpoint-max-width(s)) {
+  .card-masonry {
+    column-count: 1;
+    column-gap: 0;
   }
 }

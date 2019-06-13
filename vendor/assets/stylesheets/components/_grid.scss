@@ -74,10 +74,11 @@
   }
 }
 .container-grid {
+  align-content: flex-start;
   align-items: flex-start;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: calc(33.33333% - 10px) calc(33.33333% - 20px) calc(33.33333% - 10px);
 
   @each $name in center, flex-end, flex-start, space-around, space-between, stretch {
     &.align-content-#{$name} { align-content: $name; }
@@ -131,7 +132,7 @@
 // ==================================================
 @media only screen and (min-width: breakpoint-min-width(xl)) {
   .container-cols { column-count: 4; }
-  .container-grid { grid-template-columns: repeat(4, 1fr); }
+  .container-grid { grid-template-columns: calc(25% - 10px) calc(25% - 20px) calc(25% - 20px) calc(25% - 10px); }
 }
 @media only screen and (min-width: breakpoint-min-width(b)) and (max-width: breakpoint-max-width(l)) {
   @each $name, $widths in $grid-container-widths {
@@ -155,7 +156,7 @@
   }
 
   .container-cols { column-count: 2; }
-  .container-grid { grid-template-columns: repeat(2, 1fr); }
+  .container-grid { grid-template-columns: calc(50% - 10px) calc(50% - 10px); }
   .hidden-desktop { display: inherit; }
   .hidden-tablet { display: none; }
 }

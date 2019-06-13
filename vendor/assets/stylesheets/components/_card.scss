@@ -1,7 +1,6 @@
 // Table of Contents
 // ==================================================
 // Card
-// Masonry
 // Media Queries
 
 // scss-lint:disable NestingDepth
@@ -143,36 +142,5 @@
     border: 0;
     border-color: inherit;
     border-radius: 0;
-  }
-}
-
-// Masonry
-// ==================================================
-.card-masonry {
-  column-count: 3;
-  column-gap: 20px;
-  white-space: normal;
-
-  > .card-brick {
-    display: inline-block;
-    margin-bottom: 20px;
-    width: 100%;
-
-    &:last-child { margin: 0; }
-  }
-}
-
-// Media Queries
-// ==================================================
-@media only screen and (min-width: breakpoint-min-width(xl)) {
-  .card-masonry { column-count: 4; }
-}
-@media only screen and (min-width: breakpoint-min-width(s)) and (max-width: breakpoint-max-width(b)) {
-  .card-masonry { column-count: 2; }
-}
-@media only screen and (max-width: breakpoint-max-width(s)) {
-  .card-masonry {
-    column-count: 1;
-    column-gap: 0;
   }
 }

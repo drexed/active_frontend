@@ -74,9 +74,26 @@
   }
 }
 .container-grid {
+  align-items: flex-start;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
+
+  @each $name in center, flex-end, flex-start, space-around, space-between, stretch {
+    &.align-content-#{$name} { align-content: $name; }
+  }
+  @each $name in baseline, center, flex-end, flex-start, stretch {
+    &.align-items-#{$name} { align-items: $name; }
+  }
+  @each $name in column, column-reverse, row, row-reverse {
+    &.flex-direction-#{$name} { flex-direction: $name; }
+  }
+  @each $name in nowrap, wrap, wrap-reverse {
+    &.flex-wrap-#{$name} { flex-wrap: $name; }
+  }
+  @each $name in center, flex-end, flex-start, space-around, space-between, space-evenly {
+    &.justify-content-#{$name} { justify-content: $name; }
+  }
 }
 
 // Columns

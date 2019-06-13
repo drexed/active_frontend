@@ -119,7 +119,7 @@ $common-margins-and-paddings: (
   n: 0
 );
 $common-border-styles: dashed, dotted, double, none, solid;
-$common-display-types: block, inline, inline-block, none, table, table-cell, table-row;
+$common-display-types: block, grid, inline, inline-block, inline-grid, none, table, table-cell, table-row;
 $common-visibility-types: collapse, hidden, visible;
 
 // Font

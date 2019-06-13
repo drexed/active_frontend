@@ -76,7 +76,7 @@
 .container-grid {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(33.33333%, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 }
 
 // Columns
@@ -114,7 +114,7 @@
 // ==================================================
 @media only screen and (min-width: breakpoint-min-width(xl)) {
   .container-cols { column-count: 4; }
-  .container-grid { grid-template-columns: repeat(auto-fill, minmax(25%, 1fr)); }
+  .container-grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media only screen and (min-width: breakpoint-min-width(b)) and (max-width: breakpoint-max-width(l)) {
   @each $name, $widths in $grid-container-widths {
@@ -138,7 +138,7 @@
   }
 
   .container-cols { column-count: 2; }
-  .container-grid { grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); }
+  .container-grid { grid-template-columns: repeat(2, 1fr); }
   .hidden-desktop { display: inherit; }
   .hidden-tablet { display: none; }
 }
@@ -180,7 +180,7 @@
     column-count: 1;
     column-gap: 0;
   }
-  .container-grid { grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); }
+  .container-grid { grid-template-columns: repeat(1, 1fr); }
   .hidden-desktop { display: inherit; }
   .hidden-phone { display: none; }
 }

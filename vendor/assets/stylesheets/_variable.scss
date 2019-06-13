@@ -208,6 +208,7 @@ $grid-column-widths: (
   three-fourths: 75%
 );
 $grid-container-widths: (
+  xl: (calc(100% - 380px), 1530px),
   l: (calc(100% - 260px), 1360px),
   m: (calc(100% - 140px), 1180px),
   b: (calc(100% - 60px), 960px),

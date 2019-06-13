@@ -149,11 +149,11 @@
 // Masonry
 // ==================================================
 .card-masonry {
-  column-count: 4;
+  column-count: 3;
   column-gap: 20px;
   white-space: normal;
 
-  > .card {
+  > .card-brick {
     display: inline-block;
     margin-bottom: 20px;
     width: 100%;
@@ -164,8 +164,8 @@
 
 // Media Queries
 // ==================================================
-@media only screen and (min-width: breakpoint-min-width(b)) and (max-width: breakpoint-max-width(m)) {
-  .card-masonry { column-count: 3; }
+@media only screen and (min-width: breakpoint-min-width(xl)) {
+  .card-masonry { column-count: 4; }
 }
 @media only screen and (min-width: breakpoint-min-width(s)) and (max-width: breakpoint-max-width(b)) {
   .card-masonry { column-count: 2; }

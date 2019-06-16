@@ -115,18 +115,27 @@
   // HOVERDOWN DATA-API
   // ==================
 
-  $(document).on('ready.bs.hoverdown.data-api', function () {
-      $('[data-hover="dropdown"]').each(function () {
-        var $this = $(this);
-        if ($this.data('hoverdown')) return;
-        Plugin.call($this, $this.data());
-      });
-    }).on('DOMCharacterDataModified.bs.hoverdown.data-api DOMSubtreeModified.bs.hoverdown.data-api DOMNodeInserted.bs.hoverdown.data-api', function () {
-      $('[data-hover="dropdown"]').each(function () {
-        var $this = $(this);
-        if ($this.data('hoverdown')) return;
-        Plugin.call($this, $this.data());
-      });
+  function PluginCall(_this) {
+    var $this = $(_this);
+    if ($this.data('hoverdown')) return;
+    Plugin.call($this, $this.data());
+  }
+
+  if ($.fn.initialize) {
+    $.initialize('[data-hover="dropdown"]', function() {
+      PluginCall(this);
     });
+  } else {
+    $(document)
+      .on('ready.bs.hoverdown.data-api', function () {
+        $('[data-hover="dropdown"]').each(function () {
+          PluginCall(this);
+        });
+      }).on('DOMCharacterDataModified.bs.hoverdown.data-api DOMSubtreeModified.bs.hoverdown.data-api DOMNodeInserted.bs.hoverdown.data-api', function () {
+        $('[data-hover="dropdown"]').each(function () {
+          PluginCall(this);
+        });
+      });
+  }
 
 }(jQuery);

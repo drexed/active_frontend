@@ -122,19 +122,27 @@
   // LIST DATA-API
   // =============
 
-  $(document)
-    .on('ready.bs.list.data-api', function () {
-      $('[data-toggle="list"]').each(function () {
-        var $this = $(this);
-        if ($this.data('list')) return;
-        Plugin.call($this, $this.data());
-      });
-    }).on('DOMCharacterDataModified.bs.list.data-api DOMSubtreeModified.bs.list.data-api DOMNodeInserted.bs.list.data-api', function () {
-      $('[data-toggle="list"]').each(function () {
-        var $this = $(this);
-        if ($this.data('list')) return;
-        Plugin.call($this, $this.data());
-      });
+  function PluginCall(_this) {
+    var $this = $(_this);
+    if ($this.data('list')) return;
+    Plugin.call($this, $this.data());
+  }
+
+  if ($.fn.initialize) {
+    $.initialize('[data-toggle="list"]', function() {
+      PluginCall(this);
     });
+  } else {
+    $(document)
+      .on('ready.bs.list.data-api', function () {
+        $('[data-toggle="list"]').each(function () {
+          PluginCall(this);
+        });
+      }).on('DOMCharacterDataModified.bs.list.data-api DOMSubtreeModified.bs.list.data-api DOMNodeInserted.bs.list.data-api', function () {
+        $('[data-toggle="list"]').each(function () {
+          PluginCall(this);
+        });
+      });
+  }
 
 }(jQuery);

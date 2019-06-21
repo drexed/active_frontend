@@ -43,7 +43,7 @@
       displayPercentageChange: false,
       pPrecision: 1,
       labelLineColor: '#eaeffa',
-      labelFontColor: '#334766',
+      labelFontColor: '#2e4261',
       sectionColor: ['#17438c', '#1d55b2', '#2367d8', '#007bff', '#498dfe', '#69a1fe', '#89b5fe'],
       pSectionColor: '#f6f8fc',
       font: "'Circular', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Verdana, Tahoma, sans-serif",

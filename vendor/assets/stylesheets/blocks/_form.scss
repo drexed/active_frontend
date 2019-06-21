@@ -301,8 +301,8 @@ textarea {
   width: 100%;
 
   &::after {
-    content: '\e92e';
-    font-family: 'Active Icons';
+    content: '\e930';
+    font-family: 'Active Icons'  !important;
     font-size: text-size(m);
     font-style: normal;
     font-variant: normal;

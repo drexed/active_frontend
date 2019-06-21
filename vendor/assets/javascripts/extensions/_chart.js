@@ -5415,8 +5415,8 @@ module.exports = function () {
         animationDuration: 400
       },
       onClick: null,
-      defaultColor: 'rgba(51,71,102,0.1)',
-      defaultFontColor: 'rgba(51,71,102,1)',
+      defaultColor: 'rgba(46,66,97,0.1)',
+      defaultFontColor: 'rgba(46,66,97,1)',
       defaultFontFamily: "'Circular', '-apple-system', BlinkMacSystemFont, 'Segoe UI', Verdana, Tahoma, sans-serif",
       defaultFontSize: 14,
       defaultFontStyle: 'normal',

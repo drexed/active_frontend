@@ -1,7 +1,13 @@
 // Table of Contents
 // ==================================================
+// Global Imports
 // Base Imports
 // Extension Imports
+//
+// Global Imports
+// ==================================================
+//= require extensions/_initialize
+//= require extensions/_throttle_and_debounce
 //
 // Base Imports
 // ==================================================

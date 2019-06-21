@@ -16,12 +16,12 @@
     margin-left: 5px;
 
     &::after {
-      content: '\e953';
-      font-family: 'Active Icons';
+      content: '\e958';
+      font-family: 'Active Icons' !important;
       font-style: normal;
       font-variant: normal;
       font-weight: text-weight(normal);
-      margin-top: 1px;
+      margin: 0;
       position: absolute;
       speak: none;
       text-transform: none;

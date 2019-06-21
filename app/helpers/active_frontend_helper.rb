@@ -6,7 +6,7 @@ module ActiveFrontendHelper
   def colors_base(opacity = 1)
     {
       black: { rgba: "rgba(16,37,51,#{opacity})", hex: '#102533' },
-      steel: { rgba: "rgba(51,71,102,#{opacity})", hex: '#334766' },
+      steel: { rgba: "rgba(46,66,97,#{opacity})", hex: '#2e4261' },
       white: { rgba: "rgba(255,255,255,#{opacity})", hex: '#ffffff' },
       transparent: { rgba: 'rgba(0,0,0,0)', hex: '#ffffff' }
     }

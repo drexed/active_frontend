@@ -19,7 +19,7 @@
     colors: [
       '#abbd31', '#48c536', '#27c490', '#007bff', '#8660fe',
       '#bb64fa', '#f57081', '#ef2e43', '#f77337', '#f5c828',
-      '#22364e', '#334766', '#9eb3cd', '#eaeffa', '#ffffff'
+      '#22364e', '#2e4261', '#9eb3cd', '#eaeffa', '#ffffff'
     ],
     item: '<li><button type="button"></button></li>',
     menu: '<ul class="colorpicker dropmenu caret"></ul>',

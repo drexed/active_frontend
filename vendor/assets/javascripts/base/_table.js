@@ -16,7 +16,7 @@
     onSortCallback: function (direction) {},
     templates: {
       downArrow: '<i class="icon-chevron-down pull-right"></i>',
-      noArrow: '<i class="icon-minus pull-right"></i>',
+      noArrow: '<i class="icon-chevron-up-down pull-right"></i>',
       upArrow: '<i class="icon-chevron-up pull-right"></i>'
     }
   };
